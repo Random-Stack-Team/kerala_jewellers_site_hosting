@@ -459,7 +459,14 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   }
 
   html body header.site-header .navigation-4 .rate-dropdown {
-    display: none !important;
+    align-items: center !important;
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    margin-right: 14px !important;
+    opacity: 1 !important;
+    position: relative !important;
+    visibility: visible !important;
+    z-index: 60 !important;
   }
 
   html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2,
@@ -645,19 +652,20 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
 
 /* 1. Desktop Megamenu Customizations (min-width: 992px) */
 @media (min-width: 992px) {
-  /* Megamenu dropdown container: clean ivory/warm white, soft shadow, thin border, elegant spacing */
+  /* Megamenu dropdown container: Premium Ivory with subtle texture, elegant gold/maroon accents */
   header .navigation-2 .bko-dropdown-list,
   header .navigation-4 .bko-dropdown-list,
   header .navigation-2 .scheme-dropdown-list,
   header .navigation-4 .scheme-dropdown-list {
-    background: #fcfbfa !important; /* Warm ivory/white background */
-    border: 1px solid rgba(153, 31, 35, 0.1) !important;
-    border-radius: 0 0 12px 12px !important;
-    box-shadow: 0 10px 30px rgba(60, 22, 0, 0.08) !important;
+    background: linear-gradient(to bottom right, #ffffff, #fcfbfa) !important;
+    border: 1px solid rgba(212, 175, 55, 0.4) !important; /* Gold border accent */
+    border-top: 3px solid #991f23 !important; /* Deep maroon top thick border */
+    border-radius: 0 0 16px 16px !important;
+    box-shadow: 0 16px 40px rgba(104, 16, 21, 0.08), 0 2px 10px rgba(0,0,0,0.02) !important;
     overflow: visible !important;
     z-index: 10000 !important;
     padding: 0 !important;
-    transition: opacity 0.25s ease, transform 0.25s ease !important;
+    transition: opacity 0.3s ease, transform 0.3s ease !important;
   }
 
   /* Grid structure: clean 2-column layout (Left: Categories, Right: Image Box) */
@@ -682,18 +690,20 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   }
 
   /* Left Column Category title: elegant deep maroon heading, medium weight, light border */
-  header .navigation-2 .bko-text-11,
-  header .navigation-4 .bko-text-11,
-  header .navigation-2 .bko-text-1 .bko-text-11,
-  header .navigation-4 .bko-text-1 .bko-text-11 {
-    color: #991f23 !important;
-    font-size: 13px !important;
-    font-weight: 600 !important; /* Soft, elegant bold */
+  html body header.site-header .navigation-2 .bko-text-11,
+  html body header.site-header .navigation-4 .bko-text-11,
+  html body header.site-header .navigation-2 .bko-text-1 .bko-text-11,
+  html body header.site-header .navigation-4 .bko-text-1 .bko-text-11,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-wrap-111-2:hover .bko-dropdown-list .bko-text-11,
+  html body header.site-header .navigation-2 .nav-menu-3 .bko-wrap-111-2:hover .bko-dropdown-list .bko-text-11 {
+    color: #681015 !important; /* High contrast Deep Maroon */
+    font-size: 15px !important;
+    font-weight: 700 !important; /* Stronger bold for visibility */
     letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
-    margin: 0 0 14px 0 !important;
-    border-bottom: 1px solid rgba(153, 31, 35, 0.08) !important;
-    padding-bottom: 6px !important;
+    margin: 0 0 16px 0 !important;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3) !important; /* Gold thin underline */
+    padding-bottom: 8px !important;
     display: block !important;
   }
 
@@ -761,15 +771,21 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
 
   /* Right Column Jewellery Image Showcase Box */
   header .navigation-2 .content-slider,
-  header .navigation-4 .content-slider {
+  header .navigation-4 .content-slider,
+  header .navigation-2 .kj-clean-slider-col,
+  header .navigation-4 .kj-clean-slider-col {
     border-radius: 8px !important;
     overflow: hidden !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
-    border: 1px solid rgba(0, 0, 0, 0.03) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(212, 175, 55, 0.2) !important; /* Subtle gold border */
     width: 100% !important;
-    max-width: 330px !important;
+    max-width: 350px !important;
     margin-left: auto !important;
-    transition: transform 300ms ease !important;
+    transition: transform 300ms ease, box-shadow 300ms ease !important;
+    display: block !important;
+    min-height: 250px !important; /* Ensure image slider is visible */
+    position: relative !important;
+    background: #f8f8f8 !important; /* Fallback background */
   }
 
   header .navigation-2 .content-slider:hover,
@@ -803,6 +819,39 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
     padding: 0 !important;
     margin: 0 !important;
     width: 100% !important;
+  }
+
+  /* Clean 2-column megamenu layout classes */
+  header .navigation-2 .kj-clean-category-col,
+  header .navigation-4 .kj-clean-category-col {
+    display: block !important;
+    grid-column: 1 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  header .navigation-2 .kj-clean-slider-col,
+  header .navigation-4 .kj-clean-slider-col {
+    display: block !important;
+    grid-column: 2 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(212, 175, 55, 0.2) !important;
+    max-width: 350px !important;
+    margin-left: auto !important;
+    min-height: 250px !important;
+    background: #f8f8f8 !important;
+  }
+
+  header .navigation-2 .kj-clean-slider-col img,
+  header .navigation-4 .kj-clean-slider-col img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    display: block !important;
   }
 }
 
@@ -845,9 +894,16 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   /* Hamburger Menu Button: remains deep maroon #991f23 */
   header .navigation-mob .menu-mob-3.nav-menu-button,
   header .navigation-mob .menu-mob-3.nav-menu-button.is-open,
+  header .navigation-mob .menu-mob-3.nav-menu-button.w--open,
   header .navigation-mob .menu-mob-3.nav-menu-button:focus,
-  header .navigation-mob .menu-mob-3.nav-menu-button:active {
+  header .navigation-mob .menu-mob-3.nav-menu-button:active,
+  header .menu-button-2.nav-menu-button,
+  header .menu-button-2.nav-menu-button.is-open,
+  header .menu-button-2.nav-menu-button.w--open,
+  header .menu-button-2.nav-menu-button:focus,
+  header .menu-button-2.nav-menu-button:active {
     background: #991f23 !important; /* Safe maroon background */
+    background-color: #991f23 !important;
     border: 0 !important;
     box-shadow: none !important;
     color: #ffffff !important;
@@ -856,8 +912,23 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   /* Hamburger icon lines remain white inside the maroon button */
   header .nav-menu-button .hamburger-icon,
   header .nav-menu-button .hamburger-icon::before,
-  header .nav-menu-button .hamburger-icon::after {
+  header .nav-menu-button .hamburger-icon::after,
+  header .nav-menu-button .menu-line,
+  header .nav-menu-button.is-open .menu-line,
+  header .nav-menu-button.w--open .menu-line,
+  header .nav-menu-button:focus .menu-line,
+  header .nav-menu-button:active .menu-line,
+  header .menu-icon-2 .menu-line,
+  header .menu-icon-2.is-open .menu-line,
+  header .menu-mob-3 .menu-line,
+  header .menu-mob-3.is-open .menu-line,
+  header .menu-mob-3.w--open .menu-line,
+  header .menu-button-2 .menu-line,
+  header .menu-button-2.is-open .menu-line,
+  header .menu-button-2.w--open .menu-line,
+  header .menu-button-2 .menu-icon-2 .menu-line {
     background: #ffffff !important;
+    background-color: #ffffff !important;
   }
 }
 
@@ -1094,12 +1165,24 @@ header .navigation-4 .bko-grid-1-copy:hover {
     z-index: 1 !important;
   }
   
-  .timeline_inner-mobile .timeline_track-wrap {
+  /* Do NOT hide the entire track-wrap, because it contains the text! Hide only the empty track line */
+  .timeline_inner-mobile .timeline_track {
     display: none !important;
   }
   
-  .timeline_inner-mobile .timeline_item-wrap.is-hidden-mobile {
+  .timeline_inner-mobile .timeline_track-wrap {
     display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    margin-bottom: 2em !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Hide the duplicated text blocks that were originally for mobile, to avoid double text */
+  .timeline_inner-mobile .timeline_item-wrap.is-hidden-mobile {
+    display: none !important;
   }
   
   .timeline_inner-mobile .timeline_item-wrap {

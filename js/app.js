@@ -134,8 +134,10 @@ document.documentElement.classList.add('js-ready');
       const willOpen = !button.classList.contains('is-open');
       header.querySelectorAll('.nav-menu-panel, .w-nav-menu').forEach((menu) => {
         menu.classList.toggle('is-open', willOpen);
+        menu.classList.toggle('w--open', willOpen);
       });
       button.classList.toggle('is-open', willOpen);
+      button.classList.toggle('w--open', willOpen);
       button.setAttribute('aria-expanded', String(willOpen));
     };
 
@@ -334,11 +336,43 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
+  const cleanDiamondDropdown = () => {
+    document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel').forEach((nav) => {
+      const diamondLink = nav.querySelector('.diamondlink, .diamondlink-2');
+      if (!diamondLink) return;
+      const dropdown = diamondLink.closest('.dropdown, .bko-dropdown-0');
+      if (!dropdown) return;
+      const grid = dropdown.querySelector('.bko-grid-1-3-1');
+      if (!grid) return;
+      const cols = Array.from(grid.children).filter(c => c.tagName === 'DIV');
+      if (!cols.length) return;
+      const categoryCol = cols[0];
+      // Remove empty dynamic-item divs first
+      categoryCol.querySelectorAll('.dynamic-item').forEach((item) => {
+        if (!item.textContent.trim()) item.remove();
+      });
+      // Keep ONLY Necklace and Rings in Diamond dropdown
+      categoryCol.querySelectorAll('a').forEach((a) => {
+        const text = a.textContent.trim().toLowerCase();
+        if (!text.includes('necklace') && !text.includes('ring')) {
+          const parent = a.closest('.dynamic-item');
+          if (parent) parent.remove();
+          else a.remove();
+        }
+      });
+    });
+  };
+
   const cleanNavCategoryPanels = () => {
     const panels = document.querySelectorAll('.bko-dropdown-list, .dropdown-list, .mobile-nav');
     const uniquePanels = Array.from(new Set(panels));
 
     uniquePanels.forEach((panel) => {
+      // Remove empty dynamic-items (empty list item divs)
+      panel.querySelectorAll('.dynamic-item').forEach((item) => {
+        if (!item.textContent.trim()) item.remove();
+      });
+
       const seen = new Set();
       panel.querySelectorAll('[class*="bko-text-12"], .category-menu-link').forEach((item) => {
         const text = (item.textContent || '').replace(/\s+/g, ' ').trim();
@@ -403,6 +437,38 @@ document.documentElement.classList.add('js-ready');
     if (!visibleCount) products.forEach((product) => { product.hidden = false; });
   };
 
+  const reorderProductSections = () => {
+    const path = window.location.pathname.replace(/\\/g, '/').toLowerCase();
+    let priorityMetal = '';
+    if (path.includes('silver')) priorityMetal = 'silver';
+    else if (path.includes('diamond')) priorityMetal = 'diamond';
+    else if (path.includes('platinum')) priorityMetal = 'platinum';
+    else if (path.includes('products')) priorityMetal = 'gold';
+    if (!priorityMetal) return;
+
+    // Find product section containers and reorder based on the metal type
+    const headings = document.querySelectorAll('.heading-32, .heading-2-12, h2, h3');
+    const sectionMap = new Map();
+    headings.forEach((h) => {
+      const text = h.textContent.trim().toLowerCase();
+      const section = h.closest('section, .section-2, .section-3, .section-4, .section-5, [class*="section"]');
+      if (section && !sectionMap.has(section)) {
+        sectionMap.set(section, text);
+      }
+    });
+
+    const parent = sectionMap.keys().next().value?.parentElement;
+    if (!parent || sectionMap.size < 2) return;
+
+    const sections = Array.from(sectionMap.entries());
+    const prioritySections = sections.filter(([, text]) => text.includes(priorityMetal));
+    const otherSections = sections.filter(([, text]) => !text.includes(priorityMetal));
+
+    [...prioritySections, ...otherSections].forEach(([section]) => {
+      parent.appendChild(section);
+    });
+  };
+
   const addHoverLife = () => {
     document.querySelectorAll('.product-item-1, .product-item-8, .product-item-81, .team5_item, .blog33_item').forEach((item) => {
       item.classList.add('kj-interactive-card');
@@ -419,7 +485,9 @@ document.documentElement.classList.add('js-ready');
     wireRateSelection();
     wireTimelineProgress();
     cleanNavCategoryPanels();
+    cleanDiamondDropdown();
     addHoverLife();
+    reorderProductSections();
     calculatePrice('#goldprice', 14660);
     calculatePrice('#goldprices', 14660);
     calculatePrice('#silverpricesssproduct', 290);
