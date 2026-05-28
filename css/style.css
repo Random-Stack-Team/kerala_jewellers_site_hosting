@@ -23542,6 +23542,97 @@ header .rate-coin {
   transition: transform 500ms cubic-bezier(.165, .84, .44, 1), opacity 500ms ease;
 }
 
+/* Live-site customer review carousel restore. */
+html,
+body {
+  overflow-x: hidden;
+}
+
+.section-16 {
+  overflow: hidden;
+}
+
+.section-16 .slider-wrapper {
+  height: 600px;
+  overflow: visible;
+}
+
+.section-16 .swiper-component {
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.section-16 .swiper-component .swiper {
+  height: 600px;
+  max-height: 600px;
+  min-width: 1200px;
+  overflow: hidden;
+  perspective: 1200px;
+  position: relative;
+  width: 100%;
+}
+
+.section-16 .swiper-component .swiper-wrapper {
+  display: block;
+  height: 600px;
+  min-height: 600px;
+  padding-bottom: 10px;
+  position: relative;
+  transform: none;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.section-16 .swiper-component .swiper-slide {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px .25px #0003;
+  display: block;
+  height: 560px;
+  left: 0;
+  margin: 20px 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: transform 650ms cubic-bezier(.165, .84, .44, 1), opacity 500ms ease;
+  width: 20%;
+  will-change: transform, opacity;
+}
+
+.section-16 .swiper-component .swiper-slide.swiper-slide-active {
+  position: absolute;
+}
+
+.section-16 .swiper-component .slide-bg,
+.section-16 .swiper-component .product-item-8,
+.section-16 .swiper-component .div-container-6 {
+  height: 100%;
+  width: 100%;
+}
+
+.section-16 .swiper-component .div-container-6 {
+  padding: 30px 25px;
+}
+
+.section-16 .swiper-component .div-2 {
+  flex: 1;
+  justify-content: center;
+  padding-bottom: 28px;
+  padding-top: 28px;
+}
+
+.section-16 .swiper-component .div-text {
+  font-size: 14px;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.section-16 .swiper-component .div-text1 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
 .kj-interactive-card,
 .team5_image,
 .product-image-2-copy,

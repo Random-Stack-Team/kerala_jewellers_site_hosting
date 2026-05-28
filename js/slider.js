@@ -73,21 +73,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const render = (index) => {
       activeIndex = (index + slides.length) % slides.length;
+      const stage = component.querySelector('.swiper') || component;
+      const stageWidth = stage.getBoundingClientRect().width || 1200;
+      const slideWidth = Math.max(220, stageWidth * 0.2);
+      const centerOffset = (stageWidth - slideWidth) / 2;
+      const slideGap = slideWidth * 1.72;
       slides.forEach((slide, slideIndex) => {
         let offset = slideIndex - activeIndex;
         if (offset > slides.length / 2) offset -= slides.length;
         if (offset < -slides.length / 2) offset += slides.length;
         const clampedOffset = Math.max(-2, Math.min(2, offset));
+        const distance = Math.abs(clampedOffset);
         slide.classList.toggle('swiper-slide-active', slideIndex === activeIndex);
         slide.classList.toggle('swiper-slide-prev', offset === -1 || offset === slides.length - 1);
         slide.classList.toggle('swiper-slide-next', offset === 1 || offset === -(slides.length - 1));
         slide.dataset.kjOffset = String(clampedOffset);
-        slide.style.transform = `translate3d(${clampedOffset * 110}%, 0, ${Math.abs(clampedOffset) ? -500 : 0}px) scale(${Math.abs(clampedOffset) ? 0.92 : 1})`;
-        slide.style.opacity = Math.abs(clampedOffset) > 1 ? '0' : '1';
-        slide.style.zIndex = String(10 - Math.abs(clampedOffset));
+        slide.style.transform = `translate3d(${centerOffset + clampedOffset * slideGap}px, 0, ${distance ? -500 * distance : 0}px) scale(${distance ? 0.86 : 1})`;
+        slide.style.opacity = distance > 1 ? '0.55' : '1';
+        slide.style.zIndex = String(10 - distance);
         slide.style.pointerEvents = slideIndex === activeIndex ? 'auto' : 'none';
       });
-      wrapper.style.minHeight = slides[activeIndex].offsetHeight + 'px';
+      wrapper.style.minHeight = '600px';
     };
 
     const stop = () => window.clearInterval(timerId);
@@ -116,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     host.addEventListener('mouseenter', stop);
     host.addEventListener('mouseleave', start);
+    window.addEventListener('resize', () => render(activeIndex));
     render(0);
     start();
   };
