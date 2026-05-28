@@ -589,4 +589,30 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   html body header.site-header .navigation-4 .nav-menu-5 .dropdown-list a:hover * {
     color: #991f23 !important;
   }
+
+  /* Fix desktop category text visibility in dropdown menus */
+  header .navigation-2 .bko-dropdown-list .category-menu-link,
+  header .navigation-4 .bko-dropdown-list .category-menu-link,
+  header .navigation-2 .bko-dropdown-list [class*="bko-text-12"],
+  header .navigation-4 .bko-dropdown-list [class*="bko-text-12"] {
+    color: #4a3334 !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+  }
+
+  header .navigation-2 .bko-dropdown-list .category-menu-link:hover,
+  header .navigation-4 .bko-dropdown-list .category-menu-link:hover,
+  header .navigation-2 .bko-dropdown-list [class*="bko-text-12"]:hover,
+  header .navigation-4 .bko-dropdown-list [class*="bko-text-12"]:hover {
+    color: #b90000 !important;
+  }
+
+  /* Ensure category headers are dark and visible */
+  header .navigation-2 .bko-text-11,
+  header .navigation-4 .bko-text-11,
+  header .navigation-2 .bko-text-1 .bko-text-11,
+  header .navigation-4 .bko-text-1 .bko-text-11 {
+    color: #210f10 !important;
+    font-weight: 800 !important;
+  }
 }

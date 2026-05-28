@@ -107,7 +107,7 @@
   header .menu-mob-3 .hamburger-icon,
   header .menu-mob-3 .hamburger-icon::before,
   header .menu-mob-3 .hamburger-icon::after {
-    background: #fff !important;
+    background: #ffffff !important;
     content: "" !important;
     display: block !important;
     height: 2px !important;
@@ -123,6 +123,14 @@
   header .menu-mob-3 .hamburger-icon::after {
     position: absolute !important;
     top: 6px !important;
+  }
+
+  /* Mobile reference hamburger icon styling */
+  header .menu-mob-3 .hamburger-icon,
+  header .menu-mob-3 .hamburger-icon::before,
+  header .menu-mob-3 .hamburger-icon::after {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
   }
 
   header .navigation-2 .nav-menu-3.nav-menu-panel {
@@ -175,7 +183,7 @@
   header .navigation-4 .nav-menu-5.nav-menu-panel > .bko-wrap-111-2 {
     border-bottom: 1px solid rgba(255, 255, 255, .16) !important;
     margin: 0 !important;
-    padding: 10px 0 !important;
+    padding: 8px 0 !important;
   }
 
   header .navigation-mob .bko-dropdown-list,
@@ -203,9 +211,12 @@
   header .navigation-2 .category-menu-link,
   header .navigation-4 .category-menu-link {
     display: block !important;
-    margin: 0 0 7px !important;
+    margin: 0 0 4px !important;
+    padding: 4px 0 !important;
     position: static !important;
     transform: none !important;
+    line-height: 1.4 !important;
+    font-size: 14px !important;
   }
 
   .swiper-component,
