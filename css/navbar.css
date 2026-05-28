@@ -640,199 +640,166 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
 }
 
 /* ==========================================================================
-   PREMIUM REDESIGN: GOLD, SILVER, DIAMOND & SCHEME DROPDOWNS
+   CLEAN & PREMIUM JEWELLERY-STYLE MEGAMENU OVERHAUL
    ========================================================================== */
 
-/* 1. Base Dropdown Card Premium Enhancements (Desktop min-width: 992px) */
+/* 1. Desktop Megamenu Customizations (min-width: 992px) */
 @media (min-width: 992px) {
-  /* Megamenu dropdown container */
+  /* Megamenu dropdown container: clean ivory/warm white, soft shadow, thin border, elegant spacing */
   header .navigation-2 .bko-dropdown-list,
   header .navigation-4 .bko-dropdown-list,
   header .navigation-2 .scheme-dropdown-list,
   header .navigation-4 .scheme-dropdown-list {
-    background: rgba(255, 255, 255, 0.96) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(153, 31, 35, 0.15) !important;
-    border-radius: 0 0 16px 16px !important;
-    box-shadow: 0 20px 45px rgba(153, 31, 35, 0.12), 0 2px 0 rgba(255, 255, 255, 0.8) inset !important;
+    background: #fcfbfa !important; /* Warm ivory/white background */
+    border: 1px solid rgba(153, 31, 35, 0.1) !important;
+    border-radius: 0 0 12px 12px !important;
+    box-shadow: 0 10px 30px rgba(60, 22, 0, 0.08) !important;
     overflow: visible !important;
     z-index: 10000 !important;
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease !important;
+    padding: 0 !important;
+    transition: opacity 0.25s ease, transform 0.25s ease !important;
   }
 
-  /* Redesign the Gold/Silver/Diamond Top Gradient Line */
+  /* Grid structure: clean 2-column layout (Left: Categories, Right: Image Box) */
+  header .navigation-2 .bko-grid-1-3-1,
+  header .navigation-4 .bko-grid-1-3-1 {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1fr !important; /* 2-column elegant layout */
+    gap: 40px !important;
+    align-items: center !important;
+    padding: 30px 45px !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    width: 100% !important;
+  }
+
+  /* Remove artificial-looking top bar gradient lines for a cleaner jewellery brand feel */
   header .navigation-2 .bko-dropdown-list::before,
   header .navigation-4 .bko-dropdown-list::before,
   header .navigation-2 .scheme-dropdown-list::before,
   header .navigation-4 .scheme-dropdown-list::before {
-    background: linear-gradient(90deg, #991f23, #d4af37, #991f23) !important;
-    content: "";
-    display: block;
-    height: 4px !important;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: 0 !important;
+    display: none !important;
   }
 
-  /* Custom Premium Entrance Animation */
-  @keyframes kj-dropdown-slide-up {
-    0% {
-      opacity: 0;
-      transform: translateY(10px) translateX(-50%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0) translateX(-50%);
-    }
-  }
-  
-  @keyframes kj-megamenu-slide-up {
-    0% {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  header .navigation-2 .dropdown:hover > .bko-dropdown-list,
-  header .navigation-2 .dropdown.is-open > .bko-dropdown-list,
-  header .navigation-4 .dropdown:hover > .bko-dropdown-list,
-  header .navigation-4 .dropdown.is-open > .bko-dropdown-list {
-    animation: kj-megamenu-slide-up 250ms cubic-bezier(0.16, 1, 0.3, 1) both !important;
-  }
-
-  header .navigation-2 .dropdown:hover > .scheme-dropdown-list,
-  header .navigation-2 .dropdown.is-open > .scheme-dropdown-list,
-  header .navigation-4 .dropdown:hover > .scheme-dropdown-list,
-  header .navigation-4 .dropdown.is-open > .scheme-dropdown-list {
-    animation: kj-dropdown-slide-up 250ms cubic-bezier(0.16, 1, 0.3, 1) both !important;
-  }
-
-  /* 2. Redesign Category Headers (e.g. Category, Design Style, Occasion, etc.) */
+  /* Left Column Category title: elegant deep maroon heading, medium weight, light border */
   header .navigation-2 .bko-text-11,
   header .navigation-4 .bko-text-11,
   header .navigation-2 .bko-text-1 .bko-text-11,
   header .navigation-4 .bko-text-1 .bko-text-11 {
     color: #991f23 !important;
     font-size: 13px !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important; /* Soft, elegant bold */
     letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
-    margin-bottom: 14px !important;
-    border-bottom: 1px solid rgba(153, 31, 35, 0.1) !important;
+    margin: 0 0 14px 0 !important;
+    border-bottom: 1px solid rgba(153, 31, 35, 0.08) !important;
     padding-bottom: 6px !important;
     display: block !important;
   }
 
-  /* 3. Link Hover Accent & Micro-interactions */
-  header .navigation-2 .bko-dropdown-list .category-menu-link,
-  header .navigation-4 .bko-dropdown-list .category-menu-link,
-  header .navigation-2 .bko-dropdown-list [class*="bko-text-12"],
-  header .navigation-4 .bko-dropdown-list [class*="bko-text-12"],
-  header .navigation-2 .scheme-dropdown-list .bko-text-12-bangles-copy-copy-copy-copy,
-  header .navigation-4 .scheme-dropdown-list .bko-text-12-bangles-copy-copy-copy-copy {
+  /* Link Styles: soft charcoal text #2b2b2b, deep maroon #991f23 on hover, reduced harsh weight */
+  html body header.site-header .navigation-2 .bko-dropdown-list a,
+  html body header.site-header .navigation-4 .bko-dropdown-list a,
+  html body header.site-header .navigation-2 .scheme-dropdown-list a,
+  html body header.site-header .navigation-4 .scheme-dropdown-list a,
+  html body header.site-header .navigation-2 .bko-dropdown-list a *,
+  html body header.site-header .navigation-4 .bko-dropdown-list a *,
+  html body header.site-header .navigation-2 .scheme-dropdown-list a *,
+  html body header.site-header .navigation-4 .scheme-dropdown-list a * {
+    color: #2b2b2b !important;
+    font-size: 14.5px !important;
+    font-weight: 500 !important;
+    padding: 6px 0 !important;
+    margin: 2px 0 !important;
+    text-decoration: none !important;
+    transition: color 200ms ease, transform 200ms ease !important;
     display: flex !important;
     align-items: center !important;
-    color: #4a3334 !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    padding: 8px 12px !important;
-    margin: 3px 0 !important;
-    border-radius: 6px !important;
-    text-decoration: none !important;
-    transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
     background: transparent !important;
-    box-sizing: border-box !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
     position: relative !important;
-    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
-  /* Premium Hover Style */
-  header .navigation-2 .bko-dropdown-list .category-menu-link:hover,
-  header .navigation-4 .bko-dropdown-list .category-menu-link:hover,
-  header .navigation-2 .bko-dropdown-list [class*="bko-text-12"]:hover,
-  header .navigation-4 .bko-dropdown-list [class*="bko-text-12"]:hover,
-  header .navigation-2 .scheme-dropdown-list .bko-text-12-bangles-copy-copy-copy-copy:hover,
-  header .navigation-4 .scheme-dropdown-list .bko-text-12-bangles-copy-copy-copy-copy:hover {
-    background: rgba(153, 31, 35, 0.05) !important;
+  /* Hover color swap & slight right shifting */
+  html body header.site-header .navigation-2 .bko-dropdown-list a:hover,
+  html body header.site-header .navigation-4 .bko-dropdown-list a:hover,
+  html body header.site-header .navigation-2 .scheme-dropdown-list a:hover,
+  html body header.site-header .navigation-4 .scheme-dropdown-list a:hover,
+  html body header.site-header .navigation-2 .bko-dropdown-list a:hover *,
+  html body header.site-header .navigation-4 .bko-dropdown-list a:hover *,
+  html body header.site-header .navigation-2 .scheme-dropdown-list a:hover *,
+  html body header.site-header .navigation-4 .scheme-dropdown-list a:hover * {
     color: #991f23 !important;
-    padding-left: 18px !important;
     transform: translateX(4px) !important;
+    background: transparent !important;
   }
 
-  /* Left accent gold line on hover */
-  header .navigation-2 .bko-dropdown-list .category-menu-link::after,
-  header .navigation-4 .bko-dropdown-list .category-menu-link::after,
-  header .navigation-2 .bko-dropdown-list [class*="bko-text-12"]::after,
-  header .navigation-4 .bko-dropdown-list [class*="bko-text-12"]::after,
-  header .navigation-2 .scheme-dropdown-list .bko-text-12-bangles-copy-copy-copy-copy::after,
-  header .navigation-4 .scheme-dropdown-list .bko-text-12-bangles-copy-copy-copy-copy::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3px;
-    height: 0%;
-    background: #d4af37;
-    transition: height 250ms ease !important;
-    border-radius: 0 4px 4px 0 !important;
+  /* Thin elegant gold hover underline */
+  html body header.site-header .navigation-2 .bko-dropdown-list a::after,
+  html body header.site-header .navigation-4 .bko-dropdown-list a::after,
+  html body header.site-header .navigation-2 .scheme-dropdown-list a::after,
+  html body header.site-header .navigation-4 .scheme-dropdown-list a::after {
+    content: "" !important;
+    position: absolute !important;
+    bottom: 2px !important;
+    left: 0 !important;
+    width: 0% !important;
+    height: 1px !important;
+    background: #d4af37 !important; /* Premium gold accent underline */
+    transition: width 200ms ease !important;
   }
 
-  header .navigation-2 .bko-dropdown-list .category-menu-link:hover::after,
-  header .navigation-4 .bko-dropdown-list .category-menu-link:hover::after,
-  header .navigation-2 .bko-dropdown-list [class*="bko-text-12"]:hover::after,
-  header .navigation-4 .bko-dropdown-list [class*="bko-text-12"]:hover::after,
-  header .navigation-2 .scheme-dropdown-list .bko-text-12-bangles-copy-copy-copy-copy:hover::after,
-  header .navigation-4 .scheme-dropdown-list .bko-text-12-bangles-copy-copy-copy-copy:hover::after {
-    height: 60% !important;
+  html body header.site-header .navigation-2 .bko-dropdown-list a:hover::after,
+  html body header.site-header .navigation-4 .bko-dropdown-list a:hover::after,
+  html body header.site-header .navigation-2 .scheme-dropdown-list a:hover::after,
+  html body header.site-header .navigation-4 .scheme-dropdown-list a:hover::after {
+    width: 25% !important;
   }
 
-  /* 4. Showcase Content Slider */
+  /* Right Column Jewellery Image Showcase Box */
   header .navigation-2 .content-slider,
   header .navigation-4 .content-slider {
-    border-radius: 12px !important;
+    border-radius: 8px !important;
     overflow: hidden !important;
-    box-shadow: 0 10px 30px rgba(153, 31, 35, 0.12) !important;
-    border: 1px solid rgba(153, 31, 35, 0.1) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(0, 0, 0, 0.03) !important;
+    width: 100% !important;
+    max-width: 330px !important;
+    margin-left: auto !important;
+    transition: transform 300ms ease !important;
   }
 
   header .navigation-2 .content-slider:hover,
   header .navigation-4 .content-slider:hover {
-    transform: scale(1.015) !important;
-    box-shadow: 0 15px 35px rgba(153, 31, 35, 0.18) !important;
+    transform: scale(1.01) !important;
   }
 
-  /* Slider arrows */
+  /* Slider arrows matching theme */
   header .navigation-2 .next-button,
   header .navigation-4 .next-button {
-    background-color: rgba(153, 31, 35, 0.95) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+    background-color: rgba(153, 31, 35, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
   }
 
   /* 5. Scheme Specific Layout Overrides */
   header .navigation-2 .scheme-dropdown-list,
   header .navigation-4 .scheme-dropdown-list {
-    margin-left: -120px !important;
-    width: 240px !important;
-    min-width: 240px !important;
-    padding: 16px 12px !important;
-    border-radius: 12px !important;
+    margin-left: -90px !important;
+    width: 180px !important;
+    min-width: 180px !important;
+    padding: 12px 14px !important;
+    border-radius: 8px !important;
   }
 
   header .navigation-2 .scheme-dropdown-list .div-block-64,
   header .navigation-4 .scheme-dropdown-list .div-block-64 {
     display: flex !important;
     flex-direction: column !important;
-    gap: 6px !important;
+    gap: 4px !important;
     padding: 0 !important;
     margin: 0 !important;
     width: 100% !important;
@@ -840,173 +807,368 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
 }
 
 /* ==========================================================================
-   PREMIUM REDESIGN: MULTI-COLUMN MEGAMENU PROMOTIONAL LAYOUT & TEXT FIXES
+   MOBILE NAVIGATION FONT & COLOR OVERHAUL (Task 3)
    ========================================================================== */
 
+@media (max-width: 991px) {
+  /* Prevent excessive top padding and improve spacing */
+  header .navigation-mob .mobile-nav.nav-menu-panel {
+    background: #fcfbfa !important;
+    top: 90px !important; /* Perfect visual spacing, no excessive padding */
+    padding: 16px 20px 24px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+    border-radius: 0 0 10px 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Mobile menu item links: soft charcoal, deep maroon on hover/active, comfortable padding */
+  header .navigation-mob .mobile-nav.nav-menu-panel a.kj-mobile-menu-link {
+    color: #2b2b2b !important;
+    font-size: 14.5px !important; /* Reduced from legacy oversized font */
+    font-weight: 500 !important;
+    padding: 10px 0 !important; /* Comfortable spacing */
+    border-bottom: 1px solid rgba(153, 31, 35, 0.04) !important;
+    transition: color 0.2s ease, padding-left 0.2s ease !important;
+    display: block !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+  }
+
+  header .navigation-mob .mobile-nav.nav-menu-panel a.kj-mobile-menu-link:hover,
+  header .navigation-mob .mobile-nav.nav-menu-panel a.kj-mobile-menu-link:active,
+  header .navigation-mob .mobile-nav.nav-menu-panel a.kj-mobile-menu-link:focus {
+    color: #991f23 !important;
+    padding-left: 6px !important;
+    background: transparent !important;
+  }
+
+  /* Hamburger Menu Button: remains deep maroon #991f23 */
+  header .navigation-mob .menu-mob-3.nav-menu-button,
+  header .navigation-mob .menu-mob-3.nav-menu-button.is-open,
+  header .navigation-mob .menu-mob-3.nav-menu-button:focus,
+  header .navigation-mob .menu-mob-3.nav-menu-button:active {
+    background: #991f23 !important; /* Safe maroon background */
+    border: 0 !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+  }
+
+  /* Hamburger icon lines remain white inside the maroon button */
+  header .nav-menu-button .hamburger-icon,
+  header .nav-menu-button .hamburger-icon::before,
+  header .nav-menu-button .hamburger-icon::after {
+    background: #ffffff !important;
+  }
+}
+
+/* ==========================================================================
+   TYPOGRAPHY SMOOTHENING & NATURAL VISUAL FEEL (Task 4)
+   ========================================================================== */
+
+/* Better font rendering */
+body, html {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+/* Headings: reduced harsh font weight, natural balance, consistent line-height */
+h1, h2, h3, h4, h5, h6,
+.heading-center-about2222,
+.text-size-medium-2 {
+  font-family: 'Montserrat', 'Oswald', sans-serif !important;
+  font-weight: 600 !important; /* Soft premium weight, not harsh */
+  letter-spacing: -0.01em !important;
+  line-height: 1.35 !important;
+  color: #222222 !important;
+}
+
+/* Ensure paragraph texts have natural readable line-height and contrast */
+p, .text-2, .text-size-medium-2 {
+  font-family: 'Mulish', sans-serif !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: #4a3c3d !important; /* Balanced warm contrast charcoal */
+}
+
+/* Specific heading text highlight for deep maroon accent */
+.heading-center-about2222 strong {
+  color: #991f23 !important;
+  font-weight: 600 !important;
+}
+
+/* ==========================================================================
+   TASK 1 & TASK 2: MEGAMENU FLATTENING & ABOUT PAGE TIMELINE ALIGNMENTS
+   ========================================================================== */
+
+/* Megamenu layout: Flatten nested cards, backgrounds, borders, padding and shadows completely */
+header .navigation-2 .bko-grid-1-copy,
+header .navigation-4 .bko-grid-1-copy,
+header .navigation-2 .bko-link-grid-1,
+header .navigation-4 .bko-link-grid-1,
+header .navigation-2 .bko-grid-11-category,
+header .navigation-4 .bko-grid-11-category,
+header .navigation-2 .bko-text-1,
+header .navigation-4 .bko-text-1,
+header .navigation-2 .bko-dropdown-2-2,
+header .navigation-4 .bko-dropdown-2-2,
+header .navigation-2 .bko-dropdown-2,
+header .navigation-4 .bko-dropdown-2 {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+header .navigation-2 .bko-grid-1-copy:hover,
+header .navigation-4 .bko-grid-1-copy:hover {
+  background: transparent !important;
+  transform: none !important;
+}
+
+/* 2-Column megamenu structure: left column categories directly on background, right column image */
 @media (min-width: 992px) {
-  /* 1. Force Megamenu Grid columns to adjust to 3-column promotional format */
   header .navigation-2 .bko-grid-1-3-1,
   header .navigation-4 .bko-grid-1-3-1 {
     display: grid !important;
-    grid-template-columns: 1.2fr 1.6fr 1.4fr !important;
-    gap: 32px !important;
+    grid-template-columns: 1.2fr 1fr !important;
+    gap: 40px !important;
     align-items: center !important;
-    padding: 36px 42px !important;
-    box-sizing: border-box !important;
+    padding: 30px 45px !important;
     background: transparent !important;
-    width: 100% !important;
-  }
-
-  /* 2. Middle Column: Promotional/Marketing Card */
-  .kj-megamenu-promo {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    padding: 10px 24px !important;
-    border-left: 1px solid rgba(153, 31, 35, 0.12) !important;
-    border-right: 1px solid rgba(153, 31, 35, 0.12) !important;
-    height: 100% !important;
-    box-sizing: border-box !important;
-    text-align: left !important;
-  }
-
-  .kj-megamenu-promo-subtitle {
-    font-size: 11px !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.18em !important;
-    color: #b98e3b !important;
-    text-transform: uppercase !important;
-    margin-bottom: 6px !important;
-    display: block !important;
-  }
-
-  .kj-megamenu-promo-title {
-    font-family: 'Oswald', 'Montserrat', sans-serif !important;
-    font-size: 24px !important;
-    font-weight: 600 !important;
-    color: #991f23 !important;
-    margin: 0 0 10px 0 !important;
-    line-height: 1.2 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.02em !important;
-  }
-
-  .kj-megamenu-promo-desc {
-    font-family: 'Mulish', sans-serif !important;
-    font-size: 13.5px !important;
-    line-height: 1.55 !important;
-    color: #5a4546 !important;
-    margin: 0 0 20px 0 !important;
-    font-weight: 400 !important;
-  }
-
-  .kj-megamenu-promo-btn {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    background: #991f23 !important;
-    color: #ffffff !important;
-    padding: 10px 22px !important;
-    border-radius: 6px !important;
-    font-size: 12px !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.08em !important;
-    text-decoration: none !important;
-    box-shadow: 0 4px 12px rgba(153, 31, 35, 0.22) !important;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) !important;
-    border: 1px solid transparent !important;
-    box-sizing: border-box !important;
-  }
-
-  .kj-megamenu-promo-btn:hover {
-    background: #ffffff !important;
-    color: #991f23 !important;
-    border: 1px solid #991f23 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 16px rgba(153, 31, 35, 0.3) !important;
-  }
-
-  .kj-megamenu-promo-btn span {
-    color: inherit !important;
-    font-weight: inherit !important;
-  }
-
-  .kj-megamenu-promo-btn svg {
-    transition: transform 250ms ease !important;
-  }
-  
-  .kj-megamenu-promo-btn:hover svg {
-    transform: translateX(4px) !important;
-  }
-
-  /* 3. Left Column: Category Link Container adjustments */
-  .kj-megamenu-category-col {
-    padding-right: 12px !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 4. Fix contrast/readability and override whitespace text bugs */
-  /* This prevents the "white links on white background" bug caused by html inline style overrides */
-  html body header.site-header .navigation-2 .bko-dropdown-list a *,
-  html body header.site-header .navigation-4 .bko-dropdown-list a *,
-  html body header.site-header .navigation-2 .bko-dropdown-list div,
-  html body header.site-header .navigation-4 .bko-dropdown-list div,
-  html body header.site-header .navigation-2 .bko-dropdown-list p,
-  html body header.site-header .navigation-4 .bko-dropdown-list p,
-  html body header.site-header .navigation-2 .bko-dropdown-list span,
-  html body header.site-header .navigation-4 .bko-dropdown-list span,
-  html body header.site-header .navigation-2 .scheme-dropdown-list * ,
-  html body header.site-header .navigation-4 .scheme-dropdown-list * {
-    color: #4a3334 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  /* Ensure Category headers are styled beautifully in wine/gold */
-  header .navigation-2 .bko-text-11,
-  header .navigation-4 .bko-text-11,
-  header .navigation-2 .bko-text-1 .bko-text-11,
-  header .navigation-4 .bko-text-1 .bko-text-11 {
-    color: #991f23 !important;
-    font-size: 12.5px !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.1em !important;
-    text-transform: uppercase !important;
-    margin: 0 0 16px 0 !important;
-    border-bottom: 1px solid rgba(153, 31, 35, 0.12) !important;
-    padding-bottom: 6px !important;
-    display: block !important;
-  }
-
-  /* Specific color highlighting for sub-elements and CTA */
-  .kj-megamenu-promo-subtitle {
-    color: #b98e3b !important;
-  }
-
-  .kj-megamenu-promo-title {
-    color: #991f23 !important;
-  }
-
-  .kj-megamenu-promo-desc {
-    color: #5a4546 !important;
-  }
-
-  .kj-megamenu-promo-btn * {
-    color: #ffffff !important;
-  }
-  
-  .kj-megamenu-promo-btn:hover * {
-    color: #991f23 !important;
-  }
-
-  /* Hover transitions on standard category links */
-  header .navigation-2 .bko-dropdown-list .category-menu-link:hover,
-  header .navigation-4 .bko-dropdown-list .category-menu-link:hover {
-    color: #991f23 !important;
-    background: rgba(153, 31, 35, 0.05) !important;
   }
 }
+
+/* ==========================================================================
+   ABOUT PAGE: ORIGINS & TIMELINE PRECISE ALIGNMENTS
+   ========================================================================== */
+
+/* Centered Banner Titles */
+.center-text-banner1 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  margin-bottom: 3.5em !important;
+  width: 100% !important;
+}
+
+.heading-center-about2222 {
+  text-align: center !important;
+  margin-bottom: 0.5em !important;
+  font-size: 2.8em !important;
+}
+
+.text-size-medium-2.ii {
+  text-align: center !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+
+/* Year alignment - left and right sides facing the line */
+.text-3 {
+  color: #991f23 !important;
+  font-size: 32px !important;
+  font-weight: 600 !important;
+  text-align: right !important;
+  justify-content: flex-end !important;
+}
+
+.text-2.left {
+  text-align: right !important;
+  color: #4a3c3d !important;
+}
+
+.text-3-copy {
+  color: #991f23 !important;
+  font-size: 32px !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+
+.text-2-left {
+  text-align: left !important;
+  color: #4a3c3d !important;
+}
+
+/* Desktop layout centering for timeline grid */
+@media (min-width: 992px) {
+  .timeline_grid {
+    display: grid !important;
+    grid-template-columns: 1fr 120px 1fr !important;
+    gap: 0 !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  
+  .timeline_progress {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 3px !important;
+    z-index: 5 !important;
+    display: flex !important;
+  }
+  
+  .timeline_track-wrap {
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    display: flex !important;
+  }
+  
+  .timeline_track {
+    background-color: rgba(153, 31, 35, 0.15) !important;
+    width: 2px !important;
+    height: 100% !important;
+  }
+  
+  .timeline_item-wrap:not(.right) {
+    text-align: right !important;
+    padding-right: 40px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .timeline_item-wrap.right {
+    text-align: left !important;
+    padding-left: 40px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .timeline_inner .timeline_item {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  .timeline_inner .layout192_image-wrapper-2 {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06) !important;
+  }
+  
+  .timeline_item-wrap:not(.right) .timeline_item {
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+  
+  .timeline_item-wrap.right .timeline_item {
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+}
+
+/* Mobile responsive centering and styles for timeline */
+@media (max-width: 991px) {
+  .timeline_grid-wrap {
+    position: relative !important;
+    padding-left: 2.5em !important;
+    box-sizing: border-box !important;
+  }
+  
+  .timeline_progress {
+    display: flex !important;
+    position: absolute !important;
+    left: 1.25em !important;
+    top: 0 !important;
+    transform: none !important;
+    width: 3px !important;
+    z-index: 5 !important;
+  }
+  
+  .timeline_grid-wrap::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 1.25em !important;
+    width: 2px !important;
+    background-color: rgba(153, 31, 35, 0.15) !important;
+    z-index: 1 !important;
+  }
+  
+  .timeline_inner-mobile .timeline_track-wrap {
+    display: none !important;
+  }
+  
+  .timeline_inner-mobile .timeline_item-wrap.is-hidden-mobile {
+    display: flex !important;
+  }
+  
+  .timeline_inner-mobile .timeline_item-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    margin-bottom: 2em !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .text-3, .text-3-copy {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    font-size: 24px !important;
+    color: #991f23 !important;
+    margin-bottom: 0.5em !important;
+    display: flex !important;
+  }
+  
+  .text-2.left, .text-2-left {
+    text-align: left !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    color: #4a3c3d !important;
+  }
+  
+  .timeline_inner-mobile .timeline_item {
+    margin: 0 0 1.5em 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    display: flex !important;
+  }
+  
+  .timeline_inner-mobile .layout192_image-wrapper-2 {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    max-width: 480px !important;
+  }
+}
+
+/* ==========================================================================
+   TASK 3: HAMBURGER & MOBILE MENU EXTRA SPECIFIC OVERRIDES
+   ========================================================================== */
+@media (max-width: 991px) {
+  header .menu-mob-3,
+  header .menu-mob-3.w--open,
+  header .menu-mob-3.is-open,
+  header .menu-mob,
+  header .menu-mob.w--open,
+  header .menu-mob.is-open,
+  header .nav-menu-button,
+  header .nav-menu-button.w--open,
+  header .nav-menu-button.is-open,
+  header .menu-button-2,
+  header .menu-button-2.w--open,
+  header .menu-button-2.is-open {
+    background-color: #991f23 !important;
+    background: #991f23 !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
 
 

@@ -92,19 +92,20 @@ document.documentElement.classList.add('js-ready');
   };
 
   const simplifyMobileNavContent = () => {
+    const prefix = getAssetPrefix();
     document.querySelectorAll('.mobile-nav.nav-menu-panel').forEach((nav) => {
       if (nav.dataset.kjLiveSimple === 'true') return;
       nav.dataset.kjLiveSimple = 'true';
       nav.innerHTML = `
-        <a class="kj-mobile-menu-link" href="products.html">Gold</a>
-        <a class="kj-mobile-menu-link" href="silver-products.html">Silver</a>
-        <a class="kj-mobile-menu-link" href="diamonds-products.html">Diamond</a>
-        <a class="kj-mobile-menu-link" href="coming-soon.html">Platinum</a>
-        <a class="kj-mobile-menu-link" href="about.html">About Us</a>
-        <a class="kj-mobile-menu-link" href="thanga-mazhai.html">Thanga Mazhai</a>
-        <a class="kj-mobile-menu-link" href="swarnavarsha.html">Swarnavarsha</a>
-        <a class="kj-mobile-menu-link" href="contact.html">Contact</a>
-        <img class="kj-mobile-menu-image" src="${getAssetPrefix()}assets/images/66ae22bea37d1a6f594978b8_Rectangle%20367%20(6).png" alt=""/>
+        <a class="kj-mobile-menu-link" href="${prefix}products.html">Gold</a>
+        <a class="kj-mobile-menu-link" href="${prefix}silver-products.html">Silver</a>
+        <a class="kj-mobile-menu-link" href="${prefix}diamonds-products.html">Diamond</a>
+        <a class="kj-mobile-menu-link" href="${prefix}platinum-products.html">Platinum</a>
+        <a class="kj-mobile-menu-link" href="${prefix}about.html">About Us</a>
+        <a class="kj-mobile-menu-link" href="${prefix}thanga-mazhai.html">Thanga Mazhai</a>
+        <a class="kj-mobile-menu-link" href="${prefix}swarnavarsha.html">Swarnavarsha</a>
+        <a class="kj-mobile-menu-link" href="${prefix}contact.html">Contact</a>
+        <img class="kj-mobile-menu-image" src="${prefix}assets/images/66ae22bea37d1a6f594978b8_Rectangle%20367%20(6).png" alt=""/>
       `;
     });
   };
@@ -202,34 +203,40 @@ document.documentElement.classList.add('js-ready');
 
   const wireTimelineProgress = () => {
     const timeline = document.querySelector('.timeline');
-    const progress = document.querySelector('.timeline_progress');
-    const track = document.querySelector('.timeline_track');
-    if (!timeline || !progress || !track) return;
+    if (!timeline) return;
+
+    const progressBars = document.querySelectorAll('.timeline_progress');
+    if (!progressBars.length) return;
 
     let ticking = false;
 
     const handleScroll = () => {
-      const trackRect = track.getBoundingClientRect();
+      const scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
       const viewportHeight = window.innerHeight;
       const viewportMid = viewportHeight / 2;
-
-      const scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-      const trackTop = trackRect.top + scrollTop;
-      const trackHeight = trackRect.height;
-      const trackBottom = trackTop + trackHeight;
-
       const currentScroll = scrollTop + viewportMid;
 
-      let percentage = 0;
-      if (currentScroll < trackTop) {
-        percentage = 0;
-      } else if (currentScroll > trackBottom) {
-        percentage = 100;
-      } else {
-        percentage = ((currentScroll - trackTop) / trackHeight) * 100;
-      }
+      progressBars.forEach((progress) => {
+        const track = progress.closest('.timeline_grid-wrap');
+        if (!track) return;
 
-      progress.style.height = `${percentage}%`;
+        const trackRect = track.getBoundingClientRect();
+        const trackTop = trackRect.top + scrollTop;
+        const trackHeight = trackRect.height;
+        const trackBottom = trackTop + trackHeight;
+
+        let percentage = 0;
+        if (currentScroll < trackTop) {
+          percentage = 0;
+        } else if (currentScroll > trackBottom) {
+          percentage = 100;
+        } else {
+          percentage = ((currentScroll - trackTop) / trackHeight) * 100;
+        }
+
+        progress.style.height = `${percentage}%`;
+      });
+
       ticking = false;
     };
 
@@ -245,36 +252,13 @@ document.documentElement.classList.add('js-ready');
     handleScroll();
   };
 
-  const ensurePremiumMegamenus = () => {
-    const promoData = {
-      gold: {
-        subtitle: 'Featured Collection',
-        title: 'Gold Collection',
-        desc: 'Crafting timeless elegance since 1959. Discover our signature handcrafted gold jewellery celebrating tradition, purity, and unmatched craftsmanship.',
-        btnText: 'View Gold Designs',
-        btnLink: 'products.html'
-      },
-      silver: {
-        subtitle: 'Modern Sterling',
-        title: 'Silver Collection',
-        desc: 'Step into modern elegance. Explore our exquisitely detailed sterling silver collection, designed to add a touch of grace to your everyday moments.',
-        btnText: 'View Silver Designs',
-        btnLink: 'silver-products.html'
-      },
-      diamond: {
-        subtitle: 'Precious Sparkle',
-        title: 'Diamond Collection',
-        desc: 'Brilliance that inspires. Adorn yourself with the fire and light of our hand-selected certified diamonds, masterfully cut and set to capture perfection.',
-        btnText: 'Explore Diamonds',
-        btnLink: 'diamonds-products.html'
-      },
-      platinum: {
-        subtitle: 'Rare & Eternal',
-        title: 'Platinum Collection',
-        desc: 'Rare, pure, eternal. Celebrate your most precious milestones with our sophisticated platinum rings, bands, and necklaces crafted to last a lifetime.',
-        btnText: 'Explore Platinum',
-        btnLink: 'platinum-products.html'
-      }
+  const ensureSimpleMegamenus = () => {
+    const prefix = getAssetPrefix();
+    const basePages = {
+      gold: prefix + 'products.html',
+      silver: prefix + 'silver-products.html',
+      diamond: prefix + 'diamonds-products.html',
+      platinum: prefix + 'platinum-products.html'
     };
 
     document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel').forEach((nav) => {
@@ -293,46 +277,40 @@ document.documentElement.classList.add('js-ready');
         const grid = dropdown.querySelector('.bko-grid-1-3-1');
         if (!grid) return;
 
-        // Prevent double injection
-        if (grid.querySelector('.kj-megamenu-promo')) return;
-
         const cols = Array.from(grid.children).filter(c => c.tagName === 'DIV');
         if (cols.length < 2) return;
 
         const categoryCol = cols[0];
         const sliderCol = cols.find(c => c.classList.contains('content-slider') || c.classList.contains('slider-2') || c.classList.contains('slider-3') || c.classList.contains('slider-4') || c.classList.contains('slider-5') || c.classList.contains('slider-21'));
 
+        // Hide or remove middle columns (Child 1, 2, 3, 4) to keep only Category and Image Slider
         cols.forEach((col) => {
           if (col !== categoryCol && col !== sliderCol) {
             col.style.display = 'none';
           }
         });
 
-        categoryCol.classList.add('kj-megamenu-category-col');
-
-        const data = promoData[key];
-        if (data) {
-          const promoCol = document.createElement('div');
-          promoCol.className = 'kj-megamenu-promo';
-          promoCol.innerHTML = `
-            <span class="kj-megamenu-promo-subtitle">${data.subtitle}</span>
-            <h3 class="kj-megamenu-promo-title">${data.title}</h3>
-            <p class="kj-megamenu-promo-desc">${data.desc}</p>
-            <a href="${data.btnLink}" class="kj-megamenu-promo-btn">
-              <span>${data.btnText}</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-          `;
-
-          if (sliderCol) {
-            grid.insertBefore(promoCol, sliderCol);
-          } else {
-            grid.appendChild(promoCol);
-          }
+        // Add custom classes for our new clean layout
+        categoryCol.classList.add('kj-clean-category-col');
+        if (sliderCol) {
+          sliderCol.classList.add('kj-clean-slider-col');
         }
+
+        // Correct links dynamically to ensure Diamond links go to diamonds-products.html, Silver to silver-products.html, etc.
+        const basePage = basePages[key];
+        categoryCol.querySelectorAll('a').forEach((a) => {
+          const href = a.getAttribute('href');
+          if (href) {
+            const categoryMatch = href.match(/category=([^&]+)/);
+            if (categoryMatch) {
+              const category = categoryMatch[1];
+              a.setAttribute('href', `${basePage}?category=${category}`);
+            } else if (href.includes('#') || href.includes('products.html')) {
+              // Ensure main fallback or general category links also map correctly
+              a.setAttribute('href', basePage);
+            }
+          }
+        });
       });
     });
   };
@@ -435,7 +413,7 @@ document.documentElement.classList.add('js-ready');
     ensureLiveMobileHeaderStyle();
     ensureMobileRateStrip();
     ensureRateDropdown();
-    ensurePremiumMegamenus();
+    ensureSimpleMegamenus();
     simplifyMobileNavContent();
     wireMenus();
     wireRateSelection();
