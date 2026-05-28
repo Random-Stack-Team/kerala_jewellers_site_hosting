@@ -87,7 +87,7 @@
     justify-content: flex-end !important;
   }
 
-  header .menu-mob-3.nav-menu-button {
+  header .nav-menu-button {
     align-items: center !important;
     background-color: #991f23 !important;
     border: 1px solid rgba(255, 255, 255, .35) !important;
@@ -104,9 +104,9 @@
     margin-right: 0 !important;
   }
 
-  header .menu-mob-3 .hamburger-icon,
-  header .menu-mob-3 .hamburger-icon::before,
-  header .menu-mob-3 .hamburger-icon::after {
+  header .nav-menu-button .hamburger-icon,
+  header .nav-menu-button .hamburger-icon::before,
+  header .nav-menu-button .hamburger-icon::after {
     background: #ffffff !important;
     content: "" !important;
     display: block !important;
@@ -115,20 +115,20 @@
     width: 20px !important;
   }
 
-  header .menu-mob-3 .hamburger-icon::before {
+  header .nav-menu-button .hamburger-icon::before {
     position: absolute !important;
     top: -6px !important;
   }
 
-  header .menu-mob-3 .hamburger-icon::after {
+  header .nav-menu-button .hamburger-icon::after {
     position: absolute !important;
     top: 6px !important;
   }
 
   /* Mobile reference hamburger icon styling */
-  header .menu-mob-3 .hamburger-icon,
-  header .menu-mob-3 .hamburger-icon::before,
-  header .menu-mob-3 .hamburger-icon::after {
+  header .nav-menu-button .hamburger-icon,
+  header .nav-menu-button .hamburger-icon::before,
+  header .nav-menu-button .hamburger-icon::after {
     background-color: #ffffff !important;
     background: #ffffff !important;
   }
@@ -307,17 +307,17 @@
     width: 58px !important;
   }
 
-  header .menu-mob-3 .hamburger-icon,
-  header .menu-mob-3 .hamburger-icon::before,
-  header .menu-mob-3 .hamburger-icon::after {
+  header .nav-menu-button .hamburger-icon,
+  header .nav-menu-button .hamburger-icon::before,
+  header .nav-menu-button .hamburger-icon::after {
     width: 22px !important;
   }
 
-  header .menu-mob-3 .hamburger-icon::before {
+  header .nav-menu-button .hamburger-icon::before {
     top: -7px !important;
   }
 
-  header .menu-mob-3 .hamburger-icon::after {
+  header .nav-menu-button .hamburger-icon::after {
     top: 7px !important;
   }
 
@@ -667,19 +667,19 @@
     width: 72px !important;
   }
 
-  header .menu-mob-3 .hamburger-icon,
-  header .menu-mob-3 .hamburger-icon::before,
-  header .menu-mob-3 .hamburger-icon::after {
+  header .nav-menu-button .hamburger-icon,
+  header .nav-menu-button .hamburger-icon::before,
+  header .nav-menu-button .hamburger-icon::after {
     background: #fff !important;
     height: 3px !important;
     width: 22px !important;
   }
 
-  header .menu-mob-3 .hamburger-icon::before {
+  header .nav-menu-button .hamburger-icon::before {
     top: -8px !important;
   }
 
-  header .menu-mob-3 .hamburger-icon::after {
+  header .nav-menu-button .hamburger-icon::after {
     top: 8px !important;
   }
 
@@ -858,7 +858,7 @@
   header .navigation-mob .mobile-nav.nav-menu-panel,
   header .navigation-mob .mobile-nav {
     top: 100% !important;
-    padding: 288px 38px 28px !important;
+    padding: 24px 38px 28px !important;
   }
 
   header .navigation-mob .mobile-nav .kj-mobile-menu-link {
@@ -1034,4 +1034,20 @@
     margin-left: 0 !important;
     margin-top: 0 !important;
   }
+}
+
+/* Final compact spacing for mobile menu links. */
+@media (max-width: 991px) {
+  header .navigation-mob .mobile-nav .kj-mobile-menu-link {
+    font-size: 24px !important;
+    line-height: 1.18 !important;
+    margin: 0 0 4px !important;
+    padding: 8px 0 !important;
+  }
+}
+
+/* Defensive responsive logo image styling */
+.logo-image {
+  max-width: 100% !important;
+  height: auto !important;
 }

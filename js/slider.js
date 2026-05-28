@@ -58,13 +58,87 @@ document.addEventListener('DOMContentLoaded', () => {
     start();
   };
 
-  const initReviewCarousel = (component) => {
+    const initReviewCarousel = (component) => {
     if (component.dataset.kjSwiperReady) return;
+    component.dataset.kjSwiperReady = 'true';
+
+    // 1. If official Swiper library is loaded, use it to get a perfect live-site match!
+    if (typeof Swiper !== 'undefined') {
+      const slides = component.querySelectorAll('.swiper-slide');
+      slides.forEach((slide, index) => {
+        slide.setAttribute('data-hash', `slide${index + 1}`);
+      });
+
+      const swiperInstance = new Swiper(component.querySelector('.swiper') || component, {
+        grabCursor: true,
+        slidesPerView: 5,
+        centeredSlides: true,
+        loop: true,
+        speed: 600,
+        effect: "creative",
+        hashNavigation: {
+          watchState: true,
+        },
+        navigation: {
+          nextEl: component.closest('.slider-wrapper')?.querySelector('.slider-arrow.cc-next') || ".slider-arrow.cc-next",
+          prevEl: component.closest('.slider-wrapper')?.querySelector('.slider-arrow.cc-prev') || ".slider-arrow.cc-prev"
+        },
+        creativeEffect: {
+          limitProgress: 2,
+          prev: {
+            translate: ["-110%", 0, -500],
+            origin: "right center"
+          },
+          next: {
+            translate: ["110%", 0, -500],
+            origin: "left center"
+          }
+        },
+        breakpoints: {
+          320: { slidesPerView: 1, centeredSlides: true },
+          768: { slidesPerView: 3, centeredSlides: true },
+          1024: { slidesPerView: 5, centeredSlides: true }
+        }
+      });
+
+      // Hover slide-advance navigation matching reference site
+      const prev = component.closest('.slider-wrapper')?.querySelector(".area-prev") || component.closest('.slider-wrapper')?.querySelector(".cc-prev");
+      const next = component.closest('.slider-wrapper')?.querySelector(".area-next") || component.closest('.slider-wrapper')?.querySelector(".cc-next");
+      const hoverChangeDelay = 1000;
+      let intervalID, intervalID2;
+
+      if (prev) {
+        prev.addEventListener("mouseover", () => {
+          intervalID = setInterval(() => swiperInstance.slidePrev(), hoverChangeDelay);
+        });
+        prev.addEventListener("mouseleave", () => {
+          clearInterval(intervalID);
+        });
+        prev.addEventListener("click", (e) => {
+          e.preventDefault();
+          swiperInstance.slidePrev();
+        });
+      }
+      if (next) {
+        next.addEventListener("mouseover", () => {
+          intervalID2 = setInterval(() => swiperInstance.slideNext(), hoverChangeDelay);
+        });
+        next.addEventListener("mouseleave", () => {
+          clearInterval(intervalID2);
+        });
+        next.addEventListener("click", (e) => {
+          e.preventDefault();
+          swiperInstance.slideNext();
+        });
+      }
+      return;
+    }
+
+    // 2. Fallback (Offline) 3D carousel logic
     const wrapper = component.querySelector('.swiper-wrapper');
     const slides = Array.from(component.querySelectorAll('.swiper-slide'));
     if (!wrapper || slides.length <= 1) return;
 
-    component.dataset.kjSwiperReady = 'true';
     let activeIndex = 0;
     let timerId = 0;
     const host = component.closest('.slider-wrapper') || component;
@@ -73,27 +147,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const render = (index) => {
       activeIndex = (index + slides.length) % slides.length;
-      const stage = component.querySelector('.swiper') || component;
-      const stageWidth = stage.getBoundingClientRect().width || 1200;
-      const slideWidth = Math.max(220, stageWidth * 0.2);
-      const centerOffset = (stageWidth - slideWidth) / 2;
-      const slideGap = slideWidth * 1.72;
       slides.forEach((slide, slideIndex) => {
         let offset = slideIndex - activeIndex;
         if (offset > slides.length / 2) offset -= slides.length;
         if (offset < -slides.length / 2) offset += slides.length;
         const clampedOffset = Math.max(-2, Math.min(2, offset));
-        const distance = Math.abs(clampedOffset);
         slide.classList.toggle('swiper-slide-active', slideIndex === activeIndex);
         slide.classList.toggle('swiper-slide-prev', offset === -1 || offset === slides.length - 1);
         slide.classList.toggle('swiper-slide-next', offset === 1 || offset === -(slides.length - 1));
         slide.dataset.kjOffset = String(clampedOffset);
-        slide.style.transform = `translate3d(${centerOffset + clampedOffset * slideGap}px, 0, ${distance ? -500 * distance : 0}px) scale(${distance ? 0.86 : 1})`;
-        slide.style.opacity = distance > 1 ? '0.55' : '1';
-        slide.style.zIndex = String(10 - distance);
+        slide.style.transform = `translate3d(${clampedOffset * 110}%, 0, ${Math.abs(clampedOffset) ? -500 : 0}px) scale(${Math.abs(clampedOffset) ? 0.92 : 1})`;
+        slide.style.opacity = Math.abs(clampedOffset) > 1 ? '0' : '1';
+        slide.style.zIndex = String(10 - Math.abs(clampedOffset));
         slide.style.pointerEvents = slideIndex === activeIndex ? 'auto' : 'none';
       });
-      wrapper.style.minHeight = '600px';
+      wrapper.style.minHeight = slides[activeIndex].offsetHeight + 'px';
     };
 
     const stop = () => window.clearInterval(timerId);
@@ -122,7 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     host.addEventListener('mouseenter', stop);
     host.addEventListener('mouseleave', start);
-    window.addEventListener('resize', () => render(activeIndex));
     render(0);
     start();
   };

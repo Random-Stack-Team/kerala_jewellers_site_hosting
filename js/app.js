@@ -145,10 +145,14 @@ document.documentElement.classList.add('js-ready');
       button.setAttribute('tabindex', button.getAttribute('tabindex') || '0');
       button.setAttribute('aria-expanded', 'false');
 
-      button.onclick = (event) => {
+      // Intercept clicks in capture-phase and stop immediate propagation to prevent duplicate inline script toggles
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopImmediatePropagation();
         handledMenuClicks.add(event);
         toggleMenuButton(button);
-      };
+      }, true);
+
       button.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' || event.key === ' ') {
           event.preventDefault();
@@ -193,6 +197,143 @@ document.documentElement.classList.add('js-ready');
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') closeDropdowns();
+    });
+  };
+
+  const wireTimelineProgress = () => {
+    const timeline = document.querySelector('.timeline');
+    const progress = document.querySelector('.timeline_progress');
+    const track = document.querySelector('.timeline_track');
+    if (!timeline || !progress || !track) return;
+
+    let ticking = false;
+
+    const handleScroll = () => {
+      const trackRect = track.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const viewportMid = viewportHeight / 2;
+
+      const scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+      const trackTop = trackRect.top + scrollTop;
+      const trackHeight = trackRect.height;
+      const trackBottom = trackTop + trackHeight;
+
+      const currentScroll = scrollTop + viewportMid;
+
+      let percentage = 0;
+      if (currentScroll < trackTop) {
+        percentage = 0;
+      } else if (currentScroll > trackBottom) {
+        percentage = 100;
+      } else {
+        percentage = ((currentScroll - trackTop) / trackHeight) * 100;
+      }
+
+      progress.style.height = `${percentage}%`;
+      ticking = false;
+    };
+
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(handleScroll);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+    window.addEventListener('resize', handleScroll);
+    handleScroll();
+  };
+
+  const ensurePremiumMegamenus = () => {
+    const promoData = {
+      gold: {
+        subtitle: 'Featured Collection',
+        title: 'Gold Collection',
+        desc: 'Crafting timeless elegance since 1959. Discover our signature handcrafted gold jewellery celebrating tradition, purity, and unmatched craftsmanship.',
+        btnText: 'View Gold Designs',
+        btnLink: 'products.html'
+      },
+      silver: {
+        subtitle: 'Modern Sterling',
+        title: 'Silver Collection',
+        desc: 'Step into modern elegance. Explore our exquisitely detailed sterling silver collection, designed to add a touch of grace to your everyday moments.',
+        btnText: 'View Silver Designs',
+        btnLink: 'silver-products.html'
+      },
+      diamond: {
+        subtitle: 'Precious Sparkle',
+        title: 'Diamond Collection',
+        desc: 'Brilliance that inspires. Adorn yourself with the fire and light of our hand-selected certified diamonds, masterfully cut and set to capture perfection.',
+        btnText: 'Explore Diamonds',
+        btnLink: 'diamonds-products.html'
+      },
+      platinum: {
+        subtitle: 'Rare & Eternal',
+        title: 'Platinum Collection',
+        desc: 'Rare, pure, eternal. Celebrate your most precious milestones with our sophisticated platinum rings, bands, and necklaces crafted to last a lifetime.',
+        btnText: 'Explore Platinum',
+        btnLink: 'platinum-products.html'
+      }
+    };
+
+    document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel').forEach((nav) => {
+      const menuTypes = [
+        { key: 'gold', selector: '.goldlink, .goldlink-2' },
+        { key: 'silver', selector: '.silverlink, .silverlink-2' },
+        { key: 'diamond', selector: '.diamondlink, .diamondlink-2' },
+        { key: 'platinum', selector: '.platinumlink, .platinumlink-2' }
+      ];
+
+      menuTypes.forEach(({ key, selector }) => {
+        const link = nav.querySelector(selector);
+        const dropdown = link?.closest('.dropdown, .bko-dropdown-0');
+        if (!dropdown) return;
+
+        const grid = dropdown.querySelector('.bko-grid-1-3-1');
+        if (!grid) return;
+
+        // Prevent double injection
+        if (grid.querySelector('.kj-megamenu-promo')) return;
+
+        const cols = Array.from(grid.children).filter(c => c.tagName === 'DIV');
+        if (cols.length < 2) return;
+
+        const categoryCol = cols[0];
+        const sliderCol = cols.find(c => c.classList.contains('content-slider') || c.classList.contains('slider-2') || c.classList.contains('slider-3') || c.classList.contains('slider-4') || c.classList.contains('slider-5') || c.classList.contains('slider-21'));
+
+        cols.forEach((col) => {
+          if (col !== categoryCol && col !== sliderCol) {
+            col.style.display = 'none';
+          }
+        });
+
+        categoryCol.classList.add('kj-megamenu-category-col');
+
+        const data = promoData[key];
+        if (data) {
+          const promoCol = document.createElement('div');
+          promoCol.className = 'kj-megamenu-promo';
+          promoCol.innerHTML = `
+            <span class="kj-megamenu-promo-subtitle">${data.subtitle}</span>
+            <h3 class="kj-megamenu-promo-title">${data.title}</h3>
+            <p class="kj-megamenu-promo-desc">${data.desc}</p>
+            <a href="${data.btnLink}" class="kj-megamenu-promo-btn">
+              <span>${data.btnText}</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          `;
+
+          if (sliderCol) {
+            grid.insertBefore(promoCol, sliderCol);
+          } else {
+            grid.appendChild(promoCol);
+          }
+        }
+      });
     });
   };
 
@@ -294,9 +435,11 @@ document.documentElement.classList.add('js-ready');
     ensureLiveMobileHeaderStyle();
     ensureMobileRateStrip();
     ensureRateDropdown();
+    ensurePremiumMegamenus();
     simplifyMobileNavContent();
     wireMenus();
     wireRateSelection();
+    wireTimelineProgress();
     cleanNavCategoryPanels();
     addHoverLife();
     calculatePrice('#goldprice', 14660);
