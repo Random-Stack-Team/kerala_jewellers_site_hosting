@@ -446,3 +446,50 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
 }
 
 
+
+/* Restore default Kerala Jewellers navbar appearance on desktop. */
+@media (min-width: 992px) {
+  html body header.site-header,
+  html body header.site-header .page-wrapper-6,
+  html body header.site-header .navigation-wrap-4,
+  html body header.site-header .navigation-4.site-nav,
+  html body header.site-header .navigation-4 .navigation-full {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  html body header.site-header .navigation-4 .rate-dropdown {
+    display: none !important;
+  }
+
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2,
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2 *,
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2 > a,
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2 > a *,
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2 > .dropdown > .dropdown-toggle,
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2 > .dropdown > .dropdown-toggle *,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-toggle-3,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-toggle-3 > a,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-toggle-3 > a *,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-link-111-2,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-link-111-2 * {
+    color: #000 !important;
+  }
+
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2:hover,
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2:hover *,
+  html body header.site-header .navigation-4 .nav-menu-5 a:hover,
+  html body header.site-header .navigation-4 .nav-menu-5 a:hover * {
+    color: #991f23 !important;
+  }
+
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-list,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-list * {
+    color: #4a3334 !important;
+  }
+
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-list a:hover,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-list a:hover * {
+    color: #991f23 !important;
+  }
+}

@@ -271,3 +271,632 @@
     width: 100% !important;
   }
 }
+
+/* Mobile reference alignment: keep desktop untouched while matching the live site's phone/tablet rhythm. */
+@media (max-width: 991px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  header .navigation-mob.site-nav {
+    align-items: center !important;
+    height: 111px !important;
+    min-height: 111px !important;
+    padding: 25px 10px 25px 28px !important;
+  }
+
+  header .navigation-mob .navigation-container-mob {
+    align-items: center !important;
+    max-width: none !important;
+    min-height: 61px !important;
+    width: 100% !important;
+  }
+
+  header .navigation-mob .brand {
+    flex: 0 1 auto !important;
+    max-width: calc(100vw - 124px) !important;
+  }
+
+  header .navigation-mob .brand img {
+    height: auto !important;
+    max-height: 61px !important;
+    max-width: calc(100vw - 124px) !important;
+    object-fit: contain !important;
+    width: 170px !important;
+  }
+
+  header .navigation-mob .nav-right {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+  }
+
+  header .navigation-mob .menu-mob-3.nav-menu-button {
+    border-radius: 100px !important;
+    flex: 0 0 58px !important;
+    height: 58px !important;
+    width: 58px !important;
+  }
+
+  header .menu-mob-3 .hamburger-icon,
+  header .menu-mob-3 .hamburger-icon::before,
+  header .menu-mob-3 .hamburger-icon::after {
+    width: 22px !important;
+  }
+
+  header .menu-mob-3 .hamburger-icon::before {
+    top: -7px !important;
+  }
+
+  header .menu-mob-3 .hamburger-icon::after {
+    top: 7px !important;
+  }
+
+  header .navigation-mob .mobile-nav.nav-menu-panel {
+    top: 111px !important;
+  }
+
+  .banner-2 {
+    border-radius: 15px !important;
+    height: 500px !important;
+    margin: 20px auto 0 !important;
+    min-height: 500px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    width: calc(100vw - 20px) !important;
+  }
+
+  .banner-2 img,
+  .banner-2 picture,
+  .banner-2 .background-video,
+  .banner-2 [class*="image"] {
+    object-fit: cover !important;
+  }
+
+  .banner-2 .button-link,
+  .banner-2 .primary-btn,
+  .banner-2 .button {
+    min-height: 47px !important;
+    padding: 10px 24px !important;
+  }
+
+  .footer-2 {
+    padding-top: 45px !important;
+  }
+
+  .footer-wrapper,
+  .footer-content {
+    gap: 26px !important;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 991px) {
+  .team5_list {
+    grid-column-gap: 0 !important;
+    grid-row-gap: 0 !important;
+    grid-template-areas: none !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+
+  .team5_item {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .content_collection-list {
+    grid-column-gap: 18px !important;
+    grid-row-gap: 28px !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .content_collection-list {
+    grid-column-gap: 14px !important;
+    grid-row-gap: 24px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .product-item-14 {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  .product-img-14 {
+    aspect-ratio: 1 / 1 !important;
+    height: auto !important;
+    overflow: hidden !important;
+  }
+
+  .product-image-14 {
+    height: 100% !important;
+    object-fit: cover !important;
+    width: 100% !important;
+  }
+
+  .product-name114,
+  .product-name1141 {
+    max-width: calc(100% - 16px) !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+@media (max-width: 479px) {
+  header .navigation-mob.site-nav {
+    padding-left: 28px !important;
+    padding-right: 10px !important;
+  }
+
+  header .navigation-mob .brand img {
+    width: 170px !important;
+  }
+
+  .team5_list {
+    grid-column-gap: 0 !important;
+    grid-row-gap: 0 !important;
+    grid-template-areas: none !important;
+    grid-template-columns: repeat(3, 150px) !important;
+    margin-left: 50% !important;
+    max-width: 450px !important;
+    transform: translateX(-50%) !important;
+    width: 450px !important;
+  }
+
+  .team5_item {
+    max-width: 150px !important;
+    min-width: 150px !important;
+    width: 150px !important;
+  }
+
+  .team5_image-wrapper {
+    height: 188px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 132px !important;
+    width: 132px !important;
+  }
+
+  .team5_image {
+    height: 132px !important;
+    max-width: 132px !important;
+    object-fit: cover !important;
+    width: 132px !important;
+  }
+
+  .heading-center {
+    font-size: 50px !important;
+    line-height: 64px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  header .navigation-mob.site-nav {
+    padding-left: 20px !important;
+  }
+
+  header .navigation-mob .brand img {
+    width: 158px !important;
+  }
+}
+
+/* Final phone category strip correction after Webflow's nested container offsets. */
+@media (max-width: 479px) {
+  .team5_list {
+    margin-left: calc((100vw - 450px) / 2 - 25px) !important;
+    transform: none !important;
+  }
+
+  .team5_image-wrapper {
+    height: auto !important;
+  }
+}
+
+/* Keep the mobile drawer anchored to the viewport instead of the menu button container. */
+@media (max-width: 991px) {
+  header .navigation-mob .mobile-nav.nav-menu-panel,
+  header .navigation-mob .mobile-nav {
+    background: #991f23 !important;
+    box-shadow: 0 18px 32px rgba(0, 0, 0, .18) !important;
+    left: 0 !important;
+    max-height: calc(100vh - 111px) !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    padding: 12px 18px 18px !important;
+    position: fixed !important;
+    right: 0 !important;
+    top: 111px !important;
+    transform: none !important;
+    width: 100vw !important;
+    z-index: 10001 !important;
+  }
+}
+
+/* Live-style mobile rate strip and default compact mobile nav restore. */
+.kj-mobile-rate-strip {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .kj-mobile-rate-strip {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  header.site-header .page-wrapper-6,
+  header.site-header .container-755,
+  header.site-header .wrapper,
+  header.site-header .logos-marquee {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .kj-mobile-rate-strip {
+    align-items: center !important;
+    background: #90030a !important;
+    color: #fff !important;
+    display: flex !important;
+    height: 60px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  .kj-mobile-rate-strip__track {
+    align-items: center !important;
+    animation: slide 35s infinite linear !important;
+    display: flex !important;
+    flex: 0 0 auto !important;
+    gap: 0 !important;
+    min-width: max-content !important;
+    white-space: nowrap !important;
+  }
+
+  .kj-mobile-rate-strip__track span {
+    border-right: 2px solid rgba(255, 255, 255, .9) !important;
+    color: #fff !important;
+    display: block !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 28px !important;
+    padding: 0 10px !important;
+    white-space: nowrap !important;
+  }
+
+  header .navigation-mob.site-nav {
+    position: relative !important;
+  }
+
+  header .navigation-mob .mobile-nav.nav-menu-panel,
+  header .navigation-mob .mobile-nav {
+    background: #fff !important;
+    box-shadow: 0 18px 32px rgba(0, 0, 0, .14) !important;
+    color: #231f20 !important;
+    left: 0 !important;
+    max-height: calc(100vh - 171px) !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    padding: 15px 18px 18px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 100% !important;
+    transform: none !important;
+    width: 100vw !important;
+    z-index: 10001 !important;
+  }
+
+  header .navigation-mob .mobile-nav > .rate-dropdown,
+  header .navigation-mob .mobile-nav .rate-dropdown {
+    display: none !important;
+  }
+
+  header .navigation-mob .mobile-nav > .bko-wrap-111-2,
+  header .navigation-mob .mobile-nav > .bko-wrap-111-2 *,
+  header .navigation-mob .mobile-nav > .bko-wrap-111-2 > a,
+  header .navigation-mob .mobile-nav > a,
+  header .navigation-mob .mobile-nav > a * {
+    color: #231f20 !important;
+  }
+
+  header .navigation-mob .mobile-nav > .bko-wrap-111-2 {
+    border-bottom: 1px solid rgba(153, 31, 35, .14) !important;
+    padding: 10px 0 !important;
+  }
+
+  header .navigation-mob .mobile-nav .bko-dropdown-list,
+  header .navigation-mob .mobile-nav .dropdown-list {
+    background: #fff !important;
+    box-shadow: none !important;
+    margin-top: 8px !important;
+  }
+}
+
+/* Match the live mobile navbar: red runner, white header, black menu button, simple nav list. */
+@media (max-width: 991px) {
+  header.site-header,
+  header.site-header .page-wrapper-6,
+  header.site-header .container-755,
+  header.site-header .wrapper,
+  header.site-header .logos-marquee,
+  header.site-header .navigation-wrap-4 {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  .kj-mobile-rate-strip {
+    background: #b00008 !important;
+    height: 75px !important;
+  }
+
+  .kj-mobile-rate-strip__track span {
+    border-right: 2px solid #fff !important;
+    font-family: Mulish, Arial, sans-serif !important;
+    font-size: 17px !important;
+    font-style: italic !important;
+    font-weight: 600 !important;
+    line-height: 30px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  header .navigation-mob.site-nav {
+    background: #fff !important;
+    background-color: #fff !important;
+    border-bottom: 0 !important;
+    height: 180px !important;
+    min-height: 180px !important;
+    padding: 34px 16px 34px 16px !important;
+  }
+
+  header .navigation-mob .navigation-container-mob {
+    align-items: flex-start !important;
+    min-height: 112px !important;
+  }
+
+  header .navigation-mob .brand,
+  header .navigation-mob .brand img {
+    max-width: calc(100vw - 130px) !important;
+  }
+
+  header .navigation-mob .brand img {
+    width: 210px !important;
+    max-height: none !important;
+  }
+
+  header .navigation-mob .menu-mob-3.nav-menu-button {
+    background: #000 !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    flex: 0 0 72px !important;
+    height: 72px !important;
+    margin-top: 0 !important;
+    width: 72px !important;
+  }
+
+  header .menu-mob-3 .hamburger-icon,
+  header .menu-mob-3 .hamburger-icon::before,
+  header .menu-mob-3 .hamburger-icon::after {
+    background: #fff !important;
+    height: 3px !important;
+    width: 22px !important;
+  }
+
+  header .menu-mob-3 .hamburger-icon::before {
+    top: -8px !important;
+  }
+
+  header .menu-mob-3 .hamburger-icon::after {
+    top: 8px !important;
+  }
+
+  header .navigation-mob .mobile-nav.nav-menu-panel,
+  header .navigation-mob .mobile-nav {
+    background: #fff !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    display: none !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    left: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 38px 28px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 100% !important;
+    width: 100vw !important;
+    z-index: 10001 !important;
+  }
+
+  header .navigation-mob .mobile-nav.nav-menu-panel.is-open,
+  header .navigation-mob .mobile-nav.is-open {
+    display: flex !important;
+  }
+
+  header .navigation-mob .mobile-nav .rate-dropdown,
+  header .navigation-mob .mobile-nav .bko-dropdown-list,
+  header .navigation-mob .mobile-nav .dropdown-list,
+  header .navigation-mob .mobile-nav .slider-2,
+  header .navigation-mob .mobile-nav .slider-21,
+  header .navigation-mob .mobile-nav [class*="slider-"] {
+    display: none !important;
+  }
+
+  header .navigation-mob .mobile-nav > .bko-wrap-111-2 {
+    border: 0 !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 9px 0 !important;
+    width: 100% !important;
+  }
+
+  header .navigation-mob .mobile-nav > .bko-wrap-111-2,
+  header .navigation-mob .mobile-nav > .bko-wrap-111-2 *,
+  header .navigation-mob .mobile-nav > .bko-wrap-111-2 a,
+  header .navigation-mob .mobile-nav .bko-dropdown-toggle-3,
+  header .navigation-mob .mobile-nav .bko-dropdown-toggle-3 * {
+    color: #000 !important;
+    font-family: Mulish, Arial, sans-serif !important;
+    font-size: 25px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    text-decoration: none !important;
+  }
+
+  header .navigation-mob .mobile-nav .bko-dropdown-0,
+  header .navigation-mob .mobile-nav .bko-dropdown-toggle-3,
+  header .navigation-mob .mobile-nav .div2,
+  header .navigation-mob .mobile-nav a {
+    display: block !important;
+    padding: 0 !important;
+  }
+
+  header .navigation-mob .mobile-nav .bko-dropdown-toggle-3 {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 360px) {
+  header .navigation-mob.site-nav {
+    height: 165px !important;
+    min-height: 165px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  header .navigation-mob .brand img {
+    width: 185px !important;
+  }
+
+  header .navigation-mob .menu-mob-3.nav-menu-button {
+    flex-basis: 64px !important;
+    height: 64px !important;
+    width: 64px !important;
+  }
+
+  header .navigation-mob .mobile-nav.nav-menu-panel,
+  header .navigation-mob .mobile-nav {
+    padding-left: 34px !important;
+  }
+}
+
+/* Simple live-site mobile menu content. */
+@media (max-width: 991px) {
+  header .navigation-mob .mobile-nav .kj-mobile-menu-link {
+    color: #000 !important;
+    display: block !important;
+    font-family: Mulish, Arial, sans-serif !important;
+    font-size: 25px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    padding: 9px 0 !important;
+    text-decoration: none !important;
+  }
+
+  header .navigation-mob .mobile-nav .kj-mobile-menu-image {
+    border-radius: 0 0 14px 14px !important;
+    display: block !important;
+    height: 132px !important;
+    margin-top: 26px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    width: 100% !important;
+  }
+}
+
+/* Final measured mobile/tablet header alignment against live reference. */
+@media (max-width: 991px) {
+  .kj-mobile-rate-strip {
+    background: #90030a !important;
+    height: 60px !important;
+  }
+
+  .kj-mobile-rate-strip__track span {
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 28px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+
+  header .navigation-mob.site-nav {
+    background: #fff !important;
+    background-color: #fff !important;
+    height: 111px !important;
+    min-height: 111px !important;
+    padding: 25px 3% !important;
+  }
+
+  header .navigation-mob .navigation-container-mob {
+    align-items: center !important;
+    min-height: 60px !important;
+    width: 100% !important;
+  }
+
+  header .navigation-mob .brand,
+  header .navigation-mob .brand img {
+    max-width: 170px !important;
+  }
+
+  header .navigation-mob .brand img {
+    height: 60px !important;
+    max-height: 60px !important;
+    object-fit: contain !important;
+    width: 170px !important;
+  }
+
+  header .navigation-mob .menu-mob-3.nav-menu-button {
+    background: #991f23 !important;
+    border: 0 !important;
+    border-radius: 100px !important;
+    color: #fff !important;
+    flex: 0 0 58px !important;
+    height: 58px !important;
+    padding: 18px !important;
+    width: 58px !important;
+  }
+
+  header .navigation-mob .menu-mob-3.nav-menu-button.is-open {
+    background: #000 !important;
+  }
+
+  header .navigation-mob .mobile-nav.nav-menu-panel,
+  header .navigation-mob .mobile-nav {
+    top: 100% !important;
+    padding: 288px 38px 28px !important;
+  }
+
+  header .navigation-mob .mobile-nav .kj-mobile-menu-link {
+    font-size: 25px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    padding: 9px 0 !important;
+  }
+}
+
+@media (max-width: 360px) {
+  header .navigation-mob.site-nav {
+    height: 111px !important;
+    min-height: 111px !important;
+    padding: 25px 3% !important;
+  }
+
+  header .navigation-mob .brand img {
+    height: 60px !important;
+    max-height: 60px !important;
+    width: 170px !important;
+  }
+
+  header .navigation-mob .menu-mob-3.nav-menu-button {
+    flex-basis: 58px !important;
+    height: 58px !important;
+    width: 58px !important;
+  }
+}

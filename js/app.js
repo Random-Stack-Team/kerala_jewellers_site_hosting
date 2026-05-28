@@ -43,8 +43,74 @@ document.documentElement.classList.add('js-ready');
     return wrapper;
   };
 
+  const ensureMobileRateStrip = () => {
+    const headerMarquee = document.querySelector('header.site-header .logos-marquee');
+    if (!headerMarquee || headerMarquee.querySelector('.kj-mobile-rate-strip')) return;
+
+    const strip = document.createElement('div');
+    strip.className = 'kj-mobile-rate-strip';
+    strip.innerHTML = `
+      <div class="kj-mobile-rate-strip__track">
+        <span>Today&rsquo;s Rate (Updated on: 14-05-2026 10.00 AM) ; Gold Rate 22 k - &#8377; 14,800 Sliver Rate - &#8377; 315</span>
+        <span>Today&rsquo;s Rate (Updated on: 14-05-2026 10.00 AM) ; Gold Rate 22 k - &#8377; 14,800 Sliver Rate - &#8377; 315</span>
+        <span>Today&rsquo;s Rate (Updated on: 14-05-2026 10.00 AM) ; Gold Rate 22 k - &#8377; 14,800 Sliver Rate - &#8377; 315</span>
+        <span>Today&rsquo;s Rate (Updated on: 14-05-2026 10.00 AM) ; Gold Rate 22 k - &#8377; 14,800 Sliver Rate - &#8377; 315</span>
+      </div>`;
+
+    const embed = headerMarquee.querySelector('.embed');
+    if (embed?.nextSibling) {
+      headerMarquee.insertBefore(strip, embed.nextSibling);
+    } else {
+      headerMarquee.prepend(strip);
+    }
+  };
+
+  const ensureLiveMobileHeaderStyle = () => {
+    if (document.getElementById('kj-live-mobile-header-style')) return;
+    const style = document.createElement('style');
+    style.id = 'kj-live-mobile-header-style';
+    style.textContent = `
+      @media (max-width: 991px) {
+        header.site-header .navigation-mob.site-nav,
+        header.site-header .navigation-mob.site-nav.navigation-mob,
+        header.site-header .navigation-mob.site-nav.site-nav {
+          background: #fff !important;
+          background-color: #fff !important;
+        }
+
+        header.site-header .navigation-mob .mobile-nav.nav-menu-panel {
+          background: #fff !important;
+          color: #000 !important;
+        }
+
+        header.site-header .navigation-mob .mobile-nav.nav-menu-panel .kj-mobile-menu-link {
+          color: #000 !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  };
+
+  const simplifyMobileNavContent = () => {
+    document.querySelectorAll('.mobile-nav.nav-menu-panel').forEach((nav) => {
+      if (nav.dataset.kjLiveSimple === 'true') return;
+      nav.dataset.kjLiveSimple = 'true';
+      nav.innerHTML = `
+        <a class="kj-mobile-menu-link" href="products.html">Gold</a>
+        <a class="kj-mobile-menu-link" href="silver-products.html">Silver</a>
+        <a class="kj-mobile-menu-link" href="diamonds-products.html">Diamond</a>
+        <a class="kj-mobile-menu-link" href="coming-soon.html">Platinum</a>
+        <a class="kj-mobile-menu-link" href="about.html">About Us</a>
+        <a class="kj-mobile-menu-link" href="thanga-mazhai.html">Thanga Mazhai</a>
+        <a class="kj-mobile-menu-link" href="swarnavarsha.html">Swarnavarsha</a>
+        <a class="kj-mobile-menu-link" href="contact.html">Contact</a>
+        <img class="kj-mobile-menu-image" src="${getAssetPrefix()}assets/images/66ae22bea37d1a6f594978b8_Rectangle%20367%20(6).png" alt=""/>
+      `;
+    });
+  };
+
   const ensureRateDropdown = () => {
-    document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel, .mobile-nav.nav-menu-panel').forEach((nav) => {
+    document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel').forEach((nav) => {
       const goldWrap = nav.querySelector('.goldlink, .goldlink-2')?.closest('.bko-wrap-111-2');
       if (!goldWrap) return;
 
@@ -225,7 +291,10 @@ document.documentElement.classList.add('js-ready');
   };
 
   document.addEventListener('DOMContentLoaded', () => {
+    ensureLiveMobileHeaderStyle();
+    ensureMobileRateStrip();
     ensureRateDropdown();
+    simplifyMobileNavContent();
     wireMenus();
     wireRateSelection();
     cleanNavCategoryPanels();
