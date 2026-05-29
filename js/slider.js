@@ -195,9 +195,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const stage = component.querySelector('.swiper') || component;
       const stageWidth = wrapper.getBoundingClientRect().width || stage.getBoundingClientRect().width || 1200;
       const measuredSlideWidth = slides[activeIndex]?.getBoundingClientRect().width || slides[0]?.offsetWidth || stageWidth * 0.2;
-      const slideWidth = Math.max(220, Math.min(stageWidth - 32, measuredSlideWidth));
+      const slideWidth = Math.max(240, Math.min(stageWidth - 32, measuredSlideWidth));
       const centerOffset = (stageWidth - slideWidth) / 2;
-      const slideGap = slideWidth * 1.72;
+      const desktop = window.matchMedia('(min-width: 768px)').matches;
+      const slideGap = slideWidth * (desktop ? 1.02 : 1.08);
+      const sideScale = desktop ? 0.82 : 0.9;
+      const depth = desktop ? 230 : 110;
 
       wrapper.style.transform = 'none';
       slides.forEach((slide, slideIndex) => {
@@ -211,12 +214,12 @@ document.addEventListener('DOMContentLoaded', () => {
         slide.classList.toggle('swiper-slide-next', offset === 1 || offset === -(slides.length - 1));
         slide.dataset.kjOffset = String(clampedOffset);
         slide.style.transitionDuration = isDragging ? '0ms' : '';
-        slide.style.transform = `translate3d(${centerOffset + clampedOffset * slideGap}px, 0, ${distance ? -500 * distance : 0}px) scale(${distance ? 0.86 : 1})`;
-        slide.style.opacity = distance > 1 ? '0.55' : '1';
+        slide.style.transform = `translate3d(${centerOffset + clampedOffset * slideGap}px, 0, ${distance ? -depth * distance : 0}px) scale(${distance ? sideScale : 1})`;
+        slide.style.opacity = distance > 1 ? '0.42' : '1';
         slide.style.zIndex = String(10 - distance);
         slide.style.pointerEvents = slideIndex === activeIndex ? 'auto' : 'none';
       });
-      wrapper.style.minHeight = stageWidth < 768 ? '500px' : '600px';
+      wrapper.style.minHeight = stageWidth < 768 ? '470px' : '620px';
     };
 
     const stop = () => window.clearInterval(timerId);
@@ -230,9 +233,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const stage = component.querySelector('.swiper') || component;
       const stageWidth = wrapper.getBoundingClientRect().width || stage.getBoundingClientRect().width || 1200;
       const measuredSlideWidth = slides[activeIndex]?.getBoundingClientRect().width || slides[0]?.offsetWidth || stageWidth * 0.2;
-      const slideWidth = Math.max(220, Math.min(stageWidth - 32, measuredSlideWidth));
+      const slideWidth = Math.max(240, Math.min(stageWidth - 32, measuredSlideWidth));
       const centerOffset = (stageWidth - slideWidth) / 2;
-      const slideGap = slideWidth * 1.72;
+      const desktop = window.matchMedia('(min-width: 768px)').matches;
+      const slideGap = slideWidth * (desktop ? 1.02 : 1.08);
+      const sideScale = desktop ? 0.82 : 0.9;
+      const depth = desktop ? 230 : 110;
       const dragProgress = Math.max(-1, Math.min(1, dragDeltaX / Math.max(1, slideWidth)));
 
       slides.forEach((slide) => {
@@ -240,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const liveOffset = baseOffset + dragProgress;
         const distance = Math.min(2, Math.abs(liveOffset));
         slide.style.transitionDuration = '0ms';
-        slide.style.transform = `translate3d(${centerOffset + liveOffset * slideGap}px, 0, ${distance ? -500 * distance : 0}px) scale(${distance ? 0.86 : 1})`;
+        slide.style.transform = `translate3d(${centerOffset + liveOffset * slideGap}px, 0, ${distance ? -depth * distance : 0}px) scale(${distance ? sideScale : 1})`;
       });
     };
 
@@ -263,6 +269,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     prevAreas.forEach((button) => {
+      button.addEventListener('pointerdown', (event) => {
+        event.stopPropagation();
+      }, true);
+      button.addEventListener('pointerup', (event) => {
+        event.stopPropagation();
+      }, true);
       button.addEventListener('click', (event) => {
         event.preventDefault();
         event.stopPropagation();
@@ -277,6 +289,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     nextAreas.forEach((button) => {
+      button.addEventListener('pointerdown', (event) => {
+        event.stopPropagation();
+      }, true);
+      button.addEventListener('pointerup', (event) => {
+        event.stopPropagation();
+      }, true);
       button.addEventListener('click', (event) => {
         event.preventDefault();
         event.stopPropagation();

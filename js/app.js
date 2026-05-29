@@ -715,7 +715,31 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
+  const optimizeImageLoading = () => {
+    const supportsLazy = 'loading' in HTMLImageElement.prototype;
+    const firstViewport = window.innerHeight || 800;
+
+    document.querySelectorAll('img').forEach((image) => {
+      const rect = image.getBoundingClientRect();
+      const aboveFold = rect.top < firstViewport * 1.15;
+      const inHeader = Boolean(image.closest('header, .site-header, .navigation-wrap-2, .navigation-mob'));
+
+      if (!image.hasAttribute('decoding')) image.setAttribute('decoding', 'async');
+      if (!image.hasAttribute('fetchpriority') && (aboveFold || inHeader)) image.setAttribute('fetchpriority', 'high');
+      if (!image.hasAttribute('loading')) image.setAttribute('loading', aboveFold || inHeader ? 'eager' : 'lazy');
+      if (!supportsLazy && !aboveFold && !inHeader) image.classList.add('kj-deferred-image');
+
+      if (!image.hasAttribute('width') && image.naturalWidth) image.setAttribute('width', String(image.naturalWidth));
+      if (!image.hasAttribute('height') && image.naturalHeight) image.setAttribute('height', String(image.naturalHeight));
+      image.addEventListener('load', () => {
+        if (!image.hasAttribute('width') && image.naturalWidth) image.setAttribute('width', String(image.naturalWidth));
+        if (!image.hasAttribute('height') && image.naturalHeight) image.setAttribute('height', String(image.naturalHeight));
+      }, { once: true });
+    });
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
+    optimizeImageLoading();
     ensureLiveMobileHeaderStyle();
     ensureMobileRateStrip();
     ensureRateDropdown();
