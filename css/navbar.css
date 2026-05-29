@@ -20,10 +20,24 @@
   header.site-header .navigation-4 .platinumlink-2::before,
   header.site-header .navigation-2 .platinumlink::after,
   header.site-header .navigation-2 .platinumlink-2::after,
+  header.site-header .navigation-2 a[href*="platinum"]::before,
+  header.site-header .navigation-2 a[href*="platinum"]::after,
+  header.site-header .navigation-2 a[href*="coming-soon"]::before,
+  header.site-header .navigation-2 a[href*="coming-soon"]::after,
   header.site-header .navigation-4 .platinumlink::after,
   header.site-header .navigation-4 .platinumlink-2::after {
     content: none !important;
     display: none !important;
+  }
+
+  header.site-header .navigation-2 a[href*="platinum"],
+  header.site-header .navigation-2 a[href*="coming-soon"],
+  header.site-header .navigation-4 a[href*="platinum"],
+  header.site-header .navigation-4 a[href*="coming-soon"] {
+    background-image: none !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
   }
 }
 .dropdown,

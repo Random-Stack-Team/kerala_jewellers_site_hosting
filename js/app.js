@@ -48,7 +48,7 @@ document.documentElement.classList.add('js-ready');
     const orderedRates = getOrderedRates();
     const rows = orderedRates.map((rate) => (
       `<button class="rate-row" type="button" data-label="${rate.shortLabel}" data-icon="${prefix}${rate.icon}">
-        <img src="${prefix}${rate.icon}" alt="" class="rate-coin"/>
+        <img src="${prefix}${rate.icon}" alt="" class="rate-coin" loading="eager" decoding="async" fetchpriority="high"/>
         <span>${rate.label}</span>
       </button>`
     )).join('');
@@ -57,7 +57,7 @@ document.documentElement.classList.add('js-ready');
     wrapper.className = 'rate-dropdown dropdown';
     wrapper.innerHTML = `
       <button class="rate-toggle dropdown-toggle" type="button" aria-label="Today's metal rates" aria-expanded="false">
-        <img src="${prefix}${orderedRates[0].icon}" alt="" class="rate-coin"/>
+        <img src="${prefix}${orderedRates[0].icon}" alt="" class="rate-coin" loading="eager" decoding="async" fetchpriority="high"/>
         <span>${orderedRates[0].label}</span>
         <span class="rate-chevron" aria-hidden="true"></span>
       </button>
@@ -129,7 +129,7 @@ document.documentElement.classList.add('js-ready');
         <a class="kj-mobile-menu-link" href="${prefix}thanga-mazhai.html">Thanga Mazhai</a>
         <a class="kj-mobile-menu-link" href="${prefix}swarnavarsha.html">Swarnavarsha</a>
         <a class="kj-mobile-menu-link" href="${prefix}contact.html">Contact</a>
-        <img class="kj-mobile-menu-image" src="${prefix}assets/images/66ae22bea37d1a6f594978b8_Rectangle%20367%20(6).png" alt=""/>
+        <img class="kj-mobile-menu-image" src="${prefix}assets/images/66ae22bea37d1a6f594978b8_Rectangle%20367%20(6).png" alt="" loading="lazy" decoding="async"/>
       `;
     });
   };
@@ -359,12 +359,12 @@ document.documentElement.classList.add('js-ready');
         // If slider column exists, replace its inner HTML with static image to remove slider markup entirely
         if (sliderCol) {
           sliderCol.className = 'kj-clean-slider-col';
-          sliderCol.innerHTML = `<img src="${prefix}${staticImages[key]}" alt="${key} megamenu image" class="slide__image" style="width: 100%; height: auto; display: block;" />`;
+          sliderCol.innerHTML = `<img src="${prefix}${staticImages[key]}" alt="${key} megamenu image" class="slide__image" loading="lazy" decoding="async" style="width: 100%; height: auto; display: block;" />`;
         } else {
           // Create static image column if it doesn't exist
           sliderCol = document.createElement('div');
           sliderCol.className = 'kj-clean-slider-col';
-          sliderCol.innerHTML = `<img src="${prefix}${staticImages[key]}" alt="${key} megamenu image" class="slide__image" style="width: 100%; height: auto; display: block;" />`;
+          sliderCol.innerHTML = `<img src="${prefix}${staticImages[key]}" alt="${key} megamenu image" class="slide__image" loading="lazy" decoding="async" style="width: 100%; height: auto; display: block;" />`;
           grid.appendChild(sliderCol);
         }
 
@@ -428,7 +428,6 @@ document.documentElement.classList.add('js-ready');
         selector: '.diamondlink, .diamondlink-2',
         align: 'right',
         links: [
-          ['Bangles', 'diamonds-products.html?category=bangles'],
           ['Necklace', 'diamonds-products.html?category=necklace'],
           ['Rings', 'diamonds-products.html?category=rings']
         ]
@@ -506,7 +505,7 @@ document.documentElement.classList.add('js-ready');
         const imageMarkup = config.key === 'scheme'
           ? ''
           : `<div class="kj-megamenu-image">
-              <img src="${prefix}${imageMap[config.key]}" alt="${config.label} jewellery" loading="eager" />
+              <img src="${prefix}${imageMap[config.key]}" alt="${config.label} jewellery" loading="lazy" decoding="async" />
             </div>`;
 
         panel.innerHTML = `
@@ -703,7 +702,7 @@ document.documentElement.classList.add('js-ready');
     const path = window.location.pathname.replace(/\\/g, '/').toLowerCase();
     const isPlatinumPage = path.includes('platinum-products.html') || path.includes('platinum');
     if (isPlatinumPage) return;
-    document.querySelectorAll('.platinumlink.is-current, .platinumlink-2.is-current').forEach((link) => {
+    document.querySelectorAll('.platinumlink.is-current, .platinumlink-2.is-current, a[href*="platinum"].is-current, a[href*="coming-soon"].is-current').forEach((link) => {
       link.classList.remove('is-current', 'w--current');
       link.removeAttribute('aria-current');
     });
@@ -715,31 +714,38 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
-  const optimizeImageLoading = () => {
-    const supportsLazy = 'loading' in HTMLImageElement.prototype;
-    const firstViewport = window.innerHeight || 800;
-
-    document.querySelectorAll('img').forEach((image) => {
-      const rect = image.getBoundingClientRect();
-      const aboveFold = rect.top < firstViewport * 1.15;
-      const inHeader = Boolean(image.closest('header, .site-header, .navigation-wrap-2, .navigation-mob'));
-
-      if (!image.hasAttribute('decoding')) image.setAttribute('decoding', 'async');
-      if (!image.hasAttribute('fetchpriority') && (aboveFold || inHeader)) image.setAttribute('fetchpriority', 'high');
-      if (!image.hasAttribute('loading')) image.setAttribute('loading', aboveFold || inHeader ? 'eager' : 'lazy');
-      if (!supportsLazy && !aboveFold && !inHeader) image.classList.add('kj-deferred-image');
-
-      if (!image.hasAttribute('width') && image.naturalWidth) image.setAttribute('width', String(image.naturalWidth));
-      if (!image.hasAttribute('height') && image.naturalHeight) image.setAttribute('height', String(image.naturalHeight));
-      image.addEventListener('load', () => {
-        if (!image.hasAttribute('width') && image.naturalWidth) image.setAttribute('width', String(image.naturalWidth));
-        if (!image.hasAttribute('height') && image.naturalHeight) image.setAttribute('height', String(image.naturalHeight));
-      }, { once: true });
+  const wireMegamenuHover = () => {
+    if (!window.matchMedia('(min-width: 992px)').matches) return;
+    document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel').forEach((nav) => {
+      const items = Array.from(nav.querySelectorAll(':scope > .bko-wrap-111-2 > .dropdown, :scope > .rate-dropdown'));
+      items.forEach((item) => {
+        if (item.dataset.kjHoverBound) return;
+        item.dataset.kjHoverBound = 'true';
+        let closeTimer = 0;
+        const open = () => {
+          window.clearTimeout(closeTimer);
+          items.forEach((other) => {
+            if (other !== item) {
+              other.classList.remove('is-open');
+              other.querySelector('[aria-expanded]')?.setAttribute('aria-expanded', 'false');
+            }
+          });
+          item.classList.add('is-open');
+          item.querySelector('[aria-expanded]')?.setAttribute('aria-expanded', 'true');
+        };
+        const close = () => {
+          closeTimer = window.setTimeout(() => {
+            item.classList.remove('is-open');
+            item.querySelector('[aria-expanded]')?.setAttribute('aria-expanded', 'false');
+          }, 90);
+        };
+        item.addEventListener('mouseenter', open);
+        item.addEventListener('mouseleave', close);
+      });
     });
   };
 
   document.addEventListener('DOMContentLoaded', () => {
-    optimizeImageLoading();
     ensureLiveMobileHeaderStyle();
     ensureMobileRateStrip();
     ensureRateDropdown();
@@ -747,6 +753,7 @@ document.documentElement.classList.add('js-ready');
     rebuildMegamenusFromScheme();
     simplifyMobileNavContent();
     wireMenus();
+    wireMegamenuHover();
     normalizePlatinumNavState();
     wireRateSelection();
     wireTimelineProgress();

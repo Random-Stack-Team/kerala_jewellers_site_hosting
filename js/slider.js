@@ -193,14 +193,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const render = (index) => {
       activeIndex = (index + slides.length) % slides.length;
       const stage = component.querySelector('.swiper') || component;
-      const stageWidth = wrapper.getBoundingClientRect().width || stage.getBoundingClientRect().width || 1200;
-      const measuredSlideWidth = slides[activeIndex]?.getBoundingClientRect().width || slides[0]?.offsetWidth || stageWidth * 0.2;
-      const slideWidth = Math.max(240, Math.min(stageWidth - 32, measuredSlideWidth));
+      const stageWidth = stage.getBoundingClientRect().width || stage.clientWidth || 1200;
+      const measuredSlideWidth = slides[activeIndex]?.offsetWidth || slides[0]?.offsetWidth || stageWidth * 0.42;
+      const slideWidth = Math.max(260, Math.min(stageWidth - 32, measuredSlideWidth));
       const centerOffset = (stageWidth - slideWidth) / 2;
-      const desktop = window.matchMedia('(min-width: 768px)').matches;
-      const slideGap = slideWidth * (desktop ? 1.02 : 1.08);
+      const desktop = window.matchMedia('(min-width: 769px)').matches;
+      const slideGap = slideWidth * (desktop ? 0.68 : 0.9);
       const sideScale = desktop ? 0.82 : 0.9;
-      const depth = desktop ? 230 : 110;
+      const depth = desktop ? 160 : 90;
 
       wrapper.style.transform = 'none';
       slides.forEach((slide, slideIndex) => {
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slide.style.zIndex = String(10 - distance);
         slide.style.pointerEvents = slideIndex === activeIndex ? 'auto' : 'none';
       });
-      wrapper.style.minHeight = stageWidth < 768 ? '470px' : '620px';
+      wrapper.style.minHeight = stageWidth < 768 ? '440px' : '470px';
     };
 
     const stop = () => window.clearInterval(timerId);
@@ -231,14 +231,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const applyDrag = () => {
       if (!isDragging) return;
       const stage = component.querySelector('.swiper') || component;
-      const stageWidth = wrapper.getBoundingClientRect().width || stage.getBoundingClientRect().width || 1200;
-      const measuredSlideWidth = slides[activeIndex]?.getBoundingClientRect().width || slides[0]?.offsetWidth || stageWidth * 0.2;
-      const slideWidth = Math.max(240, Math.min(stageWidth - 32, measuredSlideWidth));
+      const stageWidth = stage.getBoundingClientRect().width || stage.clientWidth || 1200;
+      const measuredSlideWidth = slides[activeIndex]?.offsetWidth || slides[0]?.offsetWidth || stageWidth * 0.42;
+      const slideWidth = Math.max(260, Math.min(stageWidth - 32, measuredSlideWidth));
       const centerOffset = (stageWidth - slideWidth) / 2;
-      const desktop = window.matchMedia('(min-width: 768px)').matches;
-      const slideGap = slideWidth * (desktop ? 1.02 : 1.08);
+      const desktop = window.matchMedia('(min-width: 769px)').matches;
+      const slideGap = slideWidth * (desktop ? 0.68 : 0.9);
       const sideScale = desktop ? 0.82 : 0.9;
-      const depth = desktop ? 230 : 110;
+      const depth = desktop ? 160 : 90;
       const dragProgress = Math.max(-1, Math.min(1, dragDeltaX / Math.max(1, slideWidth)));
 
       slides.forEach((slide) => {
