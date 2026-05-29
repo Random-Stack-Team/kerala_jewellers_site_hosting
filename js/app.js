@@ -634,36 +634,264 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
-  const filterProductsByCategory = () => {
-    const params = new URLSearchParams(window.location.search);
-    const selectedCategory = (params.get('category') || '').trim().toLowerCase();
-    if (!selectedCategory) return;
+  const CATEGORY_ALIASES = {
+    all: 'all',
+    bangle: 'bangles',
+    bangles: 'bangles',
+    bracelet: 'bracelet',
+    bracelets: 'bracelet',
+    chain: 'chain',
+    chains: 'chain',
+    choker: 'necklace',
+    chokers: 'necklace',
+    earring: 'earrings',
+    earrings: 'earrings',
+    haram: 'necklace',
+    idol: 'idols',
+    idoels: 'idols',
+    idols: 'idols',
+    jimmiki: 'earrings',
+    jimikki: 'earrings',
+    necklace: 'necklace',
+    necklaces: 'necklace',
+    pendant: 'pendant',
+    pendants: 'pendant',
+    ring: 'rings',
+    rings: 'rings',
+    stud: 'earrings',
+    studs: 'earrings'
+  };
 
-    const aliases = {
-      bangles: ['bangles', 'bangle'],
-      bracelet: ['bracelet', 'bracelets'],
-      pendant: ['pendant', 'pendants'],
-      necklace: ['necklace', 'necklaces', 'haram', 'choker'],
-      rings: ['ring', 'rings'],
-      earrings: ['earring', 'earrings', 'studs', 'jimmiki'],
-      idols: ['idol', 'idols', 'idoels'],
-      anklet: ['anklet', 'anklets']
-    };
+  const CATEGORY_LABELS = {
+    all: 'All Categories',
+    anklet: 'Anklets',
+    bangles: 'Bangles',
+    bracelet: 'Bracelets',
+    chain: 'Chains',
+    earrings: 'Earrings',
+    idols: 'Idols',
+    necklace: 'Necklace',
+    pendant: 'Pendant',
+    rings: 'Rings'
+  };
 
-    const accepted = aliases[selectedCategory] || [selectedCategory];
-    const products = Array.from(document.querySelectorAll('.product-item-14'));
-    if (!products.length) return;
+  const normalizeCategory = (value = '') => {
+    const compact = String(value)
+      .toLowerCase()
+      .replace(/&amp;/g, 'and')
+      .replace(/[^a-z0-9\s-]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    if (!compact) return '';
+    const direct = CATEGORY_ALIASES[compact.replace(/\s+/g, '-')];
+    if (direct) return direct;
+    const tokens = compact.split(/[\s-]+/).filter(Boolean);
+    for (const token of tokens) {
+      if (CATEGORY_ALIASES[token]) return CATEGORY_ALIASES[token];
+    }
+    if (compact.includes('bangle')) return 'bangles';
+    if (compact.includes('bracelet')) return 'bracelet';
+    if (compact.includes('earring') || compact.includes('stud') || compact.includes('jimmiki') || compact.includes('jimikki')) return 'earrings';
+    if (compact.includes('necklace') || compact.includes('haram') || compact.includes('choker')) return 'necklace';
+    if (compact.includes('pendant')) return 'pendant';
+    if (compact.includes('ring')) return 'rings';
+    if (compact.includes('idol') || compact.includes('idoel')) return 'idols';
+    if (compact.includes('anklet')) return 'anklet';
+    return compact.replace(/\s+/g, '-');
+  };
 
-    let visibleCount = 0;
-    products.forEach((product) => {
-      const categoryText = (product.querySelector('.product-name1141')?.textContent || '').trim().toLowerCase();
-      const titleText = (product.querySelector('.product-name114')?.textContent || '').trim().toLowerCase();
-      const matches = accepted.some((term) => categoryText.includes(term) || titleText.includes(term));
-      product.hidden = !matches;
-      if (matches) visibleCount += 1;
+  const parseNumber = (value = '') => {
+    const cleaned = String(value).replace(/₹|rs\.?|inr|,/gi, '').replace(/[^\d.]/g, '');
+    const parsed = parseFloat(cleaned);
+    return Number.isFinite(parsed) ? parsed : 0;
+  };
+
+  const getProductCards = () => Array.from(document.querySelectorAll('.product-item-14'));
+
+  const inferProductCategory = (card) => {
+    const explicit = normalizeCategory(card.dataset.category);
+    if (explicit) return explicit;
+
+    const categoryText = card.querySelector('.product-name1141, .product-name111212, .diamondnames, .kj-product-card__category')?.textContent || '';
+    const normalizedCategory = normalizeCategory(categoryText);
+    if (normalizedCategory) return normalizedCategory;
+
+    const title = card.querySelector('.product-name114, .product-name, .kj-product-card__name')?.textContent || card.textContent || '';
+    return normalizeCategory(title);
+  };
+
+  const inferProductPrice = (card) => {
+    const explicit = parseNumber(card.dataset.price);
+    if (explicit) return explicit;
+
+    const priceNode = card.querySelector('.price-122121, .price-15333, .price-weight1212, .price-weight, .price-15, .price, [data-price]');
+    return parseNumber(priceNode?.dataset.price || priceNode?.textContent || '');
+  };
+
+  const getPriceRanges = (maxPrice) => {
+    if (maxPrice > 100000) {
+      return [
+        { value: '0-50000', label: 'Under ₹50,000', min: 0, max: 50000 },
+        { value: '50000-100000', label: '₹50,000 - ₹1,00,000', min: 50000, max: 100000 },
+        { value: '100000-250000', label: '₹1,00,000 - ₹2,50,000', min: 100000, max: 250000 },
+        { value: '250000-500000', label: '₹2,50,000 - ₹5,00,000', min: 250000, max: 500000 },
+        { value: '500000-', label: 'Above ₹5,00,000', min: 500000, max: Infinity }
+      ];
+    }
+
+    return [
+      { value: '0-25', label: 'Up to 25', min: 0, max: 25 },
+      { value: '25-50', label: '25 - 50', min: 25, max: 50 },
+      { value: '50-100', label: '50 - 100', min: 50, max: 100 },
+      { value: '100-200', label: '100 - 200', min: 100, max: 200 },
+      { value: '200-', label: 'Above 200', min: 200, max: Infinity }
+    ];
+  };
+
+  const parseRange = (value, maxPrice) => {
+    if (!value || value === 'all') return null;
+    const range = getPriceRanges(maxPrice).find((item) => item.value === value);
+    return range || null;
+  };
+
+  const normalizeProductCards = () => {
+    const cards = getProductCards();
+    cards.forEach((card) => {
+      card.classList.add('kj-product-card');
+      const name = card.querySelector('.product-name114, .product-name, .product-name-122, .product-name-123');
+      const category = card.querySelector('.product-name1141, .product-name111212, .diamondnames');
+      const media = card.querySelector('.product-img-14, .product-img, .banner-99');
+      const image = card.querySelector('img');
+      const action = card.querySelector('.button-123, .button-4, .button-link');
+
+      name?.classList.add('kj-product-card__name');
+      category?.classList.add('kj-product-card__category');
+      media?.classList.add('kj-product-card__media');
+      image?.classList.add('kj-product-card__image');
+      action?.classList.add('kj-product-card__action');
+
+      const normalizedCategory = inferProductCategory(card);
+      const normalizedPrice = inferProductPrice(card);
+      if (normalizedCategory) card.dataset.category = normalizedCategory;
+      if (normalizedPrice) card.dataset.price = String(normalizedPrice);
+      card.dataset.metal = getCurrentMetal();
+    });
+    return cards;
+  };
+
+  const ensureProductFilterToolbar = (cards) => {
+    if (!cards.length || document.body.classList.contains('kj-platinum-coming-soon-page')) return null;
+    const collection = cards[0].closest('.content_filter, .dynamic-list, .banner-18') || cards[0].parentElement;
+    if (!collection) return null;
+
+    document.querySelectorAll('.product-filter, .filter_form-wrapper, .filter_component, form[aria-label*="filter" i]').forEach((legacy) => {
+      if (!legacy.closest('.kj-product-filters')) legacy.classList.add('kj-legacy-filter-hidden');
+    });
+    document.querySelectorAll('.filter_dropdown-list, .filter_dropdown-toggle, .range_input').forEach((legacyPart) => {
+      const legacy = legacyPart.closest('form, .form-block, .filter_block, .section_mul-filter');
+      if (legacy && !legacy.closest('.kj-product-filters')) legacy.classList.add('kj-legacy-filter-hidden');
     });
 
-    if (!visibleCount) products.forEach((product) => { product.hidden = false; });
+    let toolbar = collection.parentElement?.querySelector(':scope > .kj-product-filters') || document.querySelector('.kj-product-filters');
+    if (!toolbar) {
+      toolbar = document.createElement('section');
+      toolbar.className = 'kj-product-filters';
+      toolbar.setAttribute('aria-label', 'Product filters');
+      toolbar.innerHTML = `
+        <label class="kj-filter-field">
+          <span>Category</span>
+          <select class="kj-filter-select" data-kj-filter="category"></select>
+        </label>
+        <label class="kj-filter-field">
+          <span>Price</span>
+          <select class="kj-filter-select" data-kj-filter="price"></select>
+        </label>
+        <button class="kj-filter-reset" type="button">Reset</button>
+      `;
+      collection.parentElement?.insertBefore(toolbar, collection);
+    }
+
+    const categories = Array.from(new Set(cards.map((card) => card.dataset.category).filter(Boolean)));
+    const categorySelect = toolbar.querySelector('[data-kj-filter="category"]');
+    const priceSelect = toolbar.querySelector('[data-kj-filter="price"]');
+    const maxPrice = Math.max(...cards.map((card) => parseNumber(card.dataset.price)), 0);
+    const params = new URLSearchParams(window.location.search);
+    const selectedCategory = normalizeCategory(params.get('category') || categorySelect.value || 'all') || 'all';
+
+    const selectedOnlyOption = selectedCategory !== 'all' && !categories.includes(selectedCategory)
+      ? [`<option value="${selectedCategory}">${CATEGORY_LABELS[selectedCategory] || selectedCategory.replace(/-/g, ' ')}</option>`]
+      : [];
+    categorySelect.innerHTML = [
+      `<option value="all">${CATEGORY_LABELS.all}</option>`,
+      ...selectedOnlyOption,
+      ...categories.sort().map((category) => `<option value="${category}">${CATEGORY_LABELS[category] || category.replace(/-/g, ' ')}</option>`)
+    ].join('');
+    categorySelect.value = selectedCategory;
+
+    priceSelect.innerHTML = [
+      '<option value="all">All Prices</option>',
+      ...getPriceRanges(maxPrice).map((range) => `<option value="${range.value}">${range.label}</option>`)
+    ].join('');
+
+    return toolbar;
+  };
+
+  const applyProductFilters = (toolbar, cards) => {
+    const selectedCategory = normalizeCategory(toolbar?.querySelector('[data-kj-filter="category"]')?.value || 'all') || 'all';
+    const selectedPrice = toolbar?.querySelector('[data-kj-filter="price"]')?.value || 'all';
+    const maxPrice = Math.max(...cards.map((card) => parseNumber(card.dataset.price)), 0);
+    const range = parseRange(selectedPrice, maxPrice);
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const category = normalizeCategory(card.dataset.category);
+      const price = parseNumber(card.dataset.price);
+      const categoryMatches = selectedCategory === 'all' || category === selectedCategory;
+      const priceMatches = !range || (price >= range.min && price < range.max);
+      const visible = categoryMatches && priceMatches;
+      card.hidden = !visible;
+      card.classList.toggle('is-filter-hidden', !visible);
+      card.style.display = visible ? '' : 'none';
+      if (visible) visibleCount += 1;
+    });
+
+    const collection = cards[0]?.closest('.content_filter, .dynamic-list, .banner-18') || cards[0]?.parentElement;
+    let empty = collection?.parentElement?.querySelector('.kj-filter-empty');
+    if (collection && !empty) {
+      empty = document.createElement('div');
+      empty.className = 'kj-filter-empty';
+      empty.textContent = 'No products match these filters.';
+      collection.parentElement.insertBefore(empty, collection.nextSibling);
+    }
+    if (empty) empty.hidden = visibleCount !== 0;
+
+    const params = new URLSearchParams(window.location.search);
+    if (selectedCategory === 'all') params.delete('category');
+    else params.set('category', selectedCategory);
+    const query = params.toString();
+    const nextUrl = `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash}`;
+    window.history.replaceState({}, '', nextUrl);
+  };
+
+  const initProductFilters = () => {
+    const cards = normalizeProductCards();
+    if (!cards.length) return;
+    const toolbar = ensureProductFilterToolbar(cards);
+    if (!toolbar) return;
+
+    applyProductFilters(toolbar, cards);
+    if (toolbar.dataset.kjFilterReady === 'true') return;
+    toolbar.dataset.kjFilterReady = 'true';
+    toolbar.addEventListener('change', (event) => {
+      if (!event.target.closest('.kj-filter-select')) return;
+      applyProductFilters(toolbar, cards);
+    });
+    toolbar.querySelector('.kj-filter-reset')?.addEventListener('click', () => {
+      toolbar.querySelectorAll('.kj-filter-select').forEach((select) => {
+        select.value = 'all';
+      });
+      applyProductFilters(toolbar, cards);
+    });
   };
 
   const reorderProductSections = () => {
@@ -765,6 +993,6 @@ document.documentElement.classList.add('js-ready');
     calculatePrice('#goldprice', 14660);
     calculatePrice('#goldprices', 14660);
     calculatePrice('#silverpricesssproduct', 290);
-    filterProductsByCategory();
+    initProductFilters();
   });
 })();

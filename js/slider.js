@@ -159,6 +159,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // initializes Swiper inline, so clean that instance before controlling the
     // section to avoid duplicate transforms fighting each other.
     if (component.closest('.section-16')) {
+      component.closest('.section-16')?.classList.add('kj-review-section');
+      component.closest('.slider-wrapper')?.classList.add('kj-review-carousel-shell');
+      component.classList.add('kj-review-carousel');
+      component.querySelector('.swiper-wrapper')?.classList.add('kj-review-track');
+      component.querySelectorAll('.swiper-slide').forEach((slide) => slide.classList.add('kj-review-card'));
       const swiperElement = component.querySelector('.swiper');
       swiperElement?.swiper?.destroy(true, true);
       component.querySelectorAll('.swiper-slide-duplicate').forEach((slide) => slide.remove());
@@ -194,10 +199,13 @@ document.addEventListener('DOMContentLoaded', () => {
       activeIndex = (index + slides.length) % slides.length;
       const stage = component.querySelector('.swiper') || component;
       const stageWidth = stage.getBoundingClientRect().width || stage.clientWidth || 1200;
-      const measuredSlideWidth = slides[activeIndex]?.offsetWidth || slides[0]?.offsetWidth || stageWidth * 0.42;
-      const slideWidth = Math.max(260, Math.min(stageWidth - 32, measuredSlideWidth));
-      const centerOffset = (stageWidth - slideWidth) / 2;
       const desktop = window.matchMedia('(min-width: 769px)').matches;
+      const measuredSlideWidth = slides[activeIndex]?.offsetWidth || slides[0]?.offsetWidth || stageWidth * 0.42;
+      const slideWidth = desktop
+        ? Math.max(260, Math.min(stageWidth - 32, measuredSlideWidth))
+        : Math.max(260, Math.min(window.innerWidth - 30, measuredSlideWidth));
+      const stageLeft = stage.getBoundingClientRect().left || 0;
+      const centerOffset = desktop ? (stageWidth - slideWidth) / 2 : ((window.innerWidth - slideWidth) / 2) - stageLeft;
       const slideGap = slideWidth * (desktop ? 0.68 : 0.9);
       const sideScale = desktop ? 0.82 : 0.9;
       const depth = desktop ? 160 : 90;
@@ -219,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slide.style.zIndex = String(10 - distance);
         slide.style.pointerEvents = slideIndex === activeIndex ? 'auto' : 'none';
       });
-      wrapper.style.minHeight = stageWidth < 768 ? '440px' : '470px';
+      wrapper.style.minHeight = stageWidth < 769 ? '560px' : '470px';
     };
 
     const stop = () => window.clearInterval(timerId);
@@ -232,10 +240,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!isDragging) return;
       const stage = component.querySelector('.swiper') || component;
       const stageWidth = stage.getBoundingClientRect().width || stage.clientWidth || 1200;
-      const measuredSlideWidth = slides[activeIndex]?.offsetWidth || slides[0]?.offsetWidth || stageWidth * 0.42;
-      const slideWidth = Math.max(260, Math.min(stageWidth - 32, measuredSlideWidth));
-      const centerOffset = (stageWidth - slideWidth) / 2;
       const desktop = window.matchMedia('(min-width: 769px)').matches;
+      const measuredSlideWidth = slides[activeIndex]?.offsetWidth || slides[0]?.offsetWidth || stageWidth * 0.42;
+      const slideWidth = desktop
+        ? Math.max(260, Math.min(stageWidth - 32, measuredSlideWidth))
+        : Math.max(260, Math.min(window.innerWidth - 30, measuredSlideWidth));
+      const stageLeft = stage.getBoundingClientRect().left || 0;
+      const centerOffset = desktop ? (stageWidth - slideWidth) / 2 : ((window.innerWidth - slideWidth) / 2) - stageLeft;
       const slideGap = slideWidth * (desktop ? 0.68 : 0.9);
       const sideScale = desktop ? 0.82 : 0.9;
       const depth = desktop ? 160 : 90;
