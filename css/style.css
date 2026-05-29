@@ -24054,17 +24054,25 @@ body {
 }
 
 .div-block-4612 .hero-split-1 .button-3,
-.div-block-4612 .hero-split-2 .button-321,
 .div-block-4612 .hero-split-3 .button-3 {
-  background: rgba(153, 31, 35, .78) !important;
-  border-color: rgba(255, 248, 223, .86) !important;
-  color: #ffffff !important;
+  background: #fff8df !important;
+  border-color: rgba(153, 31, 35, .42) !important;
+  color: #991f23 !important;
+  text-shadow: none !important;
+}
+
+.div-block-4612 .hero-split-2 .button-321 {
+  background: #d4af37 !important;
+  border-color: rgba(255, 248, 223, .9) !important;
+  color: #251510 !important;
+  text-shadow: none !important;
 }
 
 .div-block-4612 .hero-split-4 .button-3 {
-  background: rgba(255, 255, 255, .72) !important;
-  border-color: rgba(153, 31, 35, .42) !important;
-  color: #991f23 !important;
+  background: #991f23 !important;
+  border-color: rgba(153, 31, 35, .72) !important;
+  color: #fff8df !important;
+  text-shadow: none !important;
 }
 
 @media (max-width: 1023px) {

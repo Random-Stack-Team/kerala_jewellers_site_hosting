@@ -1,5 +1,23 @@
 .site-header { position: relative; z-index: 20; }
 .nav-menu-button { cursor: pointer; }
+
+@media (min-width: 1024px) {
+  header.site-header .navigation-2 .platinumlink,
+  header.site-header .navigation-2 .platinumlink-2,
+  header.site-header .navigation-4 .platinumlink,
+  header.site-header .navigation-4 .platinumlink-2 {
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+  }
+
+  header.site-header .navigation-2 .platinumlink::after,
+  header.site-header .navigation-2 .platinumlink-2::after,
+  header.site-header .navigation-4 .platinumlink::after,
+  header.site-header .navigation-4 .platinumlink-2::after {
+    display: none !important;
+  }
+}
 .dropdown,
 .rate-dropdown,
 .rate-dropdown-container { position: relative; }
