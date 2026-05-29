@@ -62,22 +62,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (component.dataset.kjSwiperReady) return;
     component.dataset.kjSwiperReady = 'true';
 
-    // 1. If official Swiper library is loaded, use it outside the restored
-    // testimonial section. The live-style review carousel below needs fixed
-    // card geometry, so it uses the controlled fallback even when Swiper exists.
+    // 1. If official Swiper library is loaded, use it for the testimonial
+    // carousel too. The live site relies on Swiper's creative effect.
     if (typeof Swiper !== 'undefined' && !component.closest('.section-16')) {
       const slides = component.querySelectorAll('.swiper-slide');
       slides.forEach((slide, index) => {
         slide.setAttribute('data-hash', `slide${index + 1}`);
       });
 
-      const swiperInstance = new Swiper(component.querySelector('.swiper') || component, {
+      const swiperElement = component.querySelector('.swiper') || component;
+      const swiperInstance = swiperElement.swiper || new Swiper(swiperElement, {
+        autoplay: prefersReducedMotion ? false : {
+          delay: 5200,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        },
         grabCursor: true,
         slidesPerView: 5,
         centeredSlides: true,
         loop: true,
-        speed: 600,
+        speed: 760,
         effect: "creative",
+        threshold: 6,
+        touchRatio: 1,
         hashNavigation: {
           watchState: true,
         },
@@ -104,39 +111,67 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       // Hover slide-advance navigation matching reference site
-      const prev = component.closest('.slider-wrapper')?.querySelector(".area-prev") || component.closest('.slider-wrapper')?.querySelector(".cc-prev");
-      const next = component.closest('.slider-wrapper')?.querySelector(".area-next") || component.closest('.slider-wrapper')?.querySelector(".cc-next");
+      const host = component.closest('.slider-wrapper') || component;
+      const prevControls = host.querySelectorAll(".area-prev, .slider-arrow.cc-prev");
+      const nextControls = host.querySelectorAll(".area-next, .slider-arrow.cc-next");
       const hoverChangeDelay = 1000;
-      let intervalID, intervalID2;
+      let intervalID = 0;
+      let intervalID2 = 0;
 
-      if (prev) {
+      prevControls.forEach((prev) => {
+        prev.addEventListener("click", (e) => {
+          e.preventDefault();
+          swiperInstance.slidePrev(760);
+        });
         prev.addEventListener("mouseover", () => {
-          intervalID = setInterval(() => swiperInstance.slidePrev(), hoverChangeDelay);
+          window.clearInterval(intervalID);
+          swiperInstance.autoplay?.stop();
+          intervalID = setInterval(() => swiperInstance.slidePrev(760), hoverChangeDelay);
         });
         prev.addEventListener("mouseleave", () => {
           clearInterval(intervalID);
+          swiperInstance.autoplay?.start();
         });
-        prev.addEventListener("click", (e) => {
+      });
+
+      nextControls.forEach((next) => {
+        next.addEventListener("click", (e) => {
           e.preventDefault();
-          swiperInstance.slidePrev();
+          swiperInstance.slideNext(760);
         });
-      }
-      if (next) {
         next.addEventListener("mouseover", () => {
-          intervalID2 = setInterval(() => swiperInstance.slideNext(), hoverChangeDelay);
+          window.clearInterval(intervalID2);
+          swiperInstance.autoplay?.stop();
+          intervalID2 = setInterval(() => swiperInstance.slideNext(760), hoverChangeDelay);
         });
         next.addEventListener("mouseleave", () => {
           clearInterval(intervalID2);
+          swiperInstance.autoplay?.start();
         });
-        next.addEventListener("click", (e) => {
-          e.preventDefault();
-          swiperInstance.slideNext();
-        });
-      }
+      });
+
+      window.setTimeout(() => swiperInstance.update(), 250);
+      window.setTimeout(() => swiperInstance.update(), 900);
       return;
     }
 
-    // 2. Fallback (Offline) 3D carousel logic
+    // 2. Fallback/live-style review carousel logic. The scraped page also
+    // initializes Swiper inline, so clean that instance before controlling the
+    // section to avoid duplicate transforms fighting each other.
+    if (component.closest('.section-16')) {
+      const swiperElement = component.querySelector('.swiper');
+      swiperElement?.swiper?.destroy(true, true);
+      component.querySelectorAll('.swiper-slide-duplicate').forEach((slide) => slide.remove());
+      component.querySelectorAll('.swiper-slide').forEach((slide) => {
+        slide.classList.remove('swiper-slide-active', 'swiper-slide-prev', 'swiper-slide-next', 'swiper-slide-duplicate-active', 'swiper-slide-duplicate-prev', 'swiper-slide-duplicate-next');
+        slide.removeAttribute('style');
+      });
+      const wrapperElement = component.querySelector('.swiper-wrapper');
+      wrapperElement?.removeAttribute('style');
+      swiperElement?.classList.remove('swiper-initialized', 'swiper-horizontal', 'swiper-pointer-events', 'swiper-watch-progress', 'swiper-backface-hidden');
+    }
+
+    // 3. Fallback (Offline) 3D carousel logic
     const wrapper = component.querySelector('.swiper-wrapper');
     const slides = Array.from(component.querySelectorAll('.swiper-slide'));
     if (!wrapper || slides.length <= 1) return;
@@ -144,8 +179,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeIndex = 0;
     let timerId = 0;
     let dragStartX = 0;
+    let dragStartY = 0;
+    let dragLastX = 0;
+    let dragLastTime = 0;
+    let dragVelocity = 0;
     let dragDeltaX = 0;
     let isDragging = false;
+    let isHorizontalDrag = false;
     const host = component.closest('.slider-wrapper') || component;
     const prevAreas = host.querySelectorAll('.area-prev, .cc-prev');
     const nextAreas = host.querySelectorAll('.area-next, .cc-next');
@@ -206,17 +246,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const finishDrag = () => {
       if (!isDragging) return;
-      const threshold = Math.min(90, Math.max(42, (slides[activeIndex]?.getBoundingClientRect().width || 260) * 0.18));
-      const direction = Math.abs(dragDeltaX) > threshold ? (dragDeltaX < 0 ? 1 : -1) : 0;
+      const slideWidth = slides[activeIndex]?.getBoundingClientRect().width || 260;
+      const threshold = Math.min(82, Math.max(34, slideWidth * 0.14));
+      const fastSwipe = Math.abs(dragVelocity) > 0.45 && Math.abs(dragDeltaX) > 18;
+      const direction = (Math.abs(dragDeltaX) > threshold || fastSwipe) ? (dragDeltaX < 0 ? 1 : -1) : 0;
       isDragging = false;
+      isHorizontalDrag = false;
       dragStartX = 0;
+      dragStartY = 0;
+      dragLastX = 0;
+      dragLastTime = 0;
+      dragVelocity = 0;
       dragDeltaX = 0;
       render(activeIndex + direction);
       start();
     };
 
     prevAreas.forEach((button) => {
-      button.addEventListener('click', () => render(activeIndex - 1));
+      button.addEventListener('click', () => {
+        render(activeIndex - 1);
+        start();
+      });
       button.addEventListener('mouseenter', () => {
         stop();
         timerId = window.setInterval(() => render(activeIndex - 1), 1000);
@@ -225,7 +275,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     nextAreas.forEach((button) => {
-      button.addEventListener('click', () => render(activeIndex + 1));
+      button.addEventListener('click', () => {
+        render(activeIndex + 1);
+        start();
+      });
       button.addEventListener('mouseenter', () => {
         stop();
         timerId = window.setInterval(() => render(activeIndex + 1), 1000);
@@ -238,14 +291,34 @@ document.addEventListener('DOMContentLoaded', () => {
     host.addEventListener('pointerdown', (event) => {
       if (event.button !== undefined && event.button !== 0) return;
       isDragging = true;
+      isHorizontalDrag = false;
       dragStartX = event.clientX;
+      dragStartY = event.clientY;
+      dragLastX = event.clientX;
+      dragLastTime = performance.now();
+      dragVelocity = 0;
       dragDeltaX = 0;
       stop();
-      host.setPointerCapture?.(event.pointerId);
+      try {
+        host.setPointerCapture?.(event.pointerId);
+      } catch (error) {
+        // Synthetic pointer tests may not have an active pointer to capture.
+      }
     });
     host.addEventListener('pointermove', (event) => {
       if (!isDragging) return;
       dragDeltaX = event.clientX - dragStartX;
+      const dragDeltaY = event.clientY - dragStartY;
+      if (!isHorizontalDrag && Math.abs(dragDeltaX) > 8 && Math.abs(dragDeltaX) > Math.abs(dragDeltaY) * 1.15) {
+        isHorizontalDrag = true;
+      }
+      if (!isHorizontalDrag && Math.abs(dragDeltaY) > Math.abs(dragDeltaX) * 1.25) return;
+      if (isHorizontalDrag) event.preventDefault();
+      const now = performance.now();
+      const elapsed = Math.max(1, now - dragLastTime);
+      dragVelocity = (event.clientX - dragLastX) / elapsed;
+      dragLastX = event.clientX;
+      dragLastTime = now;
       applyDrag();
     });
     host.addEventListener('pointerup', finishDrag);
@@ -260,4 +333,203 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.content-slider, .w-slider').forEach(initContentSlider);
   document.querySelectorAll('.swiper-component').forEach(initReviewCarousel);
+
+  const banner2MobileQuery = window.matchMedia('(max-width: 1023px)');
+
+  const initBanner2Slider = (banner) => {
+    if (!banner2MobileQuery.matches) {
+      destroyBanner2Slider(banner);
+      return;
+    }
+    if (banner.dataset.kjBannerSlider === 'true') return;
+    const track = banner.querySelector('.team5_list');
+    const slides = Array.from(track?.querySelectorAll(':scope > .team5_item') || []);
+    if (!track || slides.length <= 1) return;
+
+    banner.dataset.kjBannerSlider = 'true';
+    banner.classList.add('kj-banner2-gallery');
+    const controller = new AbortController();
+    const listenerOptions = { signal: controller.signal };
+    track.classList.add('kj-banner2-track');
+    slides.forEach((slide, index) => {
+      slide.classList.add('kj-banner2-slide');
+      slide.dataset.kjBannerIndex = String(index);
+    });
+
+    const controls = document.createElement('div');
+    controls.className = 'kj-banner2-controls';
+    controls.innerHTML = `
+      <button class="kj-banner2-arrow kj-banner2-prev" type="button" aria-label="Previous banner"></button>
+      <div class="kj-banner2-dots" aria-label="Banner slides"></div>
+      <button class="kj-banner2-arrow kj-banner2-next" type="button" aria-label="Next banner"></button>
+    `;
+    banner.appendChild(controls);
+    const dotsWrap = controls.querySelector('.kj-banner2-dots');
+    const dots = slides.map((_, index) => {
+      const dot = document.createElement('button');
+      dot.className = 'kj-banner2-dot';
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Show banner ${index + 1}`);
+      dotsWrap.appendChild(dot);
+      return dot;
+    });
+
+    let activeIndex = 0;
+    let timerId = 0;
+    let dragStartX = 0;
+    let dragStartY = 0;
+    let dragLastX = 0;
+    let dragLastTime = 0;
+    let dragVelocity = 0;
+    let dragDeltaX = 0;
+    let isDragging = false;
+    let isHorizontalDrag = false;
+
+    const render = (index, immediate = false) => {
+      activeIndex = (index + slides.length) % slides.length;
+      track.style.transitionDuration = immediate ? '0ms' : '';
+      track.style.removeProperty('transform');
+      slides.forEach((slide, slideIndex) => {
+        let offset = slideIndex - activeIndex;
+        if (offset > slides.length / 2) offset -= slides.length;
+        if (offset < -slides.length / 2) offset += slides.length;
+        const liveOffset = offset + (isDragging ? dragDeltaX / Math.max(1, banner.getBoundingClientRect().width) : 0);
+        const clamped = Math.max(-1.25, Math.min(1.25, liveOffset));
+        const distance = Math.min(1.4, Math.abs(clamped));
+        const rotate = clamped * -7;
+        const scale = 1 - distance * 0.11;
+        const opacity = distance > 1.05 ? 0 : 1 - distance * 0.34;
+
+        slide.classList.toggle('is-active', slideIndex === activeIndex);
+        slide.style.transitionDuration = immediate || isDragging ? '0ms' : '';
+        slide.style.transform = `translate3d(${clamped * 82}%, ${Math.abs(clamped) * 16}px, ${-distance * 90}px) rotate(${rotate}deg) scale(${scale})`;
+        slide.style.opacity = String(opacity);
+        slide.style.zIndex = String(20 - Math.round(distance * 10));
+        slide.style.pointerEvents = slideIndex === activeIndex ? 'auto' : 'none';
+      });
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('is-active', dotIndex === activeIndex);
+        dot.setAttribute('aria-current', dotIndex === activeIndex ? 'true' : 'false');
+      });
+    };
+
+    const stop = () => window.clearInterval(timerId);
+    const start = () => {
+      stop();
+      if (!prefersReducedMotion) {
+        timerId = window.setInterval(() => {
+          render(activeIndex + 1);
+        }, 4200);
+      }
+    };
+
+    controls.querySelector('.kj-banner2-prev').addEventListener('click', () => {
+      render(activeIndex - 1);
+      start();
+    }, listenerOptions);
+    controls.querySelector('.kj-banner2-next').addEventListener('click', () => {
+      render(activeIndex + 1);
+      start();
+    }, listenerOptions);
+    dots.forEach((dot, dotIndex) => {
+      dot.addEventListener('click', () => {
+        render(dotIndex);
+        start();
+      }, listenerOptions);
+    });
+
+    banner.addEventListener('pointerdown', (event) => {
+      if (event.button !== undefined && event.button !== 0) return;
+      isDragging = true;
+      isHorizontalDrag = false;
+      dragStartX = event.clientX;
+      dragStartY = event.clientY;
+      dragLastX = event.clientX;
+      dragLastTime = performance.now();
+      dragVelocity = 0;
+      dragDeltaX = 0;
+      stop();
+      track.style.transitionDuration = '0ms';
+      try {
+        banner.setPointerCapture?.(event.pointerId);
+      } catch (error) {
+        // Synthetic pointer tests may not have an active pointer to capture.
+      }
+    }, listenerOptions);
+    banner.addEventListener('pointermove', (event) => {
+      if (!isDragging) return;
+      dragDeltaX = event.clientX - dragStartX;
+      const dragDeltaY = event.clientY - dragStartY;
+      if (!isHorizontalDrag && Math.abs(dragDeltaX) > 8 && Math.abs(dragDeltaX) > Math.abs(dragDeltaY) * 1.1) {
+        isHorizontalDrag = true;
+      }
+      if (!isHorizontalDrag && Math.abs(dragDeltaY) > Math.abs(dragDeltaX) * 1.25) return;
+      if (isHorizontalDrag) event.preventDefault();
+      const now = performance.now();
+      const elapsed = Math.max(1, now - dragLastTime);
+      dragVelocity = (event.clientX - dragLastX) / elapsed;
+      dragLastX = event.clientX;
+      dragLastTime = now;
+      render(activeIndex, true);
+    }, listenerOptions);
+    const finishDrag = () => {
+      if (!isDragging) return;
+      const threshold = Math.max(36, banner.getBoundingClientRect().width * 0.13);
+      const fastSwipe = Math.abs(dragVelocity) > 0.42 && Math.abs(dragDeltaX) > 18;
+      const direction = (Math.abs(dragDeltaX) > threshold || fastSwipe) ? (dragDeltaX < 0 ? 1 : -1) : 0;
+      isDragging = false;
+      isHorizontalDrag = false;
+      dragDeltaX = 0;
+      dragVelocity = 0;
+      render(activeIndex + direction);
+      start();
+    };
+    banner.addEventListener('pointerup', finishDrag, listenerOptions);
+    banner.addEventListener('pointercancel', finishDrag, listenerOptions);
+    banner.addEventListener('lostpointercapture', finishDrag, listenerOptions);
+    banner.addEventListener('mouseenter', stop, listenerOptions);
+    banner.addEventListener('mouseleave', start, listenerOptions);
+    const handleResize = () => {
+      if (!banner2MobileQuery.matches) {
+        destroyBanner2Slider(banner);
+        return;
+      }
+      render(activeIndex, true);
+    };
+    window.addEventListener('resize', handleResize, listenerOptions);
+    banner._kjBanner2Cleanup = () => {
+      stop();
+      controller.abort();
+    };
+
+    render(0, true);
+    start();
+  };
+
+  function destroyBanner2Slider(banner) {
+    if (banner.dataset.kjBannerSlider !== 'true') return;
+    banner._kjBanner2Cleanup?.();
+    delete banner._kjBanner2Cleanup;
+    delete banner.dataset.kjBannerSlider;
+    banner.classList.remove('kj-banner2-gallery');
+    banner.querySelector('.kj-banner2-controls')?.remove();
+    const track = banner.querySelector('.team5_list');
+    track?.classList.remove('kj-banner2-track');
+    track?.removeAttribute('style');
+    banner.querySelectorAll('.team5_item').forEach((slide) => {
+      slide.classList.remove('kj-banner2-slide', 'is-active');
+      slide.removeAttribute('style');
+      delete slide.dataset.kjBannerIndex;
+    });
+  }
+
+  const refreshBanner2Sliders = () => {
+    document.querySelectorAll('.banner-2').forEach((banner) => {
+      if (banner2MobileQuery.matches) initBanner2Slider(banner);
+      else destroyBanner2Slider(banner);
+    });
+  };
+
+  refreshBanner2Sliders();
+  banner2MobileQuery.addEventListener?.('change', refreshBanner2Sliders);
 });
