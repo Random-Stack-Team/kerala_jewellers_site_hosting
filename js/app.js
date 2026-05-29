@@ -13,6 +13,27 @@ document.documentElement.classList.add('js-ready');
     return /\/(goldproducts|silverproducts|diamondproducts|post)\//.test(path) ? '../' : '';
   };
 
+  const getCurrentMetal = () => {
+    const path = window.location.pathname.replace(/\\/g, '/').toLowerCase();
+    const params = new URLSearchParams(window.location.search);
+    const category = (params.get('metal') || params.get('type') || '').toLowerCase();
+
+    if (path.includes('silver') || category.includes('silver')) return 'silver';
+    if (path.includes('platinum') || category.includes('platinum')) return 'platinum';
+    if (path.includes('diamond') || category.includes('diamond')) return 'diamond';
+    if (path.includes('gold') || /(^|\/)products\.html$/.test(path) || category.includes('gold')) return 'gold';
+    return 'gold';
+  };
+
+  const getOrderedRates = () => {
+    const currentMetal = getCurrentMetal();
+    const matchesMetal = (rate) => rate.label.toLowerCase().includes(currentMetal);
+    return [
+      ...METAL_RATES.filter(matchesMetal),
+      ...METAL_RATES.filter((rate) => !matchesMetal(rate))
+    ];
+  };
+
   const closeDropdowns = (scope = document, except = null) => {
     scope.querySelectorAll('.dropdown.is-open, .rate-dropdown.is-open, .rate-dropdown-container.is-open').forEach((dropdown) => {
       if (dropdown !== except) {
@@ -24,7 +45,8 @@ document.documentElement.classList.add('js-ready');
 
   const buildRateDropdown = () => {
     const prefix = getAssetPrefix();
-    const rows = METAL_RATES.map((rate) => (
+    const orderedRates = getOrderedRates();
+    const rows = orderedRates.map((rate) => (
       `<button class="rate-row" type="button" data-label="${rate.shortLabel}" data-icon="${prefix}${rate.icon}">
         <img src="${prefix}${rate.icon}" alt="" class="rate-coin"/>
         <span>${rate.label}</span>
@@ -35,8 +57,8 @@ document.documentElement.classList.add('js-ready');
     wrapper.className = 'rate-dropdown dropdown';
     wrapper.innerHTML = `
       <button class="rate-toggle dropdown-toggle" type="button" aria-label="Today's metal rates" aria-expanded="false">
-        <img src="${prefix}${METAL_RATES[0].icon}" alt="" class="rate-coin"/>
-        <span>${METAL_RATES[0].label}</span>
+        <img src="${prefix}${orderedRates[0].icon}" alt="" class="rate-coin"/>
+        <span>${orderedRates[0].label}</span>
         <span class="rate-chevron" aria-hidden="true"></span>
       </button>
       <div class="rate-menu dropdown-list" role="menu">${rows}</div>`;
@@ -49,12 +71,14 @@ document.documentElement.classList.add('js-ready');
 
     const strip = document.createElement('div');
     strip.className = 'kj-mobile-rate-strip';
+    const orderedRates = getOrderedRates();
+    const rateText = orderedRates.map((rate) => rate.label.replace('/1g', '')).join(' ; ');
     strip.innerHTML = `
       <div class="kj-mobile-rate-strip__track">
-        <span>Today&rsquo;s Rate (Updated on: 14-05-2026 10.00 AM) ; Gold Rate 22 k - &#8377; 14,800 Sliver Rate - &#8377; 315</span>
-        <span>Today&rsquo;s Rate (Updated on: 14-05-2026 10.00 AM) ; Gold Rate 22 k - &#8377; 14,800 Sliver Rate - &#8377; 315</span>
-        <span>Today&rsquo;s Rate (Updated on: 14-05-2026 10.00 AM) ; Gold Rate 22 k - &#8377; 14,800 Sliver Rate - &#8377; 315</span>
-        <span>Today&rsquo;s Rate (Updated on: 14-05-2026 10.00 AM) ; Gold Rate 22 k - &#8377; 14,800 Sliver Rate - &#8377; 315</span>
+        <span>Today&rsquo;s Rate (Updated on: 14-05-2026 10.00 AM) ; ${rateText}</span>
+        <span>Today&rsquo;s Rate (Updated on: 14-05-2026 10.00 AM) ; ${rateText}</span>
+        <span>Today&rsquo;s Rate (Updated on: 14-05-2026 10.00 AM) ; ${rateText}</span>
+        <span>Today&rsquo;s Rate (Updated on: 14-05-2026 10.00 AM) ; ${rateText}</span>
       </div>`;
 
     const embed = headerMarquee.querySelector('.embed');
@@ -122,7 +146,14 @@ document.documentElement.classList.add('js-ready');
       if (insertionPoint.parentElement !== nav) return;
 
       let rate = nav.querySelector('.rate-dropdown');
-      if (!rate) rate = buildRateDropdown();
+      if (rate && rate.dataset.kjRateOrder !== getCurrentMetal()) {
+        rate.remove();
+        rate = null;
+      }
+      if (!rate) {
+        rate = buildRateDropdown();
+        rate.dataset.kjRateOrder = getCurrentMetal();
+      }
       if (rate.nextElementSibling !== insertionPoint) nav.insertBefore(rate, insertionPoint);
     });
   };
@@ -668,6 +699,16 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
+  const normalizePlatinumNavState = () => {
+    const path = window.location.pathname.replace(/\\/g, '/').toLowerCase();
+    const isPlatinumPage = path.includes('platinum-products.html') || path.includes('platinum');
+    if (isPlatinumPage) return;
+    document.querySelectorAll('.platinumlink.is-current, .platinumlink-2.is-current').forEach((link) => {
+      link.classList.remove('is-current', 'w--current');
+      link.removeAttribute('aria-current');
+    });
+  };
+
   const addHoverLife = () => {
     document.querySelectorAll('.product-item-1, .product-item-8, .product-item-81, .team5_item, .blog33_item').forEach((item) => {
       item.classList.add('kj-interactive-card');
@@ -682,6 +723,7 @@ document.documentElement.classList.add('js-ready');
     rebuildMegamenusFromScheme();
     simplifyMobileNavContent();
     wireMenus();
+    normalizePlatinumNavState();
     wireRateSelection();
     wireTimelineProgress();
     cleanNavCategoryPanels();

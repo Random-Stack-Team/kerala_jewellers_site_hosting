@@ -187,8 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDragging = false;
     let isHorizontalDrag = false;
     const host = component.closest('.slider-wrapper') || component;
-    const prevAreas = host.querySelectorAll('.area-prev, .cc-prev');
-    const nextAreas = host.querySelectorAll('.area-next, .cc-next');
+    const prevAreas = host.querySelectorAll('.area-prev, .slider-arrow.cc-prev');
+    const nextAreas = host.querySelectorAll('.area-next, .slider-arrow.cc-next');
 
     const render = (index) => {
       activeIndex = (index + slides.length) % slides.length;
@@ -263,10 +263,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     prevAreas.forEach((button) => {
-      button.addEventListener('click', () => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
         render(activeIndex - 1);
         start();
-      });
+      }, true);
       button.addEventListener('mouseenter', () => {
         stop();
         timerId = window.setInterval(() => render(activeIndex - 1), 1000);
@@ -275,10 +277,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     nextAreas.forEach((button) => {
-      button.addEventListener('click', () => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
         render(activeIndex + 1);
         start();
-      });
+      }, true);
       button.addEventListener('mouseenter', () => {
         stop();
         timerId = window.setInterval(() => render(activeIndex + 1), 1000);

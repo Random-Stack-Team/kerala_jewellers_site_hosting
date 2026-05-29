@@ -6,15 +6,23 @@
   header.site-header .navigation-2 .platinumlink-2,
   header.site-header .navigation-4 .platinumlink,
   header.site-header .navigation-4 .platinumlink-2 {
+    background-image: none !important;
     border-bottom-color: transparent !important;
+    border-bottom-style: solid !important;
+    border-bottom-width: 0 !important;
     box-shadow: none !important;
     text-decoration: none !important;
   }
 
+  header.site-header .navigation-2 .platinumlink::before,
+  header.site-header .navigation-2 .platinumlink-2::before,
+  header.site-header .navigation-4 .platinumlink::before,
+  header.site-header .navigation-4 .platinumlink-2::before,
   header.site-header .navigation-2 .platinumlink::after,
   header.site-header .navigation-2 .platinumlink-2::after,
   header.site-header .navigation-4 .platinumlink::after,
   header.site-header .navigation-4 .platinumlink-2::after {
+    content: none !important;
     display: none !important;
   }
 }
@@ -1109,13 +1117,16 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   html body header.site-header .navigation-mob .mobile-nav {
     background: #fff !important;
     color: #222 !important;
+    display: block !important;
     max-height: 0 !important;
     opacity: 0 !important;
     overflow-y: auto !important;
     overscroll-behavior: contain !important;
     pointer-events: none !important;
     transform: translateY(-8px) !important;
-    transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 240ms ease, transform 300ms ease !important;
+    visibility: hidden !important;
+    transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 240ms ease, transform 300ms ease, visibility 0s linear 360ms !important;
+    will-change: max-height, opacity, transform !important;
   }
 
   html body header.site-header .navigation-mob .mobile-nav.nav-menu-panel.is-open,
@@ -1126,6 +1137,8 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
     opacity: 1 !important;
     pointer-events: auto !important;
     transform: translateY(0) !important;
+    visibility: visible !important;
+    transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 220ms ease, transform 300ms ease, visibility 0s linear 0s !important;
   }
 
   html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link,
