@@ -80,11 +80,11 @@ document.documentElement.classList.add('js-ready');
 
         header.site-header .navigation-mob .mobile-nav.nav-menu-panel {
           background: #fff !important;
-          color: #000 !important;
+          color: #222 !important;
         }
 
         header.site-header .navigation-mob .mobile-nav.nav-menu-panel .kj-mobile-menu-link {
-          color: #000 !important;
+          color: #222 !important;
         }
       }
     `;
@@ -129,6 +129,19 @@ document.documentElement.classList.add('js-ready');
 
   const wireMenus = () => {
     const handledMenuClicks = new WeakSet();
+    const lockMenuButtonColor = (button) => {
+      if (!button) return;
+      button.style.setProperty('background', 'transparent', 'important');
+      button.style.setProperty('background-color', 'transparent', 'important');
+      button.style.setProperty('color', '#991f23', 'important');
+      button.style.setProperty('border-color', 'rgba(153, 31, 35, .38)', 'important');
+      button.querySelectorAll('.hamburger-icon, .menu-line').forEach((line) => {
+        line.style.setProperty('background', '#991f23', 'important');
+        line.style.setProperty('background-color', '#991f23', 'important');
+        line.style.setProperty('color', '#991f23', 'important');
+      });
+    };
+
     const toggleMenuButton = (button) => {
       const header = button.closest('header') || document;
       const willOpen = !button.classList.contains('is-open');
@@ -139,6 +152,7 @@ document.documentElement.classList.add('js-ready');
       button.classList.toggle('is-open', willOpen);
       button.classList.toggle('w--open', willOpen);
       button.setAttribute('aria-expanded', String(willOpen));
+      lockMenuButtonColor(button);
     };
 
     document.querySelectorAll('.nav-menu-button, .menu-button-2, .menu-mob, .menu-mob-3').forEach((button) => {
@@ -147,6 +161,7 @@ document.documentElement.classList.add('js-ready');
       button.setAttribute('role', 'button');
       button.setAttribute('tabindex', button.getAttribute('tabindex') || '0');
       button.setAttribute('aria-expanded', 'false');
+      lockMenuButtonColor(button);
 
       // Intercept clicks in capture-phase and stop immediate propagation to prevent duplicate inline script toggles
       button.addEventListener('click', (event) => {
@@ -455,18 +470,47 @@ document.documentElement.classList.add('js-ready');
           `<a class="kj-megamenu-link" href="${prefix}${href}"><span>${text}</span></a>`
         )).join('');
 
+        const imageMarkup = config.key === 'scheme'
+          ? ''
+          : `<div class="kj-megamenu-image">
+              <img src="${prefix}${imageMap[config.key]}" alt="${config.label} jewellery" loading="eager" />
+            </div>`;
+
         panel.innerHTML = `
-          <div class="kj-megamenu-panel">
+          <div class="kj-megamenu-panel${config.key === 'scheme' ? ' kj-megamenu-panel--text-only' : ''}">
             <div class="kj-megamenu-category">
               <div class="bko-text-11 kj-megamenu-heading">Category</div>
               <div class="kj-megamenu-links">${links}</div>
             </div>
-            <div class="kj-megamenu-image">
-              <img src="${prefix}${imageMap[config.key]}" alt="${config.label} jewellery" loading="eager" />
-            </div>
+            ${imageMarkup}
           </div>`;
       });
     });
+  };
+
+  const renderPlatinumComingSoon = () => {
+    const isPlatinumPage = /\/platinum-products\.html$/i.test(window.location.pathname.replace(/\\/g, '/'));
+    if (!isPlatinumPage) return;
+
+    document.body.classList.add('kj-platinum-coming-soon-page');
+    const productShell = document.querySelector('.banner-18');
+    if (!productShell || productShell.dataset.kjComingSoon === 'true') return;
+
+    productShell.dataset.kjComingSoon = 'true';
+    productShell.querySelector('.content_filter')?.remove();
+    productShell.querySelector('.dynamic-list')?.remove();
+
+    if (!productShell.querySelector('.kj-coming-soon')) {
+      productShell.insertAdjacentHTML('beforeend', `
+        <section class="kj-coming-soon" aria-labelledby="platinum-coming-soon-title">
+          <div class="kj-coming-soon__inner">
+            <p class="kj-coming-soon__eyebrow">Platinum</p>
+            <h1 id="platinum-coming-soon-title">Platinum Collection Coming Soon</h1>
+            <p>Our exclusive platinum designs will be available soon. Stay connected for updates.</p>
+          </div>
+        </section>
+      `);
+    }
   };
 
   const wireRateSelection = () => {
@@ -640,6 +684,7 @@ document.documentElement.classList.add('js-ready');
     wireTimelineProgress();
     cleanNavCategoryPanels();
     cleanDiamondDropdown();
+    renderPlatinumComingSoon();
     addHoverLife();
     reorderProductSections();
     calculatePrice('#goldprice', 14660);

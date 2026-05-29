@@ -143,6 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let activeIndex = 0;
     let timerId = 0;
+    let dragStartX = 0;
+    let dragDeltaX = 0;
+    let isDragging = false;
     const host = component.closest('.slider-wrapper') || component;
     const prevAreas = host.querySelectorAll('.area-prev, .cc-prev');
     const nextAreas = host.querySelectorAll('.area-next, .cc-next');
@@ -167,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slide.classList.toggle('swiper-slide-prev', offset === -1 || offset === slides.length - 1);
         slide.classList.toggle('swiper-slide-next', offset === 1 || offset === -(slides.length - 1));
         slide.dataset.kjOffset = String(clampedOffset);
+        slide.style.transitionDuration = isDragging ? '0ms' : '';
         slide.style.transform = `translate3d(${centerOffset + clampedOffset * slideGap}px, 0, ${distance ? -500 * distance : 0}px) scale(${distance ? 0.86 : 1})`;
         slide.style.opacity = distance > 1 ? '0.55' : '1';
         slide.style.zIndex = String(10 - distance);
@@ -178,7 +182,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const stop = () => window.clearInterval(timerId);
     const start = () => {
       stop();
-      if (!prefersReducedMotion) timerId = window.setInterval(() => render(activeIndex + 1), 4500);
+      if (!prefersReducedMotion) timerId = window.setInterval(() => render(activeIndex + 1), 5200);
+    };
+
+    const applyDrag = () => {
+      if (!isDragging) return;
+      const stage = component.querySelector('.swiper') || component;
+      const stageWidth = wrapper.getBoundingClientRect().width || stage.getBoundingClientRect().width || 1200;
+      const measuredSlideWidth = slides[activeIndex]?.getBoundingClientRect().width || slides[0]?.offsetWidth || stageWidth * 0.2;
+      const slideWidth = Math.max(220, Math.min(stageWidth - 32, measuredSlideWidth));
+      const centerOffset = (stageWidth - slideWidth) / 2;
+      const slideGap = slideWidth * 1.72;
+      const dragProgress = Math.max(-1, Math.min(1, dragDeltaX / Math.max(1, slideWidth)));
+
+      slides.forEach((slide) => {
+        const baseOffset = Number(slide.dataset.kjOffset || 0);
+        const liveOffset = baseOffset + dragProgress;
+        const distance = Math.min(2, Math.abs(liveOffset));
+        slide.style.transitionDuration = '0ms';
+        slide.style.transform = `translate3d(${centerOffset + liveOffset * slideGap}px, 0, ${distance ? -500 * distance : 0}px) scale(${distance ? 0.86 : 1})`;
+      });
+    };
+
+    const finishDrag = () => {
+      if (!isDragging) return;
+      const threshold = Math.min(90, Math.max(42, (slides[activeIndex]?.getBoundingClientRect().width || 260) * 0.18));
+      const direction = Math.abs(dragDeltaX) > threshold ? (dragDeltaX < 0 ? 1 : -1) : 0;
+      isDragging = false;
+      dragStartX = 0;
+      dragDeltaX = 0;
+      render(activeIndex + direction);
+      start();
     };
 
     prevAreas.forEach((button) => {
@@ -201,6 +235,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     host.addEventListener('mouseenter', stop);
     host.addEventListener('mouseleave', start);
+    host.addEventListener('pointerdown', (event) => {
+      if (event.button !== undefined && event.button !== 0) return;
+      isDragging = true;
+      dragStartX = event.clientX;
+      dragDeltaX = 0;
+      stop();
+      host.setPointerCapture?.(event.pointerId);
+    });
+    host.addEventListener('pointermove', (event) => {
+      if (!isDragging) return;
+      dragDeltaX = event.clientX - dragStartX;
+      applyDrag();
+    });
+    host.addEventListener('pointerup', finishDrag);
+    host.addEventListener('pointercancel', finishDrag);
+    host.addEventListener('lostpointercapture', finishDrag);
     window.addEventListener('resize', () => render(activeIndex));
     render(0);
     window.setTimeout(() => render(activeIndex), 250);

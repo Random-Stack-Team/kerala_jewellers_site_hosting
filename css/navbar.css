@@ -874,24 +874,15 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
     box-shadow: 0 18px 38px rgba(55, 21, 23, 0.14) !important;
     overflow: hidden !important;
     z-index: 10050 !important;
-    translate: 0 0 !important;
-  }
-
-  html body header.site-header .navigation-2 .bko-dropdown-list.kj-menu-align-left,
-  html body header.site-header .navigation-4 .bko-dropdown-list.kj-menu-align-left {
-    left: 0 !important;
+    left: 50% !important;
     right: auto !important;
-  }
-
-  html body header.site-header .navigation-2 .bko-dropdown-list.kj-menu-align-right,
-  html body header.site-header .navigation-4 .bko-dropdown-list.kj-menu-align-right {
-    left: auto !important;
-    right: 0 !important;
+    translate: -50% 0 !important;
   }
 
   html body header.site-header .navigation-2 .bko-dropdown-list.kj-megamenu-dropdown.scheme-dropdown-list,
   html body header.site-header .navigation-4 .bko-dropdown-list.kj-megamenu-dropdown.scheme-dropdown-list {
-    width: min(560px, calc(100vw - 48px)) !important;
+    width: min(280px, calc(100vw - 48px)) !important;
+    max-width: 280px !important;
     min-width: 0 !important;
     margin-left: 0 !important;
     padding: 0 !important;
@@ -910,6 +901,13 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
     padding: 22px 24px !important;
     box-sizing: border-box !important;
     background: #fff !important;
+  }
+
+  html body header.site-header .navigation-2 .kj-megamenu-panel--text-only,
+  html body header.site-header .navigation-4 .kj-megamenu-panel--text-only {
+    display: block !important;
+    min-height: 0 !important;
+    padding: 20px 24px 22px !important;
   }
 
   html body header.site-header .navigation-2 .kj-megamenu-category,
@@ -1003,6 +1001,11 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
     transition: none !important;
     filter: none !important;
   }
+
+  html body header.site-header .navigation-2 .kj-megamenu-scheme .kj-megamenu-image,
+  html body header.site-header .navigation-4 .kj-megamenu-scheme .kj-megamenu-image {
+    display: none !important;
+  }
 }
 
 /* ==========================================================================
@@ -1079,6 +1082,127 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   header .menu-button-2 .menu-icon-2 .menu-line {
     background: #ffffff !important;
     background-color: #ffffff !important;
+  }
+}
+
+/* Final mobile menu polish and hamburger color lock. */
+@media (max-width: 991px) {
+  html body header.site-header .navigation-mob .mobile-nav.nav-menu-panel,
+  html body header.site-header .navigation-mob .mobile-nav {
+    background: #fff !important;
+    color: #222 !important;
+    max-height: 0 !important;
+    opacity: 0 !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    pointer-events: none !important;
+    transform: translateY(-8px) !important;
+    transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 240ms ease, transform 300ms ease !important;
+  }
+
+  html body header.site-header .navigation-mob .mobile-nav.nav-menu-panel.is-open,
+  html body header.site-header .navigation-mob .mobile-nav.nav-menu-panel.w--open,
+  html body header.site-header .navigation-mob .mobile-nav.is-open,
+  html body header.site-header .navigation-mob .mobile-nav.w--open {
+    max-height: calc(100vh - 120px) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+  }
+
+  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link,
+  html body header.site-header .navigation-mob .mobile-nav a {
+    color: #222 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    padding: 9px 0 !important;
+    text-decoration: none !important;
+    transition: color 180ms ease, transform 180ms ease, padding-left 180ms ease !important;
+    -webkit-tap-highlight-color: rgba(153, 31, 35, .12) !important;
+  }
+
+  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:hover,
+  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:focus,
+  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:active,
+  html body header.site-header .navigation-mob .mobile-nav a:hover,
+  html body header.site-header .navigation-mob .mobile-nav a:focus,
+  html body header.site-header .navigation-mob .mobile-nav a:active {
+    color: #991f23 !important;
+    padding-left: 6px !important;
+    transform: translateX(2px) !important;
+  }
+
+  html body header.site-header .nav-menu-button,
+  html body header.site-header .nav-menu-button:hover,
+  html body header.site-header .nav-menu-button:focus,
+  html body header.site-header .nav-menu-button:active,
+  html body header.site-header .nav-menu-button.is-open,
+  html body header.site-header .nav-menu-button.w--open,
+  html body header.site-header .nav-menu-button[aria-expanded="true"],
+  html body header.site-header .menu-mob-3,
+  html body header.site-header .menu-mob-3:hover,
+  html body header.site-header .menu-mob-3:focus,
+  html body header.site-header .menu-mob-3:active,
+  html body header.site-header .menu-mob-3.is-open,
+  html body header.site-header .menu-mob-3.w--open,
+  html body header.site-header .menu-mob-3[aria-expanded="true"],
+  html body header.site-header .menu-mob,
+  html body header.site-header .menu-mob:hover,
+  html body header.site-header .menu-mob:focus,
+  html body header.site-header .menu-mob:active,
+  html body header.site-header .menu-mob.is-open,
+  html body header.site-header .menu-mob.w--open,
+  html body header.site-header .menu-mob[aria-expanded="true"],
+  html body header.site-header .menu-button-2,
+  html body header.site-header .menu-button-2:hover,
+  html body header.site-header .menu-button-2:focus,
+  html body header.site-header .menu-button-2:active,
+  html body header.site-header .menu-button-2.is-open,
+  html body header.site-header .menu-button-2.w--open,
+  html body header.site-header .menu-button-2[aria-expanded="true"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: rgba(153, 31, 35, .35) !important;
+    color: #991f23 !important;
+    outline-color: #991f23 !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: rgba(153, 31, 35, .14) !important;
+  }
+
+  html body header.site-header .hamburger-icon,
+  html body header.site-header .hamburger-icon::before,
+  html body header.site-header .hamburger-icon::after,
+  html body header.site-header .menu-line,
+  html body header.site-header .menu-icon-2 .menu-line,
+  html body header.site-header .nav-menu-button:hover .hamburger-icon,
+  html body header.site-header .nav-menu-button:hover .hamburger-icon::before,
+  html body header.site-header .nav-menu-button:hover .hamburger-icon::after,
+  html body header.site-header .nav-menu-button:focus .hamburger-icon,
+  html body header.site-header .nav-menu-button:focus .hamburger-icon::before,
+  html body header.site-header .nav-menu-button:focus .hamburger-icon::after,
+  html body header.site-header .nav-menu-button:active .hamburger-icon,
+  html body header.site-header .nav-menu-button:active .hamburger-icon::before,
+  html body header.site-header .nav-menu-button:active .hamburger-icon::after,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
+  html body header.site-header .nav-menu-button.w--open .hamburger-icon,
+  html body header.site-header .nav-menu-button.w--open .hamburger-icon::before,
+  html body header.site-header .nav-menu-button.w--open .hamburger-icon::after,
+  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon,
+  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
+  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
+  html body header.site-header .menu-button-2:hover .menu-line,
+  html body header.site-header .menu-button-2:focus .menu-line,
+  html body header.site-header .menu-button-2:active .menu-line,
+  html body header.site-header .menu-button-2.is-open .menu-line,
+  html body header.site-header .menu-button-2.w--open .menu-line,
+  html body header.site-header .menu-button-2[aria-expanded="true"] .menu-line {
+    background: #991f23 !important;
+    background-color: #991f23 !important;
+    color: #991f23 !important;
+    border-color: #991f23 !important;
   }
 }
 
@@ -1426,6 +1550,79 @@ header .navigation-4 .bko-grid-1-copy:hover {
     color: #ffffff !important;
     border: 0 !important;
     box-shadow: none !important;
+  }
+}
+
+/* Last mobile hamburger guard: never let touched/open states turn black. */
+@media (max-width: 991px) {
+  html body header.site-header .nav-menu-button,
+  html body header.site-header .nav-menu-button:hover,
+  html body header.site-header .nav-menu-button:focus,
+  html body header.site-header .nav-menu-button:active,
+  html body header.site-header .nav-menu-button.is-open,
+  html body header.site-header .nav-menu-button.w--open,
+  html body header.site-header .nav-menu-button[aria-expanded="true"],
+  html body header.site-header .menu-mob-3,
+  html body header.site-header .menu-mob-3:hover,
+  html body header.site-header .menu-mob-3:focus,
+  html body header.site-header .menu-mob-3:active,
+  html body header.site-header .menu-mob-3.is-open,
+  html body header.site-header .menu-mob-3.w--open,
+  html body header.site-header .menu-mob-3[aria-expanded="true"],
+  html body header.site-header .menu-mob,
+  html body header.site-header .menu-mob:hover,
+  html body header.site-header .menu-mob:focus,
+  html body header.site-header .menu-mob:active,
+  html body header.site-header .menu-mob.is-open,
+  html body header.site-header .menu-mob.w--open,
+  html body header.site-header .menu-mob[aria-expanded="true"],
+  html body header.site-header .menu-button-2,
+  html body header.site-header .menu-button-2:hover,
+  html body header.site-header .menu-button-2:focus,
+  html body header.site-header .menu-button-2:active,
+  html body header.site-header .menu-button-2.is-open,
+  html body header.site-header .menu-button-2.w--open,
+  html body header.site-header .menu-button-2[aria-expanded="true"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #991f23 !important;
+    border-color: rgba(153, 31, 35, .38) !important;
+    box-shadow: none !important;
+  }
+
+  html body header.site-header .hamburger-icon,
+  html body header.site-header .hamburger-icon::before,
+  html body header.site-header .hamburger-icon::after,
+  html body header.site-header .menu-line,
+  html body header.site-header .menu-icon-2 .menu-line,
+  html body header.site-header .nav-menu-button:hover .hamburger-icon,
+  html body header.site-header .nav-menu-button:hover .hamburger-icon::before,
+  html body header.site-header .nav-menu-button:hover .hamburger-icon::after,
+  html body header.site-header .nav-menu-button:focus .hamburger-icon,
+  html body header.site-header .nav-menu-button:focus .hamburger-icon::before,
+  html body header.site-header .nav-menu-button:focus .hamburger-icon::after,
+  html body header.site-header .nav-menu-button:active .hamburger-icon,
+  html body header.site-header .nav-menu-button:active .hamburger-icon::before,
+  html body header.site-header .nav-menu-button:active .hamburger-icon::after,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
+  html body header.site-header .nav-menu-button.w--open .hamburger-icon,
+  html body header.site-header .nav-menu-button.w--open .hamburger-icon::before,
+  html body header.site-header .nav-menu-button.w--open .hamburger-icon::after,
+  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon,
+  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
+  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
+  html body header.site-header .menu-button-2:hover .menu-line,
+  html body header.site-header .menu-button-2:focus .menu-line,
+  html body header.site-header .menu-button-2:active .menu-line,
+  html body header.site-header .menu-button-2.is-open .menu-line,
+  html body header.site-header .menu-button-2.w--open .menu-line,
+  html body header.site-header .menu-button-2[aria-expanded="true"] .menu-line {
+    background: #991f23 !important;
+    background-color: #991f23 !important;
+    color: #991f23 !important;
+    border-color: #991f23 !important;
   }
 }
 

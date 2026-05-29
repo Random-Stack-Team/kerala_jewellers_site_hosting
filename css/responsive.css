@@ -1051,3 +1051,174 @@
   max-width: 100% !important;
   height: auto !important;
 }
+/* Final mobile nav interaction and hamburger color guard. Loaded after navbar.css. */
+@media (max-width: 991px) {
+  html body header.site-header .navigation-mob .mobile-nav.nav-menu-panel,
+  html body header.site-header .navigation-mob .mobile-nav {
+    background: #fff !important;
+    color: #222 !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 240ms ease, transform 300ms ease !important;
+  }
+
+  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link,
+  html body header.site-header .navigation-mob .mobile-nav a {
+    color: #222 !important;
+    transition: color 180ms ease, transform 180ms ease, padding-left 180ms ease !important;
+    -webkit-tap-highlight-color: rgba(153, 31, 35, .12) !important;
+  }
+
+  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:hover,
+  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:focus,
+  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:active,
+  html body header.site-header .navigation-mob .mobile-nav a:hover,
+  html body header.site-header .navigation-mob .mobile-nav a:focus,
+  html body header.site-header .navigation-mob .mobile-nav a:active {
+    color: #991f23 !important;
+    padding-left: 6px !important;
+    transform: translateX(2px) !important;
+  }
+
+  html body header.site-header .nav-menu-button,
+  html body header.site-header .nav-menu-button:hover,
+  html body header.site-header .nav-menu-button:focus,
+  html body header.site-header .nav-menu-button:active,
+  html body header.site-header .nav-menu-button.is-open,
+  html body header.site-header .nav-menu-button.w--open,
+  html body header.site-header .nav-menu-button[aria-expanded="true"],
+  html body header.site-header .menu-mob-3,
+  html body header.site-header .menu-mob-3:hover,
+  html body header.site-header .menu-mob-3:focus,
+  html body header.site-header .menu-mob-3:active,
+  html body header.site-header .menu-mob-3.is-open,
+  html body header.site-header .menu-mob-3.w--open,
+  html body header.site-header .menu-mob-3[aria-expanded="true"],
+  html body header.site-header .menu-mob,
+  html body header.site-header .menu-mob:hover,
+  html body header.site-header .menu-mob:focus,
+  html body header.site-header .menu-mob:active,
+  html body header.site-header .menu-mob.is-open,
+  html body header.site-header .menu-mob.w--open,
+  html body header.site-header .menu-mob[aria-expanded="true"],
+  html body header.site-header .menu-button-2,
+  html body header.site-header .menu-button-2:hover,
+  html body header.site-header .menu-button-2:focus,
+  html body header.site-header .menu-button-2:active,
+  html body header.site-header .menu-button-2.is-open,
+  html body header.site-header .menu-button-2.w--open,
+  html body header.site-header .menu-button-2[aria-expanded="true"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #991f23 !important;
+    border-color: rgba(153, 31, 35, .38) !important;
+    box-shadow: none !important;
+  }
+
+  html body header.site-header .hamburger-icon,
+  html body header.site-header .hamburger-icon::before,
+  html body header.site-header .hamburger-icon::after,
+  html body header.site-header .menu-line,
+  html body header.site-header .menu-icon-2 .menu-line,
+  html body header.site-header .nav-menu-button:hover .hamburger-icon,
+  html body header.site-header .nav-menu-button:hover .hamburger-icon::before,
+  html body header.site-header .nav-menu-button:hover .hamburger-icon::after,
+  html body header.site-header .nav-menu-button:focus .hamburger-icon,
+  html body header.site-header .nav-menu-button:focus .hamburger-icon::before,
+  html body header.site-header .nav-menu-button:focus .hamburger-icon::after,
+  html body header.site-header .nav-menu-button:active .hamburger-icon,
+  html body header.site-header .nav-menu-button:active .hamburger-icon::before,
+  html body header.site-header .nav-menu-button:active .hamburger-icon::after,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
+  html body header.site-header .nav-menu-button.w--open .hamburger-icon,
+  html body header.site-header .nav-menu-button.w--open .hamburger-icon::before,
+  html body header.site-header .nav-menu-button.w--open .hamburger-icon::after,
+  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon,
+  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
+  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
+  html body header.site-header .menu-button-2:hover .menu-line,
+  html body header.site-header .menu-button-2:focus .menu-line,
+  html body header.site-header .menu-button-2:active .menu-line,
+  html body header.site-header .menu-button-2.is-open .menu-line,
+  html body header.site-header .menu-button-2.w--open .menu-line,
+  html body header.site-header .menu-button-2[aria-expanded="true"] .menu-line {
+    background: #991f23 !important;
+    background-color: #991f23 !important;
+    color: #991f23 !important;
+    border-color: #991f23 !important;
+  }
+}
+
+@media (max-width: 991px) {
+  html body .nav-menu-button,
+  html body .nav-menu-button:hover,
+  html body .nav-menu-button:focus,
+  html body .nav-menu-button:active,
+  html body .nav-menu-button.is-open,
+  html body .nav-menu-button.w--open,
+  html body .nav-menu-button[aria-expanded="true"],
+  html body .menu-mob-3,
+  html body .menu-mob-3:hover,
+  html body .menu-mob-3:focus,
+  html body .menu-mob-3:active,
+  html body .menu-mob-3.is-open,
+  html body .menu-mob-3.w--open,
+  html body .menu-mob-3[aria-expanded="true"],
+  html body .menu-mob,
+  html body .menu-mob:hover,
+  html body .menu-mob:focus,
+  html body .menu-mob:active,
+  html body .menu-mob.is-open,
+  html body .menu-mob.w--open,
+  html body .menu-mob[aria-expanded="true"],
+  html body .menu-button-2,
+  html body .menu-button-2:hover,
+  html body .menu-button-2:focus,
+  html body .menu-button-2:active,
+  html body .menu-button-2.is-open,
+  html body .menu-button-2.w--open,
+  html body .menu-button-2[aria-expanded="true"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #991f23 !important;
+    border-color: rgba(153, 31, 35, .38) !important;
+    box-shadow: none !important;
+  }
+
+  html body .hamburger-icon,
+  html body .hamburger-icon::before,
+  html body .hamburger-icon::after,
+  html body .menu-line,
+  html body .menu-icon-2 .menu-line,
+  html body .nav-menu-button:hover .hamburger-icon,
+  html body .nav-menu-button:hover .hamburger-icon::before,
+  html body .nav-menu-button:hover .hamburger-icon::after,
+  html body .nav-menu-button:focus .hamburger-icon,
+  html body .nav-menu-button:focus .hamburger-icon::before,
+  html body .nav-menu-button:focus .hamburger-icon::after,
+  html body .nav-menu-button:active .hamburger-icon,
+  html body .nav-menu-button:active .hamburger-icon::before,
+  html body .nav-menu-button:active .hamburger-icon::after,
+  html body .nav-menu-button.is-open .hamburger-icon,
+  html body .nav-menu-button.is-open .hamburger-icon::before,
+  html body .nav-menu-button.is-open .hamburger-icon::after,
+  html body .nav-menu-button.w--open .hamburger-icon,
+  html body .nav-menu-button.w--open .hamburger-icon::before,
+  html body .nav-menu-button.w--open .hamburger-icon::after,
+  html body .nav-menu-button[aria-expanded="true"] .hamburger-icon,
+  html body .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
+  html body .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
+  html body .menu-button-2:hover .menu-line,
+  html body .menu-button-2:focus .menu-line,
+  html body .menu-button-2:active .menu-line,
+  html body .menu-button-2.is-open .menu-line,
+  html body .menu-button-2.w--open .menu-line,
+  html body .menu-button-2[aria-expanded="true"] .menu-line {
+    background: #991f23 !important;
+    background-color: #991f23 !important;
+    color: #991f23 !important;
+    border-color: #991f23 !important;
+  }
+}
