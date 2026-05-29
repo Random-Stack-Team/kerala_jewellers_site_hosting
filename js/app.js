@@ -529,7 +529,7 @@ document.documentElement.classList.add('js-ready');
     if (!productShell || productShell.dataset.kjComingSoon === 'true') return;
 
     productShell.dataset.kjComingSoon = 'true';
-    productShell.querySelector('.content_filter')?.remove();
+    productShell.querySelector('.product-results, .content_filter')?.remove();
     productShell.querySelector('.dynamic-list')?.remove();
 
     if (!productShell.querySelector('.kj-coming-soon')) {
@@ -706,17 +706,17 @@ document.documentElement.classList.add('js-ready');
     return Number.isFinite(parsed) ? parsed : 0;
   };
 
-  const getProductCards = () => Array.from(document.querySelectorAll('.product-item-14'));
+  const getProductCards = () => Array.from(document.querySelectorAll('.product-card'));
 
   const inferProductCategory = (card) => {
     const explicit = normalizeCategory(card.dataset.category);
     if (explicit) return explicit;
 
-    const categoryText = card.querySelector('.product-name1141, .product-name111212, .diamondnames, .kj-product-card__category')?.textContent || '';
+    const categoryText = card.querySelector('.product-card-category')?.textContent || '';
     const normalizedCategory = normalizeCategory(categoryText);
     if (normalizedCategory) return normalizedCategory;
 
-    const title = card.querySelector('.product-name114, .product-name, .kj-product-card__name')?.textContent || card.textContent || '';
+    const title = card.querySelector('.product-card-title')?.textContent || card.textContent || '';
     return normalizeCategory(title);
   };
 
@@ -727,48 +727,9 @@ document.documentElement.classList.add('js-ready');
     const priceNode = card.querySelector('.price-122121, .price-15333, .price-weight1212, .price-weight, .price-15, .price, [data-price]');
     return parseNumber(priceNode?.dataset.price || priceNode?.textContent || '');
   };
-
-  const getPriceRanges = (maxPrice) => {
-    if (maxPrice > 100000) {
-      return [
-        { value: '0-50000', label: 'Under ₹50,000', min: 0, max: 50000 },
-        { value: '50000-100000', label: '₹50,000 - ₹1,00,000', min: 50000, max: 100000 },
-        { value: '100000-250000', label: '₹1,00,000 - ₹2,50,000', min: 100000, max: 250000 },
-        { value: '250000-500000', label: '₹2,50,000 - ₹5,00,000', min: 250000, max: 500000 },
-        { value: '500000-', label: 'Above ₹5,00,000', min: 500000, max: Infinity }
-      ];
-    }
-
-    return [
-      { value: '0-25', label: 'Up to 25', min: 0, max: 25 },
-      { value: '25-50', label: '25 - 50', min: 25, max: 50 },
-      { value: '50-100', label: '50 - 100', min: 50, max: 100 },
-      { value: '100-200', label: '100 - 200', min: 100, max: 200 },
-      { value: '200-', label: 'Above 200', min: 200, max: Infinity }
-    ];
-  };
-
-  const parseRange = (value, maxPrice) => {
-    if (!value || value === 'all') return null;
-    const range = getPriceRanges(maxPrice).find((item) => item.value === value);
-    return range || null;
-  };
-
   const normalizeProductCards = () => {
     const cards = getProductCards();
     cards.forEach((card) => {
-      card.classList.add('kj-product-card');
-      const name = card.querySelector('.product-name114, .product-name, .product-name-122, .product-name-123');
-      const category = card.querySelector('.product-name1141, .product-name111212, .diamondnames');
-      const media = card.querySelector('.product-img-14, .product-img, .banner-99');
-      const image = card.querySelector('img');
-      const action = card.querySelector('.button-123, .button-4, .button-link');
-
-      name?.classList.add('kj-product-card__name');
-      category?.classList.add('kj-product-card__category');
-      media?.classList.add('kj-product-card__media');
-      image?.classList.add('kj-product-card__image');
-      action?.classList.add('kj-product-card__action');
 
       const normalizedCategory = inferProductCategory(card);
       const normalizedPrice = inferProductPrice(card);
@@ -781,42 +742,38 @@ document.documentElement.classList.add('js-ready');
 
   const ensureProductFilterToolbar = (cards) => {
     if (!cards.length || document.body.classList.contains('kj-platinum-coming-soon-page')) return null;
-    const collection = cards[0].closest('.content_filter, .dynamic-list, .banner-18') || cards[0].parentElement;
+    const collection = cards[0].closest('.product-results, .content_filter, .dynamic-list, .banner-18') || cards[0].parentElement;
     if (!collection) return null;
 
-    document.querySelectorAll('.product-filter, .filter_form-wrapper, .filter_component, form[aria-label*="filter" i]').forEach((legacy) => {
-      if (!legacy.closest('.kj-product-filters')) legacy.classList.add('kj-legacy-filter-hidden');
-    });
-    document.querySelectorAll('.filter_dropdown-list, .filter_dropdown-toggle, .range_input').forEach((legacyPart) => {
-      const legacy = legacyPart.closest('form, .form-block, .filter_block, .section_mul-filter');
-      if (legacy && !legacy.closest('.kj-product-filters')) legacy.classList.add('kj-legacy-filter-hidden');
-    });
-
-    let toolbar = collection.parentElement?.querySelector(':scope > .kj-product-filters') || document.querySelector('.kj-product-filters');
+    let toolbar = collection.parentElement?.querySelector(':scope > .collection-toolbar') || document.querySelector('.collection-toolbar');
     if (!toolbar) {
       toolbar = document.createElement('section');
-      toolbar.className = 'kj-product-filters';
+      toolbar.className = 'collection-toolbar';
       toolbar.setAttribute('aria-label', 'Product filters');
       toolbar.innerHTML = `
-        <label class="kj-filter-field">
-          <span>Category</span>
-          <select class="kj-filter-select" data-kj-filter="category"></select>
+        <label class="collection-toolbar__field">
+          <span class="collection-toolbar__label">Category</span>
+          <select class="collection-toolbar__select" data-filter-control="category"></select>
         </label>
-        <label class="kj-filter-field">
-          <span>Price</span>
-          <select class="kj-filter-select" data-kj-filter="price"></select>
+        <label class="collection-toolbar__field">
+          <span class="collection-toolbar__label">Sort</span>
+          <select class="collection-toolbar__select" data-filter-control="sort">
+            <option value="default">Sort By</option>
+            <option value="price-asc">Price (Low to High)</option>
+            <option value="price-desc">Price (High to Low)</option>
+          </select>
         </label>
-        <button class="kj-filter-reset" type="button">Reset</button>
+        <button class="collection-toolbar__reset" type="button">Reset</button>
       `;
       collection.parentElement?.insertBefore(toolbar, collection);
     }
 
     const categories = Array.from(new Set(cards.map((card) => card.dataset.category).filter(Boolean)));
-    const categorySelect = toolbar.querySelector('[data-kj-filter="category"]');
-    const priceSelect = toolbar.querySelector('[data-kj-filter="price"]');
-    const maxPrice = Math.max(...cards.map((card) => parseNumber(card.dataset.price)), 0);
+    const categorySelect = toolbar.querySelector('[data-filter-control="category"]');
+    const sortSelect = toolbar.querySelector('[data-filter-control="sort"]');
     const params = new URLSearchParams(window.location.search);
     const selectedCategory = normalizeCategory(params.get('category') || categorySelect.value || 'all') || 'all';
+    const selectedSort = sortSelect.value || 'default';
 
     const selectedOnlyOption = selectedCategory !== 'all' && !categories.includes(selectedCategory)
       ? [`<option value="${selectedCategory}">${CATEGORY_LABELS[selectedCategory] || selectedCategory.replace(/-/g, ' ')}</option>`]
@@ -827,39 +784,39 @@ document.documentElement.classList.add('js-ready');
       ...categories.sort().map((category) => `<option value="${category}">${CATEGORY_LABELS[category] || category.replace(/-/g, ' ')}</option>`)
     ].join('');
     categorySelect.value = selectedCategory;
-
-    priceSelect.innerHTML = [
-      '<option value="all">All Prices</option>',
-      ...getPriceRanges(maxPrice).map((range) => `<option value="${range.value}">${range.label}</option>`)
-    ].join('');
+    sortSelect.value = selectedSort;
 
     return toolbar;
   };
 
   const applyProductFilters = (toolbar, cards) => {
-    const selectedCategory = normalizeCategory(toolbar?.querySelector('[data-kj-filter="category"]')?.value || 'all') || 'all';
-    const selectedPrice = toolbar?.querySelector('[data-kj-filter="price"]')?.value || 'all';
-    const maxPrice = Math.max(...cards.map((card) => parseNumber(card.dataset.price)), 0);
-    const range = parseRange(selectedPrice, maxPrice);
+    const selectedCategory = normalizeCategory(toolbar?.querySelector('[data-filter-control="category"]')?.value || 'all') || 'all';
+    const selectedSort = toolbar?.querySelector('[data-filter-control="sort"]')?.value || 'default';
     let visibleCount = 0;
 
     cards.forEach((card) => {
       const category = normalizeCategory(card.dataset.category);
-      const price = parseNumber(card.dataset.price);
       const categoryMatches = selectedCategory === 'all' || category === selectedCategory;
-      const priceMatches = !range || (price >= range.min && price < range.max);
-      const visible = categoryMatches && priceMatches;
+      const visible = categoryMatches;
       card.hidden = !visible;
       card.classList.toggle('is-filter-hidden', !visible);
       card.style.display = visible ? '' : 'none';
       if (visible) visibleCount += 1;
     });
 
-    const collection = cards[0]?.closest('.content_filter, .dynamic-list, .banner-18') || cards[0]?.parentElement;
-    let empty = collection?.parentElement?.querySelector('.kj-filter-empty');
+    if (selectedSort === 'price-asc' || selectedSort === 'price-desc') {
+      const grid = cards[0]?.parentElement;
+      [...cards].sort((a, b) => {
+        const difference = parseNumber(a.dataset.price) - parseNumber(b.dataset.price);
+        return selectedSort === 'price-asc' ? difference : -difference;
+      }).forEach((card) => grid?.appendChild(card));
+    }
+
+    const collection = cards[0]?.closest('.product-results, .content_filter, .dynamic-list, .banner-18') || cards[0]?.parentElement;
+    let empty = collection?.parentElement?.querySelector('.collection-empty-state');
     if (collection && !empty) {
       empty = document.createElement('div');
-      empty.className = 'kj-filter-empty';
+      empty.className = 'collection-empty-state';
       empty.textContent = 'No products match these filters.';
       collection.parentElement.insertBefore(empty, collection.nextSibling);
     }
@@ -883,13 +840,12 @@ document.documentElement.classList.add('js-ready');
     if (toolbar.dataset.kjFilterReady === 'true') return;
     toolbar.dataset.kjFilterReady = 'true';
     toolbar.addEventListener('change', (event) => {
-      if (!event.target.closest('.kj-filter-select')) return;
+      if (!event.target.closest('.collection-toolbar__select')) return;
       applyProductFilters(toolbar, cards);
     });
-    toolbar.querySelector('.kj-filter-reset')?.addEventListener('click', () => {
-      toolbar.querySelectorAll('.kj-filter-select').forEach((select) => {
-        select.value = 'all';
-      });
+    toolbar.querySelector('.collection-toolbar__reset')?.addEventListener('click', () => {
+      toolbar.querySelector('[data-filter-control="category"]').value = 'all';
+      toolbar.querySelector('[data-filter-control="sort"]').value = 'default';
       applyProductFilters(toolbar, cards);
     });
   };
