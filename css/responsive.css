@@ -1222,3 +1222,86 @@
     border-color: #991f23 !important;
   }
 }
+
+/* Final requested hamburger colors: maroon circle, white closed icon, gold open icon. */
+@media (max-width: 991px) {
+  html body header.site-header .navigation-mob .nav-menu-button,
+  html body header.site-header .navigation-mob .nav-menu-button:hover,
+  html body header.site-header .navigation-mob .nav-menu-button:focus,
+  html body header.site-header .navigation-mob .nav-menu-button:active,
+  html body header.site-header .navigation-mob .nav-menu-button.active,
+  html body header.site-header .navigation-mob .nav-menu-button.open,
+  html body header.site-header .navigation-mob .nav-menu-button.is-open,
+  html body header.site-header .navigation-mob .nav-menu-button.w--open,
+  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"],
+  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="false"],
+  html body header.site-header .navigation-mob .menu-mob,
+  html body header.site-header .navigation-mob .menu-mob-3,
+  html body header.site-header .navigation-mob .menu-button-2 {
+    background: #991f23 !important;
+    background-color: #991f23 !important;
+    border-color: #991f23 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  html body header.site-header .navigation-mob .nav-menu-button .hamburger-icon,
+  html body header.site-header .navigation-mob .nav-menu-button .hamburger-icon::before,
+  html body header.site-header .navigation-mob .nav-menu-button .hamburger-icon::after,
+  html body header.site-header .navigation-mob .nav-menu-button .menu-line,
+  html body header.site-header .navigation-mob .nav-menu-button svg,
+  html body header.site-header .navigation-mob .nav-menu-button i {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+  }
+
+  html body header.site-header .navigation-mob .nav-menu-button.active .hamburger-icon,
+  html body header.site-header .navigation-mob .nav-menu-button.active .hamburger-icon::before,
+  html body header.site-header .navigation-mob .nav-menu-button.active .hamburger-icon::after,
+  html body header.site-header .navigation-mob .nav-menu-button.active .menu-line,
+  html body header.site-header .navigation-mob .nav-menu-button.open .hamburger-icon,
+  html body header.site-header .navigation-mob .nav-menu-button.open .hamburger-icon::before,
+  html body header.site-header .navigation-mob .nav-menu-button.open .hamburger-icon::after,
+  html body header.site-header .navigation-mob .nav-menu-button.open .menu-line,
+  html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon,
+  html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon::before,
+  html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon::after,
+  html body header.site-header .navigation-mob .nav-menu-button.is-open .menu-line,
+  html body header.site-header .navigation-mob .nav-menu-button.w--open .hamburger-icon,
+  html body header.site-header .navigation-mob .nav-menu-button.w--open .hamburger-icon::before,
+  html body header.site-header .navigation-mob .nav-menu-button.w--open .hamburger-icon::after,
+  html body header.site-header .navigation-mob .nav-menu-button.w--open .menu-line,
+  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] .hamburger-icon,
+  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
+  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
+  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] .menu-line,
+  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] svg,
+  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] i {
+    background: #d4af37 !important;
+    background-color: #d4af37 !important;
+    border-color: #d4af37 !important;
+    color: #d4af37 !important;
+    fill: #d4af37 !important;
+    stroke: #d4af37 !important;
+  }
+
+  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link,
+  html body header.site-header .navigation-mob .mobile-nav a {
+    transition: color 180ms ease, padding-left 180ms ease, transform 180ms ease !important;
+  }
+
+  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:hover,
+  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:focus,
+  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:active,
+  html body header.site-header .navigation-mob .mobile-nav a:hover,
+  html body header.site-header .navigation-mob .mobile-nav a:focus,
+  html body header.site-header .navigation-mob .mobile-nav a:active {
+    color: #991f23 !important;
+    padding-left: 6px !important;
+    transform: translateX(2px) !important;
+  }
+}
