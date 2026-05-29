@@ -23651,3 +23651,49 @@ body {
   filter: saturate(1.06) contrast(1.03);
   transform: scale(1.025);
 }
+
+/* Final testimonial carousel sizing restore. */
+.section-16 .swiper-component .swiper {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  min-width: 0 !important;
+  max-width: 1200px !important;
+  width: 100% !important;
+}
+
+.section-16 .swiper-component .swiper-slide {
+  width: clamp(240px, 20vw, 270px) !important;
+}
+
+@media (max-width: 767px) {
+  .section-16 .slider-wrapper {
+    height: 500px !important;
+  }
+
+  .section-16 .swiper-component .swiper,
+  .section-16 .swiper-component .swiper-wrapper {
+    height: 500px !important;
+    max-height: 500px !important;
+    min-height: 500px !important;
+  }
+
+  .section-16 .swiper-component .swiper-slide {
+    width: min(300px, calc(100vw - 48px)) !important;
+    height: 460px !important;
+    margin-top: 18px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .section-16 .swiper-component .div-container-6 {
+    padding: 24px 20px !important;
+  }
+
+  .section-16 .swiper-component .div-text {
+    font-size: 13px !important;
+    line-height: 1.28 !important;
+  }
+
+  .section-16 .swiper-component .div-text1 {
+    font-size: 18px !important;
+  }
+}

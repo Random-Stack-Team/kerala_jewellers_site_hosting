@@ -260,7 +260,16 @@ document.documentElement.classList.add('js-ready');
       gold: prefix + 'products.html',
       silver: prefix + 'silver-products.html',
       diamond: prefix + 'diamonds-products.html',
-      platinum: prefix + 'platinum-products.html'
+      platinum: prefix + 'platinum-products.html',
+      scheme: prefix + 'thanga-mazhai.html'
+    };
+
+    const staticImages = {
+      gold: 'assets/images/66ae16158fbb46cce3ea01a1_Rectangle%20366.png',
+      silver: 'assets/images/66ae1d64b0ff185260ad9b44_Rectangle%20367%20(1).png',
+      diamond: 'assets/images/66ae22bea9cab6312ffdd45d_Rectangle%20367%20(7).png',
+      platinum: 'assets/images/66ae249ccb35781959eac6fc_Rectangle%20366%20(6).png',
+      scheme: 'assets/images/66ae249ef52614a0871e7f4c_Rectangle%20366%20(8).png'
     };
 
     document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel').forEach((nav) => {
@@ -272,8 +281,12 @@ document.documentElement.classList.add('js-ready');
       ];
 
       menuTypes.forEach(({ key, selector }) => {
-        const link = nav.querySelector(selector);
-        const dropdown = link?.closest('.dropdown, .bko-dropdown-0');
+        let dropdown = nav.querySelector(selector);
+        if (dropdown && dropdown.classList.contains('scheme-dropdown-list')) {
+           dropdown = dropdown.closest('.bko-wrap-111-2') || dropdown;
+        } else if (dropdown) {
+           dropdown = dropdown.closest('.dropdown, .bko-dropdown-0, .bko-wrap-111-2');
+        }
         if (!dropdown) return;
 
         const grid = dropdown.querySelector('.bko-grid-1-3-1');
@@ -283,22 +296,30 @@ document.documentElement.classList.add('js-ready');
         if (cols.length < 2) return;
 
         const categoryCol = cols[0];
-        const sliderCol = cols.find(c => c.classList.contains('content-slider') || c.classList.contains('slider-2') || c.classList.contains('slider-3') || c.classList.contains('slider-4') || c.classList.contains('slider-5') || c.classList.contains('slider-21'));
-
-        // Hide or remove middle columns (Child 1, 2, 3, 4) to keep only Category and Image Slider
+        let sliderCol = cols.find(c => c.classList.contains('content-slider') || c.classList.contains('slider-2') || c.classList.contains('slider-3') || c.classList.contains('slider-4') || c.classList.contains('slider-5') || c.classList.contains('slider-21') || c.classList.contains('kj-clean-slider-col'));
+        
+        // Hide middle columns
         cols.forEach((col) => {
           if (col !== categoryCol && col !== sliderCol) {
             col.style.display = 'none';
           }
         });
 
-        // Add custom classes for our new clean layout
+        // Add custom classes and unwrap category links to prevent boxes
         categoryCol.classList.add('kj-clean-category-col');
+        
+        // If slider column exists, replace its inner HTML with static image to remove slider markup entirely
         if (sliderCol) {
-          sliderCol.classList.add('kj-clean-slider-col');
+          sliderCol.className = 'kj-clean-slider-col';
+          sliderCol.innerHTML = `<img src="${prefix}${staticImages[key]}" alt="${key} megamenu image" class="slide__image" style="width: 100%; height: auto; display: block;" />`;
+        } else {
+          // Create static image column if it doesn't exist
+          sliderCol = document.createElement('div');
+          sliderCol.className = 'kj-clean-slider-col';
+          sliderCol.innerHTML = `<img src="${prefix}${staticImages[key]}" alt="${key} megamenu image" class="slide__image" style="width: 100%; height: auto; display: block;" />`;
+          grid.appendChild(sliderCol);
         }
 
-        // Correct links dynamically to ensure Diamond links go to diamonds-products.html, Silver to silver-products.html, etc.
         const basePage = basePages[key];
         categoryCol.querySelectorAll('a').forEach((a) => {
           const href = a.getAttribute('href');
@@ -308,11 +329,142 @@ document.documentElement.classList.add('js-ready');
               const category = categoryMatch[1];
               a.setAttribute('href', `${basePage}?category=${category}`);
             } else if (href.includes('#') || href.includes('products.html')) {
-              // Ensure main fallback or general category links also map correctly
               a.setAttribute('href', basePage);
             }
           }
         });
+      });
+    });
+  };
+
+  const rebuildMegamenusFromScheme = () => {
+    const prefix = getAssetPrefix();
+    const imageMap = {
+      gold: 'assets/images/66ae16158fbb46cce3ea01a1_Rectangle%20366.png',
+      silver: 'assets/images/66ae1d64b0ff185260ad9b44_Rectangle%20367%20(1).png',
+      diamond: 'assets/images/66ae22bea9cab6312ffdd45d_Rectangle%20367%20(7).png',
+      platinum: 'assets/images/66ae249ccb35781959eac6fc_Rectangle%20366%20(6).png',
+      scheme: 'assets/images/66ae249ef52614a0871e7f4c_Rectangle%20366%20(8).png'
+    };
+
+    const menus = [
+      {
+        key: 'gold',
+        label: 'Gold',
+        selector: '.goldlink, .goldlink-2',
+        align: 'left',
+        links: [
+          ['Bangles', 'products.html?category=bangles'],
+          ['Bracelets', 'products.html?category=bracelet'],
+          ['Pendant', 'products.html?category=pendant'],
+          ['Necklace', 'products.html?category=necklace'],
+          ['Rings', 'products.html?category=rings'],
+          ['Earrings', 'products.html?category=earrings']
+        ]
+      },
+      {
+        key: 'silver',
+        label: 'Silver',
+        selector: '.silverlink, .silverlink-2',
+        align: 'left',
+        links: [
+          ['Bracelets', 'silver-products.html?category=bracelet'],
+          ['Necklace', 'silver-products.html?category=necklace'],
+          ['Idols', 'silver-products.html?category=idols'],
+          ['Anklets', 'silver-products.html?category=anklet']
+        ]
+      },
+      {
+        key: 'diamond',
+        label: 'Diamond',
+        selector: '.diamondlink, .diamondlink-2',
+        align: 'right',
+        links: [
+          ['Bangles', 'diamonds-products.html?category=bangles'],
+          ['Necklace', 'diamonds-products.html?category=necklace'],
+          ['Rings', 'diamonds-products.html?category=rings']
+        ]
+      },
+      {
+        key: 'platinum',
+        label: 'Platinum',
+        selector: '.platinumlink, .platinumlink-2',
+        align: 'right',
+        links: [
+          ['Platinum', 'platinum-products.html']
+        ]
+      },
+      {
+        key: 'scheme',
+        label: 'Scheme',
+        selector: '.scheme-dropdown-list, a[href*="thanga-mazhai"], a[href*="swarnavarsha"]',
+        align: 'right',
+        links: [
+          ['Thanga Mazhai', 'thanga-mazhai.html'],
+          ['Swarnavarsha', 'swarnavarsha.html']
+        ]
+      }
+    ];
+
+    const findWrapper = (nav, config) => {
+      let target = nav.querySelector(config.selector);
+      if (!target) {
+        target = Array.from(nav.querySelectorAll('.bko-wrap-111-2, .bko-dropdown-0.dropdown')).find((item) => (
+          item.textContent || ''
+        ).replace(/\s+/g, ' ').trim().toLowerCase().includes(config.label.toLowerCase()));
+      }
+      return target?.closest('.bko-wrap-111-2') || target?.closest('.bko-dropdown-0.dropdown') || null;
+    };
+
+    const ensureShell = (wrapper, config) => {
+      let dropdown = wrapper.querySelector('.bko-dropdown-0.dropdown');
+      if (!dropdown) {
+        const currentLink = wrapper.querySelector('a');
+        const href = currentLink?.getAttribute('href') || config.links[0][1];
+        wrapper.innerHTML = `
+          <div class="bko-dropdown-0 dropdown kj-runtime-dropdown">
+            <div class="bko-dropdown-toggle-3 dropdown-toggle">
+              <a href="${prefix}${href}" class="bko-nav-3-link w-inline-block">
+                <div class="bko-dropdown-1-3">${config.label}</div>
+              </a>
+            </div>
+            <nav class="bko-dropdown-list dropdown-list"></nav>
+          </div>`;
+        dropdown = wrapper.querySelector('.bko-dropdown-0.dropdown');
+      }
+
+      let panel = dropdown.querySelector('.bko-dropdown-list, .dropdown-list');
+      if (!panel) {
+        panel = document.createElement('nav');
+        panel.className = 'bko-dropdown-list dropdown-list';
+        dropdown.appendChild(panel);
+      }
+      return panel;
+    };
+
+    document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel').forEach((nav) => {
+      menus.forEach((config) => {
+        const wrapper = findWrapper(nav, config);
+        if (!wrapper) return;
+
+        const panel = ensureShell(wrapper, config);
+        panel.className = `bko-dropdown-list dropdown-list kj-megamenu-dropdown kj-megamenu-${config.key} kj-menu-align-${config.align}${config.key === 'scheme' ? ' scheme-dropdown-list' : ''}`;
+        panel.dataset.kjMegamenu = config.key;
+
+        const links = config.links.map(([text, href]) => (
+          `<a class="kj-megamenu-link" href="${prefix}${href}"><span>${text}</span></a>`
+        )).join('');
+
+        panel.innerHTML = `
+          <div class="kj-megamenu-panel">
+            <div class="kj-megamenu-category">
+              <div class="bko-text-11 kj-megamenu-heading">Category</div>
+              <div class="kj-megamenu-links">${links}</div>
+            </div>
+            <div class="kj-megamenu-image">
+              <img src="${prefix}${imageMap[config.key]}" alt="${config.label} jewellery" loading="eager" />
+            </div>
+          </div>`;
       });
     });
   };
@@ -337,6 +489,7 @@ document.documentElement.classList.add('js-ready');
   };
 
   const cleanDiamondDropdown = () => {
+    if (document.querySelector('.kj-megamenu-diamond')) return;
     document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel').forEach((nav) => {
       const diamondLink = nav.querySelector('.diamondlink, .diamondlink-2');
       if (!diamondLink) return;
@@ -480,6 +633,7 @@ document.documentElement.classList.add('js-ready');
     ensureMobileRateStrip();
     ensureRateDropdown();
     ensureSimpleMegamenus();
+    rebuildMegamenusFromScheme();
     simplifyMobileNavContent();
     wireMenus();
     wireRateSelection();
