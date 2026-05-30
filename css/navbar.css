@@ -80,7 +80,7 @@
 }
 
 .nav-menu-panel.is-open,
-.w-nav-menu.is-open { display: block; }
+.nav-menu-panel.is-open { display: block; }
 
 .cart-2 .commerce-cartcontainerwrapper { display: none !important; }
 
@@ -474,9 +474,9 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
 }
 
 /* Active Pill Highlight for Focused Categories (such as Bracelets in Products page) */
-.category-menu-link.w--current,
-.category-menu-link[class*="w--current"],
-.w--current .category-menu-link {
+.category-menu-link.is-current,
+.category-menu-link[class*="is-current"],
+.is-current .category-menu-link {
   background: rgba(153, 31, 35, 0.08) !important;
   color: #991f23 !important;
   font-weight: 700 !important;
@@ -1087,12 +1087,12 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   /* Hamburger Menu Button: remains deep maroon #991f23 */
   header .navigation-mob .menu-mob-3.nav-menu-button,
   header .navigation-mob .menu-mob-3.nav-menu-button.is-open,
-  header .navigation-mob .menu-mob-3.nav-menu-button.w--open,
+  header .navigation-mob .menu-mob-3.nav-menu-button.is-open,
   header .navigation-mob .menu-mob-3.nav-menu-button:focus,
   header .navigation-mob .menu-mob-3.nav-menu-button:active,
   header .menu-button-2.nav-menu-button,
   header .menu-button-2.nav-menu-button.is-open,
-  header .menu-button-2.nav-menu-button.w--open,
+  header .menu-button-2.nav-menu-button.is-open,
   header .menu-button-2.nav-menu-button:focus,
   header .menu-button-2.nav-menu-button:active {
     background: #991f23 !important; /* Safe maroon background */
@@ -1108,17 +1108,17 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   header .nav-menu-button .hamburger-icon::after,
   header .nav-menu-button .menu-line,
   header .nav-menu-button.is-open .menu-line,
-  header .nav-menu-button.w--open .menu-line,
+  header .nav-menu-button.is-open .menu-line,
   header .nav-menu-button:focus .menu-line,
   header .nav-menu-button:active .menu-line,
   header .menu-icon-2 .menu-line,
   header .menu-icon-2.is-open .menu-line,
   header .menu-mob-3 .menu-line,
   header .menu-mob-3.is-open .menu-line,
-  header .menu-mob-3.w--open .menu-line,
+  header .menu-mob-3.is-open .menu-line,
   header .menu-button-2 .menu-line,
   header .menu-button-2.is-open .menu-line,
-  header .menu-button-2.w--open .menu-line,
+  header .menu-button-2.is-open .menu-line,
   header .menu-button-2 .menu-icon-2 .menu-line {
     background: #ffffff !important;
     background-color: #ffffff !important;
@@ -1144,9 +1144,9 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   }
 
   html body header.site-header .navigation-mob .mobile-nav.nav-menu-panel.is-open,
-  html body header.site-header .navigation-mob .mobile-nav.nav-menu-panel.w--open,
+  html body header.site-header .navigation-mob .mobile-nav.nav-menu-panel.is-open,
   html body header.site-header .navigation-mob .mobile-nav.is-open,
-  html body header.site-header .navigation-mob .mobile-nav.w--open {
+  html body header.site-header .navigation-mob .mobile-nav.is-open {
     max-height: calc(100vh - 120px) !important;
     opacity: 1 !important;
     pointer-events: auto !important;
@@ -1183,28 +1183,28 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   html body header.site-header .nav-menu-button:focus,
   html body header.site-header .nav-menu-button:active,
   html body header.site-header .nav-menu-button.is-open,
-  html body header.site-header .nav-menu-button.w--open,
+  html body header.site-header .nav-menu-button.is-open,
   html body header.site-header .nav-menu-button[aria-expanded="true"],
   html body header.site-header .menu-mob-3,
   html body header.site-header .menu-mob-3:hover,
   html body header.site-header .menu-mob-3:focus,
   html body header.site-header .menu-mob-3:active,
   html body header.site-header .menu-mob-3.is-open,
-  html body header.site-header .menu-mob-3.w--open,
+  html body header.site-header .menu-mob-3.is-open,
   html body header.site-header .menu-mob-3[aria-expanded="true"],
   html body header.site-header .menu-mob,
   html body header.site-header .menu-mob:hover,
   html body header.site-header .menu-mob:focus,
   html body header.site-header .menu-mob:active,
   html body header.site-header .menu-mob.is-open,
-  html body header.site-header .menu-mob.w--open,
+  html body header.site-header .menu-mob.is-open,
   html body header.site-header .menu-mob[aria-expanded="true"],
   html body header.site-header .menu-button-2,
   html body header.site-header .menu-button-2:hover,
   html body header.site-header .menu-button-2:focus,
   html body header.site-header .menu-button-2:active,
   html body header.site-header .menu-button-2.is-open,
-  html body header.site-header .menu-button-2.w--open,
+  html body header.site-header .menu-button-2.is-open,
   html body header.site-header .menu-button-2[aria-expanded="true"] {
     background: transparent !important;
     background-color: transparent !important;
@@ -1232,9 +1232,9 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   html body header.site-header .nav-menu-button.is-open .hamburger-icon,
   html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
   html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
-  html body header.site-header .nav-menu-button.w--open .hamburger-icon,
-  html body header.site-header .nav-menu-button.w--open .hamburger-icon::before,
-  html body header.site-header .nav-menu-button.w--open .hamburger-icon::after,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
   html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon,
   html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
   html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
@@ -1242,7 +1242,7 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   html body header.site-header .menu-button-2:focus .menu-line,
   html body header.site-header .menu-button-2:active .menu-line,
   html body header.site-header .menu-button-2.is-open .menu-line,
-  html body header.site-header .menu-button-2.w--open .menu-line,
+  html body header.site-header .menu-button-2.is-open .menu-line,
   html body header.site-header .menu-button-2[aria-expanded="true"] .menu-line {
     background: #991f23 !important;
     background-color: #991f23 !important;
@@ -1579,16 +1579,16 @@ header .navigation-4 .bko-grid-1-copy:hover {
    ========================================================================== */
 @media (max-width: 991px) {
   header .menu-mob-3,
-  header .menu-mob-3.w--open,
+  header .menu-mob-3.is-open,
   header .menu-mob-3.is-open,
   header .menu-mob,
-  header .menu-mob.w--open,
+  header .menu-mob.is-open,
   header .menu-mob.is-open,
   header .nav-menu-button,
-  header .nav-menu-button.w--open,
+  header .nav-menu-button.is-open,
   header .nav-menu-button.is-open,
   header .menu-button-2,
-  header .menu-button-2.w--open,
+  header .menu-button-2.is-open,
   header .menu-button-2.is-open {
     background-color: #991f23 !important;
     background: #991f23 !important;
@@ -1605,28 +1605,28 @@ header .navigation-4 .bko-grid-1-copy:hover {
   html body header.site-header .nav-menu-button:focus,
   html body header.site-header .nav-menu-button:active,
   html body header.site-header .nav-menu-button.is-open,
-  html body header.site-header .nav-menu-button.w--open,
+  html body header.site-header .nav-menu-button.is-open,
   html body header.site-header .nav-menu-button[aria-expanded="true"],
   html body header.site-header .menu-mob-3,
   html body header.site-header .menu-mob-3:hover,
   html body header.site-header .menu-mob-3:focus,
   html body header.site-header .menu-mob-3:active,
   html body header.site-header .menu-mob-3.is-open,
-  html body header.site-header .menu-mob-3.w--open,
+  html body header.site-header .menu-mob-3.is-open,
   html body header.site-header .menu-mob-3[aria-expanded="true"],
   html body header.site-header .menu-mob,
   html body header.site-header .menu-mob:hover,
   html body header.site-header .menu-mob:focus,
   html body header.site-header .menu-mob:active,
   html body header.site-header .menu-mob.is-open,
-  html body header.site-header .menu-mob.w--open,
+  html body header.site-header .menu-mob.is-open,
   html body header.site-header .menu-mob[aria-expanded="true"],
   html body header.site-header .menu-button-2,
   html body header.site-header .menu-button-2:hover,
   html body header.site-header .menu-button-2:focus,
   html body header.site-header .menu-button-2:active,
   html body header.site-header .menu-button-2.is-open,
-  html body header.site-header .menu-button-2.w--open,
+  html body header.site-header .menu-button-2.is-open,
   html body header.site-header .menu-button-2[aria-expanded="true"] {
     background: transparent !important;
     background-color: transparent !important;
@@ -1652,9 +1652,9 @@ header .navigation-4 .bko-grid-1-copy:hover {
   html body header.site-header .nav-menu-button.is-open .hamburger-icon,
   html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
   html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
-  html body header.site-header .nav-menu-button.w--open .hamburger-icon,
-  html body header.site-header .nav-menu-button.w--open .hamburger-icon::before,
-  html body header.site-header .nav-menu-button.w--open .hamburger-icon::after,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
   html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon,
   html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
   html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
@@ -1662,7 +1662,7 @@ header .navigation-4 .bko-grid-1-copy:hover {
   html body header.site-header .menu-button-2:focus .menu-line,
   html body header.site-header .menu-button-2:active .menu-line,
   html body header.site-header .menu-button-2.is-open .menu-line,
-  html body header.site-header .menu-button-2.w--open .menu-line,
+  html body header.site-header .menu-button-2.is-open .menu-line,
   html body header.site-header .menu-button-2[aria-expanded="true"] .menu-line {
     background: #991f23 !important;
     background-color: #991f23 !important;

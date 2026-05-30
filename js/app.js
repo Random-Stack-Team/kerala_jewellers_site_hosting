@@ -162,7 +162,7 @@ document.documentElement.classList.add('js-ready');
     const handledMenuClicks = new WeakSet();
     const lockMenuButtonColor = (button) => {
       if (!button) return;
-      const isOpen = button.classList.contains('is-open') || button.classList.contains('w--open') || button.getAttribute('aria-expanded') === 'true';
+      const isOpen = button.classList.contains('is-open') || button.getAttribute('aria-expanded') === 'true';
       const iconColor = isOpen ? '#d4af37' : '#ffffff';
       button.style.setProperty('background', '#991f23', 'important');
       button.style.setProperty('background-color', '#991f23', 'important');
@@ -178,12 +178,10 @@ document.documentElement.classList.add('js-ready');
     const toggleMenuButton = (button) => {
       const header = button.closest('header') || document;
       const willOpen = !button.classList.contains('is-open');
-      header.querySelectorAll('.nav-menu-panel, .w-nav-menu').forEach((menu) => {
+      header.querySelectorAll('.nav-menu-panel').forEach((menu) => {
         menu.classList.toggle('is-open', willOpen);
-        menu.classList.toggle('w--open', willOpen);
       });
       button.classList.toggle('is-open', willOpen);
-      button.classList.toggle('w--open', willOpen);
       button.setAttribute('aria-expanded', String(willOpen));
       lockMenuButtonColor(button);
     };
@@ -724,7 +722,7 @@ document.documentElement.classList.add('js-ready');
     const explicit = parseNumber(card.dataset.price);
     if (explicit) return explicit;
 
-    const priceNode = card.querySelector('.price-122121, .price-15333, .price-weight1212, .price-weight, .price-15, .price, [data-price]');
+    const priceNode = card.querySelector('.product-card-price, [data-price]');
     return parseNumber(priceNode?.dataset.price || priceNode?.textContent || '');
   };
   const normalizeProductCards = () => {
@@ -742,7 +740,7 @@ document.documentElement.classList.add('js-ready');
 
   const ensureProductFilterToolbar = (cards) => {
     if (!cards.length || document.body.classList.contains('kj-platinum-coming-soon-page')) return null;
-    const collection = cards[0].closest('.product-results, .content_filter, .dynamic-list, .banner-18') || cards[0].parentElement;
+    const collection = cards[0].closest('.product-results') || cards[0].parentElement;
     if (!collection) return null;
 
     let toolbar = collection.parentElement?.querySelector(':scope > .collection-toolbar') || document.querySelector('.collection-toolbar');
@@ -812,7 +810,7 @@ document.documentElement.classList.add('js-ready');
       }).forEach((card) => grid?.appendChild(card));
     }
 
-    const collection = cards[0]?.closest('.product-results, .content_filter, .dynamic-list, .banner-18') || cards[0]?.parentElement;
+    const collection = cards[0]?.closest('.product-results') || cards[0]?.parentElement;
     let empty = collection?.parentElement?.querySelector('.collection-empty-state');
     if (collection && !empty) {
       empty = document.createElement('div');
@@ -860,7 +858,7 @@ document.documentElement.classList.add('js-ready');
     if (!priorityMetal) return;
 
     // Find product section containers and reorder based on the metal type
-    const headings = document.querySelectorAll('.heading-32, .heading-2-12, h2, h3');
+    const headings = document.querySelectorAll('[data-section-title], .section-title, h2, h3');
     const sectionMap = new Map();
     headings.forEach((h) => {
       const text = h.textContent.trim().toLowerCase();
@@ -887,13 +885,13 @@ document.documentElement.classList.add('js-ready');
     const isPlatinumPage = path.includes('platinum-products.html') || path.includes('platinum');
     if (isPlatinumPage) return;
     document.querySelectorAll('.platinumlink.is-current, .platinumlink-2.is-current, a[href*="platinum"].is-current, a[href*="coming-soon"].is-current').forEach((link) => {
-      link.classList.remove('is-current', 'w--current');
+      link.classList.remove('is-current');
       link.removeAttribute('aria-current');
     });
   };
 
   const addHoverLife = () => {
-    document.querySelectorAll('.product-item-1, .product-item-8, .product-item-81, .team5_item, .blog33_item').forEach((item) => {
+    document.querySelectorAll('.product-card, .feature-card, .collection-card, .best-seller-card, .review-card, .team5_item, .blog33_item').forEach((item) => {
       item.classList.add('kj-interactive-card');
     });
   };

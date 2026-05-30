@@ -8,7 +8,7 @@
   }
 
   header .navigation-mob .mobile-nav.nav-menu-panel.is-open,
-  header .navigation-mob .mobile-nav.nav-menu-panel.w--open {
+  header .navigation-mob .mobile-nav.nav-menu-panel.is-open {
     visibility: visible !important;
   }
 }
@@ -166,7 +166,7 @@
   header .navigation-2 .nav-menu-3.nav-menu-panel.is-open,
   header .navigation-4 .nav-menu-5.nav-menu-panel.is-open,
   header .navigation-mob .mobile-nav.nav-menu-panel.is-open,
-  header .w-nav-menu.is-open {
+  header .nav-menu-panel.is-open {
     display: flex !important;
     opacity: 1 !important;
     pointer-events: auto !important;
@@ -446,7 +446,7 @@
   }
 }
 
-/* Final phone category strip correction after Webflow's nested container offsets. */
+/* Final phone category strip correction after legacy layout's nested container offsets. */
 @media (max-width: 479px) {
   .team5_list {
     margin-left: calc((100vw - 450px) / 2 - 25px) !important;
@@ -1062,28 +1062,28 @@
   html body header.site-header .nav-menu-button:focus,
   html body header.site-header .nav-menu-button:active,
   html body header.site-header .nav-menu-button.is-open,
-  html body header.site-header .nav-menu-button.w--open,
+  html body header.site-header .nav-menu-button.is-open,
   html body header.site-header .nav-menu-button[aria-expanded="true"],
   html body header.site-header .menu-mob-3,
   html body header.site-header .menu-mob-3:hover,
   html body header.site-header .menu-mob-3:focus,
   html body header.site-header .menu-mob-3:active,
   html body header.site-header .menu-mob-3.is-open,
-  html body header.site-header .menu-mob-3.w--open,
+  html body header.site-header .menu-mob-3.is-open,
   html body header.site-header .menu-mob-3[aria-expanded="true"],
   html body header.site-header .menu-mob,
   html body header.site-header .menu-mob:hover,
   html body header.site-header .menu-mob:focus,
   html body header.site-header .menu-mob:active,
   html body header.site-header .menu-mob.is-open,
-  html body header.site-header .menu-mob.w--open,
+  html body header.site-header .menu-mob.is-open,
   html body header.site-header .menu-mob[aria-expanded="true"],
   html body header.site-header .menu-button-2,
   html body header.site-header .menu-button-2:hover,
   html body header.site-header .menu-button-2:focus,
   html body header.site-header .menu-button-2:active,
   html body header.site-header .menu-button-2.is-open,
-  html body header.site-header .menu-button-2.w--open,
+  html body header.site-header .menu-button-2.is-open,
   html body header.site-header .menu-button-2[aria-expanded="true"] {
     background: transparent !important;
     background-color: transparent !important;
@@ -1109,9 +1109,9 @@
   html body header.site-header .nav-menu-button.is-open .hamburger-icon,
   html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
   html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
-  html body header.site-header .nav-menu-button.w--open .hamburger-icon,
-  html body header.site-header .nav-menu-button.w--open .hamburger-icon::before,
-  html body header.site-header .nav-menu-button.w--open .hamburger-icon::after,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
+  html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
   html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon,
   html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
   html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
@@ -1119,7 +1119,7 @@
   html body header.site-header .menu-button-2:focus .menu-line,
   html body header.site-header .menu-button-2:active .menu-line,
   html body header.site-header .menu-button-2.is-open .menu-line,
-  html body header.site-header .menu-button-2.w--open .menu-line,
+  html body header.site-header .menu-button-2.is-open .menu-line,
   html body header.site-header .menu-button-2[aria-expanded="true"] .menu-line {
     background: #991f23 !important;
     background-color: #991f23 !important;
@@ -1217,28 +1217,28 @@
   html body .nav-menu-button:focus,
   html body .nav-menu-button:active,
   html body .nav-menu-button.is-open,
-  html body .nav-menu-button.w--open,
+  html body .nav-menu-button.is-open,
   html body .nav-menu-button[aria-expanded="true"],
   html body .menu-mob-3,
   html body .menu-mob-3:hover,
   html body .menu-mob-3:focus,
   html body .menu-mob-3:active,
   html body .menu-mob-3.is-open,
-  html body .menu-mob-3.w--open,
+  html body .menu-mob-3.is-open,
   html body .menu-mob-3[aria-expanded="true"],
   html body .menu-mob,
   html body .menu-mob:hover,
   html body .menu-mob:focus,
   html body .menu-mob:active,
   html body .menu-mob.is-open,
-  html body .menu-mob.w--open,
+  html body .menu-mob.is-open,
   html body .menu-mob[aria-expanded="true"],
   html body .menu-button-2,
   html body .menu-button-2:hover,
   html body .menu-button-2:focus,
   html body .menu-button-2:active,
   html body .menu-button-2.is-open,
-  html body .menu-button-2.w--open,
+  html body .menu-button-2.is-open,
   html body .menu-button-2[aria-expanded="true"] {
     background: transparent !important;
     background-color: transparent !important;
@@ -1264,9 +1264,9 @@
   html body .nav-menu-button.is-open .hamburger-icon,
   html body .nav-menu-button.is-open .hamburger-icon::before,
   html body .nav-menu-button.is-open .hamburger-icon::after,
-  html body .nav-menu-button.w--open .hamburger-icon,
-  html body .nav-menu-button.w--open .hamburger-icon::before,
-  html body .nav-menu-button.w--open .hamburger-icon::after,
+  html body .nav-menu-button.is-open .hamburger-icon,
+  html body .nav-menu-button.is-open .hamburger-icon::before,
+  html body .nav-menu-button.is-open .hamburger-icon::after,
   html body .nav-menu-button[aria-expanded="true"] .hamburger-icon,
   html body .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
   html body .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
@@ -1274,7 +1274,7 @@
   html body .menu-button-2:focus .menu-line,
   html body .menu-button-2:active .menu-line,
   html body .menu-button-2.is-open .menu-line,
-  html body .menu-button-2.w--open .menu-line,
+  html body .menu-button-2.is-open .menu-line,
   html body .menu-button-2[aria-expanded="true"] .menu-line {
     background: #991f23 !important;
     background-color: #991f23 !important;
@@ -1292,7 +1292,7 @@
   html body header.site-header .navigation-mob .nav-menu-button.active,
   html body header.site-header .navigation-mob .nav-menu-button.open,
   html body header.site-header .navigation-mob .nav-menu-button.is-open,
-  html body header.site-header .navigation-mob .nav-menu-button.w--open,
+  html body header.site-header .navigation-mob .nav-menu-button.is-open,
   html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"],
   html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="false"],
   html body header.site-header .navigation-mob .menu-mob,
@@ -1331,10 +1331,10 @@
   html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon::before,
   html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon::after,
   html body header.site-header .navigation-mob .nav-menu-button.is-open .menu-line,
-  html body header.site-header .navigation-mob .nav-menu-button.w--open .hamburger-icon,
-  html body header.site-header .navigation-mob .nav-menu-button.w--open .hamburger-icon::before,
-  html body header.site-header .navigation-mob .nav-menu-button.w--open .hamburger-icon::after,
-  html body header.site-header .navigation-mob .nav-menu-button.w--open .menu-line,
+  html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon,
+  html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon::before,
+  html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon::after,
+  html body header.site-header .navigation-mob .nav-menu-button.is-open .menu-line,
   html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] .hamburger-icon,
   html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
   html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
@@ -1931,9 +1931,9 @@
   }
 
   html body header.site-header .navigation-mob .mobile-nav.nav-menu-panel.is-open,
-  html body header.site-header .navigation-mob .mobile-nav.nav-menu-panel.w--open,
+  html body header.site-header .navigation-mob .mobile-nav.nav-menu-panel.is-open,
   html body header.site-header .navigation-mob .mobile-nav.is-open,
-  html body header.site-header .navigation-mob .mobile-nav.w--open {
+  html body header.site-header .navigation-mob .mobile-nav.is-open {
     translate: 0 0 !important;
     transform: translateY(0) !important;
     transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 220ms ease, transform 300ms ease, translate 300ms ease, visibility 0s linear 0s !important;
@@ -2621,5 +2621,195 @@
 
   .legal-page .richtext h6:first-child > strong:only-child {
     font-size: 25px;
+  }
+}
+
+/* Modern active UI layer: replaces the legacy/legacy layout feel on live sections. */
+:root {
+  --kj-ivory: #fffaf0;
+  --kj-ivory-soft: #fffdf7;
+  --kj-maroon: #991f23;
+  --kj-maroon-deep: #7f191d;
+  --kj-gold: #d4af37;
+  --kj-gold-muted: #b58f35;
+  --kj-charcoal: #4f403d;
+  --kj-charcoal-soft: #6e5a56;
+  --kj-line: rgba(181, 143, 53, 0.22);
+  --kj-shadow-soft: 0 12px 30px rgba(65, 35, 28, 0.06);
+  --kj-shadow-lift: 0 18px 38px rgba(65, 35, 28, 0.1);
+  --kj-ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: var(--kj-charcoal);
+  text-rendering: optimizeLegibility;
+}
+
+.product-results {
+  gap: clamp(18px, 2vw, 28px) !important;
+}
+
+.product-card {
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.98), rgba(255, 249, 239, 0.94)) !important;
+  border: 1px solid var(--kj-line) !important;
+  border-radius: 10px !important;
+  box-shadow: var(--kj-shadow-soft) !important;
+  color: var(--kj-charcoal) !important;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  transition:
+    border-color 240ms ease,
+    box-shadow 280ms var(--kj-ease),
+    opacity 220ms ease,
+    transform 280ms var(--kj-ease) !important;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+  border-color: rgba(153, 31, 35, 0.24) !important;
+  box-shadow: var(--kj-shadow-lift) !important;
+  transform: translateY(-4px) !important;
+}
+
+.product-card-media {
+  background: #fff7eb !important;
+  overflow: hidden;
+}
+
+.product-card-image {
+  backface-visibility: hidden;
+  transform: scale(1);
+  transition: filter 260ms ease, opacity 260ms ease, transform 520ms var(--kj-ease) !important;
+}
+
+.product-card:hover .product-card-image {
+  filter: saturate(1.03) contrast(1.02);
+  transform: scale(1.025);
+}
+
+.product-card-info {
+  background: rgba(255, 253, 248, 0.96) !important;
+}
+
+.product-card-title {
+  color: var(--kj-charcoal) !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.22 !important;
+}
+
+.product-card-category,
+.product-card-price {
+  color: var(--kj-charcoal-soft) !important;
+  font-family: 'Mulish', Arial, sans-serif !important;
+}
+
+.product-card-price {
+  color: var(--kj-maroon) !important;
+  font-weight: 650 !important;
+}
+
+.collection-toolbar {
+  background:
+    linear-gradient(135deg, rgba(255, 253, 247, 0.99), rgba(255, 249, 237, 0.96)),
+    radial-gradient(circle at 12% 0%, rgba(212, 175, 55, 0.1), transparent 34%) !important;
+  border-color: var(--kj-line) !important;
+  box-shadow: var(--kj-shadow-soft) !important;
+}
+
+.collection-toolbar__label {
+  color: #876d67 !important;
+  font-weight: 620 !important;
+}
+
+.collection-toolbar__select {
+  color: #5e4a46 !important;
+  font-weight: 500 !important;
+}
+
+.collection-toolbar__select:hover,
+.collection-toolbar__select:focus {
+  color: var(--kj-charcoal) !important;
+  transform: translateY(-1px);
+}
+
+.collection-toolbar__reset {
+  background: linear-gradient(135deg, var(--kj-maroon), var(--kj-maroon-deep)) !important;
+}
+
+.collection-empty-state {
+  color: var(--kj-charcoal-soft) !important;
+  font-family: 'Mulish', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.kj-interactive-card {
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transition:
+    border-color 240ms ease,
+    box-shadow 280ms var(--kj-ease),
+    filter 260ms ease,
+    opacity 220ms ease,
+    transform 280ms var(--kj-ease);
+}
+
+.kj-interactive-card:hover {
+  transform: translateY(-3px);
+}
+
+.legal-page .richtext {
+  box-shadow: var(--kj-shadow-soft) !important;
+}
+
+.legal-page .richtext:hover {
+  box-shadow: 0 18px 42px rgba(65, 35, 28, 0.08) !important;
+}
+
+.section-16 .kj-review-card {
+  transition:
+    opacity 420ms ease,
+    transform 680ms var(--kj-ease),
+    box-shadow 280ms ease !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .product-card:hover,
+  .product-card:focus-within,
+  .kj-interactive-card:hover {
+    transform: none !important;
+  }
+
+  .product-card-image,
+  .product-card:hover .product-card-image {
+    filter: none;
+    transform: none;
   }
 }

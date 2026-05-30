@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const initContentSlider = (slider) => {
-    const track = slider.querySelector('.slider-track, .w-slider-mask');
+    const track = slider.querySelector('.slider-track');
     if (!track || slider.dataset.kjSliderReady) return;
 
     const slides = Array.from(track.querySelectorAll(':scope > .slider-slide, :scope > .slide, :scope > [class*="slide-"]'));
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slider.dataset.kjSliderReady = 'true';
     let activeIndex = 0;
     let timerId = 0;
-    const dots = slider.querySelector('.slider-dots, .w-slider-nav');
+    const dots = slider.querySelector('.slider-dots');
     const delay = Number(slider.dataset.delay || 4000);
 
     const showSlide = (index) => {
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // 2. Fallback/live-style review carousel logic. The scraped page also
+    // 2. Fallback/live-style review carousel logic. The legacy page also
     // initializes Swiper inline, so clean that instance before controlling the
     // section to avoid duplicate transforms fighting each other.
     if (component.closest('.section-16')) {
@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
     start();
   };
 
-  document.querySelectorAll('.content-slider, .w-slider').forEach(initContentSlider);
+  document.querySelectorAll('.content-slider').forEach(initContentSlider);
   document.querySelectorAll('.swiper-component').forEach(initReviewCarousel);
 
   const banner2MobileQuery = window.matchMedia('(max-width: 1023px)');
