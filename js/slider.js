@@ -380,31 +380,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!track || slides.length <= 1) return;
 
     banner.dataset.kjBannerSlider = 'true';
-    banner.classList.add('kj-banner2-gallery');
+    banner.classList.add('kj-banner2-gallery', 'kj-banner2-review-style');
     const controller = new AbortController();
     const listenerOptions = { signal: controller.signal };
     track.classList.add('kj-banner2-track');
     slides.forEach((slide, index) => {
       slide.classList.add('kj-banner2-slide');
       slide.dataset.kjBannerIndex = String(index);
-    });
-
-    const controls = document.createElement('div');
-    controls.className = 'kj-banner2-controls';
-    controls.innerHTML = `
-      <button class="kj-banner2-arrow kj-banner2-prev" type="button" aria-label="Previous banner"></button>
-      <div class="kj-banner2-dots" aria-label="Banner slides"></div>
-      <button class="kj-banner2-arrow kj-banner2-next" type="button" aria-label="Next banner"></button>
-    `;
-    banner.appendChild(controls);
-    const dotsWrap = controls.querySelector('.kj-banner2-dots');
-    const dots = slides.map((_, index) => {
-      const dot = document.createElement('button');
-      dot.className = 'kj-banner2-dot';
-      dot.type = 'button';
-      dot.setAttribute('aria-label', `Show banner ${index + 1}`);
-      dotsWrap.appendChild(dot);
-      return dot;
     });
 
     let activeIndex = 0;
@@ -420,29 +402,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const render = (index, immediate = false) => {
       activeIndex = (index + slides.length) % slides.length;
+      const stageWidth = track.getBoundingClientRect().width || banner.getBoundingClientRect().width || window.innerWidth;
+      const slideWidth = slides[activeIndex]?.getBoundingClientRect().width || Math.min(350, window.innerWidth - 30);
+      const centerOffset = Math.max(0, (stageWidth - slideWidth) / 2);
+      const slideGap = slideWidth * 0.82;
       track.style.transitionDuration = immediate ? '0ms' : '';
       track.style.removeProperty('transform');
       slides.forEach((slide, slideIndex) => {
         let offset = slideIndex - activeIndex;
         if (offset > slides.length / 2) offset -= slides.length;
         if (offset < -slides.length / 2) offset += slides.length;
-        const liveOffset = offset + (isDragging ? dragDeltaX / Math.max(1, banner.getBoundingClientRect().width) : 0);
-        const clamped = Math.max(-1.25, Math.min(1.25, liveOffset));
-        const distance = Math.min(1.4, Math.abs(clamped));
-        const rotate = clamped * -7;
-        const scale = 1 - distance * 0.11;
-        const opacity = distance > 1.05 ? 0 : 1 - distance * 0.34;
+        const liveOffset = offset + (isDragging ? dragDeltaX / Math.max(1, slideWidth) : 0);
+        const clamped = Math.max(-1.2, Math.min(1.2, liveOffset));
+        const distance = Math.min(1.15, Math.abs(clamped));
+        const scale = 1 - distance * 0.06;
+        const opacity = distance > 1.05 ? 0 : 1 - distance * 0.3;
+        const x = centerOffset + clamped * slideGap;
+        const y = Math.abs(clamped) * 4;
 
         slide.classList.toggle('is-active', slideIndex === activeIndex);
         slide.style.transitionDuration = immediate || isDragging ? '0ms' : '';
-        slide.style.transform = `translate3d(${clamped * 82}%, ${Math.abs(clamped) * 16}px, ${-distance * 90}px) rotate(${rotate}deg) scale(${scale})`;
+        slide.style.transform = `translate3d(${x}px, ${y}px, ${-distance * 60}px) scale(${scale})`;
         slide.style.opacity = String(opacity);
         slide.style.zIndex = String(20 - Math.round(distance * 10));
         slide.style.pointerEvents = slideIndex === activeIndex ? 'auto' : 'none';
-      });
-      dots.forEach((dot, dotIndex) => {
-        dot.classList.toggle('is-active', dotIndex === activeIndex);
-        dot.setAttribute('aria-current', dotIndex === activeIndex ? 'true' : 'false');
       });
     };
 
@@ -455,21 +438,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 4200);
       }
     };
-
-    controls.querySelector('.kj-banner2-prev').addEventListener('click', () => {
-      render(activeIndex - 1);
-      start();
-    }, listenerOptions);
-    controls.querySelector('.kj-banner2-next').addEventListener('click', () => {
-      render(activeIndex + 1);
-      start();
-    }, listenerOptions);
-    dots.forEach((dot, dotIndex) => {
-      dot.addEventListener('click', () => {
-        render(dotIndex);
-        start();
-      }, listenerOptions);
-    });
 
     banner.addEventListener('pointerdown', (event) => {
       if (event.button !== undefined && event.button !== 0) return;
@@ -520,8 +488,10 @@ document.addEventListener('DOMContentLoaded', () => {
     banner.addEventListener('pointerup', finishDrag, listenerOptions);
     banner.addEventListener('pointercancel', finishDrag, listenerOptions);
     banner.addEventListener('lostpointercapture', finishDrag, listenerOptions);
-    banner.addEventListener('mouseenter', stop, listenerOptions);
-    banner.addEventListener('mouseleave', start, listenerOptions);
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      banner.addEventListener('mouseenter', stop, listenerOptions);
+      banner.addEventListener('mouseleave', start, listenerOptions);
+    }
     const handleResize = () => {
       if (!banner2MobileQuery.matches) {
         destroyBanner2Slider(banner);
@@ -544,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
     banner._kjBanner2Cleanup?.();
     delete banner._kjBanner2Cleanup;
     delete banner.dataset.kjBannerSlider;
-    banner.classList.remove('kj-banner2-gallery');
+    banner.classList.remove('kj-banner2-gallery', 'kj-banner2-review-style');
     banner.querySelector('.kj-banner2-controls')?.remove();
     const track = banner.querySelector('.team5_list');
     track?.classList.remove('kj-banner2-track');
