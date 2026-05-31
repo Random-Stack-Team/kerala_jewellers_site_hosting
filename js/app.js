@@ -532,15 +532,24 @@ document.documentElement.classList.add('js-ready');
 
     if (!productShell.querySelector('.kj-coming-soon')) {
       productShell.insertAdjacentHTML('beforeend', `
-        <section class="kj-coming-soon" aria-labelledby="platinum-coming-soon-title">
-          <div class="kj-coming-soon__inner">
-            <p class="kj-coming-soon__eyebrow">Platinum</p>
-            <h1 id="platinum-coming-soon-title">Platinum Collection Coming Soon</h1>
-            <p>Our exclusive platinum designs will be available soon. Stay connected for updates.</p>
-          </div>
+        <section class="kj-coming-soon kj-coming-soon--image-only" aria-label="Platinum collection coming soon">
+          <img src="${getAssetPrefix()}assets/images/67a5feb833299a7dd5d392f2_Frame%20185.webp" alt="Platinum collection coming soon" loading="eager" decoding="async" fetchpriority="high" width="1580" height="762" />
         </section>
       `);
     }
+  };
+
+  const polishBanner2Copy = () => {
+    const copy = new Map([
+      ['Find the wedding jewellery you\'ve always dreamed of.', 'Jewellery for vows, rituals, and every cherished beginning.'],
+      ['Choose from a wide range of certified and authentic jewellery for all occasions.', 'Certified pieces chosen with trust, craft, and quiet elegance.'],
+      ['Step back in time and bring a slice of the bejewelled past to the present.', 'Designs that carry tradition with grace for today.'],
+    ]);
+
+    document.querySelectorAll('.banner-2 .paragraph').forEach((paragraph) => {
+      const current = paragraph.textContent.trim();
+      if (copy.has(current)) paragraph.textContent = copy.get(current);
+    });
   };
 
   const wireRateSelection = () => {
@@ -825,7 +834,9 @@ document.documentElement.classList.add('js-ready');
     else params.set('category', selectedCategory);
     const query = params.toString();
     const nextUrl = `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash}`;
-    window.history.replaceState({}, '', nextUrl);
+    if (window.location.protocol !== 'file:') {
+      window.history.replaceState({}, '', nextUrl);
+    }
   };
 
   const initProductFilters = () => {
@@ -896,6 +907,141 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
+  const normalizePhoneLinks = () => {
+    document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+      const visibleText = link.textContent.replace(/\s+/g, ' ').trim();
+      const numbers = visibleText.match(/(?:\+?91[\s-]?)?(?:0\d{2,4}[\s-]?\d{4,8}|\d{5}[\s-]?\d{5})/g) || [];
+      const primary = numbers[0]?.replace(/[^\d+]/g, '') || link.getAttribute('href').replace(/^tel:/i, '').split(/[\/,;]/)[0].replace(/[^\d+]/g, '');
+      if (primary) link.href = `tel:${primary.startsWith('+') ? primary : primary.length === 10 ? `+91${primary}` : primary}`;
+      link.classList.add('kj-phone-link');
+    });
+  };
+
+  const getProductContext = () => {
+    const name = (
+      document.querySelector('.product-header4_product-details .word2')?.textContent ||
+      document.querySelector('.product-header4_product-details .text-size-large')?.textContent ||
+      document.querySelector('.product-card-title')?.textContent ||
+      document.title
+    ).trim();
+    const id = (
+      document.querySelector('.product-header4_product-details .word8')?.textContent ||
+      document.querySelector('[data-product-id]')?.dataset.productId ||
+      window.location.pathname.split('/').pop()?.replace(/\.html$/i, '')
+    ).trim();
+    return { name, id };
+  };
+
+  const normalizeProductActions = () => {
+    const prefix = getAssetPrefix();
+    const context = getProductContext();
+    const enquiryUrl = `${prefix}checkout.html?product=${encodeURIComponent(context.name)}&id=${encodeURIComponent(context.id)}`;
+
+    document.querySelectorAll('a, button, input[type="submit"]').forEach((control) => {
+      const text = (control.value || control.textContent || '').trim().replace(/\s+/g, ' ');
+      if (/^shop now$/i.test(text)) {
+        if ('value' in control && control.tagName === 'INPUT') control.value = 'View Item';
+        else control.textContent = 'View Item';
+      }
+      if (/^(buy now|continue to checkout|checkout)$/i.test(text)) {
+        if ('value' in control && control.tagName === 'INPUT') control.value = 'Enquire';
+        else control.textContent = 'Enquire';
+      }
+    });
+
+    document.querySelectorAll('a[href*="checkout"], a[href*="checkout-form"]').forEach((link) => {
+      link.href = enquiryUrl;
+      link.classList.add('kj-enquiry-link');
+      if (/buy now|checkout|continue to checkout/i.test(link.textContent)) link.textContent = 'Enquire';
+    });
+  };
+
+  const wireEnquiryPage = () => {
+    const form = document.querySelector('[data-enquiry-form]');
+    if (!form) return;
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get('product') || params.get('name') || '';
+    const id = params.get('id') || params.get('productId') || '';
+    form.querySelector('[name="productName"]').value = product;
+    form.querySelector('[name="productId"]').value = id;
+    const message = form.querySelector('[name="message"]');
+    if (message && product && !message.value) message.value = `I would like to know more about ${product}.`;
+
+    const buildMessage = () => {
+      const data = new FormData(form);
+      return [
+        'Kerala Jewellers Product Enquiry',
+        `Name: ${data.get('customerName') || ''}`,
+        `Mobile: ${data.get('mobile') || ''}`,
+        `Email: ${data.get('email') || ''}`,
+        `City: ${data.get('city') || ''}`,
+        `Preferred Time: ${data.get('preferredTime') || ''}`,
+        `Product: ${data.get('productName') || ''}`,
+        `Product ID: ${data.get('productId') || ''}`,
+        `Message: ${data.get('message') || ''}`
+      ].join('\n');
+    };
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      form.querySelector('.enquiry-form__success')?.removeAttribute('hidden');
+    });
+    document.querySelector('[data-whatsapp-enquiry]')?.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.open(`https://wa.me/919840088324?text=${encodeURIComponent(buildMessage())}`, '_blank', 'noopener');
+    });
+  };
+
+  const fixLogoFallbacks = () => {
+    const prefix = getAssetPrefix();
+    const fallback = `${prefix}assets/images/66a8e4c051b2bb6c3fc7e4b8_logo%201.png`;
+    document.querySelectorAll('img').forEach((img) => {
+      const source = img.getAttribute('src') || '';
+      if (/logo|side%20logo|store-logo/i.test(source)) {
+        img.addEventListener('error', () => {
+          img.removeAttribute('srcset');
+          img.src = fallback;
+        }, { once: true });
+      }
+    });
+  };
+
+  const fixSchemeMenuBehavior = () => {
+    const schemeLinks = Array.from(document.querySelectorAll('a')).filter((link) => /scheme/i.test(link.textContent.trim()));
+    schemeLinks.forEach((link) => {
+      const dropdown = link.closest('.dropdown') || link.closest('.bko-wrap-111-2')?.querySelector('.dropdown');
+      if (!dropdown) return;
+      link.setAttribute('href', '#');
+      link.setAttribute('aria-haspopup', 'true');
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        closeDropdowns(document, dropdown);
+        dropdown.classList.toggle('is-open');
+        dropdown.querySelector('[aria-expanded]')?.setAttribute('aria-expanded', String(dropdown.classList.contains('is-open')));
+      });
+    });
+  };
+
+  const equalizeProductDetails = () => {
+    const imageBox = document.querySelector('.sp-product-image-wrapper');
+    const details = document.querySelector('.product-header4_product-details');
+    if (!imageBox || !details) return;
+    const apply = () => {
+      const height = Math.round(imageBox.getBoundingClientRect().height);
+      if (!height) return;
+      details.style.height = `${height}px`;
+      details.style.minHeight = `${height}px`;
+    };
+    apply();
+    window.addEventListener('resize', () => requestAnimationFrame(apply), { passive: true });
+  };
+
+  const normalizeHeroImages = () => {
+    document.querySelectorAll('.intro-content-20.cc-homepage-20, .intro-content-20.cc-homepage-3').forEach((hero) => {
+      hero.classList.add('kj-hero-image-safe');
+    });
+  };
+
   const wireMegamenuHover = () => {
     if (!window.matchMedia('(min-width: 992px)').matches) return;
     document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel').forEach((nav) => {
@@ -939,9 +1085,17 @@ document.documentElement.classList.add('js-ready');
     normalizePlatinumNavState();
     wireRateSelection();
     wireTimelineProgress();
+    normalizePhoneLinks();
+    normalizeProductActions();
+    wireEnquiryPage();
+    fixLogoFallbacks();
+    fixSchemeMenuBehavior();
+    equalizeProductDetails();
+    normalizeHeroImages();
     cleanNavCategoryPanels();
     cleanDiamondDropdown();
     renderPlatinumComingSoon();
+    polishBanner2Copy();
     addHoverLife();
     reorderProductSections();
     calculatePrice('#goldprice', 14660);

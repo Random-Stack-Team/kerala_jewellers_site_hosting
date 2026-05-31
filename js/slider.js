@@ -403,9 +403,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const render = (index, immediate = false) => {
       activeIndex = (index + slides.length) % slides.length;
       const stageWidth = track.getBoundingClientRect().width || banner.getBoundingClientRect().width || window.innerWidth;
-      const slideWidth = slides[activeIndex]?.getBoundingClientRect().width || Math.min(350, window.innerWidth - 30);
+      const slideWidth = Math.min(stageWidth, window.innerWidth < 700 ? 350 : 410, window.innerWidth - 30);
       const centerOffset = Math.max(0, (stageWidth - slideWidth) / 2);
-      const slideGap = slideWidth * 0.82;
+      const slideGap = slideWidth * 0.96;
       track.style.transitionDuration = immediate ? '0ms' : '';
       track.style.removeProperty('transform');
       slides.forEach((slide, slideIndex) => {
@@ -415,8 +415,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const liveOffset = offset + (isDragging ? dragDeltaX / Math.max(1, slideWidth) : 0);
         const clamped = Math.max(-1.2, Math.min(1.2, liveOffset));
         const distance = Math.min(1.15, Math.abs(clamped));
-        const scale = 1 - distance * 0.06;
-        const opacity = distance > 1.05 ? 0 : 1 - distance * 0.3;
+        const scale = 1 - distance * 0.08;
+        const opacity = distance > 1.05 ? 0 : 1 - distance * 0.36;
         const x = centerOffset + clamped * slideGap;
         const y = Math.abs(clamped) * 4;
 
