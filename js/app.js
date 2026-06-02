@@ -124,7 +124,7 @@ document.documentElement.classList.add('js-ready');
         <a class="kj-mobile-menu-link" href="${prefix}products.html">Gold</a>
         <a class="kj-mobile-menu-link" href="${prefix}silver-products.html">Silver</a>
         <a class="kj-mobile-menu-link" href="${prefix}diamonds-products.html">Diamond</a>
-        <a class="kj-mobile-menu-link" href="${prefix}platinum-products.html">Platinum</a>
+        <a class="kj-mobile-menu-link" href="${prefix}coming-soon.html">Platinum</a>
         <a class="kj-mobile-menu-link" href="${prefix}about.html">About Us</a>
         <a class="kj-mobile-menu-link" href="${prefix}thanga-mazhai.html">Thanga Mazhai</a>
         <a class="kj-mobile-menu-link" href="${prefix}swarnavarsha.html">Swarnavarsha</a>
@@ -431,15 +431,6 @@ document.documentElement.classList.add('js-ready');
         ]
       },
       {
-        key: 'platinum',
-        label: 'Platinum',
-        selector: '.platinumlink, .platinumlink-2',
-        align: 'right',
-        links: [
-          ['Platinum', 'platinum-products.html']
-        ]
-      },
-      {
         key: 'scheme',
         label: 'Scheme',
         selector: '.scheme-dropdown-list, a[href*="thanga-mazhai"], a[href*="swarnavarsha"]',
@@ -568,65 +559,6 @@ document.documentElement.classList.add('js-ready');
       if (triggerImage && icon) triggerImage.setAttribute('src', icon);
       dropdown?.classList.remove('is-open');
       trigger?.setAttribute('aria-expanded', 'false');
-    });
-  };
-
-  const cleanDiamondDropdown = () => {
-    if (document.querySelector('.kj-megamenu-diamond')) return;
-    document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel').forEach((nav) => {
-      const diamondLink = nav.querySelector('.diamondlink, .diamondlink-2');
-      if (!diamondLink) return;
-      const dropdown = diamondLink.closest('.dropdown, .bko-dropdown-0');
-      if (!dropdown) return;
-      const grid = dropdown.querySelector('.bko-grid-1-3-1');
-      if (!grid) return;
-      const cols = Array.from(grid.children).filter(c => c.tagName === 'DIV');
-      if (!cols.length) return;
-      const categoryCol = cols[0];
-      // Remove empty dynamic-item divs first
-      categoryCol.querySelectorAll('.dynamic-item').forEach((item) => {
-        if (!item.textContent.trim()) item.remove();
-      });
-      // Keep ONLY Necklace and Rings in Diamond dropdown
-      categoryCol.querySelectorAll('a').forEach((a) => {
-        const text = a.textContent.trim().toLowerCase();
-        if (!text.includes('necklace') && !text.includes('ring')) {
-          const parent = a.closest('.dynamic-item');
-          if (parent) parent.remove();
-          else a.remove();
-        }
-      });
-    });
-  };
-
-  const cleanNavCategoryPanels = () => {
-    const panels = document.querySelectorAll('.bko-dropdown-list, .dropdown-list, .mobile-nav');
-    const uniquePanels = Array.from(new Set(panels));
-
-    uniquePanels.forEach((panel) => {
-      // Remove empty dynamic-items (empty list item divs)
-      panel.querySelectorAll('.dynamic-item').forEach((item) => {
-        if (!item.textContent.trim()) item.remove();
-      });
-
-      const seen = new Set();
-      panel.querySelectorAll('[class*="bko-text-12"], .category-menu-link').forEach((item) => {
-        const text = (item.textContent || '').replace(/\s+/g, ' ').trim();
-        if (!text) return;
-
-        const normalized = text.replace(/^[-–—]\s*/, '').toLowerCase();
-        const isDuplicateLabel = /^[-–—]/.test(text);
-        const columnHeader = item.closest('.bko-text-1, .bko-text-1-2, .bko-grid-11, .bko-grid-11-category')?.querySelector('.bko-text-11')?.textContent?.trim() || '';
-        const key = normalized + '|' + columnHeader;
-
-        if (isDuplicateLabel || seen.has(key)) {
-          const removable = item.closest('a, .dynamic-item') || item;
-          removable.remove();
-          return;
-        }
-
-        seen.add(key);
-      });
     });
   };
 
@@ -1006,22 +938,6 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
-  const fixSchemeMenuBehavior = () => {
-    const schemeLinks = Array.from(document.querySelectorAll('a')).filter((link) => /scheme/i.test(link.textContent.trim()));
-    schemeLinks.forEach((link) => {
-      const dropdown = link.closest('.dropdown') || link.closest('.bko-wrap-111-2')?.querySelector('.dropdown');
-      if (!dropdown) return;
-      link.setAttribute('href', '#');
-      link.setAttribute('aria-haspopup', 'true');
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
-        closeDropdowns(document, dropdown);
-        dropdown.classList.toggle('is-open');
-        dropdown.querySelector('[aria-expanded]')?.setAttribute('aria-expanded', String(dropdown.classList.contains('is-open')));
-      });
-    });
-  };
-
   const equalizeProductDetails = () => {
     const imageBox = document.querySelector('.sp-product-image-wrapper');
     const details = document.querySelector('.product-header4_product-details');
@@ -1077,7 +993,6 @@ document.documentElement.classList.add('js-ready');
     ensureLiveMobileHeaderStyle();
     ensureMobileRateStrip();
     ensureRateDropdown();
-    ensureSimpleMegamenus();
     rebuildMegamenusFromScheme();
     simplifyMobileNavContent();
     wireMenus();
@@ -1089,11 +1004,8 @@ document.documentElement.classList.add('js-ready');
     normalizeProductActions();
     wireEnquiryPage();
     fixLogoFallbacks();
-    fixSchemeMenuBehavior();
     equalizeProductDetails();
     normalizeHeroImages();
-    cleanNavCategoryPanels();
-    cleanDiamondDropdown();
     renderPlatinumComingSoon();
     polishBanner2Copy();
     addHoverLife();
@@ -1104,3 +1016,57 @@ document.documentElement.classList.add('js-ready');
     initProductFilters();
   });
 })();
+
+
+/* --- VANILLA JS LOUPE ZOOM EFFECT --- */
+document.addEventListener('DOMContentLoaded', () => {
+  const targetImgs = document.querySelectorAll('.product-image-zoomed');
+  const mainImageContainers = Array.from(targetImgs).map(img => img.parentElement);
+  
+  if (mainImageContainers.length === 0) return;
+  
+  if (window.innerWidth < 992) return;
+
+  mainImageContainers.forEach(container => {
+    const img = container.querySelector('img');
+    if (!img) return;
+
+    container.classList.add('kj-loupe-host');
+    
+    const loupe = document.createElement('div');
+    loupe.classList.add('kj-loupe');
+    container.appendChild(loupe);
+    
+    const zoomLevel = 2.5;
+
+    container.addEventListener('mouseenter', function() {
+      if (window.innerWidth < 992) return;
+      
+      if (img.src) {
+        loupe.style.backgroundImage = `url(${img.src})`;
+        loupe.style.backgroundSize = `${img.width * zoomLevel}px ${img.height * zoomLevel}px`;
+      }
+      loupe.classList.add('is-visible');
+    });
+    
+    container.addEventListener('mousemove', function(e) {
+      if (window.innerWidth < 992) return;
+      
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      loupe.style.left = `${x}px`;
+      loupe.style.top = `${y}px`;
+      
+      const bgX = (x / rect.width) * 100;
+      const bgY = (y / rect.height) * 100;
+      
+      loupe.style.backgroundPosition = `${bgX}% ${bgY}%`;
+    });
+    
+    container.addEventListener('mouseleave', function() {
+      loupe.classList.remove('is-visible');
+    });
+  });
+});
