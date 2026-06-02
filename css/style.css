@@ -12150,30 +12150,11 @@ figcaption {
   position: relative;
 }
 
-.zoom-wrapper {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: absolute;
-  inset: 0%;
-}
 
-.zoom-modal {
-  z-index: 10;
-  background-color: #fff;
-  border-radius: 100%;
-  width: 250px;
-  height: 250px;
-  position: relative;
-  inset: auto;
-  overflow: hidden;
-  box-shadow: 4px 4px 15px #0000004d;
-}
 
-.product-image-zoomed {
-  width: 100%;
-  transform: scale(2);
-}
+
+
+
 
 .sp-product-image {
   width: 100%;
@@ -14387,31 +14368,13 @@ figcaption {
   position: relative;
 }
 
-.zoom-wrapper-silver {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: absolute;
-  inset: 0%;
-}
 
-.product-image-zoomed-silver {
-  width: 100%;
-  transform: scale(2);
-}
 
-.zoom-wrapper-diamond {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: absolute;
-  inset: 0%;
-}
 
-.product-image-zoomed-diamond {
-  width: 100%;
-  transform: scale(2);
-}
+
+
+
+
 
 .sp-product-image-wrapper-diamond {
   width: 100%;
@@ -24745,36 +24708,62 @@ body {
 }
 
 
-/* --- VANILLA JS LOUPE ZOOM EFFECT --- */
-.kj-loupe-host {
+
+/* --- TRUE LOUPE EFFECT --- */
+.kj-zoom-host {
   position: relative !important;
-  cursor: crosshair;
+  display: inline-block !important;
+  overflow: hidden !important;
+  cursor: none !important; /* Hide default cursor when inside the image */
 }
-.kj-loupe {
+.kj-zoom-host img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.kj-loupe-circle {
   position: absolute;
-  width: var(--kj-loupe-size, 180px);
-  height: var(--kj-loupe-size, 180px);
-  border: 2px solid #e1e1e1;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  background-color: #fff;
+  border: 2px solid rgba(153, 31, 35, 0.6); /* Maroon elegant border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
   background-repeat: no-repeat;
-  pointer-events: none; /* Let mouse move over it without blocking */
+  background-color: #fff;
   opacity: 0;
-  visibility: hidden;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease, visibility 0.2s ease;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: opacity 0.2s ease-in-out;
+  transform: translate(-50%, -50%); /* Centered on cursor */
+  z-index: 1000;
+  will-change: left, top, background-position;
 }
-.kj-loupe.is-visible {
+.kj-loupe-circle.is-visible {
   opacity: 1;
-  visibility: visible;
 }
-@media screen and (max-width: 991px) {
-  .kj-loupe-host {
-    cursor: default;
-  }
-  .kj-loupe {
-    display: none !important;
-  }
+
+/* --- PRODUCT DETAILS TYPOGRAPHY FIXES --- */
+.product-header4_product-details .text-size-large,
+.product-header5_product-details .text-size-large {
+  color: #991F23 !important;
+  font-weight: 700 !important;
+}
+
+.product-header4_product-details .word1, 
+.product-header4_product-details .word3, 
+.product-header4_product-details .word5, 
+.product-header4_product-details .word7,
+.product-header5_product-details .word1, 
+.product-header5_product-details .word3, 
+.product-header5_product-details .word5, 
+.product-header5_product-details .word7 {
+  font-weight: 700 !important;
+  color: #333 !important;
+}
+
+/* Hide any remaining legacy share blocks in product details */
+.product-header4_product-details .social-share,
+.product-header4_product-details .footer-social-block,
+.product-header5_product-details .social-share,
+.product-header5_product-details .footer-social-block {
+  display: none !important;
 }

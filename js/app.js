@@ -1018,43 +1018,43 @@ document.documentElement.classList.add('js-ready');
 })();
 
 
-/* --- VANILLA JS LOUPE ZOOM EFFECT --- */
+/* --- TRUE LOUPE ZOOM EFFECT --- */
 document.addEventListener('DOMContentLoaded', () => {
-  const targetImgs = document.querySelectorAll('.product-image-zoomed');
-  const mainImageContainers = Array.from(targetImgs).map(img => img.parentElement);
-  
-  if (mainImageContainers.length === 0) return;
-  
-  if (window.innerWidth < 992) return;
+  // Only apply to pointer devices, ignore touch/mobile
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    return;
+  }
 
-  mainImageContainers.forEach(container => {
-    const img = container.querySelector('img');
-    if (!img) return;
+  // Find all main product images
+  const productImages = document.querySelectorAll('.sp-product-image, .product-image-2');
+  
+  productImages.forEach(img => {
+    // Look for the correct wrapper to become the host
+    const container = img.closest('.sp-product-image-wrapper') || img.parentElement;
+    if (!container) return;
 
-    container.classList.add('kj-loupe-host');
+    container.classList.add('kj-zoom-host');
     
+    // Create the circle loupe
     const loupe = document.createElement('div');
-    loupe.classList.add('kj-loupe');
+    loupe.classList.add('kj-loupe-circle');
     container.appendChild(loupe);
     
-    const zoomLevel = 2.5;
-
-    container.addEventListener('mouseenter', function() {
-      if (window.innerWidth < 992) return;
-      
-      if (img.src) {
-        loupe.style.backgroundImage = `url(${img.src})`;
-        loupe.style.backgroundSize = `${img.width * zoomLevel}px ${img.height * zoomLevel}px`;
-      }
-      loupe.classList.add('is-visible');
-    });
+    let isHovering = false;
+    let reqId = null;
+    let targetX = 0;
+    let targetY = 0;
     
-    container.addEventListener('mousemove', function(e) {
-      if (window.innerWidth < 992) return;
+    // Using approx 2x zoom
+    const zoomLevel = 2.0;
+
+    const render = () => {
+      if (!isHovering) return;
       
       const rect = container.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      // Ensure cursor doesn't pull loupe out of bounds for visual cleanliness
+      let x = Math.max(0, Math.min(targetX, rect.width));
+      let y = Math.max(0, Math.min(targetY, rect.height));
       
       loupe.style.left = `${x}px`;
       loupe.style.top = `${y}px`;
@@ -1063,10 +1063,35 @@ document.addEventListener('DOMContentLoaded', () => {
       const bgY = (y / rect.height) * 100;
       
       loupe.style.backgroundPosition = `${bgX}% ${bgY}%`;
+      
+      reqId = requestAnimationFrame(render);
+    };
+
+    container.addEventListener('mouseenter', function() {
+      // Lazy load background image on first hover
+      if (!loupe.style.backgroundImage && img.src) {
+        loupe.style.backgroundImage = `url(${img.src})`;
+      }
+      
+      if (img.width && img.height) {
+        loupe.style.backgroundSize = `${img.width * zoomLevel}px ${img.height * zoomLevel}px`;
+      }
+      
+      loupe.classList.add('is-visible');
+      isHovering = true;
+      reqId = requestAnimationFrame(render);
+    });
+    
+    container.addEventListener('mousemove', function(e) {
+      const rect = container.getBoundingClientRect();
+      targetX = e.clientX - rect.left;
+      targetY = e.clientY - rect.top;
     });
     
     container.addEventListener('mouseleave', function() {
       loupe.classList.remove('is-visible');
+      isHovering = false;
+      if (reqId) cancelAnimationFrame(reqId);
     });
   });
 });
