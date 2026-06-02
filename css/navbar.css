@@ -1673,3 +1673,6 @@ header .navigation-4 .bko-grid-1-copy:hover {
 
 
 
+
+/* Update Rate Toggle Span Font Size */
+.rate-toggle span { cursor: pointer; display: block; font-family: Mulish, sans-serif; font-size: 20px !important; font-weight: 700; height: 28px; letter-spacing: -0.8px; line-height: 28px; text-align: center; text-transform: capitalize; text-wrap: nowrap; white-space: nowrap; }

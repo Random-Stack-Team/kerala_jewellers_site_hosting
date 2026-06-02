@@ -1026,7 +1026,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Find all main product images
-  const productImages = document.querySelectorAll('.sp-product-image, .product-image-2');
+  const productImages = document.querySelectorAll('.sp-product-image');
   
   productImages.forEach(img => {
     // Look for the correct wrapper to become the host
@@ -1070,7 +1070,7 @@ document.addEventListener('DOMContentLoaded', () => {
     container.addEventListener('mouseenter', function() {
       // Lazy load background image on first hover
       if (!loupe.style.backgroundImage && img.src) {
-        loupe.style.backgroundImage = `url(${img.src})`;
+        loupe.style.backgroundImage = `url("${img.src}")`;
       }
       
       if (img.width && img.height) {
