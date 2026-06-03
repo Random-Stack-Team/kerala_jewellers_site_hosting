@@ -163,7 +163,10 @@ document.addEventListener('DOMContentLoaded', () => {
       component.closest('.slider-wrapper')?.classList.add('kj-review-carousel-shell');
       component.classList.add('kj-review-carousel');
       component.querySelector('.swiper-wrapper')?.classList.add('kj-review-track');
-      component.querySelectorAll('.swiper-slide').forEach((slide) => slide.classList.add('kj-review-card'));
+      component.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+        slide.classList.add('kj-review-card');
+        slide.setAttribute('data-hash', `slide${index + 1}`);
+      });
       const swiperElement = component.querySelector('.swiper');
       swiperElement?.swiper?.destroy(true, true);
       component.querySelectorAll('.swiper-slide-duplicate').forEach((slide) => slide.remove());
@@ -364,8 +367,173 @@ document.addEventListener('DOMContentLoaded', () => {
     start();
   };
 
+  const banner2MobileQuery = window.matchMedia('(max-width: 991px)');
+
+  const setBanner2Position = (slide, offset) => {
+    const isActive = offset === 0;
+    slide.classList.toggle('is-active', isActive);
+    slide.setAttribute('aria-hidden', String(!isActive));
+
+    if (offset === 0) {
+      slide.dataset.kjPosition = 'active';
+    } else if (offset === -1) {
+      slide.dataset.kjPosition = 'prev';
+    } else if (offset === 1) {
+      slide.dataset.kjPosition = 'next';
+    } else {
+      slide.dataset.kjPosition = 'off';
+    }
+  };
+
+  const initBanner2Slider = (banner) => {
+    if (!banner2MobileQuery.matches || banner.dataset.kjBanner2Ready === 'true') return;
+
+    const track = banner.querySelector('.team5_list');
+    const slides = Array.from(track?.querySelectorAll(':scope > .team5_item') || []);
+    if (!track || slides.length <= 1) return;
+
+    banner.dataset.kjBanner2Ready = 'true';
+    banner.classList.add('kj-banner2-gallery');
+    track.classList.add('kj-banner2-track');
+    slides.forEach((slide) => slide.classList.add('kj-banner2-slide'));
+
+    let activeIndex = 0;
+    let timerId = 0;
+    let resumeTimerId = 0;
+    let dragStartX = 0;
+    let dragStartY = 0;
+    let dragDeltaX = 0;
+    let isDragging = false;
+    let isHorizontalDrag = false;
+
+    const render = (index) => {
+      activeIndex = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        let offset = slideIndex - activeIndex;
+        if (offset > slides.length / 2) offset -= slides.length;
+        if (offset < -slides.length / 2) offset += slides.length;
+        setBanner2Position(slide, Math.max(-2, Math.min(2, offset)));
+      });
+    };
+
+    const stop = () => {
+      window.clearInterval(timerId);
+      window.clearTimeout(resumeTimerId);
+    };
+    const start = () => {
+      stop();
+      if (!prefersReducedMotion) timerId = window.setInterval(() => render(activeIndex + 1), 4200);
+    };
+    const resumeAfterInteraction = () => {
+      window.clearTimeout(resumeTimerId);
+      if (!prefersReducedMotion) resumeTimerId = window.setTimeout(start, 2600);
+    };
+
+    const finishDrag = () => {
+      if (!isDragging) return;
+      const threshold = Math.min(90, Math.max(42, banner.getBoundingClientRect().width * 0.12));
+      const direction = Math.abs(dragDeltaX) > threshold ? (dragDeltaX < 0 ? 1 : -1) : 0;
+      isDragging = false;
+      isHorizontalDrag = false;
+      dragStartX = 0;
+      dragStartY = 0;
+      dragDeltaX = 0;
+      track.style.removeProperty('--kj-banner2-drag');
+      render(activeIndex + direction);
+      resumeAfterInteraction();
+    };
+
+    const onPointerDown = (event) => {
+      if (event.button !== undefined && event.button !== 0) return;
+      isDragging = true;
+      isHorizontalDrag = false;
+      dragStartX = event.clientX;
+      dragStartY = event.clientY;
+      dragDeltaX = 0;
+      stop();
+      try {
+        banner.setPointerCapture?.(event.pointerId);
+      } catch (error) {
+        // Synthetic pointer tests may not have an active pointer to capture.
+      }
+    };
+
+    const onPointerMove = (event) => {
+      if (!isDragging) return;
+      dragDeltaX = event.clientX - dragStartX;
+      const dragDeltaY = event.clientY - dragStartY;
+      if (!isHorizontalDrag && Math.abs(dragDeltaX) > 8 && Math.abs(dragDeltaX) > Math.abs(dragDeltaY) * 1.15) {
+        isHorizontalDrag = true;
+      }
+      if (!isHorizontalDrag && Math.abs(dragDeltaY) > Math.abs(dragDeltaX) * 1.25) return;
+      if (isHorizontalDrag) {
+        event.preventDefault();
+        const limitedDrag = Math.max(-90, Math.min(90, dragDeltaX));
+        track.style.setProperty('--kj-banner2-drag', `${limitedDrag}px`);
+      }
+    };
+
+    banner.addEventListener('pointerdown', onPointerDown, { passive: false });
+    banner.addEventListener('pointermove', onPointerMove, { passive: false });
+    banner.addEventListener('pointerup', finishDrag);
+    banner.addEventListener('pointercancel', finishDrag);
+    banner.addEventListener('lostpointercapture', finishDrag);
+    banner.addEventListener('mouseenter', stop);
+    banner.addEventListener('mouseleave', resumeAfterInteraction);
+
+    banner.__kjBanner2 = {
+      cleanup() {
+        stop();
+        banner.removeEventListener('pointerdown', onPointerDown);
+        banner.removeEventListener('pointermove', onPointerMove);
+        banner.removeEventListener('pointerup', finishDrag);
+        banner.removeEventListener('pointercancel', finishDrag);
+        banner.removeEventListener('lostpointercapture', finishDrag);
+        banner.removeEventListener('mouseenter', stop);
+        banner.removeEventListener('mouseleave', resumeAfterInteraction);
+      }
+    };
+
+    render(0);
+    start();
+  };
+
+  const destroyBanner2Slider = (banner) => {
+    banner.__kjBanner2?.cleanup?.();
+    delete banner.__kjBanner2;
+    delete banner.dataset.kjBanner2Ready;
+    banner.classList.remove('kj-banner2-gallery');
+
+    const track = banner.querySelector('.team5_list');
+    track?.classList.remove('kj-banner2-track');
+    track?.style.removeProperty('--kj-banner2-drag');
+    banner.querySelectorAll('.team5_item').forEach((slide) => {
+      slide.classList.remove('kj-banner2-slide', 'is-active');
+      slide.removeAttribute('aria-hidden');
+      delete slide.dataset.kjPosition;
+      slide.removeAttribute('style');
+    });
+  };
+
+  const refreshBanner2Sliders = () => {
+    document.querySelectorAll('.banner-2').forEach((banner) => {
+      if (banner2MobileQuery.matches) {
+        initBanner2Slider(banner);
+      } else if (banner.dataset.kjBanner2Ready === 'true') {
+        destroyBanner2Slider(banner);
+      }
+    });
+  };
+
   document.querySelectorAll('.content-slider').forEach(initContentSlider);
   document.querySelectorAll('.swiper-component').forEach(initReviewCarousel);
+  refreshBanner2Sliders();
+  if (typeof banner2MobileQuery.addEventListener === 'function') {
+    banner2MobileQuery.addEventListener('change', refreshBanner2Sliders);
+  } else {
+    banner2MobileQuery.addListener(refreshBanner2Sliders);
+  }
+  window.addEventListener('resize', refreshBanner2Sliders);
 
   
 });
