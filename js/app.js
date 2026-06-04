@@ -842,10 +842,20 @@ document.documentElement.classList.add('js-ready');
   const normalizePhoneLinks = () => {
     document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
       const visibleText = link.textContent.replace(/\s+/g, ' ').trim();
-      const numbers = visibleText.match(/(?:\+?91[\s-]?)?(?:0\d{2,4}[\s-]?\d{4,8}|\d{5}[\s-]?\d{5})/g) || [];
+      const numbers = visibleText.match(/(?:\+?91[\s-]?)?(?:0\d{2,4}[\s-]?\d{3,4}[\s-]?\d{3,4}|\d{5}[\s-]?\d{5})/g) || [];
       const primary = numbers[0]?.replace(/[^\d+]/g, '') || link.getAttribute('href').replace(/^tel:/i, '').split(/[\/,;]/)[0].replace(/[^\d+]/g, '');
       if (primary) link.href = `tel:${primary.startsWith('+') ? primary : primary.length === 10 ? `+91${primary}` : primary}`;
       link.classList.add('kj-phone-link');
+      if (numbers.length > 1 && !link.dataset.kjPhoneFormatted) {
+        link.dataset.kjPhoneFormatted = 'true';
+        link.innerHTML = '';
+        numbers.forEach((number) => {
+          const item = document.createElement('span');
+          item.className = 'kj-phone-number';
+          item.textContent = number.trim().replace(/\s+/g, ' ');
+          link.appendChild(item);
+        });
+      }
     });
   };
 
