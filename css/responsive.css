@@ -4172,3 +4172,26 @@ textarea,
     margin-bottom: 1.5em !important;
     font-family: 'Mulish', sans-serif !important;
 }
+
+
+/* 14. Typography and Product Details Adjustments */
+
+/* text-size-large should use Montserrat as the elegant related font */
+.text-size-large {
+    font-family: "Com 4 Dl", sans-serif !important;
+}
+
+/* Product Detail Labels */
+.product-header4_product-details .word1, .product-header4_product-details .word3, .product-header4_product-details .word5, .product-header4_product-details .word7, .product-header5_product-details .word1, .product-header5_product-details .word3, .product-header5_product-details .word5, .product-header5_product-details .word7, .text-block-78 {
+    color: #991f23 !important;
+    font-weight: 700 !important;
+}
+
+/* Enquiry Page Specific overrides to ensure theme styles are respected */
+.enquiry-page, .enquiry-page * {
+    font-family: 'Mulish', sans-serif !important;
+}
+.enquiry-page h1, .enquiry-page h2, .enquiry-page h3, #enquiry-title {
+    color: #991f23 !important;
+    font-family: "Com 4 Dl", sans-serif !important;
+}
