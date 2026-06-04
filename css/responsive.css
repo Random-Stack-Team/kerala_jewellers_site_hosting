@@ -3888,26 +3888,6 @@ body.legal-page {
   padding: 0 !important;
 }
 
-.legal-page .richtext h6 > strong:only-child {
-  border-top: 1px solid rgba(212, 175, 55, 0.25) !important;
-  color: #991f23 !important;
-  display: block !important;
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-size: clamp(20px, 2vw, 27px) !important;
-  font-weight: 500 !important;
-  line-height: 1.25 !important;
-  margin: 2em 0 0.65em !important;
-  padding-top: 1.05em !important;
-}
-
-.legal-page .richtext h6:first-child > strong:only-child {
-  border-top: 0 !important;
-  color: #8f1d22 !important;
-  font-size: clamp(28px, 3.2vw, 42px) !important;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
 .legal-page .richtext strong:not(:only-child) {
   color: #69433f !important;
   font-weight: 650 !important;
@@ -3933,4 +3913,262 @@ body.legal-page {
   .legal-page .richtext h6:first-child > strong:only-child {
     font-size: 26px !important;
   }
+}
+
+/* --- KERALA JEWELLERS CUSTOM LAYOUT FIXES (v19) --- */
+
+/* 1. Hero Banner Sliders - Explore button safe margin from bottom */
+.banner-slider1,
+.banner-slider2,
+.banner-slider3,
+.banner-slider4 {
+  padding-bottom: 50px !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 991px) {
+  .banner-slider1,
+  .banner-slider2,
+  .banner-slider3,
+  .banner-slider4 {
+    padding-bottom: 35px !important;
+  }
+}
+
+.banner-slider1 .intro-content-2,
+.banner-slider2 .intro-content-2,
+.banner-slider3 .intro-content-2,
+.banner-slider4 .intro-content-2 {
+  margin-bottom: 0 !important;
+  padding-bottom: 10px !important;
+}
+
+/* 2. Product detail box scroll option removal */
+.product-header4_product-details {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+/* 3. Reset button center alignment and right position on desktop */
+@media (min-width: 992px) {
+  .collection-toolbar__reset {
+    margin-left: auto !important;
+    align-self: center !important;
+  }
+}
+
+/* 4. Product listing tagline overrides in maroon color */
+.paragraph-12,
+.paragraph-14,
+.paragraph-16,
+.paragraph-17,
+.paragraph-center,
+.paragraph-center-copy,
+.paragraph-center-14 {
+  color: #991f23 !important;
+}
+
+/* 5. Show custom dropdown list when parent .dropdown is hovered or open on desktop */
+@media (min-width: 992px) {
+  .dropdown:hover > .dropdown-list,
+  .dropdown.is-open > .dropdown-list {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+}
+
+/* 6. Legal Pages Typography & Bold Weight Fix */
+.legal-page h1,
+.legal-page h2,
+.legal-page h3,
+.legal-page h4,
+.legal-page h5,
+.legal-page h6,
+.legal-page .heading-jumbo,
+.legal-page .heading,
+.legal-page .heading-2,
+.legal-page .heading-15,
+.legal-page .heading-16 {
+  color: #991f23 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.14 !important;
+}
+
+.legal-page .richtext h6 {
+  border-top: 1px solid rgba(212, 175, 55, 0.25) !important;
+  color: #991f23 !important;
+  display: block !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(20px, 2vw, 27px) !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  margin: 2em 0 0.65em !important;
+  padding-top: 1.05em !important;
+}
+
+.legal-page .richtext h6:first-child {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.legal-page .richtext h6 strong {
+  color: inherit !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+}
+
+
+
+.legal-page .richtext strong,
+.legal-page .richtext b,
+.legal-page .richtext .bold-text,
+.legal-page .richtext .bold-text-7 {
+  color: #3b2826 !important;
+  font-weight: 700 !important;
+}
+
+/* 7. Banner 2 (Weddings, Authenticity, Heritage) Dimensions & Alignment */
+.banner-2 {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: clamp(30px, 4vw, 50px) 20px !important;
+}
+
+.banner-2 .team5_list {
+  align-items: stretch !important;
+  display: grid !important;
+  gap: clamp(20px, 3vw, 40px) !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+}
+
+.banner-2 .team5_item {
+  align-items: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  justify-content: flex-start !important;
+  text-align: center !important;
+}
+
+.banner-2 .team5_image-wrapper {
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  height: clamp(170px, 15vw, 210px) !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  width: clamp(170px, 15vw, 210px) !important;
+}
+
+.banner-2 .text-size-large {
+  color: #991f23 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(26px, 2.5vw, 32px) !important;
+  font-weight: 400 !important;
+  line-height: 1.08 !important;
+  margin: 0 0 8px !important;
+}
+
+.banner-2 .paragraph {
+  color: #6d5d5b !important;
+  font-size: clamp(15px, 1.1vw, 17px) !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+/* 8. Product Details Labels Maroon Color */
+.word1,
+.word3,
+.word5,
+.word7 {
+  color: #991f23 !important;
+  font-weight: 700 !important;
+}
+
+/* 9. Global Font Overrides */
+body, 
+p, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+a, 
+button, 
+input, 
+textarea, 
+.text-block, 
+.paragraph, 
+.heading {
+  font-family: 'Mulish', sans-serif !important;
+}
+
+/* 10. Heading Jumbo 2 Fix (Keep it inside the banner and make it responsive) */
+.heading-jumbo-2-copy-copy {
+  margin-top: 0 !important;
+  word-break: break-word !important;
+  max-width: 100% !important;
+  font-size: clamp(28px, 4.5vw, 55px) !important;
+  line-height: 1.2 !important;
+}
+/* 11. Redesign h6: highlight but not maroon, reduced size */
+.legal-page .richtext h6 {
+    color: #4f403d !important; /* Charcoal highlight */
+    border-top: none !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.4) !important;
+    font-family: 'Mulish', sans-serif !important;
+    font-size: clamp(16px, 1.5vw, 20px) !important;
+    font-weight: 700 !important;
+    padding-bottom: 0.5em !important;
+    margin: 1.5em 0 0.75em !important;
+}
+
+.legal-page .richtext h6:first-child {
+    border-top: none !important;
+    margin-top: 0 !important;
+}
+
+
+
+/* 13. Legal Pages Minimalist Redesign */
+.legal-clean-layout {
+    max-width: 1000px;
+    margin: 60px auto 100px;
+    padding: 0 20px;
+}
+
+.legal-clean-title {
+    text-align: center;
+    color: #3b2826 !important;
+    font-family: 'Mulish', sans-serif !important;
+    font-size: clamp(32px, 5vw, 42px);
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.legal-title-divider {
+    width: 60px;
+    height: 3px;
+    background-color: #d4af37;
+    margin: 0 auto 50px;
+}
+
+.legal-clean-layout .richtext p, .legal-clean-layout .richtext li {
+    color: #4f4543 !important;
+    line-height: 1.8 !important;
+    font-size: 16px !important;
+    margin-bottom: 1.5em !important;
+    font-family: 'Mulish', sans-serif !important;
 }

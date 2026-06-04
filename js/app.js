@@ -225,7 +225,11 @@ document.documentElement.classList.add('js-ready');
       if (dropdown) {
         const link = event.target.closest('a');
         if (link && link.getAttribute('href') && !link.getAttribute('href').includes('#')) {
-          return;
+          if (link.textContent.trim().toLowerCase() === 'scheme') {
+            event.preventDefault();
+          } else {
+            return;
+          }
         }
         const list = dropdown.querySelector('.dropdown-list, .rate-menu, .rate-dropdown-menu');
         if (list) {
@@ -955,8 +959,13 @@ document.documentElement.classList.add('js-ready');
     const apply = () => {
       const height = Math.round(imageBox.getBoundingClientRect().height);
       if (!height) return;
-      details.style.height = `${height}px`;
-      details.style.minHeight = `${height}px`;
+      if (window.innerWidth >= 992) {
+        details.style.minHeight = `${height}px`;
+        details.style.height = 'auto';
+      } else {
+        details.style.minHeight = '';
+        details.style.height = '';
+      }
     };
     apply();
     window.addEventListener('resize', () => requestAnimationFrame(apply), { passive: true });
