@@ -2155,10 +2155,6 @@ textarea.form-input, textarea.form-select {
   display: grid;
 }
 
-.commerce-cartwrapper {
-  display: inline-block;
-  position: relative;
-}
 
 .commerce-cartopenlink {
   color: #fff;
@@ -4939,9 +4935,6 @@ figcaption {
   font-style: normal;
 }
 
-.mobile-searchbar {
-  display: none;
-}
 
 .nav-item-wrapper---brix-copy {
   padding-bottom: 0;
@@ -5097,11 +5090,6 @@ figcaption {
   box-shadow: 0 20px 14px #4a3aff03, 0 22px 22px -6px #170f4908;
 }
 
-.navigation-wrap-2 {
-  margin-left: 0;
-  margin-right: 0;
-  display: none;
-}
 
 .text-block-70 {
   color: #fff;
@@ -16077,19 +16065,6 @@ figcaption {
     background-color: #fff;
   }
 
-  .mobile-searchbar {
-    background-color: #fff;
-    border: 1px solid #000;
-    border-radius: 30px;
-    align-items: center;
-    width: 100%;
-    max-width: 90%;
-    margin: 20px auto 10px;
-    padding-left: 20px;
-    padding-right: 15px;
-    display: flex;
-  }
-
   .dropdown-nav---brix {
     margin-bottom: 0;
   }
@@ -18649,11 +18624,6 @@ figcaption {
 
   .header {
     width: 100%;
-  }
-
-  .mobile-searchbar {
-    border-radius: 30px;
-    display: flex;
   }
 
   .dropdown-nav---brix {
