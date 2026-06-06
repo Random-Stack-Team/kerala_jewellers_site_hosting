@@ -640,7 +640,7 @@ document.documentElement.classList.add('js-ready');
   const normalizeProductActions = () => {
     const prefix = getAssetPrefix();
     const context = getProductContext();
-    const enquiryUrl = `${prefix}checkout.html?product=${encodeURIComponent(context.name)}&id=${encodeURIComponent(context.id)}`;
+    const enquiryUrl = `${prefix}enquiry.html?product=${encodeURIComponent(context.name)}&id=${encodeURIComponent(context.id)}`;
 
     document.querySelectorAll('a, button, input[type="submit"]').forEach((control) => {
       const text = (control.value || control.textContent || '').trim().replace(/\s+/g, ' ');
@@ -654,10 +654,15 @@ document.documentElement.classList.add('js-ready');
       }
     });
 
-    document.querySelectorAll('a[href*="checkout"], a[href*="checkout-form"]').forEach((link) => {
+    document.querySelectorAll([
+      'a[href*="checkout"]',
+      'a[href*="checkout-form"]',
+      '.product-header4_add-to-cart a[href*="terms-conditions"]',
+      '.product-header4_product-details a[href*="terms-conditions"]'
+    ].join(', ')).forEach((link) => {
       link.href = enquiryUrl;
       link.classList.add('kj-enquiry-link');
-      if (/buy now|checkout|continue to checkout/i.test(link.textContent)) link.textContent = 'Enquire';
+      if (/buy now|checkout|continue to checkout|terms/i.test(link.textContent)) link.textContent = 'Enquire';
     });
   };
 
