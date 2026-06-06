@@ -3979,6 +3979,12 @@ body.legal-page {
   }
 }
 
+/* 6. Smooth scroll behavior */
+html {
+  scroll-behavior: smooth !important;
+}
+
+
 /* 6. Legal Pages Typography & Bold Weight Fix */
 .legal-page h1,
 .legal-page h2,
