@@ -4201,3 +4201,138 @@ textarea,
     color: #991f23 !important;
     font-family: "Com 4 Dl", sans-serif !important;
 }
+
+
+/* ==========================================================================
+   Redesigned Customer Reviews Section (Premium Theme)
+   ========================================================================== */
+.kj-review-section {
+  background: linear-gradient(180deg, #ffffff 0%, #fffcf5 100%) !important;
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+.kj-review-card .product-item-8 {
+  background: #ffffff !important;
+  border: 1px solid rgba(153, 31, 35, 0.12) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 30px rgba(153, 31, 35, 0.04), 0 4px 12px rgba(0, 0, 0, 0.01) !important;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+  overflow: visible !important;
+}
+
+.kj-review-card .product-item-8:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 20px 40px rgba(153, 31, 35, 0.09), 0 8px 20px rgba(0, 0, 0, 0.02) !important;
+  border-color: rgba(153, 31, 35, 0.28) !important;
+}
+
+.kj-review-card .div-container-6 {
+  background: transparent !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  padding: 34px 28px !important;
+  box-sizing: border-box !important;
+}
+
+.kj-review-stars {
+  color: #d4af37 !important;
+  font-size: 19px !important;
+  margin-bottom: 12px !important;
+  text-align: center !important;
+  letter-spacing: 3px !important;
+}
+
+.kj-review-card .div-text {
+  font-family: 'Mulish', sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.58 !important;
+  color: #4a3e3d !important;
+  text-align: center !important;
+  margin-bottom: 15px !important;
+  flex-grow: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.kj-review-card .div-text1 {
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #991F23 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  margin-top: 15px !important;
+  text-align: center !important;
+}
+
+.kj-review-card .div-imgleft,
+.kj-review-card .div-imgright {
+  width: 28px !important;
+  height: 28px !important;
+  opacity: 0.25 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.kj-review-card .product-item-8:hover .div-imgleft,
+.kj-review-card .product-item-8:hover .div-imgright {
+  opacity: 0.6 !important;
+}
+
+/* Ensure equal height on swiper slides for perfect gridliness */
+.kj-review-carousel .swiper-slide {
+  height: auto !important;
+}
+.kj-review-track {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+/* ==========================================================================
+   Product Grid Alignment & Card Spacing Fixes
+   ========================================================================== */
+@media (min-width: 992px) {
+  /* Enforce grid alignment on desktop */
+  .product-results {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-gap: 24px !important;
+  }
+  
+  .product-card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    min-height: 440px !important;
+  }
+  
+  .product-card-media {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    flex-grow: 1 !important;
+  }
+  
+  .product-card-image {
+    height: 220px !important;
+    object-fit: contain !important;
+    width: 100% !important;
+    margin: 12px auto !important;
+  }
+
+  .product-card-info {
+    margin-top: auto !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .product-card-image {
+    height: clamp(160px, 20vw, 220px) !important;
+    object-fit: contain !important;
+  }
+}
