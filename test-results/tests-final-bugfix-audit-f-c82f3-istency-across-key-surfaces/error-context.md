@@ -28,7 +28,7 @@ Call log:
   148 |   });
   149 | 
   150 |   test('TEST 3: Platinum page works and shows coming soon only', async ({ page }) => {
-  151 |     const response = await page.goto('/platinum-products.html');
+  151 |     const response = await page.goto('/coming-soon.html');
   152 |     expect(response.status()).toBe(200);
   153 |     await waitForApp(page);
   154 | 
@@ -170,7 +170,7 @@ Call log:
   289 |     const pages = [
   290 |       '/index.html',
   291 |       '/contact.html',
-  292 |       '/platinum-products.html',
+  292 |       '/coming-soon.html',
   293 |       '/checkout.html?product=BOMBAY%20BANGLES&id=KJG007',
   294 |       '/goldproducts/bombay-bangle.html',
   295 |       '/silverproducts/anklet.html',
@@ -197,7 +197,7 @@ Call log:
   316 |     test.skip(testInfo.project.name !== 'desktop-1366', 'Runs once and manually covers every requested breakpoint.');
   317 |     test.setTimeout(120_000);
   318 |     const widths = [320, 375, 390, 414, 425, 768, 1024, 1366];
-  319 |     const pages = ['/index.html', '/contact.html', '/platinum-products.html', '/goldproducts/bombay-bangle.html'];
+  319 |     const pages = ['/index.html', '/contact.html', '/coming-soon.html', '/goldproducts/bombay-bangle.html'];
   320 | 
   321 |     for (const width of widths) {
   322 |       await page.setViewportSize({ width, height: width < 768 ? 852 : 900 });

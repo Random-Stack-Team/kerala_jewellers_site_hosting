@@ -1676,3 +1676,301 @@ header .navigation-4 .bko-grid-1-copy:hover {
 
 /* Update Rate Toggle Span Font Size */
 .rate-toggle span { cursor: pointer; display: block; font-family: Mulish, sans-serif; font-size: 20px !important; font-weight: 700; height: 28px; letter-spacing: -0.8px; line-height: 28px; text-align: center; text-transform: capitalize; text-wrap: nowrap; white-space: nowrap; }
+/* Final navbar typography and hover-only rate dropdown behavior */
+@media (min-width: 1024px) {
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-1-3,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-link-111-2,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-toggle-3 > a,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-toggle-3 > a *,
+  html body header.site-header .navigation-4 .rate-toggle span {
+    box-sizing: border-box !important;
+    color: #ffffff !important;
+    display: block !important;
+    font-family: Mulish, sans-serif !important;
+    font-size: 20px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.8px !important;
+    line-height: 28px !important;
+    text-align: center !important;
+    text-rendering: optimizeLegibility !important;
+    text-transform: capitalize !important;
+    white-space: nowrap !important;
+    -webkit-font-smoothing: antialiased !important;
+  }
+
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-1-3,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-link-111-2,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-toggle-3 > a,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-toggle-3 > a * {
+    cursor: pointer !important;
+  }
+
+  html body header.site-header .navigation-4 .rate-toggle {
+    cursor: default !important;
+  }
+
+  html body header.site-header .navigation-4 .rate-toggle span,
+  html body header.site-header .navigation-4 .rate-chevron {
+    pointer-events: none !important;
+  }
+
+  html body header.site-header .navigation-4 .rate-dropdown.is-open:not(:hover):not(:focus-within) .rate-menu,
+  html body header.site-header .navigation-4 .rate-dropdown-container.is-open:not(:hover):not(:focus-within) .rate-dropdown-menu {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+
+  html body header.site-header .navigation-4 .rate-dropdown:hover .rate-menu,
+  html body header.site-header .navigation-4 .rate-dropdown:focus-within .rate-menu,
+  html body header.site-header .navigation-4 .rate-dropdown-container:hover .rate-dropdown-menu,
+  html body header.site-header .navigation-4 .rate-dropdown-container:focus-within .rate-dropdown-menu {
+    display: block !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    visibility: visible !important;
+  }
+}
+/* Keep the price dropdown chevron optically centered with the navbar text. */
+@media (min-width: 1024px) {
+  html body header.site-header .navigation-4 .rate-toggle {
+    align-items: center !important;
+    gap: 7px !important;
+  }
+
+  html body header.site-header .navigation-4 .rate-chevron {
+    align-items: center !important;
+    display: inline-flex !important;
+    flex: 0 0 14px !important;
+    height: 28px !important;
+    justify-content: center !important;
+    line-height: 28px !important;
+    margin-left: 0 !important;
+    position: relative !important;
+    transform: none !important;
+    vertical-align: middle !important;
+    width: 14px !important;
+  }
+
+  html body header.site-header .navigation-4 .rate-chevron::before {
+    border-bottom: 2px solid currentColor !important;
+    border-right: 2px solid currentColor !important;
+    content: "" !important;
+    display: block !important;
+    height: 7px !important;
+    margin-top: -4px !important;
+    transform: rotate(45deg) !important;
+    transform-origin: 50% 50% !important;
+    transition: transform 180ms ease, margin-top 180ms ease !important;
+    width: 7px !important;
+  }
+
+  html body header.site-header .navigation-4 .rate-dropdown:hover .rate-chevron::before,
+  html body header.site-header .navigation-4 .rate-dropdown:focus-within .rate-chevron::before,
+  html body header.site-header .navigation-4 .rate-dropdown.is-open .rate-chevron::before {
+    margin-top: 3px !important;
+    transform: rotate(225deg) !important;
+  }
+}
+/* Final theme pass for page-driven rate dropdown. */
+html.kj-hide-rate-dropdown header.site-header .rate-dropdown,
+html.kj-hide-rate-dropdown header.site-header .rate-dropdown-container,
+body.kj-hide-rate-dropdown header.site-header .rate-dropdown,
+body.kj-hide-rate-dropdown header.site-header .rate-dropdown-container,
+header.site-header .rate-dropdown[hidden],
+header.site-header .rate-dropdown-container[hidden] {
+  display: none !important;
+}
+
+header.site-header .navigation-4 .rate-toggle,
+header.site-header .navigation-2 .rate-toggle,
+header.site-header .navigation-mob .rate-toggle {
+  align-items: center !important;
+  appearance: none !important;
+  background: rgba(255, 244, 204, 0.06) !important;
+  border: 1px solid rgba(255, 244, 204, 0.16) !important;
+  border-radius: 999px !important;
+  color: #fff8dc !important;
+  display: inline-flex !important;
+  gap: 8px !important;
+  justify-content: center !important;
+  min-height: 38px !important;
+  padding: 5px 11px !important;
+  white-space: nowrap !important;
+}
+
+header.site-header .navigation-4 .rate-toggle .rate-coin,
+header.site-header .navigation-2 .rate-toggle .rate-coin,
+header.site-header .navigation-mob .rate-toggle .rate-coin {
+  display: block !important;
+  flex: 0 0 24px !important;
+  height: 24px !important;
+  object-fit: contain !important;
+  width: 24px !important;
+}
+
+header.site-header .navigation-4 .rate-toggle span,
+header.site-header .navigation-2 .rate-toggle span,
+header.site-header .navigation-mob .rate-toggle span {
+  align-items: center !important;
+  color: #fff8dc !important;
+  display: inline-flex !important;
+  font-family: Mulish, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.45px !important;
+  line-height: 24px !important;
+  min-height: 24px !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+}
+
+header.site-header .navigation-4 .rate-chevron,
+header.site-header .navigation-2 .rate-chevron,
+header.site-header .navigation-mob .rate-chevron {
+  align-items: center !important;
+  display: inline-flex !important;
+  flex: 0 0 12px !important;
+  height: 24px !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  position: relative !important;
+  transform: none !important;
+  width: 12px !important;
+}
+
+header.site-header .navigation-4 .rate-chevron::before,
+header.site-header .navigation-2 .rate-chevron::before,
+header.site-header .navigation-mob .rate-chevron::before {
+  border-bottom: 2px solid currentColor !important;
+  border-right: 2px solid currentColor !important;
+  content: "" !important;
+  display: block !important;
+  height: 7px !important;
+  margin-top: -3px !important;
+  transform: rotate(45deg) !important;
+  transform-origin: 50% 50% !important;
+  transition: transform 180ms ease, margin-top 180ms ease !important;
+  width: 7px !important;
+}
+
+header.site-header .rate-dropdown:hover .rate-chevron::before,
+header.site-header .rate-dropdown:focus-within .rate-chevron::before,
+header.site-header .rate-dropdown.is-open .rate-chevron::before {
+  margin-top: 3px !important;
+  transform: rotate(225deg) !important;
+}
+
+header.site-header .navigation-4 .rate-menu,
+header.site-header .navigation-2 .rate-menu,
+header.site-header .navigation-mob .rate-menu {
+  background: #fffaf0 !important;
+  border: 1px solid rgba(153, 31, 35, 0.18) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 18px 36px rgba(49, 13, 16, 0.22) !important;
+  min-width: 292px !important;
+  padding: 8px !important;
+}
+
+header.site-header .rate-menu .rate-row {
+  align-items: center !important;
+  border-radius: 6px !important;
+  color: #681015 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  gap: 10px !important;
+  padding: 10px 9px !important;
+}
+
+header.site-header .rate-menu .rate-row:hover,
+header.site-header .rate-menu .rate-row:focus-visible {
+  background: rgba(153, 31, 35, 0.08) !important;
+  color: #991f23 !important;
+}
+
+header.site-header .rate-menu .rate-row .rate-coin {
+  flex: 0 0 24px !important;
+  height: 24px !important;
+  width: 24px !important;
+}
+
+header.site-header .rate-menu .rate-row span {
+  color: inherit !important;
+  font-family: Mulish, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 20px !important;
+}
+
+@media (max-width: 991px) {
+  header.site-header .navigation-mob .rate-toggle {
+    max-width: 100% !important;
+  }
+
+  header.site-header .navigation-mob .rate-toggle span {
+    font-size: 15px !important;
+    letter-spacing: -0.2px !important;
+  }
+}
+
+/* Final strict navbar typography and view-only rate dropdown. */
+@media (min-width: 992px) {
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2 > a,
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2 > a > div,
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2 > .dropdown > .dropdown-toggle,
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2 > .dropdown > .dropdown-toggle a,
+  html body header.site-header .navigation-4 .nav-menu-5 > .bko-wrap-111-2 > .dropdown > .dropdown-toggle a > div,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-1-3,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-link-111-2,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-toggle-3,
+  html body header.site-header .navigation-4 .nav-menu-5 .bko-dropdown-toggle-3 *,
+  html body header.site-header .navigation-4 .nav-menu-5 .goldlink,
+  html body header.site-header .navigation-4 .nav-menu-5 .silverlink-2,
+  html body header.site-header .navigation-4 .nav-menu-5 .diamondlink-2,
+  html body header.site-header .navigation-4 .nav-menu-5 .platinumlink-2,
+  html body header.site-header .navigation-4 .nav-menu-5 .aboutlink,
+  html body header.site-header .navigation-4 .nav-menu-5 .schemelink,
+  html body header.site-header .navigation-4 .nav-menu-5 .contactlink {
+    box-sizing: border-box !important;
+    color: #ffffff !important;
+    font-family: Mulish, sans-serif !important;
+    font-size: 20px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.8px !important;
+    line-height: 28px !important;
+    text-align: center !important;
+    text-rendering: optimizeLegibility !important;
+    text-transform: capitalize !important;
+    white-space: nowrap !important;
+    -webkit-font-smoothing: antialiased !important;
+  }
+}
+
+html.kj-hide-rate-dropdown header.site-header .rate-dropdown,
+html.kj-hide-rate-dropdown header.site-header .rate-dropdown-container,
+body.kj-hide-rate-dropdown header.site-header .rate-dropdown,
+body.kj-hide-rate-dropdown header.site-header .rate-dropdown-container,
+header.site-header .rate-dropdown.kj-rate-hidden,
+header.site-header .rate-dropdown-container.kj-rate-hidden,
+header.site-header .rate-dropdown[hidden],
+header.site-header .rate-dropdown-container[hidden] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+header.site-header .rate-toggle,
+header.site-header .rate-dropdown-trigger,
+header.site-header .rate-row,
+header.site-header .rate-item {
+  cursor: default !important;
+}
+
+header.site-header .rate-menu .rate-row,
+header.site-header .rate-menu .rate-item {
+  pointer-events: auto !important;
+  user-select: none !important;
+}

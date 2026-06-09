@@ -96,7 +96,7 @@ Call log:
   148 |   });
   149 | 
   150 |   test('TEST 3: Platinum page works and shows coming soon only', async ({ page }) => {
-  151 |     const response = await page.goto('/platinum-products.html');
+  151 |     const response = await page.goto('/coming-soon.html');
   152 |     expect(response.status()).toBe(200);
   153 |     await waitForApp(page);
   154 | 

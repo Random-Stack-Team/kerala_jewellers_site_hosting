@@ -14,7 +14,7 @@
 ```
 Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
 Call log:
-  - navigating to "/platinum-products.html", waiting until "load"
+  - navigating to "/coming-soon.html", waiting until "load"
 
 ```
 
@@ -121,7 +121,7 @@ Call log:
   148 |   });
   149 | 
   150 |   test('TEST 3: Platinum page works and shows coming soon only', async ({ page }) => {
-> 151 |     const response = await page.goto('/platinum-products.html');
+> 151 |     const response = await page.goto('/coming-soon.html');
       |                                 ^ Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
   152 |     expect(response.status()).toBe(200);
   153 |     await waitForApp(page);

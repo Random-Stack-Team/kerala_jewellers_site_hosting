@@ -19,7 +19,7 @@ document.documentElement.classList.add('js-ready');
     const category = (params.get('metal') || params.get('type') || '').toLowerCase();
 
     if (path.includes('silver') || category.includes('silver')) return 'silver';
-    if (path.includes('coming-soon') || path.includes('platinum') || category.includes('platinum')) return 'platinum';
+    if (path.includes('platinum') || category.includes('platinum')) return 'platinum';
     if (path.includes('diamond') || category.includes('diamond')) return 'diamond';
     if (path.includes('gold') || /(^|\/)products\.html$/.test(path) || category.includes('gold')) return 'gold';
     return 'gold';
