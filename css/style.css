@@ -1406,7 +1406,7 @@ textarea.form-input, textarea.form-select {
 }
 
 @media screen and (max-width: 767px) {
-  .nav-brand {
+  .site-header__brand {
     padding-left: 10px;
   }
 }
@@ -1817,7 +1817,7 @@ textarea.form-input, textarea.form-select {
   clear: both;
 }
 
-.nav-brand {
+.site-header__brand {
   float: left;
   color: #333;
   text-decoration: none;
@@ -1840,7 +1840,7 @@ textarea.form-input, textarea.form-select {
   color: #0082f3;
 }
 
-.nav-menu-panel {
+.site-nav__panel {
   float: right;
   position: relative;
 }
@@ -1918,7 +1918,7 @@ textarea.form-input, textarea.form-select {
   background-color: #c8c8c8;
 }
 
-.site-nav[data-collapse="all"] .nav-menu-panel {
+.site-nav[data-collapse="all"] .site-nav__panel {
   display: none;
 }
 
@@ -1931,7 +1931,7 @@ textarea.form-input, textarea.form-select {
 }
 
 @media screen and (max-width: 991px) {
-  .site-nav[data-collapse="medium"] .nav-menu-panel {
+  .site-nav[data-collapse="medium"] .site-nav__panel {
     display: none;
   }
 
@@ -1941,7 +1941,7 @@ textarea.form-input, textarea.form-select {
 }
 
 @media screen and (max-width: 767px) {
-  .site-nav[data-collapse="small"] .nav-menu-panel {
+  .site-nav[data-collapse="small"] .site-nav__panel {
     display: none;
   }
 
@@ -1949,13 +1949,13 @@ textarea.form-input, textarea.form-select {
     display: block;
   }
 
-  .nav-brand {
+  .site-header__brand {
     padding-left: 10px;
   }
 }
 
 @media screen and (max-width: 479px) {
-  .site-nav[data-collapse="tiny"] .nav-menu-panel {
+  .site-nav[data-collapse="tiny"] .site-nav__panel {
     display: none;
   }
 
@@ -4601,7 +4601,7 @@ figcaption {
   list-style-type: none;
 }
 
-.navigation-container {
+.site-header__container {
   border: 0 solid #000;
   justify-content: space-between;
   align-items: stretch;
@@ -4877,7 +4877,7 @@ figcaption {
   display: flex;
 }
 
-.navigation-right {
+.site-header__actions {
   grid-column-gap: 12px;
   grid-row-gap: 12px;
   flex-flow: row;
@@ -4904,7 +4904,7 @@ figcaption {
   height: 51px;
 }
 
-.nav-right {
+.site-header__right {
   grid-column-gap: 12px;
   align-items: center;
   display: flex;
@@ -4920,7 +4920,7 @@ figcaption {
   font-style: normal;
 }
 
-.navigation-full {
+.site-header__inner {
   border: 0 solid #000;
   width: 100%;
 }
@@ -6987,7 +6987,7 @@ figcaption {
   line-height: 16px;
 }
 
-.left-arrow, .right-arrow, .slide-nav {
+.left-arrow, .right-arrow, .site-nav__slider {
   display: none;
 }
 
@@ -10821,7 +10821,7 @@ figcaption {
   display: none;
 }
 
-.navigation-4 {
+.site-header {
   z-index: 9;
   background-color: #fff;
   flex-direction: column;
@@ -11204,7 +11204,7 @@ figcaption {
   display: flex;
 }
 
-.navigation-wrap-4 {
+.site-header__wrap {
   margin-left: 0;
   margin-right: 0;
 }
@@ -11291,7 +11291,7 @@ figcaption {
   display: none;
 }
 
-.nav-menu-5 {
+.site-nav {
   color: #283338;
   justify-content: center;
   align-items: center;
@@ -16003,11 +16003,11 @@ figcaption {
     display: grid;
   }
 
-  .nav-right {
+  .site-header__right {
     grid-column-gap: 18px;
   }
 
-  .navigation-left {
+  .site-header__brand-area {
     display: none;
   }
 
@@ -16021,7 +16021,7 @@ figcaption {
     padding: 40px 24px;
   }
 
-  .navigation-full {
+  .site-header__inner {
     background-color: #fff;
   }
 
@@ -17646,7 +17646,7 @@ figcaption {
     width: 50%;
   }
 
-  .navigation-4 {
+  .site-header {
     display: none;
   }
 
@@ -18565,7 +18565,7 @@ figcaption {
     padding-left: 0;
   }
 
-  .nav-right {
+  .site-header__right {
     grid-column-gap: 15px;
   }
 
@@ -22817,14 +22817,14 @@ figcaption {
 }
 
 .navigation-2,
-.navigation-full,
+.site-header__inner,
 .site-nav {
   background: #991F23 !important;
 }
 
-.navigation-2 .navigation-container,
-.navigation-2 .navigation-left,
-.navigation-2 .navigation-right,
+.navigation-2 .site-header__container,
+.navigation-2 .site-header__brand-area,
+.navigation-2 .site-header__actions,
 
 .navigation-2 a,
 .navigation-2 .bko-dropdown-1-2,
@@ -23083,9 +23083,9 @@ figcaption {
 /* Desktop megamenu reliability: JS owns the active menu, CSS keeps old hover
    panels from staying visible when another nav item opens. */
 @media (min-width: 992px) {
-  .nav-menu-panel:has(.dropdown.is-open) .dropdown:not(.is-open) > .dropdown-list,
-  .nav-menu-panel:has(.rate-dropdown.is-open) .dropdown:not(.is-open) > .dropdown-list,
-  .nav-menu-panel:has(.dropdown.is-open) .rate-dropdown:not(.is-open) .rate-menu {
+  .site-nav__panel:has(.dropdown.is-open) .dropdown:not(.is-open) > .dropdown-list,
+  .site-nav__panel:has(.rate-dropdown.is-open) .dropdown:not(.is-open) > .dropdown-list,
+  .site-nav__panel:has(.dropdown.is-open) .rate-dropdown:not(.is-open) .rate-menu {
     display: none !important;
     opacity: 0 !important;
     pointer-events: none !important;
@@ -23115,14 +23115,14 @@ figcaption {
 
 /* Final header overrides */
 header .navigation-2,
-header .navigation-full,
+header .site-header__inner,
 header .site-nav {
   background-color: #991F23 !important;
 }
 
 header .nav-menu-3,
-header .navigation-right,
-header .navigation-container {
+header .site-header__actions,
+header .site-header__container {
   overflow: visible !important;
 }
 
@@ -23307,24 +23307,24 @@ header .rate-row * {
 
 /* Final header source fixes: keep nav white without inline JS styles, and keep rate menu usable. */
 header .navigation-2,
-header .navigation-2 .navigation-full,
+header .navigation-2 .site-header__inner,
 header .site-nav {
   background-color: #991F23 !important;
 }
 
-header .navigation-2 .nav-menu-3.nav-menu-panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle a,
-header .navigation-2 .nav-menu-3.nav-menu-panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle a *,
-header .navigation-2 .nav-menu-3.nav-menu-panel > a,
-header .navigation-2 .nav-menu-3.nav-menu-panel > a *,
+header .navigation-2 .nav-menu-3.site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle a,
+header .navigation-2 .nav-menu-3.site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle a *,
+header .navigation-2 .nav-menu-3.site-nav__panel > a,
+header .navigation-2 .nav-menu-3.site-nav__panel > a *,
 header .navigation-2 .div2 > a,
 header .navigation-2 .div2 > a * {
   color: #ffffff !important;
 }
 
-header .navigation-2 .nav-menu-3.nav-menu-panel > .bko-wrap-111-2 > .dropdown:hover > .dropdown-toggle a,
-header .navigation-2 .nav-menu-3.nav-menu-panel > .bko-wrap-111-2 > .dropdown:hover > .dropdown-toggle a *,
-header .navigation-2 .nav-menu-3.nav-menu-panel > a:hover,
-header .navigation-2 .nav-menu-3.nav-menu-panel > a:hover * {
+header .navigation-2 .nav-menu-3.site-nav__panel > .bko-wrap-111-2 > .dropdown:hover > .dropdown-toggle a,
+header .navigation-2 .nav-menu-3.site-nav__panel > .bko-wrap-111-2 > .dropdown:hover > .dropdown-toggle a *,
+header .navigation-2 .nav-menu-3.site-nav__panel > a:hover,
+header .navigation-2 .nav-menu-3.site-nav__panel > a:hover * {
   color: #fff5d8 !important;
 }
 

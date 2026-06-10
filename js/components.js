@@ -131,7 +131,7 @@ document.documentElement.classList.add('js-ready');
     const style = document.createElement('style');
     style.id = 'kj-final-rate-theme';
     style.textContent = `
-      header.site-header .navigation-4 .rate-toggle,
+      header.site-header .site-header .rate-toggle,
       header.site-header .navigation-2 .rate-toggle,
       header.site-header .navigation-mob .rate-toggle {
         align-items: center !important;
@@ -148,7 +148,7 @@ document.documentElement.classList.add('js-ready');
         white-space: nowrap !important;
       }
 
-      header.site-header .navigation-4 .rate-toggle .rate-coin,
+      header.site-header .site-header .rate-toggle .rate-coin,
       header.site-header .navigation-2 .rate-toggle .rate-coin,
       header.site-header .navigation-mob .rate-toggle .rate-coin {
         display: block !important;
@@ -158,7 +158,7 @@ document.documentElement.classList.add('js-ready');
         width: 24px !important;
       }
 
-      header.site-header .navigation-4 .rate-toggle > span:not(.rate-chevron),
+      header.site-header .site-header .rate-toggle > span:not(.rate-chevron),
       header.site-header .navigation-2 .rate-toggle > span:not(.rate-chevron),
       header.site-header .navigation-mob .rate-toggle > span:not(.rate-chevron) {
         align-items: center !important;
@@ -262,7 +262,7 @@ document.documentElement.classList.add('js-ready');
     const toggleMenuButton = (button) => {
       const header = button.closest('header') || document;
       const willOpen = !button.classList.contains('is-open');
-      header.querySelectorAll('.nav-menu-panel').forEach((menu) => {
+      header.querySelectorAll('.site-nav__panel').forEach((menu) => {
         menu.classList.toggle('is-open', willOpen);
       });
       button.classList.toggle('is-open', willOpen);
@@ -414,7 +414,7 @@ document.documentElement.classList.add('js-ready');
       scheme: 'assets/images/66ae249ef52614a0871e7f4c_Rectangle%20366%20(8).png'
     };
 
-    document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel').forEach((nav) => {
+    document.querySelectorAll('.nav-menu-3.site-nav__panel, .site-nav.site-nav__panel').forEach((nav) => {
       const menuTypes = [
         { key: 'gold', selector: '.goldlink, .goldlink-2' },
         { key: 'silver', selector: '.silverlink, .silverlink-2' },
@@ -941,7 +941,7 @@ document.documentElement.classList.add('js-ready');
 
   const wireMegamenuHover = () => {
     if (!window.matchMedia('(min-width: 992px)').matches) return;
-    document.querySelectorAll('.nav-menu-3.nav-menu-panel, .nav-menu-5.nav-menu-panel').forEach((nav) => {
+    document.querySelectorAll('.nav-menu-3.site-nav__panel, .site-nav.site-nav__panel').forEach((nav) => {
       const items = Array.from(nav.querySelectorAll(':scope > .bko-wrap-111-2 > .dropdown, :scope > .rate-dropdown'));
       items.forEach((item) => {
         if (item.dataset.kjHoverBound) return;
