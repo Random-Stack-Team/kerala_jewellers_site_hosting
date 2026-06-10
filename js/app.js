@@ -1144,3 +1144,21 @@ document.addEventListener("click", function (event) {
     button.setAttribute("aria-expanded", "true");
   }
 }, true);
+
+
+/* --- MOBILE NAVBAR DESKTOP RESET --- */
+function resetMobileMenuOnDesktop() {
+  if (window.innerWidth >= 992) {
+    document.querySelectorAll(".mobile-nav.site-nav__panel.is-open").forEach(panel => {
+      panel.classList.remove("is-open");
+    });
+
+    document.querySelectorAll(".mobile-menu-toggle.mobile-menu-button.is-open").forEach(button => {
+      button.classList.remove("is-open");
+      button.setAttribute("aria-expanded", "false");
+    });
+  }
+}
+
+window.addEventListener("resize", resetMobileMenuOnDesktop);
+document.addEventListener("DOMContentLoaded", resetMobileMenuOnDesktop);

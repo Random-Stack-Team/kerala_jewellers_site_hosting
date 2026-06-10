@@ -1,9 +1,4 @@
 @media (max-width: 991px) {
-
-
-
-  header .mobile-header .mobile-nav.site-nav__panel.is-open,
-
 }
 
 @media (max-width: 991px) {
@@ -139,7 +134,6 @@
     max-width: 100% !important;
     width: 100% !important;
   }
-
 }
 
 
@@ -203,8 +197,6 @@
 
 /* Keep the mobile drawer anchored to the viewport instead of the menu button container. */
 @media (max-width: 991px) {
-  header .mobile-header .mobile-nav.site-nav__panel,
-
 }
 
 /* Live-style mobile rate strip and default compact mobile nav restore. */
@@ -220,25 +212,6 @@
     height: auto !important;
     min-height: 0 !important;
   }
-
-
-
-  header .mobile-header .mobile-nav.site-nav__panel,
-
-
-  header .mobile-header .mobile-nav>.rate-dropdown,
-
-
-  header .mobile-header .mobile-nav>.bko-wrap-111-2,
-  header .mobile-header .mobile-nav>.bko-wrap-111-2 *,
-  header .mobile-header .mobile-nav>.bko-wrap-111-2>a,
-  header .mobile-header .mobile-nav>a,
-
-
-
-
-  header .mobile-header .mobile-nav .bko-dropdown-list,
-
 }
 
 /* Match the live mobile navbar: red runner, white header, black menu button, simple nav list. */
@@ -253,64 +226,9 @@
     background: transparent !important;
     background-color: transparent !important;
   }
-
-
-
-
-
-  header .mobile-header .brand,
-
-
-
-
-
-
-  header .mobile-menu-button .mobile-menu-toggle__icon,
-  header .mobile-menu-button .mobile-menu-toggle__icon::before,
-
-
-
-
-
-
-  header .mobile-header .mobile-nav.site-nav__panel,
-
-
-  header .mobile-header .mobile-nav.site-nav__panel.is-open,
-
-
-  header .mobile-header .mobile-nav .rate-dropdown,
-  header .mobile-header .mobile-nav .bko-dropdown-list,
-  header .mobile-header .mobile-nav .dropdown-list,
-  header .mobile-header .mobile-nav .slider-2,
-  header .mobile-header .mobile-nav .slider-21,
-
-
-
-
-  header .mobile-header .mobile-nav>.bko-wrap-111-2,
-  header .mobile-header .mobile-nav>.bko-wrap-111-2 *,
-  header .mobile-header .mobile-nav>.bko-wrap-111-2 a,
-  header .mobile-header .mobile-nav .bko-dropdown-toggle-3,
-
-
-  header .mobile-header .mobile-nav .bko-dropdown-0,
-  header .mobile-header .mobile-nav .bko-dropdown-toggle-3,
-  header .mobile-header .mobile-nav .div2,
-
-
-
 }
 
 @media (max-width: 360px) {
-
-
-
-
-
-
-  header .mobile-header .mobile-nav.site-nav__panel,
-
 }
 
 /* Simple live-site mobile menu content. */
@@ -318,24 +236,6 @@
 
 /* Final measured mobile/tablet header alignment against live reference. */
 @media (max-width: 991px) {
-
-
-
-
-
-  header .mobile-header .brand,
-
-
-
-
-
-
-
-
-  header .mobile-header .mobile-nav.site-nav__panel,
-
-
-
 }
 
 
@@ -588,59 +488,6 @@
 
 /* Final requested hamburger colors: maroon circle, white closed icon, gold open icon. */
 @media (max-width: 991px) {
-  html body header.site-header .mobile-header .mobile-menu-button,
-  html body header.site-header .mobile-header .mobile-menu-button:hover,
-  html body header.site-header .mobile-header .mobile-menu-button:focus,
-  html body header.site-header .mobile-header .mobile-menu-button:active,
-  html body header.site-header .mobile-header .mobile-menu-button.active,
-  html body header.site-header .mobile-header .mobile-menu-button.open,
-  html body header.site-header .mobile-header .mobile-menu-button.is-open,
-  html body header.site-header .mobile-header .mobile-menu-button.is-open,
-  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="true"],
-  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="false"],
-  html body header.site-header .mobile-header .menu-mob,
-  html body header.site-header .mobile-header .mobile-menu-toggle,
-
-
-  html body header.site-header .mobile-header .mobile-menu-button .mobile-menu-toggle__icon,
-  html body header.site-header .mobile-header .mobile-menu-button .mobile-menu-toggle__icon::before,
-  html body header.site-header .mobile-header .mobile-menu-button .mobile-menu-toggle__icon::after,
-  html body header.site-header .mobile-header .mobile-menu-button .menu-line,
-  html body header.site-header .mobile-header .mobile-menu-button svg,
-
-
-  html body header.site-header .mobile-header .mobile-menu-button.active .mobile-menu-toggle__icon,
-  html body header.site-header .mobile-header .mobile-menu-button.active .mobile-menu-toggle__icon::before,
-  html body header.site-header .mobile-header .mobile-menu-button.active .mobile-menu-toggle__icon::after,
-  html body header.site-header .mobile-header .mobile-menu-button.active .menu-line,
-  html body header.site-header .mobile-header .mobile-menu-button.open .mobile-menu-toggle__icon,
-  html body header.site-header .mobile-header .mobile-menu-button.open .mobile-menu-toggle__icon::before,
-  html body header.site-header .mobile-header .mobile-menu-button.open .mobile-menu-toggle__icon::after,
-  html body header.site-header .mobile-header .mobile-menu-button.open .menu-line,
-  html body header.site-header .mobile-header .mobile-menu-button.is-open .mobile-menu-toggle__icon,
-  html body header.site-header .mobile-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::before,
-  html body header.site-header .mobile-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::after,
-  html body header.site-header .mobile-header .mobile-menu-button.is-open .menu-line,
-  html body header.site-header .mobile-header .mobile-menu-button.is-open .mobile-menu-toggle__icon,
-  html body header.site-header .mobile-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::before,
-  html body header.site-header .mobile-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::after,
-  html body header.site-header .mobile-header .mobile-menu-button.is-open .menu-line,
-  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="true"] .mobile-menu-toggle__icon,
-  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="true"] .mobile-menu-toggle__icon::before,
-  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="true"] .mobile-menu-toggle__icon::after,
-  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="true"] .menu-line,
-  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="true"] svg,
-
-
-  html body header.site-header .mobile-header .mobile-nav .kj-mobile-menu-link,
-
-
-  html body header.site-header .mobile-header .mobile-nav .kj-mobile-menu-link:hover,
-  html body header.site-header .mobile-header .mobile-nav .kj-mobile-menu-link:focus,
-  html body header.site-header .mobile-header .mobile-nav .kj-mobile-menu-link:active,
-  html body header.site-header .mobile-header .mobile-nav a:hover,
-  html body header.site-header .mobile-header .mobile-nav a:focus,
-
 }
 
 /* Final phone-width carousel alignment fixes. Keep the live-style 1200px review
@@ -1780,13 +1627,6 @@
 
 /* Absolute final mobile-menu motion override. */
 @media (max-width: 991px) {
-  html body header.site-header .mobile-header .mobile-nav.site-nav__panel,
-
-
-  html body header.site-header .mobile-header .mobile-nav.site-nav__panel.is-open,
-  html body header.site-header .mobile-header .mobile-nav.site-nav__panel.is-open,
-  html body header.site-header .mobile-header .mobile-nav.is-open,
-
 }
 
 /* Customer review carousel geometry. */
@@ -3527,48 +3367,22 @@ textarea,
 
 
 @media (max-width: 991px) {
-  header.site-header .site-header.site-nav {
+  header.site-header .desktop-header.site-nav {
     display: none;
   }
-
-
-
-
-
-
-
-  header.site-header .mobile-menu-toggle__icon,
-  header.site-header .mobile-menu-toggle__icon::before,
-
-
-
 }
 
 
 @media (min-width: 992px) {
-  header.site-header .site-header.site-nav {
+  header.site-header .desktop-header.site-nav {
     display: flex !important;
   }
-
-
 }
 
 @media (max-width: 991px) {
-  header.site-header .site-header.site-nav {
+  header.site-header .desktop-header.site-nav {
     display: none !important;
   }
-
-
-
-
-
-
-
-  header.site-header .mobile-menu-toggle__icon,
-  header.site-header .mobile-menu-toggle__icon::before,
-
-
-
 }
 
 /* Root Cause Fix: Explicit Dimensions for Mobile Navbar */
@@ -3580,10 +3394,9 @@ textarea,
     display: block !important;
   }
 
-  header.site-header.header .site-header.site-nav {
+  header.site-header.header .desktop-header.site-nav {
     display: none !important;
   }
-
 }
 
 /* Final Mobile Repair */
@@ -3594,7 +3407,7 @@ textarea,
     overflow: visible !important;
   }
 
-  header.site-header.header .site-header.site-nav {
+  header.site-header.header .desktop-header.site-nav {
     display: none !important;
   }
 
@@ -3612,21 +3425,6 @@ textarea,
     justify-content: flex-end !important;
     flex: 0 0 auto !important;
   }
-
-
-
-  header.site-header.header .mobile-menu-toggle__icon,
-  header.site-header.header .mobile-menu-toggle__icon::before,
-
-
-
-
-
-
-
-
-
-
 }
 
 
@@ -3637,30 +3435,6 @@ textarea,
   header.site-header.header {
     background: #a3131c !important;
   }
-
-
-
-
-
-
-
-
-
-
-
-  header.site-header.header .mobile-menu-toggle__icon,
-  header.site-header.header .mobile-menu-toggle__icon::before,
-
-
-
-
-
-
-
-
-
-
-
 }
 
 /* Fixed Mobile Rate Strip */
@@ -3753,35 +3527,6 @@ textarea,
     left: 0 !important;
     right: 0 !important;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .mobile-menu-toggle__icon,
-  .mobile-menu-toggle__icon::before,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
@@ -3860,8 +3605,8 @@ textarea,
 
   header.site-header.header .mobile-nav .kj-mobile-menu-image {
     display: none !important;
-
-    @media (max-width: 991px) {
+  }
+  @media (max-width: 991px) {
       header.site-header.header {
         display: block !important;
         width: 100% !important;
@@ -3891,9 +3636,6 @@ textarea,
         background: transparent !important;
         border: 0 !important;
       }
-
-
-
     }
   }
 }
@@ -4079,5 +3821,86 @@ textarea,
 
   header.site-header.header .mobile-nav .kj-mobile-menu-link:active {
     animation: linkClickRipple 0.3s ease forwards !important;
+  }
+}
+
+
+/* --- STRICT HEADER STRUCTURAL ISOLATION --- */
+/* DESKTOP VIEW (>= 992px) */
+@media (min-width: 992px) {
+  header.site-header .desktop-header.site-nav {
+    display: flex !important; /* Force desktop nav to show */
+  }
+  
+  header.site-header .mobile-header.site-nav,
+  header.site-header .kj-mobile-rate-strip,
+  .mobile-header.site-nav,
+  .kj-mobile-rate-strip {
+    display: none !important; /* Force mobile elements to hide */
+  }
+}
+
+/* MOBILE VIEW (<= 991px) */
+@media (max-width: 991px) {
+  header.site-header .desktop-header.site-nav,
+  .desktop-header.site-nav {
+    display: none !important; /* Force desktop nav to hide */
+  }
+
+  header.site-header .kj-mobile-rate-strip,
+  .kj-mobile-rate-strip {
+    display: flex !important; /* Show rate strip */
+    width: 100% !important;
+  }
+  
+  header.site-header .mobile-header.site-nav,
+  .mobile-header.site-nav {
+    display: flex !important; /* Show mobile header */
+  }
+}
+
+/* --- PREMIUM MOBILE NAVBAR ANIMATIONS --- */
+@media (max-width: 991px) {
+  @keyframes mobileMenuSlideDown {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  header.site-header.header .mobile-nav.site-nav__panel.is-open {
+    animation: mobileMenuSlideDown 0.3s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 0 0 12px 12px !important;
+    border-top: 1px solid rgba(0,0,0,0.05) !important;
+  }
+
+  header.site-header.header .mobile-nav .kj-mobile-menu-link {
+    transition: all 0.25s ease !important;
+    position: relative !important;
+  }
+
+  header.site-header.header .mobile-nav .kj-mobile-menu-link::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 4px !important;
+    left: 0 !important;
+    height: 2px !important;
+    background: #e6c886 !important;
+    width: 0 !important;
+    transition: width 0.3s ease !important;
+  }
+
+  header.site-header.header .mobile-nav .kj-mobile-menu-link:hover::after,
+  header.site-header.header .mobile-nav .kj-mobile-menu-link:focus::after {
+    width: 40px !important;
+  }
+
+  .mobile-menu-toggle.mobile-menu-button {
+    transition: background 0.3s ease, transform 0.2s ease !important;
+    border-radius: 8px !important;
+  }
+
+  .mobile-menu-toggle.mobile-menu-button:active {
+    transform: scale(0.92) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
   }
 }
