@@ -1838,10 +1838,6 @@ textarea.form-input, textarea.form-select {
   color: #0082f3;
 }
 
-.site-nav__panel {
-  float: right;
-  position: relative;
-}
 
 [data-nav-menu-open] {
   text-align: center;
@@ -1894,58 +1890,21 @@ textarea.form-input, textarea.form-select {
   left: auto;
 }
 
-.mobile-menu-button {
-  float: right;
-  cursor: pointer;
-  -webkit-tap-highlight-color: #0000;
-  tap-highlight-color: #0000;
-  -webkit-user-select: none;
-  user-select: none;
-  padding: 18px;
-  font-size: 24px;
-  display: none;
-  position: relative;
-}
 
-.mobile-menu-button:focus {
-  outline: 0;
-}
 
-.mobile-menu-button.is-open {
-  color: #fff;
-  background-color: #c8c8c8;
-}
 
-.site-nav[data-collapse="all"] .site-nav__panel {
-  display: none;
-}
 
-.site-nav[data-collapse="all"] .mobile-menu-button, .w--nav-dropdown-open, .w--nav-dropdown-toggle-open {
-  display: block;
-}
 
 .w--nav-dropdown-list-open {
   position: static;
 }
 
 @media screen and (max-width: 991px) {
-  .site-nav[data-collapse="medium"] .site-nav__panel {
-    display: none;
-  }
 
-  .site-nav[data-collapse="medium"] .mobile-menu-button {
-    display: block;
-  }
 }
 
 @media screen and (max-width: 767px) {
-  .site-nav[data-collapse="small"] .site-nav__panel {
-    display: none;
-  }
 
-  .site-nav[data-collapse="small"] .mobile-menu-button {
-    display: block;
-  }
 
   .site-header__brand {
     padding-left: 10px;
@@ -1953,13 +1912,7 @@ textarea.form-input, textarea.form-select {
 }
 
 @media screen and (max-width: 479px) {
-  .site-nav[data-collapse="tiny"] .site-nav__panel {
-    display: none;
-  }
 
-  .site-nav[data-collapse="tiny"] .mobile-menu-button {
-    display: block;
-  }
 }
 
 .w-tabs {
@@ -5041,9 +4994,6 @@ figcaption {
 }
 
 
-.mobile-nav {
-  z-index: 2147483647;
-}
 
 .nav-link---brix {
   align-items: center;
@@ -16055,12 +16005,6 @@ figcaption {
     padding-right: 0;
   }
 
-  .mobile-nav {
-    z-index: 2147483647;
-    background-color: #fff;
-    padding-top: 15px;
-    box-shadow: 42px 42px 55px #20355a17;
-  }
 
   .dropdown-list-v1---brix {
     z-index: 99;
@@ -23051,14 +22995,6 @@ figcaption {
 /* Desktop megamenu reliability: JS owns the active menu, CSS keeps old hover
    panels from staying visible when another nav item opens. */
 @media (min-width: 992px) {
-  .site-nav__panel:has(.dropdown.is-open) .dropdown:not(.is-open) > .dropdown-list,
-  .site-nav__panel:has(.rate-dropdown.is-open) .dropdown:not(.is-open) > .dropdown-list,
-  .site-nav__panel:has(.dropdown.is-open) .rate-dropdown:not(.is-open) .rate-menu {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-    visibility: hidden !important;
-  }
 }
 
 @media screen and (max-width: 991px) {
@@ -23280,21 +23216,7 @@ header .site-nav {
   background-color: #991F23 !important;
 }
 
-header .navigation-2 .nav-menu-3.site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle a,
-header .navigation-2 .nav-menu-3.site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle a *,
-header .navigation-2 .nav-menu-3.site-nav__panel > a,
-header .navigation-2 .nav-menu-3.site-nav__panel > a *,
-header .navigation-2 .div2 > a,
-header .navigation-2 .div2 > a * {
-  color: #ffffff !important;
-}
 
-header .navigation-2 .nav-menu-3.site-nav__panel > .bko-wrap-111-2 > .dropdown:hover > .dropdown-toggle a,
-header .navigation-2 .nav-menu-3.site-nav__panel > .bko-wrap-111-2 > .dropdown:hover > .dropdown-toggle a *,
-header .navigation-2 .nav-menu-3.site-nav__panel > a:hover,
-header .navigation-2 .nav-menu-3.site-nav__panel > a:hover * {
-  color: #fff5d8 !important;
-}
 
 header .rate-dropdown {
   display: inline-flex !important;
@@ -24198,3 +24120,99 @@ body {
   display: none !important;
 }
 \n/* Hide mobile rate strip on desktop */\n.kj-mobile-rate-strip { display: none; }\n
+
+/* Final Phase 6 Mobile Navbar Regression Fix */
+@media (max-width: 991px) {
+  header.site-header.header .mobile-header.site-nav {
+    background: #991f23 !important;
+    display: flex !important;
+    width: 100% !important;
+    min-height: 120px !important;
+    padding: 22px 32px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    z-index: 10000 !important;
+  }
+
+  header.site-header.header .mobile-header__container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  header.site-header.header .mobile-menu-toggle.mobile-menu-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 48px !important;
+    height: 48px !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  header.site-header.header .mobile-menu-toggle__icon,
+  header.site-header.header .mobile-menu-toggle__icon::before,
+  header.site-header.header .mobile-menu-toggle__icon::after {
+    content: "" !important;
+    display: block !important;
+    width: 28px !important;
+    height: 3px !important;
+    background: #d9b63c !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  header.site-header.header .mobile-menu-toggle__icon {
+    position: relative !important;
+  }
+
+  header.site-header.header .mobile-menu-toggle__icon::before {
+    position: absolute !important;
+    top: -9px !important;
+    left: 0 !important;
+  }
+
+  header.site-header.header .mobile-menu-toggle__icon::after {
+    position: absolute !important;
+    top: 9px !important;
+    left: 0 !important;
+  }
+
+  header.site-header.header .mobile-nav.site-nav__panel {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 32px !important;
+    right: 32px !important;
+    width: auto !important;
+    background: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 99999 !important;
+    flex-direction: column !important;
+    padding: 18px 34px 24px !important;
+    box-shadow: none !important;
+  }
+
+  header.site-header.header .mobile-nav.site-nav__panel.is-open {
+    display: flex !important;
+  }
+
+  header.site-header.header .mobile-nav .kj-mobile-menu-link {
+    color: #222 !important;
+    background: #ffffff !important;
+    font-family: Mulish, Arial, sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    padding: 13px 0 !important;
+    border-bottom: 1px solid rgba(0,0,0,.06) !important;
+    text-decoration: none !important;
+  }
+
+  header.site-header.header .mobile-nav .kj-mobile-menu-image {
+    display: none !important;
+  }
+}
