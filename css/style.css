@@ -195,9 +195,7 @@ td, th {
   content: "";
 }
 
-.hamburger-icon:before {
-  content: "";
-}
+
 
 .w-icon-arrow-down:before, .dropdown-chevron:before {
   content: "";
@@ -1896,7 +1894,7 @@ textarea.form-input, textarea.form-select {
   left: auto;
 }
 
-.nav-menu-button {
+.mobile-menu-button {
   float: right;
   cursor: pointer;
   -webkit-tap-highlight-color: #0000;
@@ -1909,11 +1907,11 @@ textarea.form-input, textarea.form-select {
   position: relative;
 }
 
-.nav-menu-button:focus {
+.mobile-menu-button:focus {
   outline: 0;
 }
 
-.nav-menu-button.is-open {
+.mobile-menu-button.is-open {
   color: #fff;
   background-color: #c8c8c8;
 }
@@ -1922,7 +1920,7 @@ textarea.form-input, textarea.form-select {
   display: none;
 }
 
-.site-nav[data-collapse="all"] .nav-menu-button, .w--nav-dropdown-open, .w--nav-dropdown-toggle-open {
+.site-nav[data-collapse="all"] .mobile-menu-button, .w--nav-dropdown-open, .w--nav-dropdown-toggle-open {
   display: block;
 }
 
@@ -1935,7 +1933,7 @@ textarea.form-input, textarea.form-select {
     display: none;
   }
 
-  .site-nav[data-collapse="medium"] .nav-menu-button {
+  .site-nav[data-collapse="medium"] .mobile-menu-button {
     display: block;
   }
 }
@@ -1945,7 +1943,7 @@ textarea.form-input, textarea.form-select {
     display: none;
   }
 
-  .site-nav[data-collapse="small"] .nav-menu-button {
+  .site-nav[data-collapse="small"] .mobile-menu-button {
     display: block;
   }
 
@@ -1959,7 +1957,7 @@ textarea.form-input, textarea.form-select {
     display: none;
   }
 
-  .site-nav[data-collapse="tiny"] .nav-menu-button {
+  .site-nav[data-collapse="tiny"] .mobile-menu-button {
     display: block;
   }
 }
@@ -4805,15 +4803,7 @@ figcaption {
   font-weight: 500;
 }
 
-.navigation-container-mob {
-  align-items: center;
-  width: 100%;
-  max-width: 1300px;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-}
+
 
 .dropdown-menu-text---brix {
   margin-right: 8px;
@@ -4988,14 +4978,7 @@ figcaption {
   font-style: normal;
 }
 
-.navigation-mob {
-  background-color: #0000;
-  flex-direction: column;
-  align-items: center;
-  display: none;
-  position: relative;
-  inset: 0% 0% auto;
-}
+
 
 .text-block-66 {
   font-style: normal;
@@ -15981,9 +15964,7 @@ figcaption {
     padding-left: 24px;
   }
 
-  .navigation-container-mob {
-    justify-content: space-between;
-  }
+
 
   .menu-icon-2 {
     grid-column-gap: 0px;
@@ -16034,13 +16015,7 @@ figcaption {
     line-height: 1.6;
   }
 
-  .navigation-mob {
-    border-bottom: 1px solid #4455671c;
-    flex-direction: row;
-    justify-content: center;
-    padding: 25px 3%;
-    display: flex;
-  }
+
 
   .menu-button-2 {
     padding: 0;
@@ -17677,16 +17652,9 @@ figcaption {
     position: relative;
   }
 
-  .menu-mob-3 {
-    color: #fff;
-    background-color: #991f23;
-    border-radius: 100px;
-    font-size: 22px;
-  }
 
-  .menu-mob-3.is-open {
-    background-color: #000;
-  }
+
+
 
   .silver-bangles, .silver-bracelets, .silver-chain, .silver-coin, .silver-drops, .silver-locket, .silver-rings, .silver-studs, .diamond-bangles, .diamond-bracelets, .diamond-chain, .diamond-drops, .diamond-locket, .diamond-rings, .diamond-studs, .silver-bangles-copy, .platinum-bangles {
     width: 100%;
@@ -24229,3 +24197,4 @@ body {
 .product-header5_product-details .footer-social-block {
   display: none !important;
 }
+\n/* Hide mobile rate strip on desktop */\n.kj-mobile-rate-strip { display: none; }\n

@@ -1,5 +1,5 @@
 .site-header { position: relative; z-index: 20; }
-.nav-menu-button { cursor: pointer; }
+.mobile-menu-button { cursor: pointer; }
 
 @media (min-width: 1024px) {
   header.site-header .navigation-2 .platinumlink,
@@ -124,10 +124,10 @@ header .site-header .site-nav > .bko-wrap-111-2 > a,
 header .site-header .site-nav > .bko-wrap-111-2 > a *,
 header .site-header .site-nav > .bko-wrap-111-2 > .dropdown > .dropdown-toggle,
 header .site-header .site-nav > .bko-wrap-111-2 > .dropdown > .dropdown-toggle *,
-header .navigation-mob .mobile-nav > .bko-wrap-111-2 > a,
-header .navigation-mob .mobile-nav > .bko-wrap-111-2 > a *,
-header .navigation-mob .mobile-nav > .bko-wrap-111-2 > .dropdown > .dropdown-toggle,
-header .navigation-mob .mobile-nav > .bko-wrap-111-2 > .dropdown > .dropdown-toggle * {
+header .mobile-header .mobile-nav > .bko-wrap-111-2 > a,
+header .mobile-header .mobile-nav > .bko-wrap-111-2 > a *,
+header .mobile-header .mobile-nav > .bko-wrap-111-2 > .dropdown > .dropdown-toggle,
+header .mobile-header .mobile-nav > .bko-wrap-111-2 > .dropdown > .dropdown-toggle * {
   color: #fff !important;
 }
 
@@ -135,8 +135,8 @@ header .navigation-2 .nav-menu-3 > a,
 header .navigation-2 .nav-menu-3 > a *,
 header .site-header .site-nav > a,
 header .site-header .site-nav > a *,
-header .navigation-mob .mobile-nav > a,
-header .navigation-mob .mobile-nav > a * {
+header .mobile-header .mobile-nav > a,
+header .mobile-header .mobile-nav > a * {
   color: #fff !important;
 }
 
@@ -144,8 +144,8 @@ header .navigation-2 .nav-menu-3 > :not(.dropdown-list),
 header .navigation-2 .nav-menu-3 > :not(.dropdown-list) *,
 header .site-header .site-nav > :not(.dropdown-list),
 header .site-header .site-nav > :not(.dropdown-list) *,
-header .navigation-mob .mobile-nav > :not(.dropdown-list),
-header .navigation-mob .mobile-nav > :not(.dropdown-list) * {
+header .mobile-header .mobile-nav > :not(.dropdown-list),
+header .mobile-header .mobile-nav > :not(.dropdown-list) * {
   color: #fff !important;
 }
 
@@ -153,14 +153,14 @@ header .navigation-2 .nav-menu-3 .bko-dropdown-list,
 header .navigation-2 .nav-menu-3 .bko-dropdown-list *,
 header .site-header .site-nav .bko-dropdown-list,
 header .site-header .site-nav .bko-dropdown-list *,
-header .navigation-mob .mobile-nav .bko-dropdown-list,
-header .navigation-mob .mobile-nav .bko-dropdown-list * {
+header .mobile-header .mobile-nav .bko-dropdown-list,
+header .mobile-header .mobile-nav .bko-dropdown-list * {
   color: #4a3334 !important;
 }
 
 header .navigation-2 .nav-menu-3 .bko-dropdown-list .bko-text-11,
 header .site-header .site-nav .bko-dropdown-list .bko-text-11,
-header .navigation-mob .mobile-nav .bko-dropdown-list .bko-text-11 {
+header .mobile-header .mobile-nav .bko-dropdown-list .bko-text-11 {
   color: #210f10 !important;
 }
 
@@ -287,14 +287,14 @@ header .navigation-2 .nav-menu-3 .bko-dropdown-list,
 header .navigation-2 .nav-menu-3 .bko-dropdown-list *,
 header .site-header .site-nav .bko-dropdown-list,
 header .site-header .site-nav .bko-dropdown-list *,
-header .navigation-mob .mobile-nav .bko-dropdown-list,
-header .navigation-mob .mobile-nav .bko-dropdown-list *,
+header .mobile-header .mobile-nav .bko-dropdown-list,
+header .mobile-header .mobile-nav .bko-dropdown-list *,
 header .navigation-2 .nav-menu-3 .dropdown-list,
 header .navigation-2 .nav-menu-3 .dropdown-list *,
 header .site-header .site-nav .dropdown-list,
 header .site-header .site-nav .dropdown-list *,
-header .navigation-mob .mobile-nav .dropdown-list,
-header .navigation-mob .mobile-nav .dropdown-list * {
+header .mobile-header .mobile-nav .dropdown-list,
+header .mobile-header .mobile-nav .dropdown-list * {
   color: #231f20 !important;
 }
 
@@ -302,14 +302,14 @@ header .navigation-2 .nav-menu-3 .bko-dropdown-list a:hover,
 header .navigation-2 .nav-menu-3 .bko-dropdown-list a:hover *,
 header .site-header .site-nav .bko-dropdown-list a:hover,
 header .site-header .site-nav .bko-dropdown-list a:hover *,
-header .navigation-mob .mobile-nav .bko-dropdown-list a:hover,
-header .navigation-mob .mobile-nav .bko-dropdown-list a:hover *,
+header .mobile-header .mobile-nav .bko-dropdown-list a:hover,
+header .mobile-header .mobile-nav .bko-dropdown-list a:hover *,
 header .navigation-2 .nav-menu-3 .dropdown-list a:hover,
 header .navigation-2 .nav-menu-3 .dropdown-list a:hover *,
 header .site-header .site-nav .dropdown-list a:hover,
 header .site-header .site-nav .dropdown-list a:hover *,
-header .navigation-mob .mobile-nav .dropdown-list a:hover,
-header .navigation-mob .mobile-nav .dropdown-list a:hover * {
+header .mobile-header .mobile-nav .dropdown-list a:hover,
+header .mobile-header .mobile-nav .dropdown-list a:hover * {
   color: #991F23 !important;
 }
 
@@ -1054,7 +1054,7 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
 
 @media (max-width: 991px) {
   /* Prevent excessive top padding and improve spacing */
-  header .navigation-mob .mobile-nav.site-nav__panel {
+  header .mobile-header .mobile-nav.site-nav__panel {
     background: #fcfbfa !important;
     top: 90px !important; /* Perfect visual spacing, no excessive padding */
     padding: 16px 20px 24px !important;
@@ -1064,7 +1064,7 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   }
 
   /* Mobile menu item links: soft charcoal, deep maroon on hover/active, comfortable padding */
-  header .navigation-mob .mobile-nav.site-nav__panel a.kj-mobile-menu-link {
+  header .mobile-header .mobile-nav.site-nav__panel a.kj-mobile-menu-link {
     color: #2b2b2b !important;
     font-size: 14.5px !important; /* Reduced from legacy oversized font */
     font-weight: 500 !important;
@@ -1076,25 +1076,25 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
     text-decoration: none !important;
   }
 
-  header .navigation-mob .mobile-nav.site-nav__panel a.kj-mobile-menu-link:hover,
-  header .navigation-mob .mobile-nav.site-nav__panel a.kj-mobile-menu-link:active,
-  header .navigation-mob .mobile-nav.site-nav__panel a.kj-mobile-menu-link:focus {
+  header .mobile-header .mobile-nav.site-nav__panel a.kj-mobile-menu-link:hover,
+  header .mobile-header .mobile-nav.site-nav__panel a.kj-mobile-menu-link:active,
+  header .mobile-header .mobile-nav.site-nav__panel a.kj-mobile-menu-link:focus {
     color: #991f23 !important;
     padding-left: 6px !important;
     background: transparent !important;
   }
 
   /* Hamburger Menu Button: remains deep maroon #991f23 */
-  header .navigation-mob .menu-mob-3.nav-menu-button,
-  header .navigation-mob .menu-mob-3.nav-menu-button.is-open,
-  header .navigation-mob .menu-mob-3.nav-menu-button.is-open,
-  header .navigation-mob .menu-mob-3.nav-menu-button:focus,
-  header .navigation-mob .menu-mob-3.nav-menu-button:active,
-  header .menu-button-2.nav-menu-button,
-  header .menu-button-2.nav-menu-button.is-open,
-  header .menu-button-2.nav-menu-button.is-open,
-  header .menu-button-2.nav-menu-button:focus,
-  header .menu-button-2.nav-menu-button:active {
+  header .mobile-header .mobile-menu-toggle.mobile-menu-button,
+  header .mobile-header .mobile-menu-toggle.mobile-menu-button.is-open,
+  header .mobile-header .mobile-menu-toggle.mobile-menu-button.is-open,
+  header .mobile-header .mobile-menu-toggle.mobile-menu-button:focus,
+  header .mobile-header .mobile-menu-toggle.mobile-menu-button:active,
+  header .menu-button-2.mobile-menu-button,
+  header .menu-button-2.mobile-menu-button.is-open,
+  header .menu-button-2.mobile-menu-button.is-open,
+  header .menu-button-2.mobile-menu-button:focus,
+  header .menu-button-2.mobile-menu-button:active {
     background: #991f23 !important; /* Safe maroon background */
     background-color: #991f23 !important;
     border: 0 !important;
@@ -1103,19 +1103,19 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
   }
 
   /* Hamburger icon lines remain white inside the maroon button */
-  header .nav-menu-button .hamburger-icon,
-  header .nav-menu-button .hamburger-icon::before,
-  header .nav-menu-button .hamburger-icon::after,
-  header .nav-menu-button .menu-line,
-  header .nav-menu-button.is-open .menu-line,
-  header .nav-menu-button.is-open .menu-line,
-  header .nav-menu-button:focus .menu-line,
-  header .nav-menu-button:active .menu-line,
+  header .mobile-menu-button .mobile-menu-toggle__icon,
+  header .mobile-menu-button .mobile-menu-toggle__icon::before,
+  header .mobile-menu-button .mobile-menu-toggle__icon::after,
+  header .mobile-menu-button .menu-line,
+  header .mobile-menu-button.is-open .menu-line,
+  header .mobile-menu-button.is-open .menu-line,
+  header .mobile-menu-button:focus .menu-line,
+  header .mobile-menu-button:active .menu-line,
   header .menu-icon-2 .menu-line,
   header .menu-icon-2.is-open .menu-line,
-  header .menu-mob-3 .menu-line,
-  header .menu-mob-3.is-open .menu-line,
-  header .menu-mob-3.is-open .menu-line,
+  header .mobile-menu-toggle .menu-line,
+  header .mobile-menu-toggle.is-open .menu-line,
+  header .mobile-menu-toggle.is-open .menu-line,
   header .menu-button-2 .menu-line,
   header .menu-button-2.is-open .menu-line,
   header .menu-button-2.is-open .menu-line,
@@ -1127,8 +1127,8 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
 
 /* Final mobile menu polish and hamburger color lock. */
 @media (max-width: 991px) {
-  html body header.site-header .navigation-mob .mobile-nav.site-nav__panel,
-  html body header.site-header .navigation-mob .mobile-nav {
+  html body header.site-header .mobile-header .mobile-nav.site-nav__panel,
+  html body header.site-header .mobile-header .mobile-nav {
     background: #fff !important;
     color: #222 !important;
     display: block !important;
@@ -1143,10 +1143,10 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
     will-change: max-height, opacity, transform !important;
   }
 
-  html body header.site-header .navigation-mob .mobile-nav.site-nav__panel.is-open,
-  html body header.site-header .navigation-mob .mobile-nav.site-nav__panel.is-open,
-  html body header.site-header .navigation-mob .mobile-nav.is-open,
-  html body header.site-header .navigation-mob .mobile-nav.is-open {
+  html body header.site-header .mobile-header .mobile-nav.site-nav__panel.is-open,
+  html body header.site-header .mobile-header .mobile-nav.site-nav__panel.is-open,
+  html body header.site-header .mobile-header .mobile-nav.is-open,
+  html body header.site-header .mobile-header .mobile-nav.is-open {
     max-height: calc(100vh - 120px) !important;
     opacity: 1 !important;
     pointer-events: auto !important;
@@ -1155,8 +1155,8 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
     transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 220ms ease, transform 300ms ease, visibility 0s linear 0s !important;
   }
 
-  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link,
-  html body header.site-header .navigation-mob .mobile-nav a {
+  html body header.site-header .mobile-header .mobile-nav .kj-mobile-menu-link,
+  html body header.site-header .mobile-header .mobile-nav a {
     color: #222 !important;
     font-size: 16px !important;
     font-weight: 600 !important;
@@ -1167,31 +1167,31 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
     -webkit-tap-highlight-color: rgba(153, 31, 35, .12) !important;
   }
 
-  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:hover,
-  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:focus,
-  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:active,
-  html body header.site-header .navigation-mob .mobile-nav a:hover,
-  html body header.site-header .navigation-mob .mobile-nav a:focus,
-  html body header.site-header .navigation-mob .mobile-nav a:active {
+  html body header.site-header .mobile-header .mobile-nav .kj-mobile-menu-link:hover,
+  html body header.site-header .mobile-header .mobile-nav .kj-mobile-menu-link:focus,
+  html body header.site-header .mobile-header .mobile-nav .kj-mobile-menu-link:active,
+  html body header.site-header .mobile-header .mobile-nav a:hover,
+  html body header.site-header .mobile-header .mobile-nav a:focus,
+  html body header.site-header .mobile-header .mobile-nav a:active {
     color: #991f23 !important;
     padding-left: 6px !important;
     transform: translateX(2px) !important;
   }
 
-  html body header.site-header .nav-menu-button,
-  html body header.site-header .nav-menu-button:hover,
-  html body header.site-header .nav-menu-button:focus,
-  html body header.site-header .nav-menu-button:active,
-  html body header.site-header .nav-menu-button.is-open,
-  html body header.site-header .nav-menu-button.is-open,
-  html body header.site-header .nav-menu-button[aria-expanded="true"],
-  html body header.site-header .menu-mob-3,
-  html body header.site-header .menu-mob-3:hover,
-  html body header.site-header .menu-mob-3:focus,
-  html body header.site-header .menu-mob-3:active,
-  html body header.site-header .menu-mob-3.is-open,
-  html body header.site-header .menu-mob-3.is-open,
-  html body header.site-header .menu-mob-3[aria-expanded="true"],
+  html body header.site-header .mobile-menu-button,
+  html body header.site-header .mobile-menu-button:hover,
+  html body header.site-header .mobile-menu-button:focus,
+  html body header.site-header .mobile-menu-button:active,
+  html body header.site-header .mobile-menu-button.is-open,
+  html body header.site-header .mobile-menu-button.is-open,
+  html body header.site-header .mobile-menu-button[aria-expanded="true"],
+  html body header.site-header .mobile-menu-toggle,
+  html body header.site-header .mobile-menu-toggle:hover,
+  html body header.site-header .mobile-menu-toggle:focus,
+  html body header.site-header .mobile-menu-toggle:active,
+  html body header.site-header .mobile-menu-toggle.is-open,
+  html body header.site-header .mobile-menu-toggle.is-open,
+  html body header.site-header .mobile-menu-toggle[aria-expanded="true"],
   html body header.site-header .menu-mob,
   html body header.site-header .menu-mob:hover,
   html body header.site-header .menu-mob:focus,
@@ -1215,29 +1215,29 @@ header .navigation-mob .mobile-nav .dropdown-list a:hover * {
     -webkit-tap-highlight-color: rgba(153, 31, 35, .14) !important;
   }
 
-  html body header.site-header .hamburger-icon,
-  html body header.site-header .hamburger-icon::before,
-  html body header.site-header .hamburger-icon::after,
+  html body header.site-header .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-toggle__icon::after,
   html body header.site-header .menu-line,
   html body header.site-header .menu-icon-2 .menu-line,
-  html body header.site-header .nav-menu-button:hover .hamburger-icon,
-  html body header.site-header .nav-menu-button:hover .hamburger-icon::before,
-  html body header.site-header .nav-menu-button:hover .hamburger-icon::after,
-  html body header.site-header .nav-menu-button:focus .hamburger-icon,
-  html body header.site-header .nav-menu-button:focus .hamburger-icon::before,
-  html body header.site-header .nav-menu-button:focus .hamburger-icon::after,
-  html body header.site-header .nav-menu-button:active .hamburger-icon,
-  html body header.site-header .nav-menu-button:active .hamburger-icon::before,
-  html body header.site-header .nav-menu-button:active .hamburger-icon::after,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
-  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon,
-  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
-  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
+  html body header.site-header .mobile-menu-button:hover .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-button:hover .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-button:hover .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-menu-button:focus .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-button:focus .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-button:focus .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-menu-button:active .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-button:active .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-button:active .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-menu-button.is-open .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-menu-button.is-open .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-menu-button[aria-expanded="true"] .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-button[aria-expanded="true"] .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-button[aria-expanded="true"] .mobile-menu-toggle__icon::after,
   html body header.site-header .menu-button-2:hover .menu-line,
   html body header.site-header .menu-button-2:focus .menu-line,
   html body header.site-header .menu-button-2:active .menu-line,
@@ -1578,15 +1578,15 @@ header .site-header .bko-grid-1-copy:hover {
    TASK 3: HAMBURGER & MOBILE MENU EXTRA SPECIFIC OVERRIDES
    ========================================================================== */
 @media (max-width: 991px) {
-  header .menu-mob-3,
-  header .menu-mob-3.is-open,
-  header .menu-mob-3.is-open,
+  header .mobile-menu-toggle,
+  header .mobile-menu-toggle.is-open,
+  header .mobile-menu-toggle.is-open,
   header .menu-mob,
   header .menu-mob.is-open,
   header .menu-mob.is-open,
-  header .nav-menu-button,
-  header .nav-menu-button.is-open,
-  header .nav-menu-button.is-open,
+  header .mobile-menu-button,
+  header .mobile-menu-button.is-open,
+  header .mobile-menu-button.is-open,
   header .menu-button-2,
   header .menu-button-2.is-open,
   header .menu-button-2.is-open {
@@ -1600,20 +1600,20 @@ header .site-header .bko-grid-1-copy:hover {
 
 /* Last mobile hamburger guard: never let touched/open states turn black. */
 @media (max-width: 991px) {
-  html body header.site-header .nav-menu-button,
-  html body header.site-header .nav-menu-button:hover,
-  html body header.site-header .nav-menu-button:focus,
-  html body header.site-header .nav-menu-button:active,
-  html body header.site-header .nav-menu-button.is-open,
-  html body header.site-header .nav-menu-button.is-open,
-  html body header.site-header .nav-menu-button[aria-expanded="true"],
-  html body header.site-header .menu-mob-3,
-  html body header.site-header .menu-mob-3:hover,
-  html body header.site-header .menu-mob-3:focus,
-  html body header.site-header .menu-mob-3:active,
-  html body header.site-header .menu-mob-3.is-open,
-  html body header.site-header .menu-mob-3.is-open,
-  html body header.site-header .menu-mob-3[aria-expanded="true"],
+  html body header.site-header .mobile-menu-button,
+  html body header.site-header .mobile-menu-button:hover,
+  html body header.site-header .mobile-menu-button:focus,
+  html body header.site-header .mobile-menu-button:active,
+  html body header.site-header .mobile-menu-button.is-open,
+  html body header.site-header .mobile-menu-button.is-open,
+  html body header.site-header .mobile-menu-button[aria-expanded="true"],
+  html body header.site-header .mobile-menu-toggle,
+  html body header.site-header .mobile-menu-toggle:hover,
+  html body header.site-header .mobile-menu-toggle:focus,
+  html body header.site-header .mobile-menu-toggle:active,
+  html body header.site-header .mobile-menu-toggle.is-open,
+  html body header.site-header .mobile-menu-toggle.is-open,
+  html body header.site-header .mobile-menu-toggle[aria-expanded="true"],
   html body header.site-header .menu-mob,
   html body header.site-header .menu-mob:hover,
   html body header.site-header .menu-mob:focus,
@@ -1635,29 +1635,29 @@ header .site-header .bko-grid-1-copy:hover {
     box-shadow: none !important;
   }
 
-  html body header.site-header .hamburger-icon,
-  html body header.site-header .hamburger-icon::before,
-  html body header.site-header .hamburger-icon::after,
+  html body header.site-header .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-toggle__icon::after,
   html body header.site-header .menu-line,
   html body header.site-header .menu-icon-2 .menu-line,
-  html body header.site-header .nav-menu-button:hover .hamburger-icon,
-  html body header.site-header .nav-menu-button:hover .hamburger-icon::before,
-  html body header.site-header .nav-menu-button:hover .hamburger-icon::after,
-  html body header.site-header .nav-menu-button:focus .hamburger-icon,
-  html body header.site-header .nav-menu-button:focus .hamburger-icon::before,
-  html body header.site-header .nav-menu-button:focus .hamburger-icon::after,
-  html body header.site-header .nav-menu-button:active .hamburger-icon,
-  html body header.site-header .nav-menu-button:active .hamburger-icon::before,
-  html body header.site-header .nav-menu-button:active .hamburger-icon::after,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
-  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon,
-  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
-  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
+  html body header.site-header .mobile-menu-button:hover .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-button:hover .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-button:hover .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-menu-button:focus .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-button:focus .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-button:focus .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-menu-button:active .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-button:active .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-button:active .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-menu-button.is-open .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-menu-button.is-open .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-menu-button[aria-expanded="true"] .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-menu-button[aria-expanded="true"] .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-menu-button[aria-expanded="true"] .mobile-menu-toggle__icon::after,
   html body header.site-header .menu-button-2:hover .menu-line,
   html body header.site-header .menu-button-2:focus .menu-line,
   html body header.site-header .menu-button-2:active .menu-line,
@@ -1786,7 +1786,7 @@ header.site-header .rate-dropdown-container[hidden] {
 
 header.site-header .site-header .rate-toggle,
 header.site-header .navigation-2 .rate-toggle,
-header.site-header .navigation-mob .rate-toggle {
+header.site-header .mobile-header .rate-toggle {
   align-items: center !important;
   appearance: none !important;
   background: rgba(255, 244, 204, 0.06) !important;
@@ -1803,7 +1803,7 @@ header.site-header .navigation-mob .rate-toggle {
 
 header.site-header .site-header .rate-toggle .rate-coin,
 header.site-header .navigation-2 .rate-toggle .rate-coin,
-header.site-header .navigation-mob .rate-toggle .rate-coin {
+header.site-header .mobile-header .rate-toggle .rate-coin {
   display: block !important;
   flex: 0 0 24px !important;
   height: 24px !important;
@@ -1813,7 +1813,7 @@ header.site-header .navigation-mob .rate-toggle .rate-coin {
 
 header.site-header .site-header .rate-toggle span,
 header.site-header .navigation-2 .rate-toggle span,
-header.site-header .navigation-mob .rate-toggle span {
+header.site-header .mobile-header .rate-toggle span {
   align-items: center !important;
   color: #fff8dc !important;
   display: inline-flex !important;
@@ -1829,7 +1829,7 @@ header.site-header .navigation-mob .rate-toggle span {
 
 header.site-header .site-header .rate-chevron,
 header.site-header .navigation-2 .rate-chevron,
-header.site-header .navigation-mob .rate-chevron {
+header.site-header .mobile-header .rate-chevron {
   align-items: center !important;
   display: inline-flex !important;
   flex: 0 0 12px !important;
@@ -1843,7 +1843,7 @@ header.site-header .navigation-mob .rate-chevron {
 
 header.site-header .site-header .rate-chevron::before,
 header.site-header .navigation-2 .rate-chevron::before,
-header.site-header .navigation-mob .rate-chevron::before {
+header.site-header .mobile-header .rate-chevron::before {
   border-bottom: 2px solid currentColor !important;
   border-right: 2px solid currentColor !important;
   content: "" !important;
@@ -1865,7 +1865,7 @@ header.site-header .rate-dropdown.is-open .rate-chevron::before {
 
 header.site-header .site-header .rate-menu,
 header.site-header .navigation-2 .rate-menu,
-header.site-header .navigation-mob .rate-menu {
+header.site-header .mobile-header .rate-menu {
   background: #fffaf0 !important;
   border: 1px solid rgba(153, 31, 35, 0.18) !important;
   border-radius: 8px !important;
@@ -1905,11 +1905,11 @@ header.site-header .rate-menu .rate-row span {
 }
 
 @media (max-width: 991px) {
-  header.site-header .navigation-mob .rate-toggle {
+  header.site-header .mobile-header .rate-toggle {
     max-width: 100% !important;
   }
 
-  header.site-header .navigation-mob .rate-toggle span {
+  header.site-header .mobile-header .rate-toggle span {
     font-size: 15px !important;
     letter-spacing: -0.2px !important;
   }

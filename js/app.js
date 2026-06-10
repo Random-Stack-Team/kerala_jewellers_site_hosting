@@ -133,7 +133,7 @@ document.documentElement.classList.add('js-ready');
     style.textContent = `
       header.site-header .site-header .rate-toggle,
       header.site-header .navigation-2 .rate-toggle,
-      header.site-header .navigation-mob .rate-toggle {
+      header.site-header .mobile-header .rate-toggle {
         align-items: center !important;
         appearance: none !important;
         background: rgba(255, 244, 204, 0.08) !important;
@@ -150,7 +150,7 @@ document.documentElement.classList.add('js-ready');
 
       header.site-header .site-header .rate-toggle .rate-coin,
       header.site-header .navigation-2 .rate-toggle .rate-coin,
-      header.site-header .navigation-mob .rate-toggle .rate-coin {
+      header.site-header .mobile-header .rate-toggle .rate-coin {
         display: block !important;
         flex: 0 0 24px !important;
         height: 24px !important;
@@ -160,7 +160,7 @@ document.documentElement.classList.add('js-ready');
 
       header.site-header .site-header .rate-toggle > span:not(.rate-chevron),
       header.site-header .navigation-2 .rate-toggle > span:not(.rate-chevron),
-      header.site-header .navigation-mob .rate-toggle > span:not(.rate-chevron) {
+      header.site-header .mobile-header .rate-toggle > span:not(.rate-chevron) {
         align-items: center !important;
         color: #fff8dc !important;
         display: inline-flex !important;
@@ -252,55 +252,55 @@ document.documentElement.classList.add('js-ready');
       button.style.setProperty('background-color', '#991f23', 'important');
       button.style.setProperty('color', iconColor, 'important');
       button.style.setProperty('border-color', 'rgba(153, 31, 35, .38)', 'important');
-      button.querySelectorAll('.hamburger-icon, .menu-line').forEach((line) => {
+      button.querySelectorAll('.mobile-menu-toggle__icon, .menu-line').forEach((line) => {
         line.style.setProperty('background', iconColor, 'important');
         line.style.setProperty('background-color', iconColor, 'important');
         line.style.setProperty('color', iconColor, 'important');
       });
     };
 
-    const toggleMenuButton = (button) => {
-      const header = button.closest('header') || document;
-      const willOpen = !button.classList.contains('is-open');
-      header.querySelectorAll('.site-nav__panel').forEach((menu) => {
-        menu.classList.toggle('is-open', willOpen);
-      });
-      button.classList.toggle('is-open', willOpen);
-      button.setAttribute('aria-expanded', String(willOpen));
-      lockMenuButtonColor(button);
-    };
 
-    document.querySelectorAll('.nav-menu-button, .menu-button-2, .menu-mob, .menu-mob-3').forEach((button) => {
-      if (button.dataset.kjBound) return;
-      button.dataset.kjBound = 'true';
-      button.setAttribute('role', 'button');
-      button.setAttribute('tabindex', button.getAttribute('tabindex') || '0');
-      button.setAttribute('aria-expanded', 'false');
-      lockMenuButtonColor(button);
 
-      // Intercept clicks in capture-phase and stop immediate propagation to prevent duplicate inline script toggles
-      button.addEventListener('click', (event) => {
-        event.preventDefault();
-        event.stopImmediatePropagation();
-        handledMenuClicks.add(event);
-        toggleMenuButton(button);
-      }, true);
 
-      button.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          event.preventDefault();
-          toggleMenuButton(button);
-        }
-      });
-    });
 
-    document.addEventListener('click', (event) => {
-      if (handledMenuClicks.has(event)) return;
-      const button = event.target.closest('.nav-menu-button, .menu-button-2, .menu-mob, .menu-mob-3');
-      if (!button) return;
-      event.preventDefault();
-      toggleMenuButton(button);
-    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     document.addEventListener('click', (event) => {
       const toggle = event.target.closest('.dropdown-toggle, .rate-toggle, .rate-dropdown-trigger');
@@ -1077,3 +1077,70 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("click", function (event) {
+  const button = event.target.closest(".mobile-menu-toggle.mobile-menu-button");
+  if (!button) return;
+
+  event.preventDefault();
+  event.stopImmediatePropagation();
+
+  const header = button.closest(".mobile-header");
+  const panel = header
+    ? header.querySelector(".mobile-nav.site-nav__panel")
+    : document.querySelector(".mobile-nav.site-nav__panel");
+
+  if (!panel) return;
+
+  if (panel.classList.contains("is-open")) {
+    panel.classList.remove("is-open");
+    button.classList.remove("is-open");
+    button.setAttribute("aria-expanded", "false");
+  } else {
+    panel.classList.add("is-open");
+    button.classList.add("is-open");
+    button.setAttribute("aria-expanded", "true");
+  }
+}, true);

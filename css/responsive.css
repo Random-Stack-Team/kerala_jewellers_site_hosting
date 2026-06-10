@@ -1,16 +1,9 @@
 @media (max-width: 991px) {
-  .site-nav__panel { display: none; }
-  .site-nav__panel.is-open { display: block; }
 
-  header .navigation-mob .mobile-nav.site-nav__panel {
-    display: block !important;
-    visibility: hidden !important;
-  }
 
-  header .navigation-mob .mobile-nav.site-nav__panel.is-open,
-  header .navigation-mob .mobile-nav.site-nav__panel.is-open {
-    visibility: visible !important;
-  }
+
+  header .mobile-header .mobile-nav.site-nav__panel.is-open,
+
 }
 
 @media (max-width: 991px) {
@@ -38,44 +31,15 @@
     overflow-x: hidden;
   }
 
-  header .navigation-mob.site-nav {
-    align-items: center !important;
-    background-color: #991f23 !important;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    min-height: 112px !important;
-    padding: 24px 28px !important;
-    width: 100% !important;
-  }
 
-  header .navigation-mob .navigation-container-mob {
-    align-items: center !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    margin: 0 auto !important;
-    max-width: 820px !important;
-    width: 100% !important;
-  }
 
-  header .navigation-mob .brand {
-    align-items: center !important;
-    display: flex !important;
-  }
 
-  header .navigation-mob .brand img {
-    display: block !important;
-    height: auto !important;
-    max-width: 210px !important;
-    width: min(210px, 48vw) !important;
-  }
 
-  header .navigation-mob .site-header__right {
-    align-items: center !important;
-    display: flex !important;
-    justify-content: flex-end !important;
-    margin-left: 24px !important;
-  }
+
+
+
+
+
 
   header .navigation-2 {
     display: block !important;
@@ -95,144 +59,6 @@
   header .navigation-2 .site-header__actions {
     display: flex !important;
     justify-content: flex-end !important;
-  }
-
-  header .nav-menu-button {
-    align-items: center !important;
-    background-color: #991f23 !important;
-    border: 1px solid rgba(255, 255, 255, .35) !important;
-    border-radius: 999px !important;
-    color: #fff !important;
-    display: flex !important;
-    height: 44px !important;
-    justify-content: center !important;
-    width: 44px !important;
-  }
-
-  header .navigation-mob .menu-mob-3.nav-menu-button {
-    flex: 0 0 44px !important;
-    margin-right: 0 !important;
-  }
-
-  header .nav-menu-button .hamburger-icon,
-  header .nav-menu-button .hamburger-icon::before,
-  header .nav-menu-button .hamburger-icon::after {
-    background: #ffffff !important;
-    content: "" !important;
-    display: block !important;
-    height: 2px !important;
-    position: relative !important;
-    width: 20px !important;
-  }
-
-  header .nav-menu-button .hamburger-icon::before {
-    position: absolute !important;
-    top: -6px !important;
-  }
-
-  header .nav-menu-button .hamburger-icon::after {
-    position: absolute !important;
-    top: 6px !important;
-  }
-
-  /* Mobile reference hamburger icon styling */
-  header .nav-menu-button .hamburger-icon,
-  header .nav-menu-button .hamburger-icon::before,
-  header .nav-menu-button .hamburger-icon::after {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
-  }
-
-  header .navigation-2 .nav-menu-3.site-nav__panel {
-    align-items: stretch !important;
-    background: #991f23 !important;
-    box-shadow: 0 18px 32px rgba(0, 0, 0, .18) !important;
-    display: none !important;
-    flex-direction: column !important;
-    gap: 0 !important;
-    left: 0 !important;
-    max-height: calc(100vh - 76px) !important;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    padding: 12px 18px 18px !important;
-    position: absolute !important;
-    right: 0 !important;
-    top: 100% !important;
-    width: 100vw !important;
-    z-index: 10001 !important;
-  }
-
-  header .navigation-2 .nav-menu-3.site-nav__panel.is-open,
-  header .site-header .site-nav.site-nav__panel.is-open,
-  header .navigation-mob .mobile-nav.site-nav__panel.is-open,
-  header .site-nav__panel.is-open {
-    display: flex !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    transform: none !important;
-    visibility: visible !important;
-  }
-
-  header .navigation-2 .nav-menu-3.site-nav__panel > *,
-  header .site-header .site-nav.site-nav__panel > *,
-  header .navigation-mob .mobile-nav.site-nav__panel > * {
-    width: 100% !important;
-  }
-
-  header .navigation-mob .mobile-nav,
-  header .navigation-2 .nav-menu-3.site-nav__panel,
-  header .site-header .site-nav.site-nav__panel,
-
-  header .navigation-mob .mobile-nav > .bko-wrap-111-2,
-  header .navigation-2 .nav-menu-3.site-nav__panel > .bko-wrap-111-2,
-  header .site-header .site-nav.site-nav__panel > .bko-wrap-111-2 {
-    border-bottom: 1px solid rgba(255, 255, 255, .16) !important;
-    margin: 0 !important;
-    padding: 8px 0 !important;
-  }
-
-  header .navigation-mob .bko-dropdown-list,
-  header .navigation-2 .bko-dropdown-list,
-  header .site-header .bko-dropdown-list {
-    background: #fff !important;
-    border-radius: 6px !important;
-    margin-top: 10px !important;
-    padding: 14px !important;
-    width: 100% !important;
-  }
-
-  header .navigation-mob .bko-grid-1-3-1,
-  header .navigation-2 .bko-grid-1-3-1,
-  header .site-header .bko-grid-1-3-1 {
-    display: grid !important;
-    gap: 14px !important;
-    grid-template-columns: 1fr !important;
-  }
-
-  header .navigation-mob [class*="bko-text-12"],
-  header .navigation-2 [class*="bko-text-12"],
-  header .site-header [class*="bko-text-12"],
-  header .navigation-mob .category-menu-link,
-  header .navigation-2 .category-menu-link,
-  header .site-header .category-menu-link {
-    display: block !important;
-    margin: 0 0 4px !important;
-    padding: 4px 0 !important;
-    position: static !important;
-    transform: none !important;
-    line-height: 1.4 !important;
-    font-size: 14px !important;
-  }
-
-  .swiper-component,
-  .slider-wrapper,
-  .slide-bg,
-  .product-item-8,
-  .div-container-6,
-  .div-1-2,
-  .div-2,
-  .div-3-2 {
-    max-width: 100% !important;
   }
 
   .slider-wrapper,
@@ -271,73 +97,6 @@
   body {
     max-width: 100%;
     overflow-x: hidden;
-  }
-
-  header .navigation-mob.site-nav {
-    align-items: center !important;
-    height: 111px !important;
-    min-height: 111px !important;
-    padding: 25px 10px 25px 28px !important;
-  }
-
-  header .navigation-mob .navigation-container-mob {
-    align-items: center !important;
-    max-width: none !important;
-    min-height: 61px !important;
-    width: 100% !important;
-  }
-
-  header .navigation-mob .brand {
-    flex: 0 1 auto !important;
-    max-width: calc(100vw - 124px) !important;
-  }
-
-  header .navigation-mob .brand img {
-    height: auto !important;
-    max-height: 61px !important;
-    max-width: calc(100vw - 124px) !important;
-    object-fit: contain !important;
-    width: 170px !important;
-  }
-
-  header .navigation-mob .site-header__right {
-    flex: 0 0 auto !important;
-    margin-left: auto !important;
-  }
-
-  header .navigation-mob .menu-mob-3.nav-menu-button {
-    border-radius: 100px !important;
-    flex: 0 0 58px !important;
-    height: 58px !important;
-    width: 58px !important;
-  }
-
-  header .nav-menu-button .hamburger-icon,
-  header .nav-menu-button .hamburger-icon::before,
-  header .nav-menu-button .hamburger-icon::after {
-    width: 22px !important;
-  }
-
-  header .nav-menu-button .hamburger-icon::before {
-    top: -7px !important;
-  }
-
-  header .nav-menu-button .hamburger-icon::after {
-    top: 7px !important;
-  }
-
-  header .navigation-mob .mobile-nav.site-nav__panel {
-    top: 111px !important;
-  }
-
-  .banner-2 {
-    border-radius: 15px !important;
-    height: 500px !important;
-    margin: 20px auto 0 !important;
-    min-height: 500px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    width: calc(100vw - 20px) !important;
   }
 
   .banner-2 img,
@@ -380,18 +139,12 @@
 
 }
 
-@media (max-width: 768px) {
-}
+
 
 @media (max-width: 479px) {
-  header .navigation-mob.site-nav {
-    padding-left: 28px !important;
-    padding-right: 10px !important;
-  }
 
-  header .navigation-mob .brand img {
-    width: 170px !important;
-  }
+
+
 
   .team5_list {
     grid-column-gap: 0 !important;
@@ -431,15 +184,7 @@
   }
 }
 
-@media (max-width: 360px) {
-  header .navigation-mob.site-nav {
-    padding-left: 20px !important;
-  }
 
-  header .navigation-mob .brand img {
-    width: 158px !important;
-  }
-}
 
 /* Final phone category strip correction after legacy layout's nested container offsets. */
 @media (max-width: 479px) {
@@ -455,35 +200,13 @@
 
 /* Keep the mobile drawer anchored to the viewport instead of the menu button container. */
 @media (max-width: 991px) {
-  header .navigation-mob .mobile-nav.site-nav__panel,
-  header .navigation-mob .mobile-nav {
-    background: #991f23 !important;
-    box-shadow: 0 18px 32px rgba(0, 0, 0, .18) !important;
-    left: 0 !important;
-    max-height: calc(100vh - 111px) !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    padding: 12px 18px 18px !important;
-    position: fixed !important;
-    right: 0 !important;
-    top: 111px !important;
-    transform: none !important;
-    width: 100vw !important;
-    z-index: 10001 !important;
-  }
+  header .mobile-header .mobile-nav.site-nav__panel,
+
 }
 
 /* Live-style mobile rate strip and default compact mobile nav restore. */
-.kj-mobile-rate-strip {
-  display: none;
-}
 
-@media (min-width: 992px) {
-  .kj-mobile-rate-strip {
-    display: none !important;
-  }
-}
+
 
 @media (max-width: 991px) {
   header.site-header .page-wrapper-6,
@@ -494,85 +217,24 @@
     min-height: 0 !important;
   }
 
-  .kj-mobile-rate-strip {
-    align-items: center !important;
-    background: #90030a !important;
-    color: #fff !important;
-    display: flex !important;
-    height: 60px !important;
-    overflow: hidden !important;
-    position: relative !important;
-    width: 100% !important;
-  }
 
-  .kj-mobile-rate-strip__track {
-    align-items: center !important;
-    animation: slide 35s infinite linear !important;
-    display: flex !important;
-    flex: 0 0 auto !important;
-    gap: 0 !important;
-    min-width: max-content !important;
-    white-space: nowrap !important;
-  }
 
-  .kj-mobile-rate-strip__track span {
-    border-right: 2px solid rgba(255, 255, 255, .9) !important;
-    color: #fff !important;
-    display: block !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    line-height: 28px !important;
-    padding: 0 10px !important;
-    white-space: nowrap !important;
-  }
+  header .mobile-header .mobile-nav.site-nav__panel,
 
-  header .navigation-mob.site-nav {
-    position: relative !important;
-  }
 
-  header .navigation-mob .mobile-nav.site-nav__panel,
-  header .navigation-mob .mobile-nav {
-    background: #fff !important;
-    box-shadow: 0 18px 32px rgba(0, 0, 0, .14) !important;
-    color: #231f20 !important;
-    left: 0 !important;
-    max-height: calc(100vh - 171px) !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    padding: 15px 18px 18px !important;
-    position: absolute !important;
-    right: 0 !important;
-    top: 100% !important;
-    transform: none !important;
-    width: 100vw !important;
-    z-index: 10001 !important;
-  }
+  header .mobile-header .mobile-nav > .rate-dropdown,
 
-  header .navigation-mob .mobile-nav > .rate-dropdown,
-  header .navigation-mob .mobile-nav .rate-dropdown {
-    display: none !important;
-  }
 
-  header .navigation-mob .mobile-nav > .bko-wrap-111-2,
-  header .navigation-mob .mobile-nav > .bko-wrap-111-2 *,
-  header .navigation-mob .mobile-nav > .bko-wrap-111-2 > a,
-  header .navigation-mob .mobile-nav > a,
-  header .navigation-mob .mobile-nav > a * {
-    color: #231f20 !important;
-  }
+  header .mobile-header .mobile-nav > .bko-wrap-111-2,
+  header .mobile-header .mobile-nav > .bko-wrap-111-2 *,
+  header .mobile-header .mobile-nav > .bko-wrap-111-2 > a,
+  header .mobile-header .mobile-nav > a,
 
-  header .navigation-mob .mobile-nav > .bko-wrap-111-2 {
-    border-bottom: 1px solid rgba(153, 31, 35, .14) !important;
-    padding: 10px 0 !important;
-  }
 
-  header .navigation-mob .mobile-nav .bko-dropdown-list,
-  header .navigation-mob .mobile-nav .dropdown-list {
-    background: #fff !important;
-    box-shadow: none !important;
-    margin-top: 8px !important;
-  }
+
+
+  header .mobile-header .mobile-nav .bko-dropdown-list,
+
 }
 
 /* Match the live mobile navbar: red runner, white header, black menu button, simple nav list. */
@@ -587,279 +249,91 @@
     background-color: transparent !important;
   }
 
-  .kj-mobile-rate-strip {
-    background: #b00008 !important;
-    height: 75px !important;
-  }
 
-  .kj-mobile-rate-strip__track span {
-    border-right: 2px solid #fff !important;
-    font-family: Mulish, Arial, sans-serif !important;
-    font-size: 17px !important;
-    font-style: italic !important;
-    font-weight: 600 !important;
-    line-height: 30px !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
-  }
 
-  header .navigation-mob.site-nav {
-    background: #fff !important;
-    background-color: #fff !important;
-    border-bottom: 0 !important;
-    height: 180px !important;
-    min-height: 180px !important;
-    padding: 34px 16px 34px 16px !important;
-  }
 
-  header .navigation-mob .navigation-container-mob {
-    align-items: flex-start !important;
-    min-height: 112px !important;
-  }
 
-  header .navigation-mob .brand,
-  header .navigation-mob .brand img {
-    max-width: calc(100vw - 130px) !important;
-  }
+  header .mobile-header .brand,
 
-  header .navigation-mob .brand img {
-    width: 210px !important;
-    max-height: none !important;
-  }
 
-  header .navigation-mob .menu-mob-3.nav-menu-button {
-    background: #000 !important;
-    border: 0 !important;
-    border-radius: 50% !important;
-    box-shadow: none !important;
-    color: #fff !important;
-    flex: 0 0 72px !important;
-    height: 72px !important;
-    margin-top: 0 !important;
-    width: 72px !important;
-  }
 
-  header .nav-menu-button .hamburger-icon,
-  header .nav-menu-button .hamburger-icon::before,
-  header .nav-menu-button .hamburger-icon::after {
-    background: #fff !important;
-    height: 3px !important;
-    width: 22px !important;
-  }
 
-  header .nav-menu-button .hamburger-icon::before {
-    top: -8px !important;
-  }
 
-  header .nav-menu-button .hamburger-icon::after {
-    top: 8px !important;
-  }
 
-  header .navigation-mob .mobile-nav.site-nav__panel,
-  header .navigation-mob .mobile-nav {
-    background: #fff !important;
-    box-shadow: none !important;
-    color: #000 !important;
-    display: none !important;
-    flex-direction: column !important;
-    gap: 0 !important;
-    left: 0 !important;
-    max-height: none !important;
-    overflow: visible !important;
-    padding: 0 38px 28px !important;
-    position: absolute !important;
-    right: 0 !important;
-    top: 100% !important;
-    width: 100vw !important;
-    z-index: 10001 !important;
-  }
+  header .mobile-menu-button .mobile-menu-toggle__icon,
+  header .mobile-menu-button .mobile-menu-toggle__icon::before,
 
-  header .navigation-mob .mobile-nav.site-nav__panel.is-open,
-  header .navigation-mob .mobile-nav.is-open {
-    display: flex !important;
-  }
 
-  header .navigation-mob .mobile-nav .rate-dropdown,
-  header .navigation-mob .mobile-nav .bko-dropdown-list,
-  header .navigation-mob .mobile-nav .dropdown-list,
-  header .navigation-mob .mobile-nav .slider-2,
-  header .navigation-mob .mobile-nav .slider-21,
-  header .navigation-mob .mobile-nav [class*="slider-"] {
-    display: none !important;
-  }
 
-  header .navigation-mob .mobile-nav > .bko-wrap-111-2 {
-    border: 0 !important;
-    display: block !important;
-    margin: 0 !important;
-    padding: 9px 0 !important;
-    width: 100% !important;
-  }
 
-  header .navigation-mob .mobile-nav > .bko-wrap-111-2,
-  header .navigation-mob .mobile-nav > .bko-wrap-111-2 *,
-  header .navigation-mob .mobile-nav > .bko-wrap-111-2 a,
-  header .navigation-mob .mobile-nav .bko-dropdown-toggle-3,
-  header .navigation-mob .mobile-nav .bko-dropdown-toggle-3 * {
-    color: #000 !important;
-    font-family: Mulish, Arial, sans-serif !important;
-    font-size: 25px !important;
-    font-weight: 800 !important;
-    line-height: 1.2 !important;
-    text-decoration: none !important;
-  }
 
-  header .navigation-mob .mobile-nav .bko-dropdown-0,
-  header .navigation-mob .mobile-nav .bko-dropdown-toggle-3,
-  header .navigation-mob .mobile-nav .div2,
-  header .navigation-mob .mobile-nav a {
-    display: block !important;
-    padding: 0 !important;
-  }
 
-  header .navigation-mob .mobile-nav .bko-dropdown-toggle-3 {
-    height: auto !important;
-  }
+  header .mobile-header .mobile-nav.site-nav__panel,
+
+
+  header .mobile-header .mobile-nav.site-nav__panel.is-open,
+
+
+  header .mobile-header .mobile-nav .rate-dropdown,
+  header .mobile-header .mobile-nav .bko-dropdown-list,
+  header .mobile-header .mobile-nav .dropdown-list,
+  header .mobile-header .mobile-nav .slider-2,
+  header .mobile-header .mobile-nav .slider-21,
+
+
+
+
+  header .mobile-header .mobile-nav > .bko-wrap-111-2,
+  header .mobile-header .mobile-nav > .bko-wrap-111-2 *,
+  header .mobile-header .mobile-nav > .bko-wrap-111-2 a,
+  header .mobile-header .mobile-nav .bko-dropdown-toggle-3,
+
+
+  header .mobile-header .mobile-nav .bko-dropdown-0,
+  header .mobile-header .mobile-nav .bko-dropdown-toggle-3,
+  header .mobile-header .mobile-nav .div2,
+
+
+
 }
 
 @media (max-width: 360px) {
-  header .navigation-mob.site-nav {
-    height: 165px !important;
-    min-height: 165px !important;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
-  }
 
-  header .navigation-mob .brand img {
-    width: 185px !important;
-  }
 
-  header .navigation-mob .menu-mob-3.nav-menu-button {
-    flex-basis: 64px !important;
-    height: 64px !important;
-    width: 64px !important;
-  }
 
-  header .navigation-mob .mobile-nav.site-nav__panel,
-  header .navigation-mob .mobile-nav {
-    padding-left: 34px !important;
-  }
+
+
+
+  header .mobile-header .mobile-nav.site-nav__panel,
+
 }
 
 /* Simple live-site mobile menu content. */
-@media (max-width: 991px) {
-  header .navigation-mob .mobile-nav .kj-mobile-menu-link {
-    color: #000 !important;
-    display: block !important;
-    font-family: Mulish, Arial, sans-serif !important;
-    font-size: 25px !important;
-    font-weight: 800 !important;
-    line-height: 1.2 !important;
-    padding: 9px 0 !important;
-    text-decoration: none !important;
-  }
 
-  header .navigation-mob .mobile-nav .kj-mobile-menu-image {
-    border-radius: 0 0 14px 14px !important;
-    display: block !important;
-    height: 132px !important;
-    margin-top: 26px !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    width: 100% !important;
-  }
-}
 
 /* Final measured mobile/tablet header alignment against live reference. */
 @media (max-width: 991px) {
-  .kj-mobile-rate-strip {
-    background: #90030a !important;
-    height: 60px !important;
-  }
 
-  .kj-mobile-rate-strip__track span {
-    font-size: 14px !important;
-    font-style: normal !important;
-    font-weight: 400 !important;
-    line-height: 28px !important;
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-  }
 
-  header .navigation-mob.site-nav {
-    background: #fff !important;
-    background-color: #fff !important;
-    height: 111px !important;
-    min-height: 111px !important;
-    padding: 25px 3% !important;
-  }
 
-  header .navigation-mob .navigation-container-mob {
-    align-items: center !important;
-    min-height: 60px !important;
-    width: 100% !important;
-  }
 
-  header .navigation-mob .brand,
-  header .navigation-mob .brand img {
-    max-width: 170px !important;
-  }
 
-  header .navigation-mob .brand img {
-    height: 60px !important;
-    max-height: 60px !important;
-    object-fit: contain !important;
-    width: 170px !important;
-  }
+  header .mobile-header .brand,
 
-  header .navigation-mob .menu-mob-3.nav-menu-button {
-    background: #991f23 !important;
-    border: 0 !important;
-    border-radius: 100px !important;
-    color: #fff !important;
-    flex: 0 0 58px !important;
-    height: 58px !important;
-    padding: 18px !important;
-    width: 58px !important;
-  }
 
-  header .navigation-mob .menu-mob-3.nav-menu-button.is-open {
-    background: #000 !important;
-  }
 
-  header .navigation-mob .mobile-nav.site-nav__panel,
-  header .navigation-mob .mobile-nav {
-    top: 100% !important;
-    padding: 24px 38px 28px !important;
-  }
 
-  header .navigation-mob .mobile-nav .kj-mobile-menu-link {
-    font-size: 25px !important;
-    font-weight: 800 !important;
-    line-height: 1.2 !important;
-    padding: 9px 0 !important;
-  }
+
+
+
+
+  header .mobile-header .mobile-nav.site-nav__panel,
+
+
+
 }
 
-@media (max-width: 360px) {
-  header .navigation-mob.site-nav {
-    height: 111px !important;
-    min-height: 111px !important;
-    padding: 25px 3% !important;
-  }
 
-  header .navigation-mob .brand img {
-    height: 60px !important;
-    max-height: 60px !important;
-    width: 170px !important;
-  }
-
-  header .navigation-mob .menu-mob-3.nav-menu-button {
-    flex-basis: 58px !important;
-    height: 58px !important;
-    width: 58px !important;
-  }
-}
 
 /* Mobile footer address realignment. */
 @media (max-width: 768px) {
@@ -1009,14 +483,7 @@
 }
 
 /* Final compact spacing for mobile menu links. */
-@media (max-width: 991px) {
-  header .navigation-mob .mobile-nav .kj-mobile-menu-link {
-    font-size: 24px !important;
-    line-height: 1.18 !important;
-    margin: 0 0 4px !important;
-    padding: 8px 0 !important;
-  }
-}
+
 
 /* Defensive responsive logo image styling */
 .logo-image {
@@ -1025,102 +492,6 @@
 }
 /* Final mobile nav interaction and hamburger color guard. Loaded after navbar.css. */
 @media (max-width: 991px) {
-  html body header.site-header .navigation-mob .mobile-nav.site-nav__panel,
-  html body header.site-header .navigation-mob .mobile-nav {
-    background: #fff !important;
-    color: #222 !important;
-    overflow-y: auto !important;
-    overscroll-behavior: contain !important;
-    transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 240ms ease, transform 300ms ease !important;
-  }
-
-  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link,
-  html body header.site-header .navigation-mob .mobile-nav a {
-    color: #222 !important;
-    transition: color 180ms ease, transform 180ms ease, padding-left 180ms ease !important;
-    -webkit-tap-highlight-color: rgba(153, 31, 35, .12) !important;
-  }
-
-  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:hover,
-  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:focus,
-  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:active,
-  html body header.site-header .navigation-mob .mobile-nav a:hover,
-  html body header.site-header .navigation-mob .mobile-nav a:focus,
-  html body header.site-header .navigation-mob .mobile-nav a:active {
-    color: #991f23 !important;
-    padding-left: 6px !important;
-    transform: translateX(2px) !important;
-  }
-
-  html body header.site-header .nav-menu-button,
-  html body header.site-header .nav-menu-button:hover,
-  html body header.site-header .nav-menu-button:focus,
-  html body header.site-header .nav-menu-button:active,
-  html body header.site-header .nav-menu-button.is-open,
-  html body header.site-header .nav-menu-button.is-open,
-  html body header.site-header .nav-menu-button[aria-expanded="true"],
-  html body header.site-header .menu-mob-3,
-  html body header.site-header .menu-mob-3:hover,
-  html body header.site-header .menu-mob-3:focus,
-  html body header.site-header .menu-mob-3:active,
-  html body header.site-header .menu-mob-3.is-open,
-  html body header.site-header .menu-mob-3.is-open,
-  html body header.site-header .menu-mob-3[aria-expanded="true"],
-  html body header.site-header .menu-mob,
-  html body header.site-header .menu-mob:hover,
-  html body header.site-header .menu-mob:focus,
-  html body header.site-header .menu-mob:active,
-  html body header.site-header .menu-mob.is-open,
-  html body header.site-header .menu-mob.is-open,
-  html body header.site-header .menu-mob[aria-expanded="true"],
-  html body header.site-header .menu-button-2,
-  html body header.site-header .menu-button-2:hover,
-  html body header.site-header .menu-button-2:focus,
-  html body header.site-header .menu-button-2:active,
-  html body header.site-header .menu-button-2.is-open,
-  html body header.site-header .menu-button-2.is-open,
-  html body header.site-header .menu-button-2[aria-expanded="true"] {
-    background: transparent !important;
-    background-color: transparent !important;
-    color: #991f23 !important;
-    border-color: rgba(153, 31, 35, .38) !important;
-    box-shadow: none !important;
-  }
-
-  html body header.site-header .hamburger-icon,
-  html body header.site-header .hamburger-icon::before,
-  html body header.site-header .hamburger-icon::after,
-  html body header.site-header .menu-line,
-  html body header.site-header .menu-icon-2 .menu-line,
-  html body header.site-header .nav-menu-button:hover .hamburger-icon,
-  html body header.site-header .nav-menu-button:hover .hamburger-icon::before,
-  html body header.site-header .nav-menu-button:hover .hamburger-icon::after,
-  html body header.site-header .nav-menu-button:focus .hamburger-icon,
-  html body header.site-header .nav-menu-button:focus .hamburger-icon::before,
-  html body header.site-header .nav-menu-button:focus .hamburger-icon::after,
-  html body header.site-header .nav-menu-button:active .hamburger-icon,
-  html body header.site-header .nav-menu-button:active .hamburger-icon::before,
-  html body header.site-header .nav-menu-button:active .hamburger-icon::after,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon::before,
-  html body header.site-header .nav-menu-button.is-open .hamburger-icon::after,
-  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon,
-  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
-  html body header.site-header .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
-  html body header.site-header .menu-button-2:hover .menu-line,
-  html body header.site-header .menu-button-2:focus .menu-line,
-  html body header.site-header .menu-button-2:active .menu-line,
-  html body header.site-header .menu-button-2.is-open .menu-line,
-  html body header.site-header .menu-button-2.is-open .menu-line,
-  html body header.site-header .menu-button-2[aria-expanded="true"] .menu-line {
-    background: #991f23 !important;
-    background-color: #991f23 !important;
-    color: #991f23 !important;
-    border-color: #991f23 !important;
-  }
 }
 
 /* Final responsive polish for review carousel, banner-2 slider, and feature-card contrast. */
@@ -1207,158 +578,63 @@
 }
 
 @media (max-width: 991px) {
-  html body .nav-menu-button,
-  html body .nav-menu-button:hover,
-  html body .nav-menu-button:focus,
-  html body .nav-menu-button:active,
-  html body .nav-menu-button.is-open,
-  html body .nav-menu-button.is-open,
-  html body .nav-menu-button[aria-expanded="true"],
-  html body .menu-mob-3,
-  html body .menu-mob-3:hover,
-  html body .menu-mob-3:focus,
-  html body .menu-mob-3:active,
-  html body .menu-mob-3.is-open,
-  html body .menu-mob-3.is-open,
-  html body .menu-mob-3[aria-expanded="true"],
-  html body .menu-mob,
-  html body .menu-mob:hover,
-  html body .menu-mob:focus,
-  html body .menu-mob:active,
-  html body .menu-mob.is-open,
-  html body .menu-mob.is-open,
-  html body .menu-mob[aria-expanded="true"],
-  html body .menu-button-2,
-  html body .menu-button-2:hover,
-  html body .menu-button-2:focus,
-  html body .menu-button-2:active,
-  html body .menu-button-2.is-open,
-  html body .menu-button-2.is-open,
-  html body .menu-button-2[aria-expanded="true"] {
-    background: transparent !important;
-    background-color: transparent !important;
-    color: #991f23 !important;
-    border-color: rgba(153, 31, 35, .38) !important;
-    box-shadow: none !important;
-  }
-
-  html body .hamburger-icon,
-  html body .hamburger-icon::before,
-  html body .hamburger-icon::after,
-  html body .menu-line,
-  html body .menu-icon-2 .menu-line,
-  html body .nav-menu-button:hover .hamburger-icon,
-  html body .nav-menu-button:hover .hamburger-icon::before,
-  html body .nav-menu-button:hover .hamburger-icon::after,
-  html body .nav-menu-button:focus .hamburger-icon,
-  html body .nav-menu-button:focus .hamburger-icon::before,
-  html body .nav-menu-button:focus .hamburger-icon::after,
-  html body .nav-menu-button:active .hamburger-icon,
-  html body .nav-menu-button:active .hamburger-icon::before,
-  html body .nav-menu-button:active .hamburger-icon::after,
-  html body .nav-menu-button.is-open .hamburger-icon,
-  html body .nav-menu-button.is-open .hamburger-icon::before,
-  html body .nav-menu-button.is-open .hamburger-icon::after,
-  html body .nav-menu-button.is-open .hamburger-icon,
-  html body .nav-menu-button.is-open .hamburger-icon::before,
-  html body .nav-menu-button.is-open .hamburger-icon::after,
-  html body .nav-menu-button[aria-expanded="true"] .hamburger-icon,
-  html body .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
-  html body .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
-  html body .menu-button-2:hover .menu-line,
-  html body .menu-button-2:focus .menu-line,
-  html body .menu-button-2:active .menu-line,
-  html body .menu-button-2.is-open .menu-line,
-  html body .menu-button-2.is-open .menu-line,
-  html body .menu-button-2[aria-expanded="true"] .menu-line {
-    background: #991f23 !important;
-    background-color: #991f23 !important;
-    color: #991f23 !important;
-    border-color: #991f23 !important;
-  }
 }
 
 /* Final requested hamburger colors: maroon circle, white closed icon, gold open icon. */
 @media (max-width: 991px) {
-  html body header.site-header .navigation-mob .nav-menu-button,
-  html body header.site-header .navigation-mob .nav-menu-button:hover,
-  html body header.site-header .navigation-mob .nav-menu-button:focus,
-  html body header.site-header .navigation-mob .nav-menu-button:active,
-  html body header.site-header .navigation-mob .nav-menu-button.active,
-  html body header.site-header .navigation-mob .nav-menu-button.open,
-  html body header.site-header .navigation-mob .nav-menu-button.is-open,
-  html body header.site-header .navigation-mob .nav-menu-button.is-open,
-  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"],
-  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="false"],
-  html body header.site-header .navigation-mob .menu-mob,
-  html body header.site-header .navigation-mob .menu-mob-3,
-  html body header.site-header .navigation-mob .menu-button-2 {
-    background: #991f23 !important;
-    background-color: #991f23 !important;
-    border-color: #991f23 !important;
-    color: #ffffff !important;
-    box-shadow: none !important;
-  }
+  html body header.site-header .mobile-header .mobile-menu-button,
+  html body header.site-header .mobile-header .mobile-menu-button:hover,
+  html body header.site-header .mobile-header .mobile-menu-button:focus,
+  html body header.site-header .mobile-header .mobile-menu-button:active,
+  html body header.site-header .mobile-header .mobile-menu-button.active,
+  html body header.site-header .mobile-header .mobile-menu-button.open,
+  html body header.site-header .mobile-header .mobile-menu-button.is-open,
+  html body header.site-header .mobile-header .mobile-menu-button.is-open,
+  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="true"],
+  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="false"],
+  html body header.site-header .mobile-header .menu-mob,
+  html body header.site-header .mobile-header .mobile-menu-toggle,
 
-  html body header.site-header .navigation-mob .nav-menu-button .hamburger-icon,
-  html body header.site-header .navigation-mob .nav-menu-button .hamburger-icon::before,
-  html body header.site-header .navigation-mob .nav-menu-button .hamburger-icon::after,
-  html body header.site-header .navigation-mob .nav-menu-button .menu-line,
-  html body header.site-header .navigation-mob .nav-menu-button svg,
-  html body header.site-header .navigation-mob .nav-menu-button i {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    border-color: #ffffff !important;
-    color: #ffffff !important;
-    fill: #ffffff !important;
-    stroke: #ffffff !important;
-  }
 
-  html body header.site-header .navigation-mob .nav-menu-button.active .hamburger-icon,
-  html body header.site-header .navigation-mob .nav-menu-button.active .hamburger-icon::before,
-  html body header.site-header .navigation-mob .nav-menu-button.active .hamburger-icon::after,
-  html body header.site-header .navigation-mob .nav-menu-button.active .menu-line,
-  html body header.site-header .navigation-mob .nav-menu-button.open .hamburger-icon,
-  html body header.site-header .navigation-mob .nav-menu-button.open .hamburger-icon::before,
-  html body header.site-header .navigation-mob .nav-menu-button.open .hamburger-icon::after,
-  html body header.site-header .navigation-mob .nav-menu-button.open .menu-line,
-  html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon,
-  html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon::before,
-  html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon::after,
-  html body header.site-header .navigation-mob .nav-menu-button.is-open .menu-line,
-  html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon,
-  html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon::before,
-  html body header.site-header .navigation-mob .nav-menu-button.is-open .hamburger-icon::after,
-  html body header.site-header .navigation-mob .nav-menu-button.is-open .menu-line,
-  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] .hamburger-icon,
-  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] .hamburger-icon::before,
-  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] .hamburger-icon::after,
-  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] .menu-line,
-  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] svg,
-  html body header.site-header .navigation-mob .nav-menu-button[aria-expanded="true"] i {
-    background: #d4af37 !important;
-    background-color: #d4af37 !important;
-    border-color: #d4af37 !important;
-    color: #d4af37 !important;
-    fill: #d4af37 !important;
-    stroke: #d4af37 !important;
-  }
+  html body header.site-header .mobile-header .mobile-menu-button .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-header .mobile-menu-button .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-header .mobile-menu-button .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-header .mobile-menu-button .menu-line,
+  html body header.site-header .mobile-header .mobile-menu-button svg,
 
-  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link,
-  html body header.site-header .navigation-mob .mobile-nav a {
-    transition: color 180ms ease, padding-left 180ms ease, transform 180ms ease !important;
-  }
 
-  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:hover,
-  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:focus,
-  html body header.site-header .navigation-mob .mobile-nav .kj-mobile-menu-link:active,
-  html body header.site-header .navigation-mob .mobile-nav a:hover,
-  html body header.site-header .navigation-mob .mobile-nav a:focus,
-  html body header.site-header .navigation-mob .mobile-nav a:active {
-    color: #991f23 !important;
-    padding-left: 6px !important;
-    transform: translateX(2px) !important;
-  }
+  html body header.site-header .mobile-header .mobile-menu-button.active .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-header .mobile-menu-button.active .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-header .mobile-menu-button.active .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-header .mobile-menu-button.active .menu-line,
+  html body header.site-header .mobile-header .mobile-menu-button.open .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-header .mobile-menu-button.open .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-header .mobile-menu-button.open .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-header .mobile-menu-button.open .menu-line,
+  html body header.site-header .mobile-header .mobile-menu-button.is-open .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-header .mobile-menu-button.is-open .menu-line,
+  html body header.site-header .mobile-header .mobile-menu-button.is-open .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-header .mobile-menu-button.is-open .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-header .mobile-menu-button.is-open .menu-line,
+  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="true"] .mobile-menu-toggle__icon,
+  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="true"] .mobile-menu-toggle__icon::before,
+  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="true"] .mobile-menu-toggle__icon::after,
+  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="true"] .menu-line,
+  html body header.site-header .mobile-header .mobile-menu-button[aria-expanded="true"] svg,
+
+
+  html body header.site-header .mobile-header .mobile-nav .kj-mobile-menu-link,
+
+
+  html body header.site-header .mobile-header .mobile-nav .kj-mobile-menu-link:hover,
+  html body header.site-header .mobile-header .mobile-nav .kj-mobile-menu-link:focus,
+  html body header.site-header .mobile-header .mobile-nav .kj-mobile-menu-link:active,
+  html body header.site-header .mobile-header .mobile-nav a:hover,
+  html body header.site-header .mobile-header .mobile-nav a:focus,
+
 }
 
 /* Final phone-width carousel alignment fixes. Keep the live-style 1200px review
@@ -2455,24 +1731,13 @@
 
 /* Absolute final mobile-menu motion override. */
 @media (max-width: 991px) {
-  html body header.site-header .navigation-mob .mobile-nav.site-nav__panel,
-  html body header.site-header .navigation-mob .mobile-nav {
-    display: block !important;
-    translate: 0 -8px !important;
-    transform: translateY(-8px) !important;
-    transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 240ms ease, transform 300ms ease, translate 300ms ease, visibility 0s linear 360ms !important;
-    visibility: hidden !important;
-  }
+  html body header.site-header .mobile-header .mobile-nav.site-nav__panel,
 
-  html body header.site-header .navigation-mob .mobile-nav.site-nav__panel.is-open,
-  html body header.site-header .navigation-mob .mobile-nav.site-nav__panel.is-open,
-  html body header.site-header .navigation-mob .mobile-nav.is-open,
-  html body header.site-header .navigation-mob .mobile-nav.is-open {
-    translate: 0 0 !important;
-    transform: translateY(0) !important;
-    transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 220ms ease, transform 300ms ease, translate 300ms ease, visibility 0s linear 0s !important;
-    visibility: visible !important;
-  }
+
+  html body header.site-header .mobile-header .mobile-nav.site-nav__panel.is-open,
+  html body header.site-header .mobile-header .mobile-nav.site-nav__panel.is-open,
+  html body header.site-header .mobile-header .mobile-nav.is-open,
+
 }
 
 /* Customer review carousel geometry. */
@@ -3624,20 +2889,6 @@ body:has(.map-3) iframe {
     overflow-x: clip !important;
   }
 
-  .kj-mobile-rate-strip {
-    contain: paint !important;
-    height: 36px !important;
-    max-width: 100vw !important;
-    overflow: hidden !important;
-    position: relative !important;
-  }
-
-  .kj-mobile-rate-strip__track {
-    left: 0 !important;
-    position: absolute !important;
-    top: 0 !important;
-  }
-
   .sp-product-image-wrapper,
   .zoom-wrapper {
     min-height: auto !important;
@@ -4189,4 +3440,260 @@ textarea,
 .enquiry-page h1, .enquiry-page h2, .enquiry-page h3, #enquiry-title {
     color: #991f23 !important;
     font-family: "Com 4 Dl", sans-serif !important;
+}
+
+
+
+
+@media (max-width: 991px) {
+  header.site-header .site-header.site-nav {
+    display: none;
+  }
+
+
+
+
+
+
+
+  header.site-header .mobile-menu-toggle__icon,
+  header.site-header .mobile-menu-toggle__icon::before,
+
+
+
+}
+
+
+@media (min-width: 992px) {
+  header.site-header .site-header.site-nav {
+    display: flex !important;
+  }
+
+
+}
+
+@media (max-width: 991px) {
+  header.site-header .site-header.site-nav {
+    display: none !important;
+  }
+
+
+
+
+
+
+
+  header.site-header .mobile-menu-toggle__icon,
+  header.site-header .mobile-menu-toggle__icon::before,
+
+
+
+}
+
+/* Root Cause Fix: Explicit Dimensions for Mobile Navbar */
+
+
+/* Fix mobile navbar parent collapse */
+@media (max-width: 991px) {
+  header.site-header.header { display: block !important; }
+  header.site-header.header .site-header.site-nav { display: none !important; }
+
+}
+
+/* Final Mobile Repair */
+@media (max-width: 991px) {
+  header.site-header.header {
+    display: block !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  header.site-header.header .site-header.site-nav {
+    display: none !important;
+  }
+
+
+
+
+
+
+
+
+
+  header.site-header.header .site-header__right {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex: 0 0 auto !important;
+  }
+
+
+
+  header.site-header.header .mobile-menu-toggle__icon,
+  header.site-header.header .mobile-menu-toggle__icon::before,
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+/* Phase 5 — Match Mobile Navbar to Final Approved Design */
+@media (max-width: 991px) {
+
+  header.site-header.header {
+    background: #a3131c !important;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  header.site-header.header .mobile-menu-toggle__icon,
+  header.site-header.header .mobile-menu-toggle__icon::before,
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/* Fixed Mobile Rate Strip */
+
+@media (max-width: 991px) {
+  .kj-mobile-rate-strip {
+    -webkit-text-size-adjust: 100%;
+    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    --gold: #fff8d2;
+    --white: white;
+    --grey: #8e8e8e;
+    --meron: #991f23;
+    --mid-meroon: #900000;
+    --light-black: #222;
+    --emarald: #304e51;
+    --dark-maroon: #770b21;
+    --bright-red: #b00000;
+    --royal-blue: #1e2d5e;
+    --pencil-grey: #8e8e8e;
+    --light-grey: #686868;
+    --dark-gold: #d2ab00;
+    --black: black;
+    --kj-ivory: #fffaf0;
+    --kj-ivory-soft: #fffdf7;
+    --kj-maroon: #991f23;
+    --kj-maroon-deep: #7f191d;
+    --kj-gold: #d4af37;
+    --kj-gold-muted: #b58f35;
+    --kj-charcoal: #4f403d;
+    --kj-charcoal-soft: #6e5a56;
+    --kj-line: rgba(181, 143, 53, 0.22);
+    --kj-shadow-soft: 0 12px 30px rgba(65, 35, 28, 0.06);
+    --kj-shadow-lift: 0 18px 38px rgba(65, 35, 28, 0.1);
+    --kj-ease: cubic-bezier(.22, 1, .36, 1);
+    font-weight: 400;
+    text-rendering: optimizeLegibility !important;
+    font-family: Mulish, Arial, sans-serif;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    align-items: center !important;
+    color: #fff !important;
+    display: flex !important;
+    width: 100% !important;
+    background: #90030a !important;
+    contain: paint !important;
+    height: 36px !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+    position: relative !important;
+    font-size: 12px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+
+  .kj-mobile-rate-strip__track {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+    animation: kj-rate-scroll 30s linear infinite;
+  }
+
+  .kj-mobile-rate-strip__track span {
+    padding-right: 80px;
+    flex-shrink: 0;
+  }
+
+  @keyframes kj-rate-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+
+
+@media (max-width: 991px) {
+  .kj-mobile-rate-strip,
+  header.site-header.header {
+    width: 100% !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .mobile-menu-toggle__icon,
+  .mobile-menu-toggle__icon::before,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+/* Final Phase 6 Mobile Navbar Regression Fix */
+@media (max-width: 991px) {
 }
