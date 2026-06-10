@@ -5057,14 +5057,6 @@ figcaption {
   max-width: 1440px;
 }
 
-.navbar {
-  background-color: #0000;
-  border-bottom: 1px solid #0003;
-  width: 100%;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  display: none;
-}
 
 .mobile-nav {
   z-index: 2147483647;
@@ -9876,24 +9868,7 @@ figcaption {
   position: relative;
 }
 
-.navigation-3 {
-  z-index: 9;
-  background-color: #0000;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  display: flex;
-}
 
-.nav-menu-4 {
-  color: #283338;
-  align-items: center;
-  font-size: 15px;
-  display: flex;
-  position: static;
-}
 
 .option-3 {
   font-style: normal;
@@ -13499,13 +13474,6 @@ figcaption {
   overflow: hidden;
 }
 
-.navbar__row {
-  justify-content: space-between;
-  align-items: center;
-  padding-top: .9375rem;
-  padding-bottom: .9375rem;
-  display: flex;
-}
 
 .slider-custom-style {
   display: none;
@@ -13552,14 +13520,6 @@ figcaption {
   background-color: #0a0c0a;
 }
 
-.navbar-2 {
-  background-color: #0000;
-  padding-top: 1.4375rem;
-  padding-left: 30px;
-  padding-right: 30px;
-  position: absolute;
-  inset: 0% 0% auto;
-}
 
 .footer__row {
   grid-column-gap: 15px;
@@ -17387,9 +17347,6 @@ figcaption {
     display: flex;
   }
 
-  .navigation-3 {
-    display: none;
-  }
 
   .menu-mob-2 {
     color: #fff;
@@ -18070,9 +18027,6 @@ figcaption {
     height: 2.5rem;
   }
 
-  .navbar__nav {
-    background-color: #0a0c0a;
-  }
 
   .nav__toggler {
     color: #fff;
@@ -18083,9 +18037,6 @@ figcaption {
     height: 2.5rem;
   }
 
-  .navbar-2 {
-    padding-top: 0;
-  }
 
   .footer__row {
     flex-flow: column;
@@ -19973,9 +19924,6 @@ figcaption {
     left: -2%;
   }
 
-  .navbar__brand {
-    padding-left: 0;
-  }
 
   .section-spacing {
     padding-left: 15px;
@@ -19992,10 +19940,6 @@ figcaption {
     padding-bottom: 4rem;
   }
 
-  .navbar-2 {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 
   .carousel-item {
     padding-top: 80%;
@@ -20457,9 +20401,6 @@ figcaption {
     padding-right: 0;
   }
 
-  .navbar {
-    display: none;
-  }
 
   .intro-content-2.cc-homepage, .intro-content-2.cc-homepage-copy {
     width: auto;
@@ -22877,7 +22818,6 @@ figcaption {
 
 .navigation-2,
 .navigation-full,
-.navbar,
 .site-nav {
   background: #991F23 !important;
 }
@@ -22885,9 +22825,6 @@ figcaption {
 .navigation-2 .navigation-container,
 .navigation-2 .navigation-left,
 .navigation-2 .navigation-right,
-.navbar .nav-wrap {
-  background: transparent !important;
-}
 
 .navigation-2 a,
 .navigation-2 .bko-dropdown-1-2,
@@ -22898,15 +22835,9 @@ figcaption {
 .navigation-2 .diamondlink,
 .navigation-2 .goldlink-2,
 .navigation-2 .nav-link,
-.navbar .nav-link {
-  color: #fff !important;
-}
 
 .navigation-2 .is-current,
 .navigation-2 a:hover,
-.navbar a:hover {
-  color: #fff5d8 !important;
-}
 
 .rate-dropdown {
   position: relative;
@@ -23185,7 +23116,6 @@ figcaption {
 /* Final header overrides */
 header .navigation-2,
 header .navigation-full,
-header .navbar,
 header .site-nav {
   background-color: #991F23 !important;
 }
@@ -23378,7 +23308,6 @@ header .rate-row * {
 /* Final header source fixes: keep nav white without inline JS styles, and keep rate menu usable. */
 header .navigation-2,
 header .navigation-2 .navigation-full,
-header .navbar,
 header .site-nav {
   background-color: #991F23 !important;
 }

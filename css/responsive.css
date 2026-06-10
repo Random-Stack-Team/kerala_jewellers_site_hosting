@@ -162,7 +162,6 @@
     z-index: 10001 !important;
   }
 
-  header .navbar .nav-menu.nav-menu-panel.is-open,
   header .navigation-2 .nav-menu-3.nav-menu-panel.is-open,
   header .navigation-4 .nav-menu-5.nav-menu-panel.is-open,
   header .navigation-mob .mobile-nav.nav-menu-panel.is-open,
@@ -174,7 +173,6 @@
     visibility: visible !important;
   }
 
-  header .navbar .nav-menu.nav-menu-panel > *,
   header .navigation-2 .nav-menu-3.nav-menu-panel > *,
   header .navigation-4 .nav-menu-5.nav-menu-panel > *,
   header .navigation-mob .mobile-nav.nav-menu-panel > * {
@@ -184,9 +182,6 @@
   header .navigation-mob .mobile-nav,
   header .navigation-2 .nav-menu-3.nav-menu-panel,
   header .navigation-4 .nav-menu-5.nav-menu-panel,
-  header .navbar .nav-menu.nav-menu-panel {
-    color: #fff !important;
-  }
 
   header .navigation-mob .mobile-nav > .bko-wrap-111-2,
   header .navigation-2 .nav-menu-3.nav-menu-panel > .bko-wrap-111-2,
