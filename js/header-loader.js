@@ -15,6 +15,12 @@
 
     if (prefix) {
       html = html.replace(/(href|src)="(?!https?:|mailto:|tel:|#|\/|\.\.\/)([^"]+)"/g, `$1="${prefix}$2"`);
+      html = html.replace(/srcset="([^"]+)"/g, (_, contents) => {
+        return 'srcset="' + contents.split(',').map(part => {
+          part = part.trim();
+          return (part && !part.startsWith('http') && !part.startsWith('/') && !part.startsWith('../')) ? prefix + part : part;
+        }).join(', ') + '"';
+      });
     }
 
     mount.innerHTML = html;

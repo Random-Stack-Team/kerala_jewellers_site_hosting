@@ -1025,10 +1025,6 @@ document.documentElement.classList.add('js-ready');
 
   
   window.initKeralaHeader = () => {
-  };
-
-  document.addEventListener('DOMContentLoaded', () => {
-    window.initKeralaHeader();
     requestAnimationFrame(renderRateLabelForCurrentPage);
     setTimeout(renderRateLabelForCurrentPage, 0);
     setTimeout(renderRateLabelForCurrentPage, 250);
@@ -1049,17 +1045,13 @@ document.documentElement.classList.add('js-ready');
     calculatePrice('#goldprices', 14660);
     calculatePrice('#silverpricesssproduct', 290);
     initProductFilters();
-  });
+  }; // end window.initKeralaHeader
 })();
 
 
 /* --- TRUE LOUPE ZOOM EFFECT --- */
 
-  window.initKeralaHeader = () => {
-  };
-
-  document.addEventListener('DOMContentLoaded', () => {
-    window.initKeralaHeader();
+  function initLoupeEffect() {
   // Only apply to pointer devices, ignore touch/mobile
   if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     return;
@@ -1134,7 +1126,7 @@ document.documentElement.classList.add('js-ready');
       if (reqId) cancelAnimationFrame(reqId);
     });
   });
-});
+} // end initLoupeEffect
 
 
 
@@ -1219,4 +1211,9 @@ function resetMobileMenuOnDesktop() {
 }
 
 window.addEventListener("resize", resetMobileMenuOnDesktop);
-document.addEventListener("DOMContentLoaded", resetMobileMenuOnDesktop);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof window.initKeralaHeader === 'function') window.initKeralaHeader();
+  if (typeof initLoupeEffect === 'function') initLoupeEffect();
+  if (typeof resetMobileMenuOnDesktop === 'function') resetMobileMenuOnDesktop();
+});
