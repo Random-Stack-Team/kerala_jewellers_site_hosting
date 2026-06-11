@@ -1,0 +1,85 @@
+{
+  "results": [
+    {
+      "path": "/",
+      "headerLoaded": true,
+      "footerLoaded": true,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "foucTimeMs": 4687
+    },
+    {
+      "path": "/products.html",
+      "headerLoaded": true,
+      "footerLoaded": true,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "foucTimeMs": 775
+    },
+    {
+      "path": "/silver-products.html",
+      "headerLoaded": true,
+      "footerLoaded": true,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "foucTimeMs": 727
+    },
+    {
+      "path": "/diamonds-products.html",
+      "headerLoaded": true,
+      "footerLoaded": true,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "foucTimeMs": 774
+    },
+    {
+      "path": "/about.html",
+      "headerLoaded": true,
+      "footerLoaded": true,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "foucTimeMs": 715
+    },
+    {
+      "path": "/contact.html",
+      "headerLoaded": true,
+      "footerLoaded": true,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "foucTimeMs": 2385
+    },
+    {
+      "path": "/enquiry.html",
+      "headerLoaded": false,
+      "footerLoaded": false,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "foucTimeMs": 845
+    },
+    {
+      "path": "/goldproducts/bangles-1.html",
+      "headerLoaded": true,
+      "footerLoaded": true,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "foucTimeMs": 870
+    },
+    {
+      "path": "/silverproducts/anklet.html",
+      "headerLoaded": true,
+      "footerLoaded": true,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "foucTimeMs": 842
+    },
+    {
+      "path": "/diamondproducts/ring.html",
+      "headerLoaded": true,
+      "footerLoaded": true,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "foucTimeMs": 918
+    }
+  ],
+  "globalBugs": []
+}
