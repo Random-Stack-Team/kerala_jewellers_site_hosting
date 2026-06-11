@@ -201,14 +201,6 @@ td, th {
   content: "";
 }
 
-.w-icon-file-upload-remove:before {
-  content: "";
-}
-
-.w-icon-file-upload-icon:before {
-  content: "";
-}
-
 * {
   box-sizing: border-box;
 }
@@ -278,22 +270,6 @@ input.button-link {
 
 html[data-w-dynpage] [data-w-cloak] {
   color: #0000 !important;
-}
-
-.w-code-block {
-  margin: unset;
-}
-
-pre.w-code-block code {
-  all: inherit;
-}
-
-pre.w-code-block code > span {
-  display: block !important;
-}
-
-.w-optimization {
-  display: contents;
 }
 
 .site-builder-badge, .site-builder-badge > img {
@@ -460,21 +436,6 @@ ul, ol {
 
 .embed-code:after {
   clear: both;
-}
-
-.w-video {
-  width: 100%;
-  padding: 0;
-  position: relative;
-}
-
-.w-video iframe, .w-video object, .w-video embed {
-  border: none;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 fieldset {
