@@ -828,8 +828,49 @@ function resetMobileMenuOnDesktop() {
 
 window.addEventListener("resize", resetMobileMenuOnDesktop);
 
+function restoreEnquiryPrefill() {
+  const nameEl = document.querySelector('.word2') || document.querySelector('.text-size-large');
+  const codeEl = document.querySelector('.word8');
+  
+  if (nameEl && codeEl) {
+    const enquireBtns = Array.from(document.querySelectorAll('.button-link')).filter(b => b.textContent.trim().toLowerCase() === 'enquire');
+    if (enquireBtns.length > 0) {
+      const productName = encodeURIComponent(nameEl.textContent.trim());
+      const productCode = encodeURIComponent(codeEl.textContent.trim());
+      
+      enquireBtns.forEach(btn => {
+        const baseHref = btn.getAttribute('href') || '../enquiry.html';
+        if (!baseHref.includes('product=')) {
+          const sep = baseHref.includes('?') ? '&' : '?';
+          btn.setAttribute('href', `${baseHref}${sep}product=${productName}&code=${productCode}`);
+        }
+      });
+    }
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const prodParam = urlParams.get('product');
+  const codeParam = urlParams.get('code');
+  
+  if (prodParam || codeParam) {
+    const nameInput = document.querySelector('input[name="productName"]');
+    const codeInput = document.querySelector('input[name="productId"]');
+    const msgArea = document.querySelector('textarea[name="message"]');
+    
+    if (nameInput && prodParam) nameInput.value = prodParam;
+    if (codeInput && codeParam) codeInput.value = codeParam;
+    
+    if (msgArea && !msgArea.value) {
+      const pName = prodParam || 'this product';
+      const pCode = codeParam ? ` (Code: ${codeParam})` : '';
+      msgArea.value = `I am interested in ${pName}${pCode}. Please share more details about availability and pricing.`;
+    }
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   if (typeof window.initKeralaHeader === 'function') window.initKeralaHeader();
   if (typeof initLoupeEffect === 'function') initLoupeEffect();
   if (typeof resetMobileMenuOnDesktop === 'function') resetMobileMenuOnDesktop();
+  restoreEnquiryPrefill();
 });
