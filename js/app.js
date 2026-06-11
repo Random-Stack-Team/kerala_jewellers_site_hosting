@@ -536,11 +536,7 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
-  const addHoverLife = () => {
-    document.querySelectorAll('.product-card, .feature-card, .collection-card, .best-seller-card, .review-card, .team5_item, .blog33_item').forEach((item) => {
-      item.classList.add('kj-interactive-card');
-    });
-  };
+
 
   const normalizePhoneLinks = () => {
     document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
@@ -684,7 +680,7 @@ document.documentElement.classList.add('js-ready');
     normalizeHeroImages();
     renderPlatinumComingSoon();
 
-    addHoverLife();
+
     reorderProductSections();
     calculatePrice('#goldprice', 14660);
     calculatePrice('#goldprices', 14660);
