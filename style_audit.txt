@@ -1,0 +1,41 @@
+
+--- TARGET: .dropdown ---
+.dropdown: { text-align: left;   z-index: 900;   margin-left: auto;   margin-right: auto;   display: inline-block;   position: relative; }
+
+--- TARGET: .dropdown-list ---
+.dropdown-list: { background: #ddd;   min-width: 100%;   display: none;   position: absolute; }
+.dropdown-list.is-open: { display: block; }
+.dropdown-list: { color: #333;   background-color: #fff;   font-style: normal; }
+/* 4. Keep Megamenu Dropdown List Text Dark (so it's readable on light background) */ header .navigation-2 .dropdown-list a, header .navigation-2 .dropdown-list div, header .navigation-2 .dropdown-list span, header .navigation-2 .bko-dropdown-list a, header .navigation-2 .bko-dropdown-list div, header .navigation-2 .bko-dropdown-list span, header .navigation-2 .bko-text-12-3, header .navigation-2 .category-menu-link, header .navigation-2 .bko-text-11, header .navigation-2 .bko-text-12-3-copy: { color: #231f20 !important; }
+/* Megamenu hover effect */ header .navigation-2 .dropdown-list a:hover, header .navigation-2 .bko-dropdown-list a:hover, header .navigation-2 .category-menu-link:hover: { color: #991F23 !important; }
+
+--- TARGET: .nav-menu ---
+.nav-menu: { grid-column-gap: 10px;   grid-row-gap: 10px;   justify-content: center;   align-items: center;   display: flex; }
+.nav-menu: { grid-column-gap: 0px;     background-color: #eee7e4;     border-bottom: 1px solid #0003;     display: flex; }
+
+--- TARGET: .bko-dropdown-list ---
+.bko-dropdown-list.is-open: { background-color: #0000;   flex-direction: column;   justify-content: center;   align-items: stretch;   margin-top: 0;   padding: 0;   display: flex;   position: absolute; }
+.bko-dropdown-list.is-open: { position: relative; }
+.bko-dropdown-list.is-open: { padding-left: 1.2rem;     padding-right: 1.2rem; }
+/* 4. Keep Megamenu Dropdown List Text Dark (so it's readable on light background) */ header .navigation-2 .dropdown-list a, header .navigation-2 .dropdown-list div, header .navigation-2 .dropdown-list span, header .navigation-2 .bko-dropdown-list a, header .navigation-2 .bko-dropdown-list div, header .navigation-2 .bko-dropdown-list span, header .navigation-2 .bko-text-12-3, header .navigation-2 .category-menu-link, header .navigation-2 .bko-text-11, header .navigation-2 .bko-text-12-3-copy: { color: #231f20 !important; }
+/* Megamenu hover effect */ header .navigation-2 .dropdown-list a:hover, header .navigation-2 .bko-dropdown-list a:hover, header .navigation-2 .category-menu-link:hover: { color: #991F23 !important; }
+
+--- TARGET: .site-header ---
+.site-header: { z-index: 9;   background-color: #fff;   flex-direction: column;   align-items: center;   width: 100%;   margin-left: 0;   padding: 12px 30px;   display: flex;   box-shadow: 0 4px 4px #8e8e8e94; }
+.site-header: { display: none; }
+
+--- TARGET: .menu-button ---
+.menu-button: { padding: 0; }
+.menu-button.is-open: { background-color: #0000; }
+.menu-button, .menu-button.is-open: { flex: none; }
+
+--- TARGET: .rate-dropdown ---
+.navigation-2 .site-header__container, .navigation-2 .site-header__brand-area, .navigation-2 .site-header__actions,  .navigation-2 a, .navigation-2 .bko-dropdown-1-2, .navigation-2 .bko-dropdown-1-3, .navigation-2 .bko-link-111-2, .navigation-2 .goldlink, .navigation-2 .silverlink, .navigation-2 .diamondlink, .navigation-2 .goldlink-2, .navigation-2 .nav-link,  .navigation-2 .is-current, .navigation-2 a:hover,  .rate-dropdown: { position: relative;   z-index: 60;   align-self: center;   margin-right: 14px;   font-family: inherit; }
+.rate-dropdown.is-open .rate-chevron, .rate-dropdown:hover .rate-chevron: { transform: rotate(180deg); }
+.rate-dropdown:hover .rate-menu, .rate-dropdown.is-open .rate-menu: { display: block; }
+header .rate-dropdown: { display: inline-flex !important;   align-items: center !important;   margin: 0 8px 0 0 !important;   flex: 0 0 auto !important;   color: #fff !important;   position: relative !important;   z-index: 10000 !important; }
+header .rate-dropdown:hover .rate-menu, header .rate-dropdown.is-open .rate-menu: { display: block !important; }
+/* 5. Force Rate Dropdown to be Visible & White */ header .rate-dropdown, header .rate-dropdown *: { display: inline-flex !important;   align-items: center !important;   color: #ffffff !important;   opacity: 1 !important;   visibility: visible !important; }
+header .rate-dropdown:hover .rate-menu, header .rate-dropdown.is-open .rate-menu: { display: block !important; }
+header .rate-dropdown: { display: inline-flex !important;   align-items: center !important;   position: relative !important;   z-index: 10000 !important; }
+header .rate-dropdown:hover .rate-menu, header .rate-dropdown.is-open .rate-menu: { display: block !important; }
