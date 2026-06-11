@@ -2431,7 +2431,14 @@ body {
   letter-spacing: 0.01em;
 }
 
-.kj-interactive-card {
+.kj-interactive-card,
+.product-card,
+.feature-card,
+.collection-card,
+.best-seller-card,
+.review-card,
+.team5_item,
+.blog33_item {
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   transition:
@@ -2442,7 +2449,14 @@ body {
     transform 280ms var(--kj-ease);
 }
 
-.kj-interactive-card:hover {
+.kj-interactive-card:hover,
+.product-card:hover,
+.feature-card:hover,
+.collection-card:hover,
+.best-seller-card:hover,
+.review-card:hover,
+.team5_item:hover,
+.blog33_item:hover {
   transform: translateY(-3px);
 }
 
@@ -2483,7 +2497,13 @@ body {
 
   .product-card:hover,
   .product-card:focus-within,
-  .kj-interactive-card:hover {
+  .kj-interactive-card:hover,
+  .feature-card:hover,
+  .collection-card:hover,
+  .best-seller-card:hover,
+  .review-card:hover,
+  .team5_item:hover,
+  .blog33_item:hover {
     transform: none !important;
   }
 

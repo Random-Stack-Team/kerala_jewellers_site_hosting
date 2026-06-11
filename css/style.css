@@ -22579,6 +22579,13 @@ body {
 }
 
 .kj-interactive-card,
+.product-card,
+.feature-card,
+.collection-card,
+.best-seller-card,
+.review-card,
+.team5_item,
+.blog33_item,
 .team5_image,
 .product-image-2-copy,
 .product-image-2-copy-copy,
@@ -22586,11 +22593,25 @@ body {
   transition: transform 260ms ease, box-shadow 260ms ease, filter 260ms ease;
 }
 
-.kj-interactive-card:hover {
+.kj-interactive-card:hover,
+.product-card:hover,
+.feature-card:hover,
+.collection-card:hover,
+.best-seller-card:hover,
+.review-card:hover,
+.team5_item:hover,
+.blog33_item:hover {
   transform: translateY(-4px);
 }
 
 .kj-interactive-card:hover img,
+.product-card:hover img,
+.feature-card:hover img,
+.collection-card:hover img,
+.best-seller-card:hover img,
+.review-card:hover img,
+.team5_item:hover img,
+.blog33_item:hover img,
 .team5_item:hover .team5_image,
 .product-item-81:hover .product-image-8 {
   filter: saturate(1.06) contrast(1.03);
