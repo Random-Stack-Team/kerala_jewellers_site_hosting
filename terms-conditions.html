@@ -199,7 +199,7 @@ header .rate-coin { display: inline-block !important; width: 28px !important; he
           rate.className = 'rate-dropdown dropdown';
           rate.innerHTML = `
             <button class="rate-toggle dropdown-toggle" type="button" aria-label="Today's metal rates" aria-expanded="false">
-              <img loading="lazy" decoding="async" src="${prefix}assets/coin/gold coin.png" alt="" class="rate-coin"/>
+              <img fetchpriority="high" decoding="async" src="${prefix}assets/coin/gold coin.png" alt="" class="rate-coin"/>
               <span>GOLD 22 KT/1g - &#8377; 14660</span><span class="rate-chevron">&#8963;</span>
             </button>
             <div class="rate-menu dropdown-list">
