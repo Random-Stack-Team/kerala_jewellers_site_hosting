@@ -242,7 +242,10 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
+  let _menusWired = false;
   const wireMenus = () => {
+    if (_menusWired) return;
+    _menusWired = true;
     const handledMenuClicks = new WeakSet();
     const lockMenuButtonColor = (button) => {
       if (!button) return;
@@ -343,6 +346,53 @@ document.documentElement.classList.add('js-ready');
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') closeDropdowns();
     });
+
+    // Same-page filtering for category links via event delegation
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest('.kj-megamenu-link, .bko-wrap-111-2 a, .rate-dropdown a, .kj-clean-category-col a');
+      if (!link) return;
+
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      try {
+        const url = new URL(href, window.location.href);
+        const category = url.searchParams.get('category');
+        
+        // If it's a link to the exact same pathname and has a category
+        const normalizePath = (p) => p.replace(/\/$/, '').replace(/\.html$/, '');
+        if (category && normalizePath(url.pathname) === normalizePath(window.location.pathname)) {
+          const toolbar = document.querySelector('.collection-toolbar');
+          if (toolbar) {
+            // We are on the same page and toolbar exists -> do same-page filter!
+            event.preventDefault(); // Stop normal navigation
+            event.stopPropagation();
+            
+            // Close any open dropdowns
+            closeDropdowns();
+            
+            // Update the select and dispatch change to trigger applyProductFilters
+            const select = toolbar.querySelector('[data-filter-control="category"]');
+            if (select) {
+              select.value = category;
+              toolbar.dispatchEvent(new Event('change'));
+              
+              // Push state to URL so it behaves like a real navigation
+              window.history.pushState({}, '', url.href);
+              
+              // Scroll to product results if needed
+              const results = document.querySelector('.product-results, .collection-toolbar');
+              if (results) {
+                results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }
+          }
+        }
+      } catch (e) {
+        // invalid URL, ignore
+      }
+    });
+
   };
 
   const wireTimelineProgress = () => {
@@ -399,11 +449,11 @@ document.documentElement.classList.add('js-ready');
   const ensureSimpleMegamenus = () => {
     const prefix = getAssetPrefix();
     const basePages = {
-      gold: prefix + 'products.html',
-      silver: prefix + 'silver-products.html',
-      diamond: prefix + 'diamonds-products.html',
-      platinum: prefix + 'coming-soon.html',
-      scheme: prefix + 'thanga-mazhai.html'
+      gold: prefix + 'products',
+      silver: prefix + 'silver-products',
+      diamond: prefix + 'diamonds-products',
+      platinum: prefix + 'coming-soon',
+      scheme: prefix + 'thanga-mazhai'
     };
 
     const staticImages = {
@@ -513,7 +563,10 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
+  let _rateWired = false;
   const wireRateSelection = () => {
+    if (_rateWired) return;
+    _rateWired = true;
     document.addEventListener('click', (event) => {
       const item = event.target.closest('.rate-row, .rate-item');
       if (!item) return;
@@ -970,12 +1023,12 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
+  
+  window.initKeralaHeader = () => {
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
-    injectNavbarThemeStyles();
-    wireMenus();
-    wireMegamenuHover();
-    normalizePlatinumNavState();
-    renderRateLabelForCurrentPage();
+    window.initKeralaHeader();
     requestAnimationFrame(renderRateLabelForCurrentPage);
     setTimeout(renderRateLabelForCurrentPage, 0);
     setTimeout(renderRateLabelForCurrentPage, 250);
@@ -1001,7 +1054,12 @@ document.documentElement.classList.add('js-ready');
 
 
 /* --- TRUE LOUPE ZOOM EFFECT --- */
-document.addEventListener('DOMContentLoaded', () => {
+
+  window.initKeralaHeader = () => {
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    window.initKeralaHeader();
   // Only apply to pointer devices, ignore touch/mobile
   if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     return;
