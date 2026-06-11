@@ -225,14 +225,6 @@ img {
   display: inline-block;
 }
 
-html.w-mod-touch * {
-  background-attachment: scroll !important;
-}
-
-.w-block {
-  display: block;
-}
-
 .inline-block {
   max-width: 100%;
   display: inline-block;
@@ -339,11 +331,6 @@ ul, ol {
   margin-top: 0;
   margin-bottom: 10px;
   padding-left: 40px;
-}
-
-.w-list-unstyled {
-  padding-left: 0;
-  list-style: none;
 }
 
 .embed-code:before, .embed-code:after {
@@ -464,97 +451,9 @@ textarea.form-input, textarea.form-select {
   line-height: normal;
 }
 
-.w-file-upload {
-  margin-bottom: 10px;
-  display: block;
-}
-
-.w-file-upload-input {
-  opacity: 0;
-  z-index: -100;
-  width: .1px;
-  height: .1px;
-  position: absolute;
-  overflow: hidden;
-}
-
-.w-file-upload-default, .w-file-upload-uploading, .w-file-upload-success {
-  color: #333;
-  display: inline-block;
-}
-
-.w-file-upload-error {
-  margin-top: 10px;
-  display: block;
-}
-
-.w-file-upload-default.w-hidden, .w-file-upload-uploading.w-hidden, .w-file-upload-error.w-hidden, .w-file-upload-success.w-hidden {
-  display: none;
-}
-
-.w-file-upload-uploading-btn {
-  cursor: pointer;
-  background-color: #fafafa;
-  border: 1px solid #ccc;
-  margin: 0;
-  padding: 8px 12px;
-  font-size: 14px;
-  font-weight: normal;
-  display: flex;
-}
-
-.w-file-upload-file {
-  background-color: #fafafa;
-  border: 1px solid #ccc;
-  flex-grow: 1;
-  justify-content: space-between;
-  margin: 0;
-  padding: 8px 9px 8px 11px;
-  display: flex;
-}
-
-.w-file-upload-file-name {
-  font-size: 14px;
-  font-weight: normal;
-  display: block;
-}
-
-.w-file-remove-link {
-  cursor: pointer;
-  width: auto;
-  height: auto;
-  margin-top: 3px;
-  margin-left: 10px;
-  padding: 3px;
-  display: block;
-}
-
 .w-icon-file-upload-remove {
   margin: auto;
   font-size: 10px;
-}
-
-.w-file-upload-error-msg {
-  color: #ea384c;
-  padding: 2px 0;
-  display: inline-block;
-}
-
-.w-file-upload-info {
-  padding: 0 12px;
-  line-height: 38px;
-  display: inline-block;
-}
-
-.w-file-upload-label {
-  cursor: pointer;
-  background-color: #fafafa;
-  border: 1px solid #ccc;
-  margin: 0;
-  padding: 8px 12px;
-  font-size: 14px;
-  font-weight: normal;
-  display: inline-block;
 }
 
 .w-icon-file-upload-icon, .w-icon-file-upload-uploading {
