@@ -245,18 +245,7 @@ document.documentElement.classList.add('js-ready');
   const wireMenus = () => {
     const handledMenuClicks = new WeakSet();
     const lockMenuButtonColor = (button) => {
-      if (!button) return;
-      const isOpen = button.classList.contains('is-open') || button.getAttribute('aria-expanded') === 'true';
-      const iconColor = isOpen ? '#d4af37' : '#ffffff';
-      button.style.setProperty('background', '#991f23', 'important');
-      button.style.setProperty('background-color', '#991f23', 'important');
-      button.style.setProperty('color', iconColor, 'important');
-      button.style.setProperty('border-color', 'rgba(153, 31, 35, .38)', 'important');
-      button.querySelectorAll('.mobile-menu-toggle__icon, .menu-line').forEach((line) => {
-        line.style.setProperty('background', iconColor, 'important');
-        line.style.setProperty('background-color', iconColor, 'important');
-        line.style.setProperty('color', iconColor, 'important');
-      });
+      // Inline style overrides removed to let clean CSS handle states
     };
 
     const toggleMenuButton = (button) => {

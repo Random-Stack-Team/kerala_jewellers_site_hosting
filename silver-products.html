@@ -16,121 +16,7 @@
 <!-- Premium Header & active link overrides to bypass filesystem caching -->
 </meta>
 <!-- Premium Header & active link overrides with maximum CSS specificity -->
-<style id="premium-header-overrides">
-    /* 1. Force dark red header background */
-    header.site-header,
-    header.site-header .site-header,
-    header.site-header .site-header__inner,
-    header.site-header .navbar,
-    header.site-header .site-nav {
-      background: #991F23 !important;
-      background-color: #991F23 !important;
-    }
 
-    /* 2. Force top-level navigation links to be white */
-    header.site-header .site-header a,
-    header.site-header .site-header a *,
-    header.site-header .site-header div.bko-dropdown-1-2,
-    header.site-header .site-header div.bko-link-111-2,
-    header.site-header .site-header div.bko-dropdown-1-3,
-    header.site-header .site-header .goldlink,
-    header.site-header .site-header .silverlink,
-    header.site-header .site-header .diamondlink,
-    header.site-header .site-header .platinumlink,
-    header.site-header .site-header .bko-dropdown-toggle-3 a,
-    header.site-header .site-header .bko-dropdown-toggle-3 div,
-    header.site-header .site-header .div2 a,
-    header.site-header .site-header a.nav-link,
-    header.site-header .site-header .nav-link,
-    header.site-header .site-header a.goldlink-2 {
-      color: #ffffff !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-    }
-
-    /* 3. Active / Current Page Navigation Item Style (Warm Gold/White) */
-    header.site-header .site-header .is-current,
-    header.site-header .site-header .is-current *,
-    header.site-header .site-header .goldlink.is-current,
-    header.site-header .site-header .silverlink.is-current,
-    header.site-header .site-header .diamondlink.is-current,
-    header.site-header .site-header .platinumlink.is-current,
-    header.site-header .site-header .goldlink-2.is-current,
-    header.site-header .site-header .silverlink-2.is-current,
-    header.site-header .site-header .diamondlink-2.is-current,
-    header.site-header .site-header .platinumlink-2.is-current,
-    header.site-header .site-header .bko-link-111.is-current,
-    header.site-header .site-header .bko-link-111-2.is-current {
-      color: #fff5d8 !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-    }
-
-    /* 4. Hover Style */
-    header.site-header .site-header a:hover,
-    header.site-header .site-header a div:hover,
-    header.site-header .site-header a *:hover,
-    header.site-header .site-header .bko-dropdown-1-2:hover,
-    header.site-header .site-header .bko-link-111:hover,
-    header.site-header .site-header .bko-link-111-2:hover,
-    header.site-header .site-header .goldlink:hover,
-    header.site-header .site-header .silverlink:hover,
-    header.site-header .site-header .diamondlink:hover,
-    header.site-header .site-header .platinumlink:hover,
-    header.site-header .site-header .bko-dropdown-toggle-3 a:hover,
-    header.site-header .site-header .bko-dropdown-toggle-3 div:hover,
-    header.site-header .site-header .div2 a:hover {
-      color: #fff5d8 !important;
-    }
-
-    /* 6. Force Rate Dropdown to be Visible & White */
-    header.site-header .rate-dropdown {
-      display: inline-flex !important;
-      align-items: center !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      color: #ffffff !important;
-    }
-
-    header.site-header .rate-toggle {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 8px !important;
-      color: #ffffff !important;
-      background: transparent !important;
-      border: 0 !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-    }
-
-    header.site-header .rate-toggle span {
-      color: #ffffff !important;
-    }
-
-    header.site-header .rate-menu {
-      display: none !important;
-      position: absolute !important;
-      top: calc(100% + 4px) !important;
-      left: 0 !important;
-      min-width: 280px !important;
-      padding: 12px 10px !important;
-      border: 1px solid rgba(153, 31, 35, .18) !important;
-      border-radius: 4px !important;
-      background: #ffffff !important;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, .14) !important;
-      z-index: 10000 !important;
-    }
-
-    header.site-header .rate-dropdown:hover .rate-menu,
-    header.site-header .rate-dropdown.is-open .rate-menu {
-      display: block !important;
-    }
-
-    header.site-header .rate-row,
-    header.site-header .rate-row span {
-      color: #681015 !important;
-    }
-  </style>
 <style id="final-header-overrides">
 header .site-header, header .site-header .site-header__inner, header .navbar, header .site-nav { background-color: #991F23 !important; }
 header .site-header .bko-dropdown-list a, header .site-header .bko-dropdown-list div, header .site-header .bko-dropdown-list span, header .site-header .dropdown-list a, header .site-header .dropdown-list div, header .site-header .dropdown-list span { color: #231f20 !important; }
@@ -265,35 +151,7 @@ header .rate-coin { display: inline-block !important; width: 28px !important; he
 }
 </style>
 
-<style id="kj-first-paint-critical">
-  header.site-header { position: relative; z-index: 20; background: #991f23; font-family: Mulish, Arial, sans-serif; }
-  header.site-header .logos-marquee { background: #991f23; overflow: visible; }
-  header.site-header .site-header__wrap, header.site-header .site-header, header.site-header .site-header__inner { width: 100%; background: #991f23; }
-  header.site-header .site-header.site-nav { display: flex; align-items: center; min-height: 81px; }
-  header.site-header .site-header__inner, header.site-header .site-header__container { display: flex; align-items: center; width: 100%; }
-  header.site-header .site-header__container { justify-content: space-between; gap: 28px; }
-  header.site-header .site-header__brand-area, header.site-header .site-header__actions { display: flex; align-items: center; }
-  header.site-header .brand.site-header__brand { display: inline-flex; align-items: center; flex: 0 0 auto; }
-  header.site-header .brand.site-header__brand img { display: block; width: 170px; max-width: 170px; height: auto; }
-  header.site-header .site-nav > .bko-wrap-111-2, header.site-header .site-nav > .rate-dropdown { display: inline-flex; align-items: center; flex: 0 0 auto; position: relative; }
-  header.site-header .site-nav a, header.site-header .site-nav a *, header.site-header .site-nav .bko-dropdown-1-3, header.site-header .site-nav .bko-link-111-2, header.site-header .rate-toggle, header.site-header .rate-toggle span { color: #fff; font-family: Mulish, Arial, sans-serif; font-size: 20px; font-weight: 700; line-height: 28px; letter-spacing: -.8px; text-decoration: none; text-transform: capitalize; white-space: nowrap; }
-  header.site-header .rate-dropdown { position: relative; z-index: 10000; }
-  header.site-header .rate-toggle { display: inline-flex; align-items: center; gap: 8px; appearance: none; border: 0; background: transparent; cursor: pointer; padding: 0; }
-  header.site-header .rate-coin { display: inline-block; width: 28px; height: 28px; object-fit: contain; }
-  header.site-header .dropdown-list, header.site-header .bko-dropdown-list, header.site-header .rate-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; z-index: 10000; background: #fff; color: #332525; }
-  header.site-header .dropdown:hover > .dropdown-list, header.site-header .dropdown.is-open > .dropdown-list, header.site-header .rate-dropdown:hover .rate-menu, header.site-header .rate-dropdown.is-open .rate-menu { display: block; }
-  header.site-header .kj-megamenu-dropdown { min-width: 360px; border: 1px solid rgba(153,31,35,.16); border-radius: 12px; box-shadow: 0 18px 40px rgba(60,22,0,.18); padding: 18px; }
-  header.site-header .kj-megamenu-panel { display: grid; grid-template-columns: minmax(150px, 1fr) 190px; gap: 20px; }
-  header.site-header .kj-megamenu-panel--text-only { display: block; min-width: 220px; }
-  header.site-header .kj-megamenu-link, header.site-header .kj-megamenu-link * { color: #4a3334; display: block; font-size: 15px; font-weight: 650; letter-spacing: 0; line-height: 1.35; padding: 5px 0; text-decoration: none; white-space: nowrap; }
-  header.site-header .kj-megamenu-heading { color: #991f23; font-size: 13px; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; }
-  header.site-header .kj-megamenu-image img { display: block; width: 190px; height: 150px; object-fit: cover; border-radius: 10px; }
-  header.site-header .bko-container-1 { display: none; }
-  @media (max-width: 991px) {
-    header.site-header .site-header__wrap { display: block; }
-    header.site-header .site-header.site-nav { display: none; }
-  }
-</style>
+
 </head><body><section class="page-wrapper">
 <header class="site-header header" id="lo">
   <div class="kj-mobile-rate-strip">
