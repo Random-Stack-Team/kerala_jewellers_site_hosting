@@ -199,18 +199,7 @@ document.documentElement.classList.add('js-ready');
     }
   };
 
-  const polishBanner2Copy = () => {
-    const copy = new Map([
-      ['Find the wedding jewellery you\'ve always dreamed of.', 'Jewellery for vows, rituals, and every cherished beginning.'],
-      ['Choose from a wide range of certified and authentic jewellery for all occasions.', 'Certified pieces chosen with trust, craft, and quiet elegance.'],
-      ['Step back in time and bring a slice of the bejewelled past to the present.', 'Designs that carry tradition with grace for today.'],
-    ]);
 
-    document.querySelectorAll('.banner-2 .paragraph').forEach((paragraph) => {
-      const current = paragraph.textContent.trim();
-      if (copy.has(current)) paragraph.textContent = copy.get(current);
-    });
-  };
 
   let _rateWired = false;
   const wireRateSelection = () => {
@@ -694,7 +683,7 @@ document.documentElement.classList.add('js-ready');
     equalizeProductDetails();
     normalizeHeroImages();
     renderPlatinumComingSoon();
-    polishBanner2Copy();
+
     addHoverLife();
     reorderProductSections();
     calculatePrice('#goldprice', 14660);
