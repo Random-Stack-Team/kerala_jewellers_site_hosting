@@ -1210,49 +1210,17 @@ textarea.form-input, textarea.form-select {
 
 
 
-.w-tab-menu {
-  position: relative;
-}
 
-.w-tab-link {
-  vertical-align: top;
-  text-align: left;
-  cursor: pointer;
-  color: #222;
-  background-color: #ddd;
-  padding: 9px 30px;
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-}
 
-.w-tab-link.is-current {
-  background-color: #c8c8c8;
-}
 
-.w-tab-link:focus {
-  outline: 0;
-}
 
-.w-tab-content {
-  display: block;
-  position: relative;
-  overflow: hidden;
-}
 
-.w-tab-pane {
-  display: none;
-  position: relative;
-}
 
 .w--tab-active {
   display: block;
 }
 
 @media screen and (max-width: 479px) {
-  .w-tab-link {
-    display: block;
-  }
 }
 
 .w-ix-emptyfix:after {
@@ -2732,11 +2700,6 @@ figcaption {
   font-size: 14px;
 }
 
-.checkout-quantity-wrap {
-  opacity: .6;
-  font-size: 14px;
-  line-height: 26px;
-}
 
 .order-confirmation-header-wrapper {
   font-weight: 100;
