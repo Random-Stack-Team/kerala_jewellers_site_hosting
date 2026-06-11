@@ -49,7 +49,8 @@ header.site-header {
 }
 
 /* Links inside the nav panel */
-.site-nav__panel > .bko-wrap-111-2 > a,
+.site-nav__panel .bko-wrap-111-2 > a,
+.site-nav__panel .bko-wrap-111-2 .div2 > a,
 .site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle > a {
   padding: 10px 20px;
   display: inline-block;
@@ -63,12 +64,14 @@ header.site-header {
   transition: color 0.3s ease;
 }
 
-.site-nav__panel > .bko-wrap-111-2 > a:hover,
+.site-nav__panel .bko-wrap-111-2 > a:hover,
+.site-nav__panel .bko-wrap-111-2 .div2 > a:hover,
 .site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle > a:hover {
   color: #fff5d8;
 }
 
-.site-nav__panel > .bko-wrap-111-2 > a::after,
+.site-nav__panel .bko-wrap-111-2 > a::after,
+.site-nav__panel .bko-wrap-111-2 .div2 > a::after,
 .site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle > a::after {
   content: "";
   position: absolute;
@@ -80,7 +83,8 @@ header.site-header {
   transition: width 0.3s ease, left 0.3s ease;
 }
 
-.site-nav__panel > .bko-wrap-111-2 > a:hover::after,
+.site-nav__panel .bko-wrap-111-2 > a:hover::after,
+.site-nav__panel .bko-wrap-111-2 .div2 > a:hover::after,
 .site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle > a:hover::after {
   width: 80%;
   left: 10%;
@@ -224,10 +228,12 @@ header.site-header {
 
 
 /* Ensure the inner container uses proper max-width and layout */
-.desktop-header .content-container {
+/* Ensure the inner container uses proper max-width and layout */
+header.site-header .desktop-header .site-header__inner .layout-container.content-container {
   width: min(100%, 1440px) !important;
   max-width: 1440px !important;
   margin: 0 auto !important;
+  padding: 0 !important;
 }
 
 .desktop-header .site-header__container {

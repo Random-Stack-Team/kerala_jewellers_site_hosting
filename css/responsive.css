@@ -4031,3 +4031,62 @@ textarea,
     background-color: #d4af37 !important; /* Gold when open */
   }
 }
+
+
+/* ==========================================
+   MOBILE NAVBAR & HAMBURGER OVERRIDES
+   ========================================== */
+@media (max-width: 991px) {
+  header.site-header.header .mobile-nav.site-nav__panel {
+    left: 16px !important;
+    right: 16px !important;
+    width: auto !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+
+  header.site-header.header .mobile-menu-toggle.mobile-menu-button {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    width: 48px !important;
+    height: 48px !important;
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+  }
+
+  header.site-header.header .mobile-menu-toggle__line {
+    display: block !important;
+    width: 28px !important;
+    height: 3px !important;
+    background: #ffffff !important;
+    border-radius: 2px !important;
+    transition: transform 0.25s ease, opacity 0.2s ease !important;
+    transform-origin: center !important;
+  }
+
+  header.site-header.header .mobile-menu-toggle.mobile-menu-button.is-open .mobile-menu-toggle__line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg) !important;
+  }
+
+  header.site-header.header .mobile-menu-toggle.mobile-menu-button.is-open .mobile-menu-toggle__line:nth-child(2) {
+    opacity: 0 !important;
+  }
+
+  header.site-header.header .mobile-menu-toggle.mobile-menu-button.is-open .mobile-menu-toggle__line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg) !important;
+  }
+}
+
+@media (max-width: 425px) {
+  header.site-header.header .mobile-nav.site-nav__panel {
+    left: 12px !important;
+    right: 12px !important;
+  }
+}
