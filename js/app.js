@@ -449,11 +449,11 @@ document.documentElement.classList.add('js-ready');
   const ensureSimpleMegamenus = () => {
     const prefix = getAssetPrefix();
     const basePages = {
-      gold: prefix + 'products',
-      silver: prefix + 'silver-products',
-      diamond: prefix + 'diamonds-products',
-      platinum: prefix + 'coming-soon',
-      scheme: prefix + 'thanga-mazhai'
+      gold: prefix + 'products.html',
+      silver: prefix + 'silver-products.html',
+      diamond: prefix + 'diamonds-products.html',
+      platinum: prefix + 'coming-soon.html',
+      scheme: prefix + 'thanga-mazhai.html'
     };
 
     const staticImages = {

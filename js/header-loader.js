@@ -6,7 +6,7 @@
   const prefix = isSubfolder ? "../" : "";
 
   try {
-    const response = await fetch(prefix + "partials/header.html");
+    const response = await fetch(prefix + "partials/header.html?v=26");
     if (!response.ok) {
       throw new Error("Header fetch failed: " + response.status);
     }
