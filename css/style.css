@@ -22333,7 +22333,10 @@ body {
 .product-header5_product-details .footer-social-block {
   display: none !important;
 }
-\n/* Hide mobile rate strip on desktop */\n.kj-mobile-rate-strip { display: none; }\n
+
+/* Hide mobile rate strip on desktop */
+.kj-mobile-rate-strip { display: none; }
+
 
 /* Final Phase 6 Mobile Navbar Regression Fix */
 @media (max-width: 991px) {
