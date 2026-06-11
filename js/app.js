@@ -653,19 +653,7 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
-  const fixLogoFallbacks = () => {
-    const prefix = getAssetPrefix();
-    const fallback = `${prefix}assets/images/66a8e4c051b2bb6c3fc7e4b8_logo%201.png`;
-    document.querySelectorAll('img').forEach((img) => {
-      const source = img.getAttribute('src') || '';
-      if (/logo|side%20logo|store-logo/i.test(source)) {
-        img.addEventListener('error', () => {
-          img.removeAttribute('srcset');
-          img.src = fallback;
-        }, { once: true });
-      }
-    });
-  };
+
 
   const equalizeProductDetails = () => {
     const imageBox = document.querySelector('.sp-product-image-wrapper');
@@ -702,7 +690,7 @@ document.documentElement.classList.add('js-ready');
     normalizePhoneLinks();
     normalizeProductActions();
     wireEnquiryPage();
-    fixLogoFallbacks();
+
     equalizeProductDetails();
     normalizeHeroImages();
     renderPlatinumComingSoon();
