@@ -1,7 +1,4 @@
 @media (max-width: 991px) {
-}
-
-@media (max-width: 991px) {
 
   .dropdown-list,
   .rate-menu,
@@ -183,7 +180,7 @@
 
 
 
-/* Final phone category strip correction after legacy layout's nested container offsets. */
+
 @media (max-width: 479px) {
   .team5_list {
     margin-left: calc((100vw - 450px) / 2 - 25px) !important;
@@ -196,10 +193,9 @@
 }
 
 /* Keep the mobile drawer anchored to the viewport instead of the menu button container. */
-@media (max-width: 991px) {
-}
 
-/* Live-style mobile rate strip and default compact mobile nav restore. */
+
+
 
 
 
@@ -228,15 +224,13 @@
   }
 }
 
-@media (max-width: 360px) {
-}
+
 
 /* Simple live-site mobile menu content. */
 
 
 /* Final measured mobile/tablet header alignment against live reference. */
-@media (max-width: 991px) {
-}
+
 
 
 
@@ -397,8 +391,8 @@
   height: auto !important;
 }
 
-/* Final mobile nav interaction and hamburger color guard. Loaded after navbar.css. */
-@media (max-width: 991px) {}
+
+
 
 /* Final responsive polish for review carousel, banner-2 slider, and feature-card contrast. */
 @media (max-width: 991px) {
@@ -484,11 +478,10 @@
   }
 }
 
-@media (max-width: 991px) {}
+
 
 /* Final requested hamburger colors: maroon circle, white closed icon, gold open icon. */
-@media (max-width: 991px) {
-}
+
 
 /* Final phone-width carousel alignment fixes. Keep the live-style 1200px review
    stage for tablet/desktop, but center the active review inside small screens. */
@@ -569,7 +562,7 @@
   }
 }
 
-/* Restored banner-2 mobile/tablet swipe gallery. Desktop keeps the original grid. */
+
 @media (max-width: 991px) {
   .banner-2.kj-banner2-gallery {
     align-items: center !important;
@@ -917,7 +910,7 @@
   }
 }
 
-/* Restored clean customer-review carousel treatment: hidden arrows, smooth cards. */
+
 .section-16.kj-review-section,
 .section-16 .kj-review-carousel-shell,
 .section-16 .kj-review-carousel,
@@ -1247,7 +1240,7 @@
 
 
 
-/* --- RESTORED FINALIZED STYLES FOR PRODUCTS, FILTERS AND OTHER POLISH --- */
+
 /* Product listing migration: clean collection toolbar and card selectors. */
 .legacy-filter-hidden {
   display: none !important;
@@ -1494,7 +1487,7 @@
   }
 }
 
-/* Final contrast pass after all mobile overrides. */
+
 .div-block-4612 .hero-split-1 .heading-2-copy,
 .div-block-4612 .hero-split-1 .margin-bottom-24px,
 .div-block-4612 .hero-split-1 .button-3,
@@ -1625,9 +1618,8 @@
   }
 }
 
-/* Absolute final mobile-menu motion override. */
-@media (max-width: 991px) {
-}
+
+
 
 /* Customer review carousel geometry. */
 @media (min-width: 769px) {
@@ -1707,7 +1699,7 @@
   }
 }
 
-/* Final clean product/filter and review overrides. Loaded after style.css. */
+
 .legacy-filter-hidden,
 .product-card.is-filter-hidden {
   display: none !important;
@@ -3107,7 +3099,7 @@ body.legal-page {
   }
 }
 
-/* 4. Product listing tagline overrides in maroon color */
+
 .paragraph-12,
 .paragraph-14,
 .paragraph-16,
@@ -3247,7 +3239,7 @@ body.legal-page {
   font-weight: 700 !important;
 }
 
-/* 9. Global Font Overrides */
+
 body,
 p,
 h1,
@@ -3349,7 +3341,7 @@ textarea,
   font-weight: 700 !important;
 }
 
-/* Enquiry Page Specific overrides to ensure theme styles are respected */
+
 .enquiry-page,
 .enquiry-page * {
   font-family: 'Mulish', sans-serif !important;
@@ -3532,7 +3524,7 @@ textarea,
 
 
 /* Final Phase 6 Mobile Navbar Regression Fix */
-@media (max-width: 991px) {}
+
 
 
 /* Final Phase 6 Mobile Navbar Regression Fix */
@@ -4033,9 +4025,7 @@ textarea,
 }
 
 
-/* ==========================================
-   MOBILE NAVBAR & HAMBURGER OVERRIDES
-   ========================================== */
+
 @media (max-width: 991px) {
   header.site-header.header .mobile-nav.site-nav__panel {
     left: 16px !important;

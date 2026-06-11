@@ -1,5 +1,3 @@
-
-/* Override outer duplicate header wrappers to prevent white backside */
 header.site-header {
   background: transparent !important;
   padding: 0 !important;
