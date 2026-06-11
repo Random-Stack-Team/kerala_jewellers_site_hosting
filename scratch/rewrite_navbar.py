@@ -1,0 +1,166 @@
+navbar_css = """
+/* ==========================================================================
+   DESKTOP NAVBAR MATCHING LIVE SITE
+   ========================================================================== */
+
+/* 1. Desktop Outer Navbar (.navigation-4 equivalent) */
+.desktop-header {
+  z-index: 9;
+  background-color: #991f23; /* Live site has #991F23 injected via specific selectors, applying it cleanly here */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-left: 0;
+  padding: 12px 30px;
+  display: flex;
+  box-shadow: 0 4px 4px rgba(142, 142, 142, 0.58); /* #8e8e8e94 equivalent */
+}
+
+/* Ensure links in the desktop header are white */
+.desktop-header a,
+.desktop-header .rate-toggle {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 2. Desktop Navigation Panel (.nav-menu-5 equivalent) */
+.site-nav__panel {
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  display: flex;
+  position: static;
+}
+
+/* Links inside the nav panel */
+.site-nav__panel > .bko-wrap-111-2 > a,
+.site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle > a {
+  padding: 10px 15px;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+
+.site-nav__panel > .bko-wrap-111-2 > a:hover,
+.site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle > a:hover {
+  opacity: 0.8;
+}
+
+/* 3. Mega Menu Panel (.bko-dropdown-list equivalent) */
+.kj-megamenu-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  
+  /* Live .bko-dropdown-list styles */
+  background: linear-gradient(135deg, rgba(255, 248, 232, 0.96), rgba(255, 255, 255, 0.98) 42%, rgba(255, 244, 244, 0.96)), #fff;
+  border: 1px solid rgba(153, 31, 35, 0.12);
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 22px 50px rgba(60, 22, 0, 0.22), 0 2px 0 rgba(255, 255, 255, 0.8) inset;
+  overflow: hidden;
+  padding: 14px;
+  margin-top: 10px;
+}
+
+/* Hover logic to show mega menu */
+.bko-wrap-111-2:hover .kj-megamenu-dropdown {
+  display: block;
+}
+
+/* 4. Mega Menu Inner Grid (.kj-megamenu-panel equivalent) */
+.kj-megamenu-panel {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) 250px;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+  height: auto;
+  min-height: 228px;
+  padding: 22px 24px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.kj-megamenu-panel--text-only {
+  display: block;
+  min-height: auto;
+  padding: 15px;
+}
+
+.kj-megamenu-heading {
+  color: #210f10;
+  font-weight: 800;
+  margin-bottom: 16px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.kj-megamenu-link {
+  color: #4a3334;
+  display: block;
+  padding: 5px 0;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.kj-megamenu-link:hover {
+  color: #b90000;
+  transform: translateX(4px);
+}
+
+.kj-megamenu-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 5. Rate Dropdown Styles */
+.rate-dropdown {
+  position: relative;
+  margin-right: 20px;
+}
+
+.rate-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid rgba(153, 31, 35, 0.18);
+  border-radius: 4px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+  min-width: 280px;
+  padding: 12px 10px;
+  z-index: 10000;
+}
+
+.rate-dropdown:hover .rate-menu {
+  display: block;
+}
+
+.rate-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  color: #681015;
+  cursor: pointer;
+}
+
+.rate-row:hover {
+  background: rgba(153, 31, 35, 0.05);
+}
+
+/* Mobile defaults (hidden on desktop) */
+.mobile-header,
+.kj-mobile-rate-strip {
+  display: none;
+}
+"""
+
+with open(r'E:\Kerala-Jewellers-final\css\navbar.css', 'w', encoding='utf-8') as f:
+    f.write(navbar_css)
+print('Wrote fresh navbar.css')
