@@ -287,13 +287,15 @@ document.documentElement.classList.add('js-ready');
   };
 
   const normalizeCategory = (value = '') => {
+    if (value == null) return '';
     const compact = String(value)
       .toLowerCase()
       .replace(/&amp;/g, 'and')
       .replace(/[^a-z0-9\s-]/g, ' ')
       .replace(/\s+/g, ' ')
       .trim();
-    if (!compact) return '';
+    if (!compact || compact === 'null' || compact === 'undefined') return '';
+    if (compact === 'all') return 'all';
     const direct = CATEGORY_ALIASES[compact.replace(/\s+/g, '-')];
     if (direct) return direct;
     const tokens = compact.split(/[\s-]+/).filter(Boolean);
@@ -381,28 +383,43 @@ document.documentElement.classList.add('js-ready');
 
     const categories = Array.from(new Set(cards.map((card) => card.dataset.category).filter(Boolean)));
     const categorySelect = toolbar.querySelector('[data-filter-control="category"]');
-    const sortSelect = toolbar.querySelector('[data-filter-control="sort"]');
-    const params = new URLSearchParams(window.location.search);
-    const selectedCategory = normalizeCategory(params.get('category') || categorySelect.value || 'all') || 'all';
-    const selectedSort = sortSelect.value || 'default';
-
-    const selectedOnlyOption = selectedCategory !== 'all' && !categories.includes(selectedCategory)
-      ? [`<option value="${selectedCategory}">${CATEGORY_LABELS[selectedCategory] || selectedCategory.replace(/-/g, ' ')}</option>`]
-      : [];
-    categorySelect.innerHTML = [
-      `<option value="all">${CATEGORY_LABELS.all}</option>`,
-      ...selectedOnlyOption,
-      ...categories.sort().map((category) => `<option value="${category}">${CATEGORY_LABELS[category] || category.replace(/-/g, ' ')}</option>`)
-    ].join('');
-    categorySelect.value = selectedCategory;
-    sortSelect.value = selectedSort;
+    
+    // Populate options only if missing to preserve existing selections
+    if (categorySelect && categorySelect.options.length <= 1) {
+      categorySelect.innerHTML = [
+        `<option value="all">${CATEGORY_LABELS.all}</option>`,
+        ...categories.sort().map((category) => `<option value="${category}">${CATEGORY_LABELS[category] || category.replace(/-/g, ' ')}</option>`)
+      ].join('');
+    }
 
     return toolbar;
   };
 
-  const applyProductFilters = (toolbar, cards) => {
-    const selectedCategory = normalizeCategory(toolbar?.querySelector('[data-filter-control="category"]')?.value || 'all') || 'all';
-    const selectedSort = toolbar?.querySelector('[data-filter-control="sort"]')?.value || 'default';
+  const applyProductFilters = (toolbar, cards, forceCategory = null, forceSort = null) => {
+    const categorySelect = toolbar?.querySelector('[data-filter-control="category"]');
+    const sortSelect = toolbar?.querySelector('[data-filter-control="sort"]');
+
+    if (forceCategory !== null && categorySelect) {
+      let fCat = forceCategory;
+      if (!fCat || fCat === 'null' || fCat === 'undefined' || fCat === 'all') fCat = 'all';
+      if (fCat !== 'all' && !categorySelect.querySelector(`option[value="${fCat}"]`)) {
+        categorySelect.insertAdjacentHTML('beforeend', `<option value="${fCat}">${CATEGORY_LABELS[fCat] || fCat.replace(/-/g, ' ')}</option>`);
+      }
+      categorySelect.value = fCat;
+    }
+    if (forceSort !== null && sortSelect) {
+      let fSort = forceSort;
+      if (!fSort || fSort === 'null' || fSort === 'undefined') fSort = 'default';
+      sortSelect.value = fSort;
+    }
+
+    let rawCategory = categorySelect?.value;
+    if (!rawCategory || rawCategory === 'null' || rawCategory === 'undefined') rawCategory = 'all';
+    const selectedCategory = rawCategory === 'all' ? 'all' : (normalizeCategory(rawCategory) || 'all');
+    
+    let selectedSort = sortSelect?.value || 'default';
+    if (!selectedSort || selectedSort === 'null' || selectedSort === 'undefined') selectedSort = 'default';
+
     let visibleCount = 0;
 
     cards.forEach((card) => {
@@ -431,13 +448,32 @@ document.documentElement.classList.add('js-ready');
       empty.textContent = 'No products match these filters.';
       collection.parentElement.insertBefore(empty, collection.nextSibling);
     }
-    if (empty) empty.hidden = visibleCount !== 0;
+    if (empty) {
+      empty.style.display = visibleCount === 0 ? 'block' : 'none';
+      empty.hidden = visibleCount !== 0;
+    }
 
     const params = new URLSearchParams(window.location.search);
-    if (selectedCategory === 'all') params.delete('category');
-    else params.set('category', selectedCategory);
+    const hashParams = new URLSearchParams(window.location.hash.substring(1));
+    
+    if (!selectedCategory || selectedCategory === 'all' || selectedCategory === 'null' || selectedCategory === 'undefined') {
+      params.delete('category');
+      hashParams.delete('category');
+    } else {
+      params.set('category', selectedCategory);
+      hashParams.set('category', selectedCategory);
+    }
+    
+    if (!selectedSort || selectedSort === 'default' || selectedSort === 'null' || selectedSort === 'undefined') {
+      params.delete('sort');
+    } else {
+      params.set('sort', selectedSort);
+    }
+
     const query = params.toString();
-    const nextUrl = `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash}`;
+    const hashQuery = hashParams.toString();
+    const hashStr = hashQuery ? `#${hashQuery}` : '';
+    const nextUrl = `${window.location.pathname}${query ? `?${query}` : ''}${hashStr}`;
     if (window.location.protocol !== 'file:') {
       window.history.replaceState({}, '', nextUrl);
     }
@@ -449,17 +485,42 @@ document.documentElement.classList.add('js-ready');
     const toolbar = ensureProductFilterToolbar(cards);
     if (!toolbar) return;
 
-    applyProductFilters(toolbar, cards);
+    const params = new URLSearchParams(window.location.search);
+    let catParam = params.get('category');
+    
+    if (!catParam || catParam === 'null' || catParam === 'undefined' || catParam === '') {
+      const hashParams = new URLSearchParams(window.location.hash.substring(1));
+      catParam = hashParams.get('category');
+    }
+
+    if (!catParam || catParam === 'null' || catParam === 'undefined' || catParam === '') {
+      const segments = window.location.pathname.split('/').filter(Boolean);
+      const last = segments.pop() || '';
+      if (last && !last.includes('.html') && !last.includes('products') && last !== 'category') {
+        catParam = last;
+      }
+    }
+
+    const urlCategory = (!catParam || catParam === 'null' || catParam === 'undefined' || catParam === 'all') 
+      ? 'all' 
+      : (normalizeCategory(catParam) || 'all');
+      
+    const sortParam = params.get('sort');
+    const urlSort = (!sortParam || sortParam === 'null' || sortParam === 'undefined') 
+      ? 'default' 
+      : sortParam;
+
+    applyProductFilters(toolbar, cards, urlCategory, urlSort);
+
     if (toolbar.dataset.kjFilterReady === 'true') return;
     toolbar.dataset.kjFilterReady = 'true';
+
     toolbar.addEventListener('change', (event) => {
       if (!event.target.closest('.collection-toolbar__select')) return;
       applyProductFilters(toolbar, cards);
     });
     toolbar.querySelector('.collection-toolbar__reset')?.addEventListener('click', () => {
-      toolbar.querySelector('[data-filter-control="category"]').value = 'all';
-      toolbar.querySelector('[data-filter-control="sort"]').value = 'default';
-      applyProductFilters(toolbar, cards);
+      applyProductFilters(toolbar, cards, 'all', 'default');
     });
   };
 
