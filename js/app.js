@@ -126,16 +126,7 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
-  const closeDropdowns = (scope = document, except = null) => {
-    scope.querySelectorAll('.dropdown.is-open, .rate-dropdown.is-open, .rate-dropdown-container.is-open').forEach((dropdown) => {
-      if (dropdown !== except) {
-        dropdown.classList.remove('is-open');
-        dropdown.querySelector('[aria-expanded]')?.setAttribute('aria-expanded', 'false');
-      }
-    });
-  };
 
-  let _menusWired = false;
   const wireTimelineProgress = () => {
     const timeline = document.querySelector('.timeline');
     if (!timeline) return;
