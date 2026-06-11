@@ -666,10 +666,7 @@ document.documentElement.classList.add('js-ready');
   };
 
   window.initKeralaHeader = () => {
-    requestAnimationFrame(renderRateLabelForCurrentPage);
-    setTimeout(renderRateLabelForCurrentPage, 0);
-    setTimeout(renderRateLabelForCurrentPage, 250);
-    window.addEventListener('load', renderRateLabelForCurrentPage, { once: true });
+    renderRateLabelForCurrentPage();
     wireRateSelection();
     wireTimelineProgress();
     normalizePhoneLinks();
@@ -894,7 +891,6 @@ function restoreEnquiryPrefill() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (typeof window.initKeralaHeader === 'function') window.initKeralaHeader();
   if (typeof initLoupeEffect === 'function') initLoupeEffect();
   if (typeof resetMobileMenuOnDesktop === 'function') resetMobileMenuOnDesktop();
   restoreEnquiryPrefill();
