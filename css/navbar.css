@@ -274,10 +274,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   flex-shrink: 0 !important;
 }
 
-ze: 0.9em;
-  transform: translateY(-2px);
-  font-weight: 300;
-}
+
 
 .rate-chevron::before {
   content: '⌄';
