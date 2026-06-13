@@ -1,3 +1,8 @@
+:root {
+  --font-decorative: "Com 4 Dl", sans-serif;
+  --font-body: Mulish, sans-serif;
+  --font-ui: Montserrat, sans-serif;
+}
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1568,7 +1573,7 @@ textarea.form-input, textarea.form-select {
 
 body {
   color: #1a1b1f;
-  font-family: Montserrat, sans-serif;
+  font-family: var(--font-ui);
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
@@ -1779,7 +1784,7 @@ figcaption {
   background-color: #ad1c20;
   border-radius: 5px;
   padding: 12px 25px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
@@ -1809,7 +1814,7 @@ figcaption {
   border: 1px solid #fff;
   border-radius: 5px;
   padding: 10px 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
 }
 
@@ -1828,7 +1833,7 @@ figcaption {
   border: 1px solid #fff;
   border-radius: 5px;
   padding: 10px 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
 }
 
@@ -2095,7 +2100,7 @@ figcaption {
 
 .text-field.cc-contact-field::placeholder {
   letter-spacing: -.64px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
 }
 
@@ -2992,7 +2997,7 @@ figcaption {
   justify-content: center;
   align-items: center;
   padding: 20px 12px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -3340,7 +3345,7 @@ figcaption {
 .text-block-70 {
   color: #fff;
   letter-spacing: -.56px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
 }
 
@@ -3406,7 +3411,7 @@ figcaption {
   outline: 3px #fff8d2;
   margin-bottom: 20px;
   margin-left: 0;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 25px;
   font-weight: 300;
   line-height: 25px;
@@ -3434,7 +3439,7 @@ figcaption {
 
 .text-block-71 {
   color: var(--mid-meroon);
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 27.556px;
   font-weight: 300;
   line-height: 25px;
@@ -3498,7 +3503,7 @@ figcaption {
   background-clip: padding-box;
   margin-top: 0;
   padding-top: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 40px;
   line-height: 125%;
   position: static;
@@ -3664,7 +3669,7 @@ figcaption {
   margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20px;
   display: flex;
   position: static;
@@ -3727,7 +3732,7 @@ figcaption {
   width: 60%;
   margin-top: 8.5px;
   margin-bottom: 8.5px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 22px;
   font-weight: 300;
 }
@@ -3752,7 +3757,7 @@ figcaption {
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 40px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 65px;
   font-weight: 600;
 }
@@ -3766,7 +3771,7 @@ figcaption {
 .heading-2.gold {
   color: var(--gold);
   padding-right: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-weight: 300;
 }
 
@@ -3788,7 +3793,7 @@ figcaption {
   border-radius: 5px;
   padding-top: 7px;
   padding-bottom: 7px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 27.556px;
   font-weight: 300;
   line-height: 108.871%;
@@ -3931,7 +3936,7 @@ figcaption {
   letter-spacing: -2.6px;
   margin-top: 20px;
   padding-right: 40px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 65px;
   font-weight: 300;
   line-height: 65px;
@@ -3941,7 +3946,7 @@ figcaption {
   color: var(--emarald);
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-weight: 300;
   line-height: 62px;
 }
@@ -3951,7 +3956,7 @@ figcaption {
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-weight: 300;
 }
 
@@ -3983,7 +3988,7 @@ figcaption {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 48px;
   font-weight: 300;
   line-height: 50px;
@@ -4002,7 +4007,7 @@ figcaption {
   letter-spacing: normal;
   text-transform: capitalize;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 25px;
   font-weight: 300;
   line-height: 25px;
@@ -4107,7 +4112,7 @@ figcaption {
 
 .price {
   color: #222;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   display: none;
 }
@@ -4149,7 +4154,7 @@ figcaption {
   border-radius: 5px;
   padding-top: 7px;
   padding-bottom: 7px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
   line-height: 108.871%;
@@ -4186,7 +4191,7 @@ figcaption {
 .price-1 {
   color: #ad1c20;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
   display: flex;
@@ -4210,7 +4215,7 @@ figcaption {
   text-align: center;
   text-transform: uppercase;
   margin-top: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 500;
 }
@@ -4228,14 +4233,14 @@ figcaption {
   text-align: center;
   padding-left: 5px;
   padding-right: 5px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 500;
 }
 
 .text-block-3 {
   color: #000;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
   text-decoration: line-through;
@@ -4261,13 +4266,13 @@ figcaption {
 
 .text-block-7 {
   text-align: center;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18.628px;
 }
 
 .text-block-4 {
   color: red;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
 }
@@ -4367,7 +4372,7 @@ figcaption {
   width: auto;
   padding-top: 7px;
   padding-bottom: 7px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
   line-height: 108.871%;
@@ -4404,7 +4409,7 @@ figcaption {
 .price-2 {
   color: #c31b21;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
   display: none;
@@ -4439,7 +4444,7 @@ figcaption {
 .text-block-6 {
   color: #ffa800;
   text-align: center;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 17px;
 }
 
@@ -4457,7 +4462,7 @@ figcaption {
   letter-spacing: -.843px;
   text-wrap: balance;
   margin-bottom: 24px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 21.08px;
   line-height: 142.315%;
 }
@@ -4469,7 +4474,7 @@ figcaption {
   background-color: #ad1c20;
   border-radius: 5px;
   padding: 12px 26px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 16.703px;
   line-height: 20px;
   transition: all .2s;
@@ -4531,7 +4536,7 @@ figcaption {
   margin-top: 0;
   margin-bottom: 10px;
   padding-left: 5px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 55px;
   font-weight: 300;
   line-height: 80px;
@@ -4657,14 +4662,14 @@ figcaption {
 
 .price-8 {
   color: #222;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
 }
 
 .price-9 {
   color: #c31b21;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
 }
@@ -4680,7 +4685,7 @@ figcaption {
   width: auto;
   padding-top: 7px;
   padding-bottom: 7px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 13.348px;
   font-weight: 700;
   line-height: 108.871%;
@@ -4712,14 +4717,14 @@ figcaption {
 
 .price-8-1 {
   color: #222;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 28.92px;
   font-weight: 300;
 }
 
 .price-8-2 {
   color: #a9a9a9;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 13.348px;
   font-weight: 500;
 }
@@ -4727,7 +4732,7 @@ figcaption {
 .price-8-3 {
   color: #222;
   text-wrap: balance;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 13.348px;
   font-weight: 500;
   line-height: 15px;
@@ -4879,7 +4884,7 @@ figcaption {
 .text-block-45 {
   text-align: center;
   width: 642px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 17px;
 }
 
@@ -4903,7 +4908,7 @@ figcaption {
 .text-field-2::placeholder {
   color: #747474;
   letter-spacing: -.6px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
 }
 
@@ -4912,7 +4917,7 @@ figcaption {
   text-transform: capitalize;
   background-color: #ad1c20;
   height: 45px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
 }
 
@@ -5010,7 +5015,7 @@ figcaption {
   letter-spacing: -.64px;
   margin-top: 0;
   margin-bottom: 6px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
@@ -5028,7 +5033,7 @@ figcaption {
   color: #1f1f1f;
   letter-spacing: -.68px;
   text-transform: capitalize;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 17px;
   font-weight: 600;
   line-height: 16px;
@@ -5037,7 +5042,7 @@ figcaption {
 .text-block-45-copy {
   text-align: center;
   width: 642px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 17px;
 }
 
@@ -5053,7 +5058,7 @@ figcaption {
   width: 54%;
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 38px;
   font-weight: 300;
   line-height: 40px;
@@ -5223,7 +5228,7 @@ figcaption {
   letter-spacing: -.04em;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
@@ -5276,7 +5281,7 @@ figcaption {
   color: #222;
   letter-spacing: -.8px;
   text-wrap: balance;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20px;
   line-height: 150%;
 }
@@ -5362,7 +5367,7 @@ figcaption {
 
 .heading-11 {
   color: var(--dark-gold);
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 55px;
   font-weight: 300;
 }
@@ -5378,7 +5383,7 @@ figcaption {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 85px;
   font-weight: 300;
   line-height: 80px;
@@ -5438,7 +5443,7 @@ figcaption {
 .heading-about2 {
   color: var(--white);
   letter-spacing: -1.92px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 96px;
   font-weight: 300;
   line-height: 88.542%;
@@ -5462,7 +5467,7 @@ figcaption {
   color: var(--white);
   text-align: justify;
   letter-spacing: -.8px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20px;
   line-height: 150%;
 }
@@ -5483,7 +5488,7 @@ figcaption {
 .margin-bottom-24px-3 {
   color: #636363;
   margin-bottom: 24px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18.93px;
 }
 
@@ -5515,7 +5520,7 @@ figcaption {
   color: #d2aa02;
   text-align: left;
   letter-spacing: -1px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 25px;
   font-weight: 700;
 }
@@ -5561,7 +5566,7 @@ figcaption {
 
 .heading-13 {
   color: var(--dark-gold);
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 55px;
   font-weight: 300;
 }
@@ -5577,7 +5582,7 @@ figcaption {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 85px;
   font-weight: 300;
   line-height: 80px;
@@ -5594,7 +5599,7 @@ figcaption {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 55px;
   font-weight: 300;
   line-height: 80px;
@@ -5603,7 +5608,7 @@ figcaption {
 .text-size-medium-12 {
   color: #636363;
   letter-spacing: -.872px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   line-height: 150%;
 }
@@ -5620,7 +5625,7 @@ figcaption {
 .list-item-4 {
   letter-spacing: -.872px;
   margin-bottom: 0;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 21.8px;
   list-style-type: none;
 }
@@ -5662,7 +5667,7 @@ figcaption {
   background-color: #ad1c20;
   border-radius: 5px;
   padding: 12px 25px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   line-height: 20px;
   transition: all .2s;
@@ -5706,7 +5711,7 @@ figcaption {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 5px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 55px;
   font-weight: 300;
   line-height: 100px;
@@ -5743,7 +5748,7 @@ figcaption {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 45px;
   font-weight: 300;
   line-height: 40px;
@@ -5832,7 +5837,7 @@ figcaption {
   width: 50%;
   margin-top: 18px;
   margin-bottom: 18px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20.667px;
   font-weight: 400;
   line-height: 25px;
@@ -5845,7 +5850,7 @@ figcaption {
   width: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 103.333px;
   font-weight: 300;
   line-height: 100px;
@@ -5892,7 +5897,7 @@ figcaption {
   border: 1px solid #fff;
   border-radius: 5px;
   padding: 10px 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
 }
 
@@ -5932,7 +5937,7 @@ figcaption {
   background-color: #9e5500;
   border-radius: 5px;
   padding: 12px 25px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 27.556px;
   font-weight: 300;
   line-height: 20px;
@@ -5962,7 +5967,7 @@ figcaption {
   border: 1px solid #fff;
   border-radius: 5px;
   padding: 10px 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
 }
 
@@ -6008,7 +6013,7 @@ figcaption {
   border: 1px solid #fff;
   border-radius: 5px;
   padding: 10px 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
 }
 
@@ -6053,7 +6058,7 @@ figcaption {
   text-transform: capitalize;
   text-wrap: balance;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 24px;
   font-weight: 300;
   line-height: 25px;
@@ -6119,7 +6124,7 @@ figcaption {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 78px;
   font-weight: 300;
   line-height: 80px;
@@ -6133,7 +6138,7 @@ figcaption {
   letter-spacing: -1px;
   text-transform: capitalize;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 25px;
   font-weight: 500;
   line-height: 25px;
@@ -6148,7 +6153,7 @@ figcaption {
   text-wrap: balance;
   width: 100%;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 32px;
   font-style: italic;
   font-weight: 300;
@@ -6244,7 +6249,7 @@ figcaption {
 
 .text-size-small {
   color: #898989;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   line-height: 23px;
 }
@@ -6339,7 +6344,7 @@ figcaption {
   color: var(--gold);
   letter-spacing: -.827px;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20.667px;
   font-weight: 400;
   line-height: 25px;
@@ -6351,7 +6356,7 @@ figcaption {
   text-transform: none;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 103.333px;
   font-weight: 300;
   line-height: 100px;
@@ -6363,7 +6368,7 @@ figcaption {
   color: var(--gold);
   letter-spacing: -.827px;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20.667px;
   font-weight: 400;
   line-height: 25px;
@@ -6415,7 +6420,7 @@ figcaption {
   color: var(--gold);
   letter-spacing: -.827px;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20.667px;
   font-weight: 400;
   line-height: 25px;
@@ -6440,7 +6445,7 @@ figcaption {
   text-wrap: balance;
   width: 100%;
   margin-bottom: 0;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 32px;
   font-style: italic;
   font-weight: 400;
@@ -6532,7 +6537,7 @@ figcaption {
   letter-spacing: -.64px;
   white-space: nowrap;
   margin-right: 1rem;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 70.078%;
 }
@@ -6678,14 +6683,14 @@ figcaption {
 .text-block-75 {
   color: #a9a9a9;
   letter-spacing: -.64px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   line-height: 70.078%;
 }
 
 .text-block-76 {
   color: #a9a9a9;
   letter-spacing: -.64px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 70.078%;
 }
@@ -6700,7 +6705,7 @@ figcaption {
   width: auto;
   padding-top: 7px;
   padding-bottom: 7px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
   line-height: 108.871%;
@@ -6791,14 +6796,14 @@ figcaption {
 
 .price-14 {
   color: #222;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
 }
 
 .price-15 {
   color: #ad1c20;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
   display: none;
@@ -6845,7 +6850,7 @@ figcaption {
   width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 80px;
   font-weight: 300;
   line-height: 100%;
@@ -6861,7 +6866,7 @@ figcaption {
   letter-spacing: -.827px;
   width: 80%;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20.667px;
   font-weight: 400;
   line-height: 25px;
@@ -6874,7 +6879,7 @@ figcaption {
   background-color: #900000;
   border-radius: 5px;
   padding: 12px 25px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
@@ -6904,7 +6909,7 @@ figcaption {
   border: 1px solid #fff;
   border-radius: 5px;
   padding: 10px 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
 }
 
@@ -6940,7 +6945,7 @@ figcaption {
 .text-block-20 {
   color: #fff8d2;
   text-transform: capitalize;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 27.556px;
   font-weight: 300;
 }
@@ -6999,7 +7004,7 @@ figcaption {
   text-transform: capitalize;
   width: 100%;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 32px;
   font-style: italic;
   font-weight: 400;
@@ -7027,7 +7032,7 @@ figcaption {
   width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 103.333px;
   font-weight: 300;
   line-height: 100px;
@@ -7039,7 +7044,7 @@ figcaption {
   letter-spacing: -.827px;
   width: 80%;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20.667px;
   font-weight: 400;
   line-height: 25px;
@@ -7052,7 +7057,7 @@ figcaption {
 .text-block-21 {
   color: var(--meron);
   text-transform: capitalize;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 27.556px;
   font-weight: 300;
 }
@@ -7064,7 +7069,7 @@ figcaption {
   text-transform: uppercase;
   border-radius: 5px;
   padding: 12px 25px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
@@ -7094,7 +7099,7 @@ figcaption {
   border: 1px solid #fff;
   border-radius: 5px;
   padding: 10px 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
 }
 
@@ -7135,7 +7140,7 @@ figcaption {
   text-transform: capitalize;
   width: 100%;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 32px;
   font-style: italic;
   font-weight: 400;
@@ -7219,7 +7224,7 @@ figcaption {
   letter-spacing: -.827px;
   width: 80%;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20.667px;
   font-weight: 400;
   line-height: 25px;
@@ -7232,7 +7237,7 @@ figcaption {
   background-color: #900000;
   border-radius: 5px;
   padding: 12px 25px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
@@ -7262,7 +7267,7 @@ figcaption {
   border: 1px solid #fff;
   border-radius: 5px;
   padding: 10px 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
 }
 
@@ -7298,7 +7303,7 @@ figcaption {
 .text-block-24 {
   color: #fff8d2;
   text-transform: capitalize;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 27.556px;
   font-weight: 300;
 }
@@ -7309,7 +7314,7 @@ figcaption {
   text-transform: none;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 80px;
   font-weight: 300;
   line-height: 100%;
@@ -7325,7 +7330,7 @@ figcaption {
   color: var(--gold);
   letter-spacing: -.827px;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20.667px;
   font-weight: 400;
   line-height: 25px;
@@ -7338,7 +7343,7 @@ figcaption {
   text-transform: uppercase;
   border-radius: 5px;
   padding: 12px 25px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
@@ -7368,7 +7373,7 @@ figcaption {
   border: 1px solid #fff;
   border-radius: 5px;
   padding: 10px 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
 }
 
@@ -7404,7 +7409,7 @@ figcaption {
 .text-block-25 {
   color: var(--meron);
   text-transform: capitalize;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 27.556px;
   font-weight: 300;
 }
@@ -7417,7 +7422,7 @@ figcaption {
   text-transform: capitalize;
   width: 100%;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 32px;
   font-style: italic;
   font-weight: 400;
@@ -7443,7 +7448,7 @@ figcaption {
   color: #000;
   text-align: justify;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   line-height: 166.667%;
   display: inline;
@@ -7554,7 +7559,7 @@ figcaption {
   margin-top: 0;
   margin-bottom: 10px;
   padding-left: 10px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 102.409px;
   font-weight: 300;
   line-height: 140px;
@@ -7583,7 +7588,7 @@ figcaption {
   width: 100%;
   margin-top: 0;
   margin-bottom: 75px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 32px;
   font-style: italic;
   font-weight: 300;
@@ -7618,7 +7623,7 @@ figcaption {
   margin-top: 0;
   margin-bottom: 10px;
   padding-left: 10px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 32px;
   font-weight: 300;
   line-height: 93.75%;
@@ -8000,7 +8005,7 @@ figcaption {
   letter-spacing: -.72px;
   text-transform: capitalize;
   margin-bottom: .5em;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -8040,7 +8045,7 @@ figcaption {
   text-transform: capitalize;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 1.3em;
   font-style: normal;
   font-weight: 700;
@@ -8316,7 +8321,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   line-height: 1.3em;
@@ -8489,7 +8494,7 @@ figcaption {
 .bko-dropdown-1-2 {
   text-align: center;
   letter-spacing: -.8px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20px;
   font-style: normal;
 }
@@ -8600,7 +8605,7 @@ figcaption {
   text-transform: capitalize;
   width: 100%;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 32px;
   font-style: italic;
   font-weight: 400;
@@ -8615,7 +8620,7 @@ figcaption {
   text-transform: capitalize;
   width: 100%;
   margin-bottom: 0;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 32px;
   font-style: italic;
   font-weight: 400;
@@ -8638,7 +8643,7 @@ figcaption {
   text-transform: none;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 103.333px;
   font-weight: 300;
   line-height: 100px;
@@ -8673,7 +8678,7 @@ figcaption {
 
 .goldlink {
   color: #000;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   text-decoration: none;
 }
 
@@ -8684,7 +8689,7 @@ figcaption {
 .diamondlink {
   color: #000;
   letter-spacing: -.8px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20em;
   text-decoration: none;
 }
@@ -8733,7 +8738,7 @@ figcaption {
 .platinumlink {
   color: #000;
   letter-spacing: -.8px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20em;
   text-decoration: none;
 }
@@ -8760,7 +8765,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   line-height: 1.3em;
@@ -8776,7 +8781,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   line-height: 1.3em;
@@ -8823,7 +8828,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   line-height: 1.3em;
@@ -9028,7 +9033,7 @@ figcaption {
   grid-row-gap: 10px;
   letter-spacing: -.56px;
   flex-flow: column;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   display: flex;
 }
@@ -9161,7 +9166,7 @@ figcaption {
 .bko-dropdown-1-3 {
   text-align: center;
   letter-spacing: -.8px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20px;
   font-style: normal;
 }
@@ -9239,7 +9244,7 @@ figcaption {
   grid-row-gap: 10px;
   letter-spacing: -.56px;
   flex-flow: column;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   display: flex;
 }
@@ -9250,7 +9255,7 @@ figcaption {
   text-transform: capitalize;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 1.3em;
   font-style: normal;
   font-weight: 700;
@@ -9467,7 +9472,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   line-height: 28px;
@@ -9479,7 +9484,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   line-height: 28px;
@@ -9492,7 +9497,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   line-height: 28px;
@@ -9504,7 +9509,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   line-height: 28px;
@@ -9516,7 +9521,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -9525,7 +9530,7 @@ figcaption {
 }
 
 .bko-text-12-chain-diamond-copy {
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   text-decoration: none;
@@ -9537,7 +9542,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   line-height: 28px;
@@ -9545,37 +9550,37 @@ figcaption {
 }
 
 .bko-text-12-drops-diamond-copy {
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-style: normal;
   display: none;
 }
 
 .locket-diamond {
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
 }
 
 .bko-text-12-drops-locket {
   color: #283338;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
 }
 
 .bko-text-12-drops-locket-copy {
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   display: none;
 }
 
 .bko-text-12-rings-locket {
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
 }
 
 .bko-text-12-rings-locket-copy {
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   text-decoration: none;
@@ -9596,14 +9601,14 @@ figcaption {
 
 .bko-text-12-studs-diamond, .bko-text-12-drops-locket-copy {
   color: #283338;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
 }
 
 .bko-text-12-studs-diamond-copy {
   color: #283338;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   text-decoration: none;
@@ -9844,7 +9849,7 @@ figcaption {
   border: 0 solid #1b1b1b;
   border-radius: 5px;
   padding: 14px 31px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 13px;
   font-weight: 700;
   line-height: 184.615%;
@@ -10077,7 +10082,7 @@ figcaption {
 .text-block-77 {
   color: var(--grey);
   letter-spacing: -.56px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20px;
   line-height: 125%;
 }
@@ -10172,7 +10177,7 @@ figcaption {
 .text-block-78 {
   color: var(--meron);
   letter-spacing: -.64px;
-  font-family: Montserrat, sans-serif;
+  font-family: var(--font-ui);
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
@@ -10181,7 +10186,7 @@ figcaption {
 .text-block-79 {
   color: #30373e;
   letter-spacing: -.64px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   line-height: 150%;
 }
 
@@ -10212,7 +10217,7 @@ figcaption {
   text-transform: none;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 80px;
   font-weight: 300;
   line-height: 100%;
@@ -10289,7 +10294,7 @@ figcaption {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 78px;
   font-weight: 300;
   line-height: 80px;
@@ -10303,7 +10308,7 @@ figcaption {
   text-transform: capitalize;
   width: 100%;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 32px;
   font-style: italic;
   font-weight: 300;
@@ -10405,7 +10410,7 @@ figcaption {
 .text-field-12::placeholder {
   color: #878787;
   letter-spacing: -.64px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
 }
 
 .text-field-12.cc-subscribe-text-field {
@@ -10424,7 +10429,7 @@ figcaption {
 
 .text-field-12.cc-contact-field::placeholder {
   letter-spacing: -.64px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
 }
 
@@ -10464,7 +10469,7 @@ figcaption {
 
 .test12 {
   letter-spacing: -.64px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
@@ -10476,7 +10481,7 @@ figcaption {
   border-radius: 5px;
   margin-top: 20px;
   padding: 12px 25px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
@@ -10506,7 +10511,7 @@ figcaption {
   border: 1px solid #fff;
   border-radius: 5px;
   padding: 10px 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
 }
 
@@ -10619,7 +10624,7 @@ figcaption {
 
 .price-122 {
   color: #222;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
 }
 
@@ -10634,7 +10639,7 @@ figcaption {
 .price-1222 {
   color: #ad1c20;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
 }
@@ -10648,7 +10653,7 @@ figcaption {
   border-radius: 5px;
   padding-top: 7px;
   padding-bottom: 7px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
   line-height: 108.871%;
@@ -10701,7 +10706,7 @@ figcaption {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 48px;
   font-weight: 300;
   line-height: 50px;
@@ -10726,7 +10731,7 @@ figcaption {
   letter-spacing: -1px;
   text-transform: capitalize;
   margin-bottom: 20px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 25px;
   font-weight: 500;
   line-height: 25px;
@@ -10755,7 +10760,7 @@ figcaption {
   color: #d2ab00;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 45px;
   font-weight: 300;
 }
@@ -10782,7 +10787,7 @@ figcaption {
 .category-link {
   justify-content: space-between;
   align-items: center;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   text-decoration: none;
   display: flex;
@@ -11157,7 +11162,7 @@ figcaption {
 .pricess, .price212 {
   color: #ad1c20;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
 }
@@ -11192,7 +11197,7 @@ figcaption {
 .price-1225 {
   color: #ad1c20;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
 }
@@ -11207,7 +11212,7 @@ figcaption {
   width: auto;
   padding-top: 7px;
   padding-bottom: 7px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
   line-height: 108.871%;
@@ -11226,7 +11231,7 @@ figcaption {
 .price-122121 {
   color: #ad1c20;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
 }
@@ -11238,7 +11243,7 @@ figcaption {
 .bko-dropdown-1-3121 {
   text-align: center;
   letter-spacing: -.8px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 20px;
   font-style: normal;
 }
@@ -11950,7 +11955,7 @@ figcaption {
   letter-spacing: -.04em;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 300;
   line-height: 120%;
@@ -12005,7 +12010,7 @@ figcaption {
   align-items: flex-end;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 32px;
   font-weight: 500;
   line-height: 100%;
@@ -12083,7 +12088,7 @@ figcaption {
   align-items: flex-end;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 32px;
   font-weight: 600;
   line-height: 100%;
@@ -12109,7 +12114,7 @@ figcaption {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 55px;
   font-weight: 300;
   line-height: 120%;
@@ -12117,7 +12122,7 @@ figcaption {
 
 .weght {
   color: #222;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   display: none;
 }
@@ -12148,7 +12153,7 @@ figcaption {
 
 .price1214 {
   color: #222;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   display: none;
 }
@@ -12156,7 +12161,7 @@ figcaption {
 .pricesymbol {
   color: #ad1c20;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
 }
@@ -12208,7 +12213,7 @@ figcaption {
 .price1212 {
   color: #ad1c20;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
 }
@@ -12222,7 +12227,7 @@ figcaption {
 .price-weight, .price-weight1212 {
   color: #ad1c20;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
   display: block;
@@ -12241,7 +12246,7 @@ figcaption {
 .pricepocopy {
   color: #ad1c20;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
   display: block;
@@ -12249,7 +12254,7 @@ figcaption {
 
 .weight {
   color: #222;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   display: none;
 }
@@ -12257,7 +12262,7 @@ figcaption {
 .price-15333 {
   color: #ad1c20;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
   display: block;
@@ -12290,7 +12295,7 @@ figcaption {
   grid-row-gap: 5px;
   letter-spacing: -.56px;
   flex-flow: column;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   display: flex;
 }
@@ -12345,7 +12350,7 @@ figcaption {
 .price-122777, .price-122212121212 {
   color: #ad1c20;
   letter-spacing: -.72px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
 }
@@ -12395,7 +12400,7 @@ figcaption {
   border-radius: 5px;
   padding-top: 7px;
   padding-bottom: 7px;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 27.556px;
   font-weight: 300;
   line-height: 108.871%;
@@ -12556,7 +12561,7 @@ figcaption {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 48px;
   font-weight: 300;
   line-height: 50px;
@@ -12606,7 +12611,7 @@ figcaption {
   color: #636363;
   text-wrap: balance;
   padding-bottom: 0;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   line-height: 23px;
 }
@@ -12766,7 +12771,7 @@ figcaption {
   letter-spacing: -.68px;
   text-transform: capitalize;
   margin-bottom: 12px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 17px;
   font-weight: 600;
   line-height: 16px;
@@ -12943,7 +12948,7 @@ figcaption {
   margin-bottom: 10px;
   padding-top: 0;
   padding-bottom: 0;
-  font-family: "Com 4 Dl", sans-serif;
+  font-family: var(--font-decorative);
   font-size: 70px;
   font-weight: 300;
   line-height: 100px;
@@ -12996,7 +13001,7 @@ figcaption {
   width: auto;
   padding-top: 7px;
   padding-bottom: 7px;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
   line-height: 108.871%;
@@ -13056,7 +13061,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-style: normal;
   line-height: 1.3em;
@@ -13103,7 +13108,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   font-style: normal;
   line-height: 1.3em;
@@ -13116,7 +13121,7 @@ figcaption {
   letter-spacing: -.56px;
   text-transform: capitalize;
   white-space: break-spaces;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   font-style: normal;
   line-height: 1.3em;
@@ -13134,7 +13139,7 @@ figcaption {
   letter-spacing: -.04em;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Mulish, sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 300;
   line-height: 120%;
@@ -14645,7 +14650,7 @@ figcaption {
 
   .center-text-banner-blog {
     width: auto;
-    font-family: Mulish, sans-serif;
+    font-family: var(--font-body);
     line-height: 20px;
   }
 
@@ -21845,4 +21850,386 @@ body {
   header.site-header.header .mobile-nav .kj-mobile-menu-image {
     display: none !important;
   }
+}
+\n
+/* ==================================================
+   PREMIUM CONTACT PAGE REDESIGN
+   ================================================== */
+.premium-contact-page {
+  background-color: #fcfcfc; /* Light luxury background */
+  font-family: var(--font-family-base, 'Mulish', sans-serif);
+  padding-bottom: 60px;
+  font-style: normal !important;
+}
+
+.premium-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HERO SECTION */
+.premium-contact-hero {
+  background: #ffffff;
+  padding: 60px 0 40px;
+  text-align: center;
+  border-bottom: 1px solid rgba(200, 155, 60, 0.2);
+  margin-bottom: 40px;
+}
+
+.premium-contact-title {
+  color: #991F23;
+  font-family: var(--font-decorative);
+  font-style: normal;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.premium-contact-subtitle {
+  color: #991F23;
+  font-family: var(--font-decorative);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* MAIN CONTACT GRID */
+.premium-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: start;
+}
+
+/* Reorder on desktop so Left Card is first visually */
+@media screen and (min-width: 992px) {
+  .premium-form-wrapper {
+    order: 2;
+  }
+  .premium-info-wrapper {
+    order: 1;
+  }
+}
+
+.premium-contact-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(153, 31, 35, 0.05); /* Subtle maroon shadow */
+  border: 1px solid rgba(200, 155, 60, 0.1);
+}
+
+.premium-card-title {
+  color: #991F23;
+  font-family: var(--font-decorative);
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+/* INFO LIST */
+.premium-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+
+.premium-info-list li {
+  margin-bottom: 16px;
+  color: #444444;
+  font-size: 15px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.premium-info-list li strong {
+  color: #991F23;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.premium-info-list a {
+  color: #c89b3c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.premium-info-list a:hover {
+  color: #991F23;
+}
+
+/* SOCIAL LINKS */
+.premium-social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.premium-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #991F23;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.premium-social-links a svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.premium-social-links a:hover {
+  background: #c89b3c;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(200, 155, 60, 0.3);
+}
+
+/* FORM OVERRIDES */
+.premium-form-wrapper .get-in-touch-form-wrap {
+  width: 100%;
+}
+
+.premium-form-wrapper .text-field {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.premium-form-wrapper .text-field:focus {
+  border-color: #c89b3c;
+  outline: none;
+}
+
+.btn-solid-maroon-submit {
+  background-color: #991F23;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-solid-maroon-submit:hover {
+  background-color: #7a181c;
+  box-shadow: 0 4px 12px rgba(153, 31, 35, 0.2);
+}
+
+.contact-info-note {
+  font-size: 13px;
+  color: #777777;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* BRANCH CARDS */
+.premium-branches-section {
+  padding-top: 20px;
+}
+
+.premium-branches-title {
+  color: #991F23;
+  font-family: var(--font-decorative);
+  font-style: normal;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.premium-branches-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.premium-branch-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  border: 1px solid rgba(200, 155, 60, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.premium-branch-card h4 {
+  color: #991F23;
+  font-family: var(--font-decorative);
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.branch-address {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.branch-phone {
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.branch-phone a {
+  color: #991F23;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.branch-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.branch-actions a {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold {
+  border: 1px solid #c89b3c;
+  color: #c89b3c !important;
+  background: transparent;
+}
+
+.btn-outline-gold:hover {
+  background: rgba(200, 155, 60, 0.05);
+}
+
+.btn-solid-maroon {
+  background: #991F23;
+  color: #ffffff !important;
+  border: 1px solid #991F23;
+}
+
+.btn-solid-maroon:hover {
+  background: #7a181c;
+  border-color: #7a181c;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 991px) {
+  .premium-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .premium-branches-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* MAP EMBEDS */
+.premium-map-embed {
+  width: 100%;
+  height: 220px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(200, 155, 60, 0.2);
+  margin-top: 24px;
+}
+
+.premium-map-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(10%) contrast(110%);
+}
+
+.branch-map-embed {
+  width: 100%;
+  height: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(200, 155, 60, 0.15);
+  margin: 16px 0;
+}
+
+.branch-map-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(10%) contrast(110%);
+}
+\n
+/* ==================================================
+   TYPOGRAPHY STANDARDIZATION PLAN (PHASE T3 & T4)
+   ================================================== */
+
+/* Phase T3: Decorative Role */
+h1, h2, h3, 
+.hero-title, .collection-title, .heading-center, 
+.heading-center-14, .premium-contact-title, .premium-card-title, 
+.premium-branches-title, .premium-branch-card h4 {
+  font-family: var(--font-decorative);
+}
+
+/* Phase T3: Body Role */
+p, .paragraph, .text-size-small, .product-description, 
+address, form, input, textarea, .contact-info-note,
+.premium-info-list, .branch-address, .branch-phone {
+  font-family: var(--font-body);
+}
+
+/* Phase T3: UI Role */
+.nav-link, nav a, .navbar-link, .nav-menu,
+button, .button, .btn-solid-maroon, .btn-outline-gold,
+select, .dropdown, .filter, .w-button {
+  font-family: var(--font-ui);
+}
+
+/* Phase T4: Footer Typography Fix */
+.footer-container h1, .footer-container h2, .footer-container h3, 
+.footer-container h4, .footer-container h5, .footer-heading {
+  font-family: var(--font-ui) !important;
+  font-weight: 600;
+}
+
+.footer-container, .footer-container p, .footer-container a, 
+.footer-container li, .footer-container address, .footer-body-text {
+  font-family: var(--font-body) !important;
+}
+
+.footer-container .branch-name {
+  font-family: var(--font-ui) !important;
+  font-weight: 600;
 }
