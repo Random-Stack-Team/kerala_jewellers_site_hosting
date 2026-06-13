@@ -535,5 +535,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('resize', refreshBanner2Sliders);
 
-  
 });

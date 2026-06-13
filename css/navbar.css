@@ -48,9 +48,9 @@ header.site-header {
 }
 
 /* Links inside the nav panel */
-.site-nav__panel .bko-wrap-111-2 > a,
-.site-nav__panel .bko-wrap-111-2 .div2 > a,
-.site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle > a {
+.site-nav__panel .bko-wrap-111-2>a,
+.site-nav__panel .bko-wrap-111-2 .div2>a,
+.site-nav__panel>.bko-wrap-111-2>.dropdown>.dropdown-toggle>a {
   white-space: nowrap !important;
   padding: 10px 20px;
   display: inline-block;
@@ -64,15 +64,15 @@ header.site-header {
   transition: color 0.3s ease;
 }
 
-.site-nav__panel .bko-wrap-111-2 > a:hover,
-.site-nav__panel .bko-wrap-111-2 .div2 > a:hover,
-.site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle > a:hover {
+.site-nav__panel .bko-wrap-111-2>a:hover,
+.site-nav__panel .bko-wrap-111-2 .div2>a:hover,
+.site-nav__panel>.bko-wrap-111-2>.dropdown>.dropdown-toggle>a:hover {
   color: #fff5d8;
 }
 
-.site-nav__panel .bko-wrap-111-2 > a::after,
-.site-nav__panel .bko-wrap-111-2 .div2 > a::after,
-.site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle > a::after {
+.site-nav__panel .bko-wrap-111-2>a::after,
+.site-nav__panel .bko-wrap-111-2 .div2>a::after,
+.site-nav__panel>.bko-wrap-111-2>.dropdown>.dropdown-toggle>a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -83,9 +83,9 @@ header.site-header {
   transition: width 0.3s ease, left 0.3s ease;
 }
 
-.site-nav__panel .bko-wrap-111-2 > a:hover::after,
-.site-nav__panel .bko-wrap-111-2 .div2 > a:hover::after,
-.site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle > a:hover::after {
+.site-nav__panel .bko-wrap-111-2>a:hover::after,
+.site-nav__panel .bko-wrap-111-2 .div2>a:hover::after,
+.site-nav__panel>.bko-wrap-111-2>.dropdown>.dropdown-toggle>a:hover::after {
   width: 80%;
   left: 10%;
 }
@@ -175,6 +175,7 @@ header.site-header {
   color: #991f23 !important;
   transform: translateX(4px) !important;
 }
+
 .kj-megamenu-image img {
   width: 100%;
   height: auto;
@@ -275,15 +276,9 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 }
 
 
-
-.rate-chevron::before {
-  content: '⌄';
-}
-
-/* Regression Fix: Restore Rate Dropdown Arrow */
 .rate-chevron {
   width: 28px;
-  height: 28px;
+  height: 34px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;

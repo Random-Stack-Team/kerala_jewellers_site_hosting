@@ -126,7 +126,6 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
-
   const wireTimelineProgress = () => {
     const timeline = document.querySelector('.timeline');
     if (!timeline) return;
@@ -198,8 +197,6 @@ document.documentElement.classList.add('js-ready');
       `);
     }
   };
-
-
 
   let _rateWired = false;
   const wireRateSelection = () => {
@@ -536,8 +533,6 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
-
-
   const normalizePhoneLinks = () => {
     document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
       const visibleText = link.textContent.replace(/\s+/g, ' ').trim();
@@ -638,8 +633,6 @@ document.documentElement.classList.add('js-ready');
     });
   };
 
-
-
   const equalizeProductDetails = () => {
     const imageBox = document.querySelector('.sp-product-image-wrapper');
     const details = document.querySelector('.product-header4_product-details');
@@ -677,7 +670,6 @@ document.documentElement.classList.add('js-ready');
     normalizeHeroImages();
     renderPlatinumComingSoon();
 
-
     reorderProductSections();
     calculatePrice('#goldprice', 13665);
     calculatePrice('#goldprices', 13665);
@@ -685,7 +677,6 @@ document.documentElement.classList.add('js-ready');
     initProductFilters();
   }; // end window.initKeralaHeader
 })();
-
 
 /* --- TRUE LOUPE ZOOM EFFECT --- */
 
@@ -766,48 +757,6 @@ document.documentElement.classList.add('js-ready');
   });
 } // end initLoupeEffect
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener("click", function (event) {
   const button = event.target.closest(".mobile-menu-toggle.mobile-menu-button");
   if (!button) return;
@@ -832,7 +781,6 @@ document.addEventListener("click", function (event) {
     button.setAttribute("aria-expanded", "true");
   }
 }, true);
-
 
 /* --- MOBILE NAVBAR DESKTOP RESET --- */
 function resetMobileMenuOnDesktop() {
