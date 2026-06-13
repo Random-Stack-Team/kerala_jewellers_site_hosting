@@ -2,10 +2,10 @@ document.documentElement.classList.add('js-ready');
 
 (() => {
   const METAL_RATES = [
-    { label: 'GOLD 22 KT/1g - Rs. 14660', shortLabel: 'GOLD 22 KT/1g - Rs. 14660', icon: 'assets/coin/gold coin.png', metal: 'gold', page: '' },
-    { label: 'GOLD 18 KT/1g - Rs. 12003', shortLabel: 'GOLD 18 KT/1g - Rs. 12003', icon: 'assets/coin/gold coin.png', metal: 'gold', page: '' },
-    { label: 'PLATINUM 1g - Rs. 7901', shortLabel: 'PLATINUM 1g - Rs. 7901', icon: 'assets/coin/Platinum Coin.png', metal: 'platinum', page: '' },
-    { label: 'SILVER 1g - Rs. 290', shortLabel: 'SILVER 1g - Rs. 290', icon: 'assets/coin/silver coin.png', metal: 'silver', page: '' }
+    { label: 'GOLD 22 KT/1g - Rs. 13665', shortLabel: 'GOLD 22 KT/1g - Rs. 13665', icon: 'assets/coin/gold coin.png', metal: 'gold', page: '' },
+    { label: 'GOLD 18 KT/1g - Rs. 11610', shortLabel: 'GOLD 18 KT/1g - Rs. 11610', icon: 'assets/coin/gold coin.png', metal: 'gold', page: '' },
+    { label: 'PLATINUM 1g - Rs. 5248', shortLabel: 'PLATINUM 1g - Rs. 5248', icon: 'assets/coin/Platinum Coin.png', metal: 'platinum', page: '' },
+    { label: 'SILVER 1g - Rs. 270', shortLabel: 'SILVER 1g - Rs. 270', icon: 'assets/coin/silver coin.png', metal: 'silver', page: '' }
   ];
 
   const getAssetPrefix = () => {
@@ -679,9 +679,9 @@ document.documentElement.classList.add('js-ready');
 
 
     reorderProductSections();
-    calculatePrice('#goldprice', 14660);
-    calculatePrice('#goldprices', 14660);
-    calculatePrice('#silverpricesssproduct', 290);
+    calculatePrice('#goldprice', 13665);
+    calculatePrice('#goldprices', 13665);
+    calculatePrice('#silverpricesssproduct', 270);
     initProductFilters();
   }; // end window.initKeralaHeader
 })();
