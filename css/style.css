@@ -2325,16 +2325,7 @@ figcaption {
   margin-top: 20px;
 }
 
-.footer {
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  grid-template: ". . . . ."
-    ". . . . ."
-    / 2fr 1fr 1fr 1.25fr 1fr;
-  place-items: start;
-  padding-top: 120px;
-  padding-bottom: 60px;
-}
+
 
 .made-with-builder {
   opacity: .5;
@@ -15249,13 +15240,7 @@ figcaption {
     max-width: 470px;
   }
 
-  .footer {
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
-    display: flex;
-  }
+  
 
   .about-quote {
     width: 80%;
@@ -21239,4 +21224,36 @@ body .premium-branches-title {
   font-weight: 700;
   letter-spacing: 0.5px;
   font-style: normal;
+}
+
+.premium-footer-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 15px;
+}
+
+.premium-footer-features-list li {
+  display: flex;
+  align-items: flex-start;
+  color: #636363;
+  font-size: 14px;
+}
+
+.premium-footer-features-list svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  margin-top: 1px;
+  color: #c19b67;
+}
+
+/* Ensure mobile stacks correctly */
+@media (max-width: 767px) {
+  .premium-footer-features-list {
+    grid-template-columns: 1fr;
+  }
 }
