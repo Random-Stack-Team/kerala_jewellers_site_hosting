@@ -245,7 +245,8 @@ img {
   border-radius: 0;
   padding: 9px 15px;
   text-decoration: none;
-  display: inline-block}
+  display: inline-block;
+  transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease}
 
 input.button-link {
   -webkit-appearance: button}
@@ -17440,8 +17441,7 @@ figcaption {
 .product-info-124 {
   padding: 8px 16px 16px !important}
 
-.button-123,
-.button-link {
+.button-123 {
   transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease}
 
 .product-item-14:hover .button-123 {
