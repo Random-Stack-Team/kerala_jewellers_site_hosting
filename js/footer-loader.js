@@ -7,7 +7,7 @@
   const isSubfolder = window.location.pathname.split("/").length > 2;
   const prefix = isSubfolder ? "../" : "";
 
-  const fetchUrl = prefix + "partials/footer.html?v=premium-footer-rebuild-2";
+  const fetchUrl = prefix + "partials/footer.html?v=premium-footer-rebuild-3";
   console.log("[FooterLoader] Exact fetch URL:", fetchUrl);
 
   try {
