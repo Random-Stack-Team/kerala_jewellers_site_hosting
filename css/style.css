@@ -1742,9 +1742,12 @@ figcaption {
 .logo-link:active {
   opacity: .7}
 
+<<<<<<< HEAD
 .cart-footer {
   padding-top: 20px}
 
+=======
+>>>>>>> feature/bug-fixes
 .status-message {
   color: #fff;
   text-align: center;
@@ -1981,6 +1984,7 @@ figcaption {
 .form-block {
   margin-top: 20px}
 
+<<<<<<< HEAD
 .footer {
   grid-column-gap: 30px;
   grid-row-gap: 30px;
@@ -2000,6 +2004,9 @@ figcaption {
 
 .footer-link:hover {
   opacity: 1}
+=======
+
+>>>>>>> feature/bug-fixes
 
 .made-with-builder {
   opacity: .5;
@@ -2015,9 +2022,12 @@ figcaption {
 .made-with-builder:active {
   opacity: .8}
 
+<<<<<<< HEAD
 .links-section-footer {
   margin-top: 40px}
 
+=======
+>>>>>>> feature/bug-fixes
 .builder-logo-tiny {
   margin-top: -2px;
   margin-right: 8px}
@@ -2537,9 +2547,12 @@ figcaption {
   list-style-type: none;
   display: flex}
 
+<<<<<<< HEAD
 .text-block-68 {
   font-style: normal}
 
+=======
+>>>>>>> feature/bug-fixes
 .header-navigation---brix-copy {
   justify-content: flex-end;
   align-items: center;
@@ -3204,6 +3217,7 @@ figcaption {
   display: flex;
   position: static}
 
+<<<<<<< HEAD
 .banner-3 {
   border-radius: 15px;
   justify-content: center;
@@ -3212,6 +3226,8 @@ figcaption {
   height: auto;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .hero-subscribe-right {
   background-color: #0000;
   padding: 20px 30px 80px;
@@ -3603,6 +3619,7 @@ figcaption {
   font-size: 14px;
   text-decoration: line-through}
 
+<<<<<<< HEAD
 .banner-5 {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -3616,6 +3633,8 @@ figcaption {
   margin-bottom: 0;
   display: grid}
 
+=======
+>>>>>>> feature/bug-fixes
 .price-wrap-1 {
   grid-column-gap: 15px;
   flex-flow: row;
@@ -3677,6 +3696,7 @@ figcaption {
   align-items: center;
   display: flex}
 
+<<<<<<< HEAD
 
 
 .text-block-72 {
@@ -3688,6 +3708,8 @@ figcaption {
   font-size: 15px;
   font-weight: 500}
 
+=======
+>>>>>>> feature/bug-fixes
 .quick-contact-grid {
   flex-direction: column;
   justify-content: center;
@@ -3746,9 +3768,12 @@ figcaption {
   display: flex;
   position: relative}
 
+<<<<<<< HEAD
 .div-block-3 {
   width: 247px}
 
+=======
+>>>>>>> feature/bug-fixes
 .text-block-36 {
   color: #9d6c48;
   text-align: center;
@@ -3886,6 +3911,7 @@ figcaption {
   font-family: var(--font-body);
   font-size: 17px}
 
+<<<<<<< HEAD
 .heading-3 {
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(102deg, #9f1b1f, #e41c24 61%);
@@ -3894,6 +3920,8 @@ figcaption {
   font-size: 66.811px;
   line-height: 70px}
 
+=======
+>>>>>>> feature/bug-fixes
 .margin-bottom-24px-2 {
   color: #222;
   letter-spacing: -.843px;
@@ -3998,6 +4026,7 @@ figcaption {
   align-items: center;
   display: flex}
 
+<<<<<<< HEAD
 
 
 .product-image-4 {
@@ -4006,6 +4035,8 @@ figcaption {
   min-height: 100%;
   max-height: 100%}
 
+=======
+>>>>>>> feature/bug-fixes
 .banner-8 {
   grid-column-gap: 31px;
   grid-row-gap: 31px;
@@ -4539,6 +4570,7 @@ figcaption {
   margin-right: 0;
   display: flex}
 
+<<<<<<< HEAD
 .text-block-73 {
   color: var(--white);
   text-align: justify;
@@ -4547,6 +4579,8 @@ figcaption {
   font-size: 20px;
   line-height: 150%}
 
+=======
+>>>>>>> feature/bug-fixes
 .div-block-35 {
   grid-column-gap: 28px;
   grid-row-gap: 28px;
@@ -4564,6 +4598,7 @@ figcaption {
   font-family: var(--font-body);
   font-size: 18.93px}
 
+<<<<<<< HEAD
 .hero-split-7 {
   flex-direction: column;
   justify-content: flex-start;
@@ -4571,6 +4606,8 @@ figcaption {
   max-width: 46%;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .hero-heading-right {
   padding: 80px 30px;
   position: relative}
@@ -4626,12 +4663,15 @@ figcaption {
   height: auto;
   display: flex}
 
+<<<<<<< HEAD
 .heading-13 {
   color: var(--dark-gold);
   font-family: var(--font-decorative);
   font-size: 55px;
   font-weight: 300}
 
+=======
+>>>>>>> feature/bug-fixes
 .heading-center-about-copy {
   color: #9f1b1f;
   text-align: center;
@@ -4671,6 +4711,7 @@ figcaption {
   font-size: 18px;
   line-height: 150%}
 
+<<<<<<< HEAD
 .list-item-2 {
   color: #636363;
   list-style-type: disc}
@@ -4685,6 +4726,8 @@ figcaption {
   font-size: 21.8px;
   list-style-type: none}
 
+=======
+>>>>>>> feature/bug-fixes
 .list {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -4732,10 +4775,13 @@ figcaption {
 .button-primary-5:active {
   background-color: #43464d}
 
+<<<<<<< HEAD
 .list-item-5 {
   margin-bottom: 0;
   list-style-type: none}
 
+=======
+>>>>>>> feature/bug-fixes
 .layout192_component-2 {
   grid-column-gap: 36px;
   grid-row-gap: 36px;
@@ -4745,6 +4791,7 @@ figcaption {
   align-items: center;
   display: grid}
 
+<<<<<<< HEAD
 .heading-center-12 {
   color: #9f1b1f;
   text-align: left;
@@ -4765,6 +4812,8 @@ figcaption {
   line-height: 100px;
   display: block}
 
+=======
+>>>>>>> feature/bug-fixes
 .layout192_image-12 {
   object-fit: cover;
   border-radius: 5px;
@@ -5085,6 +5134,7 @@ figcaption {
   padding-bottom: 0;
   display: flex}
 
+<<<<<<< HEAD
 .product-item-12 {
   border: 0 solid #a7a7a7;
   border-radius: 5px;
@@ -5122,6 +5172,8 @@ figcaption {
   font-weight: 300;
   line-height: 80px}
 
+=======
+>>>>>>> feature/bug-fixes
 .paragraph-center-12 {
   opacity: 1;
   width: 100%;
@@ -5159,6 +5211,7 @@ figcaption {
   width: 90%;
   display: flex}
 
+<<<<<<< HEAD
 .banner-17 {
   grid-column-gap: 30px;
   grid-row-gap: 30px;
@@ -5186,6 +5239,8 @@ figcaption {
   padding-bottom: 0;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .blog33_image {
   aspect-ratio: 3 / 2;
   object-fit: cover;
@@ -5582,6 +5637,7 @@ figcaption {
 
 
 
+<<<<<<< HEAD
 
 .text-block-75 {
   color: #a9a9a9;
@@ -5589,6 +5645,8 @@ figcaption {
   font-family: var(--font-body);
   line-height: 70.078%}
 
+=======
+>>>>>>> feature/bug-fixes
 .text-block-76 {
   color: #a9a9a9;
   letter-spacing: -.64px;
@@ -5634,6 +5692,7 @@ figcaption {
   background-color: var(--gold);
   color: var(--dark-maroon)}
 
+<<<<<<< HEAD
 .product-item-14 {
   border: 1px solid #a7a7a7;
   border-radius: 5px;
@@ -5652,6 +5711,8 @@ figcaption {
   min-height: 100%;
   max-height: 100%}
 
+=======
+>>>>>>> feature/bug-fixes
 .price-wrap-14 {
   grid-column-gap: 15px;
   flex-flow: row;
@@ -5675,6 +5736,7 @@ figcaption {
   margin-top: 15px;
   display: flex}
 
+<<<<<<< HEAD
 .price-wrap-copy {
   grid-column-gap: 15px;
   flex-flow: column;
@@ -5682,6 +5744,8 @@ figcaption {
   align-items: flex-start;
   display: none}
 
+=======
+>>>>>>> feature/bug-fixes
 .price-14 {
   color: #222;
   font-family: var(--font-body);
@@ -5712,6 +5776,7 @@ figcaption {
 .checkbox-3 {
   color: var(--white)}
 
+<<<<<<< HEAD
 .banner-20 {
   background-image: url("../assets/images/66ac889ae5053423a38dd39f_jewelry-photography 1 (1).webp");
   background-position: 0%;
@@ -5726,6 +5791,8 @@ figcaption {
   padding-bottom: 50px;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .heading-jumbo-20 {
   color: #900000;
   text-transform: none;
@@ -6298,6 +6365,7 @@ figcaption {
   height: auto;
   display: flex}
 
+<<<<<<< HEAD
 .banner-22 {
   grid-column-gap: 75px;
   grid-row-gap: 75px;
@@ -6309,6 +6377,8 @@ figcaption {
   padding-right: 100px;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .intro-center-12 {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -6320,6 +6390,7 @@ figcaption {
   margin-right: auto;
   display: flex}
 
+<<<<<<< HEAD
 .list-item-6 {
   color: #000;
   margin-bottom: 0;
@@ -6342,6 +6413,8 @@ figcaption {
   height: 50vh;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .heading-center-copy {
   color: #9f1b1f;
   text-align: left;
@@ -6372,6 +6445,7 @@ figcaption {
   margin-right: auto;
   display: flex}
 
+<<<<<<< HEAD
 .paragraph-center-18 {
   opacity: 1;
   color: #000;
@@ -6387,6 +6461,8 @@ figcaption {
   font-weight: 300;
   line-height: 40px}
 
+=======
+>>>>>>> feature/bug-fixes
 .banner-23 {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -6400,6 +6476,7 @@ figcaption {
   padding-bottom: 0;
   display: flex}
 
+<<<<<<< HEAD
 .heading-center-22 {
   color: #9f1b1f;
   text-align: center;
@@ -6419,6 +6496,8 @@ figcaption {
   font-weight: 300;
   line-height: 93.75%}
 
+=======
+>>>>>>> feature/bug-fixes
 .intro-content-26 {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
@@ -6453,6 +6532,7 @@ figcaption {
   margin-left: 100px;
   display: flex}
 
+<<<<<<< HEAD
 .banner-26 {
   background-image: url("../assets/images/66acd444f619f8360fd32513_Group 2085665164.png");
   background-position: 50% 100%;
@@ -6467,6 +6547,8 @@ figcaption {
 
 
 
+=======
+>>>>>>> feature/bug-fixes
 .intro-content-27 {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
@@ -7262,7 +7344,10 @@ figcaption {
   display: block}
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature/bug-fixes
 .paragraph-14 {
   opacity: 1;
   color: #1f1f1f;
@@ -7437,7 +7522,10 @@ figcaption {
   display: flex}
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature/bug-fixes
 .bko-text-12-rings-copy {
   color: #5c5c5c;
   letter-spacing: -.56px;
@@ -8283,6 +8371,7 @@ figcaption {
   width: 100%;
   display: grid}
 
+<<<<<<< HEAD
 .product-img-15 {
   background-color: #e7f1f1;
   overflow: hidden}
@@ -8293,6 +8382,8 @@ figcaption {
   min-height: 420px;
   max-height: 420px}
 
+=======
+>>>>>>> feature/bug-fixes
 .banner-99 {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -8559,6 +8650,7 @@ figcaption {
   margin-right: .5rem;
   display: flex}
 
+<<<<<<< HEAD
 .text-block-77 {
   color: var(--grey);
   letter-spacing: -.56px;
@@ -8566,6 +8658,8 @@ figcaption {
   font-size: 20px;
   line-height: 125%}
 
+=======
+>>>>>>> feature/bug-fixes
 .image-26-copy {
   width: 20px;
   height: 20px}
@@ -8776,6 +8870,7 @@ figcaption {
   align-items: center;
   display: flex}
 
+<<<<<<< HEAD
 .banner-28 {
   grid-column-gap: 30px;
   grid-row-gap: 30px;
@@ -8789,6 +8884,8 @@ figcaption {
   padding-bottom: 0;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .get-in-touch-form-wrap-12 {
   flex-direction: column;
   align-items: stretch;
@@ -8976,6 +9073,7 @@ figcaption {
   width: 100%;
   display: flex}
 
+<<<<<<< HEAD
 .banner-41 {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -9016,6 +9114,8 @@ figcaption {
   background-color: #0000;
   overflow: hidden}
 
+=======
+>>>>>>> feature/bug-fixes
 .product-info-122 {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
@@ -9025,6 +9125,7 @@ figcaption {
   margin-top: 15px;
   display: flex}
 
+<<<<<<< HEAD
 .product-name-122 {
   color: var(--light-grey);
   padding-bottom: 6px;
@@ -9036,6 +9137,8 @@ figcaption {
   min-height: 100%;
   max-height: 100%}
 
+=======
+>>>>>>> feature/bug-fixes
 .price-122 {
   color: #222;
   font-family: var(--font-body);
@@ -9048,6 +9151,7 @@ figcaption {
   align-items: flex-start;
   display: flex}
 
+<<<<<<< HEAD
 .price-1222 {
   color: #ad1c20;
   letter-spacing: -.72px;
@@ -9055,6 +9159,8 @@ figcaption {
   font-size: 18px;
   font-weight: 600}
 
+=======
+>>>>>>> feature/bug-fixes
 .button-122 {
   color: #fff;
   text-align: center;
@@ -9099,6 +9205,7 @@ figcaption {
   width: 60%;
   display: flex}
 
+<<<<<<< HEAD
 .heading-center-122 {
   color: #9f1b1f;
   text-align: center;
@@ -9115,6 +9222,8 @@ figcaption {
   font-weight: 300;
   line-height: 50px}
 
+=======
+>>>>>>> feature/bug-fixes
 .border-box-122 {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
@@ -9125,6 +9234,7 @@ figcaption {
   width: 100%;
   display: flex}
 
+<<<<<<< HEAD
 .paragraph-center-122 {
   opacity: 1;
   width: 100%;
@@ -9138,6 +9248,8 @@ figcaption {
   font-weight: 500;
   line-height: 25px}
 
+=======
+>>>>>>> feature/bug-fixes
 .image-border-center-122 {
   width: 50%;
   height: 12.89px}
@@ -9200,27 +9312,36 @@ figcaption {
   align-items: center;
   display: flex}
 
+<<<<<<< HEAD
 .product-image-123 {
   object-fit: cover;
   width: 100%;
   min-height: 420px;
   max-height: 420px}
 
+=======
+>>>>>>> feature/bug-fixes
 .category-tab {
   grid-column-gap: 10px;
   flex-flow: column;
   display: flex}
 
+<<<<<<< HEAD
 .product-name-123 {
   padding-bottom: 6px}
 
+=======
+>>>>>>> feature/bug-fixes
 .category-sorting {
   margin-bottom: 50px}
 
+<<<<<<< HEAD
 .product-img-123 {
   background-color: #e7f1f1;
   overflow: hidden}
 
+=======
+>>>>>>> feature/bug-fixes
 .price-wrap-1223 {
   grid-column-gap: 15px;
   align-items: center;
@@ -9239,9 +9360,12 @@ figcaption {
   margin-bottom: 0;
   display: grid}
 
+<<<<<<< HEAD
 .price-1223 {
   font-size: 14px}
 
+=======
+>>>>>>> feature/bug-fixes
 .bko-text-12-locket-copy {
   text-decoration: none}
 
@@ -9252,6 +9376,7 @@ figcaption {
   text-decoration: none;
   display: none}
 
+<<<<<<< HEAD
 .banner-41-copy {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -9264,6 +9389,8 @@ figcaption {
   padding-bottom: 75px;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .collection-list-wrapper-2 {
   flex-flow: column;
   display: block}
@@ -9647,6 +9774,7 @@ figcaption {
   color: #000;
   background-color: #fff}
 
+<<<<<<< HEAD
 .footer__nav__link {
   color: #9d9e9d;
   padding: 5px;
@@ -9659,6 +9787,8 @@ figcaption {
 .footer__nav__link[data-wf-focus-visible] {
   color: #fff}
 
+=======
+>>>>>>> feature/bug-fixes
 .banner__title {
   opacity: .9;
   color: #fff;
@@ -9737,6 +9867,7 @@ figcaption {
 .page-wrapper-3 {
   overflow: hidden}
 
+<<<<<<< HEAD
 .footer__nav {
   grid-column-gap: 15px;
   grid-row-gap: 15px;
@@ -9745,6 +9876,8 @@ figcaption {
   align-items: center;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .social-list__link__icon {
   opacity: 0;
   transition: opacity .2s;
@@ -9790,10 +9923,13 @@ figcaption {
   padding-left: 30px;
   padding-right: 30px}
 
+<<<<<<< HEAD
 .section-spacing.footer-3 {
   padding-top: 4.875rem;
   padding-bottom: 4.875rem}
 
+=======
+>>>>>>> feature/bug-fixes
 .section-spacing.project {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem}
@@ -9802,6 +9938,7 @@ figcaption {
   padding-top: 10.5rem;
   padding-bottom: 5.625rem}
 
+<<<<<<< HEAD
 .footer-3 {
   background-color: #0a0c0a}
 
@@ -9814,6 +9951,8 @@ figcaption {
   align-items: center;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .nav__btn {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
@@ -10514,6 +10653,7 @@ figcaption {
   margin-bottom: 0;
   padding-bottom: 0}
 
+<<<<<<< HEAD
 .banner-2221212 {
   grid-column-gap: 75px;
   grid-row-gap: 75px;
@@ -10534,6 +10674,14 @@ figcaption {
   font-weight: 600}
 
 
+=======
+.div-block-641213 {
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
+  flex-flow: row;
+  display: none;
+}
+>>>>>>> feature/bug-fixes
 
 .collection-list-21212 {
   grid-column-gap: 16px;
@@ -10616,6 +10764,7 @@ figcaption {
 
 
 
+<<<<<<< HEAD
 .div7777 {
   display: flex}
 
@@ -10623,6 +10772,15 @@ figcaption {
 
 
 
+=======
+.div-block-641215 {
+  grid-column-gap: 13px;
+  grid-row-gap: 13px;
+  flex-flow: column;
+  display: flex;
+}
+
+>>>>>>> feature/bug-fixes
 .category-tab12 {
   grid-column-gap: 10px;
   flex-flow: column;
@@ -10669,6 +10827,7 @@ figcaption {
 
 
 
+<<<<<<< HEAD
 .banner-24777212211290 {
   background-color: #f1aa2d52;
   border-radius: 15px;
@@ -10679,6 +10838,8 @@ figcaption {
   padding-bottom: 40px;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .heading-center12122 {
   color: #9f1b1f;
   text-align: center;
@@ -10730,6 +10891,7 @@ figcaption {
   margin-top: 0;
   display: flex}
 
+<<<<<<< HEAD
 .text-size-small9999 {
   color: #636363;
   text-wrap: balance;
@@ -10738,9 +10900,12 @@ figcaption {
   font-size: 15px;
   line-height: 23px}
 
+=======
+>>>>>>> feature/bug-fixes
 .text-size-small9999.text-weight-semibold {
   color: #000}
 
+<<<<<<< HEAD
 .div98777790 {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
@@ -10753,6 +10918,8 @@ figcaption {
   height: 100%;
   display: grid}
 
+=======
+>>>>>>> feature/bug-fixes
 .blog33_author-image-copy12121212 {
   object-fit: cover;
   border-radius: 100%;
@@ -10764,6 +10931,7 @@ figcaption {
 .link-block-5 {
   text-decoration: none}
 
+<<<<<<< HEAD
 .banner-26111 {
   background-image: url("../assets/images/67a73a3dbb8c680323ef26c4_KJ WEBSITE BANNER-01.webp");
   background-position: 50%;
@@ -10776,6 +10944,8 @@ figcaption {
   height: 50vh;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .intro-text-24-copy {
   grid-column-gap: 24px;
   grid-row-gap: 24px;
@@ -10788,6 +10958,7 @@ figcaption {
 .div-image-copy {
   display: none}
 
+<<<<<<< HEAD
 .banner-26111-copy {
   background-image: url("../assets/images/67a73a3dbb8c680323ef26c4_KJ WEBSITE BANNER-01.webp");
   background-position: 50%;
@@ -10800,6 +10971,8 @@ figcaption {
   height: 50vh;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .div-block-57-copy-copy-c12122222 {
   padding: 30px 30px 75px}
 
@@ -10843,9 +11016,12 @@ figcaption {
   margin-bottom: 0;
   display: grid}
 
+<<<<<<< HEAD
 .heading-14 {
   font-size: 16px}
 
+=======
+>>>>>>> feature/bug-fixes
 .blog33_authossssr-image-wrapper-copy {
   margin-right: 1rem;
   display: flex}
@@ -10863,6 +11039,7 @@ figcaption {
   height: 24px;
   min-height: 24px}
 
+<<<<<<< HEAD
 .footer-block111111 {
   grid-column-gap: 24px;
   grid-row-gap: 24px;
@@ -10871,6 +11048,8 @@ figcaption {
   align-items: flex-start;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 .title-smcccall-copy {
   color: #1f1f1f;
   letter-spacing: -.68px;
@@ -10895,6 +11074,7 @@ figcaption {
   padding-bottom: 50px;
   display: flex}
 
+<<<<<<< HEAD
 .footer-block-copy {
   grid-column-gap: 24px;
   grid-row-gap: 24px;
@@ -10906,6 +11086,8 @@ figcaption {
   align-items: flex-start;
   display: grid}
 
+=======
+>>>>>>> feature/bug-fixes
 .margin-bottom-copy-copy {
   grid-column-gap: 4px;
   grid-row-gap: 4px;
@@ -10991,6 +11173,7 @@ figcaption {
 .embed {
   display: none}
 
+<<<<<<< HEAD
 .text-block-354 {
   color: #fff;
   text-align: center;
@@ -10999,6 +11182,8 @@ figcaption {
   padding-right: 10px;
   font-size: 19.5px}
 
+=======
+>>>>>>> feature/bug-fixes
 
 .page-wrapper-6 {
   flex-direction: column;
@@ -11007,6 +11192,7 @@ figcaption {
 .container-755 {
   flex: 1}
 
+<<<<<<< HEAD
 .text-block-355 {
   color: #fff;
   text-align: center;
@@ -11015,6 +11201,8 @@ figcaption {
   padding-right: 5px;
   font-size: 14px}
 
+=======
+>>>>>>> feature/bug-fixes
 
 .heading-jumbo-2-copy-copy {
   box-sizing: border-box;
@@ -11220,6 +11408,7 @@ figcaption {
   line-height: 120%;
   text-decoration: none}
 
+<<<<<<< HEAD
 .div-block-4211112223 {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -11228,6 +11417,8 @@ figcaption {
 .heading-15 {
   color: var(--meron)}
 
+=======
+>>>>>>> feature/bug-fixes
 .bold-text-19 {
   text-transform: uppercase}
 
@@ -11251,6 +11442,7 @@ figcaption {
   flex-direction: column;
   display: none}
 
+<<<<<<< HEAD
 .heading-16 {
   font-weight: 600}
 
@@ -11266,6 +11458,8 @@ figcaption {
   height: 50vh;
   display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
 @media screen and (min-width: 1280px) {
   .paragraph-bigger-2 {
     width: 40%;
@@ -11395,10 +11589,15 @@ figcaption {
   .bko-grid-1111,
   .bko-grid-22222222111-copy,
   .bko-grid-1111-copy {
+<<<<<<< HEAD
     padding-top: 0}
 
   .banner-26111-copy-123 {
     background-position: 50%}
+=======
+    padding-top: 0;
+  }
+>>>>>>> feature/bug-fixes
 }
 
 @media screen and (min-width: 1920px) {
@@ -11440,11 +11639,14 @@ figcaption {
     padding-top: 0}
 
 
+<<<<<<< HEAD
   .banner-5 {
     background-position: 100% 0;
     padding-top: 0}
 
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-6 {
     background-position: 100% 0;
     padding-top: 0}
@@ -11460,10 +11662,13 @@ figcaption {
     background-position: 100% 0;
     padding-top: 0}
 
+<<<<<<< HEAD
   .footer-block {
     grid-template-rows: .25fr .5fr;
     grid-template-columns: minmax(230px, 1.75fr)}
 
+=======
+>>>>>>> feature/bug-fixes
 
   .banner-copy,
   
@@ -11496,10 +11701,13 @@ figcaption {
     background-position: 100% 0;
     padding-top: 0}
 
+<<<<<<< HEAD
   .heading-center-12 {
     text-align: left;
     overflow: visible}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-slider1-blog {
     background-position: 100% 0;
     padding-top: 40px}
@@ -11513,6 +11721,7 @@ figcaption {
     background-position: 100% 0;
     padding-top: 0}
 
+<<<<<<< HEAD
   .product-item-12 {
     overflow: hidden}
 
@@ -11525,6 +11734,8 @@ figcaption {
     background-image: none;
     padding-top: 75px}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-9,
   .banner-18,
   .banner-4-copy,
@@ -11545,11 +11756,14 @@ figcaption {
     background-position: 100%;
     background-size: contain}
 
+<<<<<<< HEAD
   .banner-22,
   .banner-25 {
     background-position: 100% 0;
     padding-top: 0}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-23 {
     background-image: none;
     padding-top: 75px}
@@ -11562,12 +11776,15 @@ figcaption {
     grid-auto-columns: 1fr;
     display: grid}
 
+<<<<<<< HEAD
   .banner-26 {
     background-position: 100% 0;
     padding-top: 0}
 
   
 
+=======
+>>>>>>> feature/bug-fixes
   .intro-content-27 {
     grid-column-gap: 16px;
     grid-row-gap: 16px;
@@ -11618,6 +11835,7 @@ figcaption {
     background-image: none;
     padding-top: 75px}
 
+<<<<<<< HEAD
   .banner-41,
   .banner-33 {
     background-position: 100% 0;
@@ -11627,6 +11845,8 @@ figcaption {
     background-image: none;
     padding-top: 75px}
 
+=======
+>>>>>>> feature/bug-fixes
   .glossary-term-wrappe121 {
     text-align: justify}
 
@@ -11639,6 +11859,7 @@ figcaption {
     background-position: 50%;
     padding-top: 0}
 
+<<<<<<< HEAD
   .banner-24777212211290 {
     background-image: none}
 
@@ -11647,6 +11868,8 @@ figcaption {
     background-position: 100% 0;
     padding-top: 0}
 
+=======
+>>>>>>> feature/bug-fixes
 
   .banner-271212222 {
     background-position: 100% 0;
@@ -11663,10 +11886,13 @@ figcaption {
   .heading-jumbo-2-copy-copy {
     width: 100%}
 
+<<<<<<< HEAD
   .banner-26111-copy-123 {
     background-position: 50% 45%;
     padding-top: 0}
 
+=======
+>>>>>>> feature/bug-fixes
   .collection-list-wrapper-3 {
     -webkit-text-fill-color: inherit;
     background-clip: border-box}
@@ -12103,6 +12329,7 @@ figcaption {
   .old-price {
     display: none}
 
+<<<<<<< HEAD
   .banner-5 {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
@@ -12110,6 +12337,8 @@ figcaption {
     grid-template-columns: 1fr 1fr;
     margin-top: 45px}
 
+=======
+>>>>>>> feature/bug-fixes
   .section-5.cc-product-detail {
     flex-direction: column}
 
@@ -12194,11 +12423,14 @@ figcaption {
   .section-8.cc-product-detail {
     flex-direction: column}
 
+<<<<<<< HEAD
 
   .product-image-4 {
     min-height: 300px;
     max-height: 300px}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-8 {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
@@ -12252,6 +12484,7 @@ figcaption {
     max-width: 100%;
     margin-bottom: 60px}
 
+<<<<<<< HEAD
   .footer-wrap {
     grid-row-gap: 140px}
 
@@ -12260,16 +12493,22 @@ figcaption {
 
   
 
+=======
+>>>>>>> feature/bug-fixes
   .form-block-2 {
     width: 60%}
 
+<<<<<<< HEAD
   .footer-block {
     grid-column-gap: 10px;
     grid-row-gap: 10px}
 
+=======
+>>>>>>> feature/bug-fixes
   .container-6 {
     max-width: 728px}
 
+<<<<<<< HEAD
   .footer-dark {
     margin-bottom: 45px}
 
@@ -12279,6 +12518,8 @@ figcaption {
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr 1fr}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-center-1 {
     width: 80%;
     font-size: 40px;
@@ -12372,9 +12613,12 @@ figcaption {
     align-items: flex-start;
     margin-bottom: -40px}
 
+<<<<<<< HEAD
   .hero-split-7 {
     margin-bottom: 40px}
 
+=======
+>>>>>>> feature/bug-fixes
   .container-7 {
     max-width: 728px}
 
@@ -12389,27 +12633,36 @@ figcaption {
   .text-size-medium-12 {
     font-size: 18px}
 
+<<<<<<< HEAD
   .list-item-4 {
     list-style-type: none}
 
+=======
+>>>>>>> feature/bug-fixes
   .margin-bottom-12 {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0}
 
+<<<<<<< HEAD
   .list-item-5 {
     list-style-type: none}
 
+=======
+>>>>>>> feature/bug-fixes
   .layout192_component-2 {
     grid-column-gap: 3rem;
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: row;
     min-height: auto}
 
+<<<<<<< HEAD
   .heading-center-12 {
     font-size: 40px;
     line-height: 50px}
 
+=======
+>>>>>>> feature/bug-fixes
   .layout192_image-12 {
     object-fit: cover}
 
@@ -12476,6 +12729,7 @@ figcaption {
     font-family: var(--font-body);
     line-height: 20px}
 
+<<<<<<< HEAD
   .product-item-12 {
     justify-content: center;
     align-items: center}
@@ -12491,6 +12745,8 @@ figcaption {
     font-size: 50px;
     line-height: 70px}
 
+=======
+>>>>>>> feature/bug-fixes
   .paragraph-center-12 {
     width: auto;
     font-size: 20px}
@@ -12503,6 +12759,7 @@ figcaption {
   .center-text-banner-16 {
     width: 100%}
 
+<<<<<<< HEAD
   .banner-17 {
     grid-column-gap: 40px;
     grid-row-gap: 40px;
@@ -12513,6 +12770,8 @@ figcaption {
   .banner-19 {
     padding-top: 0}
 
+=======
+>>>>>>> feature/bug-fixes
   .padding-section-large-3 {
     padding-top: 6rem;
     padding-bottom: 6rem}
@@ -12635,18 +12894,24 @@ figcaption {
   .banner-4-copy {
     margin-top: 45px}
 
+<<<<<<< HEAD
   .product-image-14 {
     min-height: auto;
     max-height: none}
 
+=======
+>>>>>>> feature/bug-fixes
   .price-14 {
     font-size: 14px}
 
+<<<<<<< HEAD
   .banner-20 {
     background-position: 20%;
     padding-top: 0;
     padding-bottom: 0}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-jumbo-20 {
     font-size: 56px;
     line-height: 70px}
@@ -12788,17 +13053,23 @@ figcaption {
     background-repeat: no-repeat;
     background-size: cover}
 
+<<<<<<< HEAD
   .banner-22 {
     padding-left: 50px;
     padding-right: 50px}
 
+=======
+>>>>>>> feature/bug-fixes
   .intro-center-12 {
     grid-column-gap: 0px;
     grid-row-gap: 0px}
 
+<<<<<<< HEAD
   .banner-25 {
     background-position: 80% 0}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-center-copy {
     font-size: 50px;
     line-height: 70px}
@@ -12809,17 +13080,23 @@ figcaption {
   .get-in-touch-form-wrap1 {
     width: 100%}
 
+<<<<<<< HEAD
   .paragraph-center-18 {
     width: auto;
     font-size: 20px}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-23 {
     padding-top: 45px}
 
+<<<<<<< HEAD
   .heading-center-22 {
     font-size: 40px;
     line-height: 40px}
 
+=======
+>>>>>>> feature/bug-fixes
   .intro-content-26.cc-homepage,
   .intro-content-26.cc-homepage-3,
   .intro-content-26.cc-homepage-20,
@@ -12827,12 +13104,15 @@ figcaption {
     width: 70%;
     margin-left: 40px}
 
+<<<<<<< HEAD
   .banner-26 {
     background-position: 80% 0;
     height: 30vh}
 
   
 
+=======
+>>>>>>> feature/bug-fixes
   .intro-content-27 {
     padding: 40px}
 
@@ -13133,8 +13413,11 @@ figcaption {
     padding-top: 45px;
     padding-bottom: 45px}
 
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> feature/bug-fixes
   .paragraph-14 {
     width: auto;
     font-size: 20px}
@@ -13217,10 +13500,13 @@ figcaption {
     grid-template-rows: auto auto auto auto auto auto;
     grid-template-columns: 1fr 1fr}
 
+<<<<<<< HEAD
   .product-image-15 {
     min-height: 300px;
     max-height: 300px}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-99 {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
@@ -13338,9 +13624,12 @@ figcaption {
   .image-blog-12 {
     width: 70%}
 
+<<<<<<< HEAD
   .banner-28 {
     padding-top: 0}
 
+=======
+>>>>>>> feature/bug-fixes
   .get-in-touch-form-wrap-12 {
     width: 100%}
 
@@ -13383,6 +13672,7 @@ figcaption {
     justify-content: center;
     align-items: flex-start}
 
+<<<<<<< HEAD
   .banner-41 {
     padding-top: 45px;
     padding-bottom: 45px}
@@ -13400,32 +13690,43 @@ figcaption {
     min-height: auto;
     max-height: none}
 
+=======
+>>>>>>> feature/bug-fixes
   .price-122 {
     font-size: 14px}
 
   .center-text-banner-122 {
     width: 70%}
 
+<<<<<<< HEAD
   .heading-center-122 {
     font-size: 50px;
     line-height: 70px}
 
+=======
+>>>>>>> feature/bug-fixes
   .border-box-122 {
     justify-content: center;
     align-items: center}
 
+<<<<<<< HEAD
   .paragraph-center-122 {
     width: auto;
     font-size: 20px}
 
+=======
+>>>>>>> feature/bug-fixes
   .page-title {
     padding-top: 60px;
     padding-bottom: 60px}
 
+<<<<<<< HEAD
   .product-image-123 {
     min-height: 300px;
     max-height: 300px}
 
+=======
+>>>>>>> feature/bug-fixes
   .category-sorting {
     margin-bottom: 40px}
 
@@ -13437,10 +13738,13 @@ figcaption {
     justify-items: start;
     margin-bottom: 0}
 
+<<<<<<< HEAD
   .banner-41-copy {
     padding-top: 45px;
     padding-bottom: 45px}
 
+=======
+>>>>>>> feature/bug-fixes
   .wishlist {
     margin-left: 0;
     display: block}
@@ -13493,10 +13797,13 @@ figcaption {
     width: 2.5rem;
     height: 2.5rem}
 
+<<<<<<< HEAD
 
   .footer__row {
     flex-flow: column}
 
+=======
+>>>>>>> feature/bug-fixes
   .carousel-item {
     padding-top: 52%}
 
@@ -13575,10 +13882,13 @@ figcaption {
   .glossary-term-wrappe121 {
     text-align: justify}
 
+<<<<<<< HEAD
   .banner-2221212 {
     padding-left: 50px;
     padding-right: 50px}
 
+=======
+>>>>>>> feature/bug-fixes
   .collection-list-21212 {
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr}
@@ -13605,8 +13915,11 @@ figcaption {
   .button-321.royal-blue-1212 {
     width: 30%}
 
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-24777,
   .banner-247772122 {
     background-position: 80% 0;
@@ -13616,12 +13929,15 @@ figcaption {
   .empty-state-4,
   
 
+<<<<<<< HEAD
   .banner-24777212211290 {
     background-image: none;
     justify-content: center;
     align-items: stretch;
     padding: 20px}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-center12122 {
     padding-left: 5px;
     font-size: 50px;
@@ -13631,6 +13947,7 @@ figcaption {
     grid-column-gap: 15px;
     grid-row-gap: 15px}
 
+<<<<<<< HEAD
   .div98777790 {
     grid-template-rows: 1fr .5fr .5fr}
 
@@ -13638,14 +13955,19 @@ figcaption {
     background-position: 80% 0;
     height: 30vh}
 
+=======
+>>>>>>> feature/bug-fixes
   .intro-text-24-copy {
     grid-column-gap: 15px;
     grid-row-gap: 15px}
 
+<<<<<<< HEAD
   .banner-26111-copy {
     background-position: 80% 0;
     height: 30vh}
 
+=======
+>>>>>>> feature/bug-fixes
   .div-block-57-copy-copy-c12122222 {
     padding-top: 20px;
     padding-bottom: 45px}
@@ -13663,6 +13985,7 @@ figcaption {
     padding-top: 45px;
     padding-bottom: 45px}
 
+<<<<<<< HEAD
   .heading-14 {
     font-size: 16px}
 
@@ -13670,6 +13993,8 @@ figcaption {
     grid-column-gap: 10px;
     grid-row-gap: 10px}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-120-copy {
     background-image: linear-gradient(#ffe3ce, #fff0), url("../assets/images/66ac889ae5053423a38dd39f_jewelry-photography 1 (1).webp");
     background-position: 0 0, 20%;
@@ -13678,10 +14003,13 @@ figcaption {
     padding-top: 0;
     padding-bottom: 0}
 
+<<<<<<< HEAD
   .footer-block-copy {
     grid-column-gap: 10px;
     grid-row-gap: 10px}
 
+=======
+>>>>>>> feature/bug-fixes
   .margin-bottom-copy-copy {
     margin-top: 0;
     margin-left: 0;
@@ -13691,10 +14019,13 @@ figcaption {
     grid-column-gap: 1rem;
     width: 102.2rem}
 
+<<<<<<< HEAD
 
   .text-block-355 {
     font-size: 13.8px}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-jumbo-2-copy-copy {
     font-size: 65px;
     line-height: 70px}
@@ -13735,11 +14066,16 @@ figcaption {
     grid-template-columns: .5fr .5fr 1fr}
 
   .bko-grid-1111-copy {
+<<<<<<< HEAD
     grid-column-gap: 3em}
 
   .banner-26111-copy-123 {
     background-position: 80% 0;
     height: 30vh}
+=======
+    grid-column-gap: 3em;
+  }
+>>>>>>> feature/bug-fixes
 }
 
 @media screen and (max-width: 767px) {
@@ -13825,6 +14161,7 @@ figcaption {
     width: 90%;
     max-width: 470px}
 
+<<<<<<< HEAD
   .footer {
     text-align: center;
     flex-direction: column;
@@ -13838,6 +14175,9 @@ figcaption {
   .links-section-footer {
     margin-top: 10px;
     margin-bottom: 40px}
+=======
+  
+>>>>>>> feature/bug-fixes
 
   .about-quote {
     width: 80%;
@@ -14038,11 +14378,14 @@ figcaption {
   .price {
     font-size: 12px}
 
+<<<<<<< HEAD
   .banner-5 {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     margin-top: 25px}
 
+=======
+>>>>>>> feature/bug-fixes
 
 
   .quick-contact-grid-copy {
@@ -14081,9 +14424,12 @@ figcaption {
     align-items: center;
     max-width: none}
 
+<<<<<<< HEAD
   .heading-3 {
     text-align: center}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-7 {
     padding-top: 25px;
     padding-bottom: 25px}
@@ -14099,6 +14445,7 @@ figcaption {
     font-size: 50px;
     line-height: 64px}
 
+<<<<<<< HEAD
 
 
 
@@ -14106,6 +14453,8 @@ figcaption {
     min-height: 340px;
     max-height: 340px}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-8 {
     grid-template-columns: 1fr 1fr;
     padding-top: 25px;
@@ -14129,11 +14478,14 @@ figcaption {
     grid-auto-columns: 1fr;
     display: grid}
 
+<<<<<<< HEAD
   .text-block-45 {
     width: auto;
     padding-left: 20px;
     padding-right: 20px}
 
+=======
+>>>>>>> feature/bug-fixes
   .form-block-2,
   .form {
     width: auto}
@@ -14141,6 +14493,7 @@ figcaption {
   .submit-button {
     height: 44px}
 
+<<<<<<< HEAD
   .footer-wrapper {
     flex-direction: column;
     align-items: center;
@@ -14178,6 +14531,8 @@ figcaption {
   .footer-social-link {
     margin-left: 20px}
 
+=======
+>>>>>>> feature/bug-fixes
   .text-block-45-copy {
     width: auto;
     padding-left: 20px;
@@ -14242,11 +14597,14 @@ figcaption {
   .heading-about2 {
     font-size: 45px}
 
+<<<<<<< HEAD
   .text-block-73 {
     text-align: left;
     font-size: 18px;
     line-height: 120%}
 
+=======
+>>>>>>> feature/bug-fixes
   .hero-wrapper-3 {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
@@ -14254,11 +14612,14 @@ figcaption {
     justify-content: center;
     align-items: center}
 
+<<<<<<< HEAD
   .hero-split-7 {
     justify-content: center;
     align-items: center;
     max-width: none}
 
+=======
+>>>>>>> feature/bug-fixes
   .hero-heading-right {
     padding: 60px 15px}
 
@@ -14283,10 +14644,13 @@ figcaption {
     grid-row-gap: 3rem;
     grid-template-columns: 1fr}
 
+<<<<<<< HEAD
   .heading-center-12 {
     font-size: 35px;
     line-height: 50px}
 
+=======
+>>>>>>> feature/bug-fixes
   .about-grid {
     grid-column-gap: 20px;
     grid-row-gap: 20px}
@@ -14321,6 +14685,7 @@ figcaption {
     font-size: 16px;
     line-height: 28px}
 
+<<<<<<< HEAD
   .product-item-12 {
     justify-content: center;
     align-items: flex-start}
@@ -14334,6 +14699,8 @@ figcaption {
     font-size: 50px;
     line-height: 64px}
 
+=======
+>>>>>>> feature/bug-fixes
   .paragraph-center-12 {
     font-size: 16px;
     line-height: 28px}
@@ -14348,6 +14715,7 @@ figcaption {
     grid-row-gap: 25px;
     width: 100%}
 
+<<<<<<< HEAD
   .banner-17 {
     grid-column-gap: 20px;
     grid-row-gap: 20px}
@@ -14355,6 +14723,8 @@ figcaption {
   .banner-19 {
     padding-top: 0}
 
+=======
+>>>>>>> feature/bug-fixes
   .padding-section-large-3 {
     padding-top: 4rem;
     padding-bottom: 4rem}
@@ -14434,6 +14804,7 @@ figcaption {
 
   
 
+<<<<<<< HEAD
   
 
   .text-block-75 {
@@ -14443,18 +14814,23 @@ figcaption {
     min-height: auto;
     max-height: none}
 
+=======
+>>>>>>> feature/bug-fixes
   .product-name114 {
     padding-bottom: 4px}
 
   .price-14 {
     font-size: 12px}
 
+<<<<<<< HEAD
   .banner-20 {
     background-image: linear-gradient(90deg, #e9c9b900, #ffdac8 68%), url("../assets/images/66ac889ae5053423a38dd39f_jewelry-photography 1 (1).webp");
     background-position: 0 0, 20%;
     background-repeat: repeat, no-repeat;
     background-size: auto, cover}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-jumbo-20 {
     font-size: 50px;
     line-height: 64px}
@@ -14515,10 +14891,13 @@ figcaption {
   .intro-header-12 {
     padding-left: 0}
 
+<<<<<<< HEAD
   .banner-22 {
     padding-left: 20px;
     padding-right: 20px}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-center-copy {
     font-size: 50px;
     line-height: 64px}
@@ -14527,22 +14906,31 @@ figcaption {
     width: 90%;
     max-width: 470px}
 
+<<<<<<< HEAD
   .paragraph-center-18 {
     font-size: 16px;
     line-height: 28px}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-23 {
     padding-top: 45px}
 
+<<<<<<< HEAD
   .heading-center-22 {
     font-size: 50px;
     line-height: 64px}
 
+=======
+>>>>>>> feature/bug-fixes
   .intro-content-26 {
     width: 80%}
 
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> feature/bug-fixes
   .intro-content-27 {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -14656,8 +15044,11 @@ figcaption {
     padding-top: 75px;
     padding-bottom: 75px}
 
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> feature/bug-fixes
   .paragraph-14,
   .paragraph-16,
   .paragraph-17 {
@@ -14694,10 +15085,13 @@ figcaption {
   .product-list {
     grid-template-columns: 1fr 1fr}
 
+<<<<<<< HEAD
   .product-image-15 {
     min-height: 340px;
     max-height: 340px}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-99 {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -14798,9 +15192,12 @@ figcaption {
     font-size: 16px;
     line-height: 28px}
 
+<<<<<<< HEAD
   .banner-28 {
     padding-top: 0}
 
+=======
+>>>>>>> feature/bug-fixes
   .get-in-touch-form-wrap-12 {
     width: 90%;
     max-width: 470px}
@@ -14822,6 +15219,7 @@ figcaption {
     justify-content: center;
     align-items: flex-start}
 
+<<<<<<< HEAD
   .banner-41 {
     padding-top: 25px;
     padding-bottom: 25px}
@@ -14840,42 +15238,59 @@ figcaption {
     min-height: auto;
     max-height: none}
 
+=======
+>>>>>>> feature/bug-fixes
   .price-122 {
     font-size: 12px}
 
+<<<<<<< HEAD
   .heading-center-122 {
     font-size: 50px;
     line-height: 64px}
 
+=======
+>>>>>>> feature/bug-fixes
   .border-box-122 {
     justify-content: center;
     align-items: center}
 
+<<<<<<< HEAD
   .paragraph-center-122 {
     font-size: 16px;
     line-height: 28px}
 
+=======
+>>>>>>> feature/bug-fixes
   .page-title {
     padding-top: 50px;
     padding-bottom: 50px}
 
+<<<<<<< HEAD
   .product-image-123 {
     min-height: 340px;
     max-height: 340px}
 
+=======
+>>>>>>> feature/bug-fixes
   .category-tab {
     grid-column-gap: 30px}
 
+<<<<<<< HEAD
   .product-name-123 {
     padding-bottom: 4px}
 
+=======
+>>>>>>> feature/bug-fixes
   .page-wrapper-2 {
     margin-bottom: 0}
 
+<<<<<<< HEAD
   .banner-41-copy {
     padding-top: 25px;
     padding-bottom: 25px}
 
+=======
+>>>>>>> feature/bug-fixes
   .wishlist {
     display: inline-block}
 
@@ -15056,10 +15471,13 @@ figcaption {
 
   
 
+<<<<<<< HEAD
   .banner-2221212 {
     padding-left: 20px;
     padding-right: 20px}
 
+=======
+>>>>>>> feature/bug-fixes
   .div-block-4612 {
     padding-top: 25px;
     padding-bottom: 25px}
@@ -15080,24 +15498,33 @@ figcaption {
     background-size: contain;
     height: 30vh}
 
+<<<<<<< HEAD
   .banner-24777212211290 {
     padding-top: 20px;
     padding-bottom: 20px}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-center12122 {
     font-size: 50px;
     line-height: 64px}
 
+<<<<<<< HEAD
   .banner-26111 {
     background-position: 50%}
 
+=======
+>>>>>>> feature/bug-fixes
   .intro-text-24-copy {
     margin-right: 0}
 
+<<<<<<< HEAD
   .banner-26111-copy {
     background-position: 100%;
     height: 25vh}
 
+=======
+>>>>>>> feature/bug-fixes
   .div-block-57-copy-copy-c12122222 {
     padding-top: 20px;
     padding-bottom: 35px}
@@ -15111,27 +15538,34 @@ figcaption {
     padding-top: 25px;
     padding-bottom: 25px}
 
+<<<<<<< HEAD
   .list-item-9 {
     font-size: 14px}
 
   .heading-14 {
     font-size: 16px}
 
+=======
+>>>>>>> feature/bug-fixes
   .rich-text-block {
     font-size: 17px}
 
+<<<<<<< HEAD
   .footer-block111111 {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     justify-content: flex-start;
     align-items: flex-start}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-120-copy {
     background-image: linear-gradient(90deg, #e9c9b900, #ffdac8 68%), url("../assets/images/66ac889ae5053423a38dd39f_jewelry-photography 1 (1).webp");
     background-position: 0 0, 20%;
     background-repeat: repeat, no-repeat;
     background-size: auto, cover}
 
+<<<<<<< HEAD
   .footer-block-copy {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -15139,6 +15573,8 @@ figcaption {
     align-items: flex-start;
     display: flex}
 
+=======
+>>>>>>> feature/bug-fixes
   .margin-bottom-copy-copy {
     margin-top: 0;
     margin-left: 0;
@@ -15149,9 +15585,12 @@ figcaption {
     width: 100%;
     margin-left: 0}
 
+<<<<<<< HEAD
   .text-block-354 {
     font-size: 19.5px}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-jumbo-2-copy-copy {
     font-size: 50px;
     line-height: 64px}
@@ -15209,11 +15648,16 @@ figcaption {
     grid-auto-columns: 2fr}
 
   .timeline_inner-mobile {
+<<<<<<< HEAD
     display: block}
 
   .banner-26111-copy-123 {
     background-position: 100%;
     height: 25vh}
+=======
+    display: block;
+  }
+>>>>>>> feature/bug-fixes
 }
 
 @media screen and (max-width: 479px) {
@@ -15456,10 +15900,13 @@ figcaption {
   .price-wrap {
     grid-column-gap: 8px}
 
+<<<<<<< HEAD
   .banner-5 {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr}
 
+=======
+>>>>>>> feature/bug-fixes
   .price-wrap-1 {
     grid-column-gap: 8px}
 
@@ -15500,10 +15947,13 @@ figcaption {
     height: auto;
     display: flex}
 
+<<<<<<< HEAD
   .product-image-3 {
     min-height: 400px;
     max-height: 400px}
 
+=======
+>>>>>>> feature/bug-fixes
   .product-image-2-copy {
     width: auto;
     height: auto;
@@ -15570,11 +16020,14 @@ figcaption {
     margin-left: 15px;
     margin-right: 15px}
 
+<<<<<<< HEAD
 
   .product-image-4 {
     min-height: 240px;
     max-height: 240px}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-8 {
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr}
@@ -15609,24 +16062,33 @@ figcaption {
     flex-direction: column;
     align-items: flex-start}
 
+<<<<<<< HEAD
   .footer-wrap {
     grid-row-gap: 80px}
 
+=======
+>>>>>>> feature/bug-fixes
   .ft-btm {
     grid-row-gap: 10px;
     text-align: center;
     flex-direction: column}
 
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> feature/bug-fixes
   .text-block-5 {
     margin-bottom: 10px}
 
+<<<<<<< HEAD
   .text-block-45 {
     width: auto;
     padding-left: 10px;
     padding-right: 10px}
 
+=======
+>>>>>>> feature/bug-fixes
   .form-block-2 {
     margin-bottom: 0}
 
@@ -15642,6 +16104,7 @@ figcaption {
     height: 45px;
     font-size: 12px}
 
+<<<<<<< HEAD
   .footer-block {
     justify-content: flex-start;
     align-items: center}
@@ -15650,9 +16113,12 @@ figcaption {
     justify-content: center;
     align-items: center}
 
+=======
+>>>>>>> feature/bug-fixes
   .container-6 {
     max-width: none}
 
+<<<<<<< HEAD
   .footer-content {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr}
@@ -15661,6 +16127,8 @@ figcaption {
     text-align: left;
     font-size: 14px}
 
+=======
+>>>>>>> feature/bug-fixes
   .text-block-45-copy {
     width: auto;
     padding-left: 10px;
@@ -15766,10 +16234,13 @@ figcaption {
   .layout192_component-2 {
     grid-template-columns: 1fr}
 
+<<<<<<< HEAD
   .heading-center-12 {
     font-size: 32px;
     line-height: 30px}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-gold {
     font-size: 30px;
     line-height: 30px}
@@ -15798,6 +16269,7 @@ figcaption {
     margin-left: 15px;
     margin-right: 15px}
 
+<<<<<<< HEAD
 
 
   .product-item-12 {
@@ -15818,6 +16290,8 @@ figcaption {
     grid-template-columns: 1fr;
     width: 100%}
 
+=======
+>>>>>>> feature/bug-fixes
   .map-1 {
     overflow: visible}
 
@@ -15854,6 +16328,7 @@ figcaption {
     padding-left: 1rem;
     padding-right: 5rem}
 
+<<<<<<< HEAD
   
 
   .product-item-14 {
@@ -15864,12 +16339,15 @@ figcaption {
     min-height: auto;
     max-height: none}
 
+=======
+>>>>>>> feature/bug-fixes
   .price-wrap-14 {
     grid-column-gap: 8px}
 
   .product-name114 {
     padding-bottom: 2px}
 
+<<<<<<< HEAD
   .price-wrap-copy {
     grid-column-gap: 8px}
 
@@ -15880,6 +16358,8 @@ figcaption {
     background-size: auto, cover;
     height: 50vh}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-jumbo-20 {
     width: auto;
     font-size: 36px;
@@ -15978,10 +16458,13 @@ figcaption {
     margin-right: 0;
     padding: 20px 0}
 
+<<<<<<< HEAD
   .banner-22 {
     padding-left: 10px;
     padding-right: 10px}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-center-copy {
     font-size: 36px;
     line-height: 40px}
@@ -15990,10 +16473,13 @@ figcaption {
     width: 100%;
     max-width: none}
 
+<<<<<<< HEAD
   .heading-center-22 {
     font-size: 36px;
     line-height: 48px}
 
+=======
+>>>>>>> feature/bug-fixes
   .intro-content-26.cc-homepage,
   .intro-content-26.cc-homepage-3,
   .intro-content-26.cc-homepage-20,
@@ -16001,8 +16487,11 @@ figcaption {
     width: auto;
     margin-left: 10px}
 
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> feature/bug-fixes
   .intro-content-27 {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -16208,10 +16697,13 @@ figcaption {
     grid-column-gap: 15px;
     grid-row-gap: 30px}
 
+<<<<<<< HEAD
   .product-image-15 {
     min-height: 240px;
     max-height: 240px}
 
+=======
+>>>>>>> feature/bug-fixes
   .banner-99 {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr}
@@ -16324,6 +16816,7 @@ figcaption {
     padding-left: 16px;
     padding-right: 16px}
 
+<<<<<<< HEAD
   .banner-33 {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr}
@@ -16339,14 +16832,19 @@ figcaption {
     min-height: auto;
     max-height: none}
 
+=======
+>>>>>>> feature/bug-fixes
   .price-wrap-122,
   .price-wrap-1222 {
     grid-column-gap: 8px}
 
+<<<<<<< HEAD
   .heading-center-122 {
     font-size: 36px;
     line-height: 48px}
 
+=======
+>>>>>>> feature/bug-fixes
   .image-border-center-122 {
     width: 70%}
 
@@ -16357,16 +16855,22 @@ figcaption {
   .result {
     display: none}
 
+<<<<<<< HEAD
   .product-image-123 {
     min-height: 240px;
     max-height: 240px}
 
+=======
+>>>>>>> feature/bug-fixes
   .category-tab {
     grid-column-gap: 40px}
 
+<<<<<<< HEAD
   .product-name-123 {
     padding-bottom: 2px}
 
+=======
+>>>>>>> feature/bug-fixes
   .category-sorting {
     margin-bottom: 30px}
 
@@ -16488,10 +16992,13 @@ figcaption {
   .price-wrap121,
   
 
+<<<<<<< HEAD
   .banner-2221212 {
     padding-left: 10px;
     padding-right: 10px}
 
+=======
+>>>>>>> feature/bug-fixes
   .collection-list-21212 {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr}
@@ -16517,17 +17024,23 @@ figcaption {
     padding-left: 10px;
     padding-right: 10px}
 
+<<<<<<< HEAD
   .banner-24777212211290 {
     padding-top: 20px;
     padding-bottom: 20px}
 
+=======
+>>>>>>> feature/bug-fixes
   .heading-center12122 {
     font-size: 26px;
     line-height: 48px}
 
+<<<<<<< HEAD
   .banner-26111-copy {
     background-position: 87%}
 
+=======
+>>>>>>> feature/bug-fixes
   .div-block-57-copy-copy-c12122222 {
     padding-left: 10px;
     padding-right: 10px}
@@ -16546,6 +17059,7 @@ figcaption {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr}
 
+<<<<<<< HEAD
   .heading-14 {
     text-align: left;
     font-size: 16px}
@@ -16560,6 +17074,8 @@ figcaption {
     align-items: center;
     display: grid}
 
+=======
+>>>>>>> feature/bug-fixes
   .title-smcccall-copy {
     text-align: center}
 
@@ -16571,10 +17087,13 @@ figcaption {
     align-items: stretch;
     height: 50vh}
 
+<<<<<<< HEAD
   .footer-block-copy {
     justify-content: flex-start;
     align-items: center}
 
+=======
+>>>>>>> feature/bug-fixes
   .margin-bottom-copy-copy {
     margin-top: 0;
     margin-left: 0;
@@ -16622,6 +17141,7 @@ figcaption {
     grid-auto-columns: 1fr}
 
   .bko-grid-1111-copy {
+<<<<<<< HEAD
     grid-template-columns: 1fr}
 
   .div-block-4211112223 {
@@ -16629,6 +17149,10 @@ figcaption {
 
   .banner-26111-copy-123 {
     background-position: 87%}
+=======
+    grid-template-columns: 1fr;
+  }
+>>>>>>> feature/bug-fixes
 }
 
 #w-node-c68b31ad-eaaa-7924-3942-d11125a86159-014d176d {
@@ -17401,6 +17925,7 @@ figcaption {
   box-shadow: 0 8px 20px rgba(153, 31, 35, .08);
   transform: translateY(-2px)}
 
+<<<<<<< HEAD
 /* Product/category listing card refinements */
 .product-item-14 {
   overflow: hidden;
@@ -17419,6 +17944,8 @@ figcaption {
   gap: 8px;
   padding: 16px 16px 8px !important}
 
+=======
+>>>>>>> feature/bug-fixes
 .product-name114,
 .product-name111212,
 .product-name1141 {
@@ -17436,6 +17963,7 @@ figcaption {
   font-size: 12px !important;
   text-transform: capitalize !important}
 
+<<<<<<< HEAD
 .product-image-14 {
   width: 100%;
   margin-top: 6px !important;
@@ -17445,6 +17973,8 @@ figcaption {
 .product-item-14:hover .product-image-14 {
   transform: scale(1.035)}
 
+=======
+>>>>>>> feature/bug-fixes
 .product-info-14,
 .product-info-124 {
   padding: 8px 16px 16px !important}
@@ -17453,11 +17983,14 @@ figcaption {
 .button-link {
   transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease}
 
+<<<<<<< HEAD
 .product-item-14:hover .button-123 {
   background-color: var(--meron) !important;
   transform: translateY(-1px);
   box-shadow: 0 6px 12px rgba(153, 31, 35, .2)}
 
+=======
+>>>>>>> feature/bug-fixes
 /* Desktop product cards: slightly smaller, calmer, and easier to scan. */
 @media (min-width: 1024px) {
 
@@ -17470,12 +18003,15 @@ figcaption {
     border-radius: 7px !important;
     box-shadow: 0 6px 18px rgba(35, 15, 16, .09) !important}
 
+<<<<<<< HEAD
   .product-item-14 {
     padding: 12px 14px !important}
 
   .product-img-14 {
     padding: 10px 10px 6px !important}
 
+=======
+>>>>>>> feature/bug-fixes
   .product-image-14,
   .product-image-8,
   .product-image-2-copy,
@@ -19155,4 +19691,52 @@ body .premium-branches-title {
   font-family: "Roboto Serif", serif !important;
   font-weight: 700;
   letter-spacing: 0.5px;
+<<<<<<< HEAD
   font-style: normal}
+=======
+  font-style: normal;
+}
+
+.premium-footer-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 15px;
+}
+
+.premium-footer-features-list li {
+  display: flex;
+  align-items: flex-start;
+  color: #636363;
+  font-size: 14px;
+}
+
+.premium-footer-features-list svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  margin-top: 1px;
+  color: #c19b67;
+}
+
+/* Ensure mobile stacks correctly */
+@media (max-width: 767px) {
+  .premium-footer-features-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Extracted from product HTMLs */
+.section-product-info { background: #fffaf3; }
+  .section-product-info .product-header5_layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, .86fr); gap: clamp(24px, 4vw, 56px); align-items: stretch; }
+  .sp-product-image-wrapper, .zoom-wrapper { position: relative; display: flex; align-items: center; justify-content: center; min-height: clamp(360px, 42vw, 610px); background: #fffdf8; border: 1px solid rgba(153,31,35,.14); border-radius: 10px; box-shadow: 0 14px 36px rgba(65,35,28,.08); overflow: hidden; }
+  .sp-product-image { width: 100%; height: 100%; min-height: inherit; object-fit: contain; display: block; }
+  .product-header4_product-details, .product-header5_product-details { align-self: stretch; background: linear-gradient(180deg, #fffdf8, #fff8ef); border: 1px solid rgba(153,31,35,.16); border-radius: 10px; box-shadow: 0 14px 36px rgba(65,35,28,.08); color: #332525; overflow: visible; }
+  .product-header4_product-details .text-size-large, .product-header5_product-details .text-size-large { color: #991f23; font-family: Mulish, Arial, sans-serif; font-weight: 700; }
+  .product-header4_product-details .word1, .product-header4_product-details .word3, .product-header4_product-details .word5, .product-header4_product-details .word7, .product-header5_product-details .word1, .product-header5_product-details .word3, .product-header5_product-details .word5, .product-header5_product-details .word7, .text-block-78 { color: #333; font-weight: 700; }
+  .button-26 { background: #991f23; color: #fff; border-radius: 4px; font-family: Mulish, Arial, sans-serif; font-weight: 700; text-decoration: none; }
+  @media (max-width: 767px) { .section-product-info .product-header5_layout { display: flex; flex-direction: column; gap: 20px; } .sp-product-image-wrapper, .zoom-wrapper { min-height: 300px; } .product-header4_product-details, .product-header5_product-details { width: 100%; } }
+>>>>>>> feature/bug-fixes

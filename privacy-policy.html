@@ -10,11 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&amp;family=Mulish:wght@300;400;500;600;700&amp;family=Oswald:wght@200..700&amp;display=swap" rel="stylesheet"/>
 <link href="assets/images/6864a9bd73e1ee6d485b8ff8_Frame%202085665121.png" rel="shortcut icon" type="image/x-icon"/>
 <link href="assets/images/6864a9bf2677c2eb924d0096_Frame%202085665122.png" rel="apple-touch-icon"/>
-<link href="css/style.css?v=kj-hard-refresh-29" rel="stylesheet"/>
+<link href="css/style.css?v=kj-hard-refresh-30" rel="stylesheet"/>
 <link href="css/navbar.css?v=kj-hard-refresh-23" rel="stylesheet"/>
 <link href="css/responsive.css?v=kj-hard-refresh-23" rel="stylesheet"/>
-<!-- Premium Header & active link overrides to bypass filesystem caching -->
-<!-- Premium Header & active link overrides with maximum CSS specificity -->
+
 
 
 
@@ -72,64 +71,7 @@
 <div id="site-footer"></div>
 <script src="js/footer-loader.js"></script></section> <script src="js/slider.js?v=kj-hard-refresh-23"></script>
 <script src="js/app.js?v=kj-hard-refresh-23"></script>
-<!-- Premium Header & rates repairs script to bypass filesystem caching -->
-<script id="premium-header-repairs">
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. Mobile & desktop toggle logic
-      document.querySelectorAll('.mobile-menu-button, .menu-button-2, .mobile-menu-toggle').forEach((button) => {
-        button.addEventListener('click', () => {
-          const header = button.closest('header') || document;
-          header.querySelectorAll('.site-nav__panel').forEach((menu) => menu.classList.toggle('is-open'));
-          button.classList.toggle('is-open');
-        });
-      });
 
-      document.querySelectorAll('.dropdown-toggle').forEach((toggle) => {
-        toggle.addEventListener('click', (event) => {
-          const dropdown = toggle.closest('.dropdown');
-          if (!dropdown) return;
-          dropdown.classList.toggle('is-open');
-          if (dropdown.querySelector('.dropdown-list') && (!event.target.closest('a') || event.target.closest('a').getAttribute('href').includes('#'))) event.preventDefault();
-        });
-      });
 
-      // 2. Today's metal rates dropdown repair
-      const nav = document.querySelector('.nav-menu-3.site-nav__panel');
-      if (nav) {
-        const goldLink = nav.querySelector('.goldlink');
-        const goldWrap = goldLink?.closest('.bko-wrap-111-2');
-
-        let rate = nav.querySelector('.rate-dropdown');
-        if (!rate) {
-          const prefix = window.location.pathname.includes('/') && !window.location.pathname.endsWith('/index.html') && window.location.pathname.split('/').length > 2 ? '../' : '';
-          rate = document.createElement('div');
-          rate.className = 'rate-dropdown dropdown';
-          rate.innerHTML = `
-            <button class="rate-toggle dropdown-toggle" type="button" aria-label="Today's metal rates" aria-expanded="false">
-              <img fetchpriority="high" decoding="async" src="${prefix}assets/coin/gold coin.png" alt="Privacy Policy" class="rate-coin"/>
-              <span>GOLD 22 KT/1g - &#8377; 13665</span><span class="rate-chevron">&#8963;</span>
-            </button>
-            <div class="rate-menu dropdown-list">
-              <div class="rate-row"><img loading="lazy" decoding="async" src="${prefix}assets/coin/gold coin.png" alt="Privacy Policy" class="rate-coin"/><span>GOLD 22 KT/1g - &#8377; 13665</span></div>
-              <div class="rate-row"><img loading="lazy" decoding="async" src="${prefix}assets/coin/gold coin.png" alt="Privacy Policy" class="rate-coin"/><span>GOLD 18 KT/1g - &#8377; 11610</span></div>
-              <div class="rate-row"><img loading="lazy" decoding="async" src="${prefix}assets/coin/Platinum Coin.png" alt="Privacy Policy" class="rate-coin"/><span>PLATINUM 1g - &#8377; 5248</span></div>
-              <div class="rate-row"><img loading="lazy" decoding="async" src="${prefix}assets/coin/silver coin.png" alt="Privacy Policy" class="rate-coin"/><span>SILVER 1g - &#8377; 270</span></div>
-            </div>`;
-        }
-        if (goldWrap && rate.nextElementSibling !== goldWrap) nav.insertBefore(rate, goldWrap);
-        rate.style.display = 'inline-flex';
-
-        // 3. Remove duplicate Bangles menu items
-        if (goldWrap) {
-          const bangles = Array.from(goldWrap.querySelectorAll('a, div')).filter((node) => node.textContent.trim().toLowerCase() === 'bangles');
-          bangles.slice(1).forEach((node) => {
-            const item = node.closest('.dynamic-item');
-            if (item) item.remove();
-            else node.remove();
-          });
-        }
-      }
-    });
-  </script>
 </body>
 </html>
