@@ -3734,7 +3734,6 @@ figcaption {
   font-size: 12px;
   font-weight: 600}
 
-<<<<<<< HEAD
 .quick-contact-grid-copy {
   background-image: url("../assets/images/66aa067372c8bb1c084deda0_Rectangle 340.png");
   background-position: 50%;
@@ -3757,9 +3756,6 @@ figcaption {
   margin-top: 60%;
   font-size: 48px;
   line-height: 50px}
-=======
-
->>>>>>> feature/bug-fixes
 
 .banner-6 {
   grid-column-gap: 50px;
@@ -10112,14 +10108,7 @@ figcaption {
   display: flex}
 
 .section-16 {
-<<<<<<< HEAD
   padding-bottom: 0}
-=======
-  padding-bottom: 0;
-  overflow: hidden;
-  margin-bottom: 32px !important;
-}
->>>>>>> feature/bug-fixes
 
 .swiper-wrapper {
   justify-content: flex-start;
@@ -12123,16 +12112,12 @@ figcaption {
     grid-auto-flow: row;
     place-items: center}
 
-<<<<<<< HEAD
   .quick-contact-grid-copy {
     height: auto}
 
   .text-block-36 {
     margin-top: 70%;
     font-size: 30px}
-=======
-
->>>>>>> feature/bug-fixes
 
   .banner-6 {
     grid-column-gap: 20px;
@@ -14052,12 +14037,9 @@ figcaption {
 
 
 
-<<<<<<< HEAD
   .quick-contact-grid-copy {
     background-position: 50% 30%;
     height: auto}
-=======
->>>>>>> feature/bug-fixes
 
   .banner-6 {
     grid-template-columns: 1fr;
@@ -15487,7 +15469,6 @@ figcaption {
     grid-auto-flow: row;
     place-items: center}
 
-<<<<<<< HEAD
   .quick-contact-grid-copy {
     width: 100%;
     height: 400px;
@@ -15496,9 +15477,6 @@ figcaption {
 
   .text-block-36 {
     margin-top: 50%}
-=======
-
->>>>>>> feature/bug-fixes
 
   .banner-6 {
     grid-template-columns: auto}
@@ -17840,12 +17818,9 @@ html,
 body {
   overflow-x: hidden}
 
-<<<<<<< HEAD
 .section-16 {
   overflow: hidden}
 
-=======
->>>>>>> feature/bug-fixes
 .section-16 .slider-wrapper {
   height: 600px;
   overflow: visible}
@@ -18121,12 +18096,9 @@ body {
   height: 620px !important;
   min-height: 620px !important}
 
-<<<<<<< HEAD
 .section-16 {
   margin-bottom: 32px !important}
 
-=======
->>>>>>> feature/bug-fixes
 .section-16 .swiper-component .swiper {
   margin-left: auto !important;
   margin-right: auto !important;
@@ -19223,11 +19195,25 @@ body .premium-branches-title {
 
 
 /* Luxury Advertisement Banner Section */
+.div-block-43 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.div-block-43 .banner-4 {
+  grid-column: 1 / -1;
+}
+
+.div-block-43 .banner-6 {
+  display: contents;
+}
+
 .banner-6 .ad-banner {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  height: 420px;
+  height: 360px;
   display: flex;
 }
 
@@ -19279,4 +19265,13 @@ body .premium-branches-title {
 .banner-6 .ad-banner-cta:hover {
   background-color: #fff;
   color: #000;
+}
+
+@media screen and (max-width: 991px) {
+  .div-block-43 {
+    grid-template-columns: 1fr;
+  }
+  .banner-6 .ad-banner {
+    height: 300px;
+  }
 }

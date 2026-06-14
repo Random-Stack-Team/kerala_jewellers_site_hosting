@@ -1,15 +1,22 @@
+/* ==========================================================================
+   DESKTOP NAVBAR MATCHING LIVE SITE
+   ========================================================================== */
+
+/* 1. Base Header & Shell */
 header.site-header {
   background: transparent !important;
   padding: 0 !important;
   box-shadow: none !important;
 }
 
+/* Ensure the inner container uses proper max-width and layout */
+header.site-header .desktop-header .site-header__inner .layout-container.content-container {
+  width: min(100%, 1440px) !important;
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
 
-/* ==========================================================================
-   DESKTOP NAVBAR MATCHING LIVE SITE
-   ========================================================================== */
-
-/* 1. Desktop Outer Navbar (.navigation-4 equivalent) */
 .desktop-header {
   z-index: 9;
   background-color: #991f23;
@@ -21,6 +28,7 @@ header.site-header {
   padding: 0;
   display: flex;
   box-shadow: 0 4px 4px rgba(142, 142, 142, 0.58);
+  font-family: Mulish, Arial, sans-serif; /* Consolidating font declarations here */
 }
 
 .desktop-header .site-header__inner {
@@ -31,14 +39,33 @@ header.site-header {
   align-items: center;
 }
 
-/* Ensure links in the desktop header are white */
+.desktop-header .site-header__container {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 30px !important;
+}
+
+/* 2. Brand / Logo */
+.site-header__brand-area {
+  flex-shrink: 0 !important;
+}
+
+.site-header__brand img {
+  display: block !important;
+  height: auto !important;
+  max-width: 210px !important;
+  width: min(210px, 48vw) !important;
+}
+
+/* 3. Nav Links */
 .desktop-header a,
 .desktop-header .rate-toggle {
   color: #fff;
   text-decoration: none;
 }
 
-/* 2. Desktop Navigation Panel (.nav-menu-5 equivalent) */
 .site-nav__panel {
   justify-content: center;
   align-items: center;
@@ -54,12 +81,9 @@ header.site-header {
   white-space: nowrap !important;
   padding: 10px 20px;
   display: inline-block;
-  font-family: Mulish, Arial, sans-serif;
   font-size: 1.3em;
   font-weight: 700;
   text-transform: capitalize;
-  color: #fff;
-  text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -90,9 +114,14 @@ header.site-header {
   left: 10%;
 }
 
-/* 3. Mega Menu Panel (.bko-dropdown-list equivalent) */
+/* 4. Mega Menu */
 .bko-wrap-111-2 {
   position: relative;
+}
+
+/* Hover logic to show mega menu */
+.bko-wrap-111-2:hover .kj-megamenu-dropdown {
+  display: block;
 }
 
 .kj-megamenu-dropdown {
@@ -100,11 +129,9 @@ header.site-header {
   position: absolute;
   top: 100%;
   left: 50% !important;
-  right: auto !important;
   transform: translateX(-50%) !important;
   width: min(560px, calc(100vw - 48px)) !important;
   max-width: 560px !important;
-  height: auto !important;
   padding: 0 !important;
   margin: 10px 0 0 0 !important;
   background: #fff !important;
@@ -116,18 +143,23 @@ header.site-header {
   z-index: 10050 !important;
 }
 
+/* Bridge to fix hover gap */
+.kj-megamenu-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: transparent;
+}
+
 /* For the Scheme dropdown which is smaller */
 .kj-megamenu-dropdown.scheme-dropdown-list {
   width: min(280px, calc(100vw - 48px)) !important;
   max-width: 280px !important;
 }
 
-/* Hover logic to show mega menu */
-.bko-wrap-111-2:hover .kj-megamenu-dropdown {
-  display: block;
-}
-
-/* 4. Mega Menu Inner Grid (.kj-megamenu-panel equivalent) */
 .kj-megamenu-panel {
   display: grid;
   grid-template-columns: minmax(180px, 1fr) 250px;
@@ -149,7 +181,6 @@ header.site-header {
 
 .kj-megamenu-heading {
   color: #991f23 !important;
-  font-family: Mulish, Arial, sans-serif !important;
   font-weight: 700 !important;
   font-size: 16px !important;
   letter-spacing: 0.05em !important;
@@ -160,7 +191,6 @@ header.site-header {
 
 .kj-megamenu-link {
   color: #222 !important;
-  font-family: Mulish, Arial, sans-serif !important;
   font-size: 15px !important;
   font-weight: 500 !important;
   opacity: 1 !important;
@@ -221,60 +251,12 @@ header.site-header {
   background: rgba(153, 31, 35, 0.05);
 }
 
-/* Mobile defaults (hidden on desktop) */
-.mobile-header,
-.kj-mobile-rate-strip {
-  display: none;
-}
-
-
-/* Ensure the inner container uses proper max-width and layout */
-/* Ensure the inner container uses proper max-width and layout */
-header.site-header .desktop-header .site-header__inner .layout-container.content-container {
-  width: min(100%, 1440px) !important;
-  max-width: 1440px !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-}
-
-.desktop-header .site-header__container {
-  width: 100% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 30px !important;
-}
-
-.site-header__brand img {
-  display: block !important;
-  height: auto !important;
-  max-width: 210px !important;
-  width: min(210px, 48vw) !important;
-}
-
 .rate-toggle span {
-  font-family: Mulish, Arial, sans-serif;
   font-size: 20px !important;
   font-weight: 700;
   letter-spacing: -0.8px;
   white-space: nowrap;
 }
-
-/* Bridge to fix hover gap */
-.kj-megamenu-dropdown::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: transparent;
-}
-
-.site-header__brand-area {
-  flex-shrink: 0 !important;
-}
-
 
 .rate-chevron {
   width: 28px;
@@ -283,4 +265,10 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* 6. Mobile Defaults (hidden on desktop) */
+.mobile-header,
+.kj-mobile-rate-strip {
+  display: none;
 }
