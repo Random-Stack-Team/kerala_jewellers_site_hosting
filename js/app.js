@@ -659,6 +659,11 @@ document.documentElement.classList.add('js-ready');
   };
 
   window.initKeralaHeader = () => {
+    const mount = document.getElementById('site-header');
+    if (!mount || !mount.children.length) return;
+    if (document.documentElement.dataset.keralaHeaderInit === 'true') return;
+    document.documentElement.dataset.keralaHeaderInit = 'true';
+
     renderRateLabelForCurrentPage();
     wireRateSelection();
     wireTimelineProgress();
@@ -676,6 +681,15 @@ document.documentElement.classList.add('js-ready');
     calculatePrice('#silverpricesssproduct', 270);
     initProductFilters();
   }; // end window.initKeralaHeader
+
+  if (!window.__keralaHeaderLifecycleBound) {
+    window.__keralaHeaderLifecycleBound = true;
+    window.addEventListener('kerala:header-loaded', window.initKeralaHeader);
+  }
+
+  if (document.getElementById('site-header')?.children.length) {
+    window.initKeralaHeader();
+  }
 })();
 
 /* --- TRUE LOUPE ZOOM EFFECT --- */

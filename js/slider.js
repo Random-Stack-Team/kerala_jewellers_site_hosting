@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  const updateFocus = (slide, isHidden) => {
+    slide.querySelectorAll('a, button, input, textarea, select').forEach(el => {
+      el.tabIndex = isHidden ? -1 : 0;
+    });
+  };
+
   const initContentSlider = (slider) => {
     const track = slider.querySelector('.slider-track');
     if (!track || slider.dataset.kjSliderReady) return;
@@ -20,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const active = slideIndex === activeIndex;
         slide.classList.toggle('is-active', active);
         slide.setAttribute('aria-hidden', String(!active));
+        updateFocus(slide, !active);
       });
       dots?.querySelectorAll('.slider-dot, button, div').forEach((dot, dotIndex) => {
         dot.classList.toggle('is-active', dotIndex === activeIndex);
@@ -229,6 +236,8 @@ document.addEventListener('DOMContentLoaded', () => {
         slide.style.opacity = distance > 1 ? '0.42' : '1';
         slide.style.zIndex = String(10 - distance);
         slide.style.pointerEvents = slideIndex === activeIndex ? 'auto' : 'none';
+        slide.setAttribute('aria-hidden', String(slideIndex !== activeIndex));
+        updateFocus(slide, slideIndex !== activeIndex);
       });
       wrapper.style.minHeight = stageWidth < 769 ? '560px' : '470px';
     };
@@ -373,6 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isActive = offset === 0;
     slide.classList.toggle('is-active', isActive);
     slide.setAttribute('aria-hidden', String(!isActive));
+    updateFocus(slide, !isActive);
 
     if (offset === 0) {
       slide.dataset.kjPosition = 'active';

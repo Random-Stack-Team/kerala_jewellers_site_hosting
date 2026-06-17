@@ -814,6 +814,7 @@
     font-weight: 300 !important;
     justify-content: center !important;
     line-height: 29.7605px !important;
+    margin-left: 0 !important;
     min-height: 51.7656px !important;
     padding: 10px 20px !important;
     width: auto !important;
@@ -905,6 +906,7 @@
   .div-block-4612 .button-321 {
     font-size: 18px !important;
     line-height: 19.44px !important;
+    margin-left: 0 !important;
     min-height: 41.4375px !important;
     padding: 10px 20px !important;
   }
@@ -1054,6 +1056,7 @@
     font-size: 27.556px !important;
     font-weight: 300 !important;
     line-height: 29.7605px !important;
+    margin-left: 0 !important;
     min-height: 51.7656px !important;
     padding: 10px 20px !important;
     width: auto !important;
@@ -3091,12 +3094,69 @@ body.legal-page {
   }
 }
 
+.banner-slider1 {
+  padding-bottom: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .content-slider,
+  .content-slider .slider-track,
+  .content-slider .slider-slide,
+  .content-slider .banner-slider1,
+  .content-slider .banner-slider2,
+  .content-slider .banner-slider3,
+  .content-slider .banner-slider4 {
+    height: clamp(500px, 50vh, 560px);
+    min-height: 500px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .content-slider,
+  .content-slider .slider-track,
+  .content-slider .slider-slide,
+  .content-slider .banner-slider1,
+  .content-slider .banner-slider2,
+  .content-slider .banner-slider3,
+  .content-slider .banner-slider4 {
+    height: clamp(500px, 65vh, 540px);
+    min-height: 500px;
+  }
+}
+
+.banner-slider1 .intro-content-2.cc-homepage {
+  justify-content: center;
+  padding-top: clamp(12px, 1.5vw, 24px);
+  padding-bottom: clamp(16px, 2vw, 30px);
+  box-sizing: border-box;
+}
+
+.banner-slider1 .kj-hero-heading {
+  margin-bottom: 5px;
+}
+
+.banner-slider1 .intro-text-2 {
+  grid-row-gap: 15px;
+}
+
+.banner-slider1 .paragraph-bigger-2 {
+  margin-bottom: 10px;
+}
+
 .banner-slider1 .intro-content-2,
 .banner-slider2 .intro-content-2,
 .banner-slider3 .intro-content-2,
 .banner-slider4 .intro-content-2 {
   margin-bottom: 0 !important;
   padding-bottom: 10px !important;
+}
+
+.banner-slider1 .paragraph-bigger-2,
+.banner-slider2 .paragraph-bigger-2,
+.banner-slider3 .paragraph-bigger-2,
+.banner-slider4 .paragraph-bigger-2 {
+  text-indent: 0;
+  outline: none;
 }
 
 /* 2. Product detail box scroll option removal */
@@ -3256,30 +3316,16 @@ body.legal-page {
 
 body,
 p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 a,
 button,
 input,
 textarea,
 .text-block,
-.paragraph,
-.heading {
+.paragraph {
   font-family: 'Mulish', sans-serif !important;
 }
 
 /* 10. Heading Jumbo 2 Fix (Keep it inside the banner and make it responsive) */
-.heading-jumbo-2-copy-copy {
-  margin-top: 0 !important;
-  word-break: break-word !important;
-  max-width: 100% !important;
-  font-size: clamp(28px, 4.5vw, 55px) !important;
-  line-height: 1.2 !important;
-}
 
 /* 11. Redesign h6: highlight but not maroon, reduced size */
 .legal-page .richtext h6 {

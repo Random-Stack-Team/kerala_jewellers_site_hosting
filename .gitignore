@@ -51,3 +51,10 @@ desktop.ini
 # ──────────────────────────────────────────────────────────────
 .env
 .env.*
+
+# Internal cleanup/audit helpers
+scratch/
+refactor*.js
+audit*.js
+*_audit_report.md
+.graphify_detect.json

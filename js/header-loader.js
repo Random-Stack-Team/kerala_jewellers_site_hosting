@@ -24,10 +24,7 @@
     }
 
     mount.innerHTML = html;
-
-    if (typeof window.initKeralaHeader === "function") {
-      window.initKeralaHeader();
-    }
+    window.dispatchEvent(new CustomEvent("kerala:header-loaded"));
   } catch (error) {
     console.error("Header loader error:", error);
   }
