@@ -1037,6 +1037,15 @@
     font-weight: 600 !important;
   }
 
+  .div-block-4612 .heading-2,
+  .div-block-4612 .heading-2-copy {
+    min-height: 65px;
+  }
+
+  .div-block-4612 .margin-bottom-24px {
+    min-height: 72px;
+  }
+
   .div-block-4612 .margin-bottom-24px {
     font-family: Mulish, sans-serif !important;
     font-size: 22px !important;
