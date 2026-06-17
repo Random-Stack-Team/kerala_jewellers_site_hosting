@@ -196,9 +196,7 @@ th {
 
 
 
-.w-icon-arrow-down:before,
-.dropdown-chevron:before {
-  content: ""}
+
 
 * {
   box-sizing: border-box}
@@ -883,14 +881,6 @@ textarea.form-select {
 .dropdown-toggle:focus {
   outline: 0}
 
-.dropdown-chevron {
-  width: 1em;
-  height: 1em;
-  margin: auto 20px auto auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0}
 
 .dropdown-list {
   background: #ddd;
@@ -2496,10 +2486,6 @@ figcaption {
   display: flex;
   position: static}
 
-.dropdown-nav-item---brix-copy {
-  margin-bottom: 16px;
-  line-height: 1.66667;
-  list-style-type: none}
 
 .site-header__container {
   border: 0 solid #000;
@@ -2517,10 +2503,6 @@ figcaption {
 .option-2 {
   font-style: normal}
 
-.dropdown-nav---brix-copy {
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style-type: none}
 
 .cart-item-3 {
   background-color: var(--grey);
@@ -2541,14 +2523,6 @@ figcaption {
 .text-block-68 {
   font-style: normal}
 
-.header-navigation---brix-copy {
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-  margin-bottom: 0;
-  padding: 20px 12px;
-  list-style-type: none;
-  display: flex}
 
 .nav-link {
   color: #000;
@@ -2746,16 +2720,7 @@ figcaption {
   font-size: 16px;
   display: flex}
 
-.dropdown-nav-link---brix-copy {
-  color: #170f49;
-  padding: 0;
-  font-style: normal;
-  text-decoration: none;
-  transition: color .35s}
 
-.dropdown-nav-link---brix-copy:hover,
-.dropdown-nav-link---brix-copy.is-current {
-  color: #4a3aff}
 
 .apple-btn {
   border-radius: 50px;
@@ -2787,8 +2752,6 @@ figcaption {
   font-style: normal}
 
 
-.nav-item-wrapper---brix-copy {
-  padding-bottom: 0}
 
 .dropdown-nav---brix {
   margin-bottom: 0;
@@ -2835,9 +2798,6 @@ figcaption {
 .text-block-66 {
   font-style: normal}
 
-.nav-item-wrapper---brix-copy-2 {
-  padding-bottom: 0;
-  list-style-type: none}
 
 .nav-left {
   grid-column-gap: 50px;
@@ -2912,15 +2872,6 @@ figcaption {
   font-size: 12px}
 
 .navigation-right-1,
-.navigation-right-copy {
-  grid-column-gap: 12px;
-  grid-row-gap: 12px;
-  flex-flow: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: auto;
-  font-size: 16px;
-  display: flex}
 
 .intro-content-2 {
   text-align: center;
@@ -3334,20 +3285,6 @@ figcaption {
   width: auto;
   padding: 10px 20px}
 
-.hero-split-copy {
-  background-image: url("../assets/images/66a9d22906db228e20416a70_Rectangle 336.png");
-  background-position: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 506px;
-  max-width: 46%;
-  height: 249px;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: flex}
 
 .hero-split-1 {
   grid-column-gap: 36px;
@@ -3428,35 +3365,9 @@ figcaption {
   height: auto;
   display: flex}
 
-.heading-2-copy {
-  color: #fff;
-  letter-spacing: -2.6px;
-  margin-top: 20px;
-  padding-right: 40px;
-  font-family: var(--font-decorative);
-  font-size: 65px;
-  font-weight: 300;
-  line-height: 65px}
 
-.heading-2-copy.emarald {
-  color: var(--emarald);
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: var(--font-decorative);
-  font-weight: 300;
-  line-height: 62px}
 
-.heading-2-copy.gold {
-  color: var(--gold);
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-right: 0;
-  font-family: var(--font-decorative);
-  font-weight: 300}
 
-.heading-2-copy.brown,
-.heading-2-copy.dark-maroon {
-  color: var(--dark-maroon)}
 
 .banner-4 {
   grid-column-gap: 0px;
@@ -3727,18 +3638,6 @@ figcaption {
   font-size: 12px;
   font-weight: 600}
 
-.quick-contact-grid-copy {
-  background-image: url("../assets/images/66aa067372c8bb1c084deda0_Rectangle 340.png");
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
-  display: flex;
-  position: relative}
 
 .div-block-3 {
   width: 247px}
@@ -3773,19 +3672,7 @@ figcaption {
   display: flex}
 
 .product-image-3,
-.product-image-2-copy {
-  object-fit: cover;
-  width: 100%;
-  min-height: 100%;
-  max-height: 100%}
 
-.price-wrap-copy,
-.price-wrap-2 {
-  grid-column-gap: 15px;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  display: flex}
 
 .price-wrap-3 {
   grid-column-gap: 15px;
@@ -4233,18 +4120,6 @@ figcaption {
   width: 100%;
   height: 100%}
 
-.banner-copy,
-
-
-.banner-slider1 {
-  background-image: url("../assets/images/66a8ee4bda50ac6ee5ee1339_110390748217dcb544e6c2fdbf9ec5e3_4 435.webp");
-  background-position: 100% 0;
-  background-size: cover;
-  border-radius: 15px;
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  overflow: hidden}
 
 .banner-slider2 {
   background-image: url("../assets/images/66ab2a8e5dba723b4a68e2fe_Property 1=Variant3.webp");
@@ -4340,18 +4215,8 @@ figcaption {
   line-height: 30px;
   text-decoration: none}
 
-.section-4-copy {
-  margin-left: 30px;
-  margin-right: 30px}
 
-.section-4-copy.cc-subscribe-form {
-  background-color: #f4f4f4;
-  margin-left: 0;
-  margin-right: 0}
 
-.section-4-copy.cc-product-detail {
-  align-items: center;
-  display: flex}
 
 
 
@@ -4439,10 +4304,6 @@ figcaption {
 .margin-bottom-10.margin-xxlarge,
 .margin-bottom-10.margin-small,
 .margin-bottom-10.margin-xsmall,
-.margin-bottom-copy {
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0}
 
 
 
@@ -4630,21 +4491,6 @@ figcaption {
   font-size: 55px;
   font-weight: 300}
 
-.heading-center-about-copy {
-  color: #9f1b1f;
-  text-align: center;
-  text-transform: none;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(90deg, #9f1b1f, #e41c24);
-  -webkit-background-clip: text;
-  background-clip: text;
-  width: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: var(--font-decorative);
-  font-size: 85px;
-  font-weight: 300;
-  line-height: 80px}
 
 .heading-center-13 {
   color: #9f1b1f;
@@ -4795,15 +4641,6 @@ figcaption {
   font-weight: 300;
   line-height: 40px}
 
-.intro-center-copy {
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-right: auto;
-  display: flex}
 
 .banner-slider1-blog {
   background-image: url("../assets/images/66ab58c3d0a7ccb5d5a92ebb_Group 2085665100.webp");
@@ -4882,62 +4719,16 @@ figcaption {
   padding-top: 0;
   padding-bottom: 0}
 
-.button-copy {
-  color: #fff;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  background-color: #1a1b1f;
-  border-radius: 0;
-  padding: 12px 25px;
-  font-size: 12px;
-  line-height: 20px;
-  text-decoration: none;
-  transition: background-color .4s, opacity .4s, color .4s}
 
-.button-copy:hover {
-  color: #fff;
-  background-color: #32343a}
 
-.button-copy:active {
-  background-color: #43464d}
 
-.button-copy.cc-jumbo-button {
-  padding: 16px 35px;
-  font-size: 14px;
-  line-height: 26px}
 
-.button-copy.cc-jumbo-button.cc-jumbo-white {
-  background-color: var(--gold);
-  color: var(--gold);
-  text-transform: capitalize;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-family: var(--font-body);
-  font-size: 15px}
 
-.button-copy.cc-jumbo-button.cc-jumbo-white:hover {
-  background-color: #f1f1f1}
 
-.button-copy.cc-jumbo-button.cc-jumbo-white:active {
-  background-color: #e1e1e1}
 
-.button-copy.cc-white-button {
-  color: #202020;
-  background-color: #fff;
-  padding: 16px 35px;
-  font-size: 14px;
-  line-height: 26px}
 
-.button-copy.cc-white-button:hover {
-  background-color: #fffc}
 
-.button-copy.cc-white-button:active {
-  background-color: #ffffffe6}
 
-.button-copy.cc-add-to-cart-btn {
-  margin-top: 10px;
-  margin-right: 10px}
 
 .button-blog {
   color: #fff;
@@ -5019,10 +4810,6 @@ figcaption {
 .button-blog.cc-jumbo-button-blog.cc-jumbo-white:active {
   background-color: #e1e1e1}
 
-.text-block-71-copy {
-  color: var(--white);
-  font-size: 27.556px;
-  font-weight: 300}
 
 .section-13 {
   margin-left: 30px;
@@ -5039,19 +4826,6 @@ figcaption {
 
 
 
-.paragraph-center-copy {
-  opacity: 1;
-  width: 100%;
-  color: var(--pencil-grey);
-  text-align: center;
-  letter-spacing: -.96px;
-  text-transform: capitalize;
-  text-wrap: balance;
-  margin-bottom: 20px;
-  font-family: var(--font-body);
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 25px}
 
 .center-text-banner-blog {
   width: 100%}
@@ -5556,13 +5330,6 @@ figcaption {
   margin-bottom: 75px;
   display: flex}
 
-.banner-4-copy {
-  border-radius: 15px;
-  width: 100%;
-  height: auto;
-  margin-top: 50px;
-  padding-top: 0;
-  display: flex}
 
 
 
@@ -5662,12 +5429,6 @@ figcaption {
   margin-top: 15px;
   display: flex}
 
-.price-wrap-copy {
-  grid-column-gap: 15px;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  display: none}
 
 .price-14 {
   color: #222;
@@ -6299,23 +6060,6 @@ figcaption {
   height: 50vh;
   display: flex}
 
-.heading-center-copy {
-  color: #9f1b1f;
-  text-align: left;
-  text-transform: none;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(90deg, #9f1b1f, #e41c24);
-  -webkit-background-clip: text;
-  background-clip: text;
-  flex: none;
-  width: 100%;
-  margin-top: 0;
-  margin-bottom: 10px;
-  padding-left: 10px;
-  font-family: var(--font-decorative);
-  font-size: 102.409px;
-  font-weight: 300;
-  line-height: 140px}
 
 .image-13 {
   width: 40%}
@@ -6625,8 +6369,6 @@ figcaption {
 .cart-quantity-3 {
   font-style: normal}
 
-.nav-item-wrapper---brix-copy-3 {
-  padding-bottom: 0}
 
 .search-input-2 {
   color: #000;
@@ -6866,17 +6608,6 @@ figcaption {
   margin-right: 0;
   display: grid}
 
-.bko-link-12-copy {
-  color: #fff;
-  text-transform: capitalize;
-  background-color: #000;
-  border-radius: 2em;
-  padding: .8em 2em;
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: inline-block}
 
 .bko-pic-1-2 {
   height: 2.5em}
@@ -6886,13 +6617,7 @@ figcaption {
   padding: 3em;
   font-size: 1vw}
 
-.bko-wrap-12-copy {
-  justify-content: center;
-  align-items: center;
-  display: flex}
 
-.bko-wrap-121-copy {
-  margin-right: 2em}
 
 .bko-link-2 {
   color: #303030;
@@ -6906,10 +6631,6 @@ figcaption {
   font-size: 1vw;
   display: none}
 
-.bko-wrap-1-copy {
-  justify-content: space-between;
-  align-items: center;
-  display: flex}
 
 .bko-dropdownlink-1-2 {
   color: #000;
@@ -6923,10 +6644,6 @@ figcaption {
   line-height: 1.3em;
   text-decoration: none}
 
-.bko-wrap-11-copy {
-  justify-content: center;
-  align-items: center;
-  display: flex}
 
 .bko-grid-1-2 {
   grid-column-gap: 0em;
@@ -6937,14 +6654,7 @@ figcaption {
   grid-auto-columns: 1fr;
   display: grid}
 
-.bko-container-1-copy {
-  width: 100%;
-  max-width: 88em;
-  margin-left: auto;
-  margin-right: auto}
 
-.bko-pic-11-copy {
-  height: 3em}
 
 .bko-dropdown-toggle-2 {
   color: #000;
@@ -7062,9 +6772,6 @@ figcaption {
   width: 100%;
   height: 100%}
 
-.bko-pic-11-copy-2 {
-  height: 3em;
-  display: inline-block}
 
 .slide-2 {
   transform-origin: 0 0;
@@ -7141,14 +6848,6 @@ figcaption {
 .slider__wrapper {
   overflow: hidden}
 
-.bko-grid-1-copy {
-  grid-column-gap: 2em;
-  grid-row-gap: 2em;
-  background-color: #fff;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-columns: 1fr;
-  display: block}
 
 .bko-dropdown-toggle-4 {
   color: #000;
@@ -7199,24 +6898,7 @@ figcaption {
   padding-left: 30px;
   padding-right: 30px}
 
-.banner-13-copy {
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  border-radius: 15px;
-  flex-flow: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  height: 100%;
-  display: flex}
 
-.div-block-51-copy {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 75px 30px;
-  display: block}
 
 
 
@@ -7341,8 +7023,6 @@ figcaption {
 .platinumlink.is-current {
   color: var(--meron)}
 
-.image-copy {
-  width: 40%}
 
 .slider-21 {
   background-color: #0000;
@@ -7353,16 +7033,6 @@ figcaption {
   display: block}
 
 .bko-text-12show,
-.bko-text-12-3-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: block}
 
 .bracelets {
   display: none}
@@ -7385,15 +7055,6 @@ figcaption {
 
 
 
-.bko-text-12-rings-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: none}
 
 .site-header {
   z-index: 9;
@@ -7406,17 +7067,6 @@ figcaption {
   display: flex;
   box-shadow: 0 4px 4px var(--grey)94}
 
-.bko-text-12-bangles-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: block}
 
 .necklace {
   display: none}
@@ -7445,16 +7095,6 @@ figcaption {
   top: 0;
   box-shadow: 0 5px 13px -1px #00000061}
 
-.bko-text-12-coin-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: none}
 
 .bko-text-12-studs {
   color: #5c5c5c;
@@ -7483,15 +7123,6 @@ figcaption {
 .container-9 {
   max-width: 1440px}
 
-.bko-text-12-studs-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: none}
 
 .bko-text-12-chain {
   color: #5c5c5c;
@@ -7514,26 +7145,7 @@ figcaption {
   max-height: none;
   display: none}
 
-.bko-text-12-bracelets-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: none}
 
-.bko-text-12-haram-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: none}
 
 .slider-23 {
   background-color: #0000;
@@ -7553,15 +7165,6 @@ figcaption {
   line-height: 1.3em;
   display: block}
 
-.bko-text-12-locket-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: none}
 
 .cart-btn-4 {
   background-color: #0000;
@@ -7623,16 +7226,6 @@ figcaption {
 .silverlink-2.is-current {
   color: var(--meron)}
 
-.bko-text-12-chain-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: none}
 
 .bko-text-12-bangles {
   color: #5c5c5c;
@@ -7673,26 +7266,7 @@ figcaption {
   line-height: 1.3em;
   display: block}
 
-.bko-text-12-necklace-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: none}
 
-.bko-text-12-drops-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: none}
 
 .bko-text-12-haram {
   color: #5c5c5c;
@@ -7815,27 +7389,7 @@ figcaption {
   font-style: normal}
 
 .bko-text-12-bangles-silver,
-.bko-text-12-bangles-silver-copy,
-.bko-text-12-bracelets-silver {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: block}
 
-.bko-text-12-bracelets-silver-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: none}
 
 .bko-text-12-chain-silver {
   color: #5c5c5c;
@@ -7847,16 +7401,6 @@ figcaption {
   line-height: 1.3em;
   display: block}
 
-.bko-text-12-chain-silver-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: none}
 
 .bko-text-12-coin-silver {
   color: #5c5c5c;
@@ -7868,16 +7412,6 @@ figcaption {
   line-height: 1.3em;
   display: block}
 
-.bko-text-12-coin-silver-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: none}
 
 .bko-text-12-drops-silver {
   color: #5c5c5c;
@@ -7889,15 +7423,6 @@ figcaption {
   line-height: 1.3em;
   display: block}
 
-.bko-text-12-drops-silver-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: none}
 
 .bko-text-12-locket-silver {
   color: #5c5c5c;
@@ -7909,50 +7434,20 @@ figcaption {
   line-height: 1.3em;
   display: block}
 
-.bko-text-12-locket-silver-copy {
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: none}
 
 .bko-text-12-ring-silver {
   font-size: 14px;
   font-style: normal;
   line-height: 1.3em}
 
-.bko-text-12-ring-silver-copy {
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: none}
 
 .bko-text-12-studs-silver {
   font-size: 14px;
   font-style: normal;
   line-height: 1.3em}
 
-.bko-text-12-studs-silver-copy {
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: none}
 
-.slider-23-copy {
-  background-color: #0000;
-  width: auto;
-  max-width: none;
-  height: auto;
-  max-height: none;
-  display: block}
 
-.slider-4-copy {
-  background-color: #0000;
-  width: auto;
-  max-width: none;
-  height: auto;
-  max-height: none}
 
 .silver-bracelets {
   display: block}
@@ -7986,17 +7481,6 @@ figcaption {
   line-height: 28px;
   display: none}
 
-.bko-text-12-bangles-diamond-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-style: normal;
-  line-height: 28px;
-  text-decoration: none;
-  display: block}
 
 .bko-text-12-bracelets-diamond {
   color: #5c5c5c;
@@ -8009,16 +7493,6 @@ figcaption {
   line-height: 28px;
   display: block}
 
-.bko-text-12-bracelets-diamond-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-style: normal;
-  line-height: 28px;
-  display: none}
 
 .bko-text-12-chain-diamond {
   color: #5c5c5c;
@@ -8032,12 +7506,6 @@ figcaption {
   line-height: 28px;
   display: block}
 
-.bko-text-12-chain-diamond-copy {
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-style: normal;
-  text-decoration: none;
-  display: none}
 
 .bko-text-12-drops-diamond {
   color: #5c5c5c;
@@ -8050,10 +7518,6 @@ figcaption {
   line-height: 28px;
   display: block}
 
-.bko-text-12-drops-diamond-copy {
-  font-family: var(--font-body);
-  font-style: normal;
-  display: none}
 
 .locket-diamond {
   font-family: var(--font-body)}
@@ -8064,23 +7528,12 @@ figcaption {
   font-size: 14px;
   font-style: normal}
 
-.bko-text-12-drops-locket-copy {
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-style: normal;
-  display: none}
 
 .bko-text-12-rings-locket {
   font-family: var(--font-body);
   font-size: 14px;
   font-style: normal}
 
-.bko-text-12-rings-locket-copy {
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-style: normal;
-  text-decoration: none;
-  display: none}
 
 .slider-6 {
   background-color: #0000;
@@ -8098,19 +7551,7 @@ figcaption {
   display: none}
 
 .bko-text-12-studs-diamond,
-.bko-text-12-drops-locket-copy {
-  color: #283338;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-style: normal}
 
-.bko-text-12-studs-diamond-copy {
-  color: #283338;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-style: normal;
-  text-decoration: none;
-  display: none}
 
 .bko-text-12-bangles-platinum {
   color: #5c5c5c;
@@ -8122,26 +7563,7 @@ figcaption {
   line-height: 1.3em;
   display: none}
 
-.bko-text-12-bangles-platinum-copy,
-.bko-text-12-bracelets-platinum {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: block}
 
-.bko-text-12-bracelets-platinum-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: none}
 
 .bko-text-12-chain-platinum {
   color: #5c5c5c;
@@ -8153,15 +7575,6 @@ figcaption {
   line-height: 1.3em;
   display: block}
 
-.bko-text-12-chain-platinum-copy {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: none}
 
 .bko-text-12-drops-platinum {
   color: #5c5c5c;
@@ -8173,23 +7586,14 @@ figcaption {
   line-height: 1.3em;
   display: block}
 
-.bko-text-12-drops-platinum-copy {
-  font-style: normal;
-  display: none}
 
 .bko-text-12-ring-platinum {
   font-style: normal}
 
-.bko-text-12-ring-platinum-copy {
-  font-style: normal;
-  display: none}
 
 .bko-text-12-studs-platinum {
   font-style: normal}
 
-.bko-text-12-studs-platinum-copy {
-  font-style: normal;
-  display: none}
 
 .slider-7 {
   background-color: #0000;
@@ -8251,14 +7655,6 @@ figcaption {
   height: 100%;
   display: block}
 
-.product-list-copy {
-  grid-column-gap: 20px;
-  grid-row-gap: 40px;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  width: 100%;
-  display: grid}
 
 .collection-list-wrapper {
   margin-top: 40px;
@@ -8456,23 +7852,8 @@ figcaption {
 .breadcrumb-link-2.is-current {
   font-weight: 600}
 
-.margin-bottom-copy {
-  grid-column-gap: 4px;
-  grid-row-gap: 4px;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  display: flex}
 
-.margin-bottom-copy.margin-xsmall {
-  margin: 24px 0 15px}
 
-.margin-bottom-copy.margin-xxlarge,
-.margin-bottom-copy.margin-small,
-.margin-bottom-copy.margin-xsmall {
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0}
 
 .word1,
 .word3 {
@@ -8496,15 +7877,7 @@ figcaption {
 
 
 
-.product-header4_price-wrapper-copy {
-  display: flex}
 
-.product-header4_rating-wrapper-copy {
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  color: #fdc826;
-  margin-right: .5rem;
-  display: flex}
 
 .text-block-77 {
   color: var(--grey);
@@ -8513,9 +7886,6 @@ figcaption {
   font-size: 20px;
   line-height: 125%}
 
-.image-26-copy {
-  width: 20px;
-  height: 20px}
 
 
 
@@ -8547,11 +7917,6 @@ figcaption {
   padding-bottom: 75px;
   display: block}
 
-.product-image-2-copy {
-  object-fit: cover;
-  width: 100%;
-  min-height: 100%;
-  max-height: 100%}
 
 .collection-item-2 {
   grid-column-gap: 16px;
@@ -8569,20 +7934,9 @@ figcaption {
   grid-auto-columns: 1fr;
   display: grid}
 
-.product-item-copy {
-  border: 1px solid #a7a7a7;
-  border-radius: 5px;
-  flex-flow: column;
-  justify-content: space-between;
-  align-items: stretch;
-  height: 100%;
-  padding: 15px;
-  display: flex}
 
 
 
-.margin-bottom-copy-copy.imgdfg {
-  flex-flow: column}
 
 .text-block-78 {
   color: var(--meron);
@@ -8598,15 +7952,6 @@ figcaption {
   font-family: var(--font-body);
   line-height: 150%}
 
-.border-box-copy {
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  text-align: left;
-  flex-flow: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  display: flex}
 
 .heading-jumbo-45 {
   width: 70%;
@@ -8619,60 +7964,13 @@ figcaption {
   font-weight: 300;
   line-height: 100%}
 
-.intro-content-2-copy {
-  text-align: center;
-  width: 70%;
-  max-width: 1140px}
 
-.intro-content-2-copy.cc-homepage,
-.intro-content-2-copy.cc-homepage-copy {
-  text-align: left;
-  flex-flow: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: auto;
-  margin-left: 100px;
-  display: flex}
 
-.banner-18-copy {
-  grid-column-gap: 75px;
-  grid-row-gap: 75px;
-  border-radius: 15px;
-  flex-flow: column;
-  width: 100%;
-  height: auto;
-  margin-top: 50px;
-  margin-bottom: 75px;
-  display: flex}
 
-.border-box-20-copy,
-.border-box-24-copy {
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  flex-flow: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  display: flex}
 
-.div-block-42-copy {
-  padding: 50px 30px 0}
 
-.border-box-20-copy {
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  flex-flow: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  display: flex}
 
-.div-block-57-copy {
-  padding: 20px 30px 75px}
 
-.div-block-53-copy,
-.div-block-57-copy-copy {
-  padding: 0 30px 75px}
 
 .heading-center-24 {
   color: #9f1b1f;
@@ -8904,15 +8202,6 @@ figcaption {
   margin-top: 10px;
   margin-right: 10px}
 
-.border-box-copy-copy {
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  text-align: left;
-  flex-flow: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  display: flex}
 
 .banner-41 {
   grid-column-gap: 0px;
@@ -9180,27 +8469,8 @@ figcaption {
 .price-1223 {
   font-size: 14px}
 
-.bko-text-12-locket-copy {
-  text-decoration: none}
 
-.bko-text-12-necklace-copy,
-.bko-text-12-rings-copy,
-.bko-text-12-studs-copy,
-.bko-text-12-haram-copy {
-  text-decoration: none;
-  display: none}
 
-.banner-41-copy {
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  border-radius: 15px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  padding-top: 75px;
-  padding-bottom: 75px;
-  display: flex}
 
 .collection-list-wrapper-2 {
   flex-flow: column;
@@ -9771,8 +9041,6 @@ figcaption {
 .nav__btn[data-wf-focus-visible] {
   color: #fff}
 
-.page-wrapper-3-copy {
-  overflow: hidden}
 
 .div-container {
   border-radius: 5px;
@@ -10243,19 +9511,6 @@ figcaption {
   width: 270px;
   height: 300px}
 
-.text-3-copy {
-  color: var(--bright-red);
-  letter-spacing: -.04em;
-  justify-content: center;
-  align-items: flex-end;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: var(--font-body);
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 100%;
-  text-decoration: none;
-  display: flex}
 
 .center-text-banner1 {
   grid-column-gap: 15px;
@@ -10292,13 +9547,6 @@ figcaption {
   line-height: 120%;
   display: none}
 
-.product-name114-copy,
-.product-name114-copy-copy {
-  color: var(--light-grey);
-  padding-bottom: 6px;
-  font-size: 12px;
-  line-height: 120%;
-  display: block}
 
 .product-name111212 {
   color: var(--light-grey);
@@ -10334,14 +9582,6 @@ figcaption {
   margin-right: 0;
   display: none}
 
-.filter_menu-dropdown-copy {
-  border: 1px solid #a9a9a9;
-  border-radius: 5px;
-  flex-flow: column;
-  width: 250px;
-  margin-left: 0;
-  margin-right: 0;
-  display: block}
 
 .filter_menu-dropdown121 {
   border: 1px solid #a9a9a9;
@@ -10389,13 +9629,6 @@ figcaption {
   padding: 15px;
   display: flex}
 
-.pricepocopy {
-  color: #ad1c20;
-  letter-spacing: -.72px;
-  font-family: var(--font-body);
-  font-size: 18px;
-  font-weight: 600;
-  display: block}
 
 .weight {
   color: #222;
@@ -10691,13 +9924,6 @@ figcaption {
   height: 100%;
   display: grid}
 
-.blog33_author-image-copy12121212 {
-  object-fit: cover;
-  border-radius: 100%;
-  width: 24px;
-  min-width: 24px;
-  height: 24px;
-  min-height: 24px}
 
 .link-block-5 {
   text-decoration: none}
@@ -10714,32 +9940,9 @@ figcaption {
   height: 50vh;
   display: flex}
 
-.intro-text-24-copy {
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
-  flex-flow: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-right: auto;
-  display: none}
 
-.div-image-copy {
-  display: none}
 
-.banner-26111-copy {
-  background-image: url("../assets/images/67a73a3dbb8c680323ef26c4_KJ WEBSITE BANNER-01.webp");
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 15px;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-  height: 50vh;
-  display: flex}
 
-.div-block-57-copy-copy-c12122222 {
-  padding: 30px 30px 75px}
 
 .section-1111111111111.cc-subscribe-form {
   background-color: #f4f4f4;
@@ -10784,22 +9987,8 @@ figcaption {
 .heading-14 {
   font-size: 16px}
 
-.blog33_authossssr-image-wrapper-copy {
-  margin-right: 1rem;
-  display: flex}
 
-.link-blddddock-5-copy {
-  text-decoration: none}
 
-.blog33_author-imagefffff-copy12121212-copy,
-.blog33_author-imageffffffffcopy12121212-copy,
-.gtf {
-  object-fit: cover;
-  border-radius: 100%;
-  width: 24px;
-  min-width: 24px;
-  height: 24px;
-  min-height: 24px}
 
 .footer-block111111 {
   grid-column-gap: 24px;
@@ -10809,71 +9998,16 @@ figcaption {
   align-items: flex-start;
   display: flex}
 
-.title-smcccall-copy {
-  color: #1f1f1f;
-  letter-spacing: -.68px;
-  text-transform: capitalize;
-  margin-bottom: 12px;
-  font-family: var(--font-body);
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 16px}
-
-.banner-120-copy {
-  background-image: url("../assets/images/66ac889ae5053423a38dd39f_jewelry-photography 1 (1).webp");
-  background-position: 0%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 15px;
-  justify-content: flex-end;
-  align-items: stretch;
-  width: 100%;
-  height: 60vh;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  display: flex}
-
-.footer-block-copy {
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
-  flex-direction: column;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-columns: 1fr;
-  justify-content: flex-start;
-  align-items: flex-start;
-  display: grid}
-
-.margin-bottom-copy-copy {
-  grid-column-gap: 4px;
-  grid-row-gap: 4px;
-  flex-flow: row;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  display: flex}
 
 
 
 
 
-.margin-bottom-copy-copy {
-  grid-column-gap: 4px;
-  grid-row-gap: 4px;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  display: flex}
 
-.margin-bottom-copy-copy.margin-xsmall {
-  margin: 24px 0 15px}
 
-.margin-bottom-copy-copy.margin-xxlarge,
-.margin-bottom-copy-copy.margin-small,
-.margin-bottom-copy-copy.margin-xsmall {
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0}
+
+
+
 
 .marquee-wrap {
   display: none}
@@ -10956,17 +10090,10 @@ figcaption {
 
 
 
-.div-block-42-copy-copy {
-  padding: 50px 30px 0}
 
 .div-block-45-cllopy {
   padding: 75px 30px}
 
-.product-image-2-copy-copy {
-  object-fit: cover;
-  width: 100%;
-  min-height: 100%;
-  max-height: 100%}
 
 .rich-text-block-2 {
   color: #1a1b1f;
@@ -11072,47 +10199,9 @@ figcaption {
   top: 0;
   box-shadow: 0 5px 13px -1px #00000061}
 
-.bko-grid-22222222111-copy {
-  grid-column-gap: 2em;
-  grid-row-gap: 2em;
-  background-color: #fff;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr;
-  grid-auto-columns: 1fr;
-  display: grid}
 
-.bko-grid-1111-copy {
-  grid-column-gap: 2em;
-  grid-row-gap: 2em;
-  background-color: #fff;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-columns: 1fr;
-  display: block}
 
-.bko-text-12-bangles-copy-copy-copy {
-  color: #000;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-style: normal;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: block}
 
-.bko-text-12-bangles-copy-copy-copy-copy {
-  color: #000;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-style: normal;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: block}
 
 .text-span,
 .text-span-2,
@@ -11178,17 +10267,6 @@ figcaption {
 .heading-16 {
   font-weight: 600}
 
-.banner-26111-copy-123 {
-  background-image: url("../assets/images/686401e85e16e53e0e4eba1c_chit-payment-card-logo.png");
-  background-position: 0%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 15px;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-  height: 50vh;
-  display: flex}
 
 @media screen and (min-width: 1280px) {
   .paragraph-bigger-2 {
@@ -11219,15 +10297,7 @@ figcaption {
   .bko-menu-11-2 {
     font-size: 14px}
 
-  .image-copy {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0}
 
-  .div-block-57-copy,
-  .div-block-57-copy-copy {
-    padding-top: 20px}
 
   .page-wrapper-2 {
     justify-content: center;
@@ -11237,12 +10307,7 @@ figcaption {
   .banner-247772122 {
     height: 60vh}
 
-  .div-block-57-copy-copy-c12122222 {
-    padding-top: 20px}
 
-  .banner-120-copy {
-    padding-top: 0;
-    padding-bottom: 0}
 
 
   .button-51 {
@@ -11293,12 +10358,7 @@ figcaption {
   .bko-grid-1-2,
   .bko-grid-1-3,
   .bko-grid-1-4,
-  .bko-grid-1-copy,
-  .bko-grid-1-3-1 {
-    padding-top: 0}
 
-  .image-copy {
-    padding-left: 40px}
 
   
 
@@ -11313,12 +10373,7 @@ figcaption {
 
   .bko-grid-111,
   .bko-grid-1111,
-  .bko-grid-22222222111-copy,
-  .bko-grid-1111-copy {
-    padding-top: 0}
 
-  .banner-26111-copy-123 {
-    background-position: 50%}
 }
 
 @media screen and (min-width: 1920px) {
@@ -11385,12 +10440,6 @@ figcaption {
     grid-template-columns: minmax(230px, 1.75fr)}
 
 
-  .banner-copy,
-  
-
-  .banner-slider1 {
-    background-position: 100%;
-    padding-top: 0}
 
   .banner-slider2,
   .banner-slider3,
@@ -11447,11 +10496,6 @@ figcaption {
 
   .banner-9,
   .banner-18,
-  .banner-4-copy,
-  .banner-20,
-  .banner-21 {
-    background-position: 100% 0;
-    padding-top: 0}
 
   .banner-24 {
     background-position: 100% 100%;
@@ -11525,13 +10569,6 @@ figcaption {
     padding-left: 50px;
     padding-right: 50px}
 
-  .banner-13-copy,
-  .banner-99,
-  .banner-27,
-  .banner-18-copy,
-  .banner-18-copy {
-    background-position: 100% 0;
-    padding-top: 0}
 
   .banner-28,
   .banner-30 {
@@ -11543,9 +10580,6 @@ figcaption {
     background-position: 100% 0;
     padding-top: 0}
 
-  .banner-41-copy {
-    background-image: none;
-    padding-top: 75px}
 
   .glossary-term-wrappe121 {
     text-align: justify}
@@ -11563,27 +10597,17 @@ figcaption {
     background-image: none}
 
   .banner-26111,
-  .banner-26111-copy {
-    background-position: 100% 0;
-    padding-top: 0}
 
 
   .banner-271212222 {
     background-position: 100% 0;
     padding-top: 0}
 
-  .banner-120-copy {
-    background-position: 100%;
-    height: 40vh;
-    padding-top: 0}
 
   .marquee-wrap {
     display: none}
 
 
-  .banner-26111-copy-123 {
-    background-position: 50% 45%;
-    padding-top: 0}
 
   .collection-list-wrapper-3 {
     -webkit-text-fill-color: inherit;
@@ -11738,9 +10762,6 @@ figcaption {
   .dropdown-nav-pages-wrapper-v1---brix {
     margin-right: 0}
 
-  .dropdown-nav-item---brix-copy {
-    margin-bottom: 12px;
-    line-height: 1.6}
 
   .nav-menu {
     grid-column-gap: 0px;
@@ -11748,13 +10769,8 @@ figcaption {
     border-bottom: 1px solid #0003;
     display: flex}
 
-  .dropdown-nav---brix-copy {
-    margin-bottom: 0}
 
   .header-navigation---brix,
-  .header-navigation---brix-copy {
-    justify-content: center;
-    align-items: center}
 
   .nav-link {
     padding-top: 12px;
@@ -11958,9 +10974,6 @@ figcaption {
   .button-3.bright-red {
     width: 30%}
 
-  .hero-split-copy {
-    max-width: 100%;
-    margin-bottom: 40px}
 
   .hero-split-1 {
     grid-row-gap: 10px;
@@ -11983,8 +10996,6 @@ figcaption {
     max-width: 100%;
     margin-bottom: 40px}
 
-  .heading-2-copy.emarald {
-    font-size: 40px}
 
   .banner-4 {
     padding-top: 45px;
@@ -12042,8 +11053,6 @@ figcaption {
     grid-auto-flow: row;
     place-items: center}
 
-  .quick-contact-grid-copy {
-    height: auto}
 
   .text-block-36 {
     margin-top: 70%;
@@ -12062,9 +11071,6 @@ figcaption {
     height: auto}
 
   .product-image-3,
-  .product-image-2-copy {
-    min-height: auto;
-    max-height: none}
 
   .product-info-1 {
     grid-column-gap: 10px;
@@ -12212,14 +11218,6 @@ figcaption {
 
   
 
-  .banner-copy,
-  
-
-  .banner-slider1 {
-    background-position: 87%;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    padding-right: 0}
 
   .banner-slider2 {
     background-image: linear-gradient(90deg, #1e2d5ea8 24%, #1e2d5e00 96%), url("../assets/images/66ab2a8e5dba723b4a68e2fe_Property 1=Variant3.webp");
@@ -12237,8 +11235,6 @@ figcaption {
     background-position: 0 0, 70%;
     background-size: auto, cover}
 
-  .section-4-copy.cc-product-detail {
-    flex-direction: column}
 
 
 
@@ -12261,10 +11257,6 @@ figcaption {
     min-height: auto}
 
   .margin-bottom-10,
-  .margin-bottom-copy {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0}
 
   .heading-11 {
     font-size: 30px;
@@ -12303,10 +11295,6 @@ figcaption {
   .text-block-74 {
     font-size: 20px}
 
-  .heading-center-about-copy,
-  .heading-center-13 {
-    font-size: 50px;
-    line-height: 70px}
 
   .text-size-medium-12 {
     font-size: 18px}
@@ -12374,21 +11362,13 @@ figcaption {
   .image-blog {
     width: 70%}
 
-  .button-copy,
-  .button-blog {
-    justify-content: center}
 
-  .text-block-71-copy {
-    font-size: 25px}
 
   .section-13.cc-product-detail {
     flex-direction: column}
 
 
 
-  .paragraph-center-copy {
-    width: auto;
-    font-size: 20px}
 
   .center-text-banner-blog {
     width: auto;
@@ -12551,8 +11531,6 @@ figcaption {
     margin-top: 50px;
     margin-bottom: 45px}
 
-  .banner-4-copy {
-    margin-top: 45px}
 
   .product-image-14 {
     min-height: auto;
@@ -12709,9 +11687,6 @@ figcaption {
   .banner-25 {
     background-position: 80% 0}
 
-  .heading-center-copy {
-    font-size: 50px;
-    line-height: 70px}
 
   .image-13 {
     width: 70%}
@@ -12893,10 +11868,6 @@ figcaption {
     cursor: pointer;
     height: 3em}
 
-  .bk0-menu-pic-copy {
-    justify-content: center;
-    align-items: center;
-    display: flex}
 
   .bko-wrap-2 {
     flex: 1}
@@ -12910,9 +11881,6 @@ figcaption {
     font-size: 1.3vw;
     display: block}
 
-  .bko-wrap-12-copy {
-    margin-right: 2em;
-    display: none}
 
   .bko-wrap-menu {
     flex-direction: column;
@@ -12959,11 +11927,7 @@ figcaption {
     inset: 0%;
     overflow: auto}
 
-  .bko-icon-11-copy {
-    flex: 1}
 
-  .bko-wrap-11-copy {
-    display: block}
 
   .bko-wrap-12-1 {
     border-top: 1px solid #dbdbdb;
@@ -13027,8 +11991,6 @@ figcaption {
   .bko-wrap-111-2 {
     margin-right: 0}
 
-  .bko-grid-1-copy {
-    grid-column-gap: 3em}
 
   .div-block-43,
   .div-block-44,
@@ -13039,9 +12001,6 @@ figcaption {
   .div-block-46,
   .div-block-50,
   .div-block-51,
-  .div-block-51-copy {
-    padding-top: 45px;
-    padding-bottom: 45px}
 
   
 
@@ -13065,8 +12024,6 @@ figcaption {
     padding-top: 45px;
     padding-bottom: 45px}
 
-  .image-copy {
-    width: 50%}
 
   .site-header {
     display: none}
@@ -13113,10 +12070,6 @@ figcaption {
   .diamond-locket,
   .diamond-rings,
   .diamond-studs,
-  .silver-bangles-copy,
-  .platinum-bangles {
-    width: 100%;
-    height: 100%}
 
   
 
@@ -13138,9 +12091,6 @@ figcaption {
     grid-template-columns: 1fr 1fr;
     margin-top: 45px}
 
-  .product-list-copy {
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-template-columns: 1fr 1fr}
 
   .padding-vertical {
     padding-left: 0;
@@ -13165,11 +12115,6 @@ figcaption {
     position: static;
     overflow: visible}
 
-  .margin-bottom-copy,
-  .margin-bottom-copy-copy {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0}
 
   .banner-27 {
     grid-column-gap: 20px;
@@ -13180,57 +12125,24 @@ figcaption {
     padding-top: 45px;
     padding-bottom: 45px}
 
-  .product-image-2-copy {
-    min-height: auto;
-    max-height: none}
 
   .collection-list-2 {
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr}
 
 
-  .border-box-copy {
-    justify-content: center;
-    align-items: center}
 
   .heading-jumbo-45 {
     font-size: 56px;
     line-height: 70px}
 
-  .intro-content-2-copy.cc-homepage {
-    width: 70%;
-    margin-left: 40px}
 
-  .intro-content-2-copy.cc-homepage-copy {
-    width: auto;
-    margin-left: 40px}
 
-  .banner-18-copy {
-    grid-column-gap: 45px;
-    grid-row-gap: 45px;
-    margin-top: 50px;
-    margin-bottom: 45px}
 
-  .border-box-24-copy {
-    justify-content: center;
-    align-items: flex-start;
-    width: 90%}
 
-  .border-box-20-copy {
-    justify-content: center;
-    align-items: center}
 
-  .div-block-57-copy {
-    padding-top: 20px;
-    padding-bottom: 45px}
 
-  .div-block-53-copy {
-    padding-top: 0;
-    padding-bottom: 45px}
 
-  .div-block-57-copy-copy {
-    padding-top: 20px;
-    padding-bottom: 45px}
 
   .heading-center-24 {
     margin-bottom: 0;
@@ -13286,9 +12198,6 @@ figcaption {
   .button-12 {
     justify-content: center}
 
-  .border-box-copy-copy {
-    justify-content: center;
-    align-items: flex-start}
 
   .banner-41 {
     padding-top: 45px;
@@ -13344,9 +12253,6 @@ figcaption {
     justify-items: start;
     margin-bottom: 0}
 
-  .banner-41-copy {
-    padding-top: 45px;
-    padding-bottom: 45px}
 
   .wishlist {
     margin-left: 0;
@@ -13437,9 +12343,6 @@ figcaption {
   .layout192_image-13 {
     order: -1}
 
-  .text-3-copy {
-    justify-content: flex-end;
-    align-items: flex-end}
 
   .center-text-banner1 {
     margin-bottom: 30px}
@@ -13450,26 +12353,11 @@ figcaption {
   .weght {
     font-size: 14px}
 
-  .filter_menu-dropdown-copy {
-    color: #282828;
-    border-bottom: .0625rem solid #c7c7c780;
-    width: 200px;
-    padding-right: 2rem;
-    font-weight: 400;
-    position: relative}
 
   .price1214 {
     font-size: 14px}
 
   .filter_menu-dropdown212,
-  .filter_menu-dropdown-copy,
-  .filter_menu-dropdown121 {
-    color: #282828;
-    border-bottom: .0625rem solid #c7c7c780;
-    width: 200px;
-    padding-right: 2rem;
-    font-weight: 400;
-    position: relative}
 
   .weight {
     font-size: 14px}
@@ -13545,17 +12433,8 @@ figcaption {
     background-position: 80% 0;
     height: 30vh}
 
-  .intro-text-24-copy {
-    grid-column-gap: 15px;
-    grid-row-gap: 15px}
 
-  .banner-26111-copy {
-    background-position: 80% 0;
-    height: 30vh}
 
-  .div-block-57-copy-copy-c12122222 {
-    padding-top: 20px;
-    padding-bottom: 45px}
 
   .section-1111111111111.cc-product-detail {
     flex-direction: column}
@@ -13577,22 +12456,8 @@ figcaption {
     grid-column-gap: 10px;
     grid-row-gap: 10px}
 
-  .banner-120-copy {
-    background-image: linear-gradient(#ffe3ce, #fff0), url("../assets/images/66ac889ae5053423a38dd39f_jewelry-photography 1 (1).webp");
-    background-position: 0 0, 20%;
-    background-repeat: repeat, no-repeat;
-    background-size: auto, cover;
-    padding-top: 0;
-    padding-bottom: 0}
 
-  .footer-block-copy {
-    grid-column-gap: 10px;
-    grid-row-gap: 10px}
 
-  .margin-bottom-copy-copy {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0}
 
   .clients-grid.logo-animate {
     grid-column-gap: 1rem;
@@ -13607,9 +12472,6 @@ figcaption {
     padding-top: 0;
     padding-bottom: 0}
 
-  .product-image-2-copy-copy {
-    min-height: auto;
-    max-height: none}
 
   .div-block-54 {
     padding-top: 45px;
@@ -13633,17 +12495,8 @@ figcaption {
     margin-right: 0;
     padding: 1em 0 2em}
 
-  .bko-grid-22222222111-copy {
-    grid-column-gap: 0em;
-    grid-row-gap: 0em;
-    grid-template-columns: .5fr .5fr 1fr}
 
-  .bko-grid-1111-copy {
-    grid-column-gap: 3em}
 
-  .banner-26111-copy-123 {
-    background-position: 80% 0;
-    height: 30vh}
 }
 
 @media screen and (max-width: 767px) {
@@ -13791,11 +12644,7 @@ figcaption {
     width: 90%;
     max-width: 470px}
 
-  .dropdown-nav-item---brix-copy {
-    margin-bottom: 12px}
 
-  .dropdown-nav---brix-copy {
-    margin-bottom: 0}
 
   .dropdown-nav-pages-content---brix {
     margin-bottom: 24px;
@@ -13907,9 +12756,6 @@ figcaption {
     width: 25%;
     font-size: 18px}
 
-  .heading-2-copy,
-  .heading-2-copy.emarald {
-    font-size: 45px}
 
   .banner-4 {
     padding-top: 25px;
@@ -13946,9 +12792,6 @@ figcaption {
 
 
 
-  .quick-contact-grid-copy {
-    background-position: 50% 30%;
-    height: auto}
 
   .banner-6 {
     grid-template-columns: 1fr;
@@ -13960,9 +12803,6 @@ figcaption {
     height: auto}
 
   .product-image-3,
-  .product-image-2-copy {
-    min-height: auto;
-    max-height: none}
 
   .button-5 {
     width: 50%}
@@ -14079,10 +12919,6 @@ figcaption {
   .footer-social-link {
     margin-left: 20px}
 
-  .text-block-45-copy {
-    width: auto;
-    padding-left: 20px;
-    padding-right: 20px}
 
   .heading-center-1 {
     width: 90%;
@@ -14118,10 +12954,6 @@ figcaption {
     grid-template-columns: 1fr}
 
   .margin-bottom-10,
-  .margin-bottom-copy {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0}
 
   .heading-11 {
     text-align: justify}
@@ -14166,10 +12998,6 @@ figcaption {
   .heading-12 {
     text-align: center}
 
-  .heading-center-about-copy,
-  .heading-center-13 {
-    font-size: 50px;
-    line-height: 64px}
 
   .text-size-medium-12 {
     margin-bottom: 0;
@@ -14215,9 +13043,6 @@ figcaption {
 
 
 
-  .paragraph-center-copy {
-    font-size: 16px;
-    line-height: 28px}
 
   .product-item-12 {
     justify-content: center;
@@ -14327,8 +13152,6 @@ figcaption {
     margin-top: 25px;
     margin-bottom: 25px}
 
-  .banner-4-copy {
-    margin-top: 45px}
 
   
 
@@ -14408,9 +13231,6 @@ figcaption {
     padding-left: 20px;
     padding-right: 20px}
 
-  .heading-center-copy {
-    font-size: 50px;
-    line-height: 64px}
 
   .get-in-touch-form-wrap1 {
     width: 90%;
@@ -14488,8 +13308,6 @@ figcaption {
     font-size: 1.69vw;
     display: block}
 
-  .bko-wrap-12-copy {
-    margin-left: 15em}
 
   .bko-menu-11 {
     font-size: 1.69vw;
@@ -14541,9 +13359,6 @@ figcaption {
     padding-top: 25px;
     padding-bottom: 25px}
 
-  .div-block-51-copy {
-    padding-top: 75px;
-    padding-bottom: 75px}
 
   
 
@@ -14560,8 +13375,6 @@ figcaption {
     padding-top: 25px;
     padding-bottom: 35px}
 
-  .image-copy {
-    width: 60%}
 
   .bko-dropdown-2-3 {
     margin-right: 0}
@@ -14592,8 +13405,6 @@ figcaption {
     grid-row-gap: 10px;
     margin-top: 25px}
 
-  .product-list-copy {
-    grid-template-columns: 1fr 1fr}
 
   .padding-vertical {
     padding-left: 0;
@@ -14615,11 +13426,6 @@ figcaption {
   .product-header5_gallery {
     grid-template-columns: 1fr}
 
-  .margin-bottom-copy,
-  .margin-bottom-copy-copy {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0}
 
   .banner-27 {
     grid-column-gap: 10px;
@@ -14628,51 +13434,21 @@ figcaption {
     padding-top: 25px;
     padding-bottom: 25px}
 
-  .product-image-2-copy {
-    min-height: auto;
-    max-height: none}
 
 
-  .border-box-copy {
-    justify-content: center;
-    align-items: center}
 
   .heading-jumbo-45 {
     width: 90%;
     font-size: 50px;
     line-height: 64px}
 
-  .intro-content-2-copy {
-    width: 80%}
 
-  .div-block-42-copy {
-    padding-top: 25px}
 
-  .banner-18-copy {
-    grid-column-gap: 25px;
-    grid-row-gap: 25px;
-    margin-top: 25px;
-    margin-bottom: 25px}
 
-  .border-box-24-copy {
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%}
 
-  .border-box-20-copy {
-    justify-content: center;
-    align-items: flex-start}
 
-  .div-block-57-copy {
-    padding-top: 20px;
-    padding-bottom: 35px}
 
-  .div-block-53-copy {
-    padding: 0 0 35px}
 
-  .div-block-57-copy-copy {
-    padding-top: 20px;
-    padding-bottom: 35px}
 
   .heading-center-24 {
     margin-bottom: 0;
@@ -14704,9 +13480,6 @@ figcaption {
   .text-field-12.cc-textarea {
     text-align: left}
 
-  .border-box-copy-copy {
-    justify-content: center;
-    align-items: flex-start}
 
   .banner-41 {
     padding-top: 25px;
@@ -14758,9 +13531,6 @@ figcaption {
   .page-wrapper-2 {
     margin-bottom: 0}
 
-  .banner-41-copy {
-    padding-top: 25px;
-    padding-bottom: 25px}
 
   .wishlist {
     display: inline-block}
@@ -14896,9 +13666,6 @@ figcaption {
   .layout192_image-13 {
     order: -1}
 
-  .text-3-copy {
-    justify-content: flex-start;
-    align-items: flex-end}
 
   .center-text-banner1 {
     justify-content: center;
@@ -14914,25 +13681,12 @@ figcaption {
   .product-name1141 {
     padding-bottom: 4px}
 
-  .filter_menu-dropdown-copy {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 1rem}
 
-  .product-name114-copy,
-  .product-name114-copy-copy,
-  .product-name111212 {
-    padding-bottom: 4px}
 
   .price1214 {
     font-size: 12px}
 
   .filter_menu-dropdown212,
-  .filter_menu-dropdown-copy,
-  .filter_menu-dropdown121 {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 1rem}
 
   .diamondnames {
     padding-bottom: 4px}
@@ -14977,16 +13731,8 @@ figcaption {
   .banner-26111 {
     background-position: 50%}
 
-  .intro-text-24-copy {
-    margin-right: 0}
 
-  .banner-26111-copy {
-    background-position: 100%;
-    height: 25vh}
 
-  .div-block-57-copy-copy-c12122222 {
-    padding-top: 20px;
-    padding-bottom: 35px}
 
 
 
@@ -15012,23 +13758,8 @@ figcaption {
     justify-content: flex-start;
     align-items: flex-start}
 
-  .banner-120-copy {
-    background-image: linear-gradient(90deg, #e9c9b900, #ffdac8 68%), url("../assets/images/66ac889ae5053423a38dd39f_jewelry-photography 1 (1).webp");
-    background-position: 0 0, 20%;
-    background-repeat: repeat, no-repeat;
-    background-size: auto, cover}
 
-  .footer-block-copy {
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    display: flex}
 
-  .margin-bottom-copy-copy {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0}
 
   .clients-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -15039,16 +13770,11 @@ figcaption {
     font-size: 19.5px}
 
 
-  .div-block-42-copy-copy {
-    padding-top: 25px}
 
   .div-block-45-cllopy {
     padding-top: 0;
     padding-bottom: 0}
 
-  .product-image-2-copy-copy {
-    min-height: auto;
-    max-height: none}
 
   .bold-text,
   .paragraph-27,
@@ -15086,17 +13812,10 @@ figcaption {
   .bko-dropdown-2-3-co1111py {
     margin-right: 0}
 
-  .bko-grid-22222222111-copy {
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-auto-columns: 2fr}
 
   .timeline_inner-mobile {
     display: block}
 
-  .banner-26111-copy-123 {
-    background-position: 100%;
-    height: 25vh}
 }
 
 @media screen and (max-width: 479px) {
@@ -15357,11 +14076,6 @@ figcaption {
     grid-auto-flow: row;
     place-items: center}
 
-  .quick-contact-grid-copy {
-    width: 100%;
-    height: 400px;
-    padding-left: 0;
-    padding-right: 0}
 
   .text-block-36 {
     margin-top: 50%}
@@ -15384,15 +14098,7 @@ figcaption {
     min-height: 400px;
     max-height: 400px}
 
-  .product-image-2-copy {
-    width: auto;
-    height: auto;
-    overflow: visible}
 
-  .price-wrap-copy,
-  .price-wrap-2,
-  .price-wrap-3 {
-    grid-column-gap: 8px}
 
   .hero-wrapper-2 {
     flex-flow: column}
@@ -15541,10 +14247,6 @@ figcaption {
     text-align: left;
     font-size: 14px}
 
-  .text-block-45-copy {
-    width: auto;
-    padding-left: 10px;
-    padding-right: 10px}
 
   .heading-center-1 {
     width: 100%;
@@ -15569,9 +14271,6 @@ figcaption {
     background-position: 0 0, 60%;
     background-size: auto, cover}
 
-  .section-4-copy.cc-product-detail {
-    margin-left: 15px;
-    margin-right: 15px}
 
 
 
@@ -15592,10 +14291,6 @@ figcaption {
     grid-template-columns: 1fr}
 
   .margin-bottom-10,
-  .margin-bottom-copy {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0}
 
   .heading-center-about {
     font-size: 36px;
@@ -15624,10 +14319,6 @@ figcaption {
     padding-left: 10px;
     padding-right: 10px}
 
-  .heading-center-about-copy,
-  .heading-center-13 {
-    font-size: 36px;
-    line-height: 48px}
 
   .text-size-medium-12 {
     margin-bottom: 0}
@@ -15663,13 +14354,7 @@ figcaption {
     max-width: none}
 
 
-  .button-copy.cc-cart,
-  .button-blog.cc-cart {
-    padding-left: 16px;
-    padding-right: 16px}
 
-  .text-block-71-copy {
-    font-size: 20px}
 
   .section-13.cc-product-detail {
     margin-left: 15px;
@@ -15747,8 +14432,6 @@ figcaption {
   .product-name114 {
     padding-bottom: 2px}
 
-  .price-wrap-copy {
-    grid-column-gap: 8px}
 
   .banner-20 {
     background-image: linear-gradient(90deg, #e9c9b900, #ffdac8), url("../assets/images/66ac889ae5053423a38dd39f_jewelry-photography 1 (1).webp");
@@ -15849,9 +14532,6 @@ figcaption {
     padding-left: 10px;
     padding-right: 10px}
 
-  .heading-center-copy {
-    font-size: 36px;
-    line-height: 40px}
 
   .get-in-touch-form-wrap1 {
     width: 100%;
@@ -15959,19 +14639,8 @@ figcaption {
     font-size: 2.5vw;
     display: block}
 
-  .bko-wrap-12-copy {
-    flex: 1;
-    justify-content: flex-end;
-    margin-left: 0;
-    padding-left: 0;
-    display: none}
 
-  .bko-wrap-121-copy {
-    margin-right: 1em}
 
-  .bko-wrap-122-copy {
-    margin-left: 0;
-    margin-right: 1em}
 
   .bko-grid-2 {
     grid-column-gap: 10px;
@@ -15987,8 +14656,6 @@ figcaption {
     display: none;
     overflow: auto}
 
-  .bko-wrap-1-copy {
-    margin-bottom: 0}
 
   .bko-wrap-12-1 {
     margin-left: 3em;
@@ -16021,8 +14688,6 @@ figcaption {
   .bko-wrap-111-2 {
     margin-right: 0}
 
-  .bko-grid-1-copy {
-    grid-template-columns: 1fr}
 
   .bko-grid-1-3-1 {
     grid-template-columns: 1fr 1fr;
@@ -16045,9 +14710,6 @@ figcaption {
     padding-left: 0;
     padding-right: 0}
 
-  .div-block-51-copy {
-    padding-left: 10px;
-    padding-right: 10px}
 
   .paragraph-16 {
     line-height: 25px}
@@ -16059,8 +14721,6 @@ figcaption {
     padding-left: 10px;
     padding-right: 10px}
 
-  .image-copy {
-    width: 50%}
 
   .container-9 {
     padding-left: 0;
@@ -16083,9 +14743,6 @@ figcaption {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr}
 
-  .product-list-copy {
-    grid-column-gap: 15px;
-    grid-row-gap: 30px}
 
   .padding-vertical {
     padding-left: 0;
@@ -16097,69 +14754,30 @@ figcaption {
   .product-header5_layout {
     grid-template-columns: 1fr}
 
-  .margin-bottom-copy,
-  .margin-bottom-copy-copy {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0}
 
-  .product-header4_price-wrapper-copy {
-    flex-direction: column}
 
   .banner-27 {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr}
 
-  .product-image-2-copy {
-    min-height: auto;
-    max-height: none}
 
   .collection-list-2 {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr}
 
-  .product-item-copy {
-    padding-left: 10px;
-    padding-right: 10px}
 
   .heading-jumbo-45 {
     font-size: 36px;
     line-height: 48px}
 
-  .intro-content-2-copy.cc-homepage {
-    width: auto;
-    margin-left: 10px}
 
-  .intro-content-2-copy.cc-homepage-copy {
-    width: auto;
-    margin-left: 20px}
 
-  .border-box-20-copy {
-    width: auto}
 
-  .border-box-24-copy {
-    grid-column-gap: 0px;
-    grid-row-gap: 0px}
 
-  .div-block-42-copy {
-    padding-left: 10px;
-    padding-right: 10px}
 
-  .border-box-20-copy {
-    justify-content: center;
-    align-items: flex-start}
 
-  .div-block-57-copy {
-    padding-left: 10px;
-    padding-right: 10px}
 
-  .div-block-53-copy {
-    padding-left: 8px;
-    padding-right: 8px}
 
-  .div-block-57-copy-copy {
-    padding-left: 10px;
-    padding-right: 10px}
 
   .heading-center-24 {
     margin-bottom: 0;
@@ -16333,19 +14951,11 @@ figcaption {
   .layout192_image-13 {
     order: -1}
 
-  .text-3-copy {
-    justify-content: flex-start;
-    align-items: center}
 
   .heading-center-about2222 {
     font-size: 40px}
 
   .product-name1141,
-  .product-name114-copy,
-  .product-name114-copy-copy,
-  .product-name111212,
-  .diamondnames {
-    padding-bottom: 2px}
 
   .product-item121 {
     padding-left: 10px;
@@ -16391,12 +15001,7 @@ figcaption {
     font-size: 26px;
     line-height: 48px}
 
-  .banner-26111-copy {
-    background-position: 87%}
 
-  .div-block-57-copy-copy-c12122222 {
-    padding-left: 10px;
-    padding-right: 10px}
 
   .section-1111111111111 {
     margin-left: 0;
@@ -16426,25 +15031,9 @@ figcaption {
     align-items: center;
     display: grid}
 
-  .title-smcccall-copy {
-    text-align: center}
 
-  .banner-120-copy {
-    background-image: linear-gradient(90deg, #ffdbc9, #ffdac800 51%, #ffdac8), url("../assets/images/66ac889ae5053423a38dd39f_jewelry-photography 1 (1).webp");
-    background-position: 0 0, 10%;
-    background-size: auto, cover;
-    justify-content: flex-start;
-    align-items: stretch;
-    height: 50vh}
 
-  .footer-block-copy {
-    justify-content: flex-start;
-    align-items: center}
 
-  .margin-bottom-copy-copy {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0}
 
   .marquee-wrap {
     display: none}
@@ -16455,15 +15044,7 @@ figcaption {
     grid-template-columns: 1fr 1fr 1fr}
 
 
-  .div-block-42-copy-copy,
-  .div-block-45-cllopy {
-    padding-left: 10px;
-    padding-right: 10px}
 
-  .product-image-2-copy-copy {
-    width: auto;
-    height: auto;
-    overflow: visible}
 
   .rich-text-block-2 {
     font-size: 17px;
@@ -16480,18 +15061,11 @@ figcaption {
   .bko-grid-1111 {
     grid-template-columns: 1fr}
 
-  .bko-grid-22222222111-copy {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-columns: 1fr}
 
-  .bko-grid-1111-copy {
-    grid-template-columns: 1fr}
 
   .div-block-4211112223 {
     flex-flow: column}
 
-  .banner-26111-copy-123 {
-    background-position: 87%}
 }
 
 #w-node-c68b31ad-eaaa-7924-3942-d11125a86159-014d176d {
@@ -17145,100 +15719,12 @@ figcaption {
   text-decoration: none;
   display: block}
 
-/* Header and rate dropdown refinements */
+/* Header refinements */
 
 .navigation-2,
 .site-header__inner,
 .site-nav {
   background: var(--meron) !important}
-
-.navigation-2 .site-header__container,
-.navigation-2 .site-header__brand-area,
-.navigation-2 .site-header__actions,
-
-.navigation-2 a,
-.navigation-2 .bko-dropdown-1-2,
-.navigation-2 .bko-dropdown-1-3,
-.navigation-2 .bko-link-111-2,
-.navigation-2 .goldlink,
-.navigation-2 .silverlink,
-.navigation-2 .diamondlink,
-.navigation-2 .goldlink-2,
-.navigation-2 .nav-link,
-
-.navigation-2 .is-current,
-.navigation-2 a:hover,
-
-.rate-dropdown {
-  position: relative;
-  z-index: 60;
-  align-self: center;
-  margin-right: 14px;
-  font-family: inherit}
-
-.rate-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 42px;
-  padding: 7px 10px;
-  border: 0;
-  background: transparent;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
-  cursor: pointer}
-
-.rate-coin {
-  height: 1.2em;
-  width: auto;
-  object-fit: contain;
-  flex: 0 0 auto;
-  vertical-align: middle}
-
-.rate-chevron {
-  display: inline-block;
-  margin-left: 2px;
-  font-size: 20px;
-  line-height: 1;
-  transform: rotate(0deg);
-  transition: transform .2s ease}
-
-.rate-dropdown.is-open .rate-chevron,
-.rate-dropdown:hover .rate-chevron {
-  transform: rotate(180deg)}
-
-.rate-menu {
-  position: absolute !important;
-  top: calc(100% + 4px);
-  left: 0;
-  display: none;
-  min-width: 280px;
-  padding: 12px 10px;
-  border: 1px solid rgba(153, 31, 35, .18);
-  border-radius: 4px;
-  background: #fff;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .14)}
-
-.rate-dropdown:hover .rate-menu,
-.rate-dropdown.is-open .rate-menu {
-  display: block}
-
-.rate-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 2px;
-  color: #681015;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.25;
-  white-space: nowrap}
-
-.rate-row+.rate-row {
-  margin-top: 2px}
 
 /* Dropdown category cleanup */
 .category-menu-link {
@@ -17340,10 +15826,6 @@ figcaption {
 
   .product-image-14,
   .product-image-8,
-  .product-image-2-copy,
-  .product-image-2-copy-copy {
-    max-height: 310px !important;
-    object-fit: contain !important}
 
   .product-info-14,
   .product-info-124 {
@@ -17358,23 +15840,6 @@ figcaption {
 /* Desktop megamenu reliability: JS owns the active menu, CSS keeps old hover
    panels from staying visible when another nav item opens. */
 
-
-@media screen and (max-width: 991px) {
-  .rate-dropdown {
-    width: 100%;
-    margin: 8px 0 12px}
-
-  .rate-toggle {
-    width: 100%;
-    justify-content: flex-start;
-    color: #fff}
-
-  .rate-menu {
-    position: static !important;
-    min-width: 0;
-    width: 100%;
-    margin-top: 6px}
-}
 
 /* Final header overrides */
 header .navigation-2,
@@ -17402,48 +15867,6 @@ header .navigation-2 .silverlink,
 header .navigation-2 .diamondlink,
 header .navigation-2 .goldlink-2 {
   color: #fff !important}
-
-header .rate-dropdown {
-  display: inline-flex !important;
-  align-items: center !important;
-  margin: 0 8px 0 0 !important;
-  flex: 0 0 auto !important;
-  color: #fff !important;
-  position: relative !important;
-  z-index: 10000 !important}
-
-header .rate-toggle {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  padding: 8px 10px !important;
-  color: #fff !important;
-  background: transparent !important;
-  border: 0 !important;
-  font-weight: 700 !important}
-
-header .rate-toggle span {
-  color: #fff !important}
-
-header .rate-menu {
-  display: none !important;
-  position: absolute !important;
-  top: calc(100% + 8px) !important;
-  left: 0 !important;
-  min-width: 280px !important;
-  background: #fff !important;
-  border: 1px solid rgba(153, 31, 35, .18) !important;
-  border-radius: 4px !important;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .16) !important;
-  padding: 10px !important}
-
-
-
-header .rate-row,
-header .rate-row span {
-  color: #681015 !important}
-
-
 
 /* ==========================================================================
    FORCE WHITE NAVIGATION MENU STYLES AND FIX ACTIVE LINK VISIBILITY
@@ -17520,84 +15943,11 @@ header .navigation-2 .bko-dropdown-list a:hover,
 header .navigation-2 .category-menu-link:hover {
   color: var(--meron) !important}
 
-/* 5. Force Rate Dropdown to be Visible & White */
-header .rate-dropdown,
-header .rate-dropdown * {
-  display: inline-flex !important;
-  align-items: center !important;
-  color: #ffffff !important;
-  opacity: 1 !important;
-  visibility: visible !important}
-
-header .rate-menu,
-header .rate-menu * {
-  display: none}
-
-
-
-header .rate-row,
-header .rate-row * {
-  color: #681015 !important}
-
-/* Final header source fixes: keep nav white without inline JS styles, and keep rate menu usable. */
+/* Final header source fixes: keep nav white without inline JS styles. */
 header .navigation-2,
 header .navigation-2 .site-header__inner,
 header .site-nav {
   background-color: var(--meron) !important}
-
-
-
-header .rate-dropdown {
-  display: inline-flex !important;
-  align-items: center !important;
-  position: relative !important;
-  z-index: 10000 !important}
-
-header .rate-toggle {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  color: #ffffff !important;
-  background: transparent !important;
-  border: 0 !important}
-
-header .rate-toggle span {
-  display: inline-flex !important;
-  color: #ffffff !important}
-
-header .rate-menu {
-  display: none !important;
-  position: absolute !important;
-  top: calc(100% + 8px) !important;
-  left: 0 !important;
-  min-width: 280px !important;
-  padding: 10px !important;
-  background: #ffffff !important;
-  border: 1px solid rgba(153, 31, 35, .18) !important;
-  border-radius: 4px !important;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .16) !important}
-
-header .rate-dropdown:hover .rate-menu,
-header .rate-dropdown.is-open .rate-menu {
-  display: block !important}
-
-header .rate-menu .rate-row {
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  padding: 9px 4px !important;
-  color: #681015 !important}
-
-header .rate-menu .rate-row span {
-  display: inline !important;
-  color: #681015 !important}
-
-header .rate-coin {
-  display: inline-block !important;
-  height: 1.2em !important;
-  width: auto !important;
-  object-fit: contain !important;
-  vertical-align: middle !important}
 
 /* Restored interaction layer from the working reference. */
 .content-slider .slider-track,
@@ -17771,10 +16121,6 @@ body {
 .team5_item,
 .blog33_item,
 .team5_image,
-.product-image-2-copy,
-.product-image-2-copy-copy,
-.product-image-8 {
-  transition: transform 260ms ease, box-shadow 260ms ease, filter 260ms ease}
 
 .kj-interactive-card:hover,
 .product-card:hover,
@@ -18149,22 +16495,6 @@ body {
 .product-name-text,
 .product-name114,
 .product-name111212,
-.product-name114-copy,
-.product-name114-copy-copy,
-.product-name-122,
-.product-name-123,
-.product-card-title {
-  color: #2b1e1f !important;
-  display: block;
-  font-family: Mulish, Arial, sans-serif !important;
-  font-size: clamp(15px, 1.08vw, 17px) !important;
-  font-weight: 700 !important;
-  letter-spacing: .01em !important;
-  line-height: 1.32 !important;
-  margin-bottom: 5px;
-  overflow-wrap: anywhere;
-  text-align: center;
-  text-transform: uppercase}
 
 .product-name1141,
 .product-name111212,
@@ -18191,9 +16521,6 @@ body {
     max-width: 280px}
 
   .content_collection-list,
-  .product-list-copy {
-    column-gap: 26px !important;
-    row-gap: 34px !important}
 }
 
 @media (max-width: 768px) {
@@ -18216,13 +16543,6 @@ body {
   .product-name-text,
   .product-name114,
   .product-name111212,
-  .product-name114-copy,
-  .product-name114-copy-copy,
-  .product-name-122,
-  .product-name-123,
-  .product-card-title {
-    font-size: 14px !important;
-    line-height: 1.35 !important}
 
   .product-name1141,
   .product-name111212,
@@ -18762,6 +17082,19 @@ select,
   font-family: 'Mulish', sans-serif;
   color: #333}
 
+#site-footer {
+  background-color: #e6e6e6;
+  display: block}
+
+#site-footer:empty {
+  background:
+    linear-gradient(90deg, rgba(153,31,35,.12), rgba(153,31,35,.05)) 50% 72px / min(760px, calc(100% - 48px)) 20px no-repeat,
+    linear-gradient(90deg, rgba(70,70,70,.16), rgba(70,70,70,.07)) 50% 130px / min(900px, calc(100% - 48px)) 14px no-repeat,
+    linear-gradient(90deg, rgba(70,70,70,.13), rgba(70,70,70,.06)) 50% 166px / min(840px, calc(100% - 48px)) 14px no-repeat,
+    linear-gradient(90deg, rgba(255,255,255,.48), rgba(255,255,255,.26));
+  border-top: 1px solid rgba(153, 31, 35, .08);
+  min-height: 1040px}
+
 .premium-footer .premium-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -18840,7 +17173,7 @@ select,
 .premium-footer-store-info .premium-footer-address {
   font-size: 16px;
   color: #636363;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   font-style: normal}
 
 .premium-footer-info-grid {
@@ -18849,11 +17182,22 @@ select,
   gap: 20px}
 
 .premium-footer-info-grid .info-block strong {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   font-weight: 700;
   color: #333;
   margin-bottom: 4px;
   font-style: normal}
+
+.premium-footer-info-grid .info-block strong svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: text-bottom;
+  color: #c19b67}
+
+.premium-footer-hidden-svg {
+  display: none}
 
 .premium-footer-info-grid .info-block a,
 .premium-footer-info-grid .info-block p {
@@ -18984,6 +17328,9 @@ body.contact-page .premium-footer-branches {
 }
 
 @media (max-width: 767px) {
+  #site-footer:empty {
+    min-height: 920px}
+
   .premium-footer-bottom .premium-container {
     flex-direction: column;
     justify-content: center;
@@ -19437,4 +17784,80 @@ body .premium-branches-title {
   .gallery-video-support {
     font-size: 13px;
   }
+}
+
+.premium-info-text {
+  margin-bottom: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+.premium-info-text p {
+  margin-bottom: 15px;
+}
+.premium-info-list {
+  margin-bottom: 20px;
+}
+.premium-quote {
+  font-style: italic;
+  color: var(--gold, #c19b67);
+  font-weight: 500;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+.swiper-slide>.slide-bg {
+  filter: blur(5px);
+  opacity: 0.5 !important;
+}
+.swiper-slide-active .slide-bg {
+  filter: blur(0);
+  opacity: 1 !important;
+}
+.swiper-slide-active .slide-content,
+.swiper-slide-active .slide-content_title {
+  opacity: 1;
+}
+.swiper-slide-next,
+.swiper-slide-prev {
+  filter: blur(0);
+}
+.swiper-slide-next>.slide-bg,
+.swiper-slide-prev>.slide-bg {
+  filter: blur(0) !important;
+  opacity: 0.5 !important;
+  transition: 500ms cubic-bezier(.165, .84, .44, 1);
+}
+.swiper-slide-active:focus,
+.swiper-slide-active:hover .slide-content {
+  min-height: 100%;
+  transition: min-height 500ms cubic-bezier(.165, .84, .44, 1);
+}
+.swiper-slide-active:focus,
+.swiper-slide-active:hover .slide-gradient {
+  background-image: none;
+}
+.swiper-slide-active:focus,
+.swiper-slide-active:hover .slide-content_text-wrapper {
+  opacity: 1;
+}
+
+body {
+  min-height: 0vw;
+  font-size: calc(0.08928571428571437vw + 0.819642857142857em);
+}
+@media screen and (min-width:1440px) {
+  body { font-size: 0.8999999999999999em; }
+}
+@media screen and (max-width:991px) {
+  body { font-size: calc(0.20181634712411706vw + 0.625em); }
+}
+.about-page .container {
+  max-width: 100em;
+}
+.pattern rect {
+  transition: color 150ms ease-in;
+}
+.pattern rect:hover {
+  color: #0A227D;
 }

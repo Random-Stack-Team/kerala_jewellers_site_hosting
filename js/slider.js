@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (slides.length <= 1) return;
 
     slider.dataset.kjSliderReady = 'true';
-    let activeIndex = 0;
+    let activeIndex = Math.max(0, slides.findIndex((slide) => slide.classList.contains('is-active')));
     let timerId = 0;
     const dots = slider.querySelector('.slider-dots');
     const delay = Number(slider.dataset.delay || 4000);
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slider.addEventListener('mouseleave', start);
     slider.addEventListener('focusin', stop);
     slider.addEventListener('focusout', start);
-    showSlide(0);
+    showSlide(activeIndex);
     start();
   };
 

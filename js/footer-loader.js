@@ -33,8 +33,6 @@
       if (branches) branches.remove();
     }
     
-    const iframesCount = document.querySelectorAll('#site-footer iframe, footer iframe').length;
-
   } catch (error) {
     console.error("[FooterLoader] error:", error);
   }

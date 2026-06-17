@@ -47,73 +47,16 @@ document.documentElement.classList.add('js-ready');
       dropdown.classList.toggle('kj-rate-hidden', shouldHideRate);
       dropdown.classList.remove('is-open');
       dropdown.querySelector('[aria-expanded]')?.setAttribute('aria-expanded', 'false');
-      if (shouldHideRate) {
-        dropdown.style.setProperty('display', 'none', 'important');
-        dropdown.style.setProperty('visibility', 'hidden', 'important');
-        dropdown.style.setProperty('pointer-events', 'none', 'important');
-        return;
-      }
-
-      dropdown.style.removeProperty('display');
-      dropdown.style.removeProperty('visibility');
-      dropdown.style.removeProperty('pointer-events');
+      if (shouldHideRate) return;
 
       const orderedRates = getOrderedRates();
       const primaryRate = orderedRates[0] || METAL_RATES[0];
-      const trigger = dropdown.querySelector('.rate-toggle, .rate-dropdown-trigger');
-      const triggerText = trigger?.querySelector('span');
-      const triggerImage = trigger?.querySelector('img');
+      const triggerText = dropdown.querySelector('.rate-toggle span, .rate-dropdown-trigger span');
+      const triggerImage = dropdown.querySelector('.rate-toggle img, .rate-dropdown-trigger img');
       const menu = dropdown.querySelector('.rate-menu, .rate-dropdown-menu');
 
       if (triggerText) triggerText.textContent = primaryRate.shortLabel;
       if (triggerImage) triggerImage.setAttribute('src', `${prefix}${primaryRate.icon}`);
-      if (trigger) {
-        trigger.style.setProperty('align-items', 'center', 'important');
-        trigger.style.setProperty('background', 'rgba(255, 244, 204, 0.08)', 'important');
-        trigger.style.setProperty('background-color', 'rgba(255, 244, 204, 0.08)', 'important');
-        trigger.style.setProperty('border', '1px solid rgba(255, 244, 204, 0.18)', 'important');
-        trigger.style.setProperty('border-radius', '999px', 'important');
-        trigger.style.setProperty('color', '#fff8dc', 'important');
-        trigger.style.setProperty('display', 'inline-flex', 'important');
-        trigger.style.setProperty('gap', '8px', 'important');
-        trigger.style.setProperty('min-height', '38px', 'important');
-        trigger.style.setProperty('padding', '5px 11px', 'important');
-      }
-
-      if (triggerText) {
-        triggerText.style.setProperty('align-items', 'center', 'important');
-        triggerText.style.setProperty('color', '#fff8dc', 'important');
-        triggerText.style.setProperty('display', 'inline-flex', 'important');
-        triggerText.style.setProperty('font-family', 'Mulish, sans-serif', 'important');
-        triggerText.style.setProperty('font-size', '18px', 'important');
-        triggerText.style.setProperty('font-weight', '700', 'important');
-        triggerText.style.setProperty('height', '24px', 'important');
-        triggerText.style.setProperty('letter-spacing', '-0.45px', 'important');
-        triggerText.style.setProperty('line-height', '24px', 'important');
-      }
-
-      if (triggerImage) {
-        triggerImage.style.setProperty('display', 'block', 'important');
-        triggerImage.style.setProperty('height', '24px', 'important');
-        triggerImage.style.setProperty('width', '24px', 'important');
-      }
-
-      const triggerChevron = dropdown.querySelector('.rate-chevron');
-      if (triggerChevron) {
-        triggerChevron.style.setProperty('align-items', 'center', 'important');
-        triggerChevron.style.setProperty('display', 'inline-flex', 'important');
-        triggerChevron.style.setProperty('height', '24px', 'important');
-        triggerChevron.style.setProperty('justify-content', 'center', 'important');
-        triggerChevron.style.setProperty('width', '12px', 'important');
-      }
-
-      if (menu) {
-        menu.style.setProperty('background', '#fffaf0', 'important');
-        menu.style.setProperty('border', '1px solid rgba(153, 31, 35, 0.18)', 'important');
-        menu.style.setProperty('border-radius', '8px', 'important');
-        menu.style.setProperty('box-shadow', '0 18px 36px rgba(49, 13, 16, 0.22)', 'important');
-        menu.style.setProperty('padding', '8px', 'important');
-      }
 
       if (menu) {
         menu.innerHTML = orderedRates.map((rate) => `
@@ -405,7 +348,6 @@ document.documentElement.classList.add('js-ready');
       const visible = categoryMatches;
       card.hidden = !visible;
       card.classList.toggle('is-filter-hidden', !visible);
-      card.style.display = visible ? '' : 'none';
       if (visible) visibleCount += 1;
     });
 
@@ -426,7 +368,6 @@ document.documentElement.classList.add('js-ready');
       collection.parentElement.insertBefore(empty, collection.nextSibling);
     }
     if (empty) {
-      empty.style.display = visibleCount === 0 ? 'block' : 'none';
       empty.hidden = visibleCount !== 0;
     }
 
