@@ -5,8 +5,8 @@
   const isSubfolder = window.location.pathname.split("/").length > 2;
   const prefix = isSubfolder ? "../" : "";
   const METAL_RATES = [
-    { shortLabel: "GOLD 22 KT/1g - Rs. 13665", icon: "assets/coin/gold coin.png", metal: "gold" },
-    { shortLabel: "GOLD 18 KT/1g - Rs. 11610", icon: "assets/coin/gold coin.png", metal: "gold" },
+    { shortLabel: "GOLD 22 KT/1g - Rs. 13850", icon: "assets/coin/gold coin.png", metal: "gold" },
+    { shortLabel: "GOLD 18 KT/1g - Rs. 11323", icon: "assets/coin/gold coin.png", metal: "gold" },
     { shortLabel: "PLATINUM 1g - Rs. 5248", icon: "assets/coin/Platinum Coin.png", metal: "platinum" },
     { shortLabel: "SILVER 1g - Rs. 270", icon: "assets/coin/silver coin.png", metal: "silver" }
   ];
