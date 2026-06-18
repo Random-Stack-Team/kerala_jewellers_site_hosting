@@ -4,12 +4,7 @@
 
   const isSubfolder = window.location.pathname.split("/").length > 2;
   const prefix = isSubfolder ? "../" : "";
-  const METAL_RATES = [
-    { shortLabel: "GOLD 22 KT/1g - Rs. 13850", icon: "assets/coin/gold coin.png", metal: "gold" },
-    { shortLabel: "GOLD 18 KT/1g - Rs. 11323", icon: "assets/coin/gold coin.png", metal: "gold" },
-    { shortLabel: "PLATINUM 1g - Rs. 5248", icon: "assets/coin/Platinum Coin.png", metal: "platinum" },
-    { shortLabel: "SILVER 1g - Rs. 270", icon: "assets/coin/silver coin.png", metal: "silver" }
-  ];
+
   const getCurrentMetal = () => {
     const path = window.location.pathname.replace(/\\/g, "/").toLowerCase();
     const params = new URLSearchParams(window.location.search);
@@ -20,14 +15,7 @@
     if (path.includes("diamond") || category.includes("diamond")) return "diamond";
     return "gold";
   };
-  const getOrderedRates = () => {
-    const currentMetal = getCurrentMetal();
-    if (currentMetal === "diamond") return [];
-    return [
-      ...METAL_RATES.filter((rate) => rate.metal === currentMetal),
-      ...METAL_RATES.filter((rate) => rate.metal !== currentMetal)
-    ];
-  };
+
   const applyInitialRateState = (html) => {
     const currentMetal = getCurrentMetal();
     const shouldHideRate = currentMetal === "diamond";
@@ -46,29 +34,48 @@
       return template.innerHTML;
     }
 
-    const orderedRates = getOrderedRates();
-    const primaryRate = orderedRates[0] || METAL_RATES[0];
-    const triggerText = dropdown.querySelector(".rate-toggle span");
-    const triggerImage = dropdown.querySelector(".rate-toggle img");
     const menu = dropdown.querySelector(".rate-menu");
-
-    dropdown.setAttribute("data-kj-rate-order", currentMetal);
-    if (triggerText) triggerText.textContent = primaryRate.shortLabel;
-    if (triggerImage) triggerImage.setAttribute("src", prefix + primaryRate.icon);
     if (menu) {
-      menu.innerHTML = orderedRates.map((rate) => `
-        <button class="rate-row" type="button" role="menuitem" tabindex="-1" aria-disabled="true" data-metal="${rate.metal}" data-label="${rate.shortLabel}">
-          <img src="${prefix}${rate.icon}" alt="" class="rate-coin" loading="eager" decoding="async" fetchpriority="high">
-          <span>${rate.shortLabel}</span>
-        </button>
-      `).join("");
+      const rows = Array.from(menu.querySelectorAll(".rate-row"));
+      if (rows.length > 0) {
+        let primaryRow = rows.find(r => r.dataset.metal === currentMetal);
+        if (!primaryRow) {
+          primaryRow = rows.find(r => r.dataset.metal === "gold") || rows[0];
+        }
+
+        const triggerText = dropdown.querySelector(".rate-toggle span");
+        const triggerImage = dropdown.querySelector(".rate-toggle img");
+
+        dropdown.setAttribute("data-kj-rate-order", currentMetal);
+
+        if (triggerText) {
+          const primaryLabelSpan = primaryRow.querySelector("[data-rate-label]");
+          triggerText.textContent = primaryLabelSpan ? primaryLabelSpan.textContent : "";
+          triggerText.setAttribute("data-rate-type", primaryRow.dataset.rateType);
+        }
+
+        if (triggerImage) {
+          const primaryImg = primaryRow.querySelector("img");
+          if (primaryImg) {
+            triggerImage.setAttribute("src", prefix + primaryImg.getAttribute("src"));
+          }
+        }
+
+        // Reorder rows inside menu
+        if (currentMetal !== "diamond") {
+          const otherRows = rows.filter(r => r !== primaryRow);
+          menu.innerHTML = "";
+          menu.appendChild(primaryRow);
+          otherRows.forEach(r => menu.appendChild(r));
+        }
+      }
     }
 
     return template.innerHTML;
   };
 
   try {
-    const response = await fetch(prefix + "partials/header.html?v=26");
+    const response = await fetch(prefix + "partials/header.html?v=27");
     if (!response.ok) {
       throw new Error("Header fetch failed: " + response.status);
     }

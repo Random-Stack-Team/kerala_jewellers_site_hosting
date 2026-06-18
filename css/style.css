@@ -6902,9 +6902,6 @@ figcaption {
   background-color: #eee7e4}
 
 .diamondlink-2 {
-  color: #000;
-  letter-spacing: -.8px;
-  font-size: 20em;
   text-decoration: none}
 
 .diamondlink-2.is-current {
@@ -6929,7 +6926,6 @@ figcaption {
   color: var(--meron)}
 
 .goldlink-2 {
-  color: #000;
   text-decoration: none}
 
 .goldlink-2.is-current {
@@ -6939,7 +6935,6 @@ figcaption {
   display: none}
 
 .silverlink-2 {
-  color: #000;
   text-decoration: none}
 
 .silverlink-2.is-current {
@@ -7001,10 +6996,7 @@ figcaption {
 
 .bko-dropdown-1-3 {
   text-align: center;
-  letter-spacing: -.8px;
-  font-family: var(--font-body);
-  font-size: 20px;
-  font-style: normal}
+}
 
 .haram {
   display: none}
@@ -7066,16 +7058,10 @@ figcaption {
 
 
 .bko-link-111-2 {
-  color: #000;
   text-align: left;
-  text-transform: capitalize;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: var(--font-body);
-  font-size: 1.3em;
-  font-style: normal;
-  font-weight: 700;
-  text-decoration: none}
+}
 
 .bko-link-111-2.is-current {
   color: #900000}
@@ -12958,7 +12944,7 @@ figcaption {
     padding-right: 0}
 
   .bko-link-111-2 {
-    font-size: 20px}
+  }
 
   .similar-products {
     padding-top: 80px}

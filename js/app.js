@@ -1,13 +1,6 @@
 document.documentElement.classList.add('js-ready');
 
 (() => {
-  const METAL_RATES = [
-    { label: 'GOLD 22 KT/1g - Rs. 13850', shortLabel: 'GOLD 22 KT/1g - Rs. 13850', icon: 'assets/coin/gold coin.png', metal: 'gold', page: '' },
-    { label: 'GOLD 18 KT/1g - Rs. 11323', shortLabel: 'GOLD 18 KT/1g - Rs. 11323', icon: 'assets/coin/gold coin.png', metal: 'gold', page: '' },
-    { label: 'PLATINUM 1g - Rs. 5248', shortLabel: 'PLATINUM 1g - Rs. 5248', icon: 'assets/coin/Platinum Coin.png', metal: 'platinum', page: '' },
-    { label: 'SILVER 1g - Rs. 270', shortLabel: 'SILVER 1g - Rs. 270', icon: 'assets/coin/silver coin.png', metal: 'silver', page: '' }
-  ];
-
   const getAssetPrefix = () => {
     const path = window.location.pathname.replace(/\\/g, '/');
     return /\/(goldproducts|silverproducts|diamondproducts|post)\//.test(path) ? '../' : '';
@@ -25,15 +18,6 @@ document.documentElement.classList.add('js-ready');
     return 'gold';
   };
 
-  const getOrderedRates = () => {
-    const currentMetal = getCurrentMetal();
-    if (currentMetal === 'diamond') return [];
-    return [
-      ...METAL_RATES.filter((rate) => rate.metal === currentMetal),
-      ...METAL_RATES.filter((rate) => rate.metal !== currentMetal)
-    ];
-  };
-
   const renderRateLabelForCurrentPage = () => {
     const currentMetal = getCurrentMetal();
     const shouldHideRate = currentMetal === 'diamond';
@@ -49,23 +33,12 @@ document.documentElement.classList.add('js-ready');
       dropdown.querySelector('[aria-expanded]')?.setAttribute('aria-expanded', 'false');
       if (shouldHideRate) return;
 
-      const orderedRates = getOrderedRates();
-      const primaryRate = orderedRates[0] || METAL_RATES[0];
       const triggerText = dropdown.querySelector('.rate-toggle span, .rate-dropdown-trigger span');
       const triggerImage = dropdown.querySelector('.rate-toggle img, .rate-dropdown-trigger img');
       const menu = dropdown.querySelector('.rate-menu, .rate-dropdown-menu');
 
-      if (triggerText) triggerText.textContent = primaryRate.shortLabel;
-      if (triggerImage) triggerImage.setAttribute('src', `${prefix}${primaryRate.icon}`);
-
-      if (menu) {
-        menu.innerHTML = orderedRates.map((rate) => `
-          <button class="rate-row" type="button" role="menuitem" tabindex="-1" aria-disabled="true" data-metal="${rate.metal}" data-label="${rate.shortLabel}">
-            <img src="${prefix}${rate.icon}" alt="" class="rate-coin" loading="eager" decoding="async" fetchpriority="high">
-            <span>${rate.shortLabel}</span>
-          </button>
-        `).join('');
-      }
+      // The dynamic rate row generation has been removed from here.
+      // It is now handled correctly by header-loader.js and rates.js
     });
   };
 
