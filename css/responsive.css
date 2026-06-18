@@ -13,73 +13,6 @@
   }
 }
 
-@media (max-width: 991px) {
-
-  html,
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-
-
-
-
-
-
-
-
-
-
-  header .navigation-2 {
-    display: block !important;
-    position: relative;
-  }
-
-  header .navigation-2 .site-header__inner,
-  header .navigation-2 .site-header__container {
-    width: 100% !important;
-    max-width: 100vw !important;
-  }
-
-  header .navigation-2 .site-header__brand-area {
-    display: block !important;
-  }
-
-  header .navigation-2 .site-header__actions {
-    display: flex !important;
-    justify-content: flex-end !important;
-  }
-
-  .slider-wrapper,
-  .swiper-component {
-    overflow: hidden !important;
-  }
-}
-
-@media (max-width: 479px) {
-  .team5_list {
-    grid-template-areas: none !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-
-  .team5_item,
-  .team5_image-wrapper,
-  .team5_image {
-    max-width: 100% !important;
-  }
-
-  .footer-wrapper,
-  .footer-content,
-  .footer-block,
-  .div98777790 {
-    grid-template-columns: 1fr !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-}
 
 /* Mobile reference alignment: keep desktop untouched while matching the live site's phone/tablet rhythm. */
 @media (max-width: 991px) {
@@ -130,10 +63,7 @@
 }
 
 
-
 @media (max-width: 479px) {
-
-
 
 
   .team5_list {
@@ -175,8 +105,6 @@
 }
 
 
-
-
 @media (max-width: 479px) {
   .team5_list {
     margin-left: calc((100vw - 450px) / 2 - 25px) !important;
@@ -187,12 +115,6 @@
     height: auto !important;
   }
 }
-
-/* Keep the mobile drawer anchored to the viewport instead of the menu button container. */
-
-
-
-
 
 
 @media (max-width: 991px) {
@@ -207,27 +129,6 @@
 }
 
 /* Match the live mobile navbar: red runner, white header, black menu button, simple nav list. */
-@media (max-width: 991px) {
-
-  header.site-header,
-  header.site-header .page-wrapper-6,
-  header.site-header .container-755,
-  header.site-header .wrapper,
-  header.site-header .logos-marquee,
-  header.site-header .site-header__wrap {
-    background: transparent !important;
-    background-color: transparent !important;
-  }
-}
-
-
-
-/* Simple live-site mobile menu content. */
-
-
-/* Final measured mobile/tablet header alignment against live reference. */
-
-
 
 
 /* Mobile footer address realignment. */
@@ -388,8 +289,6 @@
 }
 
 
-
-
 /* Final responsive polish for review carousel, banner-2 slider, and feature-card contrast. */
 @media (max-width: 991px) {
 
@@ -473,7 +372,6 @@
     max-width: 100% !important;
   }
 }
-
 
 
 /* Final requested hamburger colors: maroon circle, white closed icon, gold open icon. */
@@ -1246,9 +1144,6 @@
 }
 
 
-
-
-
 /* Product listing migration: clean collection toolbar and card selectors. */
 
 .collection-toolbar {
@@ -1431,7 +1326,7 @@
   font-family: 'Montserrat', sans-serif !important;
     font-weight: 500 !important;
   font-size: clamp(15px, 1.05vw, 17px) !important;
-  font-weight: 750 !important;
+  font-weight: 700 !important;
   letter-spacing: .015em !important;
   line-height: 1.32 !important;
   margin-bottom: 5px;
@@ -1443,7 +1338,7 @@
   font-family: 'Montserrat', sans-serif !important;
     font-weight: 500 !important;
   font-size: clamp(12px, .85vw, 14px) !important;
-  font-weight: 650 !important;
+  font-weight: 600 !important;
   letter-spacing: .08em !important;
   line-height: 1.35 !important;
   text-transform: uppercase;
@@ -1619,8 +1514,6 @@
     padding: 0 !important;
   }
 }
-
-
 
 
 /* Customer review carousel geometry. */
@@ -1899,7 +1792,7 @@
   color: #991f23;
   font-family: 'Mulish', Arial, sans-serif;
   font-size: 18px;
-  font-weight: 750;
+  font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 1.4;
   margin-bottom: 1.2em;
@@ -1936,7 +1829,7 @@
 
 .richtext strong {
   color: #7a4f52;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .richtext em,
@@ -2029,7 +1922,7 @@
   flex-direction: column;
   font-family: 'Mulish', Arial, sans-serif;
   font-size: 10.5px;
-  font-weight: 650;
+  font-weight: 600;
   gap: 7px;
   letter-spacing: 0.075em;
   line-height: 1.2;
@@ -2079,7 +1972,7 @@
   cursor: pointer;
   font-family: 'Mulish', Arial, sans-serif;
   font-size: 12px;
-  font-weight: 650;
+  font-weight: 600;
   height: 44px;
   letter-spacing: 0.055em;
   line-height: 1;
@@ -2172,7 +2065,7 @@
 
 .legal-page .richtext strong {
   color: #7f3436;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .legal-page .richtext a {
@@ -2402,7 +2295,7 @@ body {
 
 .product-card-price {
   color: var(--kj-maroon) !important;
-  font-weight: 650 !important;
+  font-weight: 600 !important;
 }
 
 .collection-toolbar {
@@ -2603,7 +2496,7 @@ body {
   font-family: 'Montserrat', sans-serif !important;
     font-weight: 500 !important;
   font-size: clamp(17px, 2vw, 22px) !important;
-  font-weight: 650 !important;
+  font-weight: 600 !important;
   padding-bottom: 8px;
 }
 
@@ -3027,7 +2920,7 @@ body.legal-page {
 
 .legal-page .richtext strong:not(:only-child) {
   color: #69433f !important;
-  font-weight: 650 !important;
+  font-weight: 600 !important;
 }
 
 @media (max-width: 767px) {
@@ -3075,6 +2968,8 @@ body.legal-page {
 }
 
 .banner-slider1 {
+  border-radius: 15px;
+  overflow: hidden;
   padding-bottom: 0 !important;
 }
 
@@ -3221,7 +3116,6 @@ body.legal-page {
 }
 
 
-
 .legal-page .richtext strong,
 .legal-page .richtext b,
 .legal-page .richtext .bold-text,
@@ -3326,7 +3220,6 @@ textarea,
 }
 
 
-
 /* 13. Legal Pages Minimalist Redesign */
 .legal-clean-layout {
   max-width: 1000px;
@@ -3396,15 +3289,6 @@ textarea,
 }
 
 
-
-
-@media (max-width: 991px) {
-  header.site-header .desktop-header.site-nav {
-    display: none;
-  }
-}
-
-
 @media (min-width: 992px) {
   header.site-header .desktop-header.site-nav {
     display: flex !important;
@@ -3421,15 +3305,6 @@ textarea,
 
 
 /* Fix mobile navbar parent collapse */
-@media (max-width: 991px) {
-  header.site-header.header {
-    display: block !important;
-  }
-
-  header.site-header.header .desktop-header.site-nav {
-    display: none !important;
-  }
-}
 
 /* Final Mobile Repair */
 @media (max-width: 991px) {
@@ -3444,13 +3319,6 @@ textarea,
   }
 
 
-
-
-
-
-
-
-
   header.site-header.header .site-header__right {
     display: flex !important;
     align-items: center !important;
@@ -3460,48 +3328,11 @@ textarea,
 }
 
 
-
 /* Phase 5 — Match Mobile Navbar to Final Approved Design */
-@media (max-width: 991px) {
-
-  header.site-header.header {
-    background: #a3131c !important;
-  }
-}
 
 /* Fixed Mobile Rate Strip */
 
 @media (max-width: 991px) {
-  .kj-mobile-rate-strip {
-    -webkit-text-size-adjust: 100%;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    --gold: #fff8d2;
-    --white: white;
-    --grey: #8e8e8e;
-    --meron: #991f23;
-    --mid-meroon: #900000;
-    --light-black: #222;
-    --emarald: #304e51;
-    --dark-maroon: #770b21;
-    --bright-red: #b00000;
-    --royal-blue: #1e2d5e;
-    --pencil-grey: #8e8e8e;
-    --light-grey: #686868;
-    --dark-gold: #d2ab00;
-    --black: black;
-    --kj-ivory: #fffaf0;
-    --kj-ivory-soft: #fffdf7;
-    --kj-maroon: #991f23;
-    --kj-maroon-deep: #7f191d;
-    --kj-gold: #d4af37;
-    --kj-gold-muted: #b58f35;
-    --kj-charcoal: #4f403d;
-    --kj-charcoal-soft: #6e5a56;
-    --kj-line: rgba(181, 143, 53, 0.22);
-    --kj-shadow-soft: 0 12px 30px rgba(65, 35, 28, 0.06);
-    --kj-shadow-lift: 0 18px 38px rgba(65, 35, 28, 0.1);
-    --kj-ease: cubic-bezier(.22, 1, .36, 1);
     font-weight: 400;
     text-rendering: optimizeLegibility !important;
     font-family: Mulish, Arial, sans-serif;
@@ -3547,26 +3378,6 @@ textarea,
 }
 
 
-
-@media (max-width: 991px) {
-
-  .kj-mobile-rate-strip,
-  header.site-header.header {
-    width: 100% !important;
-    max-width: 100vw !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-}
-
-
-
-/* Final Phase 6 Mobile Navbar Regression Fix */
-
-
-
 /* Final Phase 6 Mobile Navbar Regression Fix */
 @media (max-width: 991px) {
   header.site-header.header .mobile-header.site-nav {
@@ -3598,9 +3409,6 @@ textarea,
     box-shadow: none !important;
     padding: 0 !important;
   }
-
-
-
 
 
   header.site-header.header .mobile-nav.site-nav__panel {
@@ -3684,9 +3492,6 @@ textarea,
   }
 
 
-
-
-
   header.site-header.header .mobile-nav.site-nav__panel {
     left: 0 !important;
     right: 0 !important;
@@ -3698,8 +3503,6 @@ textarea,
 }
 
 @media (max-width: 991px) {
-
-
 
 
   .mobile-menu-toggle.mobile-menu-button.is-open {
@@ -3892,50 +3695,6 @@ textarea,
 }
 
 /* --- PREMIUM MOBILE NAVBAR ANIMATIONS --- */
-@media (max-width: 991px) {
-  @keyframes mobileMenuSlideDown {
-    0% { opacity: 0; transform: translateY(-10px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-
-  header.site-header.header .mobile-nav.site-nav__panel.is-open {
-    animation: mobileMenuSlideDown 0.3s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
-    border-radius: 0 0 12px 12px !important;
-    border-top: 1px solid rgba(0,0,0,0.05) !important;
-  }
-
-  header.site-header.header .mobile-nav .kj-mobile-menu-link {
-    transition: all 0.25s ease !important;
-    position: relative !important;
-  }
-
-  header.site-header.header .mobile-nav .kj-mobile-menu-link::after {
-    content: '' !important;
-    position: absolute !important;
-    bottom: 4px !important;
-    left: 0 !important;
-    height: 2px !important;
-    background: #e6c886 !important;
-    width: 0 !important;
-    transition: width 0.3s ease !important;
-  }
-
-  header.site-header.header .mobile-nav .kj-mobile-menu-link:hover::after,
-  header.site-header.header .mobile-nav .kj-mobile-menu-link:focus::after {
-    width: 40px !important;
-  }
-
-  .mobile-menu-toggle.mobile-menu-button {
-    transition: background 0.3s ease, transform 0.2s ease !important;
-    border-radius: 8px !important;
-  }
-
-  .mobile-menu-toggle.mobile-menu-button:active {
-    transform: scale(0.92) !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-  }
-}
 
 
 /* ==========================================================================
@@ -4063,7 +3822,6 @@ textarea,
     background-color: #d4af37 !important; /* Gold when open */
   }
 }
-
 
 
 @media (max-width: 991px) {
