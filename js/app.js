@@ -770,4 +770,20 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof initLoupeEffect === 'function') initLoupeEffect();
   if (typeof resetMobileMenuOnDesktop === 'function') resetMobileMenuOnDesktop();
   restoreEnquiryPrefill();
+
+  // Contact Page Form Submission Handler
+  const contactForm = document.querySelector('.get-in-touch-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const wrap = contactForm.closest('.get-in-touch-form-wrap');
+      if (wrap) {
+        contactForm.style.display = 'none';
+        const successMsg = wrap.querySelector('.form-done');
+        if (successMsg) {
+          successMsg.style.display = 'block';
+        }
+      }
+    });
+  }
 });
