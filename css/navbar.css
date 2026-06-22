@@ -443,6 +443,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
     color: #991f23;
     white-space: nowrap;
     line-height: 32px;
+    font-family: Montserrat, sans-serif;
   }
 
   .kj-mobile-rate-strip__track {
@@ -451,6 +452,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
     min-width: max-content;
     will-change: transform;
     animation: kj-rate-scroll 30s linear infinite;
+    font-family: Montserrat, sans-serif;
   }
 
   .kj-mobile-rate-strip__track span {
@@ -458,6 +460,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
     display: inline-block;
     white-space: nowrap;
     padding-right: 80px;
+    font-family: Montserrat, sans-serif;
   }
 }
 
@@ -2231,11 +2234,13 @@ header.site-header .rate-chevron {
     white-space: nowrap;
     will-change: transform;
     animation: kj-rate-scroll 30s linear infinite;
+    font-family: Montserrat, sans-serif;
   }
 
   .kj-mobile-rate-strip__track span {
     padding-right: 80px;
     flex-shrink: 0;
+    font-family: Montserrat, sans-serif;
   }
 
   @keyframes kj-rate-scroll {
@@ -2280,23 +2285,36 @@ header.site-header .rate-chevron {
   }
 
   header.site-header.header .mobile-nav.site-nav__panel {
-    display: none !important;
+    display: flex !important;
     position: absolute !important;
     top: 100% !important;
-    left: 32px !important;
-    right: 32px !important;
+    left: 16px !important;
+    right: 16px !important;
     width: auto !important;
     background: #ffffff !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(-12px) !important;
     z-index: 99999 !important;
     flex-direction: column !important;
     padding: 18px 34px 24px !important;
     box-shadow: none !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    align-items: stretch !important;
+    transition: opacity 240ms ease, transform 300ms ease, visibility 0s linear 300ms !important;
   }
 
   header.site-header.header .mobile-nav.site-nav__panel.is-open {
-    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 0 0 12px 12px !important;
+    border-top: 1px solid rgba(0,0,0,0.05) !important;
+    transition: opacity 240ms ease, transform 300ms ease, visibility 0s linear 0s !important;
   }
 
   header.site-header.header .mobile-nav .kj-mobile-menu-link {
@@ -2328,14 +2346,7 @@ header.site-header .rate-chevron {
     justify-content: center !important;
   }
 
-  header.site-header.header .mobile-nav.site-nav__panel {
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    background: #ffffff !important;
-    padding: 24px 36px !important;
-    box-sizing: border-box !important;
-  }
+  /* Consolidated into main rule above */
 
 }
 
@@ -2383,13 +2394,7 @@ header.site-header .rate-chevron {
     }
   }
 
-  header.site-header.header .mobile-nav.site-nav__panel.is-open {
-    display: flex !important;
-    animation: mobileMenuSlideDown 0.3s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
-    border-radius: 0 0 12px 12px !important;
-    border-top: 1px solid rgba(0,0,0,0.05) !important;
-  }
+  /* Transition handled in main rule above */
 
   header.site-header.header .mobile-nav .kj-mobile-menu-link {
     transition: all 0.25s ease !important;
@@ -2498,6 +2503,7 @@ header.site-header .rate-chevron {
     overflow: hidden !important;
     position: relative !important;
     width: 100% !important;
+    font-family: Montserrat, sans-serif !important;
   }
 
   .mobile-header {
@@ -2520,37 +2526,7 @@ header.site-header .rate-chevron {
     width: 170px !important;
   }
 
-  .mobile-nav {
-    background: #fff !important;
-    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.18) !important;
-    color: #222 !important;
-    display: block !important;
-    max-height: 0 !important;
-    opacity: 0 !important;
-    overflow-y: auto !important;
-    pointer-events: none !important;
-    transform: translateY(-8px) !important;
-    visibility: hidden !important;
-    transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 240ms ease, transform 300ms ease, visibility 0s linear 360ms !important;
-    position: absolute !important;
-    left: 0 !important;
-    right: 0 !important;
-    top: 100% !important;
-    width: 100vw !important;
-    z-index: 10001 !important;
-    padding: 0 18px !important;
-  }
-
-  .mobile-nav.is-open {
-    max-height: calc(100vh - 111px) !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    transform: none !important;
-    visibility: visible !important;
-    transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 240ms ease, transform 300ms ease, visibility 0s linear 0s !important;
-    padding-top: 15px !important;
-    padding-bottom: 18px !important;
-  }
+  /* Overlapping rules removed to prevent conflicts */
 
   .kj-mobile-menu-link {
     display: block !important;
@@ -2603,18 +2579,7 @@ header.site-header .rate-chevron {
 }
 
 @media (max-width: 991px) {
-  header.site-header.header .mobile-nav.site-nav__panel {
-    left: 16px !important;
-    right: 16px !important;
-    width: auto !important;
-    max-width: none !important;
-    box-sizing: border-box !important;
-    margin-left: 0 !important;
-    transform: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-  }
+  /* Consolidated into main rule above */
 
   header.site-header.header .mobile-menu-toggle.mobile-menu-button {
     display: inline-flex !important;
@@ -2761,6 +2726,7 @@ header.site-header .rate-chevron {
     overflow: hidden !important;
     position: relative !important;
     width: 100% !important;
+    font-family: Montserrat, sans-serif !important;
   }
 
   .mobile-header {
@@ -2783,37 +2749,7 @@ header.site-header .rate-chevron {
     width: 170px !important;
   }
 
-  .mobile-nav {
-    background: #fff !important;
-    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.18) !important;
-    color: #222 !important;
-    display: block !important;
-    max-height: 0 !important;
-    opacity: 0 !important;
-    overflow-y: auto !important;
-    pointer-events: none !important;
-    transform: translateY(-8px) !important;
-    visibility: hidden !important;
-    transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 240ms ease, transform 300ms ease, visibility 0s linear 360ms !important;
-    position: absolute !important;
-    left: 0 !important;
-    right: 0 !important;
-    top: 100% !important;
-    width: 100vw !important;
-    z-index: 10001 !important;
-    padding: 0 18px !important;
-  }
-
-  .mobile-nav.is-open {
-    max-height: calc(100vh - 111px) !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    transform: none !important;
-    visibility: visible !important;
-    transition: max-height 360ms cubic-bezier(.22, 1, .36, 1), opacity 240ms ease, transform 300ms ease, visibility 0s linear 0s !important;
-    padding-top: 15px !important;
-    padding-bottom: 18px !important;
-  }
+  /* Overlapping rules removed to prevent conflicts */
 
   .kj-mobile-menu-link {
     display: block !important;
