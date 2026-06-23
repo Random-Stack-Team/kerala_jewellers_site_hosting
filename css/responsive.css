@@ -1,4 +1,4 @@
-@media (max-width: 991px) {
+﻿@media (max-width: 991px) {
   .dropdown-list {
     position: static !important;
     width: 100% !important;
@@ -2671,7 +2671,7 @@ body.legal-page {
 
 /* 5. Show custom dropdown list when parent .dropdown is hovered or open on desktop */
 @media (min-width: 992px) {
-  .dropdown.is-open>.dropdown-list {
+  .dropdown.is-active>.dropdown-list {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
@@ -2901,3 +2901,4 @@ body.legal-page {
   .kj-hero-heading-blog {
     font-size: 30px;
     line-height: 40px}}
+

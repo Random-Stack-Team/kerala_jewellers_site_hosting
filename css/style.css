@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --font-decorative: "Com 4 DL", sans-serif;
   --font-body: Mulish, sans-serif;
   --font-ui: Montserrat, sans-serif}
@@ -189,10 +189,10 @@ th {
   font-family: ui-icons !important}
 
 .slider-icon-right:before {
-  content: ""}
+  content: "î˜€"}
 
 .slider-icon-left:before {
-  content: ""}
+  content: "î˜"}
 
 * {
   box-sizing: border-box}
@@ -864,7 +864,7 @@ textarea.form-select {
   display: none;
   position: absolute}
 
-.dropdown-list.is-open {
+.dropdown-list.is-active {
   display: block}
 
 .dropdown-link {
@@ -879,25 +879,25 @@ textarea.form-select {
   outline: 0}
 
 @media screen and (max-width: 767px) {
-  .site-header__brand {
+  .header-brand {
     padding-left: 10px}
 }
 
-.site-nav {
+.main-nav {
   z-index: 1000;
   background: #ddd;
   position: relative}
 
-.site-nav:before,
-.site-nav:after {
+.main-nav:before,
+.main-nav:after {
   content: " ";
   grid-area: 1 / 1 / 2 / 2;
   display: table}
 
-.site-nav:after {
+.main-nav:after {
   clear: both}
 
-.site-header__brand {
+.header-brand {
   float: left;
   color: #333;
   text-decoration: none;
@@ -944,20 +944,20 @@ textarea.form-select {
 .nav-overlay [data-nav-menu-open] {
   top: 0}
 
-.site-nav[data-animation="over-left"] .nav-overlay {
+.main-nav[data-animation="over-left"] .nav-overlay {
   width: auto}
 
-.site-nav[data-animation="over-left"] .nav-overlay,
-.site-nav[data-animation="over-left"] [data-nav-menu-open] {
+.main-nav[data-animation="over-left"] .nav-overlay,
+.main-nav[data-animation="over-left"] [data-nav-menu-open] {
   z-index: 1;
   top: 0;
   right: auto}
 
-.site-nav[data-animation="over-right"] .nav-overlay {
+.main-nav[data-animation="over-right"] .nav-overlay {
   width: auto}
 
-.site-nav[data-animation="over-right"] .nav-overlay,
-.site-nav[data-animation="over-right"] [data-nav-menu-open] {
+.main-nav[data-animation="over-right"] .nav-overlay,
+.main-nav[data-animation="over-right"] [data-nav-menu-open] {
   z-index: 1;
   top: 0;
   left: auto}
@@ -967,7 +967,7 @@ textarea.form-select {
 
 @media screen and (max-width: 767px) {
 
-  .site-header__brand {
+  .header-brand {
     padding-left: 10px}
 }
 
@@ -2186,7 +2186,7 @@ figcaption {
   display: flex;
   position: static}
 
-.site-header__container {
+.header-content {
   border: 0 solid #000;
   justify-content: space-between;
   align-items: stretch;
@@ -2230,12 +2230,35 @@ figcaption {
   font-weight: 500;
   text-decoration: none}
 
+.header .nav-link,
+.nav-panel .nav-link {
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none}
+
 .nav-link:active,
 .nav-link:focus,
 .nav-link:focus-visible,
 .nav-link[data-wf-focus-visible],
 .nav-link:visited {
   color: #000}
+
+.header .nav-link:active,
+.header .nav-link:focus,
+.header .nav-link:focus-visible,
+.header .nav-link:visited,
+.nav-panel .nav-link:active,
+.nav-panel .nav-link:focus,
+.nav-panel .nav-link:focus-visible,
+.nav-panel .nav-link:visited {
+  color: #fff}
 
 .login-2 {
   border: 1px solid #000;
@@ -2406,7 +2429,7 @@ figcaption {
   margin-right: auto;
   display: flex}
 
-.site-header__actions {
+.header-actions {
   grid-column-gap: 12px;
   grid-row-gap: 12px;
   flex-flow: row;
@@ -2419,7 +2442,7 @@ figcaption {
   border-radius: 50px;
   height: 51px}
 
-.site-header__right {
+.header-right {
   grid-column-gap: 12px;
   align-items: center;
   display: flex}
@@ -2432,7 +2455,7 @@ figcaption {
 .cart-quantity-2 {
   font-style: normal}
 
-.site-header__inner {
+.header-inner {
   border: 0 solid #000;
   width: 100%}
 
@@ -3767,7 +3790,7 @@ figcaption {
 
 .left-arrow,
 .right-arrow,
-.site-nav__slider {
+.main-nav__slider {
   display: none}
 
 .slider {
@@ -4736,7 +4759,7 @@ figcaption {
 .filter_dropdown-list {
   box-shadow: 0 12px 16px -4px #00000014, 0 4px 6px -2px #10182808}
 
-.filter_dropdown-list.is-open {
+.filter_dropdown-list.is-active {
   border: 1px solid var(--meron);
   background-color: #fff;
   border-radius: 0 0 .75rem .75rem;
@@ -4775,7 +4798,7 @@ figcaption {
   padding-bottom: 8px;
   display: flex}
 
-.sort_by-toggle.is-open {
+.sort_by-toggle.is-active {
   position: static}
 
 .uui-dropdown-icon {
@@ -4794,7 +4817,7 @@ figcaption {
 .sort_by-list {
   background-color: #fff}
 
-.sort_by-list.is-open {
+.sort_by-list.is-active {
   z-index: 2;
   border: 1px solid var(--meron);
   border-radius: 0 0 .7rem .7rem}
@@ -5937,7 +5960,7 @@ figcaption {
 .bko-pic-1 {
   height: 3em}
 
-.bko-text-11 {
+.dropdown__heading {
   color: #000;
   text-align: left;
   letter-spacing: -.72px;
@@ -6027,7 +6050,7 @@ figcaption {
   padding-left: 6em;
   display: flex}
 
-.bko-dropdown-list.is-open {
+.dropdown__menu.is-active {
   background-color: #0000;
   flex-direction: column;
   justify-content: center;
@@ -6049,7 +6072,7 @@ figcaption {
   font-weight: 700;
   line-height: 1.3em}
 
-.bko-dropdown-toggle.is-open {
+.bko-dropdown-toggle.is-active {
   text-transform: capitalize;
   font-size: 1.3em;
   font-weight: 700;
@@ -6071,7 +6094,7 @@ figcaption {
 .bko-wrap-121 {
   margin-right: 2em}
 
-.bko-grid-11 {
+.nav-grid {
   align-items: stretch;
   display: flex}
 
@@ -6151,7 +6174,7 @@ figcaption {
   font-weight: 700;
   line-height: 1.3em}
 
-.bko-dropdown-toggle-2.is-open {
+.bko-dropdown-toggle-2.is-active {
   text-transform: capitalize;
   font-size: 1.3em;
   font-weight: 700;
@@ -6274,7 +6297,7 @@ figcaption {
   line-height: 1.3em;
   text-decoration: none}
 
-.bko-dropdown-toggle-3 {
+.dropdown__trigger {
   color: #000;
   text-transform: capitalize;
   padding: 10px 20px;
@@ -6282,7 +6305,7 @@ figcaption {
   font-weight: 700;
   display: block}
 
-.bko-dropdown-toggle-3.is-open {
+.dropdown__trigger.is-active {
   text-align: left;
   text-transform: capitalize;
   border-bottom: 3px solid var(--meron);
@@ -6342,7 +6365,7 @@ figcaption {
   font-weight: 700;
   line-height: 1.3em}
 
-.bko-dropdown-toggle-4.is-open {
+.bko-dropdown-toggle-4.is-active {
   text-transform: capitalize;
   font-size: 1.3em;
   font-weight: 700;
@@ -6535,11 +6558,11 @@ figcaption {
   line-height: 1.3em;
   display: block}
 
-.bko-grid-11-category {
+.nav-grid-category {
   align-items: stretch;
   display: flex}
 
-.site-header {
+.header {
   z-index: 9;
   background-color: #fff;
   flex-direction: column;
@@ -6587,7 +6610,7 @@ figcaption {
   line-height: 1.3em;
   display: block}
 
-.bko-text-11-2 {
+.dropdown__heading-2 {
   color: #000;
   text-align: left;
   letter-spacing: -.72px;
@@ -6659,10 +6682,10 @@ figcaption {
 .cart-btn-4:hover {
   background-color: #eee7e4}
 
-.diamondlink-2 {
+.nav-link--diamond {
   text-decoration: none}
 
-.diamondlink-2.is-current {
+.nav-link--diamond.is-current {
   color: var(--meron)}
 
 .bko-text-1-2 {
@@ -6683,19 +6706,19 @@ figcaption {
 .platinumlink-2.is-current {
   color: var(--meron)}
 
-.goldlink-2 {
+.nav-link--gold {
   text-decoration: none}
 
-.goldlink-2.is-current {
+.nav-link--gold.is-current {
   color: var(--meron)}
 
 .locket {
   display: none}
 
-.silverlink-2 {
+.nav-link--silver {
   text-decoration: none}
 
-.silverlink-2.is-current {
+.nav-link--silver.is-current {
   color: var(--meron)}
 
 .bko-text-12-bangles {
@@ -6750,7 +6773,7 @@ figcaption {
 .option-4 {
   font-style: normal}
 
-.bko-dropdown-1-3 {
+.dropdown__label {
   text-align: center;
 }
 
@@ -6773,7 +6796,7 @@ figcaption {
   font-size: 16px;
   display: flex}
 
-.site-header__wrap {
+.header__wrap {
   margin-left: 0;
   margin-right: 0}
 
@@ -6812,13 +6835,13 @@ figcaption {
   color: var(--grey);
   font-size: 16px}
 
-.bko-link-111-2 {
+.nav-link {
   text-align: left;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.bko-link-111-2.is-current {
+.nav-link.is-current {
   color: #900000}
 
 .bko-text-12-rings,
@@ -6835,7 +6858,7 @@ figcaption {
 .rings {
   display: none}
 
-.site-nav {
+.main-nav {
   color: #283338;
   justify-content: center;
   align-items: center;
@@ -8158,7 +8181,7 @@ figcaption {
 .div-block-70 {
   display: none}
 
-.bko-dropdown-1-3121 {
+.dropdown__label121 {
   text-align: center;
   letter-spacing: -.8px;
   font-family: var(--font-body);
@@ -9492,7 +9515,7 @@ figcaption {
   background-color: var(--gold);
   color: var(--dark-maroon)}
 
-.bko-grid-111 {
+.nav-grid1 {
   grid-column-gap: 2em;
   grid-row-gap: 2em;
   background-color: #fff;
@@ -9502,7 +9525,7 @@ figcaption {
   margin-right: 0;
   display: grid}
 
-.bko-grid-1111 {
+.nav-grid11 {
   grid-column-gap: 2em;
   grid-row-gap: 2em;
   background-color: #fff;
@@ -9679,8 +9702,8 @@ figcaption {
   .banner-247772122 {
     height: 60vh}
 
-  .bko-grid-111,
-  .bko-grid-1111,
+  .nav-grid1,
+  .nav-grid11,
 
 }
 
@@ -9955,7 +9978,7 @@ figcaption {
   .menu-button {
     padding: 0}
 
-  .menu-button.is-open {
+  .menu-button.is-active {
     background-color: #0000}
 
   .collection-wrap {
@@ -10057,7 +10080,7 @@ figcaption {
     border-radius: 100px;
     font-size: 22px}
 
-  .menu-mob.is-open {
+  .menu-mob.is-active {
     background-color: #000}
 
   .primary-btn {
@@ -10084,10 +10107,10 @@ figcaption {
     grid-auto-columns: 1fr;
     display: grid}
 
-  .site-header__right {
+  .header-right {
     grid-column-gap: 18px}
 
-  .site-header__brand-area {
+  .header-brand {
     display: none}
 
   .dropdown-nav-main-wrapper-v1---brix {
@@ -10099,7 +10122,7 @@ figcaption {
     grid-auto-columns: 1fr;
     padding: 40px 24px}
 
-  .site-header__inner {
+  .header-inner {
     background-color: #fff}
 
   .dropdown-nav---brix {
@@ -10112,7 +10135,7 @@ figcaption {
   .menu-button-2 {
     padding: 0}
 
-  .menu-button-2.is-open {
+  .menu-button-2.is-active {
     background-color: #0000;
     padding: 0}
 
@@ -10709,7 +10732,7 @@ figcaption {
     position: static;
     overflow: hidden}
 
-  .filter_dropdown-list.is-open {
+  .filter_dropdown-list.is-active {
     width: auto;
     box-shadow: none;
     border-style: none;
@@ -11009,7 +11032,7 @@ figcaption {
     border-radius: 100px;
     font-size: 22px}
 
-  .menu-mob-2.is-open {
+  .menu-mob-2.is-active {
     background-color: #000}
 
   .navigation-left-2 {
@@ -11054,13 +11077,13 @@ figcaption {
   .bko-wrap-11 {
     display: none}
 
-  .bko-dropdown-list.is-open {
+  .dropdown__menu.is-active {
     position: relative}
 
   .bko-dropdown-toggle {
     display: flex}
 
-  .bko-dropdown-0 {
+  .dropdown {
     flex-direction: column;
     align-items: flex-start;
     display: block}
@@ -11168,12 +11191,12 @@ figcaption {
   .bko-grid-1-3 {
     grid-column-gap: 3em}
 
-  .bko-dropdown-toggle-3 {
+  .dropdown__trigger {
     padding-top: 0;
     padding-bottom: 0;
     display: flex}
 
-  .bko-dropdown-toggle-3.is-open {
+  .dropdown__trigger.is-active {
     width: auto;
     margin-left: 0;
     margin-right: 0}
@@ -11198,7 +11221,7 @@ figcaption {
   .bko-dropdown-1-2 {
     position: relative}
 
-  .bko-wrap-111-2 {
+  .nav-item {
     margin-right: 0}
 
   .div-block-43,
@@ -11233,7 +11256,7 @@ figcaption {
     padding-top: 45px;
     padding-bottom: 45px}
 
-  .site-header {
+  .header {
     display: none}
 
   .bko-dropdown-2-3 {
@@ -11256,7 +11279,7 @@ figcaption {
     margin-left: 20px;
     display: flex}
 
-  .bko-dropdown-1-3 {
+  .dropdown__label {
     position: relative}
 
   .silver-bangles,
@@ -11463,7 +11486,7 @@ figcaption {
   .slider-24 {
     padding-top: 60px}
 
-  .bko-dropdown-1-3121 {
+  .dropdown__label121 {
     position: relative}
 
   .bko-wrap-111121 {
@@ -11640,12 +11663,12 @@ figcaption {
     padding-top: 45px;
     padding-bottom: 45px}
 
-  .bko-grid-111 {
+  .nav-grid1 {
     grid-column-gap: 0em;
     grid-row-gap: 0em;
     grid-template-columns: .5fr .5fr 1fr}
 
-  .bko-grid-1111 {
+  .nav-grid11 {
     grid-column-gap: 3em}
 
   .bko-dropdown-2-3-co1111py {
@@ -11806,7 +11829,7 @@ figcaption {
   .brand {
     padding-left: 0}
 
-  .site-header__right {
+  .header-right {
     grid-column-gap: 15px}
 
   .dropdown-nav-main-wrapper-v1---brix {
@@ -12396,7 +12419,7 @@ figcaption {
   .bko-dropdown-toggle {
     display: flex}
 
-  .bko-dropdown-0 {
+  .dropdown {
     display: block}
 
   .bko-selections-1 {
@@ -12417,7 +12440,7 @@ figcaption {
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr 1fr}
 
-  .bko-dropdown-toggle-3 {
+  .dropdown__trigger {
     display: flex}
 
   .bko-wrap-11-2 {
@@ -12481,7 +12504,7 @@ figcaption {
     padding-left: 0;
     padding-right: 0}
 
-  .bko-link-111-2 {
+  .nav-link {
   }
 
   .similar-products {
@@ -12905,7 +12928,7 @@ figcaption {
   .button-51 {
     width: 50%}
 
-  .bko-grid-111 {
+  .nav-grid1 {
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr 1fr 2fr;
     grid-auto-columns: 2fr}
@@ -12969,7 +12992,7 @@ figcaption {
     padding-right: 20px}
 
   .menu-button,
-  .menu-button.is-open {
+  .menu-button.is-active {
     flex: none}
 
   .cart-container {
@@ -13662,7 +13685,7 @@ figcaption {
   .bko-wrap-111 {
     margin-right: 0}
 
-  .bko-dropdown-list.is-open {
+  .dropdown__menu.is-active {
     padding-left: 1.2rem;
     padding-right: 1.2rem}
 
@@ -13707,7 +13730,7 @@ figcaption {
   .bko-grid-1-3 {
     grid-template-columns: 1fr}
 
-  .bko-dropdown-toggle-3 {
+  .dropdown__trigger {
     padding-top: 0;
     padding-bottom: 0;
     font-size: 1.3em;
@@ -13728,7 +13751,7 @@ figcaption {
     display: block;
     overflow: auto}
 
-  .bko-wrap-111-2 {
+  .nav-item {
     margin-right: 0}
 
   .bko-grid-1-3-1 {
@@ -14069,11 +14092,11 @@ figcaption {
     padding-left: 10px;
     padding-right: 10px}
 
-  .bko-grid-111 {
+  .nav-grid1 {
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr}
 
-  .bko-grid-1111 {
+  .nav-grid11 {
     grid-template-columns: 1fr}
 
   .div-block-4211112223 {
@@ -14734,8 +14757,8 @@ figcaption {
 /* Header refinements */
 
 .navigation-2,
-.site-header__inner,
-.site-nav {
+.header-inner,
+.main-nav {
   background: var(--meron) !important}
 
 /* Dropdown category cleanup */
@@ -14751,13 +14774,13 @@ figcaption {
   background: rgba(153, 31, 35, .07);
   transform: translateX(3px)}
 
-.bko-grid-11,
-.bko-grid-11-category {
+.nav-grid,
+.nav-grid-category {
   border-radius: 8px;
   transition: background-color .2s ease, box-shadow .2s ease, transform .2s ease}
 
-.bko-grid-11:hover,
-.bko-grid-11-category:hover {
+.nav-grid:hover,
+.nav-grid-category:hover {
   background: #fffaf1;
   box-shadow: 0 8px 20px rgba(153, 31, 35, .08);
   transform: translateY(-2px)}
@@ -14851,13 +14874,13 @@ figcaption {
 
 /* Final header overrides */
 header .navigation-2,
-header .site-header__inner,
-header .site-nav {
+header .header-inner,
+header .main-nav {
   background-color: var(--meron) !important}
 
 header .nav-menu-3,
-header .site-header__actions,
-header .site-header__container {
+header .header-actions,
+header .header-content {
   overflow: visible !important}
 
 header .nav-menu-3 {
@@ -14867,13 +14890,13 @@ header .nav-menu-3 {
 
 header .navigation-2 a,
 header .navigation-2 a div,
-header .navigation-2 .bko-link-111-2,
+header .navigation-2 .nav-link,
 header .navigation-2 .bko-dropdown-1-2,
-header .navigation-2 .bko-dropdown-1-3,
+header .navigation-2 .dropdown__label,
 header .navigation-2 .goldlink,
 header .navigation-2 .silverlink,
 header .navigation-2 .diamondlink,
-header .navigation-2 .goldlink-2 {
+header .navigation-2 .nav-link--gold {
   color: #fff !important}
 
 /* ==========================================================================
@@ -14883,13 +14906,13 @@ header .navigation-2 .goldlink-2 {
 /* 1. Main Navigation Links - Force White Text */
 header .navigation-2 .bko-dropdown-1-2,
 header .navigation-2 .bko-link-111,
-header .navigation-2 .bko-link-111-2,
+header .navigation-2 .nav-link,
 header .navigation-2 .goldlink,
 header .navigation-2 .silverlink,
 header .navigation-2 .diamondlink,
 header .navigation-2 .platinumlink,
-header .navigation-2 .bko-dropdown-toggle-3 a,
-header .navigation-2 .bko-dropdown-toggle-3 div,
+header .navigation-2 .dropdown__trigger a,
+header .navigation-2 .dropdown__trigger div,
 header .navigation-2 .div2 a,
 header .navigation-2 a.nav-link,
 header .navigation-2 .nav-link,
@@ -14905,12 +14928,12 @@ header .navigation-2 .goldlink.is-current,
 header .navigation-2 .silverlink.is-current,
 header .navigation-2 .diamondlink.is-current,
 header .navigation-2 .platinumlink.is-current,
-header .navigation-2 .goldlink-2.is-current,
-header .navigation-2 .silverlink-2.is-current,
-header .navigation-2 .diamondlink-2.is-current,
+header .navigation-2 .nav-link--gold.is-current,
+header .navigation-2 .nav-link--silver.is-current,
+header .navigation-2 .nav-link--diamond.is-current,
 header .navigation-2 .platinumlink-2.is-current,
 header .navigation-2 .bko-link-111.is-current,
-header .navigation-2 .bko-link-111-2.is-current,
+header .navigation-2 .nav-link.is-current,
 header .navigation-2 .is-current *,
 header .navigation-2 .is-current div {
   color: #fff5d8 !important;
@@ -14922,13 +14945,13 @@ header .navigation-2 a:hover,
 header .navigation-2 a div:hover,
 header .navigation-2 .bko-dropdown-1-2:hover,
 header .navigation-2 .bko-link-111:hover,
-header .navigation-2 .bko-link-111-2:hover,
+header .navigation-2 .nav-link:hover,
 header .navigation-2 .goldlink:hover,
 header .navigation-2 .silverlink:hover,
 header .navigation-2 .diamondlink:hover,
 header .navigation-2 .platinumlink:hover,
-header .navigation-2 .bko-dropdown-toggle-3 a:hover,
-header .navigation-2 .bko-dropdown-toggle-3 div:hover,
+header .navigation-2 .dropdown__trigger a:hover,
+header .navigation-2 .dropdown__trigger div:hover,
 header .navigation-2 .div2 a:hover {
   color: #fff5d8 !important}
 
@@ -14936,25 +14959,25 @@ header .navigation-2 .div2 a:hover {
 header .navigation-2 .dropdown-list a,
 header .navigation-2 .dropdown-list div,
 header .navigation-2 .dropdown-list span,
-header .navigation-2 .bko-dropdown-list a,
-header .navigation-2 .bko-dropdown-list div,
-header .navigation-2 .bko-dropdown-list span,
+header .navigation-2 .dropdown__menu a,
+header .navigation-2 .dropdown__menu div,
+header .navigation-2 .dropdown__menu span,
 header .navigation-2 .bko-text-12-3,
 header .navigation-2 .category-menu-link,
-header .navigation-2 .bko-text-11,
+header .navigation-2 .dropdown__heading,
 header .navigation-2 .bko-text-12-3-copy {
   color: #231f20 !important}
 
 /* Megamenu hover effect */
 header .navigation-2 .dropdown-list a:hover,
-header .navigation-2 .bko-dropdown-list a:hover,
+header .navigation-2 .dropdown__menu a:hover,
 header .navigation-2 .category-menu-link:hover {
   color: var(--meron) !important}
 
 /* Final header source fixes: keep nav white without inline JS styles. */
 header .navigation-2,
-header .navigation-2 .site-header__inner,
-header .site-nav {
+header .navigation-2 .header-inner,
+header .main-nav {
   background-color: var(--meron) !important}
 
 /* Restored interaction layer from the working reference. */
@@ -15677,12 +15700,12 @@ body {
   display: none !important}
 
 /* Hide mobile rate strip on desktop */
-.kj-mobile-rate-strip {
+.rate-bar {
   display: none}
 
 /* Final Phase 6 Mobile Navbar Regression Fix */
 @media (max-width: 991px) {
-  header.site-header.header .mobile-header.site-nav {
+  header.header.header .header-mobile.main-nav {
     background: var(--meron) !important;
     display: flex !important;
     width: 100% !important;
@@ -15692,13 +15715,13 @@ body {
     position: relative !important;
     z-index: 10000 !important}
 
-  header.site-header.header .mobile-header__container {
+  header.header.header .header-mobile__inner {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important}
 
-  header.site-header.header .mobile-nav .kj-mobile-menu-link {
+  header.header.header .nav-mobile .nav-mobile__link {
     color: #222 !important;
     background: #ffffff !important;
     font-family: Mulish, Arial, sans-serif !important;
@@ -15708,7 +15731,7 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, .06) !important;
     text-decoration: none !important}
 
-  header.site-header.header .mobile-nav .kj-mobile-menu-image {
+  header.header.header .nav-mobile .nav-mobile__image {
     display: none !important}
 }
 
@@ -16223,9 +16246,9 @@ body.contact-page .premium-footer-branches {
   position: relative;
   width: 100%;
   height: 140px;
-  /* Desktop iframe height: 130px–150px */
+  /* Desktop iframe height: 130pxâ€“150px */
   border-radius: 10px;
-  /* Border radius: 10px–12px */
+  /* Border radius: 10pxâ€“12px */
   overflow: hidden;
   margin-bottom: 16px;
   border: 1px solid rgba(200, 155, 60, 0.2)}
@@ -16486,7 +16509,7 @@ body .premium-branches-title {
 }
 
 /* Accessibility Resets */
-.mobile-menu-toggle {
+.nav-toggle {
   background: transparent;
   border: 0;
   padding: 0;
@@ -17048,7 +17071,7 @@ body {
   font-weight: 300}
 
 /* ============================================================
-   BLOG LISTING & POST — STRUCTURAL CSS
+   BLOG LISTING & POST â€” STRUCTURAL CSS
    ============================================================ */
 
 /* --- Blog Page Section Wrappers --- */
@@ -17184,3 +17207,4 @@ body {
 .blog-post__content a {
   color: var(--bright-red);
   text-decoration: underline}
+

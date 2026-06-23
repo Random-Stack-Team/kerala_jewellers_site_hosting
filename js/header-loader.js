@@ -1,5 +1,5 @@
 (async function () {
-  const mount = document.getElementById("site-header");
+  const mount = document.getElementById("header");
   if (!mount) return;
 
   const isSubfolder = window.location.pathname.split("/").length > 2;
@@ -20,31 +20,31 @@
     const currentMetal = getCurrentMetal();
     const shouldHideRate = currentMetal === "diamond";
 
-    document.documentElement.classList.toggle("kj-hide-rate-dropdown", shouldHideRate);
-    document.body?.classList.toggle("kj-hide-rate-dropdown", shouldHideRate);
+    document.documentElement.classList.toggle("kj-hide-rate-select", shouldHideRate);
+    document.body?.classList.toggle("kj-hide-rate-select", shouldHideRate);
 
     const template = document.createElement("template");
     template.innerHTML = html;
-    const dropdown = template.content.querySelector(".rate-dropdown");
+    const dropdown = template.content.querySelector(".rate-select");
     if (!dropdown) return html;
 
     if (shouldHideRate) {
       dropdown.hidden = true;
-      dropdown.classList.add("kj-rate-hidden");
+      dropdown.classList.add("rate--hidden");
       return template.innerHTML;
     }
 
-    const menu = dropdown.querySelector(".rate-menu");
+    const menu = dropdown.querySelector(".rate-list");
     if (menu) {
-      const rows = Array.from(menu.querySelectorAll(".rate-row"));
+      const rows = Array.from(menu.querySelectorAll(".rate-option"));
       if (rows.length > 0) {
         let primaryRow = rows.find(r => r.dataset.metal === currentMetal);
         if (!primaryRow) {
           primaryRow = rows.find(r => r.dataset.metal === "gold") || rows[0];
         }
 
-        const triggerText = dropdown.querySelector(".rate-toggle span");
-        const triggerImage = dropdown.querySelector(".rate-toggle img");
+        const triggerText = dropdown.querySelector(".rate-btn span");
+        const triggerImage = dropdown.querySelector(".rate-btn img");
 
         dropdown.setAttribute("data-kj-rate-order", currentMetal);
 

@@ -23,19 +23,19 @@ document.documentElement.classList.add('js-ready');
     const shouldHideRate = currentMetal === 'diamond';
     const prefix = getAssetPrefix();
 
-    document.documentElement.classList.toggle('kj-hide-rate-dropdown', shouldHideRate);
-    document.body?.classList.toggle('kj-hide-rate-dropdown', shouldHideRate);
+    document.documentElement.classList.toggle('kj-hide-rate-select', shouldHideRate);
+    document.body?.classList.toggle('kj-hide-rate-select', shouldHideRate);
 
-    document.querySelectorAll('.rate-dropdown, .rate-dropdown-container').forEach((dropdown) => {
+    document.querySelectorAll('.rate-select, .rate-select-container').forEach((dropdown) => {
       dropdown.hidden = shouldHideRate;
-      dropdown.classList.toggle('kj-rate-hidden', shouldHideRate);
-      dropdown.classList.remove('is-open');
+      dropdown.classList.toggle('rate--hidden', shouldHideRate);
+      dropdown.classList.remove('is-active');
       dropdown.querySelector('[aria-expanded]')?.setAttribute('aria-expanded', 'false');
       if (shouldHideRate) return;
 
-      const triggerText = dropdown.querySelector('.rate-toggle span, .rate-dropdown-trigger span');
-      const triggerImage = dropdown.querySelector('.rate-toggle img, .rate-dropdown-trigger img');
-      const menu = dropdown.querySelector('.rate-menu, .rate-dropdown-menu');
+      const triggerText = dropdown.querySelector('.rate-btn span, .rate-select-trigger span');
+      const triggerImage = dropdown.querySelector('.rate-btn img, .rate-select-trigger img');
+      const menu = dropdown.querySelector('.rate-list, .rate-select-menu');
 
       // The dynamic rate row generation has been removed from here.
       // It is now handled correctly by header-loader.js and rates.js
@@ -119,7 +119,7 @@ document.documentElement.classList.add('js-ready');
     if (_rateWired) return;
     _rateWired = true;
     document.addEventListener('click', (event) => {
-      const item = event.target.closest('.rate-row, .rate-item');
+      const item = event.target.closest('.rate-option, .rate-item');
       if (!item) return;
 
       event.preventDefault();
@@ -573,7 +573,7 @@ document.documentElement.classList.add('js-ready');
   };
 
   window.initKeralaHeader = () => {
-    const mount = document.getElementById('site-header');
+    const mount = document.getElementById('header');
     if (!mount || !mount.children.length) return;
     if (document.documentElement.dataset.keralaHeaderInit === 'true') return;
     document.documentElement.dataset.keralaHeaderInit = 'true';
@@ -601,7 +601,7 @@ document.documentElement.classList.add('js-ready');
     window.addEventListener('kerala:header-loaded', window.initKeralaHeader);
   }
 
-  if (document.getElementById('site-header')?.children.length) {
+  if (document.getElementById('header')?.children.length) {
     window.initKeralaHeader();
   }
 })();
@@ -686,39 +686,39 @@ document.documentElement.classList.add('js-ready');
 } // end initLoupeEffect
 
 document.addEventListener("click", function (event) {
-  const button = event.target.closest(".mobile-menu-toggle.mobile-menu-button");
+  const button = event.target.closest(".nav-toggle.nav-toggle__btn");
   if (!button) return;
 
   event.preventDefault();
   event.stopImmediatePropagation();
 
-  const header = button.closest(".mobile-header");
+  const header = button.closest(".header-mobile");
   const panel = header
-    ? header.querySelector(".mobile-nav.site-nav__panel")
-    : document.querySelector(".mobile-nav.site-nav__panel");
+    ? header.querySelector(".nav-mobile.nav-panel")
+    : document.querySelector(".nav-mobile.nav-panel");
 
   if (!panel) return;
 
-  if (panel.classList.contains("is-open")) {
-    panel.classList.remove("is-open");
-    button.classList.remove("is-open");
+  if (panel.classList.contains("is-active")) {
+    panel.classList.remove("is-active");
+    button.classList.remove("is-active");
     button.setAttribute("aria-expanded", "false");
   } else {
-    panel.classList.add("is-open");
-    button.classList.add("is-open");
+    panel.classList.add("is-active");
+    button.classList.add("is-active");
     button.setAttribute("aria-expanded", "true");
   }
 }, true);
 
-/* --- MOBILE NAVBAR DESKTOP RESET --- */
+/* --- MOBILE main-navBAR DESKTOP RESET --- */
 function resetMobileMenuOnDesktop() {
   if (window.innerWidth >= 992) {
-    document.querySelectorAll(".mobile-nav.site-nav__panel.is-open").forEach(panel => {
-      panel.classList.remove("is-open");
+    document.querySelectorAll(".nav-mobile.nav-panel.is-active").forEach(panel => {
+      panel.classList.remove("is-active");
     });
 
-    document.querySelectorAll(".mobile-menu-toggle.mobile-menu-button.is-open").forEach(button => {
-      button.classList.remove("is-open");
+    document.querySelectorAll(".nav-toggle.nav-toggle__btn.is-active").forEach(button => {
+      button.classList.remove("is-active");
       button.setAttribute("aria-expanded", "false");
     });
   }

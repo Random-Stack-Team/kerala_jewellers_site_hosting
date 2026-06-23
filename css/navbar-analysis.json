@@ -1,0 +1,3365 @@
+﻿{
+    "summary":  {
+                    "preservedRules":  1,
+                    "deadRules":  216,
+                    "estimatedFinalLines":  1897,
+                    "totalRuleBlocks":  410,
+                    "aliveRules":  193,
+                    "totalLinesToRemove":  904,
+                    "totalCssLines":  2801
+                },
+    "htmlClasses":  [
+                        "bko-dropdown-0",
+                        "bko-dropdown-1-3",
+                        "bko-dropdown-list",
+                        "bko-dropdown-toggle-3",
+                        "bko-link-111-2",
+                        "bko-text-11",
+                        "bko-wrap-111-2",
+                        "brand",
+                        "container-755",
+                        "container-9",
+                        "content-container",
+                        "desktop-header",
+                        "diamondlink-2",
+                        "div2",
+                        "dropdown",
+                        "dropdown-list",
+                        "dropdown-toggle",
+                        "embed",
+                        "embed-code",
+                        "goldlink-2",
+                        "header",
+                        "info-block",
+                        "inline-block",
+                        "is-current",
+                        "kj-megamenu-category",
+                        "kj-megamenu-diamond",
+                        "kj-megamenu-dropdown",
+                        "kj-megamenu-gold",
+                        "kj-megamenu-heading",
+                        "kj-megamenu-image",
+                        "kj-megamenu-link",
+                        "kj-megamenu-links",
+                        "kj-megamenu-panel",
+                        "kj-megamenu-panel--text-only",
+                        "kj-megamenu-scheme",
+                        "kj-megamenu-silver",
+                        "kj-menu-align-left",
+                        "kj-menu-align-right",
+                        "kj-mobile-menu-link",
+                        "kj-mobile-rate-strip",
+                        "kj-mobile-rate-strip__track",
+                        "layout-container",
+                        "logos-marquee",
+                        "mobile-header",
+                        "mobile-header__container",
+                        "mobile-menu-button",
+                        "mobile-menu-toggle",
+                        "mobile-menu-toggle__line",
+                        "mobile-nav",
+                        "page-wrapper-6",
+                        "premium-container",
+                        "premium-footer",
+                        "premium-footer__branch-actions",
+                        "premium-footer__branch-card",
+                        "premium-footer__branch-map",
+                        "premium-footer__btn",
+                        "premium-footer__btn--outline",
+                        "premium-footer-address",
+                        "premium-footer-bottom",
+                        "premium-footer-branches",
+                        "premium-footer-features-list",
+                        "premium-footer-heading",
+                        "premium-footer-hidden-svg",
+                        "premium-footer-info-grid",
+                        "premium-footer-links-grid",
+                        "premium-footer-logo",
+                        "premium-footer-logo-link",
+                        "premium-footer-socials",
+                        "premium-footer-store-info",
+                        "premium-footer-support",
+                        "premium-footer-top",
+                        "rate-chevron",
+                        "rate-coin",
+                        "rate-dropdown",
+                        "rate-menu",
+                        "rate-row",
+                        "rate-toggle",
+                        "scheme-dropdown-list",
+                        "silverlink-2",
+                        "site-header",
+                        "site-header__actions",
+                        "site-header__brand",
+                        "site-header__brand-area",
+                        "site-header__container",
+                        "site-header__inner",
+                        "site-header__right",
+                        "site-header__wrap",
+                        "site-nav",
+                        "site-nav__panel",
+                        "wrapper"
+                    ],
+    "deadRules":  [
+                      {
+                          "startLine":  1644,
+                          "preview":  "    width: 100%;\n    box-shadow: none;\n    border-top: 1px solid #dbdbdb;\n    border-bottom: 1px solid #dbdbdb;\n    margin-top: 2em;\n    margin-left: 0;\n    margin-right: 0;\n    padding-left: 0;\n    padding-right: 0}",
+                          "selectors":  [
+                                            ".bko-dropdown-2"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-2"
+                                      ],
+                          "endLine":  1652
+                      },
+                      {
+                          "startLine":  1641,
+                          "preview":  "    position: relative}",
+                          "selectors":  [
+                                            ".bko-dropdown-1"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-1"
+                                      ],
+                          "endLine":  1641
+                      },
+                      {
+                          "startLine":  1634,
+                          "preview":  "    color: #667085;\n    margin-top: 0;\n    margin-bottom: 0;\n    margin-right: 0;\n    inset: auto 0% auto auto}",
+                          "selectors":  [
+                                            ".uui-dropdown-icon"
+                                        ],
+                          "classes":  [
+                                          "uui-dropdown-icon"
+                                      ],
+                          "endLine":  1638
+                      },
+                      {
+                          "startLine":  1662,
+                          "preview":  "    display: none}",
+                          "selectors":  [
+                                            ".bko-wrap-11"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-11"
+                                      ],
+                          "endLine":  1662
+                      },
+                      {
+                          "startLine":  1659,
+                          "preview":  "    margin-right: 0}",
+                          "selectors":  [
+                                            ".bko-wrap-111"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-111"
+                                      ],
+                          "endLine":  1659
+                      },
+                      {
+                          "startLine":  1655,
+                          "preview":  "    margin-right: 2em;\n    display: none}",
+                          "selectors":  [
+                                            ".bko-wrap-12"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-12"
+                                      ],
+                          "endLine":  1656
+                      },
+                      {
+                          "startLine":  1630,
+                          "preview":  "    margin-bottom: 12px;\n    line-height: 1.6}",
+                          "selectors":  [
+                                            ".dropdown-nav-item---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-item---brix"
+                                      ],
+                          "endLine":  1631
+                      },
+                      {
+                          "startLine":  1596,
+                          "preview":  "    margin-bottom: 32px;\n    margin-right: 0;\n    padding-left: 24px}",
+                          "selectors":  [
+                                            ".dropdown-nav-pages-content---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-pages-content---brix"
+                                      ],
+                          "endLine":  1598
+                      },
+                      {
+                          "startLine":  1592,
+                          "preview":  "    padding-top: 0;\n    padding-bottom: 0}",
+                          "selectors":  [
+                                            ".login-2.nav-link"
+                                        ],
+                          "classes":  [
+                                          "login-2",
+                                          "nav-link"
+                                      ],
+                          "endLine":  1593
+                      },
+                      {
+                          "startLine":  1587,
+                          "preview":  "    padding-top: 12px;\n    padding-bottom: 12px;\n    display: block}",
+                          "selectors":  [
+                                            ".nav-link"
+                                        ],
+                          "classes":  [
+                                          "nav-link"
+                                      ],
+                          "endLine":  1589
+                      },
+                      {
+                          "startLine":  1627,
+                          "preview":  "    margin-bottom: 0}",
+                          "selectors":  [
+                                            ".dropdown-nav---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav---brix"
+                                      ],
+                          "endLine":  1627
+                      },
+                      {
+                          "startLine":  1615,
+                          "preview":  "    grid-column-gap: 40px;\n    grid-row-gap: 40px;\n    flex-wrap: wrap;\n    grid-template-rows: auto auto;\n    grid-template-columns: 1fr 1fr;\n    grid-auto-columns: 1fr;\n    padding: 40px 24px}",
+                          "selectors":  [
+                                            ".dropdown-nav-main-wrapper-v1---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-main-wrapper-v1---brix"
+                                      ],
+                          "endLine":  1621
+                      },
+                      {
+                          "startLine":  1601,
+                          "preview":  "    grid-column-gap: 32px;\n    grid-row-gap: 64px;\n    grid-template-rows: auto auto;\n    grid-template-columns: 1fr 1fr;\n    grid-auto-columns: 1fr;\n    display: grid}",
+                          "selectors":  [
+                                            ".dropdown-nav-container---brix.adjust-this-for-your-container-size"
+                                        ],
+                          "classes":  [
+                                          "adjust-this-for-your-container-size",
+                                          "dropdown-nav-container---brix"
+                                      ],
+                          "endLine":  1606
+                      },
+                      {
+                          "startLine":  1668,
+                          "preview":  "    display: flex}",
+                          "selectors":  [
+                                            ".bko-dropdown-toggle"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-toggle"
+                                      ],
+                          "endLine":  1668
+                      },
+                      {
+                          "startLine":  1762,
+                          "preview":  "    width: 100%;\n    box-shadow: none;\n    border-top: 1px solid #dbdbdb;\n    border-bottom: 1px solid #dbdbdb;\n    margin-top: 0;\n    margin-left: 0;\n    margin-right: 0;\n    padding: 1em 0 2em}",
+                          "selectors":  [
+                                            ".bko-dropdown-2-3"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-2-3"
+                                      ],
+                          "endLine":  1769
+                      },
+                      {
+                          "startLine":  1753,
+                          "preview":  "    position: relative}",
+                          "selectors":  [
+                                            ".bko-dropdown-1-2"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-1-2"
+                                      ],
+                          "endLine":  1753
+                      },
+                      {
+                          "startLine":  1739,
+                          "preview":  "    z-index: 1001;\n    opacity: 1;\n    background-color: #fff;\n    flex-direction: column;\n    align-items: stretch;\n    width: auto;\n    height: auto;\n    font-size: 1.3vw;\n    display: block;\n    position: fixed;\n    inset: 0%;\n    overflow: auto}",
+                          "selectors":  [
+                                            ".bko-menu-11-2"
+                                        ],
+                          "classes":  [
+                                          "bko-menu-11-2"
+                                      ],
+                          "endLine":  1750
+                      },
+                      {
+                          "startLine":  1781,
+                          "preview":  "    border-style: none;\n    border-radius: 0;\n    margin-left: 0;\n    margin-right: 0;\n    display: flex}",
+                          "selectors":  [
+                                            ".nav__link"
+                                        ],
+                          "classes":  [
+                                          "nav__link"
+                                      ],
+                          "endLine":  1785
+                      },
+                      {
+                          "startLine":  1778,
+                          "preview":  "    margin-right: 0}",
+                          "selectors":  [
+                                            ".bko-wrap-111121"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-111121"
+                                      ],
+                          "endLine":  1778
+                      },
+                      {
+                          "startLine":  1775,
+                          "preview":  "    position: relative}",
+                          "selectors":  [
+                                            ".bko-dropdown-1-3121"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-1-3121"
+                                      ],
+                          "endLine":  1775
+                      },
+                      {
+                          "startLine":  1736,
+                          "preview":  "    display: none}",
+                          "selectors":  [
+                                            ".bko-wrap-11-2"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-11-2"
+                                      ],
+                          "endLine":  1736
+                      },
+                      {
+                          "startLine":  1683,
+                          "preview":  "    background-color: #fff;\n    border-bottom-style: solid;\n    border-bottom-color: #dbdbdb;\n    justify-content: flex-start;\n    align-items: flex-start;\n    font-size: 1.3vw;\n    display: block}",
+                          "selectors":  [
+                                            ".bko-selections-12"
+                                        ],
+                          "classes":  [
+                                          "bko-selections-12"
+                                      ],
+                          "endLine":  1689
+                      },
+                      {
+                          "startLine":  1679,
+                          "preview":  "    z-index: 0;\n    font-size: 1.3vw}",
+                          "selectors":  [
+                                            ".bko-selections-1"
+                                        ],
+                          "classes":  [
+                                          "bko-selections-1"
+                                      ],
+                          "endLine":  1680
+                      },
+                      {
+                          "startLine":  1676,
+                          "preview":  "    margin-right: 0}",
+                          "selectors":  [
+                                            ".bko-wrap-121"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-121"
+                                      ],
+                          "endLine":  1676
+                      },
+                      {
+                          "startLine":  1716,
+                          "preview":  "    width: 100%;\n    box-shadow: none;\n    border-top: 1px solid #dbdbdb;\n    border-bottom: 1px solid #dbdbdb;\n    margin-top: 0;\n    margin-left: 0;\n    margin-right: 0;\n    padding: 1em 0 2em}",
+                          "selectors":  [
+                                            ".bko-dropdown-2-2"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-2-2"
+                                      ],
+                          "endLine":  1723
+                      },
+                      {
+                          "startLine":  1704,
+                          "preview":  "    border-top: 1px solid #dbdbdb;\n    border-bottom: 1px #000;\n    flex-direction: row-reverse;\n    flex: none;\n    justify-content: space-between;\n    align-items: center;\n    margin-left: 3em;\n    margin-right: 3em;\n    padding-top: 3em;\n    display: flex}",
+                          "selectors":  [
+                                            ".bko-wrap-12-1"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-12-1"
+                                      ],
+                          "endLine":  1713
+                      },
+                      {
+                          "startLine":  1692,
+                          "preview":  "    z-index: 1001;\n    opacity: 1;\n    background-color: #fff;\n    flex-direction: column;\n    align-items: stretch;\n    font-size: 1.3vw;\n    display: none;\n    position: fixed;\n    inset: 0%;\n    overflow: auto}",
+                          "selectors":  [
+                                            ".bko-menu-11"
+                                        ],
+                          "classes":  [
+                                          "bko-menu-11"
+                                      ],
+                          "endLine":  1701
+                      },
+                      {
+                          "startLine":  1484,
+                          "preview":  ".bko-dropdown-1-3121 {\n  text-align: center;\n  letter-spacing: -.8px;\n  font-family: var(--font-body);\n  font-size: 20px;",
+                          "selectors":  [
+                                            ".bko-dropdown-1-3121"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-1-3121"
+                                      ],
+                          "endLine":  1488
+                      },
+                      {
+                          "startLine":  1479,
+                          "preview":  ".div23 {\n  flex-flow: column;\n  align-items: center;",
+                          "selectors":  [
+                                            ".div23"
+                                        ],
+                          "classes":  [
+                                          "div23"
+                                      ],
+                          "endLine":  1481
+                      },
+                      {
+                          "startLine":  1476,
+                          "preview":  ".bko-text-12-studs-platinum {",
+                          "selectors":  [
+                                            ".bko-text-12-studs-platinum"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-studs-platinum"
+                                      ],
+                          "endLine":  1476
+                      },
+                      {
+                          "startLine":  1508,
+                          "preview":  ".nav__link.is-mobile {",
+                          "selectors":  [
+                                            ".nav__link.is-mobile"
+                                        ],
+                          "classes":  [
+                                          "is-mobile",
+                                          "nav__link"
+                                      ],
+                          "endLine":  1508
+                      },
+                      {
+                          "startLine":  1504,
+                          "preview":  ".nav__link[data-wf-focus-visible] {\n  color: #fff;",
+                          "selectors":  [
+                                            ".nav__link[data-wf-focus-visible]"
+                                        ],
+                          "classes":  [
+                                          "nav__link"
+                                      ],
+                          "endLine":  1505
+                      },
+                      {
+                          "startLine":  1491,
+                          "preview":  ".nav__link {\n  color: #ffffffb3;\n  text-transform: capitalize;\n  border: 1px solid #282a28;\n  border-radius: 10rem;\n  align-items: center;\n  margin-left: .125rem;\n  margin-right: .125rem;\n  padding: 1rem 1.5rem;\n  text-decoration: none;\n  transition: border-color .2s, color .2s;",
+                          "selectors":  [
+                                            ".nav__link"
+                                        ],
+                          "classes":  [
+                                          "nav__link"
+                                      ],
+                          "endLine":  1501
+                      },
+                      {
+                          "startLine":  1473,
+                          "preview":  ".bko-text-12-ring-platinum {",
+                          "selectors":  [
+                                            ".bko-text-12-ring-platinum"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-ring-platinum"
+                                      ],
+                          "endLine":  1473
+                      },
+                      {
+                          "startLine":  1438,
+                          "preview":  ".bko-text-12-rings-locket {\n  font-family: var(--font-body);\n  font-size: 14px;",
+                          "selectors":  [
+                                            ".bko-text-12-rings-locket"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-rings-locket"
+                                      ],
+                          "endLine":  1440
+                      },
+                      {
+                          "startLine":  1432,
+                          "preview":  ".bko-text-12-drops-locket {\n  color: #283338;\n  font-family: var(--font-body);\n  font-size: 14px;",
+                          "selectors":  [
+                                            ".bko-text-12-drops-locket"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-drops-locket"
+                                      ],
+                          "endLine":  1435
+                      },
+                      {
+                          "startLine":  1421,
+                          "preview":  ".bko-text-12-drops-diamond {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-family: var(--font-body);\n  font-size: 14px;\n  font-style: normal;\n  line-height: 28px;",
+                          "selectors":  [
+                                            ".bko-text-12-drops-diamond"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-drops-diamond"
+                                      ],
+                          "endLine":  1429
+                      },
+                      {
+                          "startLine":  1463,
+                          "preview":  ".bko-text-12-drops-platinum {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-drops-platinum"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-drops-platinum"
+                                      ],
+                          "endLine":  1470
+                      },
+                      {
+                          "startLine":  1453,
+                          "preview":  ".bko-text-12-chain-platinum {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-chain-platinum"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-chain-platinum"
+                                      ],
+                          "endLine":  1460
+                      },
+                      {
+                          "startLine":  1443,
+                          "preview":  ".bko-text-12-bangles-platinum {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-bangles-platinum"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-bangles-platinum"
+                                      ],
+                          "endLine":  1450
+                      },
+                      {
+                          "startLine":  1511,
+                          "preview":  ".nav__toggler {\n  background-color: #1d1f1d;\n  border-radius: 100rem;\n  margin-left: .25rem;",
+                          "selectors":  [
+                                            ".nav__toggler"
+                                        ],
+                          "classes":  [
+                                          "nav__toggler"
+                                      ],
+                          "endLine":  1514
+                      },
+                      {
+                          "startLine":  1575,
+                          "preview":  "    background-color: #f7f8f9}",
+                          "selectors":  [
+                                            ".navigation-item:hover"
+                                        ],
+                          "classes":  [
+                                          "navigation-item"
+                                      ],
+                          "endLine":  1575
+                      },
+                      {
+                          "startLine":  1570,
+                          "preview":  "    text-align: center;\n    padding: 15px 30px;\n    transition: background-color .4s, opacity .4s, color .4s}",
+                          "selectors":  [
+                                            ".navigation-item"
+                                        ],
+                          "classes":  [
+                                          "navigation-item"
+                                      ],
+                          "endLine":  1572
+                      },
+                      {
+                          "startLine":  1567,
+                          "preview":  "    background-color: #fff}",
+                          "selectors":  [
+                                            ".navigation-items"
+                                        ],
+                          "classes":  [
+                                          "navigation-items"
+                                      ],
+                          "endLine":  1567
+                      },
+                      {
+                          "startLine":  1584,
+                          "preview":  "    margin-right: 0}",
+                          "selectors":  [
+                                            ".dropdown-nav-pages-wrapper-v1---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-pages-wrapper-v1---brix"
+                                      ],
+                          "endLine":  1584
+                      },
+                      {
+                          "startLine":  1581,
+                          "preview":  "    display: none}",
+                          "selectors":  [
+                                            ".navigation-2"
+                                        ],
+                          "classes":  [
+                                          "navigation-2"
+                                      ],
+                          "endLine":  1581
+                      },
+                      {
+                          "startLine":  1578,
+                          "preview":  "    background-color: #eef0f3}",
+                          "selectors":  [
+                                            ".navigation-item:active"
+                                        ],
+                          "classes":  [
+                                          "navigation-item"
+                                      ],
+                          "endLine":  1578
+                      },
+                      {
+                          "startLine":  1561,
+                          "preview":  "    font-size: 14px}",
+                          "selectors":  [
+                                            ".bko-selections-1"
+                                        ],
+                          "classes":  [
+                                          "bko-selections-1"
+                                      ],
+                          "endLine":  1561
+                      },
+                      {
+                          "startLine":  1524,
+                          "preview":  ".bko-grid-111 {\n  grid-column-gap: 2em;\n  grid-row-gap: 2em;\n  background-color: #fff;\n  grid-template-rows: auto;\n  grid-template-columns: 1fr 1fr 1fr;\n  grid-auto-columns: 1fr;\n  margin-right: 0;",
+                          "selectors":  [
+                                            ".bko-grid-111"
+                                        ],
+                          "classes":  [
+                                          "bko-grid-111"
+                                      ],
+                          "endLine":  1531
+                      },
+                      {
+                          "startLine":  1521,
+                          "preview":  ".div234 {",
+                          "selectors":  [
+                                            ".div234"
+                                        ],
+                          "classes":  [
+                                          "div234"
+                                      ],
+                          "endLine":  1521
+                      },
+                      {
+                          "startLine":  1517,
+                          "preview":  ".nav__toggler[data-wf-focus-visible] {\n  color: #000;",
+                          "selectors":  [
+                                            ".nav__toggler[data-wf-focus-visible]"
+                                        ],
+                          "classes":  [
+                                          "nav__toggler"
+                                      ],
+                          "endLine":  1518
+                      },
+                      {
+                          "startLine":  1555,
+                          "preview":  "    font-size: 14px}",
+                          "selectors":  [
+                                            ".bko-menu-11-2"
+                                        ],
+                          "classes":  [
+                                          "bko-menu-11-2"
+                                      ],
+                          "endLine":  1555
+                      },
+                      {
+                          "startLine":  1543,
+                          "preview":  ".bko-dropdown-2-3-co1111py {\n  background-color: #fff;\n  width: 135px;\n  margin-top: 0;\n  padding: 10px;\n  display: block;\n  position: static;\n  top: 0;",
+                          "selectors":  [
+                                            ".bko-dropdown-2-3-co1111py"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-2-3-co1111py"
+                                      ],
+                          "endLine":  1550
+                      },
+                      {
+                          "startLine":  1534,
+                          "preview":  ".bko-grid-1111 {\n  grid-column-gap: 2em;\n  grid-row-gap: 2em;\n  background-color: #fff;\n  grid-template-rows: auto auto;\n  grid-template-columns: 1fr 1fr;\n  grid-auto-columns: 1fr;",
+                          "selectors":  [
+                                            ".bko-grid-1111"
+                                        ],
+                          "classes":  [
+                                          "bko-grid-1111"
+                                      ],
+                          "endLine":  1540
+                      },
+                      {
+                          "startLine":  1949,
+                          "preview":  "    margin-left: 3em;\n    margin-right: 3em}",
+                          "selectors":  [
+                                            ".bko-wrap-12-1"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-12-1"
+                                      ],
+                          "endLine":  1950
+                      },
+                      {
+                          "startLine":  1941,
+                          "preview":  "    z-index: 2147483647;\n    flex-direction: column;\n    align-items: stretch;\n    font-size: 2.5vw;\n    display: none;\n    overflow: auto}",
+                          "selectors":  [
+                                            ".bko-menu-11"
+                                        ],
+                          "classes":  [
+                                          "bko-menu-11"
+                                      ],
+                          "endLine":  1946
+                      },
+                      {
+                          "startLine":  1937,
+                          "preview":  "    font-size: 2.5vw;\n    display: block}",
+                          "selectors":  [
+                                            ".bko-selections-12"
+                                        ],
+                          "classes":  [
+                                          "bko-selections-12"
+                                      ],
+                          "endLine":  1938
+                      },
+                      {
+                          "startLine":  1977,
+                          "preview":  "    margin-right: 0}",
+                          "selectors":  [
+                                            ".bko-wrap-111121"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-111121"
+                                      ],
+                          "endLine":  1977
+                      },
+                      {
+                          "startLine":  1967,
+                          "preview":  "    flex-direction: column;\n    align-items: stretch;\n    font-size: 2.5vw;\n    display: block;\n    overflow: auto}",
+                          "selectors":  [
+                                            ".bko-menu-11-2"
+                                        ],
+                          "classes":  [
+                                          "bko-menu-11-2"
+                                      ],
+                          "endLine":  1971
+                      },
+                      {
+                          "startLine":  1959,
+                          "preview":  "    display: none}",
+                          "selectors":  [
+                                            ".bko-wrap-11-2"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-11-2"
+                                      ],
+                          "endLine":  1959
+                      },
+                      {
+                          "startLine":  1934,
+                          "preview":  "    font-size: 2.5vw}",
+                          "selectors":  [
+                                            ".bko-selections-1"
+                                        ],
+                          "classes":  [
+                                          "bko-selections-1"
+                                      ],
+                          "endLine":  1934
+                      },
+                      {
+                          "startLine":  1917,
+                          "preview":  "    margin-right: 0}",
+                          "selectors":  [
+                                            ".bko-wrap-111"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-111"
+                                      ],
+                          "endLine":  1917
+                      },
+                      {
+                          "startLine":  1909,
+                          "preview":  "    flex-direction: row;\n    flex: 1;\n    justify-content: center;\n    margin-left: 0;\n    margin-right: 0;\n    display: none}",
+                          "selectors":  [
+                                            ".bko-wrap-12"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-12"
+                                      ],
+                          "endLine":  1914
+                      },
+                      {
+                          "startLine":  1905,
+                          "preview":  "    justify-content: space-between;\n    align-items: center}",
+                          "selectors":  [
+                                            ".bko-wrap-1"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-1"
+                                      ],
+                          "endLine":  1906
+                      },
+                      {
+                          "startLine":  1931,
+                          "preview":  "    flex-direction: column}",
+                          "selectors":  [
+                                            ".bko-container-1"
+                                        ],
+                          "classes":  [
+                                          "bko-container-1"
+                                      ],
+                          "endLine":  1931
+                      },
+                      {
+                          "startLine":  1928,
+                          "preview":  "    margin-right: 0}",
+                          "selectors":  [
+                                            ".bko-wrap-121"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-121"
+                                      ],
+                          "endLine":  1928
+                      },
+                      {
+                          "startLine":  1924,
+                          "preview":  "    font-size: 1.3em;\n    display: flex}",
+                          "selectors":  [
+                                            ".bko-dropdown-toggle"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-toggle"
+                                      ],
+                          "endLine":  1925
+                      },
+                      {
+                          "startLine":  1980,
+                          "preview":  "    display: flex}",
+                          "selectors":  [
+                                            ".nav__link.is-mobile"
+                                        ],
+                          "classes":  [
+                                          "is-mobile",
+                                          "nav__link"
+                                      ],
+                          "endLine":  1980
+                      },
+                      {
+                          "startLine":  2048,
+                          "preview":  "header .navigation-2 .bko-text-12-3-copy {",
+                          "selectors":  [
+                                            "header .navigation-2 .bko-text-12-3-copy"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-3-copy",
+                                          "navigation-2"
+                                      ],
+                          "endLine":  2048
+                      },
+                      {
+                          "startLine":  2034,
+                          "preview":  "header .navigation-2 a {\n  color: #ffffff !important;\n  opacity: 1 !important;\n  visibility: visible !important;",
+                          "selectors":  [
+                                            "header .navigation-2 a"
+                                        ],
+                          "classes":  [
+                                          "navigation-2"
+                                      ],
+                          "endLine":  2037
+                      },
+                      {
+                          "startLine":  2026,
+                          "preview":  "header .nav-menu-3 {\n  display: flex !important;\n  align-items: center !important;",
+                          "selectors":  [
+                                            "header .nav-menu-3"
+                                        ],
+                          "classes":  [
+                                          "nav-menu-3"
+                                      ],
+                          "endLine":  2028
+                      },
+                      {
+                          "startLine":  2767,
+                          "preview":  "    display: none !important;\n  }",
+                          "selectors":  [
+                                            ".kj-mobile-menu-image"
+                                        ],
+                          "classes":  [
+                                          "kj-mobile-menu-image"
+                                      ],
+                          "endLine":  2768
+                      },
+                      {
+                          "startLine":  2544,
+                          "preview":  "    display: none !important;\n  }",
+                          "selectors":  [
+                                            ".kj-mobile-menu-image"
+                                        ],
+                          "classes":  [
+                                          "kj-mobile-menu-image"
+                                      ],
+                          "endLine":  2545
+                      },
+                      {
+                          "startLine":  2051,
+                          "preview":  "header .navigation-2 .category-menu-link:hover {",
+                          "selectors":  [
+                                            "header .navigation-2 .category-menu-link:hover"
+                                        ],
+                          "classes":  [
+                                          "category-menu-link",
+                                          "navigation-2"
+                                      ],
+                          "endLine":  2051
+                      },
+                      {
+                          "startLine":  2015,
+                          "preview":  ".bko-grid-11-category:hover {\n  background: #fffaf1;\n  box-shadow: 0 8px 20px rgba(153, 31, 35, .08);",
+                          "selectors":  [
+                                            ".bko-grid-11-category:hover"
+                                        ],
+                          "classes":  [
+                                          "bko-grid-11-category"
+                                      ],
+                          "endLine":  2017
+                      },
+                      {
+                          "startLine":  1991,
+                          "preview":  ".category-menu-link {\n  color: inherit;\n  text-decoration: none;",
+                          "selectors":  [
+                                            ".category-menu-link"
+                                        ],
+                          "classes":  [
+                                          "category-menu-link"
+                                      ],
+                          "endLine":  1993
+                      },
+                      {
+                          "startLine":  1987,
+                          "preview":  "    grid-template-columns: 1fr}",
+                          "selectors":  [
+                                            ".bko-grid-1111"
+                                        ],
+                          "classes":  [
+                                          "bko-grid-1111"
+                                      ],
+                          "endLine":  1987
+                      },
+                      {
+                          "startLine":  1983,
+                          "preview":  "    grid-template-columns: 1fr 1fr;\n    grid-auto-columns: 1fr}",
+                          "selectors":  [
+                                            ".bko-grid-111"
+                                        ],
+                          "classes":  [
+                                          "bko-grid-111"
+                                      ],
+                          "endLine":  1984
+                      },
+                      {
+                          "startLine":  2011,
+                          "preview":  ".bko-grid-11-category {\n  border-radius: 8px;",
+                          "selectors":  [
+                                            ".bko-grid-11-category"
+                                        ],
+                          "classes":  [
+                                          "bko-grid-11-category"
+                                      ],
+                          "endLine":  2012
+                      },
+                      {
+                          "startLine":  2006,
+                          "preview":  ".category-menu-link:hover {\n  color: var(--meron) !important;\n  background: rgba(153, 31, 35, .07);",
+                          "selectors":  [
+                                            ".category-menu-link:hover"
+                                        ],
+                          "classes":  [
+                                          "category-menu-link"
+                                      ],
+                          "endLine":  2008
+                      },
+                      {
+                          "startLine":  1999,
+                          "preview":  ".category-menu-link {\n  color: inherit;\n  text-decoration: none;\n  display: block;\n  border-radius: 4px;",
+                          "selectors":  [
+                                            ".category-menu-link"
+                                        ],
+                          "classes":  [
+                                          "category-menu-link"
+                                      ],
+                          "endLine":  2003
+                      },
+                      {
+                          "startLine":  1832,
+                          "preview":  "    margin-bottom: 22px}",
+                          "selectors":  [
+                                            ".title---brix.dropdown-nav-title-v1---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-title-v1---brix",
+                                          "title---brix"
+                                      ],
+                          "endLine":  1832
+                      },
+                      {
+                          "startLine":  1829,
+                          "preview":  "    margin-bottom: 0}",
+                          "selectors":  [
+                                            ".dropdown-nav---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav---brix"
+                                      ],
+                          "endLine":  1829
+                      },
+                      {
+                          "startLine":  1826,
+                          "preview":  "    padding: 24px 16px}",
+                          "selectors":  [
+                                            ".dropdown-nav-main-wrapper-v1---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-main-wrapper-v1---brix"
+                                      ],
+                          "endLine":  1826
+                      },
+                      {
+                          "startLine":  1841,
+                          "preview":  "    display: flex}",
+                          "selectors":  [
+                                            ".bko-dropdown-toggle"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-toggle"
+                                      ],
+                          "endLine":  1841
+                      },
+                      {
+                          "startLine":  1838,
+                          "preview":  "    margin-right: 0}",
+                          "selectors":  [
+                                            ".bko-dropdown-2"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-2"
+                                      ],
+                          "endLine":  1838
+                      },
+                      {
+                          "startLine":  1835,
+                          "preview":  "    margin-bottom: 12px}",
+                          "selectors":  [
+                                            ".dropdown-nav-item---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-item---brix"
+                                      ],
+                          "endLine":  1835
+                      },
+                      {
+                          "startLine":  1819,
+                          "preview":  "    flex-direction: column;\n    display: flex}",
+                          "selectors":  [
+                                            ".dropdown-nav-container---brix.adjust-this-for-your-container-size"
+                                        ],
+                          "classes":  [
+                                          "adjust-this-for-your-container-size",
+                                          "dropdown-nav-container---brix"
+                                      ],
+                          "endLine":  1820
+                      },
+                      {
+                          "startLine":  1796,
+                          "preview":  "    grid-column-gap: 3em}",
+                          "selectors":  [
+                                            ".bko-grid-1111"
+                                        ],
+                          "classes":  [
+                                          "bko-grid-1111"
+                                      ],
+                          "endLine":  1796
+                      },
+                      {
+                          "startLine":  1791,
+                          "preview":  "    grid-column-gap: 0em;\n    grid-row-gap: 0em;\n    grid-template-columns: .5fr .5fr 1fr}",
+                          "selectors":  [
+                                            ".bko-grid-111"
+                                        ],
+                          "classes":  [
+                                          "bko-grid-111"
+                                      ],
+                          "endLine":  1793
+                      },
+                      {
+                          "startLine":  1788,
+                          "preview":  "    color: #fff}",
+                          "selectors":  [
+                                            ".nav__toggler"
+                                        ],
+                          "classes":  [
+                                          "nav__toggler"
+                                      ],
+                          "endLine":  1788
+                      },
+                      {
+                          "startLine":  1816,
+                          "preview":  "    margin-right: 2px}",
+                          "selectors":  [
+                                            ".dropdown-menu-text---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-menu-text---brix"
+                                      ],
+                          "endLine":  1816
+                      },
+                      {
+                          "startLine":  1812,
+                          "preview":  "    margin-bottom: 24px;\n    padding-left: 16px}",
+                          "selectors":  [
+                                            ".dropdown-nav-pages-content---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-pages-content---brix"
+                                      ],
+                          "endLine":  1813
+                      },
+                      {
+                          "startLine":  1799,
+                          "preview":  "    width: 100%;\n    box-shadow: none;\n    border-top: 1px solid #dbdbdb;\n    border-bottom: 1px solid #dbdbdb;\n    margin-top: 0;\n    margin-left: 0;\n    margin-right: 0;\n    padding: 1em 0 2em}",
+                          "selectors":  [
+                                            ".bko-dropdown-2-3-co1111py"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-2-3-co1111py"
+                                      ],
+                          "endLine":  1806
+                      },
+                      {
+                          "startLine":  1847,
+                          "preview":  "    font-size: 1.69vw}",
+                          "selectors":  [
+                                            ".bko-selections-1"
+                                        ],
+                          "classes":  [
+                                          "bko-selections-1"
+                                      ],
+                          "endLine":  1847
+                      },
+                      {
+                          "startLine":  1892,
+                          "preview":  "    display: none}",
+                          "selectors":  [
+                                            ".login-2.nav-link"
+                                        ],
+                          "classes":  [
+                                          "login-2",
+                                          "nav-link"
+                                      ],
+                          "endLine":  1892
+                      },
+                      {
+                          "startLine":  1889,
+                          "preview":  "    margin-bottom: 48px}",
+                          "selectors":  [
+                                            ".dropdown-nav-pages-wrapper-v1---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-pages-wrapper-v1---brix"
+                                      ],
+                          "endLine":  1889
+                      },
+                      {
+                          "startLine":  1883,
+                          "preview":  "    margin-right: 0}",
+                          "selectors":  [
+                                            ".bko-dropdown-2-3-co1111py"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-2-3-co1111py"
+                                      ],
+                          "endLine":  1883
+                      },
+                      {
+                          "startLine":  1902,
+                          "preview":  "    margin-left: 0}",
+                          "selectors":  [
+                                            ".bko-wrap-122"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-122"
+                                      ],
+                          "endLine":  1902
+                      },
+                      {
+                          "startLine":  1899,
+                          "preview":  "    display: block}",
+                          "selectors":  [
+                                            ".dropdown-nav-container---brix.adjust-this-for-your-container-size"
+                                        ],
+                          "classes":  [
+                                          "adjust-this-for-your-container-size",
+                                          "dropdown-nav-container---brix"
+                                      ],
+                          "endLine":  1899
+                      },
+                      {
+                          "startLine":  1895,
+                          "preview":  "    margin-bottom: 16px;\n    padding-left: 0}",
+                          "selectors":  [
+                                            ".dropdown-nav-pages-content---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-pages-content---brix"
+                                      ],
+                          "endLine":  1896
+                      },
+                      {
+                          "startLine":  1878,
+                          "preview":  "    grid-template-rows: auto auto auto;\n    grid-template-columns: 1fr 1fr 2fr;\n    grid-auto-columns: 2fr}",
+                          "selectors":  [
+                                            ".bko-grid-111"
+                                        ],
+                          "classes":  [
+                                          "bko-grid-111"
+                                      ],
+                          "endLine":  1880
+                      },
+                      {
+                          "startLine":  1858,
+                          "preview":  "    margin-right: 0}",
+                          "selectors":  [
+                                            ".bko-dropdown-2-2"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-2-2"
+                                      ],
+                          "endLine":  1858
+                      },
+                      {
+                          "startLine":  1854,
+                          "preview":  "    font-size: 1.69vw;\n    overflow: auto}",
+                          "selectors":  [
+                                            ".bko-menu-11"
+                                        ],
+                          "classes":  [
+                                          "bko-menu-11"
+                                      ],
+                          "endLine":  1855
+                      },
+                      {
+                          "startLine":  1850,
+                          "preview":  "    font-size: 1.69vw;\n    display: block}",
+                          "selectors":  [
+                                            ".bko-selections-12"
+                                        ],
+                          "classes":  [
+                                          "bko-selections-12"
+                                      ],
+                          "endLine":  1851
+                      },
+                      {
+                          "startLine":  1872,
+                          "preview":  "    margin-right: 0}",
+                          "selectors":  [
+                                            ".bko-dropdown-2-3"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-2-3"
+                                      ],
+                          "endLine":  1872
+                      },
+                      {
+                          "startLine":  1867,
+                          "preview":  "    font-size: 1.69vw;\n    display: block;\n    overflow: auto}",
+                          "selectors":  [
+                                            ".bko-menu-11-2"
+                                        ],
+                          "classes":  [
+                                          "bko-menu-11-2"
+                                      ],
+                          "endLine":  1869
+                      },
+                      {
+                          "startLine":  1864,
+                          "preview":  "    display: none}",
+                          "selectors":  [
+                                            ".bko-wrap-11-2"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-11-2"
+                                      ],
+                          "endLine":  1864
+                      },
+                      {
+                          "startLine":  738,
+                          "preview":  ".dropdown-nav-main-wrapper-v1---brix {\n  justify-content: space-between;\n  padding: 48px 40px 121px;",
+                          "selectors":  [
+                                            ".dropdown-nav-main-wrapper-v1---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-main-wrapper-v1---brix"
+                                      ],
+                          "endLine":  740
+                      },
+                      {
+                          "startLine":  717,
+                          "preview":  ".dropdown-nav-container---brix {\n  width: 100%;\n  max-width: 1240px;\n  margin-left: auto;\n  margin-right: auto;",
+                          "selectors":  [
+                                            ".dropdown-nav-container---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-container---brix"
+                                      ],
+                          "endLine":  721
+                      },
+                      {
+                          "startLine":  714,
+                          "preview":  ".dropdown-toggle-3 {",
+                          "selectors":  [
+                                            ".dropdown-toggle-3"
+                                        ],
+                          "classes":  [
+                                          "dropdown-toggle-3"
+                                      ],
+                          "endLine":  714
+                      },
+                      {
+                          "startLine":  757,
+                          "preview":  ".title---brix.dropdown-nav-title-v1---brix {\n  letter-spacing: .1em;\n  text-transform: uppercase;\n  margin-bottom: 32px;",
+                          "selectors":  [
+                                            ".title---brix.dropdown-nav-title-v1---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-title-v1---brix",
+                                          "title---brix"
+                                      ],
+                          "endLine":  760
+                      },
+                      {
+                          "startLine":  752,
+                          "preview":  ".dropdown-nav---brix {\n  margin-bottom: 0;\n  padding-left: 0;",
+                          "selectors":  [
+                                            ".dropdown-nav---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav---brix"
+                                      ],
+                          "endLine":  754
+                      },
+                      {
+                          "startLine":  747,
+                          "preview":  ".dropdown-icon---brix {\n  margin-right: 0;\n  display: none;",
+                          "selectors":  [
+                                            ".dropdown-icon---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-icon---brix"
+                                      ],
+                          "endLine":  749
+                      },
+                      {
+                          "startLine":  710,
+                          "preview":  ".dropdown-menu-text---brix {\n  margin-right: 8px;",
+                          "selectors":  [
+                                            ".dropdown-menu-text---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-menu-text---brix"
+                                      ],
+                          "endLine":  711
+                      },
+                      {
+                          "startLine":  675,
+                          "preview":  ".navigation-link {\n  letter-spacing: -.8px;\n  justify-content: center;\n  align-items: center;\n  padding: 20px 12px;\n  font-family: var(--font-body);\n  font-size: 20px;\n  font-style: normal;\n  font-weight: 700;\n  line-height: 56.062%;\n  text-decoration: none;\n  transition: all .2s;",
+                          "selectors":  [
+                                            ".navigation-link"
+                                        ],
+                          "classes":  [
+                                          "navigation-link"
+                                      ],
+                          "endLine":  686
+                      },
+                      {
+                          "startLine":  665,
+                          "preview":  ".dropdown-nav-link---brix {\n  color: #170f49;\n  padding: 0;\n  font-style: normal;\n  text-decoration: none;",
+                          "selectors":  [
+                                            ".dropdown-nav-link---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-link---brix"
+                                      ],
+                          "endLine":  669
+                      },
+                      {
+                          "startLine":  661,
+                          "preview":  ".dropdown-menu-v1---brix {\n  align-items: center;",
+                          "selectors":  [
+                                            ".dropdown-menu-v1---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-menu-v1---brix"
+                                      ],
+                          "endLine":  662
+                      },
+                      {
+                          "startLine":  706,
+                          "preview":  ".dropdown-nav-pages-content---brix {\n  margin-bottom: 70px;",
+                          "selectors":  [
+                                            ".dropdown-nav-pages-content---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-pages-content---brix"
+                                      ],
+                          "endLine":  707
+                      },
+                      {
+                          "startLine":  701,
+                          "preview":  ".dropdown-nav-content---brix {\n  flex-direction: column;\n  align-items: flex-start;",
+                          "selectors":  [
+                                            ".dropdown-nav-content---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-content---brix"
+                                      ],
+                          "endLine":  703
+                      },
+                      {
+                          "startLine":  692,
+                          "preview":  ".top-bar {\n  background-color: var(--meron);\n  color: #fff;\n  text-align: center;\n  margin-left: 0;\n  padding: 10px 30px;\n  font-size: 12px;",
+                          "selectors":  [
+                                            ".top-bar"
+                                        ],
+                          "classes":  [
+                                          "top-bar"
+                                      ],
+                          "endLine":  698
+                      },
+                      {
+                          "startLine":  763,
+                          "preview":  ".dropdown-nav-item---brix {\n  margin-bottom: 16px;\n  line-height: 1.66667;",
+                          "selectors":  [
+                                            ".dropdown-nav-item---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-item---brix"
+                                      ],
+                          "endLine":  765
+                      },
+                      {
+                          "startLine":  832,
+                          "preview":  ".bko-dropdownlink-1 {\n  color: #000;\n  letter-spacing: 4px;\n  text-transform: uppercase;\n  background-color: #fff;\n  margin-bottom: 2em;\n  margin-right: 0;\n  padding: 0;\n  font-size: 1.3em;\n  font-weight: 700;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-dropdownlink-1"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdownlink-1"
+                                      ],
+                          "endLine":  842
+                      },
+                      {
+                          "startLine":  813,
+                          "preview":  ".bko-text-12 {\n  color: #5c5c5c;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 1.2em;",
+                          "selectors":  [
+                                            ".bko-text-12"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12"
+                                      ],
+                          "endLine":  817
+                      },
+                      {
+                          "startLine":  807,
+                          "preview":  ".navigation-link-2:hover {",
+                          "selectors":  [
+                                            ".navigation-link-2:hover"
+                                        ],
+                          "classes":  [
+                                          "navigation-link-2"
+                                      ],
+                          "endLine":  807
+                      },
+                      {
+                          "startLine":  869,
+                          "preview":  ".bko-wrap-1 {\n  justify-content: space-between;\n  align-items: center;",
+                          "selectors":  [
+                                            ".bko-wrap-1"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-1"
+                                      ],
+                          "endLine":  871
+                      },
+                      {
+                          "startLine":  860,
+                          "preview":  ".bko-dropdown-2 {\n  background-color: #fff;\n  width: 60em;\n  margin-top: 4.1em;\n  margin-left: -15em;\n  padding: 3em 4em 4em;\n  display: block;",
+                          "selectors":  [
+                                            ".bko-dropdown-2"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-2"
+                                      ],
+                          "endLine":  866
+                      },
+                      {
+                          "startLine":  845,
+                          "preview":  ".bko-link-111 {\n  color: #000;\n  text-align: left;\n  text-transform: capitalize;\n  padding-left: 20px;\n  padding-right: 20px;\n  font-family: var(--font-body);\n  font-size: 1.3em;\n  font-style: normal;\n  font-weight: 700;",
+                          "selectors":  [
+                                            ".bko-link-111"
+                                        ],
+                          "classes":  [
+                                          "bko-link-111"
+                                      ],
+                          "endLine":  854
+                      },
+                      {
+                          "startLine":  797,
+                          "preview":  ".navigation-link-2 {\n  justify-content: center;\n  align-items: center;\n  padding: 20px 12px;\n  font-size: 15px;\n  font-style: normal;\n  text-decoration: none;\n  transition: all .2s;",
+                          "selectors":  [
+                                            ".navigation-link-2"
+                                        ],
+                          "classes":  [
+                                          "navigation-link-2"
+                                      ],
+                          "endLine":  804
+                      },
+                      {
+                          "startLine":  778,
+                          "preview":  ".nav-link---brix:hover {",
+                          "selectors":  [
+                                            ".nav-link---brix:hover"
+                                        ],
+                          "classes":  [
+                                          "nav-link---brix"
+                                      ],
+                          "endLine":  778
+                      },
+                      {
+                          "startLine":  771,
+                          "preview":  ".nav-link---brix {\n  align-items: center;\n  padding: 0;\n  transition: color .3s;\n  display: flex;",
+                          "selectors":  [
+                                            ".nav-link---brix"
+                                        ],
+                          "classes":  [
+                                          "nav-link---brix"
+                                      ],
+                          "endLine":  775
+                      },
+                      {
+                          "startLine":  768,
+                          "preview":  ".dropdown-nav-item---brix.last---brix {",
+                          "selectors":  [
+                                            ".dropdown-nav-item---brix.last---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-item---brix",
+                                          "last---brix"
+                                      ],
+                          "endLine":  768
+                      },
+                      {
+                          "startLine":  794,
+                          "preview":  ".uui-dropdown-icon.white {",
+                          "selectors":  [
+                                            ".uui-dropdown-icon.white"
+                                        ],
+                          "classes":  [
+                                          "uui-dropdown-icon",
+                                          "white"
+                                      ],
+                          "endLine":  794
+                      },
+                      {
+                          "startLine":  784,
+                          "preview":  ".uui-dropdown-icon {\n  justify-content: center;\n  align-items: center;\n  width: 1.25rem;\n  height: 1.25rem;\n  margin-right: 1rem;\n  display: flex;\n  position: absolute;",
+                          "selectors":  [
+                                            ".uui-dropdown-icon"
+                                        ],
+                          "classes":  [
+                                          "uui-dropdown-icon"
+                                      ],
+                          "endLine":  791
+                      },
+                      {
+                          "startLine":  781,
+                          "preview":  ".site-nav__slider {",
+                          "selectors":  [
+                                            ".site-nav__slider"
+                                        ],
+                          "classes":  [
+                                          "site-nav__slider"
+                                      ],
+                          "endLine":  781
+                      },
+                      {
+                          "startLine":  93,
+                          "preview":  "    border-radius: 6px;\n    height: 34px;\n    margin-left: 0;\n    margin-right: 0;\n    width: 42px;\n  }",
+                          "selectors":  [
+                                            "#site-header:empty::after"
+                                        ],
+                          "classes":  [
+
+                                      ],
+                          "endLine":  98
+                      },
+                      {
+                          "startLine":  87,
+                          "preview":  "    height: 48px;\n    margin-left: 0;\n    width: 144px;\n  }",
+                          "selectors":  [
+                                            "#site-header:empty::before"
+                                        ],
+                          "classes":  [
+
+                                      ],
+                          "endLine":  90
+                      },
+                      {
+                          "startLine":  82,
+                          "preview":  "    justify-content: space-between;\n    padding: 18px 22px;\n  }",
+                          "selectors":  [
+                                            "#site-header:empty"
+                                        ],
+                          "classes":  [
+
+                                      ],
+                          "endLine":  84
+                      },
+                      {
+                          "startLine":  535,
+                          "preview":  ".nav-overlay {\n  width: 100%;\n  display: none;\n  position: absolute;\n  top: 100%;\n  left: 0;\n  right: 0;",
+                          "selectors":  [
+                                            ".nav-overlay"
+                                        ],
+                          "classes":  [
+                                          "nav-overlay"
+                                      ],
+                          "endLine":  541
+                      },
+                      {
+                          "startLine":  531,
+                          "preview":  ".w--nav-link-open {\n  display: block;",
+                          "selectors":  [
+                                            ".w--nav-link-open"
+                                        ],
+                          "classes":  [
+                                          "w--nav-link-open"
+                                      ],
+                          "endLine":  532
+                      },
+                      {
+                          "startLine":  506,
+                          "preview":  ".nav-menu-link {\n  vertical-align: top;\n  color: #222;\n  text-align: left;\n  margin-left: auto;\n  margin-right: auto;\n  padding: 20px;\n  text-decoration: none;\n  display: inline-block;",
+                          "selectors":  [
+                                            ".nav-menu-link"
+                                        ],
+                          "classes":  [
+                                          "nav-menu-link"
+                                      ],
+                          "endLine":  514
+                      },
+                      {
+                          "startLine":  78,
+                          "preview":  "    min-height: 96px;\n  }",
+                          "selectors":  [
+                                            "#site-header"
+                                        ],
+                          "classes":  [
+
+                                      ],
+                          "endLine":  79
+                      },
+                      {
+                          "startLine":  16,
+                          "preview":  "#site-header:empty::before {\n  background: rgba(255, 248, 220, 0.16);\n  border: 1px solid rgba(255, 248, 220, 0.34);\n  content: \"\";\n  height: 57px;\n  margin-left: clamp(12px, 12vw, 250px);\n  width: 170px;",
+                          "selectors":  [
+                                            "#site-header:empty::before"
+                                        ],
+                          "classes":  [
+
+                                      ],
+                          "endLine":  22
+                      },
+                      {
+                          "startLine":  9,
+                          "preview":  "#site-header:empty {\n  align-items: center;\n  box-shadow: 0 4px 4px rgba(142, 142, 142, 0.58);\n  display: flex;\n  padding: 16px 28px;",
+                          "selectors":  [
+                                            "#site-header:empty"
+                                        ],
+                          "classes":  [
+
+                                      ],
+                          "endLine":  13
+                      },
+                      {
+                          "startLine":  2,
+                          "preview":  "#site-header {\n  background: #991f23;\n  min-height: 90px;\n  position: relative;\n  z-index: 10000;",
+                          "selectors":  [
+                                            "#site-header"
+                                        ],
+                          "classes":  [
+
+                                      ],
+                          "endLine":  6
+                      },
+                      {
+                          "startLine":  71,
+                          "preview":  ".logo-animate-alt {\n  animation: slidealt 35s infinite linear;\n  animation-direction: reverse;",
+                          "selectors":  [
+                                            ".logo-animate-alt"
+                                        ],
+                          "classes":  [
+                                          "logo-animate-alt"
+                                      ],
+                          "endLine":  73
+                      },
+                      {
+                          "startLine":  67,
+                          "preview":  ".logo-animate {\n  animation: slide 35s infinite linear;",
+                          "selectors":  [
+                                            ".logo-animate"
+                                        ],
+                          "classes":  [
+                                          "logo-animate"
+                                      ],
+                          "endLine":  68
+                      },
+                      {
+                          "startLine":  25,
+                          "preview":  "#site-header:empty::after {\n  background: linear-gradient(90deg,\n      rgba(255, 248, 220, 0.58) 0 12%,\n      transparent 12% 16%,\n      rgba(255, 248, 220, 0.58) 16% 28%,\n      transparent 28% 32%,\n      rgba(255, 248, 220, 0.58) 32% 44%,\n      transparent 44% 48%,\n      rgba(255, 248, 220, 0.58) 48% 60%,\n      transparent 60% 64%,\n      rgba(255, 248, 220, 0.58) 64% 76%,\n      transparent 76% 80%,\n      rgba(255, 248, 220, 0.58) 80% 100%);\n  border-radius: 999px;\n  content: \"\";\n  height: 22px;",
+                          "selectors":  [
+                                            "#site-header:empty::after"
+                                        ],
+                          "classes":  [
+
+                                      ],
+                          "endLine":  44
+                      },
+                      {
+                          "startLine":  544,
+                          "preview":  ".nav-overlay [data-nav-menu-open] {",
+                          "selectors":  [
+                                            ".nav-overlay [data-nav-menu-open]"
+                                        ],
+                          "classes":  [
+                                          "nav-overlay"
+                                      ],
+                          "endLine":  544
+                      },
+                      {
+                          "startLine":  640,
+                          "preview":  ".nav-link {\n  color: #000;\n  padding-left: 10px;\n  padding-right: 10px;\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 500;",
+                          "selectors":  [
+                                            ".nav-link"
+                                        ],
+                          "classes":  [
+                                          "nav-link"
+                                      ],
+                          "endLine":  646
+                      },
+                      {
+                          "startLine":  626,
+                          "preview":  ".nav-menu-3 {\n  color: #283338;\n  justify-content: center;\n  align-items: center;\n  font-size: 15px;\n  display: flex;",
+                          "selectors":  [
+                                            ".nav-menu-3"
+                                        ],
+                          "classes":  [
+                                          "nav-menu-3"
+                                      ],
+                          "endLine":  631
+                      },
+                      {
+                          "startLine":  623,
+                          "preview":  ".dropdown-nav-pages-wrapper-v1---brix.last---brix {",
+                          "selectors":  [
+                                            ".dropdown-nav-pages-wrapper-v1---brix.last---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-pages-wrapper-v1---brix",
+                                          "last---brix"
+                                      ],
+                          "endLine":  623
+                      },
+                      {
+                          "startLine":  657,
+                          "preview":  ".dropdown-nav-content-wrapper---brix {\n  justify-content: space-between;",
+                          "selectors":  [
+                                            ".dropdown-nav-content-wrapper---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-content-wrapper---brix"
+                                      ],
+                          "endLine":  658
+                      },
+                      {
+                          "startLine":  652,
+                          "preview":  ".login-2.nav-link {\n  border-width: 0;\n  padding-left: 0;",
+                          "selectors":  [
+                                            ".login-2.nav-link"
+                                        ],
+                          "classes":  [
+                                          "login-2",
+                                          "nav-link"
+                                      ],
+                          "endLine":  654
+                      },
+                      {
+                          "startLine":  649,
+                          "preview":  ".nav-link:visited {",
+                          "selectors":  [
+                                            ".nav-link:visited"
+                                        ],
+                          "classes":  [
+                                          "nav-link"
+                                      ],
+                          "endLine":  649
+                      },
+                      {
+                          "startLine":  618,
+                          "preview":  ".dropdown-nav-pages-wrapper-v1---brix {\n  width: 100%;\n  margin-right: 23px;",
+                          "selectors":  [
+                                            ".dropdown-nav-pages-wrapper-v1---brix"
+                                        ],
+                          "classes":  [
+                                          "dropdown-nav-pages-wrapper-v1---brix"
+                                      ],
+                          "endLine":  620
+                      },
+                      {
+                          "startLine":  578,
+                          "preview":  ".navigation-item {\n  opacity: .6;\n  letter-spacing: 1px;\n  text-transform: uppercase;\n  padding-top: 9px;\n  padding-bottom: 9px;\n  font-size: 12px;\n  font-weight: 500;",
+                          "selectors":  [
+                                            ".navigation-item"
+                                        ],
+                          "classes":  [
+                                          "navigation-item"
+                                      ],
+                          "endLine":  585
+                      },
+                      {
+                          "startLine":  572,
+                          "preview":  ".navigation-items {\n  flex: 1;\n  justify-content: space-between;\n  align-items: center;",
+                          "selectors":  [
+                                            ".navigation-items"
+                                        ],
+                          "classes":  [
+                                          "navigation-items"
+                                      ],
+                          "endLine":  575
+                      },
+                      {
+                          "startLine":  563,
+                          "preview":  ".w--nav-dropdown-list-open {",
+                          "selectors":  [
+                                            ".w--nav-dropdown-list-open"
+                                        ],
+                          "classes":  [
+                                          "w--nav-dropdown-list-open"
+                                      ],
+                          "endLine":  563
+                      },
+                      {
+                          "startLine":  607,
+                          "preview":  ".navigation-2 {\n  z-index: 9;\n  background-color: var(--white);\n  width: 100%;\n  box-shadow: 0 4px 4px 0 var(--grey);\n  flex-direction: column;\n  align-items: center;\n  margin-left: 0;\n  padding: 12px 30px;",
+                          "selectors":  [
+                                            ".navigation-2"
+                                        ],
+                          "classes":  [
+                                          "navigation-2"
+                                      ],
+                          "endLine":  615
+                      },
+                      {
+                          "startLine":  591,
+                          "preview":  ".navigation-item:active {",
+                          "selectors":  [
+                                            ".navigation-item:active"
+                                        ],
+                          "classes":  [
+                                          "navigation-item"
+                                      ],
+                          "endLine":  591
+                      },
+                      {
+                          "startLine":  588,
+                          "preview":  ".navigation-item:hover {",
+                          "selectors":  [
+                                            ".navigation-item:hover"
+                                        ],
+                          "classes":  [
+                                          "navigation-item"
+                                      ],
+                          "endLine":  588
+                      },
+                      {
+                          "startLine":  1206,
+                          "preview":  ".bko-text-12-coin {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-coin"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-coin"
+                                      ],
+                          "endLine":  1213
+                      },
+                      {
+                          "startLine":  1196,
+                          "preview":  ".bko-text-12-chain {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-chain"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-chain"
+                                      ],
+                          "endLine":  1203
+                      },
+                      {
+                          "startLine":  1185,
+                          "preview":  ".bko-text-11-2 {\n  color: #000;\n  text-align: left;\n  letter-spacing: -.72px;\n  text-transform: capitalize;\n  margin-bottom: .5em;\n  font-size: 18px;\n  font-style: normal;\n  font-weight: 700;",
+                          "selectors":  [
+                                            ".bko-text-11-2"
+                                        ],
+                          "classes":  [
+                                          "bko-text-11-2"
+                                      ],
+                          "endLine":  1193
+                      },
+                      {
+                          "startLine":  1252,
+                          "preview":  ".bko-text-12-bangles {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-bangles"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-bangles"
+                                      ],
+                          "endLine":  1259
+                      },
+                      {
+                          "startLine":  1231,
+                          "preview":  ".platinumlink-2 {\n  color: #000;\n  letter-spacing: -.8px;\n  font-size: 20em;",
+                          "selectors":  [
+                                            ".platinumlink-2"
+                                        ],
+                          "classes":  [
+                                          "platinumlink-2"
+                                      ],
+                          "endLine":  1234
+                      },
+                      {
+                          "startLine":  1222,
+                          "preview":  ".bko-text-1-2 {\n  grid-column-gap: 10px;\n  grid-row-gap: 10px;\n  letter-spacing: -.56px;\n  flex-flow: column;\n  font-family: var(--font-body);\n  font-size: 14px;",
+                          "selectors":  [
+                                            ".bko-text-1-2"
+                                        ],
+                          "classes":  [
+                                          "bko-text-1-2"
+                                      ],
+                          "endLine":  1228
+                      },
+                      {
+                          "startLine":  1175,
+                          "preview":  ".bko-text-12-studs {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-studs"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-studs"
+                                      ],
+                          "endLine":  1182
+                      },
+                      {
+                          "startLine":  1128,
+                          "preview":  ".bko-text-12-bracelets-1 {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-family: var(--font-body);\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-bracelets-1"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-bracelets-1"
+                                      ],
+                          "endLine":  1136
+                      },
+                      {
+                          "startLine":  1118,
+                          "preview":  ".platinumlink {\n  color: #000;\n  letter-spacing: -.8px;\n  font-family: var(--font-body);\n  font-size: 20em;",
+                          "selectors":  [
+                                            ".platinumlink"
+                                        ],
+                          "classes":  [
+                                          "platinumlink"
+                                      ],
+                          "endLine":  1122
+                      },
+                      {
+                          "startLine":  1108,
+                          "preview":  ".diamondlink {\n  color: #000;\n  letter-spacing: -.8px;\n  font-family: var(--font-body);\n  font-size: 20em;",
+                          "selectors":  [
+                                            ".diamondlink"
+                                        ],
+                          "classes":  [
+                                          "diamondlink"
+                                      ],
+                          "endLine":  1112
+                      },
+                      {
+                          "startLine":  1164,
+                          "preview":  ".bko-dropdown-2-3 {\n  background-color: #fff;\n  width: 60em;\n  margin-top: 0;\n  margin-left: -15em;\n  padding: 3em 4em 4em;\n  display: block;\n  position: static;\n  top: 0;",
+                          "selectors":  [
+                                            ".bko-dropdown-2-3"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-2-3"
+                                      ],
+                          "endLine":  1172
+                      },
+                      {
+                          "startLine":  1154,
+                          "preview":  ".bko-text-12-bracelets-2 {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-bracelets-2"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-bracelets-2"
+                                      ],
+                          "endLine":  1161
+                      },
+                      {
+                          "startLine":  1139,
+                          "preview":  ".bko-grid-11-category {\n  align-items: stretch;",
+                          "selectors":  [
+                                            ".bko-grid-11-category"
+                                        ],
+                          "classes":  [
+                                          "bko-grid-11-category"
+                                      ],
+                          "endLine":  1140
+                      },
+                      {
+                          "startLine":  1262,
+                          "preview":  ".bko-text-12-drops {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-drops"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-drops"
+                                      ],
+                          "endLine":  1269
+                      },
+                      {
+                          "startLine":  1377,
+                          "preview":  ".bko-text-12-diamond-silver {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-diamond-silver"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-diamond-silver"
+                                      ],
+                          "endLine":  1384
+                      },
+                      {
+                          "startLine":  1372,
+                          "preview":  ".bko-text-12-studs-silver {\n  font-size: 14px;\n  font-style: normal;",
+                          "selectors":  [
+                                            ".bko-text-12-studs-silver"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-studs-silver"
+                                      ],
+                          "endLine":  1374
+                      },
+                      {
+                          "startLine":  1367,
+                          "preview":  ".bko-text-12-ring-silver {\n  font-size: 14px;\n  font-style: normal;",
+                          "selectors":  [
+                                            ".bko-text-12-ring-silver"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-ring-silver"
+                                      ],
+                          "endLine":  1369
+                      },
+                      {
+                          "startLine":  1409,
+                          "preview":  ".bko-text-12-chain-diamond {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-family: var(--font-body);\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;",
+                          "selectors":  [
+                                            ".bko-text-12-chain-diamond"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-chain-diamond"
+                                      ],
+                          "endLine":  1418
+                      },
+                      {
+                          "startLine":  1398,
+                          "preview":  ".bko-text-12-bracelets-diamond {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-family: var(--font-body);\n  font-size: 14px;\n  font-style: normal;\n  line-height: 28px;",
+                          "selectors":  [
+                                            ".bko-text-12-bracelets-diamond"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-bracelets-diamond"
+                                      ],
+                          "endLine":  1406
+                      },
+                      {
+                          "startLine":  1387,
+                          "preview":  ".bko-text-12-bangles-diamond {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-family: var(--font-body);\n  font-size: 14px;\n  font-style: normal;\n  line-height: 28px;",
+                          "selectors":  [
+                                            ".bko-text-12-bangles-diamond"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-bangles-diamond"
+                                      ],
+                          "endLine":  1395
+                      },
+                      {
+                          "startLine":  1357,
+                          "preview":  ".bko-text-12-locket-silver {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-locket-silver"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-locket-silver"
+                                      ],
+                          "endLine":  1364
+                      },
+                      {
+                          "startLine":  1309,
+                          "preview":  ".bko-text-12-4 {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-4"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-4"
+                                      ],
+                          "endLine":  1316
+                      },
+                      {
+                          "startLine":  1290,
+                          "preview":  ".bko-text-12-locket {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-locket"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-locket"
+                                      ],
+                          "endLine":  1297
+                      },
+                      {
+                          "startLine":  1272,
+                          "preview":  ".bko-text-12-haram {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-haram"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-haram"
+                                      ],
+                          "endLine":  1279
+                      },
+                      {
+                          "startLine":  1347,
+                          "preview":  ".bko-text-12-drops-silver {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-drops-silver"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-drops-silver"
+                                      ],
+                          "endLine":  1354
+                      },
+                      {
+                          "startLine":  1337,
+                          "preview":  ".bko-text-12-coin-silver {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-coin-silver"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-coin-silver"
+                                      ],
+                          "endLine":  1344
+                      },
+                      {
+                          "startLine":  1327,
+                          "preview":  ".bko-text-12-chain-silver {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-chain-silver"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-chain-silver"
+                                      ],
+                          "endLine":  1334
+                      },
+                      {
+                          "startLine":  940,
+                          "preview":  ".bko-selections-12 {\n  border-bottom: 1px solid #898989;\n  padding: 3em;",
+                          "selectors":  [
+                                            ".bko-selections-12"
+                                        ],
+                          "classes":  [
+                                          "bko-selections-12"
+                                      ],
+                          "endLine":  942
+                      },
+                      {
+                          "startLine":  930,
+                          "preview":  ".bko-selections-1 {\n  z-index: 10000;\n  background-color: #fff;\n  border-bottom: 1px solid #dbdbdb;\n  padding: 3em;\n  font-size: 1vw;\n  display: block;\n  position: sticky;",
+                          "selectors":  [
+                                            ".bko-selections-1"
+                                        ],
+                          "classes":  [
+                                          "bko-selections-1"
+                                      ],
+                          "endLine":  937
+                      },
+                      {
+                          "startLine":  924,
+                          "preview":  ".bko-container-1 {\n  width: 100%;\n  max-width: 88em;\n  margin-left: auto;",
+                          "selectors":  [
+                                            ".bko-container-1"
+                                        ],
+                          "classes":  [
+                                          "bko-container-1"
+                                      ],
+                          "endLine":  927
+                      },
+                      {
+                          "startLine":  962,
+                          "preview":  ".bko-dropdown-toggle-2 {\n  color: #000;\n  text-transform: capitalize;\n  margin-right: 1em;\n  padding: 0 2em 0 0;\n  font-size: 1.3em;\n  font-weight: 700;",
+                          "selectors":  [
+                                            ".bko-dropdown-toggle-2"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-toggle-2"
+                                      ],
+                          "endLine":  968
+                      },
+                      {
+                          "startLine":  950,
+                          "preview":  ".bko-dropdownlink-1-2 {\n  color: #000;\n  text-transform: uppercase;\n  background-color: #fff;\n  margin-bottom: 2em;\n  margin-right: 20em;\n  padding: 0;\n  font-size: 1.3em;\n  font-weight: 700;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-dropdownlink-1-2"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdownlink-1-2"
+                                      ],
+                          "endLine":  959
+                      },
+                      {
+                          "startLine":  945,
+                          "preview":  ".bko-menu-11 {\n  opacity: 0;\n  font-size: 1vw;",
+                          "selectors":  [
+                                            ".bko-menu-11"
+                                        ],
+                          "classes":  [
+                                          "bko-menu-11"
+                                      ],
+                          "endLine":  947
+                      },
+                      {
+                          "startLine":  920,
+                          "preview":  ".bko-grid-11 {\n  align-items: stretch;",
+                          "selectors":  [
+                                            ".bko-grid-11"
+                                        ],
+                          "classes":  [
+                                          "bko-grid-11"
+                                      ],
+                          "endLine":  921
+                      },
+                      {
+                          "startLine":  882,
+                          "preview":  ".bko-wrap-11 {\n  flex: 1;\n  justify-content: flex-start;\n  align-items: center;\n  padding-left: 6em;",
+                          "selectors":  [
+                                            ".bko-wrap-11"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-11"
+                                      ],
+                          "endLine":  886
+                      },
+                      {
+                          "startLine":  879,
+                          "preview":  ".bko-wrap-111 {",
+                          "selectors":  [
+                                            ".bko-wrap-111"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-111"
+                                      ],
+                          "endLine":  879
+                      },
+                      {
+                          "startLine":  874,
+                          "preview":  ".bko-wrap-12 {\n  justify-content: center;\n  align-items: center;",
+                          "selectors":  [
+                                            ".bko-wrap-12"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-12"
+                                      ],
+                          "endLine":  876
+                      },
+                      {
+                          "startLine":  917,
+                          "preview":  ".bko-wrap-121 {",
+                          "selectors":  [
+                                            ".bko-wrap-121"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-121"
+                                      ],
+                          "endLine":  917
+                      },
+                      {
+                          "startLine":  911,
+                          "preview":  ".bko-dropdown-toggle.is-open {\n  text-transform: capitalize;\n  font-size: 1.3em;\n  font-weight: 700;",
+                          "selectors":  [
+                                            ".bko-dropdown-toggle.is-open"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-toggle",
+                                          "is-open"
+                                      ],
+                          "endLine":  914
+                      },
+                      {
+                          "startLine":  899,
+                          "preview":  ".bko-dropdown-toggle {\n  color: #000;\n  text-transform: capitalize;\n  background-image: url(\"../assets/images/66adcb962572764734906e92_Vector 3.png\");\n  background-position: 100%;\n  background-repeat: no-repeat;\n  background-size: auto .4em;\n  padding: 0 1.2em 0 0;\n  font-size: 1.3em;\n  font-weight: 700;",
+                          "selectors":  [
+                                            ".bko-dropdown-toggle"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-toggle"
+                                      ],
+                          "endLine":  908
+                      },
+                      {
+                          "startLine":  971,
+                          "preview":  ".bko-dropdown-toggle-2.is-open {\n  text-transform: capitalize;\n  font-size: 1.3em;\n  font-weight: 700;",
+                          "selectors":  [
+                                            ".bko-dropdown-toggle-2.is-open"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-toggle-2",
+                                          "is-open"
+                                      ],
+                          "endLine":  974
+                      },
+                      {
+                          "startLine":  1078,
+                          "preview":  ".bko-dropdown-toggle-4 {\n  color: #000;\n  text-transform: capitalize;\n  margin-right: 1em;\n  padding: 0 2em 0 0;\n  font-size: 1.3em;\n  font-weight: 700;",
+                          "selectors":  [
+                                            ".bko-dropdown-toggle-4"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-toggle-4"
+                                      ],
+                          "endLine":  1084
+                      },
+                      {
+                          "startLine":  1071,
+                          "preview":  ".bko-dropdown-1-2 {\n  text-align: center;\n  letter-spacing: -.8px;\n  font-family: var(--font-body);\n  font-size: 20px;",
+                          "selectors":  [
+                                            ".bko-dropdown-1-2"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-1-2"
+                                      ],
+                          "endLine":  1075
+                      },
+                      {
+                          "startLine":  1061,
+                          "preview":  ".bko-menu-11-2 {\n  opacity: 0;\n  width: 1px;\n  height: 1px;\n  font-size: 1vw;\n  display: none;\n  position: absolute;\n  inset: 0% auto auto 0%;",
+                          "selectors":  [
+                                            ".bko-menu-11-2"
+                                        ],
+                          "classes":  [
+                                          "bko-menu-11-2"
+                                      ],
+                          "endLine":  1068
+                      },
+                      {
+                          "startLine":  1100,
+                          "preview":  ".goldlink {\n  color: #000;\n  font-family: var(--font-body);",
+                          "selectors":  [
+                                            ".goldlink"
+                                        ],
+                          "classes":  [
+                                          "goldlink"
+                                      ],
+                          "endLine":  1102
+                      },
+                      {
+                          "startLine":  1093,
+                          "preview":  ".silverlink {\n  color: #000;",
+                          "selectors":  [
+                                            ".silverlink"
+                                        ],
+                          "classes":  [
+                                          "silverlink"
+                                      ],
+                          "endLine":  1094
+                      },
+                      {
+                          "startLine":  1087,
+                          "preview":  ".bko-dropdown-toggle-4.is-open {\n  text-transform: capitalize;\n  font-size: 1.3em;\n  font-weight: 700;",
+                          "selectors":  [
+                                            ".bko-dropdown-toggle-4.is-open"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-toggle-4",
+                                          "is-open"
+                                      ],
+                          "endLine":  1090
+                      },
+                      {
+                          "startLine":  1056,
+                          "preview":  ".bko-wrap-11-2 {\n  justify-content: center;\n  align-items: center;",
+                          "selectors":  [
+                                            ".bko-wrap-11-2"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-11-2"
+                                      ],
+                          "endLine":  1058
+                      },
+                      {
+                          "startLine":  989,
+                          "preview":  ".bko-text-12-3 {\n  color: #5c5c5c;\n  letter-spacing: -.56px;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-family: var(--font-body);\n  font-size: 14px;\n  font-style: normal;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-text-12-3"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-3"
+                                      ],
+                          "endLine":  997
+                      },
+                      {
+                          "startLine":  982,
+                          "preview":  ".bko-text-12-2 {\n  color: #464646;\n  text-transform: capitalize;\n  white-space: break-spaces;\n  font-size: 1.1em;",
+                          "selectors":  [
+                                            ".bko-text-12-2"
+                                        ],
+                          "classes":  [
+                                          "bko-text-12-2"
+                                      ],
+                          "endLine":  986
+                      },
+                      {
+                          "startLine":  977,
+                          "preview":  ".bko-wrap-12-1 {\n  justify-content: space-between;\n  align-items: center;",
+                          "selectors":  [
+                                            ".bko-wrap-12-1"
+                                        ],
+                          "classes":  [
+                                          "bko-wrap-12-1"
+                                      ],
+                          "endLine":  979
+                      },
+                      {
+                          "startLine":  1024,
+                          "preview":  ".bko-dropdownlink-1-4 {\n  color: #000;\n  text-transform: uppercase;\n  background-color: #fff;\n  margin-bottom: 2em;\n  margin-right: 20em;\n  padding: 0;\n  font-size: 1.3em;\n  font-weight: 700;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-dropdownlink-1-4"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdownlink-1-4"
+                                      ],
+                          "endLine":  1033
+                      },
+                      {
+                          "startLine":  1011,
+                          "preview":  ".bko-dropdownlink-1-3 {\n  color: #000;\n  letter-spacing: 4px;\n  text-transform: uppercase;\n  background-color: #fff;\n  margin-bottom: 2em;\n  margin-right: 0;\n  padding: 0;\n  font-size: 1.3em;\n  font-weight: 700;\n  line-height: 1.3em;",
+                          "selectors":  [
+                                            ".bko-dropdownlink-1-3"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdownlink-1-3"
+                                      ],
+                          "endLine":  1021
+                      },
+                      {
+                          "startLine":  1000,
+                          "preview":  ".bko-dropdown-2-2 {\n  background-color: #fff;\n  width: 60em;\n  margin-top: 0;\n  margin-left: -15em;\n  padding: 3em 4em 4em;\n  display: block;\n  position: static;\n  top: 0;",
+                          "selectors":  [
+                                            ".bko-dropdown-2-2"
+                                        ],
+                          "classes":  [
+                                          "bko-dropdown-2-2"
+                                      ],
+                          "endLine":  1008
+                      }
+                  ],
+    "lineRanges":  [
+                       {
+                           "start":  1644,
+                           "end":  1652
+                       },
+                       {
+                           "start":  1641,
+                           "end":  1641
+                       },
+                       {
+                           "start":  1634,
+                           "end":  1638
+                       },
+                       {
+                           "start":  1662,
+                           "end":  1662
+                       },
+                       {
+                           "start":  1659,
+                           "end":  1659
+                       },
+                       {
+                           "start":  1655,
+                           "end":  1656
+                       },
+                       {
+                           "start":  1630,
+                           "end":  1631
+                       },
+                       {
+                           "start":  1596,
+                           "end":  1598
+                       },
+                       {
+                           "start":  1592,
+                           "end":  1593
+                       },
+                       {
+                           "start":  1587,
+                           "end":  1589
+                       },
+                       {
+                           "start":  1627,
+                           "end":  1627
+                       },
+                       {
+                           "start":  1615,
+                           "end":  1621
+                       },
+                       {
+                           "start":  1601,
+                           "end":  1606
+                       },
+                       {
+                           "start":  1668,
+                           "end":  1668
+                       },
+                       {
+                           "start":  1762,
+                           "end":  1769
+                       },
+                       {
+                           "start":  1753,
+                           "end":  1753
+                       },
+                       {
+                           "start":  1739,
+                           "end":  1750
+                       },
+                       {
+                           "start":  1781,
+                           "end":  1785
+                       },
+                       {
+                           "start":  1778,
+                           "end":  1778
+                       },
+                       {
+                           "start":  1775,
+                           "end":  1775
+                       },
+                       {
+                           "start":  1736,
+                           "end":  1736
+                       },
+                       {
+                           "start":  1683,
+                           "end":  1689
+                       },
+                       {
+                           "start":  1679,
+                           "end":  1680
+                       },
+                       {
+                           "start":  1676,
+                           "end":  1676
+                       },
+                       {
+                           "start":  1716,
+                           "end":  1723
+                       },
+                       {
+                           "start":  1704,
+                           "end":  1713
+                       },
+                       {
+                           "start":  1692,
+                           "end":  1701
+                       },
+                       {
+                           "start":  1484,
+                           "end":  1488
+                       },
+                       {
+                           "start":  1479,
+                           "end":  1481
+                       },
+                       {
+                           "start":  1476,
+                           "end":  1476
+                       },
+                       {
+                           "start":  1508,
+                           "end":  1508
+                       },
+                       {
+                           "start":  1504,
+                           "end":  1505
+                       },
+                       {
+                           "start":  1491,
+                           "end":  1501
+                       },
+                       {
+                           "start":  1473,
+                           "end":  1473
+                       },
+                       {
+                           "start":  1438,
+                           "end":  1440
+                       },
+                       {
+                           "start":  1432,
+                           "end":  1435
+                       },
+                       {
+                           "start":  1421,
+                           "end":  1429
+                       },
+                       {
+                           "start":  1463,
+                           "end":  1470
+                       },
+                       {
+                           "start":  1453,
+                           "end":  1460
+                       },
+                       {
+                           "start":  1443,
+                           "end":  1450
+                       },
+                       {
+                           "start":  1511,
+                           "end":  1514
+                       },
+                       {
+                           "start":  1575,
+                           "end":  1575
+                       },
+                       {
+                           "start":  1570,
+                           "end":  1572
+                       },
+                       {
+                           "start":  1567,
+                           "end":  1567
+                       },
+                       {
+                           "start":  1584,
+                           "end":  1584
+                       },
+                       {
+                           "start":  1581,
+                           "end":  1581
+                       },
+                       {
+                           "start":  1578,
+                           "end":  1578
+                       },
+                       {
+                           "start":  1561,
+                           "end":  1561
+                       },
+                       {
+                           "start":  1524,
+                           "end":  1531
+                       },
+                       {
+                           "start":  1521,
+                           "end":  1521
+                       },
+                       {
+                           "start":  1517,
+                           "end":  1518
+                       },
+                       {
+                           "start":  1555,
+                           "end":  1555
+                       },
+                       {
+                           "start":  1543,
+                           "end":  1550
+                       },
+                       {
+                           "start":  1534,
+                           "end":  1540
+                       },
+                       {
+                           "start":  1949,
+                           "end":  1950
+                       },
+                       {
+                           "start":  1941,
+                           "end":  1946
+                       },
+                       {
+                           "start":  1937,
+                           "end":  1938
+                       },
+                       {
+                           "start":  1977,
+                           "end":  1977
+                       },
+                       {
+                           "start":  1967,
+                           "end":  1971
+                       },
+                       {
+                           "start":  1959,
+                           "end":  1959
+                       },
+                       {
+                           "start":  1934,
+                           "end":  1934
+                       },
+                       {
+                           "start":  1917,
+                           "end":  1917
+                       },
+                       {
+                           "start":  1909,
+                           "end":  1914
+                       },
+                       {
+                           "start":  1905,
+                           "end":  1906
+                       },
+                       {
+                           "start":  1931,
+                           "end":  1931
+                       },
+                       {
+                           "start":  1928,
+                           "end":  1928
+                       },
+                       {
+                           "start":  1924,
+                           "end":  1925
+                       },
+                       {
+                           "start":  1980,
+                           "end":  1980
+                       },
+                       {
+                           "start":  2048,
+                           "end":  2048
+                       },
+                       {
+                           "start":  2034,
+                           "end":  2037
+                       },
+                       {
+                           "start":  2026,
+                           "end":  2028
+                       },
+                       {
+                           "start":  2767,
+                           "end":  2768
+                       },
+                       {
+                           "start":  2544,
+                           "end":  2545
+                       },
+                       {
+                           "start":  2051,
+                           "end":  2051
+                       },
+                       {
+                           "start":  2015,
+                           "end":  2017
+                       },
+                       {
+                           "start":  1991,
+                           "end":  1993
+                       },
+                       {
+                           "start":  1987,
+                           "end":  1987
+                       },
+                       {
+                           "start":  1983,
+                           "end":  1984
+                       },
+                       {
+                           "start":  2011,
+                           "end":  2012
+                       },
+                       {
+                           "start":  2006,
+                           "end":  2008
+                       },
+                       {
+                           "start":  1999,
+                           "end":  2003
+                       },
+                       {
+                           "start":  1832,
+                           "end":  1832
+                       },
+                       {
+                           "start":  1829,
+                           "end":  1829
+                       },
+                       {
+                           "start":  1826,
+                           "end":  1826
+                       },
+                       {
+                           "start":  1841,
+                           "end":  1841
+                       },
+                       {
+                           "start":  1838,
+                           "end":  1838
+                       },
+                       {
+                           "start":  1835,
+                           "end":  1835
+                       },
+                       {
+                           "start":  1819,
+                           "end":  1820
+                       },
+                       {
+                           "start":  1796,
+                           "end":  1796
+                       },
+                       {
+                           "start":  1791,
+                           "end":  1793
+                       },
+                       {
+                           "start":  1788,
+                           "end":  1788
+                       },
+                       {
+                           "start":  1816,
+                           "end":  1816
+                       },
+                       {
+                           "start":  1812,
+                           "end":  1813
+                       },
+                       {
+                           "start":  1799,
+                           "end":  1806
+                       },
+                       {
+                           "start":  1847,
+                           "end":  1847
+                       },
+                       {
+                           "start":  1892,
+                           "end":  1892
+                       },
+                       {
+                           "start":  1889,
+                           "end":  1889
+                       },
+                       {
+                           "start":  1883,
+                           "end":  1883
+                       },
+                       {
+                           "start":  1902,
+                           "end":  1902
+                       },
+                       {
+                           "start":  1899,
+                           "end":  1899
+                       },
+                       {
+                           "start":  1895,
+                           "end":  1896
+                       },
+                       {
+                           "start":  1878,
+                           "end":  1880
+                       },
+                       {
+                           "start":  1858,
+                           "end":  1858
+                       },
+                       {
+                           "start":  1854,
+                           "end":  1855
+                       },
+                       {
+                           "start":  1850,
+                           "end":  1851
+                       },
+                       {
+                           "start":  1872,
+                           "end":  1872
+                       },
+                       {
+                           "start":  1867,
+                           "end":  1869
+                       },
+                       {
+                           "start":  1864,
+                           "end":  1864
+                       },
+                       {
+                           "start":  738,
+                           "end":  740
+                       },
+                       {
+                           "start":  717,
+                           "end":  721
+                       },
+                       {
+                           "start":  714,
+                           "end":  714
+                       },
+                       {
+                           "start":  757,
+                           "end":  760
+                       },
+                       {
+                           "start":  752,
+                           "end":  754
+                       },
+                       {
+                           "start":  747,
+                           "end":  749
+                       },
+                       {
+                           "start":  710,
+                           "end":  711
+                       },
+                       {
+                           "start":  675,
+                           "end":  686
+                       },
+                       {
+                           "start":  665,
+                           "end":  669
+                       },
+                       {
+                           "start":  661,
+                           "end":  662
+                       },
+                       {
+                           "start":  706,
+                           "end":  707
+                       },
+                       {
+                           "start":  701,
+                           "end":  703
+                       },
+                       {
+                           "start":  692,
+                           "end":  698
+                       },
+                       {
+                           "start":  763,
+                           "end":  765
+                       },
+                       {
+                           "start":  832,
+                           "end":  842
+                       },
+                       {
+                           "start":  813,
+                           "end":  817
+                       },
+                       {
+                           "start":  807,
+                           "end":  807
+                       },
+                       {
+                           "start":  869,
+                           "end":  871
+                       },
+                       {
+                           "start":  860,
+                           "end":  866
+                       },
+                       {
+                           "start":  845,
+                           "end":  854
+                       },
+                       {
+                           "start":  797,
+                           "end":  804
+                       },
+                       {
+                           "start":  778,
+                           "end":  778
+                       },
+                       {
+                           "start":  771,
+                           "end":  775
+                       },
+                       {
+                           "start":  768,
+                           "end":  768
+                       },
+                       {
+                           "start":  794,
+                           "end":  794
+                       },
+                       {
+                           "start":  784,
+                           "end":  791
+                       },
+                       {
+                           "start":  781,
+                           "end":  781
+                       },
+                       {
+                           "start":  93,
+                           "end":  98
+                       },
+                       {
+                           "start":  87,
+                           "end":  90
+                       },
+                       {
+                           "start":  82,
+                           "end":  84
+                       },
+                       {
+                           "start":  535,
+                           "end":  541
+                       },
+                       {
+                           "start":  531,
+                           "end":  532
+                       },
+                       {
+                           "start":  506,
+                           "end":  514
+                       },
+                       {
+                           "start":  78,
+                           "end":  79
+                       },
+                       {
+                           "start":  16,
+                           "end":  22
+                       },
+                       {
+                           "start":  9,
+                           "end":  13
+                       },
+                       {
+                           "start":  2,
+                           "end":  6
+                       },
+                       {
+                           "start":  71,
+                           "end":  73
+                       },
+                       {
+                           "start":  67,
+                           "end":  68
+                       },
+                       {
+                           "start":  25,
+                           "end":  44
+                       },
+                       {
+                           "start":  544,
+                           "end":  544
+                       },
+                       {
+                           "start":  640,
+                           "end":  646
+                       },
+                       {
+                           "start":  626,
+                           "end":  631
+                       },
+                       {
+                           "start":  623,
+                           "end":  623
+                       },
+                       {
+                           "start":  657,
+                           "end":  658
+                       },
+                       {
+                           "start":  652,
+                           "end":  654
+                       },
+                       {
+                           "start":  649,
+                           "end":  649
+                       },
+                       {
+                           "start":  618,
+                           "end":  620
+                       },
+                       {
+                           "start":  578,
+                           "end":  585
+                       },
+                       {
+                           "start":  572,
+                           "end":  575
+                       },
+                       {
+                           "start":  563,
+                           "end":  563
+                       },
+                       {
+                           "start":  607,
+                           "end":  615
+                       },
+                       {
+                           "start":  591,
+                           "end":  591
+                       },
+                       {
+                           "start":  588,
+                           "end":  588
+                       },
+                       {
+                           "start":  1206,
+                           "end":  1213
+                       },
+                       {
+                           "start":  1196,
+                           "end":  1203
+                       },
+                       {
+                           "start":  1185,
+                           "end":  1193
+                       },
+                       {
+                           "start":  1252,
+                           "end":  1259
+                       },
+                       {
+                           "start":  1231,
+                           "end":  1234
+                       },
+                       {
+                           "start":  1222,
+                           "end":  1228
+                       },
+                       {
+                           "start":  1175,
+                           "end":  1182
+                       },
+                       {
+                           "start":  1128,
+                           "end":  1136
+                       },
+                       {
+                           "start":  1118,
+                           "end":  1122
+                       },
+                       {
+                           "start":  1108,
+                           "end":  1112
+                       },
+                       {
+                           "start":  1164,
+                           "end":  1172
+                       },
+                       {
+                           "start":  1154,
+                           "end":  1161
+                       },
+                       {
+                           "start":  1139,
+                           "end":  1140
+                       },
+                       {
+                           "start":  1262,
+                           "end":  1269
+                       },
+                       {
+                           "start":  1377,
+                           "end":  1384
+                       },
+                       {
+                           "start":  1372,
+                           "end":  1374
+                       },
+                       {
+                           "start":  1367,
+                           "end":  1369
+                       },
+                       {
+                           "start":  1409,
+                           "end":  1418
+                       },
+                       {
+                           "start":  1398,
+                           "end":  1406
+                       },
+                       {
+                           "start":  1387,
+                           "end":  1395
+                       },
+                       {
+                           "start":  1357,
+                           "end":  1364
+                       },
+                       {
+                           "start":  1309,
+                           "end":  1316
+                       },
+                       {
+                           "start":  1290,
+                           "end":  1297
+                       },
+                       {
+                           "start":  1272,
+                           "end":  1279
+                       },
+                       {
+                           "start":  1347,
+                           "end":  1354
+                       },
+                       {
+                           "start":  1337,
+                           "end":  1344
+                       },
+                       {
+                           "start":  1327,
+                           "end":  1334
+                       },
+                       {
+                           "start":  940,
+                           "end":  942
+                       },
+                       {
+                           "start":  930,
+                           "end":  937
+                       },
+                       {
+                           "start":  924,
+                           "end":  927
+                       },
+                       {
+                           "start":  962,
+                           "end":  968
+                       },
+                       {
+                           "start":  950,
+                           "end":  959
+                       },
+                       {
+                           "start":  945,
+                           "end":  947
+                       },
+                       {
+                           "start":  920,
+                           "end":  921
+                       },
+                       {
+                           "start":  882,
+                           "end":  886
+                       },
+                       {
+                           "start":  879,
+                           "end":  879
+                       },
+                       {
+                           "start":  874,
+                           "end":  876
+                       },
+                       {
+                           "start":  917,
+                           "end":  917
+                       },
+                       {
+                           "start":  911,
+                           "end":  914
+                       },
+                       {
+                           "start":  899,
+                           "end":  908
+                       },
+                       {
+                           "start":  971,
+                           "end":  974
+                       },
+                       {
+                           "start":  1078,
+                           "end":  1084
+                       },
+                       {
+                           "start":  1071,
+                           "end":  1075
+                       },
+                       {
+                           "start":  1061,
+                           "end":  1068
+                       },
+                       {
+                           "start":  1100,
+                           "end":  1102
+                       },
+                       {
+                           "start":  1093,
+                           "end":  1094
+                       },
+                       {
+                           "start":  1087,
+                           "end":  1090
+                       },
+                       {
+                           "start":  1056,
+                           "end":  1058
+                       },
+                       {
+                           "start":  989,
+                           "end":  997
+                       },
+                       {
+                           "start":  982,
+                           "end":  986
+                       },
+                       {
+                           "start":  977,
+                           "end":  979
+                       },
+                       {
+                           "start":  1024,
+                           "end":  1033
+                       },
+                       {
+                           "start":  1011,
+                           "end":  1021
+                       },
+                       {
+                           "start":  1000,
+                           "end":  1008
+                       }
+                   ]
+}

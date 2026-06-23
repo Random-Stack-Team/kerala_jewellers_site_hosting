@@ -1,19 +1,19 @@
 /* Header first-paint skeleton before the async header partial is inserted. */
-#site-header {
+#header {
   background: #991f23;
   min-height: 90px;
   position: relative;
   z-index: 10000;
 }
 
-#site-header:empty {
+#header:empty {
   align-items: center;
   box-shadow: 0 4px 4px rgba(142, 142, 142, 0.58);
   display: flex;
   padding: 16px 28px;
 }
 
-#site-header:empty::before {
+#header:empty::before {
   background: rgba(255, 248, 220, 0.16);
   border: 1px solid rgba(255, 248, 220, 0.34);
   content: "";
@@ -22,7 +22,7 @@
   width: 170px;
 }
 
-#site-header:empty::after {
+#header:empty::after {
   background: linear-gradient(90deg,
       rgba(255, 248, 220, 0.58) 0 12%,
       transparent 12% 16%,
@@ -74,22 +74,22 @@
 }
 
 @media (max-width: 991px) {
-  #site-header {
+  #header {
     min-height: 96px;
   }
 
-  #site-header:empty {
+  #header:empty {
     justify-content: space-between;
     padding: 18px 22px;
   }
 
-  #site-header:empty::before {
+  #header:empty::before {
     height: 48px;
     margin-left: 0;
     width: 144px;
   }
 
-  #site-header:empty::after {
+  #header:empty::after {
     border-radius: 6px;
     height: 34px;
     margin-left: 0;
@@ -99,25 +99,25 @@
 }
 
 /* ==========================================================================
-   DESKTOP NAVBAR MATCHING LIVE SITE
+   DESKTOP main-navBAR MATCHING LIVE SITE
    ========================================================================== */
 
 /* 1. Base Header & Shell */
-header.site-header {
+header.header {
   background: transparent !important;
   padding: 0 !important;
   box-shadow: none !important;
 }
 
 /* Ensure the inner container uses proper max-width and layout */
-header.site-header .desktop-header .site-header__inner .layout-container.content-container {
+header.header .header-desktop .header-inner .layout-container.content-container {
   width: min(100%, 1440px) !important;
   max-width: 1440px !important;
   margin: 0 auto !important;
   padding: 0 !important;
 }
 
-.desktop-header {
+.header-desktop {
   background-color: #991f23;
   flex-direction: column;
   align-items: center;
@@ -131,7 +131,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   /* Consolidating font declarations here */
 }
 
-.desktop-header .site-header__inner {
+.header-desktop .header-inner {
   width: 100%;
   padding: 16px 28px !important;
   min-height: 90px !important;
@@ -139,7 +139,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   align-items: center;
 }
 
-.desktop-header .site-header__container {
+.header-desktop .header-content {
   width: 100% !important;
   display: flex !important;
   align-items: center !important;
@@ -148,24 +148,24 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 }
 
 /* 2. Brand / Logo */
-.site-header__brand-area {
+.header-brand {
   flex-shrink: 0 !important;
 }
 
-.site-header__brand img {
+.brand-link img {
   display: block !important;
   height: auto !important;
   max-width: 210px !important;
   width: min(210px, 48vw) !important;
 }
 
-/* 3. Nav Links */
-.desktop-header a {
+/* 3. main-nav Links */
+.header-desktop a {
   color: #fff;
   text-decoration: none;
 }
 
-.site-nav__panel {
+.nav-panel {
   justify-content: center;
   align-items: center;
   gap: clamp(4px, 0.8vw, 16px);
@@ -175,7 +175,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 }
 
 /* Typography Single Source of Truth */
-.site-nav__panel a {
+.nav-panel a {
   font-family: Mulish, Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -185,10 +185,10 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   color: #ffffff;
 }
 
-/* Base Structural Layout for Nav Links */
-.site-nav__panel .bko-wrap-111-2 > a,
-.site-nav__panel .bko-wrap-111-2 .div2 > a,
-.site-nav__panel > .bko-wrap-111-2 > .dropdown > .dropdown-toggle > a {
+/* Base Structural Layout for main-nav Links */
+.nav-panel .nav-item > a,
+.nav-panel .nav-item .nav-item__plain > a,
+.nav-panel > .nav-item > .dropdown > .dropdown-toggle > a {
   white-space: nowrap;
   padding: 8px 10px;
   display: inline-block;
@@ -197,13 +197,13 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 }
 
 /* Hover States */
-.site-nav__panel a:hover {
+.nav-panel a:hover {
   color: #fff5d8;
 }
 
-.site-nav__panel .bko-wrap-111-2>a::after,
-.site-nav__panel .bko-wrap-111-2 .div2>a::after,
-.site-nav__panel>.bko-wrap-111-2>.dropdown>.dropdown-toggle>a::after {
+.nav-panel .nav-item>a::after,
+.nav-panel .nav-item .nav-item__plain>a::after,
+.nav-panel>.nav-item>.dropdown>.dropdown-toggle>a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -214,24 +214,24 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   transition: width 0.3s ease, left 0.3s ease;
 }
 
-.site-nav__panel .bko-wrap-111-2>a:hover::after,
-.site-nav__panel .bko-wrap-111-2 .div2>a:hover::after,
-.site-nav__panel>.bko-wrap-111-2>.dropdown>.dropdown-toggle>a:hover::after {
+.nav-panel .nav-item>a:hover::after,
+.nav-panel .nav-item .nav-item__plain>a:hover::after,
+.nav-panel>.nav-item>.dropdown>.dropdown-toggle>a:hover::after {
   width: 80%;
   left: 10%;
 }
 
 /* 4. Mega Menu */
-.bko-wrap-111-2 {
+.nav-item {
   position: relative;
 }
 
 /* Hover logic to show mega menu */
-.bko-wrap-111-2:hover .kj-megamenu-dropdown {
+.nav-item:hover .megamenu {
   display: block;
 }
 
-.kj-megamenu-dropdown {
+.megamenu {
   display: none;
   position: absolute;
   top: 100%;
@@ -251,7 +251,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 }
 
 /* Bridge to fix hover gap */
-.kj-megamenu-dropdown::before {
+.megamenu::before {
   content: "";
   position: absolute;
   top: -20px;
@@ -262,12 +262,12 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 }
 
 /* For the Scheme dropdown which is smaller */
-.kj-megamenu-dropdown.scheme-dropdown-list {
+.megamenu.megamenu--scheme-list {
   width: min(280px, calc(100vw - 48px)) !important;
   max-width: 280px !important;
 }
 
-.kj-megamenu-panel {
+.megamenu__panel {
   display: grid;
   grid-template-columns: minmax(180px, 1fr) 250px;
   align-items: center;
@@ -280,13 +280,13 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   background: #fff;
 }
 
-.kj-megamenu-panel--text-only {
+.megamenu__panel--text {
   display: block;
   min-height: auto;
   padding: 15px;
 }
 
-.kj-megamenu-heading {
+.megamenu__title {
   color: #991f23 !important;
   font-weight: 700 !important;
   font-size: 16px !important;
@@ -296,7 +296,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   position: relative;
 }
 
-.kj-megamenu-link {
+.megamenu__link {
   color: #222 !important;
   font-size: 15px !important;
   font-weight: 500 !important;
@@ -308,33 +308,33 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   text-decoration: none !important;
 }
 
-.kj-megamenu-link:hover {
+.megamenu__link:hover {
   color: #991f23 !important;
   transform: translateX(4px) !important;
 }
 
-.kj-megamenu-image img {
+.megamenu__image img {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
 /* 5. Rate Dropdown Styles */
-.rate-dropdown {
+.rate-select {
   color: #fff8dc;
   position: relative;
   margin-right: 10px;
 }
 
-.kj-hide-rate-dropdown .rate-dropdown,
-.rate-dropdown.kj-rate-hidden,
-.rate-dropdown[hidden] {
+.kj-hide-rate-select .rate-select,
+.rate-select.rate--hidden,
+.rate-select[hidden] {
   display: none !important;
   pointer-events: none;
   visibility: hidden;
 }
 
-.rate-toggle {
+.rate-btn {
   align-items: center;
   background: rgba(255, 244, 204, 0.08);
   border: 1px solid rgba(255, 244, 204, 0.18);
@@ -346,7 +346,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   padding: 5px 11px;
 }
 
-.rate-menu {
+.rate-list {
   display: none;
   position: absolute;
   top: calc(100% + 8px);
@@ -363,12 +363,12 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   z-index: 10020;
 }
 
-.rate-dropdown:hover .rate-menu,
-.rate-dropdown.is-open .rate-menu {
+.rate-select:hover .rate-list,
+.rate-select.is-active .rate-list {
   display: block;
 }
 
-.rate-row {
+.rate-option {
   align-items: center;
   background: transparent;
   border: none;
@@ -386,25 +386,25 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   width: 100%;
 }
 
-.rate-row span {
+.rate-option span {
   color: #681015;
   display: inline-flex;
   line-height: 1.3;
   white-space: nowrap;
 }
 
-.rate-row:hover {
+.rate-option:hover {
   background: rgba(153, 31, 35, 0.05);
 }
 
-.rate-coin {
+.rate__icon {
   display: block;
   flex: 0 0 18px;
   height: 18px;
   width: 18px;
 }
 
-.rate-toggle [data-rate-type] {
+.rate-btn [data-rate-type] {
   align-items: center;
   color: #fff8dc;
   display: inline-flex;
@@ -415,7 +415,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   white-space: nowrap;
 }
 
-.rate-chevron {
+.rate__chevron {
   align-items: center;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-position: center;
@@ -429,13 +429,13 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 }
 
 /* 6. Mobile Defaults (hidden on desktop) */
-.mobile-header,
-.kj-mobile-rate-strip {
+.header-mobile,
+.rate-bar {
   display: none;
 }
 
 @media (max-width: 991px) {
-  .kj-mobile-rate-strip {
+  .rate-bar {
     display: block;
     overflow: hidden;
     width: 100%;
@@ -446,7 +446,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
     font-family: Montserrat, sans-serif;
   }
 
-  .kj-mobile-rate-strip__track {
+  .rate-bar__track {
     display: flex;
     width: max-content;
     min-width: max-content;
@@ -455,7 +455,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
     font-family: Montserrat, sans-serif;
   }
 
-  .kj-mobile-rate-strip__track span {
+  .rate-bar__track span {
     flex: 0 0 auto;
     display: inline-block;
     white-space: nowrap;
@@ -475,29 +475,29 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 }
 
 /* ============================================================
-   NAVBAR RULES MOVED FROM style.css
+   main-navBAR RULES MOVED FROM style.css
    281 rule blocks extracted
    ============================================================ */
 @media screen and (max-width: 767px) {
-  .site-header__brand {
+  .brand-link {
     padding-left: 10px}
 
 }
 
-.site-nav {
+.main-nav {
   z-index: 1000;
   background: #ddd;
   position: relative}
 
-.site-nav:after {
+.main-nav:after {
   content: " ";
   grid-area: 1 / 1 / 2 / 2;
   display: table}
 
-.site-nav:after {
+.main-nav:after {
   clear: both}
 
-.site-header__brand {
+.brand-link {
   float: left;
   color: #333;
   text-decoration: none;
@@ -544,18 +544,18 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 .nav-overlay [data-nav-menu-open] {
   top: 0}
 
-.site-nav[data-animation="over-left"] .nav-overlay {
+.main-nav[data-animation="over-left"] .nav-overlay {
   width: auto}
 
-.site-nav[data-animation="over-left"] [data-nav-menu-open] {
+.main-nav[data-animation="over-left"] [data-nav-menu-open] {
   z-index: 1;
   top: 0;
   right: auto}
 
-.site-nav[data-animation="over-right"] .nav-overlay {
+.main-nav[data-animation="over-right"] .nav-overlay {
   width: auto}
 
-.site-nav[data-animation="over-right"] [data-nav-menu-open] {
+.main-nav[data-animation="over-right"] [data-nav-menu-open] {
   z-index: 1;
   top: 0;
   left: auto}
@@ -564,18 +564,18 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   position: static}
 
 @media screen and (max-width: 767px) {
-  .site-header__brand {
+  .brand-link {
     padding-left: 10px}
 
 }
 
-.navigation-items {
+.main-navigation-items {
   flex: 1;
   justify-content: space-between;
   align-items: center;
   display: flex}
 
-.navigation-item {
+.main-navigation-item {
   opacity: .6;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -585,26 +585,26 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   font-weight: 500;
   line-height: 20px}
 
-.navigation-item:hover {
+.main-navigation-item:hover {
   opacity: .9}
 
-.navigation-item:active {
+.main-navigation-item:active {
   opacity: .8}
 
-.navigation-item.is-current {
+.main-navigation-item.is-current {
   opacity: 1;
   color: #1a1b1f;
   font-weight: 600}
 
-.navigation-item.is-current:hover {
+.main-navigation-item.is-current:hover {
   opacity: .8;
   color: #32343a}
 
-.navigation-item.is-current:active {
+.main-navigation-item.is-current:active {
   opacity: .7;
   color: #32343a}
 
-.navigation-2 {
+.main-navigation-2 {
   z-index: 9;
   background-color: var(--white);
   width: 100%;
@@ -631,7 +631,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   display: flex;
   position: static}
 
-.site-header__container {
+.header-content {
   border: 0 solid #000;
   justify-content: space-between;
   align-items: stretch;
@@ -672,7 +672,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 .dropdown-nav-link---brix.is-current {
   color: #4a3aff}
 
-.navigation-link {
+.main-navigation-link {
   letter-spacing: -.8px;
   justify-content: center;
   align-items: center;
@@ -686,7 +686,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   transition: all .2s;
   display: flex}
 
-.navigation-link.is-current {
+.main-navigation-link.is-current {
   color: #c11b21}
 
 .top-bar {
@@ -721,7 +721,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   margin-right: auto;
   display: flex}
 
-.site-header__actions {
+.header-actions {
   grid-column-gap: 12px;
   grid-row-gap: 12px;
   flex-flow: row;
@@ -730,7 +730,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   font-size: 16px;
   display: flex}
 
-.site-header__right {
+.header-right {
   grid-column-gap: 12px;
   align-items: center;
   display: flex}
@@ -740,7 +740,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   padding: 48px 40px 121px;
   display: flex}
 
-.site-header__inner {
+.header-inner {
   border: 0 solid #000;
   width: 100%}
 
@@ -778,7 +778,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 .nav-link---brix:hover {
   color: #4a3aff}
 
-.site-nav__slider {
+.main-nav__slider {
   display: none}
 
 .uui-dropdown-icon {
@@ -794,7 +794,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 .uui-dropdown-icon.white {
   color: #000}
 
-.navigation-link-2 {
+.main-navigation-link-2 {
   justify-content: center;
   align-items: center;
   padding: 20px 12px;
@@ -804,10 +804,10 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   transition: all .2s;
   display: flex}
 
-.navigation-link-2:hover {
+.main-navigation-link-2:hover {
   color: #7735f6}
 
-.navigation-link-2.is-current {
+.main-navigation-link-2.is-current {
   color: #144fff}
 
 .bko-text-12 {
@@ -817,7 +817,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   font-size: 1.2em;
   line-height: 1.3em}
 
-.bko-text-11 {
+.dropdown__heading {
   color: #000;
   text-align: left;
   letter-spacing: -.72px;
@@ -886,7 +886,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   padding-left: 6em;
   display: flex}
 
-.bko-dropdown-list.is-open {
+.dropdown__menu.is-active {
   background-color: #0000;
   flex-direction: column;
   justify-content: center;
@@ -908,7 +908,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   font-weight: 700;
   line-height: 1.3em}
 
-.bko-dropdown-toggle.is-open {
+.bko-dropdown-toggle.is-active {
   text-transform: capitalize;
   font-size: 1.3em;
   font-weight: 700;
@@ -968,7 +968,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   font-weight: 700;
   line-height: 1.3em}
 
-.bko-dropdown-toggle-2.is-open {
+.bko-dropdown-toggle-2.is-active {
   text-transform: capitalize;
   font-size: 1.3em;
   font-weight: 700;
@@ -1033,7 +1033,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   line-height: 1.3em;
   text-decoration: none}
 
-.bko-dropdown-toggle-3 {
+.dropdown__trigger {
   color: #000;
   text-transform: capitalize;
   padding: 10px 20px;
@@ -1041,7 +1041,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   font-weight: 700;
   display: block}
 
-.bko-dropdown-toggle-3.is-open {
+.dropdown__trigger.is-active {
   text-align: left;
   text-transform: capitalize;
   border-bottom: 3px solid var(--meron);
@@ -1084,7 +1084,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   font-weight: 700;
   line-height: 1.3em}
 
-.bko-dropdown-toggle-4.is-open {
+.bko-dropdown-toggle-4.is-active {
   text-transform: capitalize;
   font-size: 1.3em;
   font-weight: 700;
@@ -1140,7 +1140,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   align-items: stretch;
   display: flex}
 
-.site-header {
+.header {
   z-index: 9;
   background-color: #fff;
   flex-direction: column;
@@ -1182,7 +1182,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   line-height: 1.3em;
   display: block}
 
-.bko-text-11-2 {
+.dropdown__heading-2 {
   color: #000;
   text-align: left;
   letter-spacing: -.72px;
@@ -1213,10 +1213,10 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   line-height: 1.3em;
   display: block}
 
-.diamondlink-2 {
+.nav-link--diamond {
   text-decoration: none}
 
-.diamondlink-2.is-current {
+.nav-link--diamond.is-current {
   color: var(--meron)}
 
 .bko-text-1-2 {
@@ -1237,16 +1237,16 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 .platinumlink-2.is-current {
   color: var(--meron)}
 
-.goldlink-2 {
+.nav-link--gold {
   text-decoration: none}
 
-.goldlink-2.is-current {
+.nav-link--gold.is-current {
   color: var(--meron)}
 
-.silverlink-2 {
+.nav-link--silver {
   text-decoration: none}
 
-.silverlink-2.is-current {
+.nav-link--silver.is-current {
   color: var(--meron)}
 
 .bko-text-12-bangles {
@@ -1279,11 +1279,11 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   line-height: 1.3em;
   display: block}
 
-.bko-dropdown-1-3 {
+.dropdown__label {
   text-align: center;
 }
 
-.site-header__wrap {
+.header-wrap {
   margin-left: 0;
   margin-right: 0}
 
@@ -1297,13 +1297,13 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   line-height: 1.3em;
   display: block}
 
-.bko-link-111-2 {
+.nav-link {
   text-align: left;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.bko-link-111-2.is-current {
+.nav-link.is-current {
   color: #900000}
 
 .bko-text-12-4 {
@@ -1316,7 +1316,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   line-height: 1.3em;
   display: block}
 
-.site-nav {
+.main-nav {
   color: #283338;
   justify-content: center;
   align-items: center;
@@ -1476,19 +1476,19 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 .bko-text-12-studs-platinum {
   font-style: normal}
 
-.div23 {
+.nav-item__plain3 {
   flex-flow: column;
   align-items: center;
   display: flex}
 
-.bko-dropdown-1-3121 {
+.dropdown__label121 {
   text-align: center;
   letter-spacing: -.8px;
   font-family: var(--font-body);
   font-size: 20px;
   font-style: normal}
 
-.nav__link {
+.main-nav__link {
   color: #ffffffb3;
   text-transform: capitalize;
   border: 1px solid #282a28;
@@ -1501,24 +1501,24 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   transition: border-color .2s, color .2s;
   display: inline-flex}
 
-.nav__link[data-wf-focus-visible] {
+.main-nav__link[data-wf-focus-visible] {
   color: #fff;
   border-color: #fff}
 
-.nav__link.is-mobile {
+.main-nav__link.is-mobile {
   display: none}
 
-.nav__toggler {
+.main-nav__toggler {
   background-color: #1d1f1d;
   border-radius: 100rem;
   margin-left: .25rem;
   transition: all .2s}
 
-.nav__toggler[data-wf-focus-visible] {
+.main-nav__toggler[data-wf-focus-visible] {
   color: #000;
   background-color: #fff}
 
-.div234 {
+.nav-item__plain34 {
   display: none}
 
 .bko-grid-111 {
@@ -1563,21 +1563,21 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
 }
 
 @media screen and (max-width: 991px) {
-  .navigation-items {
+  .main-navigation-items {
     background-color: #fff}
 
-  .navigation-item {
+  .main-navigation-item {
     text-align: center;
     padding: 15px 30px;
     transition: background-color .4s, opacity .4s, color .4s}
 
-  .navigation-item:hover {
+  .main-navigation-item:hover {
     background-color: #f7f8f9}
 
-  .navigation-item:active {
+  .main-navigation-item:active {
     background-color: #eef0f3}
 
-  .navigation-2 {
+  .main-navigation-2 {
     display: none}
 
   .dropdown-nav-pages-wrapper-v1---brix {
@@ -1605,10 +1605,10 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
     grid-auto-columns: 1fr;
     display: grid}
 
-  .site-header__right {
+  .header-right {
     grid-column-gap: 18px}
 
-  .site-header__brand-area {
+  .header-brand {
     display: none}
 
   .dropdown-nav-main-wrapper-v1---brix {
@@ -1620,7 +1620,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
     grid-auto-columns: 1fr;
     padding: 40px 24px}
 
-  .site-header__inner {
+  .header-inner {
     background-color: #fff}
 
   .dropdown-nav---brix {
@@ -1661,13 +1661,13 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   .bko-wrap-11 {
     display: none}
 
-  .bko-dropdown-list.is-open {
+  .dropdown__menu.is-active {
     position: relative}
 
   .bko-dropdown-toggle {
     display: flex}
 
-  .bko-dropdown-0 {
+  .dropdown {
     flex-direction: column;
     align-items: flex-start;
     display: block}
@@ -1722,12 +1722,12 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
     margin-right: 0;
     padding: 1em 0 2em}
 
-  .bko-dropdown-toggle-3 {
+  .dropdown__trigger {
     padding-top: 0;
     padding-bottom: 0;
     display: flex}
 
-  .bko-dropdown-toggle-3.is-open {
+  .dropdown__trigger.is-active {
     width: auto;
     margin-left: 0;
     margin-right: 0}
@@ -1752,10 +1752,10 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   .bko-dropdown-1-2 {
     position: relative}
 
-  .bko-wrap-111-2 {
+  .nav-item {
     margin-right: 0}
 
-  .site-header {
+  .header {
     display: none}
 
   .bko-dropdown-2-3 {
@@ -1768,23 +1768,23 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
     margin-right: 0;
     padding: 1em 0 2em}
 
-  .bko-dropdown-1-3 {
+  .dropdown__label {
     position: relative}
 
-  .bko-dropdown-1-3121 {
+  .dropdown__label121 {
     position: relative}
 
   .bko-wrap-111121 {
     margin-right: 0}
 
-  .nav__link {
+  .main-nav__link {
     border-style: none;
     border-radius: 0;
     margin-left: 0;
     margin-right: 0;
     display: flex}
 
-  .nav__toggler {
+  .main-nav__toggler {
     color: #fff}
 
   .bko-grid-111 {
@@ -1819,7 +1819,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
     flex-direction: column;
     display: flex}
 
-  .site-header__right {
+  .header-right {
     grid-column-gap: 15px}
 
   .dropdown-nav-main-wrapper-v1---brix {
@@ -1840,7 +1840,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   .bko-dropdown-toggle {
     display: flex}
 
-  .bko-dropdown-0 {
+  .dropdown {
     display: block}
 
   .bko-selections-1 {
@@ -1857,7 +1857,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   .bko-dropdown-2-2 {
     margin-right: 0}
 
-  .bko-dropdown-toggle-3 {
+  .dropdown__trigger {
     display: flex}
 
   .bko-wrap-11-2 {
@@ -1871,7 +1871,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   .bko-dropdown-2-3 {
     margin-right: 0}
 
-  .bko-link-111-2 {
+  .nav-link {
   }
 
   .bko-grid-111 {
@@ -1916,7 +1916,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   .bko-wrap-111 {
     margin-right: 0}
 
-  .bko-dropdown-list.is-open {
+  .dropdown__menu.is-active {
     padding-left: 1.2rem;
     padding-right: 1.2rem}
 
@@ -1949,7 +1949,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
     margin-left: 3em;
     margin-right: 3em}
 
-  .bko-dropdown-toggle-3 {
+  .dropdown__trigger {
     padding-top: 0;
     padding-bottom: 0;
     font-size: 1.3em;
@@ -1958,7 +1958,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   .bko-wrap-11-2 {
     display: none}
 
-  .div2 {
+  .nav-item__plain {
     margin-bottom: 0;
     padding-left: 0;
     padding-right: 0}
@@ -1970,13 +1970,13 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
     display: block;
     overflow: auto}
 
-  .bko-wrap-111-2 {
+  .nav-item {
     margin-right: 0}
 
   .bko-wrap-111121 {
     margin-right: 0}
 
-  .nav__link.is-mobile {
+  .main-nav__link.is-mobile {
     display: flex}
 
   .bko-grid-111 {
@@ -1993,7 +1993,7 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   text-decoration: none;
   display: block}
 
-.site-nav {
+.main-nav {
   background: var(--meron) !important}
 
 .category-menu-link {
@@ -2017,10 +2017,10 @@ header.site-header .desktop-header .site-header__inner .layout-container.content
   box-shadow: 0 8px 20px rgba(153, 31, 35, .08);
   transform: translateY(-2px)}
 
-header .site-nav {
+header .main-nav {
   background-color: var(--meron) !important}
 
-header .site-header__container {
+header .header-content {
   overflow: visible !important}
 
 header .nav-menu-3 {
@@ -2028,37 +2028,37 @@ header .nav-menu-3 {
   align-items: center !important;
   gap: 18px !important}
 
-header .navigation-2 .goldlink-2 {
+header .main-navigation-2 .nav-link--gold {
   color: #fff !important}
 
-header .navigation-2 a {
+header .main-navigation-2 a {
   color: #ffffff !important;
   opacity: 1 !important;
   visibility: visible !important;
   display: inline-block !important}
 
-header .navigation-2 .is-current div {
+header .main-navigation-2 .is-current div {
   color: #fff5d8 !important;
   opacity: 1 !important;
   visibility: visible !important}
 
-header .navigation-2 .div2 a:hover {
+header .main-navigation-2 .nav-item__plain a:hover {
   color: #fff5d8 !important}
 
-header .navigation-2 .bko-text-12-3-copy {
+header .main-navigation-2 .bko-text-12-3-copy {
   color: #231f20 !important}
 
-header .navigation-2 .category-menu-link:hover {
+header .main-navigation-2 .category-menu-link:hover {
   color: var(--meron) !important}
 
-header .site-nav {
+header .main-nav {
   background-color: var(--meron) !important}
 
-.kj-mobile-rate-strip {
+.rate-bar {
   display: none}
 
 @media (max-width: 991px) {
-  header.site-header.header .mobile-header.site-nav {
+  header.header.header .header-mobile.main-nav {
     background: var(--meron) !important;
     display: flex !important;
     width: 100% !important;
@@ -2068,13 +2068,13 @@ header .site-nav {
     position: relative !important;
     z-index: 10000 !important}
 
-  header.site-header.header .mobile-header__container {
+  header.header.header .header-mobile__inner {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important}
 
-  header.site-header.header .mobile-nav .kj-mobile-menu-link {
+  header.header.header .nav-mobile .nav-mobile__link {
     color: #222 !important;
     background: #ffffff !important;
     font-family: Mulish, Arial, sans-serif !important;
@@ -2084,12 +2084,12 @@ header .site-nav {
     border-bottom: 1px solid rgba(0, 0, 0, .06) !important;
     text-decoration: none !important}
 
-  header.site-header.header .mobile-nav .kj-mobile-menu-image {
+  header.header.header .nav-mobile .nav-mobile__image {
     display: none !important}
 
 }
 
-.mobile-menu-toggle {
+.nav-toggle {
   background: transparent;
   border: 0;
   padding: 0;
@@ -2097,11 +2097,11 @@ header .site-nav {
 }
 
 /* ============================================================
-   NAVBAR RULES MOVED FROM responsive.css
+   main-navBAR RULES MOVED FROM responsive.css
    69 rule blocks extracted
    ============================================================ */
 @media (max-width: 991px) {
-  .dropdown:not(.rate-dropdown):not(.is-open):not(:hover)>.dropdown-list {
+  .dropdown:not(.rate-select):not(.is-active):not(:hover)>.dropdown-list {
     max-height: 0;
     overflow: hidden;
   }
@@ -2109,7 +2109,7 @@ header .site-nav {
 }
 
 @media (max-width: 991px) {
-  header.site-header .logos-marquee {
+  header.header .logos-marquee {
     height: auto !important;
     min-height: 0 !important;
   }
@@ -2117,13 +2117,13 @@ header .site-nav {
 }
 
 @media (max-width: 991px) {
-  header.site-header {
+  header.header {
     margin-bottom: 0 !important;
   }
 
 }
 
-header.site-header .rate-dropdown:not(.kj-rate-hidden):not([hidden]) {
+header.header .rate-select:not(.rate--hidden):not([hidden]) {
   align-items: center !important;
   display: inline-flex !important;
   font-family: 'Montserrat', sans-serif !important;
@@ -2131,7 +2131,7 @@ header.site-header .rate-dropdown:not(.kj-rate-hidden):not([hidden]) {
   min-height: 100% !important;
 }
 
-header.site-header .rate-toggle {
+header.header .rate-btn {
   align-items: center !important;
   color: inherit !important;
   display: inline-flex !important;
@@ -2145,7 +2145,7 @@ header.site-header .rate-toggle {
   transition: color 180ms ease, transform 180ms ease, background-color 180ms ease !important;
 }
 
-header.site-header .navigation-2 .rate-toggle {
+header.header .main-navigation-2 .rate-btn {
   color: #ffffff !important;
   font-size: clamp(17px, 1.18vw, 20px) !important;
   font-weight: 700 !important;
@@ -2154,26 +2154,26 @@ header.site-header .navigation-2 .rate-toggle {
   white-space: nowrap !important;
 }
 
-header.site-header .navigation-2 .rate-dropdown.is-open .rate-toggle {
+header.header .main-navigation-2 .rate-select.is-active .rate-btn {
   color: #fff4cc !important;
   transform: translateY(-1px);
 }
 
-header.site-header .rate-toggle .rate-coin {
+header.header .rate-btn .rate__icon {
   flex: 0 0 28px !important;
   height: 28px !important;
   object-fit: contain !important;
   width: 28px !important;
 }
 
-header.site-header .rate-row .rate-coin {
+header.header .rate-option .rate__icon {
   flex: 0 0 24px !important;
   height: 24px !important;
   object-fit: contain !important;
   width: 24px !important;
 }
 
-header.site-header .rate-chevron {
+header.header .rate__chevron {
   border-color: currentColor !important;
   height: 8px !important;
   margin-left: 2px !important;
@@ -2181,13 +2181,13 @@ header.site-header .rate-chevron {
 }
 
 @media (max-width: 991px) {
-  header.site-header .rate-row .rate-coin {
+  header.header .rate-option .rate__icon {
     flex-basis: 24px !important;
     height: 24px !important;
     width: 24px !important;
   }
 
-  header.site-header .rate-toggle {
+  header.header .rate-btn {
     font-size: 15px !important;
     max-width: calc(100vw - 42px) !important;
   }
@@ -2195,31 +2195,31 @@ header.site-header .rate-chevron {
 }
 
 @media (min-width: 992px) {
-  header.site-header .desktop-header.site-nav {
+  header.header .header-desktop.main-nav {
     display: flex !important;
   }
 
 }
 
 @media (max-width: 991px) {
-  header.site-header .desktop-header.site-nav {
+  header.header .header-desktop.main-nav {
     display: none !important;
   }
 
 }
 
 @media (max-width: 991px) {
-  header.site-header.header {
+  header.header.header {
     display: block !important;
     width: 100% !important;
     overflow: visible !important;
   }
 
-  header.site-header.header .desktop-header.site-nav {
+  header.header.header .header-desktop.main-nav {
     display: none !important;
   }
 
-  header.site-header.header .site-header__right {
+  header.header.header .header-right {
     display: flex !important;
     align-items: center !important;
     justify-content: flex-end !important;
@@ -2228,7 +2228,7 @@ header.site-header .rate-chevron {
 
 }
 
-  .kj-mobile-rate-strip__track {
+  .rate-bar__track {
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
@@ -2237,7 +2237,7 @@ header.site-header .rate-chevron {
     font-family: Montserrat, sans-serif;
   }
 
-  .kj-mobile-rate-strip__track span {
+  .rate-bar__track span {
     padding-right: 80px;
     flex-shrink: 0;
     font-family: Montserrat, sans-serif;
@@ -2254,7 +2254,7 @@ header.site-header .rate-chevron {
   }
 
 @media (max-width: 991px) {
-  header.site-header.header .mobile-header.site-nav {
+  header.header.header .header-mobile.main-nav {
     background: #991f23 !important;
     display: flex !important;
     width: 100% !important;
@@ -2265,14 +2265,14 @@ header.site-header .rate-chevron {
     z-index: 10000 !important;
   }
 
-  header.site-header.header .mobile-header__container {
+  header.header.header .header-mobile__inner {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
   }
 
-  header.site-header.header .mobile-menu-toggle.mobile-menu-button {
+  header.header.header .nav-toggle.nav-toggle__btn {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -2284,7 +2284,7 @@ header.site-header .rate-chevron {
     padding: 0 !important;
   }
 
-  header.site-header.header .mobile-nav.site-nav__panel {
+  header.header.header .nav-mobile.nav-panel {
     display: flex !important;
     position: absolute !important;
     top: 100% !important;
@@ -2306,7 +2306,7 @@ header.site-header .rate-chevron {
     transition: opacity 240ms ease, transform 300ms ease, visibility 0s linear 300ms !important;
   }
 
-  header.site-header.header .mobile-nav.site-nav__panel.is-open {
+  header.header.header .nav-mobile.nav-panel.is-active {
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto !important;
@@ -2317,7 +2317,7 @@ header.site-header .rate-chevron {
     transition: opacity 240ms ease, transform 300ms ease, visibility 0s linear 0s !important;
   }
 
-  header.site-header.header .mobile-nav .kj-mobile-menu-link {
+  header.header.header .nav-mobile .nav-mobile__link {
     color: #222 !important;
     background: #ffffff !important;
     font-family: 'Montserrat', sans-serif !important;
@@ -2329,14 +2329,14 @@ header.site-header .rate-chevron {
     text-decoration: none !important;
   }
 
-  header.site-header.header .mobile-nav .kj-mobile-menu-image {
+  header.header.header .nav-mobile .nav-mobile__image {
     display: none !important;
   }
 
 }
 
 @media (max-width: 991px) {
-  header.site-header.header .mobile-menu-toggle.mobile-menu-button {
+  header.header.header .nav-toggle.nav-toggle__btn {
     background: transparent !important;
     border: 0 !important;
     width: 48px !important;
@@ -2351,14 +2351,14 @@ header.site-header .rate-chevron {
 }
 
 @media (max-width: 991px) {
-  .mobile-menu-toggle.mobile-menu-button.is-open {
+  .nav-toggle.nav-toggle__btn.is-active {
     transform: none !important;
   }
 
 }
 
 @media (max-width: 991px) {
-  .mobile-menu-toggle.mobile-menu-button {
+  .nav-toggle.nav-toggle__btn {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -2372,7 +2372,7 @@ header.site-header .rate-chevron {
     box-shadow: none !important;
   }
 
-  .mobile-menu-toggle__line {
+  .nav-toggle__bar {
     width: 28px !important;
     height: 3px !important;
     background: #ffffff !important;
@@ -2396,7 +2396,7 @@ header.site-header .rate-chevron {
 
   /* Transition handled in main rule above */
 
-  header.site-header.header .mobile-nav .kj-mobile-menu-link {
+  header.header.header .nav-mobile .nav-mobile__link {
     transition: all 0.25s ease !important;
     position: relative !important;
     padding: 16px 12px !important;
@@ -2406,14 +2406,14 @@ header.site-header .rate-chevron {
     background: transparent !important;
   }
 
-  header.site-header.header .mobile-nav .kj-mobile-menu-link:active {
+  header.header.header .nav-mobile .nav-mobile__link:active {
     color: #991f23 !important;
     background: rgba(153, 31, 35, 0.03) !important;
     transform: translateX(5px) !important;
     border-color: transparent !important;
   }
 
-  header.site-header.header .mobile-nav .kj-mobile-menu-link::after {
+  header.header.header .nav-mobile .nav-mobile__link::after {
     content: '' !important;
     position: absolute !important;
     bottom: 0 !important;
@@ -2424,16 +2424,16 @@ header.site-header .rate-chevron {
     transition: width 0.3s ease !important;
   }
 
-  header.site-header.header .mobile-nav .kj-mobile-menu-link:hover::after {
+  header.header.header .nav-mobile .nav-mobile__link:hover::after {
     width: 40px !important;
   }
 
-  .mobile-menu-toggle.mobile-menu-button {
+  .nav-toggle.nav-toggle__btn {
     transition: background 0.3s ease, transform 0.2s ease !important;
     border-radius: 8px !important;
   }
 
-  .mobile-menu-toggle.mobile-menu-button:active {
+  .nav-toggle.nav-toggle__btn:active {
     transform: scale(0.92) !important;
     background: rgba(255, 255, 255, 0.1) !important;
   }
@@ -2447,54 +2447,54 @@ header.site-header .rate-chevron {
     100% { transform: scale(1); box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
   }
 
-  .mobile-menu-toggle.mobile-menu-button.is-open {
+  .nav-toggle.nav-toggle__btn.is-active {
     animation: hamburgerPulse 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
   }
 
-  .mobile-menu-toggle.mobile-menu-button:hover .mobile-menu-toggle__line {
+  .nav-toggle.nav-toggle__btn:hover .nav-toggle__bar {
     background: #fdf2c6 !important; /* Soft gold tint */
     box-shadow: 0 0 8px rgba(217, 182, 60, 0.6) !important;
   }
 
-  header.site-header.header .mobile-nav .kj-mobile-menu-link:active {
+  header.header.header .nav-mobile .nav-mobile__link:active {
     animation: linkClickRipple 0.3s ease forwards !important;
   }
 
 }
 
 @media (min-width: 992px) {
-  header.site-header .desktop-header.site-nav {
-    display: flex !important; /* Force desktop nav to show */
+  header.header .header-desktop.main-nav {
+    display: flex !important; /* Force desktop main-nav to show */
   }
 
-  .kj-mobile-rate-strip {
+  .rate-bar {
     display: none !important; /* Force mobile elements to hide */
   }
 
 }
 
 @media (max-width: 991px) {
-  .desktop-header.site-nav {
-    display: none !important; /* Force desktop nav to hide */
+  .header-desktop.main-nav {
+    display: none !important; /* Force desktop main-nav to hide */
   }
 
-  .kj-mobile-rate-strip {
+  .rate-bar {
     display: flex !important; /* Show rate strip */
     width: 100% !important;
   }
 
-  .mobile-header.site-nav {
+  .header-mobile.main-nav {
     display: flex !important; /* Show mobile header */
   }
 
 }
 
 @media (max-width: 991px) {
-  .desktop-header {
+  .header-desktop {
     display: none !important;
   }
 
-  .kj-mobile-rate-strip {
+  .rate-bar {
     display: flex !important;
     align-items: center !important;
     background: #90030a !important; /* Live uses #90030a */
@@ -2506,7 +2506,7 @@ header.site-header .rate-chevron {
     font-family: Montserrat, sans-serif !important;
   }
 
-  .mobile-header {
+  .header-mobile {
     display: flex !important;
     border-bottom: 1px solid rgba(68, 85, 103, 0.11) !important;
     flex-direction: row !important;
@@ -2519,7 +2519,7 @@ header.site-header .rate-chevron {
     z-index: 10002 !important;
   }
 
-  .mobile-header .brand img {
+  .header-mobile .brand img {
     height: 60px !important;
     max-height: 60px !important;
     object-fit: contain !important;
@@ -2528,7 +2528,7 @@ header.site-header .rate-chevron {
 
   /* Overlapping rules removed to prevent conflicts */
 
-  .kj-mobile-menu-link {
+  .nav-mobile__link {
     display: block !important;
     padding: 15px 0 !important;
     white-space: normal !important;
@@ -2540,11 +2540,11 @@ header.site-header .rate-chevron {
     text-decoration: none !important;
   }
 
-  .kj-mobile-menu-image {
+  .nav-mobile__image {
     display: none !important;
   }
 
-  .mobile-menu-toggle {
+  .nav-toggle {
     background-color: transparent !important;
     border: none !important;
     cursor: pointer !important;
@@ -2555,23 +2555,23 @@ header.site-header .rate-chevron {
     z-index: 10003 !important;
   }
 
-  .mobile-menu-toggle__line {
+  .nav-toggle__bar {
     width: 25px !important;
     height: 3px !important;
     background-color: #fff !important; /* White lines for hamburger on red bg */
     transition: all 0.3s ease !important;
   }
 
-  .mobile-menu-toggle.is-open .mobile-menu-toggle__line:nth-child(1) {
+  .nav-toggle.is-active .nav-toggle__bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg) !important;
     background-color: #d4af37 !important; /* Gold when open */
   }
 
-  .mobile-menu-toggle.is-open .mobile-menu-toggle__line:nth-child(2) {
+  .nav-toggle.is-active .nav-toggle__bar:nth-child(2) {
     opacity: 0 !important;
   }
 
-  .mobile-menu-toggle.is-open .mobile-menu-toggle__line:nth-child(3) {
+  .nav-toggle.is-active .nav-toggle__bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg) !important;
     background-color: #d4af37 !important; /* Gold when open */
   }
@@ -2581,7 +2581,7 @@ header.site-header .rate-chevron {
 @media (max-width: 991px) {
   /* Consolidated into main rule above */
 
-  header.site-header.header .mobile-menu-toggle.mobile-menu-button {
+  header.header.header .nav-toggle.nav-toggle__btn {
     display: inline-flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -2595,7 +2595,7 @@ header.site-header .rate-chevron {
     cursor: pointer !important;
   }
 
-  header.site-header.header .mobile-menu-toggle__line {
+  header.header.header .nav-toggle__bar {
     display: block !important;
     width: 28px !important;
     height: 3px !important;
@@ -2605,22 +2605,22 @@ header.site-header .rate-chevron {
     transform-origin: center !important;
   }
 
-  header.site-header.header .mobile-menu-toggle.mobile-menu-button.is-open .mobile-menu-toggle__line:nth-child(1) {
+  header.header.header .nav-toggle.nav-toggle__btn.is-active .nav-toggle__bar:nth-child(1) {
     transform: translateY(9px) rotate(45deg) !important;
   }
 
-  header.site-header.header .mobile-menu-toggle.mobile-menu-button.is-open .mobile-menu-toggle__line:nth-child(2) {
+  header.header.header .nav-toggle.nav-toggle__btn.is-active .nav-toggle__bar:nth-child(2) {
     opacity: 0 !important;
   }
 
-  header.site-header.header .mobile-menu-toggle.mobile-menu-button.is-open .mobile-menu-toggle__line:nth-child(3) {
+  header.header.header .nav-toggle.nav-toggle__btn.is-active .nav-toggle__bar:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg) !important;
   }
 
 }
 
 @media (max-width: 425px) {
-  header.site-header.header .mobile-nav.site-nav__panel {
+  header.header.header .nav-mobile.nav-panel {
     left: 12px !important;
     right: 12px !important;
   }
@@ -2628,19 +2628,19 @@ header.site-header .rate-chevron {
 }
 
 /* ============================================================
-   REMAINING NAVBAR RULES FROM responsive.css
+   REMAINING main-navBAR RULES FROM responsive.css
    (nested @media blocks that the parser couldn't flatten)
    ============================================================ */
 
-/* Phase 6 Mobile Navbar Regression Fix */
+/* Phase 6 Mobile main-navbar Regression Fix */
 @media (max-width: 991px) {
-  header.site-header.header {
+  header.header.header {
     display: block !important;
     width: 100% !important;
     overflow: visible !important;
   }
 
-  header.site-header.header .mobile-header.site-nav {
+  header.header.header .header-mobile.main-nav {
     display: flex !important;
     width: 100% !important;
     min-height: 120px !important;
@@ -2649,14 +2649,14 @@ header.site-header .rate-chevron {
     box-sizing: border-box !important;
   }
 
-  header.site-header.header .mobile-header__container {
+  header.header.header .header-mobile__inner {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
   }
 
-  header.site-header.header .mobile-menu-toggle.mobile-menu-button {
+  header.header.header .nav-toggle.nav-toggle__btn {
     display: flex !important;
     width: 48px !important;
     height: 48px !important;
@@ -2675,49 +2675,49 @@ header.site-header .rate-chevron {
 
 /* ============================================================
    STRICT HEADER STRUCTURAL ISOLATION
-   Must be LAST in navbar.css to override all earlier display rules.
+   Must be LAST in main-navbar.css to override all earlier display rules.
    ============================================================ */
 
 /* DESKTOP VIEW (>= 992px) */
 @media (min-width: 992px) {
-  header.site-header .desktop-header.site-nav {
+  header.header .header-desktop.main-nav {
     display: flex !important;
   }
 
-  header.site-header .mobile-header.site-nav,
-  header.site-header .kj-mobile-rate-strip,
-  .mobile-header.site-nav,
-  .kj-mobile-rate-strip {
+  header.header .header-mobile.main-nav,
+  header.header .rate-bar,
+  .header-mobile.main-nav,
+  .rate-bar {
     display: none !important;
   }
 }
 
 /* MOBILE VIEW (<= 991px) */
 @media (max-width: 991px) {
-  header.site-header .desktop-header.site-nav,
-  .desktop-header.site-nav {
+  header.header .header-desktop.main-nav,
+  .header-desktop.main-nav {
     display: none !important;
   }
 
-  header.site-header .kj-mobile-rate-strip,
-  .kj-mobile-rate-strip {
+  header.header .rate-bar,
+  .rate-bar {
     display: flex !important;
     width: 100% !important;
   }
 
-  header.site-header .mobile-header.site-nav,
-  .mobile-header.site-nav {
+  header.header .header-mobile.main-nav,
+  .header-mobile.main-nav {
     display: flex !important;
   }
 }
 
 /* Hide desktop header completely on mobile */
 @media (max-width: 991px) {
-  .desktop-header {
+  .header-desktop {
     display: none !important;
   }
 
-  .kj-mobile-rate-strip {
+  .rate-bar {
     display: flex !important;
     align-items: center !important;
     background: #90030a !important;
@@ -2729,7 +2729,7 @@ header.site-header .rate-chevron {
     font-family: Montserrat, sans-serif !important;
   }
 
-  .mobile-header {
+  .header-mobile {
     display: flex !important;
     border-bottom: 1px solid rgba(68, 85, 103, 0.11) !important;
     flex-direction: row !important;
@@ -2742,7 +2742,7 @@ header.site-header .rate-chevron {
     z-index: 10002 !important;
   }
 
-  .mobile-header .brand img {
+  .header-mobile .brand img {
     height: 60px !important;
     max-height: 60px !important;
     object-fit: contain !important;
@@ -2751,7 +2751,7 @@ header.site-header .rate-chevron {
 
   /* Overlapping rules removed to prevent conflicts */
 
-  .kj-mobile-menu-link {
+  .nav-mobile__link {
     display: block !important;
     padding: 15px 0 !important;
     white-space: normal !important;
@@ -2763,11 +2763,11 @@ header.site-header .rate-chevron {
     text-decoration: none !important;
   }
 
-  .kj-mobile-menu-image {
+  .nav-mobile__image {
     display: none !important;
   }
 
-  .mobile-menu-toggle {
+  .nav-toggle {
     background-color: transparent !important;
     border: none !important;
     cursor: pointer !important;
@@ -2778,23 +2778,23 @@ header.site-header .rate-chevron {
     z-index: 10003 !important;
   }
 
-  .mobile-menu-toggle__line {
+  .nav-toggle__bar {
     width: 25px !important;
     height: 3px !important;
     background-color: #fff !important;
     transition: all 0.3s ease !important;
   }
 
-  .mobile-menu-toggle.is-open .mobile-menu-toggle__line:nth-child(1) {
+  .nav-toggle.is-active .nav-toggle__bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg) !important;
     background-color: #d4af37 !important;
   }
 
-  .mobile-menu-toggle.is-open .mobile-menu-toggle__line:nth-child(2) {
+  .nav-toggle.is-active .nav-toggle__bar:nth-child(2) {
     opacity: 0 !important;
   }
 
-  .mobile-menu-toggle.is-open .mobile-menu-toggle__line:nth-child(3) {
+  .nav-toggle.is-active .nav-toggle__bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg) !important;
     background-color: #d4af37 !important;
   }

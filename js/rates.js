@@ -27,13 +27,13 @@ function getRateLabel(type, rates) {
 }
 
 function updateDesktopRateDropdown(rates) {
-  const toggleLabel = document.querySelector(".rate-toggle [data-rate-type]");
+  const toggleLabel = document.querySelector(".rate-btn [data-rate-type]");
 
   if (toggleLabel) {
     toggleLabel.textContent = getRateLabel(toggleLabel.dataset.rateType, rates);
   }
 
-  document.querySelectorAll(".rate-row[data-rate-type]").forEach((row) => {
+  document.querySelectorAll(".rate-option[data-rate-type]").forEach((row) => {
     const type = row.dataset.rateType;
     const label = getRateLabel(type, rates);
     const labelSpan = row.querySelector("[data-rate-label]");
