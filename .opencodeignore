@@ -1,0 +1,20 @@
+# Large CSS files - use grep with offset/limit instead of reading whole files
+css/style.css
+css/responsive.css
+css/navbar.css
+css/desktop.css
+css/components.css
+
+# Binary/test artifacts
+test-screenshots/
+graphify-out/
+node_modules/
+*.png
+*.jpg
+*.webp
+*.svg
+*.woff
+*.woff2
+
+# Lock files
+package-lock.json
