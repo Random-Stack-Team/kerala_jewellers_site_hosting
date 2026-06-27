@@ -174,7 +174,6 @@
     width: 100% !important;
   }
 
-
   .footer-block .link-block-5 {
     height: 28px !important;
     width: 28px !important;
@@ -605,10 +604,6 @@
     white-space: nowrap !important;
   }
 
-  .div-block-4612 .hero-split-4 .heading-2 {
-    font-weight: 600 !important;
-  }
-
   .div-block-4612 .margin-bottom-24px {
     font-family: Mulish, sans-serif !important;
     font-size: 22px !important;
@@ -634,30 +629,6 @@
     min-height: 51.7656px !important;
     padding: 10px 20px !important;
     width: auto !important;
-  }
-
-  .div-block-4612 .hero-split-3 .margin-bottom-24px {
-    color: #fff8d2 !important;
-  }
-
-  .div-block-4612 .hero-split-4 .margin-bottom-24px {
-    color: #770b21 !important;
-  }
-
-  .div-block-4612 .hero-split-1 .button-3 {
-    color: #304e51 !important;
-  }
-
-  .div-block-4612 .hero-split-4 .button-3 {
-    color: #770b21 !important;
-  }
-
-  .div-block-4612 .hero-split-3 .button-3 {
-    color: #b00000 !important;
-  }
-
-  .div-block-4612 .hero-split-2 .button-321 {
-    color: #1e2d5e !important;
   }
 
 }
@@ -917,7 +888,6 @@
   display: none !important;
 }
 
-
 .footer-block .kj-phone-number {
   display: block !important;
   font-variant-numeric: tabular-nums !important;
@@ -959,7 +929,6 @@
     line-height: 1.25 !important;
     margin-top: 16px !important;
   }
-
 
   .footer-block .kj-phone-number {
     font-size: 15px !important;
@@ -1379,11 +1348,6 @@
     height: 410px !important;
     margin-top: 16px !important;
     width: min(330px, calc(100vw - 36px)) !important;
-  }
-
-  .section-16 .slider-arrow {
-    display: none !important;
-    pointer-events: none !important;
   }
 
 }
@@ -2097,7 +2061,6 @@ body {
   letter-spacing: 0.01em;
 }
 
-
 .legal-page .richtext {
   box-shadow: var(--kj-shadow-soft) !important;
 }
@@ -2114,9 +2077,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
 
   *::after {
     animation-duration: 0.01ms !important;
@@ -2131,7 +2091,6 @@ body {
   html {
     scroll-behavior: auto;
   }
-
 
   .product-card:hover .product-card-image {
     filter: none;
@@ -2436,15 +2395,6 @@ body:has(.map-3) iframe {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 
-  .banner-2 .team5_item {
-    align-items: center !important;
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100% !important;
-    justify-content: flex-start !important;
-    text-align: center !important;
-  }
-
   .banner-2 .team5_item .margin-bottom.margin-small {
     margin-bottom: 18px !important;
   }
@@ -2623,7 +2573,7 @@ body.legal-page {
 
 .banner-slider1 .intro-content-2.cc-homepage {
   justify-content: center;
-  padding-top: clamp(12px, 1.5vw, 24px);
+  padding-top: clamp(40px, 5vw, 80px);
   padding-bottom: clamp(16px, 2vw, 30px);
   box-sizing: border-box;
 }
@@ -2636,18 +2586,9 @@ body.legal-page {
   grid-row-gap: 15px;
 }
 
-.banner-slider1 .paragraph-bigger-2 {
-  margin-bottom: 10px;
-}
-
 .banner-slider4 .intro-content-2 {
   margin-bottom: 0 !important;
   padding-bottom: 10px !important;
-}
-
-.banner-slider4 .paragraph-bigger-2 {
-  text-indent: 0;
-  outline: none;
 }
 
 /* 2. Product detail box scroll option removal */
@@ -2888,6 +2829,122 @@ body.legal-page {
 
   .blog-post__container {
     padding: 24px 16px}}
+
+/* ---- Contact Page Responsive (tablet + mobile) ---- */
+@media (max-width: 991px) {
+  .premium-contact-hero {
+    padding: 36px 0 28px}
+
+  .premium-contact-card {
+    padding: 28px}
+
+  .premium-branches-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px}
+
+  .branch-map-embed {
+    height: 140px}
+}
+
+@media (max-width: 767px) {
+  .premium-contact-hero {
+    padding: 28px 0 20px}
+
+  .premium-contact-title {
+    font-size: 26px}
+
+  .premium-contact-subtitle {
+    font-size: 14px}
+
+  .premium-contact-card {
+    padding: 20px}
+
+  .premium-card-title {
+    font-size: 20px}
+
+  .premium-branches-grid {
+    grid-template-columns: 1fr;
+    gap: 16px}
+
+  .premium-branch-card {
+    padding: 16px}
+
+  .branch-map-embed {
+    height: 160px;
+    margin: 10px 0}
+
+  .premium-branches-title {
+    font-size: 22px;
+    margin-bottom: 20px}
+
+  .premium-info-text p {
+    font-size: 14px}
+
+  .premium-info-list li {
+    font-size: 13px;
+    margin-bottom: 10px}
+
+  .premium-social-links {
+    gap: 12px}
+
+  .premium-social-links a {
+    width: 36px;
+    height: 36px}
+
+  .premium-social-links a svg {
+    width: 18px;
+    height: 18px}
+
+  .contact-info-note {
+    font-size: 12px}
+
+  .btn-solid-maroon-submit {
+    padding: 12px 20px;
+    font-size: 14px}
+}
+
+@media (max-width: 479px) {
+  .premium-contact-hero {
+    padding: 20px 0 16px}
+
+  .premium-contact-title {
+    font-size: 22px;
+    letter-spacing: 0.5px}
+
+  .premium-contact-subtitle {
+    font-size: 13px}
+
+  .premium-container {
+    padding: 0 14px}
+
+  .premium-contact-card {
+    padding: 16px;
+    border-radius: 8px}
+
+  .premium-card-title {
+    font-size: 18px;
+    margin-bottom: 16px}
+
+  .premium-branch-card h4 {
+    font-size: 15px}
+
+  .branch-address {
+    font-size: 13px}
+
+  .branch-phone {
+    font-size: 13px;
+    margin-bottom: 14px}
+
+  .branch-actions a {
+    padding: 8px 0;
+    font-size: 12px}
+
+  .premium-contact-page {
+    padding-bottom: 30px}
+
+  .premium-branches-section {
+    padding-top: 10px}
+}
 
 @media (max-width: 479px) {
   .dynamic-items.row {
