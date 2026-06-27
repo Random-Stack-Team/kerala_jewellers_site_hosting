@@ -161,7 +161,7 @@ header.header .header-desktop .header-inner .layout-container.content-container 
 .nav-panel {
   justify-content: center;
   align-items: center;
-  gap: clamp(4px, 0.8vw, 16px);
+  gap: 0;
   font-size: 15px;
   display: flex;
   position: static;
@@ -183,7 +183,7 @@ header.header .header-desktop .header-inner .layout-container.content-container 
 .nav-panel .nav-item .nav-item__plain > a,
 .nav-panel > .nav-item > .dropdown > .dropdown-toggle > a {
   white-space: nowrap;
-  padding: 8px 10px;
+  padding: 12px 20px;
   display: inline-block;
   position: relative;
   transition: color 0.3s ease;
@@ -197,21 +197,13 @@ header.header .header-desktop .header-inner .layout-container.content-container 
 .nav-panel .nav-item>a::after,
 .nav-panel .nav-item .nav-item__plain>a::after,
 .nav-panel>.nav-item>.dropdown>.dropdown-toggle>a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: #d4af37;
-  transition: width 0.3s ease, left 0.3s ease;
+  display: none;
 }
 
 .nav-panel .nav-item>a:hover::after,
 .nav-panel .nav-item .nav-item__plain>a:hover::after,
 .nav-panel>.nav-item>.dropdown>.dropdown-toggle>a:hover::after {
-  width: 80%;
-  left: 10%;
+  display: none;
 }
 
 /* 4. Mega Menu */
@@ -995,7 +987,7 @@ header.header .header-desktop .header-inner .layout-container.content-container 
 .dropdown__trigger {
   color: #000;
   text-transform: capitalize;
-  padding: 10px 20px;
+  padding: 0;
   font-size: 1.3em;
   font-weight: 700;
   display: block}
@@ -1251,8 +1243,8 @@ header.header .header-desktop .header-inner .layout-container.content-container 
 
 .nav-link {
   text-align: left;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .nav-link.is-current {
