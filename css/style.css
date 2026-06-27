@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --font-decorative: "Com 4 DL", sans-serif;
   --font-body: Mulish, sans-serif;
   --font-ui: Montserrat, sans-serif}
@@ -189,10 +189,10 @@ th {
   font-family: ui-icons !important}
 
 .slider-icon-right:before {
-  content: "î˜€"}
+  content: ""}
 
 .slider-icon-left:before {
-  content: "î˜"}
+  content: ""}
 
 * {
   box-sizing: border-box}
@@ -3168,7 +3168,7 @@ figcaption {
   border-radius: 5px;
   padding: 15px}
 
-.product-img {
+.product-card__media {
   background-color: #0000;
   overflow: hidden}
 
@@ -3178,7 +3178,7 @@ figcaption {
   min-height: 100%;
   max-height: 100%}
 
-.product-info {
+.product-card__content {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   flex-flow: column;
@@ -3187,7 +3187,7 @@ figcaption {
   margin-top: 15px;
   display: flex}
 
-.product-name {
+.product-card__title {
   color: var(--light-grey);
   padding-bottom: 6px;
   font-size: 12px;
@@ -3217,14 +3217,14 @@ figcaption {
   margin-bottom: 0;
   display: grid}
 
-.price-wrap-1 {
+.product-card__action {
   grid-column-gap: 15px;
   flex-flow: row;
   justify-content: space-between;
   align-items: flex-start;
   display: flex}
 
-.button-4 {
+.product-card__button {
   color: #fff;
   text-align: center;
   letter-spacing: -.48px;
@@ -3238,10 +3238,10 @@ figcaption {
   font-weight: 600;
   line-height: 108.871%}
 
-.button-4:hover {
+.product-card__button:hover {
   color: #f5d95f}
 
-.button-4.emarald {
+.product-card__button.emarald {
   background-color: var(--gold);
   width: 34%;
   color: var(--emarald);
@@ -3249,15 +3249,15 @@ figcaption {
   padding-top: 8px;
   padding-bottom: 8px}
 
-.button-4.gold {
+.product-card__button.gold {
   color: var(--gold)}
 
-.button-4.royal-blue {
+.product-card__button.royal-blue {
   background-color: var(--gold);
   color: var(--royal-blue);
   padding: 8px 17px}
 
-.button-4.dark-maroon {
+.product-card__button.dark-maroon {
   background-color: var(--gold);
   color: var(--dark-maroon)}
 
@@ -9022,12 +9022,13 @@ figcaption {
   font-weight: 600;
   display: block}
 
-.product-item121 {
+.home-bestsellers__card {
   border: 1px solid #a7a7a7;
   border-radius: 5px;
   flex-flow: column;
   justify-content: space-between;
-  height: 100%;
+  width: 100%;
+  min-height: 100%;
   padding: 15px;
   display: flex}
 
@@ -9321,15 +9322,16 @@ figcaption {
   align-items: center;
   display: flex}
 
-.collection-item-21 {
+.home-bestsellers__item {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
-  display: block}
+  min-width: 0;
+  display: flex}
 
-.collection-list-212121212222222 {
+.home-bestsellers__grid {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   grid-template-rows: auto;
@@ -9338,7 +9340,7 @@ figcaption {
   height: 100%;
   display: grid}
 
-.banner-271212222 {
+.home-bestsellers {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   border-radius: 15px;
@@ -9350,6 +9352,44 @@ figcaption {
   margin-top: 0;
   margin-bottom: 0;
   display: grid}
+
+.section-4 .home-bestsellers {
+  align-items: stretch}
+
+.section-4 .home-bestsellers > .dynamic-list,
+.section-4 .home-bestsellers__grid,
+.section-4 .home-bestsellers__item {
+  min-width: 0;
+  height: 100%}
+
+.section-4 .home-bestsellers__card {
+  align-items: stretch;
+  gap: 14px;
+  min-height: 420px}
+
+.section-4 .product-card__media {
+  align-items: center;
+  background-color: #0000;
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-height: 280px;
+  overflow: hidden}
+
+.section-4 .product-card__title {
+  flex: 0 0 auto;
+  width: 100%}
+
+.section-4 .product-card__content {
+  flex: 0 0 auto;
+  margin-top: 0}
+
+.section-4 .home-bestsellers__image {
+  object-fit: contain}
+
+.section-4 .product-card__action {
+  align-items: center;
+  min-height: 34px}
 
 .heading-14 {
   font-size: 16px}
@@ -9916,7 +9956,7 @@ figcaption {
 
   .banner-26111,
 
-  .banner-271212222 {
+  .home-bestsellers {
     background-position: 100% 0;
     padding-top: 0}
 
@@ -11632,7 +11672,7 @@ figcaption {
   .section-1111111111111.cc-product-detail {
     flex-direction: column}
 
-  .banner-271212222 {
+  .home-bestsellers {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-template-rows: auto auto;
@@ -11640,6 +11680,12 @@ figcaption {
     margin-top: 0;
     padding-top: 45px;
     padding-bottom: 45px}
+
+  .section-4 .home-bestsellers__card {
+    min-height: 400px}
+
+  .section-4 .product-card__media {
+    min-height: 260px}
 
   .heading-14 {
     font-size: 16px}
@@ -11940,7 +11986,7 @@ figcaption {
     min-height: auto;
     max-height: none}
 
-  .product-name {
+  .product-card__title {
     padding-bottom: 4px}
 
   .price {
@@ -12866,12 +12912,18 @@ figcaption {
   .banner-26111 {
     background-position: 50%}
 
-  .banner-271212222 {
+  .home-bestsellers {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     margin-top: 0;
     padding-top: 25px;
     padding-bottom: 25px}
+
+  .section-4 .home-bestsellers__card {
+    min-height: 380px}
+
+  .section-4 .product-card__media {
+    min-height: 240px}
 
   .list-item-9 {
     font-size: 14px}
@@ -13158,7 +13210,7 @@ figcaption {
     min-height: auto;
     max-height: none}
 
-  .product-name {
+  .product-card__title {
     padding-bottom: 2px}
 
   .price-wrap {
@@ -13168,7 +13220,7 @@ figcaption {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr}
 
-  .price-wrap-1 {
+  .product-card__action {
     grid-column-gap: 8px}
 
   .section-5.cc-product-detail {
@@ -14007,7 +14059,7 @@ figcaption {
 
   .product-name1141,
 
-  .product-item121 {
+  .home-bestsellers__card {
     padding-left: 10px;
     padding-right: 10px}
 
@@ -14058,9 +14110,15 @@ figcaption {
     margin-left: 15px;
     margin-right: 15px}
 
-  .banner-271212222 {
+  .home-bestsellers {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr}
+
+  .section-4 .home-bestsellers__card {
+    min-height: 360px}
+
+  .section-4 .product-card__media {
+    min-height: 225px}
 
   .heading-14 {
     text-align: left;
@@ -14848,7 +14906,6 @@ figcaption {
   .product-item-81,
   .product-item-1,
   .product-item-12,
-  .product-item121,
 
   .product-item-14 {
     padding: 12px 14px !important}
@@ -15518,7 +15575,7 @@ body {
 .product-card.is-filter-hidden {
   display: none !important}
 
-.product-name,
+.product-card__title,
 .product-name-text,
 .product-name114,
 .product-name111212,
@@ -15566,7 +15623,7 @@ body {
     min-width: 0;
     width: 100%}
 
-  .product-name,
+  .product-card__title,
   .product-name-text,
   .product-name114,
   .product-name111212,
@@ -16246,9 +16303,9 @@ body.contact-page .premium-footer-branches {
   position: relative;
   width: 100%;
   height: 140px;
-  /* Desktop iframe height: 130pxâ€“150px */
+  /* Desktop iframe height: 130px–150px */
   border-radius: 10px;
-  /* Border radius: 10pxâ€“12px */
+  /* Border radius: 10px–12px */
   overflow: hidden;
   margin-bottom: 16px;
   border: 1px solid rgba(200, 155, 60, 0.2)}
@@ -17026,10 +17083,12 @@ body {
   font-weight: 300;
   line-height: 25px}
 
-.product-image-2-copy {
-  object-fit: cover;
+.home-bestsellers__image {
+  object-fit: contain;
+  display: block;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
+  max-width: 100%;
   max-height: 100%}
 
 .product-item-copy {
@@ -17071,7 +17130,7 @@ body {
   font-weight: 300}
 
 /* ============================================================
-   BLOG LISTING & POST â€” STRUCTURAL CSS
+   BLOG LISTING & POST — STRUCTURAL CSS
    ============================================================ */
 
 /* --- Blog Page Section Wrappers --- */
