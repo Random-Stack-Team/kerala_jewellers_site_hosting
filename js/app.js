@@ -127,17 +127,6 @@ document.documentElement.classList.add('js-ready');
     }, true);
   };
 
-  const calculatePrice = (selector, rate) => {
-    document.querySelectorAll(selector).forEach((priceElement) => {
-      if (priceElement.dataset.kjCalculated) return;
-      const priceValue = parseFloat(priceElement.textContent.replace(/,/g, ''));
-      if (Number.isNaN(priceValue)) return;
-      const subtotal = priceValue * rate * 1.18;
-      priceElement.textContent = Math.round(subtotal * 1.03).toLocaleString('en-IN');
-      priceElement.dataset.kjCalculated = 'true';
-    });
-  };
-
   const CATEGORY_ALIASES = {
     all: 'all',
     bangle: 'bangles',
@@ -590,9 +579,6 @@ document.documentElement.classList.add('js-ready');
     renderPlatinumComingSoon();
 
     reorderProductSections();
-    calculatePrice('#goldprice', 13850);
-    calculatePrice('#goldprices', 13850);
-    calculatePrice('#silverpricesssproduct', 270);
     initProductFilters();
   }; // end window.initKeralaHeader
 
