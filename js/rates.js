@@ -102,7 +102,7 @@
     if (rates.diamond) return;
 
     document.querySelectorAll("#diamondprices").forEach((priceElement) => {
-      const priceWrap = priceElement.closest(".product-card-price, .price-wrap-1, .divdimonds");
+      const priceWrap = priceElement.closest(".product-card-price, .product-card__action, .divdimonds");
       if (priceWrap) {
         priceWrap.hidden = true;
       }
