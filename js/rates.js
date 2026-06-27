@@ -33,11 +33,11 @@
 
   function getRateLabel(type, rates) {
     const labels = {
-      gold22: `GOLD 22 KT/1g - Rs. ${normalizeRate(rates.gold22)}`,
-      gold18: `GOLD 18 KT/1g - Rs. ${normalizeRate(rates.gold18)}`,
-      platinum: `PLATINUM 1g - Rs. ${normalizeRate(rates.platinum)}`,
-      silver: `SILVER 1g - Rs. ${normalizeRate(rates.silver)}`,
-      diamond: rates.diamond ? `DIAMOND - Rs. ${normalizeRate(rates.diamond)}` : "",
+      gold22: `GOLD 22 KT/1g - ₹${normalizeRate(rates.gold22)}`,
+      gold18: `GOLD 18 KT/1g - ₹${normalizeRate(rates.gold18)}`,
+      platinum: `PLATINUM 1g - ₹${normalizeRate(rates.platinum)}`,
+      silver: `SILVER 1g - ₹${normalizeRate(rates.silver)}`,
+      diamond: rates.diamond ? `DIAMOND - ₹${normalizeRate(rates.diamond)}` : "",
     };
 
     return labels[type] || "";
@@ -63,14 +63,14 @@
   function updateMobileRateStrip(rates) {
     const parts = [
       `Today's Rate (Updated on: ${getFormattedDateTime()})`,
-      `GOLD 22 KT - Rs. ${normalizeRate(rates.gold22)}`,
-      `GOLD 18 KT - Rs. ${normalizeRate(rates.gold18)}`,
-      `PLATINUM 1g - Rs. ${normalizeRate(rates.platinum)}`,
-      `SILVER 1g - Rs. ${normalizeRate(rates.silver)}`,
+      `GOLD 22 KT - ₹${normalizeRate(rates.gold22)}`,
+      `GOLD 18 KT - ₹${normalizeRate(rates.gold18)}`,
+      `PLATINUM 1g - ₹${normalizeRate(rates.platinum)}`,
+      `SILVER 1g - ₹${normalizeRate(rates.silver)}`,
     ];
 
     if (rates.diamond) {
-      parts.push(`DIAMOND - Rs. ${normalizeRate(rates.diamond)}`);
+      parts.push(`DIAMOND - ₹${normalizeRate(rates.diamond)}`);
     }
 
     document.querySelectorAll("[data-mobile-rate]").forEach((el) => {
