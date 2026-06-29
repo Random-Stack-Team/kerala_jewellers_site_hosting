@@ -369,7 +369,11 @@ document.addEventListener('DOMContentLoaded', () => {
     host.addEventListener('pointerup', finishDrag);
     host.addEventListener('pointercancel', finishDrag);
     host.addEventListener('lostpointercapture', finishDrag);
-    window.addEventListener('resize', () => render(activeIndex));
+    let contentResizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(contentResizeTimer);
+      contentResizeTimer = setTimeout(() => render(activeIndex), 150);
+    });
     render(0);
     window.setTimeout(() => render(activeIndex), 250);
     window.setTimeout(() => render(activeIndex), 900);
@@ -543,6 +547,10 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     banner2MobileQuery.addListener(refreshBanner2Sliders);
   }
-  window.addEventListener('resize', refreshBanner2Sliders);
+  let banner2ResizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(banner2ResizeTimer);
+    banner2ResizeTimer = setTimeout(refreshBanner2Sliders, 150);
+  });
 
 });

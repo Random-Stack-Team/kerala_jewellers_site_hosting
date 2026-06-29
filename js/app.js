@@ -32,13 +32,6 @@ document.documentElement.classList.add('js-ready');
       dropdown.classList.remove('is-active');
       dropdown.querySelector('[aria-expanded]')?.setAttribute('aria-expanded', 'false');
       if (shouldHideRate) return;
-
-      const triggerText = dropdown.querySelector('.rate-btn span, .rate-select-trigger span');
-      const triggerImage = dropdown.querySelector('.rate-btn img, .rate-select-trigger img');
-      const menu = dropdown.querySelector('.rate-list, .rate-select-menu');
-
-      // The dynamic rate row generation has been removed from here.
-      // It is now handled correctly by header-loader.js and rates.js
     });
   };
 
@@ -88,8 +81,12 @@ document.documentElement.classList.add('js-ready');
       }
     };
 
+    let resizeTimer;
     window.addEventListener('scroll', requestTick, { passive: true });
-    window.addEventListener('resize', handleScroll);
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(handleScroll, 150);
+    });
     handleScroll();
   };
 
@@ -710,7 +707,11 @@ function resetMobileMenuOnDesktop() {
   }
 }
 
-window.addEventListener("resize", resetMobileMenuOnDesktop);
+let mobileMenuResizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(mobileMenuResizeTimer);
+  mobileMenuResizeTimer = setTimeout(resetMobileMenuOnDesktop, 150);
+});
 
 function restoreEnquiryPrefill() {
   const nameEl = document.querySelector('.word2') || document.querySelector('.text-size-large');

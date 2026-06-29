@@ -143,7 +143,4 @@
 
   document.addEventListener("DOMContentLoaded", updateRates);
   window.addEventListener("kerala:header-loaded", updateRates);
-  window.addEventListener("load", updateRates);
-
-  window.updateRates = updateRates;
 })();

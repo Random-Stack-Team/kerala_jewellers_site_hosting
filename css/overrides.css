@@ -1,850 +1,47 @@
-/* Place hero-split-2 (Platinum) at bottom-right to match live site */
+﻿/* Place hero-split-2 (Platinum) at bottom-right to match live site */
 .div-block-4612 .hero-split-2 {
   grid-column: 2 / 3;
   grid-row: 2 / 3}
-
-.kj-grid-45 {
-  align-self: auto}
-
-.kj-grid-129 {
-  grid-area: span 1 / span 1 / span 1 / span 1}
-
-.kj-grid-120,
-.kj-grid-65,
-.kj-grid-128 {
-  align-self: auto}
-
-.kj-grid-20 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-81 {
-  grid-area: 1 / 3 / 2 / 4}
-
-.kj-grid-27 {
-  grid-area: 1 / 4 / 2 / 5}
-
-.kj-grid-14 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-142 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-127 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-78 {
-  grid-area: 2 / 2 / 3 / 3}
-
-.kj-grid-71 {
-  grid-area: 3 / 2 / 4 / 3}
-
-.kj-grid-121 {
-  grid-area: 1 / 3 / 4 / 4;
-  align-self: auto}
-
-.kj-grid-73 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-18 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-21 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-28 {
-  grid-area: 2 / 2 / 4 / 3}
-
-.kj-grid-111 {
-  grid-area: 1 / 3 / 4 / 4;
-  align-self: auto}
-
-.kj-grid-2 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-122 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-105 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-144 {
-  grid-area: 2 / 2 / 3 / 3}
-
-.kj-grid-60 {
-  grid-area: 3 / 2 / 4 / 3}
-
-.kj-grid-88 {
-  grid-area: 1 / 3 / 4 / 4;
-  align-self: auto}
-
-.kj-grid-57 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-4 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-47 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-123 {
-  grid-area: 2 / 2 / 4 / 3}
-
-.kj-grid-46 {
-  grid-area: 1 / 3 / 4 / 4;
-  align-self: auto}
-
-.kj-grid-137 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-80 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-8 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-12 {
-  grid-area: 2 / 2 / 3 / 3}
-
-.kj-grid-134 {
-  grid-area: 3 / 2 / 4 / 3}
-
-.kj-grid-82 {
-  grid-area: 1 / 3 / 4 / 4;
-  align-self: auto}
-
-.kj-grid-103 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-135 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-98 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-113 {
-  grid-area: 3 / 2 / 4 / 3}
-
-.kj-grid-pos-9 {
-  grid-area: 1 / 1 / 4 / 2;
-  align-self: auto}
-
-.kj-grid-pos-15 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-pos-17 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-pos-8 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-pos-3 {
-  grid-area: 2 / 2 / 3 / 3}
-
-.kj-grid-pos-14 {
-  grid-area: 3 / 2 / 4 / 3}
-
-.kj-grid-68 {
-  grid-area: 1 / 1 / 4 / 2;
-  align-self: auto}
-
-.kj-grid-pos-16 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-pos-25 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-pos-23 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-pos-19 {
-  grid-area: 3 / 2 / 4 / 3}
-
-.kj-grid-76 {
-  grid-area: 1 / 1 / 4 / 2;
-  align-self: auto}
-
-.kj-grid-110 {
-  grid-area: 1 / 1 / 3 / 2}
-
-.kj-grid-58 {
-  grid-area: 3 / 1 / 4 / 2}
-
-.kj-grid-25 {
-  grid-area: 1 / 2 / 3 / 3}
-
-.kj-grid-39 {
-  grid-area: 1 / 3 / 4 / 4;
-  align-self: auto}
-
-.kj-grid-89 {
-  grid-area: 1 / 3 / 4 / 4}
-
-.kj-grid-140 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-33 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-112 {
-  grid-area: 1 / 2 / 3 / 3}
-
-.kj-grid-50 {
-  grid-area: 1 / 3 / 4 / 4;
-  align-self: auto}
-
-.kj-grid-pos-27 {
-  grid-area: 1 / 3 / 4 / 4}
-
-.kj-grid-75 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-119 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-99 {
-  grid-area: 1 / 2 / 3 / 3}
-
-.kj-grid-114 {
-  grid-area: 1 / 3 / 4 / 4;
-  align-self: auto}
-
-.kj-grid-19 {
-  grid-area: 1 / 3 / 4 / 4}
-
-.kj-grid-pos-12 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-pos-1 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-pos-11 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-pos-26 {
-  grid-area: 2 / 2 / 4 / 3}
-
-.kj-grid-pos-4 {
-  grid-area: 1 / 3 / 4 / 4;
-  align-self: auto}
-
-.kj-grid-pos-10 {
-  grid-area: 1 / 3 / 4 / 4}
-
-.kj-grid-35,
-.kj-grid-23 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-69 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-30 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-53 {
-  grid-area: 2 / 2 / 3 / 3}
-
-.kj-grid-6 {
-  grid-area: 3 / 2 / 4 / 3}
-
-.kj-grid-126 {
-  grid-area: 1 / 3 / 4 / 4;
-  align-self: auto}
-
-.kj-grid-92 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-26 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-61 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-145 {
-  grid-area: 3 / 2 / 4 / 3}
-
-.kj-grid-7 {
-  grid-area: 1 / 1 / 4 / 2;
-  align-self: auto}
-
-.kj-grid-148 {
-  grid-area: 1 / 1 / 4 / 2}
-
-.kj-grid-51 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-149 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-54 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-36 {
-  grid-area: 2 / 2 / 3 / 3}
-
-.kj-grid-84 {
-  grid-area: 3 / 2 / 4 / 3}
-
-.kj-grid-40 {
-  grid-area: 1 / 1 / 4 / 2;
-  align-self: auto}
-
-.kj-grid-pos-21 {
-  grid-area: 1 / 1 / 4 / 2}
-
-.kj-grid-41 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-130 {
-  grid-area: 2 / 1 / 4 / 2}
-
-.kj-grid-15 {
-  grid-area: 1 / 2 / 2 / 3}
-
-.kj-grid-86 {
-  grid-area: 3 / 2 / 4 / 3}
-
-.kj-grid-52 {
-  grid-area: 1 / 1 / 4 / 2;
-  align-self: auto}
-
-.kj-grid-79 {
-  grid-area: 1 / 1 / 4 / 2}
-
-.kj-grid-pos-13 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-timeline-item,
-.kj-timeline-item,
-.kj-timeline-item,
-.kj-timeline-item,
-.kj-timeline-item,
-.kj-timeline-item,
-.kj-grid-83,
-.kj-grid-109,
-.kj-grid-38,
-.kj-grid-67,
-.kj-grid-131,
-.kj-grid-106,
-.kj-grid-87,
-.kj-grid-143,
-.kj-grid-29,
-.kj-grid-117,
-.kj-grid-11,
-.kj-grid-16,
-.kj-grid-56,
-.kj-grid-101,
-.kj-grid-70,
-.kj-grid-64,
-.kj-grid-108,
-.kj-grid-146,
-.kj-grid-22,
-.kj-grid-63,
-.kj-grid-5,
-.kj-grid-136,
-.kj-grid-93,
-.kj-grid-91,
-.kj-grid-141,
-.kj-grid-97,
-.kj-grid-59,
-.kj-grid-85,
-.kj-grid-24,
-.kj-grid-104,
-.kj-grid-32,
-.kj-grid-pos-7,
-.kj-grid-77,
-.kj-grid-62,
-.kj-grid-118,
-.kj-grid-37,
-.kj-grid-139,
-.kj-grid-34,
-.kj-grid-132,
-.kj-grid-43,
-.kj-grid-125,
-.kj-grid-133,
-.kj-grid-74,
-.kj-grid-31,
-.kj-grid-13,
-.kj-grid-42,
-.kj-grid-100,
-.kj-grid-17,
-.kj-grid-44,
-.kj-grid-107,
-.kj-grid-72,
-.kj-grid-147,
-.kj-grid-102,
-.kj-grid-1,
-.kj-grid-pos-5 {
-  grid-area: span 1 / span 1 / span 1 / span 1}
-
-.kj-grid-55 {
-  align-self: stretch}
-
-.kj-grid-115 {
-  justify-self: auto}
-
-.kj-grid-stretch {
-  align-self: stretch}
-
-.kj-product-detail {
-  align-self: auto}
-
-.kj-grid-stretch-4 {
-  align-self: stretch}
-
-.kj-grid-pos-20 {
-  align-self: auto}
-
-.kj-grid-pos-6 {
-  grid-area: 1 / 1 / 2 / 2}
-
-.kj-grid-pos-22 {
-  grid-area: 2 / 1 / 3 / 3}
-
-.kj-grid-66 {
-  grid-area: 3 / 1 / 4 / 3}
-
-.kj-grid-pos-18 {
-  grid-area: 5 / 1 / 6 / 3}
-
-.kj-grid-95 {
-  grid-area: 6 / 1 / 7 / 3}
-
-.kj-grid-96 {
-  grid-area: 7 / 1 / 8 / 3}
-
-.kj-product-variant {
-  align-self: stretch}
-
-.kj-product-variant {
-  align-self: auto}
-
 @media screen and (min-width: 1920px) {
-  .kj-grid-81 {
-    grid-column-start: 3}
 }
-
 @media screen and (max-width: 991px) {
-  .kj-grid-116 {
-    grid-area: 2 / 1 / 3 / 3}
-
-  .kj-grid-113 {
-    grid-row-start: 2}
-
-  .kj-grid-pos-9,
-  .kj-grid-68 {
-    grid-area: 1 / 3 / 4 / 4}
-
-  .kj-grid-pos-19 {
-    grid-row-start: 2}
-
-  .kj-grid-76 {
-    grid-area: 1 / 3 / 4 / 4}
-
-  .kj-grid-23 {
-    grid-row-end: 3}
-
-  .kj-grid-124 {
-    grid-area: 1 / 3 / 4 / 4}
-
-  .kj-grid-92 {
-    grid-row-end: 2;
-    grid-column-end: 2}
-
-  .kj-grid-26,
-  .kj-grid-145 {
-    grid-row: 2 / 3}
-
-  .kj-grid-7 {
-    grid-area: 1 / 3 / 4 / 4}
-
-  .kj-grid-148 {
-    grid-area: 1 / 3 / 3 / 4}
-
-  .kj-grid-40,
-  .kj-grid-pos-21 {
-    grid-area: 1 / 3 / 4 / 4}
-
-  .kj-grid-86 {
-    grid-row-start: 2}
-
-  .kj-grid-52 {
-    grid-area: 1 / 3 / 4 / 4}
-
-  .kj-grid-79 {
-    grid-area: 1 / 3 / 3 / 4}
-
-  .kj-grid-stretch-2 {
-    align-self: stretch}
-
-  .kj-grid-55 {
-    align-self: auto}
-
-  .kj-grid-9,
-  .kj-grid-138,
-  .kj-grid-pos-24 {
-    justify-self: auto}
 }
-
 @media screen and (max-width: 767px) {
-  .kj-grid-116 {
-    grid-area: 3 / 1 / 4 / 3}
-
-  .kj-grid-69 {
-    grid-row-start: 3}
-
-  .kj-grid-pos-21 {
-    grid-row-end: 3}
-
-  .kj-grid-first {
-    order: -9999}
-
-  .kj-timeline-item,
-  .kj-grid-pos-7 {
-    grid-area: 2 / 2 / 3 / 3}
-
-  .kj-grid-55,
-  .kj-grid-115 {
-    order: -9999}
-
-  .kj-grid-49,
-  .kj-grid-90,
-  .kj-grid-94,
-  .kj-grid-48 {
-    justify-self: auto}
 }
-
 @media screen and (max-width: 479px) {
-  .kj-grid-45 {
-    grid-area: span 1 / span 1 / span 1 / span 1;
-    align-self: auto}
-
-  .kj-grid-116 {
-    grid-area: 4 / 1 / 5 / 2}
-
-  .kj-grid-20,
-  .kj-grid-81,
-  .kj-grid-27 {
-    grid-area: span 1 / span 1 / span 1 / span 1}
-
-  .kj-grid-80 {
-    grid-row-end: 3}
-
-  .kj-grid-134 {
-    grid-area: 3 / 1 / 4 / 2}
-
-  .kj-grid-82 {
-    grid-area: 4 / 1 / 5 / 3}
-
-  .kj-grid-135 {
-    grid-row-end: 3}
-
-  .kj-grid-113 {
-    grid-area: 2 / 2 / 3 / 3}
-
-  .kj-grid-pos-9 {
-    grid-column: 1 / 3;
-    grid-row-start: 3}
-
-  .kj-grid-pos-17 {
-    grid-row-end: 3}
-
-  .kj-grid-pos-14 {
-    grid-area: 3 / 1 / 4 / 2}
-
-  .kj-grid-pos-25 {
-    grid-row-end: 3}
-
-  .kj-grid-pos-19 {
-    grid-area: 2 / 2 / 3 / 3}
-
-  .kj-grid-76 {
-    grid-area: 3 / 1 / 4 / 3}
-
-  .kj-grid-69 {
-    grid-row: 3 / 4}
-
-  .kj-grid-6 {
-    grid-area: 3 / 1 / 4 / 2}
-
-  .kj-grid-126 {
-    grid-area: 4 / 1 / 5 / 3}
-
-  .kj-grid-124 {
-    grid-area: 4 / 1 / 5 / 3;
-    justify-self: stretch}
-
-  .kj-grid-26 {
-    grid-row-end: 3}
-
-  .kj-grid-145 {
-    grid-area: 2 / 2 / 3 / 3}
-
-  .kj-grid-7 {
-    grid-column: 1 / 3;
-    grid-row-start: 3}
-
-  .kj-grid-148 {
-    grid-area: 3 / 1 / 4 / 3}
-
-  .kj-grid-149 {
-    grid-row-end: 3}
-
-  .kj-grid-84 {
-    grid-area: 3 / 1 / 4 / 2}
-
-  .kj-grid-pos-21 {
-    grid-area: 3 / 1 / 4 / 3}
-
-  .kj-grid-130 {
-    grid-row-end: 3}
-
-  .kj-grid-86 {
-    grid-area: 2 / 2 / 3 / 3}
-
-  .kj-grid-52,
-  .kj-grid-79 {
-    grid-area: 3 / 1 / 4 / 3}
-
-  .kj-grid-pos-6,
-  .kj-grid-pos-22,
-  .kj-grid-66,
-  .kj-grid-pos-18,
-  .kj-grid-95,
-  .kj-grid-96 {
-    grid-area: span 1 / span 1 / span 1 / span 1}
 }
-
 .form-done,
 .form-fail {
   display: none}
-
-.category-menu-link {
-  color: inherit;
-  text-decoration: none;
-  display: block}
-
 /* Header refinements */
-
-.navigation-2,
-.site-header__inner,
-.site-nav {
-  background: var(--meron) !important}
-
 /* Dropdown category cleanup */
-.category-menu-link {
-  color: inherit;
-  text-decoration: none;
-  display: block;
-  border-radius: 4px;
-  transition: color .2s ease, background-color .2s ease, transform .2s ease}
-
-.category-menu-link:hover {
-  color: var(--meron) !important;
-  background: rgba(153, 31, 35, .07);
-  transform: translateX(3px)}
-
-.kj-flex-grid,
-.kj-category-grid {
-  border-radius: 8px;
-  transition: background-color .2s ease, box-shadow .2s ease, transform .2s ease}
-
-.kj-flex-grid:hover,
-.kj-category-grid:hover {
-  background: #fffaf1;
-  box-shadow: 0 8px 20px rgba(153, 31, 35, .08);
-  transform: translateY(-2px)}
-
 /* Product/category listing card refinements */
-.product-item-14 {
-  overflow: hidden;
-  border-radius: 8px !important;
-  background: #fff;
-  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease}
-
-.product-item-14:hover {
-  transform: translateY(-5px);
-  border-color: rgba(153, 31, 35, .35) !important;
-  box-shadow: 0 14px 30px rgba(54, 20, 20, .13)}
-
-.product-img-14 {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 16px 16px 8px !important}
-
-.product-name114,
-.product-name111212,
-.product-name1141 {
-  margin: 0 !important;
-  color: #5c2b2d;
-  line-height: 1.25 !important}
-
-.product-name114 {
-  font-weight: 700 !important;
-  letter-spacing: .02em}
-
-.product-name1141,
-.product-name111212 {
-  color: #8d6b6b !important;
-  font-size: 12px !important;
-  text-transform: capitalize !important}
-
-.product-item-14:hover .product-info-14,
-.product-info-124 {
-  padding: 8px 16px 16px !important}
-
 .button-123 {
   transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease}
-
-.product-item-14:hover .button-123 {
-  background-color: var(--meron) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 12px rgba(153, 31, 35, .2)}
-
 /* Desktop product cards: slightly smaller, calmer, and easier to scan. */
 @media (min-width: 1024px) {
-
-  .product-item-14,
-  .product-item-81,
-  .product-item-1,
-  .product-item-12,
-
-  .product-item-14 {
-    padding: 12px 14px !important}
-
-  .product-img-14 {
-    padding: 10px 10px 6px !important}
-
   .product-image-14,
-  .product-image-8,
-
-  .product-info-14,
-  .product-info-124 {
-    padding: 6px 14px 14px !important}
-
   .layout-grid,
   .dynamic-items {
     column-gap: clamp(18px, 2vw, 28px) !important;
     row-gap: clamp(18px, 2vw, 28px) !important}
 }
-
 /* Desktop megamenu reliability: JS owns the active menu, CSS keeps old hover
    panels from staying visible when another nav item opens. */
-
 /* Final header overrides */
-header .navigation-2,
-header .site-header__inner,
-header .site-nav {
-  background-color: var(--meron) !important}
-
-header .nav-menu-3,
-header .site-header__actions,
-header .site-header__container {
-  overflow: visible !important}
-
-header .nav-menu-3 {
-  display: flex !important;
-  align-items: center !important;
-  gap: 18px !important}
-
-header .navigation-2 a,
-header .navigation-2 a div,
-header .navigation-2 .kj-link11-2,
-header .navigation-2 .kj-dropdown-heading,
-header .navigation-2 .kj-dropdown-heading,
-header .navigation-2 .goldlink,
-header .navigation-2 .silverlink,
-header .navigation-2 .diamondlink,
-header .navigation-2 .goldlink-2 {
-  color: #fff !important}
-
 /* ==========================================================================
    FORCE WHITE NAVIGATION MENU STYLES AND FIX ACTIVE LINK VISIBILITY
-   ========================================================================== */
-
 /* 1. Main Navigation Links - Force White Text */
-header .navigation-2 .kj-dropdown-heading,
-header .navigation-2 .kj-link11,
-header .navigation-2 .kj-link11-2,
-header .navigation-2 .goldlink,
-header .navigation-2 .silverlink,
-header .navigation-2 .diamondlink,
-header .navigation-2 .platinumlink,
-header .navigation-2 .kj-dropdown-trigger a,
-header .navigation-2 .kj-dropdown-trigger div,
-header .navigation-2 .div2 a,
-header .navigation-2 a.nav-link,
-header .navigation-2 .nav-link,
-header .navigation-2 a {
-  color: #ffffff !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: inline-block !important}
-
 /* 2. Active / Current Page Navigation Item Style (Warm Gold/White) */
-header .navigation-2 .is-current,
-header .navigation-2 .goldlink.is-current,
-header .navigation-2 .silverlink.is-current,
-header .navigation-2 .diamondlink.is-current,
-header .navigation-2 .platinumlink.is-current,
-header .navigation-2 .goldlink-2.is-current,
-header .navigation-2 .silverlink-2.is-current,
-header .navigation-2 .diamondlink-2.is-current,
-header .navigation-2 .platinumlink-2.is-current,
-header .navigation-2 .kj-link11.is-current,
-header .navigation-2 .kj-link11-2.is-current,
-header .navigation-2 .is-current *,
-header .navigation-2 .is-current div {
-  color: #fff5d8 !important;
-  opacity: 1 !important;
-  visibility: visible !important}
-
 /* 3. Hover Style */
-header .navigation-2 a:hover,
-header .navigation-2 a div:hover,
-header .navigation-2 .kj-dropdown-heading:hover,
-header .navigation-2 .kj-link11:hover,
-header .navigation-2 .kj-link11-2:hover,
-header .navigation-2 .goldlink:hover,
-header .navigation-2 .silverlink:hover,
-header .navigation-2 .diamondlink:hover,
-header .navigation-2 .platinumlink:hover,
-header .navigation-2 .kj-dropdown-trigger a:hover,
-header .navigation-2 .kj-dropdown-trigger div:hover,
-header .navigation-2 .div2 a:hover {
-  color: #fff5d8 !important}
-
 /* 4. Keep Megamenu Dropdown List Text Dark (so it's readable on light background) */
-header .navigation-2 .dropdown-list a,
-header .navigation-2 .dropdown-list div,
-header .navigation-2 .dropdown-list span,
-header .navigation-2 .kj-dropdown-list a,
-header .navigation-2 .kj-dropdown-list div,
-header .navigation-2 .kj-dropdown-list span,
-header .navigation-2 .kj-nav-text,
-header .navigation-2 .category-menu-link,
-header .navigation-2 .kj-section-label,
-header .navigation-2 .kj-nav-text {
-  color: #231f20 !important}
-
 /* Megamenu hover effect */
-header .navigation-2 .dropdown-list a:hover,
-header .navigation-2 .kj-dropdown-list a:hover,
-header .navigation-2 .category-menu-link:hover {
-  color: var(--meron) !important}
-
 /* Final header source fixes: keep nav white without inline JS styles. */
-header .navigation-2,
-header .navigation-2 .site-header__inner,
-header .site-nav {
-  background-color: var(--meron) !important}
-
 /* Restored interaction layer from the working reference. */
 .content-slider .slider-track,
 .content-slider .w-slider-mask {
   position: relative;
   overflow: hidden}
-
 .content-slider .slider-slide {
   display: block !important;
   opacity: 0;
@@ -854,26 +51,21 @@ header .site-nav {
   transform: scale(1.015);
   transition: opacity 650ms ease, transform 900ms ease;
   z-index: 0}
-
 .content-slider .slider-slide.is-active {
   opacity: 1;
   pointer-events: auto;
   position: relative;
   transform: scale(1);
   z-index: 1}
-
 .slider-dot {
   border: 0;
   cursor: pointer}
-
 .swiper-component .swiper {
   overflow: hidden;
   perspective: 1200px}
-
 .swiper-component .swiper-wrapper {
   position: relative;
   transform-style: preserve-3d}
-
 .swiper-component .swiper-slide {
   left: 0;
   opacity: 0;
@@ -882,65 +74,50 @@ header .site-nav {
   transition: transform 650ms cubic-bezier(.165, .84, .44, 1), opacity 500ms ease;
   width: 100%;
   will-change: transform, opacity}
-
 .swiper-component .swiper-slide.swiper-slide-active {
   position: relative}
-
 .swiper-component .swiper-slide>.slide-bg {
   filter: blur(5px);
   opacity: .5 !important;
   transition: filter 500ms cubic-bezier(.165, .84, .44, 1), opacity 500ms cubic-bezier(.165, .84, .44, 1), transform 500ms cubic-bezier(.165, .84, .44, 1)}
-
 .swiper-component .swiper-slide-active>.slide-bg {
   filter: blur(0);
   opacity: 1 !important}
-
 .swiper-component .swiper-slide-next,
 .swiper-component .swiper-slide-prev {
   filter: blur(0)}
-
 .swiper-component .swiper-slide-next>.slide-bg,
 .swiper-component .swiper-slide-prev>.slide-bg {
   filter: blur(0) !important;
   opacity: .5 !important}
-
 .swiper-component .slide-gradient {
   background-image: linear-gradient(180deg, rgba(153, 31, 35, 0), rgba(153, 31, 35, .08));
   transition: background-image 500ms cubic-bezier(.165, .84, .44, 1), opacity 500ms ease}
-
 .swiper-component .swiper-slide-active:hover .slide-gradient,
 .swiper-component .swiper-slide-active:focus-within .slide-gradient {
   background-image: none}
-
 .swiper-component .swiper-slide-active:hover .slide-bg,
 .swiper-component .swiper-slide-active:focus-within .slide-bg {
   transform: translateY(-4px)}
-
 .swiper-component .swiper-slide-active:hover .div-text,
 .swiper-component .swiper-slide-active:focus-within .div-text {
   transform: translateY(-2px)}
-
 .swiper-component .div-text,
 .swiper-component .div-text1 {
   transition: transform 500ms cubic-bezier(.165, .84, .44, 1), opacity 500ms ease}
-
 /* Live-site customer review carousel restore. */
 html,
 body {
   overflow-x: hidden}
-
 .section-16 {
   overflow: hidden}
-
 .section-16 .slider-wrapper {
   height: 600px;
   overflow: visible}
-
 .section-16 .swiper-component {
   align-items: stretch;
   justify-content: center;
   overflow: hidden}
-
 .section-16 .swiper-component .swiper {
   height: 600px;
   max-height: 600px;
@@ -949,7 +126,6 @@ body {
   perspective: 1200px;
   position: relative;
   width: 100%}
-
 .section-16 .swiper-component .swiper-wrapper {
   display: block;
   height: 600px;
@@ -959,7 +135,6 @@ body {
   transform: none;
   transform-style: preserve-3d;
   width: 100%}
-
 .section-16 .swiper-component .swiper-slide {
   background-color: #fff;
   border-radius: 5px;
@@ -974,51 +149,29 @@ body {
   transition: transform 650ms cubic-bezier(.165, .84, .44, 1), opacity 500ms ease;
   width: 20%;
   will-change: transform, opacity}
-
 .section-16 .swiper-component .swiper-slide.swiper-slide-active {
   position: absolute}
-
 .section-16 .swiper-component .slide-bg,
 .section-16 .swiper-component .product-item-8,
 .section-16 .swiper-component .div-container-6 {
   height: 100%;
   width: 100%}
-
 .section-16 .swiper-component .div-container-6 {
   padding: 30px 25px}
-
 .section-16 .swiper-component .div-2 {
   flex: 1;
   justify-content: center;
   padding-bottom: 28px;
   padding-top: 28px}
-
 .section-16 .swiper-component .div-text {
   font-size: 14px;
   line-height: 1.2;
   overflow-wrap: anywhere}
-
 .section-16 .swiper-component .div-text1 {
   font-size: 20px;
   line-height: 1.2}
-
 .kj-interactive-card,
-.product-card,
-.feature-card,
-.collection-card,
-.best-seller-card,
-.review-card,
-.team5_item,
-.team5_image,
-
 .kj-interactive-card:hover,
-.product-card:hover,
-.feature-card:hover,
-.collection-card:hover,
-.best-seller-card:hover,
-.review-card:hover,
-.team5_item:hover,
-
 .kj-interactive-card:hover img,
 .product-card:hover img,
 .feature-card:hover img,
@@ -1030,7 +183,6 @@ body {
 .product-item-81:hover .product-image-8 {
   filter: saturate(1.06) contrast(1.03);
   transform: scale(1.025)}
-
 /* Final testimonial carousel sizing restore. */
 .section-16 .swiper-component .swiper {
   margin-left: auto !important;
@@ -1038,31 +190,25 @@ body {
   min-width: 0 !important;
   max-width: 1200px !important;
   width: 100% !important}
-
 .section-16 .swiper-component .swiper-slide {
   width: clamp(240px, 20vw, 270px) !important}
-
 @media (max-width: 768px) {
   .section-16 .slider-wrapper {
     height: 500px !important}
-
   .section-16 .swiper-component .swiper,
   .section-16 .swiper-component .swiper-wrapper {
     height: 500px !important;
     max-height: 500px !important;
     min-height: 500px !important}
-
   .section-16 .swiper-component .swiper-slide {
     width: min(300px, calc(100vw - 48px)) !important;
     height: 460px !important;
     margin-top: 18px !important;
     margin-bottom: 18px !important}
-
   .section-16 .swiper-component .div-text {
     font-size: 13px !important;
     line-height: 1.28 !important}
 }
-
 /* Clean customer review carousel source of truth. */
 .section-16.kj-review-section,
 .section-16 .slider-wrapper,
@@ -1071,45 +217,35 @@ body {
 .section-16 .swiper-component .swiper-wrapper {
   height: clamp(390px, 36vw, 470px) !important;
   min-height: clamp(390px, 36vw, 470px) !important}
-
 .section-16 .swiper-component .swiper {
   max-width: min(1200px, calc(100vw - 48px)) !important}
-
 .section-16 .swiper-component .swiper-slide {
   border-radius: 7px !important;
   box-shadow: 0 10px 24px rgba(35, 15, 16, .13) !important;
   height: clamp(330px, 30vw, 390px) !important;
   margin: 28px 0 0 !important;
   width: clamp(440px, 42vw, 560px) !important}
-
 .section-16 .swiper-component .div-container-6 {
   padding: clamp(24px, 2.4vw, 34px) clamp(34px, 3.8vw, 50px) !important}
-
 .section-16 .swiper-component .div-2 {
   gap: 18px !important;
   justify-content: center !important;
   padding-bottom: 16px !important;
   padding-top: 16px !important}
-
 .section-16 .swiper-component .div-text {
   font-size: clamp(15px, 1.1vw, 17px) !important;
   line-height: 1.45 !important;
   overflow-wrap: normal !important}
-
 .section-16 .swiper-component .div-text1 {
   font-size: clamp(18px, 1.6vw, 24px) !important;
   line-height: 1.25 !important}
-
 .section-16 .area-prev,
 .section-16 .area-next {
   height: clamp(390px, 36vw, 470px) !important;
   width: calc((100% - min(560px, max(440px, 42vw))) / 2) !important}
-
 .section-16 .slider-arrow {
   top: calc(clamp(390px, 36vw, 470px) / 2) !important}
-
 @media (max-width: 768px) {
-
   .section-16.kj-review-section,
   .section-16 .slider-wrapper,
   .section-16 .swiper-component,
@@ -1117,30 +253,24 @@ body {
   .section-16 .swiper-component .swiper-wrapper {
     height: 440px !important;
     min-height: 440px !important}
-
   .section-16 .swiper-component .swiper {
     margin-left: calc(50% - 50vw) !important;
     max-width: 100vw !important;
     width: 100vw !important}
-
   .section-16 .swiper-component .swiper-slide {
     height: 410px !important;
     margin-top: 16px !important;
     width: min(330px, calc(100vw - 36px)) !important}
-
   .section-16 .swiper-component .div-container-6 {
     padding: 22px 20px !important}
 }
-
 .section-16 .swiper-component,
 .section-16 .swiper-component .swiper,
 .section-16 .swiper-component .swiper-wrapper {
   touch-action: pan-y !important;
   user-select: none !important}
-
 .section-16 .swiper-component .swiper-slide {
   transition: transform 760ms cubic-bezier(.22, 1, .36, 1), opacity 520ms ease !important}
-
 /* Customer review carousel: live-site geometry and responsive controls. */
 .section-16,
 .section-16 .slider-wrapper,
@@ -1149,20 +279,16 @@ body {
 .section-16 .swiper-component .swiper-wrapper {
   height: 600px !important;
   min-height: 600px !important}
-
 .section-16 .swiper-component .swiper {
   min-width: 1200px !important;
   max-width: none !important;
   overflow: hidden !important}
-
 .section-16 .swiper-component .swiper-slide {
   height: 600px !important;
   margin: 0 !important;
   width: 240px !important}
-
 .section-16 .swiper-component .div-container-6 {
   padding: 34px 24px !important}
-
 .section-16 .area-prev,
 .section-16 .area-next {
   bottom: 0 !important;
@@ -1173,16 +299,12 @@ body {
   top: 0 !important;
   width: calc((100% - 240px) / 2) !important;
   z-index: 12 !important}
-
 .section-16 .area-prev {
   left: 0 !important}
-
 .section-16 .area-next {
   right: 0 !important}
-
 .section-16 .slider-arrow {
   z-index: 18 !important}
-
 /* Customer reviews: final live-site geometry pass. Keep this section compact,
    centered, and controlled by the custom review carousel in js/slider.js. */
 .section-16,
@@ -1192,10 +314,8 @@ body {
 .section-16 .swiper-component .swiper-wrapper {
   height: 620px !important;
   min-height: 620px !important}
-
 .section-16 {
   margin-bottom: 32px !important}
-
 .section-16 .swiper-component .swiper {
   margin-left: auto !important;
   margin-right: auto !important;
@@ -1203,7 +323,6 @@ body {
   min-width: 0 !important;
   perspective: 1200px !important;
   width: 100% !important}
-
 .section-16 .swiper-component .swiper-slide {
   border-radius: 5px !important;
   box-shadow: 0 6px 18px rgba(35, 15, 16, .16) !important;
@@ -1211,35 +330,27 @@ body {
   margin: 20px 0 0 !important;
   overflow: hidden !important;
   width: 265px !important}
-
 .section-16 .swiper-component .swiper-slide>.slide-bg {
   filter: none !important}
-
 .section-16 .swiper-component .swiper-slide:not(.swiper-slide-active)>.slide-bg {
   opacity: .5 !important}
-
 .section-16 .swiper-component .div-container-6 {
   padding: 34px 25px !important}
-
 .section-16 .swiper-component .div-text {
   font-size: 14px !important;
   line-height: 1.22 !important}
-
 .section-16 .swiper-component .div-text1 {
   font-size: 20px !important;
   line-height: 1.22 !important}
-
 .section-16 .area-prev,
 .section-16 .area-next {
   height: 620px !important;
   top: 0 !important;
   width: calc((100% - 265px) / 2) !important}
-
 .section-16 .slider-arrow {
   pointer-events: auto !important;
   top: 330px !important;
   z-index: 50 !important}
-
 .section-16 .slider-arrow.section-16 .slider-arrow@media (max-width: 768px) {
 
   .section-16,
@@ -1271,11 +382,7 @@ body {
   .section-16 .swiper-component .div-text1 {
     font-size: 18px !important}
 }
-
 /* Clean product/filter layer over the scraped product markup. */
-.legacy-filter-hidden {
-  display: none !important}
-
 .collection-toolbar {
   align-items: flex-end;
   background: linear-gradient(180deg, #fff, #fffaf4);
@@ -1290,7 +397,6 @@ body {
   max-width: 1140px;
   padding: 16px 18px;
   width: min(calc(100% - 40px), 1140px)}
-
 .collection-toolbar__field {
   color: #4b2a2c;
   display: flex;
@@ -1301,7 +407,6 @@ body {
   font-weight: 700;
   gap: 7px;
   letter-spacing: .02em}
-
 .collection-toolbar__select {
   appearance: none;
   background-color: #ffffff;
@@ -1319,12 +424,10 @@ body {
   min-width: 220px;
   padding: 0 38px 0 13px;
   transition: border-color 180ms ease, box-shadow 180ms ease}
-
 .collection-toolbar__select:focus {
   border-color: var(--meron);
   box-shadow: 0 0 0 3px rgba(153, 31, 35, .12);
   outline: none}
-
 .collection-toolbar__reset {
   background: var(--meron);
   border: 1px solid var(--meron);
@@ -1337,13 +440,11 @@ body {
   height: 44px;
   padding: 0 20px;
   transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease}
-
 .collection-toolbar__reset:hover,
 .collection-toolbar__reset:focus-visible {
   background: #7f171b;
   border-color: #7f171b;
   transform: translateY(-1px)}
-
 .collection-empty-state {
   color: var(--meron);
   font-family: Mulish, Arial, sans-serif;
@@ -1352,18 +453,11 @@ body {
   margin: 12px auto 54px;
   max-width: 920px;
   text-align: center}
-
 .product-card {
   transition: box-shadow 220ms ease, transform 220ms ease, opacity 180ms ease}
-
 .product-card.is-filter-hidden {
   display: none !important}
-
 .product-card__title,
-.product-name-text,
-.product-name114,
-.product-name111212,
-
 .product-name1141,
 .product-name111212,
 .diamondnames,
@@ -1377,20 +471,11 @@ body {
   line-height: 1.3 !important;
   text-align: center;
   text-transform: uppercase}
-
-.product-card:hover .product-card-title,
-.product-item-14:hover .product-name114,
-.product-item-14:hover .product-name111212,
-.product-item-14:hover .diamondnames {
-  color: var(--meron) !important}
-
 @media (min-width: 1024px) {
   .product-card {
     max-width: 280px}
-
   .content_collection-list,
 }
-
 @media (max-width: 768px) {
   .collection-toolbar {
     align-items: stretch;
@@ -1399,26 +484,19 @@ body {
     margin: 18px auto 22px;
     padding: 14px;
     width: min(calc(100% - 24px), 460px)}
-
   .collection-toolbar__field,
   .collection-toolbar__select,
   .collection-toolbar__reset {
     flex-basis: 100%;
     min-width: 0;
     width: 100%}
-
   .product-card__title,
-  .product-name-text,
-  .product-name114,
-  .product-name111212,
-
   .product-name1141,
   .product-name111212,
   .diamondnames,
   .product-card-category {
     font-size: 11.5px !important}
 }
-
 /* Final mobile review-centering override. Earlier scraped slider rules make the
    stage 1200px wide on phones, which is what shrank the active review card. */
 @media (max-width: 768px) {
@@ -1480,4 +558,3 @@ body {
     display: none !important;
     pointer-events: none !important}
 }
-
