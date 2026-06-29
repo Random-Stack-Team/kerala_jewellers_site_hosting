@@ -4510,3 +4510,41 @@
     flex-flow: column}
 
 }
+
+/* Grid positioning rules (from original style.css) */
+#w-node-b00f0ce1-d0be-14e8-5e3e-09c078951048,
+#w-node-b00f0ce1-d0be-14e8-5e3e-09c078951049 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+#w-node-_2c8f4169-2e36-2f0e-5854-dc8898a43d3a {
+  align-self: stretch;
+}
+
+#w-node-_2c8f4169-2e36-2f0e-5854-dc8898a43d3c {
+  justify-self: auto;
+}
+
+#w-node-dec96f92-3c3e-6f23-3366-257ea468d655 {
+  align-self: stretch;
+}
+
+#w-node-_1ae81e8b-5a6d-c2c4-96d9-5e1e87a1e693 {
+  align-self: auto;
+}
+
+#w-node-bf77c195-1d2d-5f08-e855-68e35bf70fe9 {
+  align-self: stretch;
+}
+
+#w-node-bf77c195-1d2d-5f08-e855-68e35bf71024 {
+  align-self: auto;
+}
+
+#w-node-_5f139225-7c1e-3be5-2c38-6f9c2fc52312 {
+  align-self: stretch;
+}
+
+#w-node-_5f139225-7c1e-3be5-2c38-6f9c2fc5234d {
+  align-self: auto;
+}
