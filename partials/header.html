@@ -1,226 +1,216 @@
-<header class="header" id="lo">
-  <div class="rate-bar">
-    <div class="rate-bar__track">
-      <span data-mobile-rate></span>
-      <span data-mobile-rate></span>
-      <span data-mobile-rate></span>
+<header class="kj-header" id="kj-header">
+  <!-- Rate Ticker Bar -->
+  <div class="kj-rate-bar">
+    <div class="kj-rate-bar__track">
       <span data-mobile-rate></span>
     </div>
   </div>
-  <div class="page-wrapper-6">
-    <div>
-      <div class="container-755">
-        <div class="wrapper">
-          <div class="logos-marquee">
-            <div class="embed embed-code"></div>
-            <div class="header-wrap">
-              <div class="header-desktop main-nav" role="banner">
-                <div class="header-inner">
-                  <div class="layout-container container-9 content-container">
-                    <div class="header-content">
-                      <div class="header-brand"><a class="brand brand-link is-current"
-                          href="index.html" aria-label="Kerala Jewellers Home"><img fetchpriority="high"
-                            decoding="async" alt="Kerala Jewellers Logo" loading="eager"
-                            sizes="(max-width: 479px) 94vw, 170px"
-                            src="assets/images/logo.png"
-                            srcset="assets/images/logo-p-500.png 500w, assets/images/logo-p-800.png 800w, assets/images/logo.png 891w"
-                            width="170" height="57"></a></div>
-                      <div class="header-actions">
-                        <main-nav class="main-nav nav-panel" role="navigation" aria-label="Main navigation">
-                          <div class="rate-select dropdown" data-kj-rate-order="gold">
 
-                            <button class="rate-btn dropdown-toggle" type="button">
-                              <img src="assets/coin/gold coin.png" class="rate__icon" alt="Gold">
+  <!-- Main Navigation -->
+  <nav class="kj-nav" role="navigation" aria-label="Main navigation">
+    <div class="kj-nav__container">
 
-                              <span data-rate-type="gold22">
-                                Loading rates...
-                              </span>
+      <!-- Logo -->
+      <a class="kj-nav__logo" href="index.html" aria-label="Kerala Jewellers Home">
+        <img src="assets/images/logo.png"
+             srcset="assets/images/logo-p-500.png 500w, assets/images/logo-p-800.png 800w, assets/images/logo.png 891w"
+             alt="Kerala Jewellers Logo" width="170" height="57" loading="eager" fetchpriority="high">
+      </a>
 
-                              <span class="rate__chevron"></span>
-                            </button>
+      <!-- Desktop Menu -->
+      <div class="kj-nav__menu" id="kj-nav-menu">
 
-                            <div class="rate-list" role="menu">
+        <!-- Rate Dropdown -->
+        <div class="kj-nav__item kj-dropdown" data-kj-rate-order="gold">
+          <button class="kj-nav__link kj-dropdown__toggle rate-btn dropdown-toggle" type="button" aria-expanded="false">
+            <img src="assets/coin/gold coin.png" class="kj-rate-icon" alt="Gold">
+            <span data-rate-type="gold22">Loading rates...</span>
+            <svg class="kj-chevron" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </button>
+          <div class="kj-dropdown__menu kj-rate-dropdown rate-list" role="menu">
+            <button class="kj-rate-option rate-option" type="button" data-rate-type="gold22" data-metal="gold">
+              <img src="assets/coin/gold coin.png" class="kj-rate-icon" alt="Gold">
+              <span data-rate-label>Loading rates...</span>
+            </button>
+            <button class="kj-rate-option rate-option" type="button" data-rate-type="gold18" data-metal="gold">
+              <img src="assets/coin/gold coin.png" class="kj-rate-icon" alt="Gold">
+              <span data-rate-label>Loading rates...</span>
+            </button>
+            <button class="kj-rate-option rate-option" type="button" data-rate-type="platinum" data-metal="platinum">
+              <img src="assets/coin/Platinum Coin.png" class="kj-rate-icon" alt="Platinum">
+              <span data-rate-label>Loading rates...</span>
+            </button>
+            <button class="kj-rate-option rate-option" type="button" data-rate-type="silver" data-metal="silver">
+              <img src="assets/coin/silver coin.png" class="kj-rate-icon" alt="Silver">
+              <span data-rate-label>Loading rates...</span>
+            </button>
+          </div>
+        </div>
 
-                              <button class="rate-option" type="button" data-rate-type="gold22" data-metal="gold">
-                                <img src="assets/coin/gold coin.png" class="rate__icon" alt="Gold">
-                                <span data-rate-label>Loading rates...</span>
-                              </button>
-
-                              <button class="rate-option" type="button" data-rate-type="gold18" data-metal="gold">
-                                <img src="assets/coin/gold coin.png" class="rate__icon" alt="Gold">
-                                <span data-rate-label>Loading rates...</span>
-                              </button>
-
-                              <button class="rate-option" type="button" data-rate-type="platinum" data-metal="platinum">
-                                <img src="assets/coin/Platinum Coin.png" class="rate__icon" alt="Platinum">
-                                <span data-rate-label>Loading rates...</span>
-                              </button>
-
-                              <button class="rate-option" type="button" data-rate-type="silver" data-metal="silver">
-                                <img src="assets/coin/silver coin.png" class="rate__icon" alt="Silver">
-                                <span data-rate-label>Loading rates...</span>
-                              </button>
-
-                            </div>
-                          </div>
-                          <div class="nav-item">
-                            <div class="dropdown dropdown" data-kj-hover-bound="true">
-                              <div class="dropdown__trigger dropdown-toggle"><a class="nav-link--gold inline-block"
-                                  href="products.html">
-                                  <div class="dropdown__label">Gold</div>
-                                </a></div>
-                              <main-nav
-                                class="dropdown__menu dropdown-list megamenu megamenu--gold megamenu--left"
-                                data-kj-megamenu="gold">
-                                <div class="megamenu__panel">
-                                  <div class="megamenu__category">
-                                    <div class="dropdown__heading megamenu__title">Category</div>
-                                    <div class="megamenu__links"><a class="megamenu__link"
-                                        href="products.html?category=bangles#category=bangles"><span>Bangles</span></a><a
-                                        class="megamenu__link"
-                                        href="products.html?category=bracelet#category=bracelet"><span>Bracelets</span></a><a
-                                        class="megamenu__link"
-                                        href="products.html?category=pendant#category=pendant"><span>Pendant</span></a><a
-                                        class="megamenu__link"
-                                        href="products.html?category=necklace#category=necklace"><span>Necklace</span></a><a
-                                        class="megamenu__link"
-                                        href="products.html?category=rings#category=rings"><span>Rings</span></a><a
-                                        class="megamenu__link"
-                                        href="products.html?category=earrings#category=earrings"><span>Earrings</span></a>
-                                    </div>
-                                  </div>
-                                  <div class="megamenu__image">
-                                    <img src="assets/images/66ae16158fbb46cce3ea01a1_Rectangle%20366.png"
-                                      alt="Gold jewellery" loading="lazy" decoding="async">
-                                  </div>
-                                </div>
-                              </main-nav>
-                            </div>
-                          </div>
-                          <div class="nav-item">
-                            <div class="dropdown dropdown" data-kj-hover-bound="true">
-                              <div class="dropdown__trigger dropdown-toggle"><a class="nav-link--silver inline-block"
-                                  href="silver-products.html">
-                                  <div class="dropdown__label">Silver</div>
-                                </a></div>
-                              <main-nav
-                                class="dropdown__menu dropdown-list megamenu megamenu--silver megamenu--left"
-                                data-kj-megamenu="silver">
-                                <div class="megamenu__panel">
-                                  <div class="megamenu__category">
-                                    <div class="dropdown__heading megamenu__title">Category</div>
-                                    <div class="megamenu__links"><a class="megamenu__link"
-                                        href="silver-products.html?category=bracelet#category=bracelet"><span>Bracelets</span></a><a
-                                        class="megamenu__link"
-                                        href="silver-products.html?category=necklace#category=necklace"><span>Necklace</span></a><a
-                                        class="megamenu__link"
-                                        href="silver-products.html?category=idols#category=idols"><span>Idols</span></a><a
-                                        class="megamenu__link"
-                                        href="silver-products.html?category=anklets#category=anklets"><span>Anklets</span></a>
-                                    </div>
-                                  </div>
-                                  <div class="megamenu__image">
-                                    <img src="assets/images/66ae1d64b0ff185260ad9b44_Rectangle%20367%20(1).png"
-                                      alt="Silver jewellery" loading="lazy" decoding="async">
-                                  </div>
-                                </div>
-                              </main-nav>
-                            </div>
-                          </div>
-                          <div class="nav-item">
-                            <div class="dropdown dropdown" data-kj-hover-bound="true">
-                              <div class="dropdown__trigger dropdown-toggle"><a class="nav-link--diamond inline-block"
-                                  href="diamonds-products.html">
-                                  <div class="dropdown__label">Diamond</div>
-                                </a></div>
-                              <main-nav
-                                class="dropdown__menu dropdown-list megamenu megamenu--diamond megamenu--right"
-                                data-kj-megamenu="diamond">
-                                <div class="megamenu__panel">
-                                  <div class="megamenu__category">
-                                    <div class="dropdown__heading megamenu__title">Category</div>
-                                    <div class="megamenu__links"><a class="megamenu__link"
-                                        href="diamonds-products.html?category=necklace#category=necklace"><span>Necklace</span></a><a
-                                        class="megamenu__link"
-                                        href="diamonds-products.html?category=rings#category=rings"><span>Rings</span></a>
-                                    </div>
-                                  </div>
-                                  <div class="megamenu__image">
-                                    <img src="assets/images/66ae22bea9cab6312ffdd45d_Rectangle%20367%20(7).png"
-                                      alt="Diamond jewellery" loading="lazy" decoding="async">
-                                  </div>
-                                </div>
-                              </main-nav>
-                            </div>
-                          </div>
-                          <div class="nav-item">
-                            <div class="nav-item__plain"><a class="nav-link" href="coming-soon.html">Platinum</a></div>
-                          </div>
-                          <div class="nav-item">
-                            <div class="nav-item__plain"><a class="nav-link" href="about.html">About Us</a></div>
-                          </div>
-                          <div class="nav-item">
-                            <div class="dropdown dropdown" data-kj-hover-bound="true">
-                              <div class="dropdown__trigger dropdown-toggle"><a class="nav-link--gold inline-block"
-                                  href="#">
-                                  <div class="dropdown__label">Scheme</div>
-                                </a></div>
-                              <main-nav
-                                class="dropdown__menu dropdown-list megamenu megamenu--scheme megamenu--right megamenu--scheme-list"
-                                data-kj-megamenu="scheme">
-                                <div class="megamenu__panel megamenu__panel--text">
-                                  <div class="megamenu__category">
-                                    <div class="dropdown__heading megamenu__title">Schemes</div>
-                                    <div class="megamenu__links"><a class="megamenu__link"
-                                        href="swarnavarsha.html"><span>Swarnavarsha</span></a><a
-                                        class="megamenu__link" href="thanga-mazhai.html"><span>Thanga
-                                          Mazhai</span></a></div>
-                                  </div>
-
-                                </div>
-                              </main-nav>
-                            </div>
-                          </div>
-                          <div class="nav-item">
-                            <div class="nav-item__plain"><a class="nav-link" href="contact.html">Contact</a></div>
-                          </div>
-                        </main-nav>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
+        <!-- Gold Mega Menu -->
+        <div class="kj-nav__item kj-mega-dropdown">
+          <a class="kj-nav__link" href="products.html">
+            Gold
+            <svg class="kj-chevron" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </a>
+          <div class="kj-megamenu">
+            <div class="kj-megamenu__inner">
+              <div class="kj-megamenu__col">
+                <div class="kj-megamenu__heading">Category</div>
+                <a class="kj-megamenu__link" href="products.html?category=bangles#category=bangles">Bangles</a>
+                <a class="kj-megamenu__link" href="products.html?category=bracelet#category=bracelet">Bracelets</a>
+                <a class="kj-megamenu__link" href="products.html?category=pendant#category=pendant">Pendant</a>
+                <a class="kj-megamenu__link" href="products.html?category=necklace#category=necklace">Necklace</a>
+                <a class="kj-megamenu__link" href="products.html?category=rings#category=rings">Rings</a>
+                <a class="kj-megamenu__link" href="products.html?category=earrings#category=earrings">Earrings</a>
               </div>
-              <main-nav class="header-mobile main-nav" role="navigation" aria-label="Mobile navigation">
-                <div class="header-mobile__inner"><a class="brand brand-link is-current" href="index.html"
-                    aria-label="Kerala Jewellers Home"><img fetchpriority="high" decoding="async"
-                      alt="Kerala Jewellers Logo" loading="eager" sizes="(max-width: 479px) 94vw, 170px"
-                      src="assets/images/logo.png"
-                      srcset="assets/images/logo-p-500.png 500w, assets/images/logo-p-800.png 800w, assets/images/logo.png 891w"
-                      width="170" height="57"></a>
-                  <main-nav class="nav-mobile nav-panel" role="navigation" aria-label="Mobile menu" data-kj-live-simple="true" id="mobileMenu">
-                    <a class="nav-mobile__link" href="products.html">Gold</a>
-                    <a class="nav-mobile__link" href="silver-products.html">Silver</a>
-                    <a class="nav-mobile__link" href="diamonds-products.html">Diamond</a>
-                    <a class="nav-mobile__link" href="coming-soon.html">Platinum</a>
-                    <a class="nav-mobile__link" href="about.html">About Us</a>
-                    <a class="nav-mobile__link" href="thanga-mazhai.html">Thanga Mazhai</a>
-                    <a class="nav-mobile__link" href="swarnavarsha">Swarnavarsha</a>
-                    <a class="nav-mobile__link" href="contact">Contact</a>
-
-                  </main-nav>
-                  <div class="header-right"><button class="nav-toggle nav-toggle__btn"
-                      aria-label="Open main-navigation menu" aria-expanded="false" aria-controls="mobileMenu">
-                      <span class="nav-toggle__bar"></span>
-                      <span class="nav-toggle__bar"></span>
-                      <span class="nav-toggle__bar"></span>
-                    </button></div>
-                </div>
-              </main-nav>
+              <div class="kj-megamenu__col kj-megamenu__col--image">
+                <img src="assets/images/66ae16158fbb46cce3ea01a1_Rectangle%20366.png" alt="Gold jewellery" loading="lazy">
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Silver Mega Menu -->
+        <div class="kj-nav__item kj-mega-dropdown">
+          <a class="kj-nav__link" href="silver-products.html">
+            Silver
+            <svg class="kj-chevron" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </a>
+          <div class="kj-megamenu">
+            <div class="kj-megamenu__inner">
+              <div class="kj-megamenu__col">
+                <div class="kj-megamenu__heading">Category</div>
+                <a class="kj-megamenu__link" href="silver-products.html?category=bracelet#category=bracelet">Bracelets</a>
+                <a class="kj-megamenu__link" href="silver-products.html?category=necklace#category=necklace">Necklace</a>
+                <a class="kj-megamenu__link" href="silver-products.html?category=idols#category=idols">Idols</a>
+                <a class="kj-megamenu__link" href="silver-products.html?category=anklets#category=anklets">Anklets</a>
+              </div>
+              <div class="kj-megamenu__col kj-megamenu__col--image">
+                <img src="assets/images/66ae1d64b0ff185260ad9b44_Rectangle%20367%20(1).png" alt="Silver jewellery" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diamond Mega Menu -->
+        <div class="kj-nav__item kj-mega-dropdown">
+          <a class="kj-nav__link" href="diamonds-products.html">
+            Diamond
+            <svg class="kj-chevron" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </a>
+          <div class="kj-megamenu">
+            <div class="kj-megamenu__inner">
+              <div class="kj-megamenu__col">
+                <div class="kj-megamenu__heading">Category</div>
+                <a class="kj-megamenu__link" href="diamonds-products.html?category=necklace#category=necklace">Necklace</a>
+                <a class="kj-megamenu__link" href="diamonds-products.html?category=rings#category=rings">Rings</a>
+              </div>
+              <div class="kj-megamenu__col kj-megamenu__col--image">
+                <img src="assets/images/66ae22bea9cab6312ffdd45d_Rectangle%20367%20(7).png" alt="Diamond jewellery" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simple Links -->
+        <div class="kj-nav__item">
+          <a class="kj-nav__link" href="coming-soon.html">Platinum</a>
+        </div>
+        <div class="kj-nav__item">
+          <a class="kj-nav__link" href="about.html">About Us</a>
+        </div>
+
+        <!-- Scheme Dropdown -->
+        <div class="kj-nav__item kj-mega-dropdown">
+          <a class="kj-nav__link" href="#">
+            Scheme
+            <svg class="kj-chevron" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </a>
+          <div class="kj-megamenu kj-megamenu--text">
+            <div class="kj-megamenu__inner">
+              <div class="kj-megamenu__col">
+                <div class="kj-megamenu__heading">Schemes</div>
+                <a class="kj-megamenu__link" href="swarnavarsha.html">Swarnavarsha</a>
+                <a class="kj-megamenu__link" href="thanga-mazhai.html">Thanga Mazhai</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="kj-nav__item">
+          <a class="kj-nav__link" href="contact.html">Contact</a>
+        </div>
       </div>
+
+      <!-- Mobile Toggle -->
+      <button class="kj-nav__toggle" id="kj-nav-toggle" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="kj-nav-menu">
+        <span class="kj-nav__toggle-bar"></span>
+        <span class="kj-nav__toggle-bar"></span>
+        <span class="kj-nav__toggle-bar"></span>
+      </button>
     </div>
-  </div>
+  </nav>
 </header>
+
+<script>
+(function() {
+  var toggle = document.getElementById('kj-nav-toggle');
+  var menu = document.getElementById('kj-nav-menu');
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener('click', function() {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    toggle.classList.toggle('is-active');
+    menu.classList.toggle('is-open');
+  });
+
+  // Close on resize to desktop
+  window.addEventListener('resize', function() {
+    if (window.innerWidth >= 992) {
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.classList.remove('is-active');
+      menu.classList.remove('is-open');
+    }
+  });
+
+  // Desktop hover dropdowns
+  document.querySelectorAll('.kj-mega-dropdown').forEach(function(item) {
+    var link = item.querySelector('.kj-nav__link');
+    var panel = item.querySelector('.kj-megamenu');
+    if (!link || !panel) return;
+
+    item.addEventListener('mouseenter', function() {
+      if (window.innerWidth >= 992) panel.classList.add('is-open');
+    });
+    item.addEventListener('mouseleave', function() {
+      if (window.innerWidth >= 992) panel.classList.remove('is-open');
+    });
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth < 992) {
+        e.preventDefault();
+        panel.classList.toggle('is-open');
+      }
+    });
+  });
+
+  // Rate dropdown
+  document.querySelectorAll('.kj-dropdown').forEach(function(dd) {
+    var btn = dd.querySelector('.kj-dropdown__toggle');
+    var menu = dd.querySelector('.kj-dropdown__menu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('is-open');
+    });
+    document.addEventListener('click', function() {
+      btn.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('is-open');
+    });
+  });
+})();
+</script>
