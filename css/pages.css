@@ -35,9 +35,6 @@
 
 /* --- PRODUCT DETAILS TYPOGRAPHY FIXES --- */
 .product-header4_product-details .text-size-large,
-.product-header5_product-details .text-size-large {
-  color: var(--meron) !important;
-  font-weight: 700 !important}
 
 .product-header4_product-details .word1,
 .product-header4_product-details .word3,
@@ -62,36 +59,6 @@
   display: none}
 
 /* Final Phase 6 Mobile Navbar Regression Fix */
-@media (max-width: 991px) {
-  header.site-header.header .mobile-header.site-nav {
-    background: var(--meron) !important;
-    display: flex !important;
-    width: 100% !important;
-    min-height: 120px !important;
-    padding: 22px 32px !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    z-index: 10000 !important}
-
-  header.site-header.header .mobile-header__container {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important}
-
-  header.site-header.header .mobile-nav .kj-mobile-menu-link {
-    color: #222 !important;
-    background: #ffffff !important;
-    font-family: Mulish, Arial, sans-serif !important;
-    font-size: 20px !important;
-    font-weight: 400 !important;
-    padding: 13px 0 !important;
-    border-bottom: 1px solid rgba(0, 0, 0, .06) !important;
-    text-decoration: none !important}
-
-  header.site-header.header .mobile-nav .kj-mobile-menu-image {
-    display: none !important}
-}
 
 /* ==================================================
    PREMIUM CONTACT PAGE REDESIGN
@@ -189,10 +156,6 @@ body .premium-contact-page .premium-card-title::after {
 }
 
 /* INFO LIST */
-.premium-info-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 32px 0}
 
 .premium-info-list li {
   margin-bottom: 16px;
@@ -370,15 +333,6 @@ body .premium-contact-page .premium-card-title::after {
   border-color: #7a181c}
 
 /* RESPONSIVE */
-@media screen and (max-width: 991px) {
-  .premium-contact-grid {
-    grid-template-columns: 1fr;
-    gap: 32px}
-
-  .premium-branches-grid {
-    grid-template-columns: 1fr;
-    gap: 20px}
-}
 
 .branch-map-embed {
   width: 100%;
