@@ -527,7 +527,7 @@ document.documentElement.classList.add('js-ready');
   };
 
   window.initKeralaHeader = () => {
-    const mount = document.getElementById('site-header');
+    const mount = document.getElementById('kj-header');
     if (!mount || !mount.children.length) return;
     if (document.documentElement.dataset.keralaHeaderInit === 'true') return;
     document.documentElement.dataset.keralaHeaderInit = 'true';
@@ -550,7 +550,7 @@ document.documentElement.classList.add('js-ready');
     window.addEventListener('kerala:header-loaded', window.initKeralaHeader);
   }
 
-  if (document.getElementById('site-header')?.children.length) {
+  if (document.getElementById('kj-header')?.children.length) {
     window.initKeralaHeader();
   }
 })();

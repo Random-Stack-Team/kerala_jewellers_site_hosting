@@ -1,317 +1,220 @@
 /* ===================================================
    KERALA JEWELLERS — NAVBAR.JS
-   Self-contained navbar: injection, toggle, rates
+   Self-contained: injection, toggle, rates, lifecycle.
+   No legacy selectors.
    =================================================== */
 (function () {
   "use strict";
 
-  /* --------------------------------------------------
-     CONFIGURATION
-     -------------------------------------------------- */
-  var NAVBAR_HTML_PATH = "components/navbar/navbar.html";
-  var NAVBAR_VERSION = "v=2";
+  var NAVBAR_HTML = "components/navbar/navbar.html";
+  var CACHE_BUST = "v=3";
 
   /* --------------------------------------------------
      HELPERS
      -------------------------------------------------- */
-  function getAssetPrefix() {
-    var path = window.location.pathname.replace(/\\/g, "/");
-    return /\/(goldproducts|silverproducts|diamondproducts|post)\//.test(path)
-      ? "../"
-      : "";
+  function getPrefix() {
+    var p = window.location.pathname.replace(/\\/g, "/");
+    return /\/(goldproducts|silverproducts|diamondproducts|post)\//.test(p) ? "../" : "";
   }
 
-  function getCurrentMetal() {
-    var path = window.location.pathname.replace(/\\/g, "/").toLowerCase();
-    var params = new URLSearchParams(window.location.search);
-    var category = (params.get("metal") || params.get("type") || "").toLowerCase();
-
-    if (path.includes("silver") || category.includes("silver")) return "silver";
-    if (
-      path.includes("coming-soon") ||
-      path.includes("platinum") ||
-      category.includes("platinum")
-    )
-      return "platinum";
-    if (path.includes("diamond") || category.includes("diamond")) return "diamond";
+  function getMetal() {
+    var p = window.location.pathname.replace(/\\/g, "/").toLowerCase();
+    var q = new URLSearchParams(window.location.search);
+    var m = (q.get("metal") || q.get("type") || "").toLowerCase();
+    if (p.includes("silver") || m.includes("silver")) return "silver";
+    if (p.includes("coming-soon") || p.includes("platinum") || m.includes("platinum")) return "platinum";
+    if (p.includes("diamond") || m.includes("diamond")) return "diamond";
     return "gold";
   }
 
   /* --------------------------------------------------
      RATE STATE — hide on diamond, reorder for metal
      -------------------------------------------------- */
-  function applyInitialRateState(html) {
-    var currentMetal = getCurrentMetal();
-    var shouldHideRate = currentMetal === "diamond";
+  function applyRateState(html) {
+    var metal = getMetal();
+    var hideRate = metal === "diamond";
 
-    document.documentElement.classList.toggle(
-      "kj-hide-rate-dropdown",
-      shouldHideRate
-    );
-    document.body &&
-      document.body.classList.toggle("kj-hide-rate-dropdown", shouldHideRate);
+    document.documentElement.classList.toggle("kj-header--hide-rate", hideRate);
+    document.body && document.body.classList.toggle("kj-header--hide-rate", hideRate);
 
-    var template = document.createElement("template");
-    template.innerHTML = html;
+    var t = document.createElement("template");
+    t.innerHTML = html;
 
-    var dropdown = template.content.querySelector(".rate-dropdown");
-    if (!dropdown) return template.innerHTML;
+    var dd = t.content.querySelector("[data-kj-rate-dropdown]");
+    if (!dd) return t.innerHTML;
 
-    if (shouldHideRate) {
-      dropdown.hidden = true;
-      dropdown.classList.add("kj-rate-hidden");
-      return template.innerHTML;
+    if (hideRate) {
+      dd.hidden = true;
+      return t.innerHTML;
     }
 
-    var menu = dropdown.querySelector(".rate-menu");
-    if (menu) {
-      var rows = Array.prototype.slice.call(menu.querySelectorAll(".rate-row"));
-      if (rows.length > 0) {
-        var primaryRow = null;
-        for (var i = 0; i < rows.length; i++) {
-          if (rows[i].dataset.metal === currentMetal) {
-            primaryRow = rows[i];
-            break;
-          }
-        }
-        if (!primaryRow) {
-          for (var j = 0; j < rows.length; j++) {
-            if (rows[j].dataset.metal === "gold") {
-              primaryRow = rows[j];
-              break;
-            }
-          }
-          if (!primaryRow) primaryRow = rows[0];
-        }
+    var menu = dd.querySelector("[data-kj-rate-menu]");
+    if (!menu) return t.innerHTML;
 
-        var prefix = getAssetPrefix();
-        var triggerText = dropdown.querySelector(".rate-toggle span");
-        var triggerImage = dropdown.querySelector(".rate-toggle img");
+    var rows = Array.prototype.slice.call(menu.querySelectorAll(".kj-header__rate-row"));
+    if (!rows.length) return t.innerHTML;
 
-        dropdown.setAttribute("data-kj-rate-order", currentMetal);
+    var primary = rows.find(function (r) { return r.dataset.kjMetal === metal; }) || rows[0];
+    var prefix = getPrefix();
 
-        if (triggerText) {
-          var primaryLabelSpan = primaryRow.querySelector("[data-rate-label]");
-          triggerText.textContent = primaryLabelSpan
-            ? primaryLabelSpan.textContent
-            : "";
-          triggerText.setAttribute("data-rate-type", primaryRow.dataset.rateType);
-        }
+    // Update trigger
+    var label = dd.querySelector(".kj-header__rate-label");
+    var coin = dd.querySelector(".kj-header__rate-btn .kj-header__coin");
+    var srcLabel = primary.querySelector("[data-kj-rate-label]");
 
-        if (triggerImage) {
-          var primaryImg = primaryRow.querySelector("img");
-          if (primaryImg) {
-            triggerImage.setAttribute(
-              "src",
-              prefix + primaryImg.getAttribute("src")
-            );
-          }
-        }
-
-        // Reorder rows so current metal is first
-        if (currentMetal !== "diamond") {
-          var otherRows = rows.filter(function (r) {
-            return r !== primaryRow;
-          });
-          menu.innerHTML = "";
-          menu.appendChild(primaryRow);
-          otherRows.forEach(function (r) {
-            menu.appendChild(r);
-          });
-        }
-      }
+    if (label && srcLabel) {
+      label.textContent = srcLabel.textContent;
+      label.dataset.kjRateType = primary.dataset.kjRateType;
+    }
+    if (coin) {
+      var srcCoin = primary.querySelector(".kj-header__coin");
+      if (srcCoin) coin.setAttribute("src", prefix + srcCoin.getAttribute("src"));
     }
 
-    return template.innerHTML;
+    // Reorder rows — primary first
+    var others = rows.filter(function (r) { return r !== primary; });
+    menu.innerHTML = "";
+    menu.appendChild(primary);
+    others.forEach(function (r) { menu.appendChild(r); });
+
+    return t.innerHTML;
   }
 
   /* --------------------------------------------------
-     RATE SELECTION — click handler
+     MOBILE HAMBURGER
      -------------------------------------------------- */
-  var _rateWired = false;
+  function wireHamburger() {
+    document.addEventListener("click", function (e) {
+      var btn = e.target.closest(".kj-header__hamburger");
+      if (!btn) return;
+      e.preventDefault();
+      e.stopImmediatePropagation();
 
-  function wireRateSelection() {
-    if (_rateWired) return;
-    _rateWired = true;
+      var header = btn.closest(".kj-header__mobile");
+      var menu = header && header.querySelector("[data-kj-mobile-menu]");
+      if (!menu) return;
 
-    document.addEventListener(
-      "click",
-      function (event) {
-        var item = event.target.closest(".rate-row, .rate-item");
-        if (!item) return;
-        event.preventDefault();
-        event.stopImmediatePropagation();
-      },
-      true
-    );
+      var open = menu.classList.contains("is-open");
+      menu.classList.toggle("is-open", !open);
+      btn.classList.toggle("is-open", !open);
+      btn.setAttribute("aria-expanded", String(!open));
+    }, true);
   }
 
   /* --------------------------------------------------
-     MOBILE MENU TOGGLE
-     -------------------------------------------------- */
-  function wireMobileToggle() {
-    document.addEventListener(
-      "click",
-      function (event) {
-        var button = event.target.closest(
-          ".mobile-menu-toggle.mobile-menu-button"
-        );
-        if (!button) return;
-
-        event.preventDefault();
-        event.stopImmediatePropagation();
-
-        var header = button.closest(".mobile-header");
-        var panel = header
-          ? header.querySelector(".mobile-nav.site-nav__panel")
-          : document.querySelector(".mobile-nav.site-nav__panel");
-
-        if (!panel) return;
-
-        if (panel.classList.contains("is-open")) {
-          panel.classList.remove("is-open");
-          button.classList.remove("is-open");
-          button.setAttribute("aria-expanded", "false");
-        } else {
-          panel.classList.add("is-open");
-          button.classList.add("is-open");
-          button.setAttribute("aria-expanded", "true");
-        }
-      },
-      true
-    );
-  }
-
-  /* --------------------------------------------------
-     RATE DROPDOWN TOGGLE (click on mobile)
+     RATE DROPDOWN TOGGLE
      -------------------------------------------------- */
   function wireRateDropdown() {
-    document.addEventListener(
-      "click",
-      function (event) {
-        var toggle = event.target.closest(".rate-toggle");
-        if (!toggle) return;
+    document.addEventListener("click", function (e) {
+      var btn = e.target.closest(".kj-header__rate-btn");
+      if (!btn) return;
+      e.stopPropagation();
 
-        var dropdown = toggle.closest(".rate-dropdown");
-        if (!dropdown) return;
+      var item = btn.closest(".kj-header__item--rate");
+      if (!item) return;
+      item.classList.toggle("is-open");
+    }, true);
 
-        event.stopPropagation();
-
-        var isOpen = dropdown.classList.contains("is-open");
-        dropdown.classList.toggle("is-open", !isOpen);
-      },
-      true
-    );
-
-    // Close rate dropdown on outside click
-    document.addEventListener("click", function (event) {
-      if (!event.target.closest(".rate-dropdown")) {
-        document
-          .querySelectorAll(".rate-dropdown.is-open")
-          .forEach(function (dd) {
-            dd.classList.remove("is-open");
-          });
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".kj-header__item--rate")) {
+        document.querySelectorAll(".kj-header__item--rate.is-open").forEach(function (el) {
+          el.classList.remove("is-open");
+        });
       }
     });
   }
 
   /* --------------------------------------------------
-     RESET MOBILE MENU ON DESKTOP RESIZE
+     RESET MOBILE ON DESKTOP RESIZE
      -------------------------------------------------- */
-  function resetMobileMenuOnDesktop() {
-    if (window.innerWidth >= 992) {
-      document
-        .querySelectorAll(".mobile-nav.site-nav__panel.is-open")
-        .forEach(function (panel) {
-          panel.classList.remove("is-open");
+  function wireResize() {
+    var handler = function () {
+      if (window.innerWidth >= 992) {
+        document.querySelectorAll(".kj-header__mobile-menu.is-open").forEach(function (m) {
+          m.classList.remove("is-open");
         });
-
-      document
-        .querySelectorAll(".mobile-menu-toggle.mobile-menu-button.is-open")
-        .forEach(function (button) {
-          button.classList.remove("is-open");
-          button.setAttribute("aria-expanded", "false");
+        document.querySelectorAll(".kj-header__hamburger.is-open").forEach(function (b) {
+          b.classList.remove("is-open");
+          b.setAttribute("aria-expanded", "false");
         });
-    }
+      }
+    };
+    window.addEventListener("resize", handler);
   }
 
   /* --------------------------------------------------
-     INITIALIZE
+     RATE CLICK INTERCEPT
      -------------------------------------------------- */
-  function initNavbar() {
-    wireMobileToggle();
-    wireRateSelection();
+  function wireRateClick() {
+    document.addEventListener("click", function (e) {
+      if (e.target.closest(".kj-header__rate-row")) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+      }
+    }, true);
+  }
+
+  /* --------------------------------------------------
+     INIT
+     -------------------------------------------------- */
+  function init() {
+    wireHamburger();
     wireRateDropdown();
-    resetMobileMenuOnDesktop();
-    window.addEventListener("resize", resetMobileMenuOnDesktop);
+    wireRateClick();
+    wireResize();
   }
 
   /* --------------------------------------------------
-     LOAD & INJECT NAVBAR
+     LOAD + INJECT
      -------------------------------------------------- */
-  async function loadNavbar() {
-    var mount = document.getElementById("site-header");
+  async function load() {
+    var mount = document.getElementById("kj-header");
     if (!mount) return;
 
-    var prefix = getAssetPrefix();
+    var prefix = getPrefix();
 
     try {
-      var response = await fetch(
-        prefix + NAVBAR_HTML_PATH + "?" + NAVBAR_VERSION
-      );
-      if (!response.ok) throw new Error("Navbar fetch failed: " + response.status);
+      var res = await fetch(prefix + NAVBAR_HTML + "?" + CACHE_BUST);
+      if (!res.ok) throw new Error("Fetch failed: " + res.status);
 
-      var html = await response.text();
+      var html = await res.text();
 
-      // Rewrite paths for subfolder pages
+      // Rewrite paths for subfolders
       if (prefix) {
         html = html.replace(
           /(href|src)="(?!https?:|mailto:|tel:|#|\/|\.\.\/)([^"]+)"/g,
           '$1="' + prefix + '$2"'
         );
-        html = html.replace(/srcset="([^"]+)"/g, function (_, contents) {
-          return (
-            'srcset="' +
-            contents
-              .split(",")
-              .map(function (part) {
-                part = part.trim();
-                return part &&
-                  !part.startsWith("http") &&
-                  !part.startsWith("/") &&
-                  !part.startsWith("../")
-                  ? prefix + part
-                  : part;
-              })
-              .join(", ") +
-            '"'
-          );
+        html = html.replace(/srcset="([^"]+)"/g, function (_, c) {
+          return 'srcset="' + c.split(",").map(function (p) {
+            p = p.trim();
+            return p && !p.startsWith("http") && !p.startsWith("/") && !p.startsWith("../")
+              ? prefix + p : p;
+          }).join(", ") + '"';
         });
       }
 
-      html = applyInitialRateState(html);
+      html = applyRateState(html);
       mount.innerHTML = html;
 
-      // Initialize navbar interactions
-      initNavbar();
+      init();
 
-      // Dispatch event for other scripts (app.js, rates.js)
+      // Signal to other scripts
       window.dispatchEvent(new CustomEvent("kerala:header-loaded"));
-    } catch (error) {
-      console.error("Navbar loader error:", error);
+    } catch (err) {
+      console.error("Navbar error:", err);
     }
   }
 
   /* --------------------------------------------------
      BOOT
      -------------------------------------------------- */
-  if (!window.__kjNavbarBound) {
-    window.__kjNavbarBound = true;
-
+  if (!window.__kjNavInit) {
+    window.__kjNavInit = true;
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", loadNavbar);
+      document.addEventListener("DOMContentLoaded", load);
     } else {
-      loadNavbar();
+      load();
     }
   }
 })();
