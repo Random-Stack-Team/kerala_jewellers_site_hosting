@@ -18,29 +18,7 @@ document.documentElement.classList.add('js-ready');
     return 'gold';
   };
 
-  const renderRateLabelForCurrentPage = () => {
-    const currentMetal = getCurrentMetal();
-    const shouldHideRate = currentMetal === 'diamond';
-    const prefix = getAssetPrefix();
 
-    document.documentElement.classList.toggle('kj-hide-rate-dropdown', shouldHideRate);
-    document.body?.classList.toggle('kj-hide-rate-dropdown', shouldHideRate);
-
-    document.querySelectorAll('.rate-dropdown, .rate-dropdown-container').forEach((dropdown) => {
-      dropdown.hidden = shouldHideRate;
-      dropdown.classList.toggle('kj-rate-hidden', shouldHideRate);
-      dropdown.classList.remove('is-open');
-      dropdown.querySelector('[aria-expanded]')?.setAttribute('aria-expanded', 'false');
-      if (shouldHideRate) return;
-
-      const triggerText = dropdown.querySelector('.rate-toggle span, .rate-dropdown-trigger span');
-      const triggerImage = dropdown.querySelector('.rate-toggle img, .rate-dropdown-trigger img');
-      const menu = dropdown.querySelector('.rate-menu, .rate-dropdown-menu');
-
-      // The dynamic rate row generation has been removed from here.
-      // It is now handled correctly by header-loader.js and rates.js
-    });
-  };
 
   const wireTimelineProgress = () => {
     const timeline = document.querySelector('.timeline');
@@ -112,19 +90,6 @@ document.documentElement.classList.add('js-ready');
         </section>
       `);
     }
-  };
-
-  let _rateWired = false;
-  const wireRateSelection = () => {
-    if (_rateWired) return;
-    _rateWired = true;
-    document.addEventListener('click', (event) => {
-      const item = event.target.closest('.rate-row, .rate-item');
-      if (!item) return;
-
-      event.preventDefault();
-      event.stopImmediatePropagation();
-    }, true);
   };
 
   const CATEGORY_ALIASES = {
@@ -567,8 +532,6 @@ document.documentElement.classList.add('js-ready');
     if (document.documentElement.dataset.keralaHeaderInit === 'true') return;
     document.documentElement.dataset.keralaHeaderInit = 'true';
 
-    renderRateLabelForCurrentPage();
-    wireRateSelection();
     wireTimelineProgress();
     normalizePhoneLinks();
     normalizeProductActions();
@@ -671,47 +634,6 @@ document.documentElement.classList.add('js-ready');
   });
 } // end initLoupeEffect
 
-document.addEventListener("click", function (event) {
-  const button = event.target.closest(".mobile-menu-toggle.mobile-menu-button");
-  if (!button) return;
-
-  event.preventDefault();
-  event.stopImmediatePropagation();
-
-  const header = button.closest(".mobile-header");
-  const panel = header
-    ? header.querySelector(".mobile-nav.site-nav__panel")
-    : document.querySelector(".mobile-nav.site-nav__panel");
-
-  if (!panel) return;
-
-  if (panel.classList.contains("is-open")) {
-    panel.classList.remove("is-open");
-    button.classList.remove("is-open");
-    button.setAttribute("aria-expanded", "false");
-  } else {
-    panel.classList.add("is-open");
-    button.classList.add("is-open");
-    button.setAttribute("aria-expanded", "true");
-  }
-}, true);
-
-/* --- MOBILE NAVBAR DESKTOP RESET --- */
-function resetMobileMenuOnDesktop() {
-  if (window.innerWidth >= 992) {
-    document.querySelectorAll(".mobile-nav.site-nav__panel.is-open").forEach(panel => {
-      panel.classList.remove("is-open");
-    });
-
-    document.querySelectorAll(".mobile-menu-toggle.mobile-menu-button.is-open").forEach(button => {
-      button.classList.remove("is-open");
-      button.setAttribute("aria-expanded", "false");
-    });
-  }
-}
-
-window.addEventListener("resize", resetMobileMenuOnDesktop);
-
 function restoreEnquiryPrefill() {
   const nameEl = document.querySelector('.word2') || document.querySelector('.text-size-large');
   const codeEl = document.querySelector('.word8');
@@ -754,7 +676,6 @@ function restoreEnquiryPrefill() {
 
 document.addEventListener("DOMContentLoaded", () => {
   if (typeof initLoupeEffect === 'function') initLoupeEffect();
-  if (typeof resetMobileMenuOnDesktop === 'function') resetMobileMenuOnDesktop();
   restoreEnquiryPrefill();
 
   // Contact Page Form Submission Handler

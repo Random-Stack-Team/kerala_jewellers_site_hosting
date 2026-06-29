@@ -878,31 +878,6 @@ textarea.form-select {
 .dropdown-link:focus {
   outline: 0}
 
-@media screen and (max-width: 767px) {
-  .site-header__brand {
-    padding-left: 10px}
-}
-
-.site-nav {
-  z-index: 1000;
-  background: #ddd;
-  position: relative}
-
-.site-nav:before,
-.site-nav:after {
-  content: " ";
-  grid-area: 1 / 1 / 2 / 2;
-  display: table}
-
-.site-nav:after {
-  clear: both}
-
-.site-header__brand {
-  float: left;
-  color: #333;
-  text-decoration: none;
-  position: relative}
-
 .nav-menu-link {
   vertical-align: top;
   color: #222;
@@ -944,32 +919,8 @@ textarea.form-select {
 .nav-overlay [data-nav-menu-open] {
   top: 0}
 
-.site-nav[data-animation="over-left"] .nav-overlay {
-  width: auto}
-
-.site-nav[data-animation="over-left"] .nav-overlay,
-.site-nav[data-animation="over-left"] [data-nav-menu-open] {
-  z-index: 1;
-  top: 0;
-  right: auto}
-
-.site-nav[data-animation="over-right"] .nav-overlay {
-  width: auto}
-
-.site-nav[data-animation="over-right"] .nav-overlay,
-.site-nav[data-animation="over-right"] [data-nav-menu-open] {
-  z-index: 1;
-  top: 0;
-  left: auto}
-
 .w--nav-dropdown-list-open {
   position: static}
-
-@media screen and (max-width: 767px) {
-
-  .site-header__brand {
-    padding-left: 10px}
-}
 
 .w--tab-active {
   display: block}
@@ -2186,12 +2137,6 @@ figcaption {
   display: flex;
   position: static}
 
-.site-header__container {
-  border: 0 solid #000;
-  justify-content: space-between;
-  align-items: stretch;
-  display: flex}
-
 .nav-menu {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
@@ -2406,23 +2351,9 @@ figcaption {
   margin-right: auto;
   display: flex}
 
-.site-header__actions {
-  grid-column-gap: 12px;
-  grid-row-gap: 12px;
-  flex-flow: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-  font-size: 16px;
-  display: flex}
-
 .apple-btn {
   border-radius: 50px;
   height: 51px}
-
-.site-header__right {
-  grid-column-gap: 12px;
-  align-items: center;
-  display: flex}
 
 .dropdown-nav-main-wrapper-v1---brix {
   justify-content: space-between;
@@ -2431,10 +2362,6 @@ figcaption {
 
 .cart-quantity-2 {
   font-style: normal}
-
-.site-header__inner {
-  border: 0 solid #000;
-  width: 100%}
 
 .dropdown-icon---brix {
   margin-right: 0;
@@ -3766,8 +3693,7 @@ figcaption {
   position: relative}
 
 .left-arrow,
-.right-arrow,
-.site-nav__slider {
+.right-arrow {
   display: none}
 
 .slider {
@@ -5948,356 +5874,6 @@ figcaption {
   font-style: normal;
   font-weight: 700;
   line-height: 1.3em}
-
-.bko-link-12 {
-  color: #fff;
-  text-transform: capitalize;
-  background-color: #3368fa;
-  border-radius: 3px;
-  padding: .8em 1.6em;
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.3em;
-  text-decoration: none;
-  display: inline-block}
-
-.bko-dropdownlink-1 {
-  color: #000;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  background-color: #fff;
-  margin-bottom: 2em;
-  margin-right: 0;
-  padding: 0;
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.3em;
-  text-decoration: none}
-
-.bko-link-111 {
-  color: #000;
-  text-align: left;
-  text-transform: capitalize;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-family: var(--font-body);
-  font-size: 1.3em;
-  font-style: normal;
-  font-weight: 700;
-  text-decoration: none}
-
-.bko-link-111.is-current {
-  color: var(--mid-meroon)}
-
-.bko-dropdown-2 {
-  background-color: #fff;
-  width: 60em;
-  margin-top: 4.1em;
-  margin-left: -15em;
-  padding: 3em 4em 4em;
-  display: block;
-  box-shadow: 0 5px 13px -1px #00000061}
-
-.bko-wrap-1 {
-  justify-content: space-between;
-  align-items: center;
-  display: flex}
-
-.bko-wrap-12 {
-  justify-content: center;
-  align-items: center;
-  display: flex}
-
-.bko-link-grid-1 {
-  text-decoration: none}
-
-.bko-menu-2 {
-  display: none}
-
-.bko-wrap-111 {
-  margin-right: 3em}
-
-.bko-pic-11 {
-  height: 3em}
-
-.bko-wrap-11 {
-  flex: 1;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 6em;
-  display: flex}
-
-.bko-dropdown-list.is-open {
-  background-color: #0000;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  margin-top: 0;
-  padding: 0;
-  display: flex;
-  position: absolute}
-
-.bko-dropdown-toggle {
-  color: #000;
-  text-transform: capitalize;
-  background-image: url("../assets/images/66adcb962572764734906e92_Vector 3.png");
-  background-position: 100%;
-  background-repeat: no-repeat;
-  background-size: auto .4em;
-  padding: 0 1.2em 0 0;
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.3em}
-
-.bko-dropdown-toggle.is-open {
-  text-transform: capitalize;
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.3em}
-
-.bko-link-13 {
-  color: #000;
-  text-align: left;
-  text-transform: capitalize;
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.3em;
-  text-decoration: none}
-
-.bko-icon-1 {
-  flex: none;
-  margin-right: 2em}
-
-.bko-wrap-121 {
-  margin-right: 2em}
-
-.bko-grid-11 {
-  align-items: stretch;
-  display: flex}
-
-.bko-container-1 {
-  width: 100%;
-  max-width: 88em;
-  margin-left: auto;
-  margin-right: auto}
-
-.bko-selections-1 {
-  z-index: 10000;
-  background-color: #fff;
-  border-bottom: 1px solid #dbdbdb;
-  padding: 3em;
-  font-size: 1vw;
-  display: block;
-  position: sticky;
-  top: 0}
-
-.bko-grid-1 {
-  grid-column-gap: 2em;
-  grid-row-gap: 2em;
-  background-color: #fff;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-columns: 1fr;
-  margin-right: 0;
-  display: grid}
-
-.bko-pic-1-2 {
-  height: 2.5em}
-
-.bko-selections-12 {
-  border-bottom: 1px solid #898989;
-  padding: 3em;
-  font-size: 1vw}
-
-.bko-link-2 {
-  color: #303030;
-  text-decoration: none}
-
-.bko-star-1-2 {
-  margin-right: 0}
-
-.bko-menu-11 {
-  opacity: 0;
-  font-size: 1vw;
-  display: none}
-
-.bko-dropdownlink-1-2 {
-  color: #000;
-  text-transform: uppercase;
-  background-color: #fff;
-  margin-bottom: 2em;
-  margin-right: 20em;
-  padding: 0;
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.3em;
-  text-decoration: none}
-
-.bko-grid-1-2 {
-  grid-column-gap: 0em;
-  grid-row-gap: 2em;
-  background-color: #fff;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-columns: 1fr;
-  display: grid}
-
-.bko-dropdown-toggle-2 {
-  color: #000;
-  text-transform: capitalize;
-  margin-right: 1em;
-  padding: 0 2em 0 0;
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.3em}
-
-.bko-dropdown-toggle-2.is-open {
-  text-transform: capitalize;
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.3em}
-
-.bko-wrap-12-1 {
-  justify-content: space-between;
-  align-items: center;
-  display: flex}
-
-.bko-icon-1-2 {
-  flex: none;
-  margin-right: 1em}
-
-.bko-text-12-2 {
-  color: #464646;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-size: 1.1em;
-  line-height: 1.3em}
-
-.bko-text-12-3 {
-  color: #5c5c5c;
-  letter-spacing: -.56px;
-  text-transform: capitalize;
-  white-space: break-spaces;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.3em;
-  display: block}
-
-.bko-menu-pic-2 {
-  display: inline-block}
-
-.bko-dropdown-2-2 {
-  background-color: #fff;
-  width: 60em;
-  margin-top: 0;
-  margin-left: -15em;
-  padding: 3em 4em 4em;
-  display: block;
-  position: static;
-  top: 0;
-  box-shadow: 0 5px 13px -1px #00000061}
-
-.hide {
-  display: none}
-
-.bko-dropdownlink-1-3 {
-  color: #000;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  background-color: #fff;
-  margin-bottom: 2em;
-  margin-right: 0;
-  padding: 0;
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.3em;
-  text-decoration: none}
-
-.bko-pic-1-3 {
-  height: 2.5em}
-
-.slider-2 {
-  background-color: #0000;
-  width: auto;
-  max-width: none;
-  height: auto;
-  max-height: none;
-  display: none}
-
-.slide__image-wrapper {
-  transform-origin: 0 0;
-  width: 100%;
-  height: 100%}
-
-.link-block {
-  color: #000;
-  text-decoration: none}
-
-.next-button {
-  justify-content: center;
-  align-items: center;
-  width: 48px;
-  height: 48px;
-  margin-top: 32px;
-  margin-bottom: 0;
-  display: none;
-  top: 100%}
-
-.bko-grid-1-3 {
-  grid-column-gap: 0em;
-  grid-row-gap: 0em;
-  background-color: #fff;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  margin-right: 0;
-  display: grid}
-
-.slide__image {
-  width: 100%;
-  height: 100%}
-
-.slide-2 {
-  transform-origin: 0 0;
-  overflow: hidden}
-
-.bko-dropdownlink-1-4 {
-  color: #000;
-  text-transform: uppercase;
-  background-color: #fff;
-  margin-bottom: 2em;
-  margin-right: 20em;
-  padding: 0;
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.3em;
-  text-decoration: none}
-
-.bko-dropdown-toggle-3 {
-  color: #000;
-  text-transform: capitalize;
-  padding: 10px 20px;
-  font-size: 1.3em;
-  font-weight: 700;
-  display: block}
-
-.bko-dropdown-toggle-3.is-open {
-  text-align: left;
-  text-transform: capitalize;
-  border-bottom: 3px solid var(--meron);
-  margin-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 1.2em;
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.3em}
-
-.bko-wrap-11-2 {
-  justify-content: center;
-  align-items: center;
-  display: flex}
 
 .next-button__progress {
   width: 48px;
@@ -14903,117 +14479,6 @@ figcaption {
     row-gap: clamp(18px, 2vw, 28px) !important}
 }
 
-/* Desktop megamenu reliability: JS owns the active menu, CSS keeps old hover
-   panels from staying visible when another nav item opens. */
-
-/* Final header overrides */
-header .navigation-2,
-header .site-header__inner,
-header .site-nav {
-  background-color: var(--meron) !important}
-
-header .nav-menu-3,
-header .site-header__actions,
-header .site-header__container {
-  overflow: visible !important}
-
-header .nav-menu-3 {
-  display: flex !important;
-  align-items: center !important;
-  gap: 18px !important}
-
-header .navigation-2 a,
-header .navigation-2 a div,
-header .navigation-2 .bko-link-111-2,
-header .navigation-2 .bko-dropdown-1-2,
-header .navigation-2 .bko-dropdown-1-3,
-header .navigation-2 .goldlink,
-header .navigation-2 .silverlink,
-header .navigation-2 .diamondlink,
-header .navigation-2 .goldlink-2 {
-  color: #fff !important}
-
-/* ==========================================================================
-   FORCE WHITE NAVIGATION MENU STYLES AND FIX ACTIVE LINK VISIBILITY
-   ========================================================================== */
-
-/* 1. Main Navigation Links - Force White Text */
-header .navigation-2 .bko-dropdown-1-2,
-header .navigation-2 .bko-link-111,
-header .navigation-2 .bko-link-111-2,
-header .navigation-2 .goldlink,
-header .navigation-2 .silverlink,
-header .navigation-2 .diamondlink,
-header .navigation-2 .platinumlink,
-header .navigation-2 .bko-dropdown-toggle-3 a,
-header .navigation-2 .bko-dropdown-toggle-3 div,
-header .navigation-2 .div2 a,
-header .navigation-2 a.nav-link,
-header .navigation-2 .nav-link,
-header .navigation-2 a {
-  color: #ffffff !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: inline-block !important}
-
-/* 2. Active / Current Page Navigation Item Style (Warm Gold/White) */
-header .navigation-2 .is-current,
-header .navigation-2 .goldlink.is-current,
-header .navigation-2 .silverlink.is-current,
-header .navigation-2 .diamondlink.is-current,
-header .navigation-2 .platinumlink.is-current,
-header .navigation-2 .goldlink-2.is-current,
-header .navigation-2 .silverlink-2.is-current,
-header .navigation-2 .diamondlink-2.is-current,
-header .navigation-2 .platinumlink-2.is-current,
-header .navigation-2 .bko-link-111.is-current,
-header .navigation-2 .bko-link-111-2.is-current,
-header .navigation-2 .is-current *,
-header .navigation-2 .is-current div {
-  color: #fff5d8 !important;
-  opacity: 1 !important;
-  visibility: visible !important}
-
-/* 3. Hover Style */
-header .navigation-2 a:hover,
-header .navigation-2 a div:hover,
-header .navigation-2 .bko-dropdown-1-2:hover,
-header .navigation-2 .bko-link-111:hover,
-header .navigation-2 .bko-link-111-2:hover,
-header .navigation-2 .goldlink:hover,
-header .navigation-2 .silverlink:hover,
-header .navigation-2 .diamondlink:hover,
-header .navigation-2 .platinumlink:hover,
-header .navigation-2 .bko-dropdown-toggle-3 a:hover,
-header .navigation-2 .bko-dropdown-toggle-3 div:hover,
-header .navigation-2 .div2 a:hover {
-  color: #fff5d8 !important}
-
-/* 4. Keep Megamenu Dropdown List Text Dark (so it's readable on light background) */
-header .navigation-2 .dropdown-list a,
-header .navigation-2 .dropdown-list div,
-header .navigation-2 .dropdown-list span,
-header .navigation-2 .bko-dropdown-list a,
-header .navigation-2 .bko-dropdown-list div,
-header .navigation-2 .bko-dropdown-list span,
-header .navigation-2 .bko-text-12-3,
-header .navigation-2 .category-menu-link,
-header .navigation-2 .bko-text-11,
-header .navigation-2 .bko-text-12-3-copy {
-  color: #231f20 !important}
-
-/* Megamenu hover effect */
-header .navigation-2 .dropdown-list a:hover,
-header .navigation-2 .bko-dropdown-list a:hover,
-header .navigation-2 .category-menu-link:hover {
-  color: var(--meron) !important}
-
-/* Final header source fixes: keep nav white without inline JS styles. */
-header .navigation-2,
-header .navigation-2 .site-header__inner,
-header .site-nav {
-  background-color: var(--meron) !important}
-
 /* Restored interaction layer from the working reference. */
 .content-slider .slider-track,
 .content-slider .w-slider-mask {
@@ -15732,42 +15197,6 @@ body {
 .product-header5_product-details .social-share,
 .product-header5_product-details .footer-social-block {
   display: none !important}
-
-/* Hide mobile rate strip on desktop */
-.kj-mobile-rate-strip {
-  display: none}
-
-/* Final Phase 6 Mobile Navbar Regression Fix */
-@media (max-width: 991px) {
-  header.site-header.header .mobile-header.site-nav {
-    background: var(--meron) !important;
-    display: flex !important;
-    width: 100% !important;
-    min-height: 120px !important;
-    padding: 22px 32px !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    z-index: 10000 !important}
-
-  header.site-header.header .mobile-header__container {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important}
-
-  header.site-header.header .mobile-nav .kj-mobile-menu-link {
-    color: #222 !important;
-    background: #ffffff !important;
-    font-family: Mulish, Arial, sans-serif !important;
-    font-size: 20px !important;
-    font-weight: 400 !important;
-    padding: 13px 0 !important;
-    border-bottom: 1px solid rgba(0, 0, 0, .06) !important;
-    text-decoration: none !important}
-
-  header.site-header.header .mobile-nav .kj-mobile-menu-image {
-    display: none !important}
-}
 
 /* ==================================================
    PREMIUM CONTACT PAGE REDESIGN
@@ -16540,14 +15969,6 @@ body .premium-branches-title {
   .banner-6 .ad-banner {
     height: 300px;
   }
-}
-
-/* Accessibility Resets */
-.mobile-menu-toggle {
-  background: transparent;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
 }
 
 .kj-hero-heading,
