@@ -3785,7 +3785,7 @@ figcaption {
   height: 100%;
   display: flex;
   overflow: hidden;
-  background-color: #f5efe6}
+  background-color: #f9f1de}
 
 .onam-slide-link {
   display: flex;
@@ -3799,10 +3799,12 @@ figcaption {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover}
+  object-fit: fill;
+}
 
 .content-slider .slider-slide-onam {
-  overflow: hidden}
+  overflow: hidden;
+}
 
 .slider[data-paused] .slider-arrow-left,
 .slider[data-paused] .slider-arrow-right,
