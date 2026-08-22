@@ -2606,7 +2606,9 @@ body.legal-page {
     min-height: 500px;
   }
 
-  .content-slider .slider-slide-onam {
+  .slider[data-paused] .content-slider,
+  .slider[data-paused] .content-slider .slider-track,
+  .slider[data-paused] .content-slider .slider-slide {
     height: auto;
     min-height: 0;
   }
@@ -2625,7 +2627,9 @@ body.legal-page {
     min-height: 500px;
   }
 
-  .content-slider .slider-slide-onam {
+  .slider[data-paused] .content-slider,
+  .slider[data-paused] .content-slider .slider-track,
+  .slider[data-paused] .content-slider .slider-slide {
     height: auto;
     min-height: 0;
   }

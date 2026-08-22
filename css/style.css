@@ -3796,6 +3796,15 @@ figcaption {
   width: 100%;
   height: auto}
 
+.content-slider .slider-slide-onam,
+.content-slider .slider-slide-onam .banner-slider5 {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important}
+
+.slider[data-paused] .slider-track {
+  height: auto !important}
+
 .slider[data-paused] .slider-arrow-left,
 .slider[data-paused] .slider-arrow-right,
 .slider[data-paused] .left-arrow,
