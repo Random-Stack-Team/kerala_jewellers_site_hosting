@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slider.addEventListener('focusin', stop);
     slider.addEventListener('focusout', start);
     showSlide(activeIndex);
-    start();
+    if (!slider.dataset.paused) start();
   };
 
     const initReviewCarousel = (component) => {

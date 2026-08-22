@@ -2601,10 +2601,14 @@ body.legal-page {
   .content-slider .banner-slider1,
   .content-slider .banner-slider2,
   .content-slider .banner-slider3,
-  .content-slider .banner-slider4,
-  .content-slider .banner-slider5 {
+  .content-slider .banner-slider4 {
     height: clamp(500px, 50vh, 560px);
     min-height: 500px;
+  }
+
+  .content-slider .slider-slide-onam {
+    height: auto;
+    min-height: 0;
   }
 
 }
@@ -2616,10 +2620,14 @@ body.legal-page {
   .content-slider .banner-slider1,
   .content-slider .banner-slider2,
   .content-slider .banner-slider3,
-  .content-slider .banner-slider4,
-  .content-slider .banner-slider5 {
+  .content-slider .banner-slider4 {
     height: clamp(500px, 65vh, 540px);
     min-height: 500px;
+  }
+
+  .content-slider .slider-slide-onam {
+    height: auto;
+    min-height: 0;
   }
 
 }
