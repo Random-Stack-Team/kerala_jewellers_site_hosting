@@ -3782,28 +3782,27 @@ figcaption {
 .banner-slider5 {
   border-radius: 15px;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
-  overflow: hidden}
+  overflow: hidden;
+  background-color: #f5efe6}
 
 .onam-slide-link {
-  display: block;
+  display: flex;
   width: 100%;
-  text-decoration: none}
+  height: 100%;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center}
 
 .onam-banner-img {
   display: block;
   width: 100%;
-  height: auto}
+  height: 100%;
+  object-fit: cover}
 
-.content-slider .slider-slide-onam,
-.content-slider .slider-slide-onam .banner-slider5 {
-  height: auto !important;
-  min-height: 0 !important;
-  max-height: none !important}
-
-.slider[data-paused] .slider-track {
-  height: auto !important}
+.content-slider .slider-slide-onam {
+  overflow: hidden}
 
 .slider[data-paused] .slider-arrow-left,
 .slider[data-paused] .slider-arrow-right,

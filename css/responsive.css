@@ -2606,13 +2606,6 @@ body.legal-page {
     min-height: 500px;
   }
 
-  .slider[data-paused] .content-slider,
-  .slider[data-paused] .content-slider .slider-track,
-  .slider[data-paused] .content-slider .slider-slide {
-    height: auto;
-    min-height: 0;
-  }
-
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2625,13 +2618,6 @@ body.legal-page {
   .content-slider .banner-slider4 {
     height: clamp(500px, 65vh, 540px);
     min-height: 500px;
-  }
-
-  .slider[data-paused] .content-slider,
-  .slider[data-paused] .content-slider .slider-track,
-  .slider[data-paused] .content-slider .slider-slide {
-    height: auto;
-    min-height: 0;
   }
 
 }
