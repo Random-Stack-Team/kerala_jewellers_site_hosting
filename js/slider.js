@@ -57,10 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
       button.addEventListener('click', () => showSlide(activeIndex + 1));
     });
 
-    slider.addEventListener('mouseenter', stop);
-    slider.addEventListener('mouseleave', start);
-    slider.addEventListener('focusin', stop);
-    slider.addEventListener('focusout', start);
+    if (!slider.dataset.paused) {
+      slider.addEventListener('mouseenter', stop);
+      slider.addEventListener('mouseleave', start);
+      slider.addEventListener('focusin', stop);
+      slider.addEventListener('focusout', start);
+    }
     showSlide(activeIndex);
     if (!slider.dataset.paused) start();
   };
