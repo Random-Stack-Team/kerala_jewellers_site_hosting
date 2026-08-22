@@ -2575,7 +2575,8 @@ body.legal-page {
 .banner-slider1,
 .banner-slider2,
 .banner-slider3,
-.banner-slider4 {
+.banner-slider4,
+.banner-slider5 {
   padding-bottom: 50px !important;
   box-sizing: border-box !important;
 }
@@ -2600,7 +2601,8 @@ body.legal-page {
   .content-slider .banner-slider1,
   .content-slider .banner-slider2,
   .content-slider .banner-slider3,
-  .content-slider .banner-slider4 {
+  .content-slider .banner-slider4,
+  .content-slider .banner-slider5 {
     height: clamp(500px, 50vh, 560px);
     min-height: 500px;
   }
@@ -2614,7 +2616,8 @@ body.legal-page {
   .content-slider .banner-slider1,
   .content-slider .banner-slider2,
   .content-slider .banner-slider3,
-  .content-slider .banner-slider4 {
+  .content-slider .banner-slider4,
+  .content-slider .banner-slider5 {
     height: clamp(500px, 65vh, 540px);
     min-height: 500px;
   }
